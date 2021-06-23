@@ -49,7 +49,7 @@ namespace FinalProject1_winform
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(24, 152);
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(20, 115);
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
             this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -61,9 +61,9 @@ namespace FinalProject1_winform
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Location = new System.Drawing.Point(24, 177);
+            this.panel2.Location = new System.Drawing.Point(20, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1078, 446);
+            this.panel2.Size = new System.Drawing.Size(1078, 449);
             this.panel2.TabIndex = 5;
             // 
             // Basic
@@ -71,7 +71,7 @@ namespace FinalProject1_winform
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.ClientSize = new System.Drawing.Size(1114, 661);
+            this.ClientSize = new System.Drawing.Size(1114, 620);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
