@@ -63,7 +63,7 @@ namespace FinalProject1_winform
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Location = new System.Drawing.Point(20, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 449);
+            this.panel2.Size = new System.Drawing.Size(1057, 459);
             this.panel2.TabIndex = 5;
             // 
             // Basic

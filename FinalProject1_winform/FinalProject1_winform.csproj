@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Basic.cs">
+    <Compile Include="BaseForms\Basic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Basic.Designer.cs">
+    <Compile Include="BaseForms\Basic.Designer.cs">
       <DependentUpon>Basic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Basic2.cs">
+    <Compile Include="BaseForms\Basic2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Basic2.Designer.cs">
+    <Compile Include="BaseForms\Basic2.Designer.cs">
       <DependentUpon>Basic2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Basic3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Basic3.Designer.cs">
+      <DependentUpon>Basic3.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ComboBox_gudi.cs">
       <SubType>Component</SubType>
@@ -129,11 +135,14 @@
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Basic.resx">
+    <EmbeddedResource Include="BaseForms\Basic.resx">
       <DependentUpon>Basic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Basic2.resx">
+    <EmbeddedResource Include="BaseForms\Basic2.resx">
       <DependentUpon>Basic2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Basic3.resx">
+      <DependentUpon>Basic3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
