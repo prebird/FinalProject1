@@ -15,6 +15,7 @@ namespace FinalProject1_winform.Process
         public frmEquipmentGroup()
         {
             InitializeComponent();
+
         }
     }
 }
