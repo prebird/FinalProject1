@@ -43,7 +43,7 @@ namespace FinalProject1_winform
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.panel1.Location = new System.Drawing.Point(20, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1061, 79);
+            this.panel1.Size = new System.Drawing.Size(1057, 79);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox_gudi2
