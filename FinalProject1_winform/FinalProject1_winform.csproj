@@ -118,19 +118,11 @@
     <Compile Include="Controls\PictureBox_gudi.Designer.cs">
       <DependentUpon>PictureBox_gudi.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Process\ProcessInsert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Process\ProcessInsert.Designer.cs">
-      <DependentUpon>ProcessInsert.cs</DependentUpon>
-=======
     <Compile Include="frm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm1.Designer.cs">
       <DependentUpon>frm1.cs</DependentUpon>
->>>>>>> 2f3c77d4a26b2e2c2956decc51b771f5d12c33ff
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,8 +150,8 @@
     <EmbeddedResource Include="BaseForms\Basic3.resx">
       <DependentUpon>Basic3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Process\ProcessInsert.resx">
-      <DependentUpon>ProcessInsert.cs</DependentUpon>
+    <EmbeddedResource Include="frm1.resx">
+      <DependentUpon>frm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
