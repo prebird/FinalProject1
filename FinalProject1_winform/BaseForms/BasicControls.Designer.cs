@@ -31,7 +31,11 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.button_gudi2 = new FinalProject1_winform.Button_gudi();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.button_gudi4 = new FinalProject1_winform.Button_gudi();
@@ -39,19 +43,15 @@ namespace FinalProject1_winform
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.button_gudi9 = new FinalProject1_winform.Button_gudi();
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.button_gudi11 = new FinalProject1_winform.Button_gudi();
             this.button_gudi12 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,155 +63,6 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(743, 37);
             this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox_gudi2);
-            this.panel2.Controls.Add(this.label_gudi2);
-            this.panel2.Location = new System.Drawing.Point(54, 72);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(743, 101);
-            this.panel2.TabIndex = 2;
-            // 
-            // button_gudi2
-            // 
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi2.ForeColor = System.Drawing.Color.White;
-            this.button_gudi2.Location = new System.Drawing.Point(352, 533);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi2.TabIndex = 4;
-            this.button_gudi2.Text = "저장";
-            this.button_gudi2.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi5
-            // 
-            this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi5.FlatAppearance.BorderSize = 0;
-            this.button_gudi5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi5.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
-            this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi5.Location = new System.Drawing.Point(679, 219);
-            this.button_gudi5.Name = "button_gudi5";
-            this.button_gudi5.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi5.TabIndex = 4;
-            this.button_gudi5.Text = "엑셀";
-            this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi5.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi4
-            // 
-            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi4.FlatAppearance.BorderSize = 0;
-            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
-            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi4.Location = new System.Drawing.Point(679, 281);
-            this.button_gudi4.Name = "button_gudi4";
-            this.button_gudi4.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi4.TabIndex = 4;
-            this.button_gudi4.Text = "복사";
-            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi4.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi7
-            // 
-            this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi7.FlatAppearance.BorderSize = 0;
-            this.button_gudi7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi7.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
-            this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi7.Location = new System.Drawing.Point(547, 219);
-            this.button_gudi7.Name = "button_gudi7";
-            this.button_gudi7.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi7.TabIndex = 4;
-            this.button_gudi7.Text = "수정";
-            this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi7.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi6
-            // 
-            this.button_gudi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi6.FlatAppearance.BorderSize = 0;
-            this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi6.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
-            this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(613, 219);
-            this.button_gudi6.Name = "button_gudi6";
-            this.button_gudi6.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi6.TabIndex = 4;
-            this.button_gudi6.Text = "삭제";
-            this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi6.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi3
-            // 
-            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi3.FlatAppearance.BorderSize = 0;
-            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
-            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(481, 219);
-            this.button_gudi3.Name = "button_gudi3";
-            this.button_gudi3.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi3.TabIndex = 4;
-            this.button_gudi3.Text = "등록";
-            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi3.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi1
-            // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(444, 533);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi1.TabIndex = 4;
-            this.button_gudi1.Text = "닫기";
-            this.button_gudi1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox_gudi2
-            // 
-            this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(15, 12);
-            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
-            this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
-            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi2.TabIndex = 3;
-            this.pictureBox_gudi2.TabStop = false;
-            // 
-            // label_gudi2
-            // 
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi2.Location = new System.Drawing.Point(43, 14);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(71, 18);
-            this.label_gudi2.TabIndex = 2;
-            this.label_gudi2.Text = "실적등록";
             // 
             // pictureBox_gudi1
             // 
@@ -233,9 +84,158 @@ namespace FinalProject1_winform
             this.label_gudi1.TabIndex = 2;
             this.label_gudi1.Text = "작업마감실적등록";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox_gudi2);
+            this.panel2.Controls.Add(this.label_gudi2);
+            this.panel2.Location = new System.Drawing.Point(54, 72);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(743, 101);
+            this.panel2.TabIndex = 2;
+            // 
+            // pictureBox_gudi2
+            // 
+            this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
+            this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi2.TabIndex = 3;
+            this.pictureBox_gudi2.TabStop = false;
+            // 
+            // label_gudi2
+            // 
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_gudi2.Location = new System.Drawing.Point(43, 14);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(71, 18);
+            this.label_gudi2.TabIndex = 2;
+            this.label_gudi2.Text = "실적등록";
+            // 
+            // button_gudi2
+            // 
+            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.button_gudi2.FlatAppearance.BorderSize = 0;
+            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi2.ForeColor = System.Drawing.Color.White;
+            this.button_gudi2.Location = new System.Drawing.Point(369, 467);
+            this.button_gudi2.Name = "button_gudi2";
+            this.button_gudi2.Size = new System.Drawing.Size(80, 33);
+            this.button_gudi2.TabIndex = 4;
+            this.button_gudi2.Text = "저장";
+            this.button_gudi2.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi5
+            // 
+            this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi5.FlatAppearance.BorderSize = 0;
+            this.button_gudi5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi5.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
+            this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi5.Location = new System.Drawing.Point(252, 223);
+            this.button_gudi5.Name = "button_gudi5";
+            this.button_gudi5.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi5.TabIndex = 4;
+            this.button_gudi5.Text = "엑셀";
+            this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi5.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi4
+            // 
+            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi4.FlatAppearance.BorderSize = 0;
+            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
+            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi4.Location = new System.Drawing.Point(252, 285);
+            this.button_gudi4.Name = "button_gudi4";
+            this.button_gudi4.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi4.TabIndex = 4;
+            this.button_gudi4.Text = "복사";
+            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi4.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi7
+            // 
+            this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi7.FlatAppearance.BorderSize = 0;
+            this.button_gudi7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi7.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
+            this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi7.Location = new System.Drawing.Point(120, 223);
+            this.button_gudi7.Name = "button_gudi7";
+            this.button_gudi7.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi7.TabIndex = 4;
+            this.button_gudi7.Text = "수정";
+            this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi7.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi6
+            // 
+            this.button_gudi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi6.FlatAppearance.BorderSize = 0;
+            this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi6.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
+            this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi6.Location = new System.Drawing.Point(186, 223);
+            this.button_gudi6.Name = "button_gudi6";
+            this.button_gudi6.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi6.TabIndex = 4;
+            this.button_gudi6.Text = "삭제";
+            this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi6.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi3
+            // 
+            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi3.FlatAppearance.BorderSize = 0;
+            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
+            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi3.Location = new System.Drawing.Point(54, 223);
+            this.button_gudi3.Name = "button_gudi3";
+            this.button_gudi3.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi3.TabIndex = 4;
+            this.button_gudi3.Text = "등록";
+            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi3.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi1
+            // 
+            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.button_gudi1.FlatAppearance.BorderSize = 0;
+            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi1.ForeColor = System.Drawing.Color.White;
+            this.button_gudi1.Location = new System.Drawing.Point(461, 467);
+            this.button_gudi1.Name = "button_gudi1";
+            this.button_gudi1.Size = new System.Drawing.Size(80, 33);
+            this.button_gudi1.TabIndex = 4;
+            this.button_gudi1.Text = "닫기";
+            this.button_gudi1.UseVisualStyleBackColor = false;
+            // 
             // button_gudi8
             // 
-            this.button_gudi8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.button_gudi8.FlatAppearance.BorderSize = 0;
             this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -243,7 +243,7 @@ namespace FinalProject1_winform
             this.button_gudi8.ForeColor = System.Drawing.Color.White;
             this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
             this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi8.Location = new System.Drawing.Point(481, 188);
+            this.button_gudi8.Location = new System.Drawing.Point(54, 192);
             this.button_gudi8.Name = "button_gudi8";
             this.button_gudi8.Size = new System.Drawing.Size(93, 25);
             this.button_gudi8.TabIndex = 4;
@@ -260,7 +260,7 @@ namespace FinalProject1_winform
             this.button_gudi9.ForeColor = System.Drawing.Color.Black;
             this.button_gudi9.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi9.Image")));
             this.button_gudi9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi9.Location = new System.Drawing.Point(679, 250);
+            this.button_gudi9.Location = new System.Drawing.Point(252, 254);
             this.button_gudi9.Name = "button_gudi9";
             this.button_gudi9.Size = new System.Drawing.Size(142, 25);
             this.button_gudi9.TabIndex = 4;
@@ -278,7 +278,7 @@ namespace FinalProject1_winform
             this.button_gudi10.ForeColor = System.Drawing.Color.Black;
             this.button_gudi10.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi10.Image")));
             this.button_gudi10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi10.Location = new System.Drawing.Point(679, 312);
+            this.button_gudi10.Location = new System.Drawing.Point(252, 316);
             this.button_gudi10.Name = "button_gudi10";
             this.button_gudi10.Size = new System.Drawing.Size(149, 25);
             this.button_gudi10.TabIndex = 4;
@@ -296,7 +296,7 @@ namespace FinalProject1_winform
             this.button_gudi11.ForeColor = System.Drawing.Color.White;
             this.button_gudi11.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi11.Image")));
             this.button_gudi11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi11.Location = new System.Drawing.Point(481, 372);
+            this.button_gudi11.Location = new System.Drawing.Point(54, 376);
             this.button_gudi11.Name = "button_gudi11";
             this.button_gudi11.Size = new System.Drawing.Size(93, 32);
             this.button_gudi11.TabIndex = 4;
@@ -313,7 +313,7 @@ namespace FinalProject1_winform
             this.button_gudi12.ForeColor = System.Drawing.Color.Black;
             this.button_gudi12.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi12.Image")));
             this.button_gudi12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi12.Location = new System.Drawing.Point(679, 343);
+            this.button_gudi12.Location = new System.Drawing.Point(252, 347);
             this.button_gudi12.Name = "button_gudi12";
             this.button_gudi12.Size = new System.Drawing.Size(89, 25);
             this.button_gudi12.TabIndex = 4;
@@ -343,9 +343,9 @@ namespace FinalProject1_winform
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.ResumeLayout(false);
 
         }
