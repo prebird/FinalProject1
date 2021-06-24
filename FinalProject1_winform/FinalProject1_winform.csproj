@@ -150,6 +150,9 @@
     <EmbeddedResource Include="BaseForms\Basic3.resx">
       <DependentUpon>Basic3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm1.resx">
+      <DependentUpon>frm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
