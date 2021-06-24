@@ -280,6 +280,7 @@ namespace FinalProject1_winform.Process
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(490, 425);
             this.Name = "frmEquipmentGroup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEquipmentGroup";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
