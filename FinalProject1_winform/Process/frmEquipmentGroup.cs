@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject1_winform.Process
 {
-    public partial class ProcessInsert : Form
+    public partial class frmEquipmentGroup : Form
     {
-        public ProcessInsert()
+        public frmEquipmentGroup()
         {
             InitializeComponent();
         }

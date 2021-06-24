@@ -124,11 +124,11 @@
     <Compile Include="frm1.Designer.cs">
       <DependentUpon>frm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Process\ProcessInsert.cs">
+    <Compile Include="Process\frmEquipmentGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Process\ProcessInsert.Designer.cs">
-      <DependentUpon>ProcessInsert.cs</DependentUpon>
+    <Compile Include="Process\frmEquipmentGroup.Designer.cs">
+      <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,8 +159,8 @@
     <EmbeddedResource Include="frm1.resx">
       <DependentUpon>frm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Process\ProcessInsert.resx">
-      <DependentUpon>ProcessInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Process\frmEquipmentGroup.resx">
+      <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
