@@ -175,26 +175,53 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
-    <Folder Include="NewFolder2\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Image\2214523.png" />
-    <Content Include="Image\AddNewDataSource_16x16.png" />
-    <Content Include="Image\Add_16x16.png" />
-    <Content Include="Image\bar-chart.png" />
-    <Content Include="Image\Copy_16x16.png" />
-    <Content Include="Image\Cut_16x16.png" />
-    <Content Include="Image\Delete_16x16.png" />
-    <Content Include="Image\Edit_16x16.png" />
-    <Content Include="Image\ExportToDOC_16x16.png" />
-    <Content Include="Image\ExportToXLSX_16x16.png" />
-    <Content Include="Image\Filter_16x16.png" />
-    <Content Include="Image\Find_16x16.png" />
-    <Content Include="Image\Open_16x16.png" />
-    <Content Include="Image\threeBar.png" />
-    <Content Include="Image\Up_16x16.png" />
+    <Content Include="Image\2214523.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\AddNewDataSource_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Add_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\bar-chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Copy_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Cut_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Delete_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Edit_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\ExportToDOC_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\ExportToXLSX_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Filter_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Find_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Open_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\threeBar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Up_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
