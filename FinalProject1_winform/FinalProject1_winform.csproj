@@ -64,6 +64,30 @@
     <Compile Include="BaseForms\Basic3.Designer.cs">
       <DependentUpon>Basic3.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.Designer.cs">
+      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.Designer.cs">
+      <DependentUpon>frmMPriceIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmPPriceIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmPPriceIns.Designer.cs">
+      <DependentUpon>frmPPriceIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmProductPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
+      <DependentUpon>frmProductPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ComboBox_gudi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -191,6 +215,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForms\Basic3.resx">
       <DependentUpon>Basic3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
+      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmMPriceIns.resx">
+      <DependentUpon>frmMPriceIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmPPriceIns.resx">
+      <DependentUpon>frmPPriceIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmProductPrice.resx">
+      <DependentUpon>frmProductPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
