@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace FinalProject1_winform.Process
 {
-    public partial class frmEquipmentList : FinalProject1_winform.Basic
+    public partial class frmEquipmentList : FinalProject1_winform.Basic3
     {
         public frmEquipmentList()
         {
