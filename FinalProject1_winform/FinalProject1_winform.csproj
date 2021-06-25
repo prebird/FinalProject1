@@ -142,6 +142,12 @@
     <Compile Include="Process\frmEquipmentGroup.Designer.cs">
       <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Process\frmMaterialPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\frmMaterialPrice.Designer.cs">
+      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Process\frmProcess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,11 +189,17 @@
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DateTimePicker_gudi.resx">
+      <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMrp.resx">
       <DependentUpon>frmMrp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmEquipmentGroup.resx">
       <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\frmMaterialPrice.resx">
+      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmProcess.resx">
       <DependentUpon>frmProcess.cs</DependentUpon>
