@@ -80,7 +80,7 @@ namespace FinalProject1_winform.Process
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(155, 23);
             this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "공정 설정";
+            this.label_gudi1.Text = "공정";
             // 
             // panel2
             // 
