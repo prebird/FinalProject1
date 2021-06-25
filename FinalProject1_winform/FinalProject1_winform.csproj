@@ -64,6 +64,30 @@
     <Compile Include="BaseForms\Basic3.Designer.cs">
       <DependentUpon>Basic3.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.Designer.cs">
+      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.Designer.cs">
+      <DependentUpon>frmMPriceIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmPPriceIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmPPriceIns.Designer.cs">
+      <DependentUpon>frmPPriceIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmProductPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
+      <DependentUpon>frmProductPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ComboBox_gudi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -136,17 +160,23 @@
     <Compile Include="frmMrp.Designer.cs">
       <DependentUpon>frmMrp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Process\frmEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\frmEquipment.Designer.cs">
+      <DependentUpon>frmEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Process\frmEquipmentGroup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Process\frmEquipmentGroup.Designer.cs">
       <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Process\frmMaterialPrice.cs">
+    <Compile Include="Process\frmEquipmentList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Process\frmMaterialPrice.Designer.cs">
-      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    <Compile Include="Process\frmEquipmentList.Designer.cs">
+      <DependentUpon>frmEquipmentList.cs</DependentUpon>
     </Compile>
     <Compile Include="Process\frmProcess.cs">
       <SubType>Form</SubType>
@@ -186,20 +216,32 @@
     <EmbeddedResource Include="BaseForms\Basic3.resx">
       <DependentUpon>Basic3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
+      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmMPriceIns.resx">
+      <DependentUpon>frmMPriceIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmPPriceIns.resx">
+      <DependentUpon>frmPPriceIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmProductPrice.resx">
+      <DependentUpon>frmProductPrice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DateTimePicker_gudi.resx">
-      <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMrp.resx">
       <DependentUpon>frmMrp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Process\frmEquipment.resx">
+      <DependentUpon>frmEquipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Process\frmEquipmentGroup.resx">
       <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Process\frmMaterialPrice.resx">
-      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    <EmbeddedResource Include="Process\frmEquipmentList.resx">
+      <DependentUpon>frmEquipmentList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmProcess.resx">
       <DependentUpon>frmProcess.cs</DependentUpon>
