@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject1_winform.Process
+namespace FinalProject1_winform.BaseInformation.PerPrice
 {
-    public partial class frmMaterialPrice : FinalProject1_winform.Basic3
+    public partial class frmProductPrice : Basic3
     {
-        public frmMaterialPrice()
+        public frmProductPrice()
         {
             InitializeComponent();
         }
-
     }
 }
