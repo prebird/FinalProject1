@@ -29,6 +29,7 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
@@ -48,6 +49,7 @@ namespace FinalProject1_winform
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.button_gudi11 = new FinalProject1_winform.Button_gudi();
             this.button_gudi12 = new FinalProject1_winform.Button_gudi();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -321,6 +323,11 @@ namespace FinalProject1_winform
             this.button_gudi12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi12.UseVisualStyleBackColor = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -369,6 +376,7 @@ namespace FinalProject1_winform
         private Button_gudi button_gudi10;
         private Button_gudi button_gudi11;
         private Button_gudi button_gudi12;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
