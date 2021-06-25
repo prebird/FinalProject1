@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_gudi8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAmdEVYdFRpdGxlAEZpbmQ7QmFycztSaWJib247U3Rh
+        bmRhcmQ7U2VhcmNou2WcCAAAALlJREFUOE+lktsRgjAQRaEdakgpFGEFoj3QBaM1+SNtxHuY3QyziegM
+        Hydk9j4gQJdzPsW2pJSgF6NYxGqwZ4ZWhWFbzHAT+QtofQyDF3AXjG8xicFgzwxtjGHwAh4V0xQNzExb
+        ogZu4ryYhmhgZtoaNXDT6YLTRzh6iczhIfAW9gW/PqNzFc0CL2n9SE/RLCkFR5j5LqoS9CoQwWjEkhm9
+        GdojY7mKfcmLeRVoYWFnJiwuaM3A/+TuA3z+LAyTGFNzAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox_gudi2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAT
@@ -133,16 +143,6 @@
         Py7KU9neqLn15r39uFuCeHr78bgKYunt4x/iiFEcMYojRnHEKI4YxRGjOGIUR4ziiFEcMYojRnHEKI4Y
         xRGjOGIUR4ziiFEc43kTxNHbj4dVEEtvP65WQSxXbwdDjuVliZpfb318Pxm0PASHcl1uyq2m1Nv2xof3
         3d8uxBSjKE7jH0xj8GwBNV4eAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button_gudi8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAmdEVYdFRpdGxlAEZpbmQ7QmFycztSaWJib247U3Rh
-        bmRhcmQ7U2VhcmNou2WcCAAAALlJREFUOE+lktsRgjAQRaEdakgpFGEFoj3QBaM1+SNtxHuY3QyziegM
-        Hydk9j4gQJdzPsW2pJSgF6NYxGqwZ4ZWhWFbzHAT+QtofQyDF3AXjG8xicFgzwxtjGHwAh4V0xQNzExb
-        ogZu4ryYhmhgZtoaNXDT6YLTRzh6iczhIfAW9gW/PqNzFc0CL2n9SE/RLCkFR5j5LqoS9CoQwWjEkhm9
-        GdojY7mKfcmLeRVoYWFnJiwuaM3A/+TuA3z+LAyTGFNzAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="button_gudi5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
