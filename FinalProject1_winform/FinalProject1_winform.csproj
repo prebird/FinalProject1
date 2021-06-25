@@ -64,6 +64,24 @@
     <Compile Include="BaseForms\Basic3.Designer.cs">
       <DependentUpon>Basic3.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInformation\CompanyInfo\frmCompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\CompanyInfo\frmCompanyInfo.Designer.cs">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\CompanyInfo\frmCompanyInfoIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\CompanyInfo\frmCompanyInfoIns.Designer.cs">
+      <DependentUpon>frmCompanyInfoIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\Factory\frmFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\Factory\frmFactory.Designer.cs">
+      <DependentUpon>frmFactory.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseInformation\PerPrice\frmMPriceIns.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +222,15 @@
     <EmbeddedResource Include="BaseForms\Basic3.resx">
       <DependentUpon>Basic3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\CompanyInfo\frmCompanyInfo.resx">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\CompanyInfo\frmCompanyInfoIns.resx">
+      <DependentUpon>frmCompanyInfoIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\Factory\frmFactory.resx">
+      <DependentUpon>frmFactory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmMPriceIns.resx">
       <DependentUpon>frmMPriceIns.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,7 +284,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaseInformation\UserInfo\" />
     <Folder Include="MRP\" />
   </ItemGroup>
   <ItemGroup>
