@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProject1_winform.Process
 {
-    partial class frmEquipmentGroup
+    partial class frmEquipment
     {
         /// <summary>
         /// Required designer variable.
@@ -29,23 +29,27 @@ namespace FinalProject1_winform.Process
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEquipmentGroup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEquipment));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_gudi2 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
+            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.placeholderNew1 = new FinalProject1_winform.PlaceholderNew();
-            this.placeholderNew2 = new FinalProject1_winform.PlaceholderNew();
-            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.textBox_gudi4 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi5 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,8 +63,8 @@ namespace FinalProject1_winform.Process
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 37);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(611, 37);
+            this.panel1.TabIndex = 3;
             // 
             // pictureBox_gudi1
             // 
@@ -80,7 +84,7 @@ namespace FinalProject1_winform.Process
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(155, 23);
             this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "설비군";
+            this.label_gudi1.Text = "설비";
             // 
             // panel2
             // 
@@ -88,10 +92,10 @@ namespace FinalProject1_winform.Process
             this.panel2.Controls.Add(this.button_gudi2);
             this.panel2.Controls.Add(this.button_gudi1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 321);
+            this.panel2.Location = new System.Drawing.Point(0, 410);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(474, 65);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(611, 65);
+            this.panel2.TabIndex = 4;
             // 
             // button_gudi2
             // 
@@ -119,169 +123,177 @@ namespace FinalProject1_winform.Process
             this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
             this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(242, 16);
+            this.button_gudi1.Location = new System.Drawing.Point(379, 16);
             this.button_gudi1.Name = "button_gudi1";
             this.button_gudi1.Size = new System.Drawing.Size(80, 33);
             this.button_gudi1.TabIndex = 6;
             this.button_gudi1.Text = "닫기";
             this.button_gudi1.UseVisualStyleBackColor = false;
             // 
+            // comboBox_gudi1
+            // 
+            this.comboBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.comboBox_gudi1.FormattingEnabled = true;
+            this.comboBox_gudi1.Location = new System.Drawing.Point(167, 73);
+            this.comboBox_gudi1.Name = "comboBox_gudi1";
+            this.comboBox_gudi1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_gudi1.TabIndex = 5;
+            // 
             // label_gudi2
             // 
-            this.label_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi2.Location = new System.Drawing.Point(80, 81);
+            this.label_gudi2.Location = new System.Drawing.Point(52, 76);
             this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi2.TabIndex = 4;
-            this.label_gudi2.Text = "설비군 코드";
+            this.label_gudi2.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi2.TabIndex = 6;
+            this.label_gudi2.Text = "공정 코드";
             // 
             // label_gudi3
             // 
-            this.label_gudi3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi3.Location = new System.Drawing.Point(92, 123);
+            this.label_gudi3.Location = new System.Drawing.Point(40, 117);
             this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi3.TabIndex = 5;
-            this.label_gudi3.Text = "설비군 명";
+            this.label_gudi3.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi3.TabIndex = 7;
+            this.label_gudi3.Text = "설비군 코드";
+            // 
+            // comboBox_gudi2
+            // 
+            this.comboBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.comboBox_gudi2.FormattingEnabled = true;
+            this.comboBox_gudi2.Location = new System.Drawing.Point(167, 114);
+            this.comboBox_gudi2.Name = "comboBox_gudi2";
+            this.comboBox_gudi2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_gudi2.TabIndex = 8;
             // 
             // label_gudi4
             // 
-            this.label_gudi4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(92, 165);
+            this.label_gudi4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi4.Location = new System.Drawing.Point(52, 159);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi4.TabIndex = 6;
-            this.label_gudi4.Text = "사용 유무";
-            // 
-            // placeholderNew1
-            // 
-            this.placeholderNew1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.placeholderNew1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.placeholderNew1.InputType = FinalProject1_winform.validType.Common;
-            this.placeholderNew1.Location = new System.Drawing.Point(233, 78);
-            this.placeholderNew1.Name = "placeholderNew1";
-            this.placeholderNew1.PlaceHolderActiveForeColor = System.Drawing.Color.Gray;
-            this.placeholderNew1.PlaceHolderFont = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.placeholderNew1.PlaceHolderForeColor = System.Drawing.Color.DarkGray;
-            this.placeholderNew1.PlaceHolderText = "필수 입력 사항입니다.";
-            this.placeholderNew1.Size = new System.Drawing.Size(149, 25);
-            this.placeholderNew1.TabIndex = 7;
-            // 
-            // placeholderNew2
-            // 
-            this.placeholderNew2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.placeholderNew2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.placeholderNew2.InputType = FinalProject1_winform.validType.Common;
-            this.placeholderNew2.Location = new System.Drawing.Point(233, 120);
-            this.placeholderNew2.Name = "placeholderNew2";
-            this.placeholderNew2.PlaceHolderActiveForeColor = System.Drawing.Color.Gray;
-            this.placeholderNew2.PlaceHolderFont = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.placeholderNew2.PlaceHolderForeColor = System.Drawing.Color.DarkGray;
-            this.placeholderNew2.PlaceHolderText = "필수 입력 사항입니다.";
-            this.placeholderNew2.Size = new System.Drawing.Size(149, 25);
-            this.placeholderNew2.TabIndex = 8;
-            // 
-            // comboBox_gudi1
-            // 
-            this.comboBox_gudi1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi1.FormattingEnabled = true;
-            this.comboBox_gudi1.Items.AddRange(new object[] {
-            "선택",
-            "사용",
-            "사용 안함"});
-            this.comboBox_gudi1.Location = new System.Drawing.Point(233, 162);
-            this.comboBox_gudi1.Name = "comboBox_gudi1";
-            this.comboBox_gudi1.Size = new System.Drawing.Size(149, 24);
-            this.comboBox_gudi1.TabIndex = 9;
-            // 
-            // label_gudi5
-            // 
-            this.label_gudi5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_gudi5.AutoSize = true;
-            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.Location = new System.Drawing.Point(108, 207);
-            this.label_gudi5.Name = "label_gudi5";
-            this.label_gudi5.Size = new System.Drawing.Size(44, 17);
-            this.label_gudi5.TabIndex = 10;
-            this.label_gudi5.Text = "수정자";
-            // 
-            // label_gudi6
-            // 
-            this.label_gudi6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_gudi6.AutoSize = true;
-            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.Location = new System.Drawing.Point(96, 249);
-            this.label_gudi6.Name = "label_gudi6";
-            this.label_gudi6.Size = new System.Drawing.Size(56, 17);
-            this.label_gudi6.TabIndex = 11;
-            this.label_gudi6.Text = "수정시간";
+            this.label_gudi4.TabIndex = 9;
+            this.label_gudi4.Text = "설비 코드";
             // 
             // textBox_gudi1
             // 
-            this.textBox_gudi1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(233, 204);
+            this.textBox_gudi1.Location = new System.Drawing.Point(167, 156);
             this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.ReadOnly = true;
-            this.textBox_gudi1.Size = new System.Drawing.Size(149, 25);
-            this.textBox_gudi1.TabIndex = 12;
+            this.textBox_gudi1.Size = new System.Drawing.Size(121, 25);
+            this.textBox_gudi1.TabIndex = 10;
             // 
             // textBox_gudi2
             // 
-            this.textBox_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(233, 246);
+            this.textBox_gudi2.Location = new System.Drawing.Point(167, 198);
             this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.ReadOnly = true;
-            this.textBox_gudi2.Size = new System.Drawing.Size(149, 25);
-            this.textBox_gudi2.TabIndex = 13;
+            this.textBox_gudi2.Size = new System.Drawing.Size(121, 25);
+            this.textBox_gudi2.TabIndex = 12;
             // 
-            // frmEquipmentGroup
+            // label_gudi5
+            // 
+            this.label_gudi5.AutoSize = true;
+            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi5.Location = new System.Drawing.Point(68, 201);
+            this.label_gudi5.Name = "label_gudi5";
+            this.label_gudi5.Size = new System.Drawing.Size(44, 17);
+            this.label_gudi5.TabIndex = 11;
+            this.label_gudi5.Text = "설비명";
+            // 
+            // label_gudi6
+            // 
+            this.label_gudi6.AutoSize = true;
+            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi6.Location = new System.Drawing.Point(370, 77);
+            this.label_gudi6.Name = "label_gudi6";
+            this.label_gudi6.Size = new System.Drawing.Size(44, 17);
+            this.label_gudi6.TabIndex = 13;
+            this.label_gudi6.Text = "수정자";
+            // 
+            // textBox_gudi3
+            // 
+            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi3.Location = new System.Drawing.Point(453, 73);
+            this.textBox_gudi3.Name = "textBox_gudi3";
+            this.textBox_gudi3.Size = new System.Drawing.Size(121, 25);
+            this.textBox_gudi3.TabIndex = 14;
+            // 
+            // textBox_gudi4
+            // 
+            this.textBox_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi4.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi4.Location = new System.Drawing.Point(453, 119);
+            this.textBox_gudi4.Name = "textBox_gudi4";
+            this.textBox_gudi4.Size = new System.Drawing.Size(121, 25);
+            this.textBox_gudi4.TabIndex = 16;
+            // 
+            // label_gudi7
+            // 
+            this.label_gudi7.AutoSize = true;
+            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi7.Location = new System.Drawing.Point(354, 123);
+            this.label_gudi7.Name = "label_gudi7";
+            this.label_gudi7.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi7.TabIndex = 15;
+            this.label_gudi7.Text = "수정 일자";
+            // 
+            // textBox_gudi5
+            // 
+            this.textBox_gudi5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi5.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi5.Location = new System.Drawing.Point(55, 263);
+            this.textBox_gudi5.Multiline = true;
+            this.textBox_gudi5.Name = "textBox_gudi5";
+            this.textBox_gudi5.Size = new System.Drawing.Size(519, 116);
+            this.textBox_gudi5.TabIndex = 18;
+            // 
+            // label_gudi8
+            // 
+            this.label_gudi8.AutoSize = true;
+            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi8.Location = new System.Drawing.Point(52, 243);
+            this.label_gudi8.Name = "label_gudi8";
+            this.label_gudi8.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi8.TabIndex = 17;
+            this.label_gudi8.Text = "특이 사항";
+            // 
+            // frmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(474, 386);
-            this.Controls.Add(this.textBox_gudi2);
-            this.Controls.Add(this.textBox_gudi1);
+            this.ClientSize = new System.Drawing.Size(611, 475);
+            this.Controls.Add(this.textBox_gudi5);
+            this.Controls.Add(this.label_gudi8);
+            this.Controls.Add(this.textBox_gudi4);
+            this.Controls.Add(this.label_gudi7);
+            this.Controls.Add(this.textBox_gudi3);
             this.Controls.Add(this.label_gudi6);
+            this.Controls.Add(this.textBox_gudi2);
             this.Controls.Add(this.label_gudi5);
-            this.Controls.Add(this.comboBox_gudi1);
-            this.Controls.Add(this.placeholderNew2);
-            this.Controls.Add(this.placeholderNew1);
+            this.Controls.Add(this.textBox_gudi1);
             this.Controls.Add(this.label_gudi4);
+            this.Controls.Add(this.comboBox_gudi2);
             this.Controls.Add(this.label_gudi3);
             this.Controls.Add(this.label_gudi2);
+            this.Controls.Add(this.comboBox_gudi1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(490, 425);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(490, 425);
-            this.Name = "frmEquipmentGroup";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmEquipmentGroup";
+            this.Name = "frmEquipment";
+            this.Text = "frmEquipment";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -298,15 +310,19 @@ namespace FinalProject1_winform.Process
         private System.Windows.Forms.Panel panel2;
         private Button_gudi button_gudi2;
         private Button_gudi button_gudi1;
+        private ComboBox_gudi comboBox_gudi1;
         private Label_gudi label_gudi2;
         private Label_gudi label_gudi3;
+        private ComboBox_gudi comboBox_gudi2;
         private Label_gudi label_gudi4;
-        private PlaceholderNew placeholderNew1;
-        private PlaceholderNew placeholderNew2;
-        private ComboBox_gudi comboBox_gudi1;
+        private Controls.TextBox_gudi textBox_gudi1;
+        private Controls.TextBox_gudi textBox_gudi2;
         private Label_gudi label_gudi5;
         private Label_gudi label_gudi6;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi1;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi2;
+        private Controls.TextBox_gudi textBox_gudi3;
+        private Controls.TextBox_gudi textBox_gudi4;
+        private Label_gudi label_gudi7;
+        private Controls.TextBox_gudi textBox_gudi5;
+        private Label_gudi label_gudi8;
     }
 }
