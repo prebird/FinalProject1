@@ -136,6 +136,18 @@
     <Compile Include="frmMrp.Designer.cs">
       <DependentUpon>frmMrp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductInsert.Designer.cs">
+      <DependentUpon>frmProductInsert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Process\frmEquipmentGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +206,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMrp.resx">
       <DependentUpon>frmMrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductInsert.resx">
+      <DependentUpon>frmProductInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmEquipmentGroup.resx">
       <DependentUpon>frmEquipmentGroup.cs</DependentUpon>
