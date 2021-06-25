@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SemiProject2.Controls
+namespace FinalProject1_winform.Controls
 {
     public enum validType { Common, Numeric, Required, RequiredNumeric, Money_Won };
 

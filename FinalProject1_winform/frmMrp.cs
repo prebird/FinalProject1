@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frm1 : Form
+    public partial class frmMrp : FinalProject1_winform.Basic3
     {
-        public frm1()
+        public frmMrp()
         {
             InitializeComponent();
         }

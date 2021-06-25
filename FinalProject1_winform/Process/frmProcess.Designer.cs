@@ -36,8 +36,8 @@ namespace FinalProject1_winform.Process
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_gudi2 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.textBox_gudi2 = new SemiProject2.Controls.TextBox_gudi();
-            this.textBox_gudi1 = new SemiProject2.Controls.TextBox_gudi();
+            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
@@ -131,7 +131,7 @@ namespace FinalProject1_winform.Process
             this.textBox_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi2.InputType = SemiProject2.Controls.validType.Common;
+            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
             this.textBox_gudi2.Location = new System.Drawing.Point(238, 252);
             this.textBox_gudi2.Name = "textBox_gudi2";
             this.textBox_gudi2.ReadOnly = true;
@@ -143,7 +143,7 @@ namespace FinalProject1_winform.Process
             this.textBox_gudi1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi1.InputType = SemiProject2.Controls.validType.Common;
+            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
             this.textBox_gudi1.Location = new System.Drawing.Point(238, 210);
             this.textBox_gudi1.Name = "textBox_gudi1";
             this.textBox_gudi1.ReadOnly = true;
@@ -298,8 +298,8 @@ namespace FinalProject1_winform.Process
         private System.Windows.Forms.Panel panel2;
         private Button_gudi button_gudi2;
         private Button_gudi button_gudi1;
-        private SemiProject2.Controls.TextBox_gudi textBox_gudi2;
-        private SemiProject2.Controls.TextBox_gudi textBox_gudi1;
+        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi2;
+        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi1;
         private Label_gudi label_gudi6;
         private Label_gudi label_gudi5;
         private ComboBox_gudi comboBox_gudi1;

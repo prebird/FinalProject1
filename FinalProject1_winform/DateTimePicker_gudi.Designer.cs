@@ -1,7 +1,7 @@
 ﻿
-namespace FinalProject1_winform.Controls
+namespace FinalProject1_winform
 {
-    partial class TextBox_gudi
+    partial class DateTimePicker_gudi
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
