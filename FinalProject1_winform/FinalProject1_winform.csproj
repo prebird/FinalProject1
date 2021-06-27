@@ -184,16 +184,16 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProduct.cs">
+    <Compile Include="Product\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProduct.Designer.cs">
+    <Compile Include="Product\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductInsert.cs">
+    <Compile Include="Product\frmProductInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductInsert.Designer.cs">
+    <Compile Include="Product\frmProductInsert.Designer.cs">
       <DependentUpon>frmProductInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Production_Planning\frmDispensing.cs">
@@ -348,10 +348,10 @@
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProduct.resx">
+    <EmbeddedResource Include="Product\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProductInsert.resx">
+    <EmbeddedResource Include="Product\frmProductInsert.resx">
       <DependentUpon>frmProductInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmDispensing.resx">
@@ -425,6 +425,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BOM\" />
+    <Folder Include="Demand_Planning\" />
     <Folder Include="InStock\" />
     <Folder Include="MRP\" />
     <Folder Include="ReStock\" />

@@ -31,11 +31,11 @@ namespace FinalProject1_winform.BaseInformation.Factory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactory));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.button_gudi7 = new FinalProject1_winform.Button_gudi();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
@@ -62,13 +62,22 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.panel1.Size = new System.Drawing.Size(1057, 50);
             this.panel1.TabIndex = 2;
             // 
+            // textBox_gudi1
+            // 
+            this.textBox_gudi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi1.Location = new System.Drawing.Point(107, 10);
+            this.textBox_gudi1.Name = "textBox_gudi1";
+            this.textBox_gudi1.Size = new System.Drawing.Size(192, 23);
+            this.textBox_gudi1.TabIndex = 10;
+            // 
             // button_gudi8
             // 
             this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.button_gudi8.FlatAppearance.BorderSize = 0;
             this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_gudi8.ForeColor = System.Drawing.Color.White;
             this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
             this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,7 +90,7 @@ namespace FinalProject1_winform.BaseInformation.Factory
             // 
             // comboBox_gudi1
             // 
-            this.comboBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.comboBox_gudi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBox_gudi1.FormattingEnabled = true;
             this.comboBox_gudi1.Location = new System.Drawing.Point(460, 11);
             this.comboBox_gudi1.Name = "comboBox_gudi1";
@@ -91,31 +100,22 @@ namespace FinalProject1_winform.BaseInformation.Factory
             // label_gudi3
             // 
             this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label_gudi3.Location = new System.Drawing.Point(394, 15);
             this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi3.Size = new System.Drawing.Size(58, 17);
             this.label_gudi3.TabIndex = 4;
             this.label_gudi3.Text = "■ 시설군";
             // 
             // label_gudi1
             // 
             this.label_gudi1.AutoSize = true;
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label_gudi1.Location = new System.Drawing.Point(12, 15);
             this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(89, 17);
+            this.label_gudi1.Size = new System.Drawing.Size(86, 17);
             this.label_gudi1.TabIndex = 0;
             this.label_gudi1.Text = "■ 시설코드/명";
-            // 
-            // textBox_gudi1
-            // 
-            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(107, 10);
-            this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.Size = new System.Drawing.Size(192, 25);
-            this.textBox_gudi1.TabIndex = 10;
             // 
             // button_gudi7
             // 
@@ -123,7 +123,7 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi7.FlatAppearance.BorderSize = 0;
             this.button_gudi7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_gudi7.ForeColor = System.Drawing.Color.Black;
             this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
             this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +141,7 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi5.FlatAppearance.BorderSize = 0;
             this.button_gudi5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_gudi5.ForeColor = System.Drawing.Color.Black;
             this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
             this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +159,7 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi6.FlatAppearance.BorderSize = 0;
             this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_gudi6.ForeColor = System.Drawing.Color.Black;
             this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
             this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +177,7 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi3.FlatAppearance.BorderSize = 0;
             this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button_gudi3.ForeColor = System.Drawing.Color.Black;
             this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
             this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +192,7 @@ namespace FinalProject1_winform.BaseInformation.Factory
             // label_gudi4
             // 
             this.label_gudi4.AutoSize = true;
-            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label_gudi4.Location = new System.Drawing.Point(49, 81);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(56, 17);
