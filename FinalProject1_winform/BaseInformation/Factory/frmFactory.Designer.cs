@@ -43,9 +43,6 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi4 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.SuspendLayout();
@@ -221,68 +218,11 @@ namespace FinalProject1_winform.BaseInformation.Factory
             this.pictureBox_gudi2.TabIndex = 18;
             this.pictureBox_gudi2.TabStop = false;
             // 
-            // button_gudi1
-            // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi1.Image")));
-            this.button_gudi1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi1.Location = new System.Drawing.Point(602, 83);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi1.TabIndex = 27;
-            this.button_gudi1.Text = "등록";
-            this.button_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi1.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi2
-            // 
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button_gudi2.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi2.Image")));
-            this.button_gudi2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi2.Location = new System.Drawing.Point(668, 83);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi2.TabIndex = 28;
-            this.button_gudi2.Text = "등록";
-            this.button_gudi2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi2.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi4
-            // 
-            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi4.FlatAppearance.BorderSize = 0;
-            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
-            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi4.Location = new System.Drawing.Point(536, 83);
-            this.button_gudi4.Name = "button_gudi4";
-            this.button_gudi4.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi4.TabIndex = 29;
-            this.button_gudi4.Text = "등록";
-            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi4.UseVisualStyleBackColor = false;
-            // 
             // frmFactory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 620);
-            this.Controls.Add(this.button_gudi4);
-            this.Controls.Add(this.button_gudi2);
-            this.Controls.Add(this.button_gudi1);
             this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.button_gudi6);
@@ -316,8 +256,5 @@ namespace FinalProject1_winform.BaseInformation.Factory
         private Label_gudi label_gudi4;
         private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
-        private Button_gudi button_gudi1;
-        private Button_gudi button_gudi2;
-        private Button_gudi button_gudi4;
     }
 }
