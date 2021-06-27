@@ -45,6 +45,7 @@ namespace FinalProject1_winform
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -222,10 +223,29 @@ namespace FinalProject1_winform
             this.dataGridView1.Size = new System.Drawing.Size(1066, 475);
             this.dataGridView1.TabIndex = 0;
             // 
+            // button_gudi3
+            // 
+            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi3.FlatAppearance.BorderSize = 0;
+            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
+            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi3.Location = new System.Drawing.Point(903, 109);
+            this.button_gudi3.Name = "button_gudi3";
+            this.button_gudi3.Size = new System.Drawing.Size(108, 25);
+            this.button_gudi3.TabIndex = 38;
+            this.button_gudi3.Text = "작업실적등록";
+            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi3.UseVisualStyleBackColor = false;
+            // 
             // frmWorkOrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.Controls.Add(this.button_gudi3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.label_gudi4);
@@ -260,5 +280,6 @@ namespace FinalProject1_winform
         private Button_gudi button_gudi5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Button_gudi button_gudi3;
     }
 }

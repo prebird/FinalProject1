@@ -48,6 +48,9 @@ namespace FinalProject1_winform
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button_gudi3 = new FinalProject1_winform.Button_gudi();
+            this.button_gudi5 = new FinalProject1_winform.Button_gudi();
+            this.button_gudi4 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -237,7 +240,7 @@ namespace FinalProject1_winform
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Location = new System.Drawing.Point(12, 390);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1066, 223);
+            this.panel3.Size = new System.Drawing.Size(1069, 223);
             this.panel3.TabIndex = 41;
             // 
             // dataGridView2
@@ -247,13 +250,70 @@ namespace FinalProject1_winform
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1066, 223);
+            this.dataGridView2.Size = new System.Drawing.Size(1069, 223);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // button_gudi3
+            // 
+            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi3.FlatAppearance.BorderSize = 0;
+            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
+            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi3.Location = new System.Drawing.Point(886, 363);
+            this.button_gudi3.Name = "button_gudi3";
+            this.button_gudi3.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi3.TabIndex = 42;
+            this.button_gudi3.Text = "추가";
+            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi3.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi5
+            // 
+            this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi5.FlatAppearance.BorderSize = 0;
+            this.button_gudi5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi5.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
+            this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi5.Location = new System.Drawing.Point(1018, 363);
+            this.button_gudi5.Name = "button_gudi5";
+            this.button_gudi5.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi5.TabIndex = 43;
+            this.button_gudi5.Text = "엑셀";
+            this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi5.UseVisualStyleBackColor = false;
+            // 
+            // button_gudi4
+            // 
+            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi4.FlatAppearance.BorderSize = 0;
+            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
+            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi4.Location = new System.Drawing.Point(952, 363);
+            this.button_gudi4.Name = "button_gudi4";
+            this.button_gudi4.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi4.TabIndex = 44;
+            this.button_gudi4.Text = "저장";
+            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi4.UseVisualStyleBackColor = false;
             // 
             // frmDispensing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.ClientSize = new System.Drawing.Size(1093, 623);
+            this.Controls.Add(this.button_gudi5);
+            this.Controls.Add(this.button_gudi4);
+            this.Controls.Add(this.button_gudi3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label_gudi6);
             this.Controls.Add(this.pictureBox_gudi1);
@@ -296,5 +356,8 @@ namespace FinalProject1_winform
         private PictureBox_gudi pictureBox_gudi1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private Button_gudi button_gudi3;
+        private Button_gudi button_gudi5;
+        private Button_gudi button_gudi4;
     }
 }

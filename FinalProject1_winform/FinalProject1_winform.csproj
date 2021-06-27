@@ -184,6 +184,12 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production_Planning\frmWorkOrderDone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning\frmWorkOrderDone.Designer.cs">
+      <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
+      <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
