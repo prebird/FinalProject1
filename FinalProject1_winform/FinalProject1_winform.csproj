@@ -184,12 +184,6 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMrp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMrp.Designer.cs">
-      <DependentUpon>frmMrp.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +195,24 @@
     </Compile>
     <Compile Include="frmProductInsert.Designer.cs">
       <DependentUpon>frmProductInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\frmInstock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmInstock.Designer.cs">
+      <DependentUpon>frmInstock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\frmInstockWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmInstockWait.Designer.cs">
+      <DependentUpon>frmInstockWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\frmMrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmMrp.Designer.cs">
+      <DependentUpon>frmMrp.cs</DependentUpon>
     </Compile>
     <Compile Include="Process\frmEquipment.cs">
       <SubType>Form</SubType>
@@ -264,6 +276,30 @@
     <Compile Include="Controls\UcDateTimePicker.Designer.cs">
       <DependentUpon>UcDateTimePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchasing\frmrestockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmrestockList.Designer.cs">
+      <DependentUpon>frmrestockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\frmRestockOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmRestockOrder.Designer.cs">
+      <DependentUpon>frmRestockOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\frmRestockOrderPopUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmRestockOrderPopUP.Designer.cs">
+      <DependentUpon>frmRestockOrderPopUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\frmStockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing\frmStockList.Designer.cs">
+      <DependentUpon>frmStockList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,14 +342,20 @@
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMrp.resx">
-      <DependentUpon>frmMrp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductInsert.resx">
       <DependentUpon>frmProductInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmInstock.resx">
+      <DependentUpon>frmInstock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmInstockWait.resx">
+      <DependentUpon>frmInstockWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmMrp.resx">
+      <DependentUpon>frmMrp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmEquipment.resx">
       <DependentUpon>frmEquipment.cs</DependentUpon>
@@ -348,6 +390,18 @@
     <EmbeddedResource Include="Controls\UcDateTimePicker.resx">
       <DependentUpon>UcDateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmrestockList.resx">
+      <DependentUpon>frmrestockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmRestockOrder.resx">
+      <DependentUpon>frmRestockOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmRestockOrderPopUP.resx">
+      <DependentUpon>frmRestockOrderPopUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\frmStockList.resx">
+      <DependentUpon>frmStockList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -362,7 +416,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="InStock\" />
     <Folder Include="MRP\" />
+    <Folder Include="ReStock\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\2214523.png">
