@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frmEquipmentList : Basic3
+    public partial class frmWorkOrderMake : FinalProject1_winform.Basic3
     {
-        public frmEquipmentList()
+        public frmWorkOrderMake()
         {
             InitializeComponent();
+        }
+
+        private void label_gudi4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

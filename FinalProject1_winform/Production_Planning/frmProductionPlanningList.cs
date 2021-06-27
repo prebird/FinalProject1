@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FinalProject1_winform
+namespace FinalProject1_winform.Production_Planning
 {
-    public partial class frmEquipmentList : Basic3
+    public partial class frmProductionPlanningList : FinalProject1_winform.Basic3
     {
-        public frmEquipmentList()
+        public frmProductionPlanningList()
         {
             InitializeComponent();
         }

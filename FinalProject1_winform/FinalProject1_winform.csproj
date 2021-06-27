@@ -106,6 +106,18 @@
     <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
       <DependentUpon>frmProductPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="BOR\frmBORInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOR\frmBORInsert.Designer.cs">
+      <DependentUpon>frmBORInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BOR\frmBORList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOR\frmBORList.Designer.cs">
+      <DependentUpon>frmBORList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ComboBox_gudi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -172,47 +184,23 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchasing\frmInstock.cs">
+    <Compile Include="frmMrp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchasing\frmInstock.Designer.cs">
-      <DependentUpon>frmInstock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchasing\frmInstockWait.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchasing\frmInstockWait.Designer.cs">
-      <DependentUpon>frmInstockWait.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchasing\frmMrp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchasing\frmMrp.Designer.cs">
+    <Compile Include="frmMrp.Designer.cs">
       <DependentUpon>frmMrp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchasing\frmrestockList.cs">
+    <Compile Include="frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchasing\frmrestockList.Designer.cs">
-      <DependentUpon>frmrestockList.cs</DependentUpon>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchasing\frmRestockOrder.cs">
+    <Compile Include="frmProductInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchasing\frmRestockOrder.Designer.cs">
-      <DependentUpon>frmRestockOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchasing\frmRestockOrderPopUP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchasing\frmRestockOrderPopUP.Designer.cs">
-      <DependentUpon>frmRestockOrderPopUP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchasing\frmStockList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchasing\frmStockList.Designer.cs">
-      <DependentUpon>frmStockList.cs</DependentUpon>
+    <Compile Include="frmProductInsert.Designer.cs">
+      <DependentUpon>frmProductInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Process\frmEquipment.cs">
       <SubType>Form</SubType>
@@ -237,6 +225,18 @@
     </Compile>
     <Compile Include="Process\frmProcess.Designer.cs">
       <DependentUpon>frmProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Planning\frmProductionPlanningList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning\frmProductionPlanningList.Designer.cs">
+      <DependentUpon>frmProductionPlanningList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Planning\frmWorkOrderMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning\frmWorkOrderMake.Designer.cs">
+      <DependentUpon>frmWorkOrderMake.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -291,29 +291,23 @@
     <EmbeddedResource Include="BaseInformation\PerPrice\frmProductPrice.resx">
       <DependentUpon>frmProductPrice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BOR\frmBORInsert.resx">
+      <DependentUpon>frmBORInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOR\frmBORList.resx">
+      <DependentUpon>frmBORList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmInstock.resx">
-      <DependentUpon>frmInstock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmInstockWait.resx">
-      <DependentUpon>frmInstockWait.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmMrp.resx">
+    <EmbeddedResource Include="frmMrp.resx">
       <DependentUpon>frmMrp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmrestockList.resx">
-      <DependentUpon>frmrestockList.cs</DependentUpon>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmRestockOrder.resx">
-      <DependentUpon>frmRestockOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmRestockOrderPopUP.resx">
-      <DependentUpon>frmRestockOrderPopUP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing\frmStockList.resx">
-      <DependentUpon>frmStockList.cs</DependentUpon>
+    <EmbeddedResource Include="frmProductInsert.resx">
+      <DependentUpon>frmProductInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmEquipment.resx">
       <DependentUpon>frmEquipment.cs</DependentUpon>
@@ -326,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmProcess.resx">
       <DependentUpon>frmProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning\frmProductionPlanningList.resx">
+      <DependentUpon>frmProductionPlanningList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning\frmWorkOrderMake.resx">
+      <DependentUpon>frmWorkOrderMake.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -353,9 +353,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="InStock\" />
     <Folder Include="MRP\" />
-    <Folder Include="ReStock\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\2214523.png">
