@@ -67,7 +67,7 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.button_gudi8);
             this.panel1.Location = new System.Drawing.Point(17, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 50);
+            this.panel1.Size = new System.Drawing.Size(1057, 60);
             this.panel1.TabIndex = 3;
             // 
             // button_gudi8
@@ -97,7 +97,7 @@ namespace FinalProject1_winform
             this.button_gudi7.ForeColor = System.Drawing.Color.Black;
             this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
             this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi7.Location = new System.Drawing.Point(881, 90);
+            this.button_gudi7.Location = new System.Drawing.Point(881, 83);
             this.button_gudi7.Name = "button_gudi7";
             this.button_gudi7.Size = new System.Drawing.Size(60, 25);
             this.button_gudi7.TabIndex = 32;
@@ -115,7 +115,7 @@ namespace FinalProject1_winform
             this.button_gudi5.ForeColor = System.Drawing.Color.Black;
             this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
             this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi5.Location = new System.Drawing.Point(1015, 90);
+            this.button_gudi5.Location = new System.Drawing.Point(1015, 83);
             this.button_gudi5.Name = "button_gudi5";
             this.button_gudi5.Size = new System.Drawing.Size(60, 25);
             this.button_gudi5.TabIndex = 29;
@@ -133,7 +133,7 @@ namespace FinalProject1_winform
             this.button_gudi6.ForeColor = System.Drawing.Color.Black;
             this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
             this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(948, 90);
+            this.button_gudi6.Location = new System.Drawing.Point(948, 83);
             this.button_gudi6.Name = "button_gudi6";
             this.button_gudi6.Size = new System.Drawing.Size(60, 25);
             this.button_gudi6.TabIndex = 30;
@@ -151,7 +151,7 @@ namespace FinalProject1_winform
             this.button_gudi3.ForeColor = System.Drawing.Color.Black;
             this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
             this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(749, 90);
+            this.button_gudi3.Location = new System.Drawing.Point(749, 83);
             this.button_gudi3.Name = "button_gudi3";
             this.button_gudi3.Size = new System.Drawing.Size(60, 25);
             this.button_gudi3.TabIndex = 31;
@@ -163,16 +163,16 @@ namespace FinalProject1_winform
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(51, 90);
+            this.label_gudi4.Location = new System.Drawing.Point(51, 83);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(56, 17);
+            this.label_gudi4.Size = new System.Drawing.Size(34, 17);
             this.label_gudi4.TabIndex = 28;
-            this.label_gudi4.Text = "공장정의";
+            this.label_gudi4.Text = "BOR";
             // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(20, 88);
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(20, 81);
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
             this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,9 +222,9 @@ namespace FinalProject1_winform
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(20, 142);
+            this.panel2.Location = new System.Drawing.Point(20, 114);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 466);
+            this.panel2.Size = new System.Drawing.Size(1057, 494);
             this.panel2.TabIndex = 33;
             // 
             // textBox_gudi2
@@ -253,7 +253,7 @@ namespace FinalProject1_winform
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1057, 466);
+            this.dataGridView1.Size = new System.Drawing.Size(1057, 494);
             this.dataGridView1.TabIndex = 0;
             // 
             // button_gudi4
@@ -266,7 +266,7 @@ namespace FinalProject1_winform
             this.button_gudi4.ForeColor = System.Drawing.Color.Black;
             this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
             this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi4.Location = new System.Drawing.Point(815, 90);
+            this.button_gudi4.Location = new System.Drawing.Point(815, 83);
             this.button_gudi4.Name = "button_gudi4";
             this.button_gudi4.Size = new System.Drawing.Size(60, 25);
             this.button_gudi4.TabIndex = 34;

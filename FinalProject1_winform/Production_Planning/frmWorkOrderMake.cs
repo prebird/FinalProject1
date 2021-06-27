@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace FinalProject1_winform
+{
+    public partial class frmWorkOrderMake : FinalProject1_winform.Basic3
+    {
+        public frmWorkOrderMake()
+        {
+            InitializeComponent();
+        }
+
+        private void label_gudi4_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
