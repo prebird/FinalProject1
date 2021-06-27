@@ -196,6 +196,12 @@
     <Compile Include="frmProductInsert.Designer.cs">
       <DependentUpon>frmProductInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production_Planning\frmDispensing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning\frmDispensing.Designer.cs">
+      <DependentUpon>frmDispensing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchasing\frmInstock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductInsert.resx">
       <DependentUpon>frmProductInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning\frmDispensing.resx">
+      <DependentUpon>frmDispensing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchasing\frmInstock.resx">
       <DependentUpon>frmInstock.cs</DependentUpon>

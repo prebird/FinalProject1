@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProject1_winform
 {
-    partial class frmWorkOrderList
+    partial class frmDispensing
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkOrderList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDispensing));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
@@ -42,13 +42,19 @@ namespace FinalProject1_winform
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,10 +71,10 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.button_gudi8);
             this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Controls.Add(this.label_gudi1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(14, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1065, 93);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 6;
             // 
             // textBox_gudi2
             // 
@@ -168,49 +174,31 @@ namespace FinalProject1_winform
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(43, 113);
+            this.label_gudi4.Location = new System.Drawing.Point(45, 113);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(80, 17);
-            this.label_gudi4.TabIndex = 34;
-            this.label_gudi4.Text = "작업지시현황";
+            this.label_gudi4.Size = new System.Drawing.Size(84, 17);
+            this.label_gudi4.TabIndex = 36;
+            this.label_gudi4.Text = "작업지시 조회";
             // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(12, 111);
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(14, 111);
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
             this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi2.TabIndex = 33;
+            this.pictureBox_gudi2.TabIndex = 35;
             this.pictureBox_gudi2.TabStop = false;
-            // 
-            // button_gudi5
-            // 
-            this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi5.FlatAppearance.BorderSize = 0;
-            this.button_gudi5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi5.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
-            this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi5.Location = new System.Drawing.Point(1017, 109);
-            this.button_gudi5.Name = "button_gudi5";
-            this.button_gudi5.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi5.TabIndex = 36;
-            this.button_gudi5.Text = "엑셀";
-            this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi5.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(12, 140);
+            this.panel2.Location = new System.Drawing.Point(15, 136);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 475);
-            this.panel2.TabIndex = 37;
+            this.panel2.Size = new System.Drawing.Size(1066, 223);
+            this.panel2.TabIndex = 38;
             // 
             // dataGridView1
             // 
@@ -219,25 +207,70 @@ namespace FinalProject1_winform
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1066, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(1066, 223);
             this.dataGridView1.TabIndex = 0;
             // 
-            // frmWorkOrderList
+            // label_gudi6
+            // 
+            this.label_gudi6.AutoSize = true;
+            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi6.Location = new System.Drawing.Point(46, 367);
+            this.label_gudi6.Name = "label_gudi6";
+            this.label_gudi6.Size = new System.Drawing.Size(56, 17);
+            this.label_gudi6.TabIndex = 40;
+            this.label_gudi6.Text = "자재불출";
+            // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(15, 365);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 39;
+            this.pictureBox_gudi1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Location = new System.Drawing.Point(12, 390);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1066, 223);
+            this.panel3.TabIndex = 41;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(1066, 223);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // frmDispensing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label_gudi6);
+            this.Controls.Add(this.pictureBox_gudi1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.label_gudi4);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmWorkOrderList";
-            this.Text = "frmWorkOrderList";
+            this.Name = "frmDispensing";
+            this.Text = "frmDispensing";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +279,7 @@ namespace FinalProject1_winform
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private Controls.TextBox_gudi textBox_gudi2;
         private ComboBox_gudi comboBox_gudi2;
         private Label_gudi label_gudi5;
         private UcDateTimePicker ucDateTimePicker1;
@@ -254,11 +288,13 @@ namespace FinalProject1_winform
         private Button_gudi button_gudi8;
         private Label_gudi label_gudi3;
         private Label_gudi label_gudi1;
-        private Controls.TextBox_gudi textBox_gudi2;
         private Label_gudi label_gudi4;
         private PictureBox_gudi pictureBox_gudi2;
-        private Button_gudi button_gudi5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Label_gudi label_gudi6;
+        private PictureBox_gudi pictureBox_gudi1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
