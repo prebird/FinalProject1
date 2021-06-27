@@ -166,10 +166,10 @@
     <Compile Include="Controls\UCdateSearcher.designer.cs">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </Compile>
-    <Compile Include="DateTimePicker_gudi.cs">
+    <Compile Include="Controls\DateTimePicker_gudi.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DateTimePicker_gudi.Designer.cs">
+    <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMrp.cs">
@@ -216,10 +216,10 @@
     <Compile Include="Controls\RadioButton_gudi.Designer.cs">
       <DependentUpon>RadioButton_gudi.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcDateTimePicker.cs">
+    <Compile Include="Controls\UcDateTimePicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcDateTimePicker.Designer.cs">
+    <Compile Include="Controls\UcDateTimePicker.Designer.cs">
       <DependentUpon>UcDateTimePicker.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
@@ -282,7 +282,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UcDateTimePicker.resx">
+    <EmbeddedResource Include="Controls\UcDateTimePicker.resx">
       <DependentUpon>UcDateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
