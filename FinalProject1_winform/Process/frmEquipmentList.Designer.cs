@@ -86,6 +86,7 @@ namespace FinalProject1_winform.Process
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmEquipmentList";
+            this.Text = "frmEquipmentList";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
