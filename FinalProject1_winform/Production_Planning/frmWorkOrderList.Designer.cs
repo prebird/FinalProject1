@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProject1_winform
 {
-    partial class frmWorkOrderMake
+    partial class frmWorkOrderList
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,8 +29,9 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkOrderMake));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkOrderList));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.ucDateTimePicker1 = new FinalProject1_winform.UcDateTimePicker();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
@@ -38,15 +39,12 @@ namespace FinalProject1_winform
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.button_gudi10 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
-            this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,8 +56,8 @@ namespace FinalProject1_winform
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.textBox_gudi2);
             this.panel1.Controls.Add(this.comboBox_gudi2);
-            this.panel1.Controls.Add(this.comboBox_gudi1);
             this.panel1.Controls.Add(this.label_gudi5);
             this.panel1.Controls.Add(this.ucDateTimePicker1);
             this.panel1.Controls.Add(this.label_gudi2);
@@ -70,7 +68,16 @@ namespace FinalProject1_winform
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1065, 93);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 5;
+            // 
+            // comboBox_gudi2
+            // 
+            this.comboBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.comboBox_gudi2.FormattingEnabled = true;
+            this.comboBox_gudi2.Location = new System.Drawing.Point(788, 15);
+            this.comboBox_gudi2.Name = "comboBox_gudi2";
+            this.comboBox_gudi2.Size = new System.Drawing.Size(193, 24);
+            this.comboBox_gudi2.TabIndex = 16;
             // 
             // label_gudi5
             // 
@@ -80,7 +87,7 @@ namespace FinalProject1_winform
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(84, 17);
             this.label_gudi5.TabIndex = 14;
-            this.label_gudi5.Text = "■ 계획시작일";
+            this.label_gudi5.Text = "■ 작업시작일";
             // 
             // ucDateTimePicker1
             // 
@@ -136,7 +143,7 @@ namespace FinalProject1_winform
             this.label_gudi3.Name = "label_gudi3";
             this.label_gudi3.Size = new System.Drawing.Size(48, 17);
             this.label_gudi3.TabIndex = 4;
-            this.label_gudi3.Text = "■ 상태";
+            this.label_gudi3.Text = "■ 물품";
             // 
             // label_gudi1
             // 
@@ -148,16 +155,24 @@ namespace FinalProject1_winform
             this.label_gudi1.TabIndex = 0;
             this.label_gudi1.Text = "■ 코드명";
             // 
+            // textBox_gudi2
+            // 
+            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi2.Location = new System.Drawing.Point(464, 15);
+            this.textBox_gudi2.Name = "textBox_gudi2";
+            this.textBox_gudi2.Size = new System.Drawing.Size(196, 25);
+            this.textBox_gudi2.TabIndex = 17;
+            // 
             // label_gudi4
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi4.Location = new System.Drawing.Point(43, 113);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(56, 17);
-            this.label_gudi4.TabIndex = 32;
-            this.label_gudi4.Text = "작업지시";
-            this.label_gudi4.Click += new System.EventHandler(this.label_gudi4_Click);
+            this.label_gudi4.Size = new System.Drawing.Size(80, 17);
+            this.label_gudi4.TabIndex = 34;
+            this.label_gudi4.Text = "작업지시현황";
             // 
             // pictureBox_gudi2
             // 
@@ -166,44 +181,8 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
             this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi2.TabIndex = 31;
+            this.pictureBox_gudi2.TabIndex = 33;
             this.pictureBox_gudi2.TabStop = false;
-            // 
-            // button_gudi10
-            // 
-            this.button_gudi10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi10.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi10.FlatAppearance.BorderSize = 0;
-            this.button_gudi10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi10.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi10.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi10.Image")));
-            this.button_gudi10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi10.Location = new System.Drawing.Point(836, 109);
-            this.button_gudi10.Name = "button_gudi10";
-            this.button_gudi10.Size = new System.Drawing.Size(109, 25);
-            this.button_gudi10.TabIndex = 33;
-            this.button_gudi10.Text = "작업지시확정";
-            this.button_gudi10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi10.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi6
-            // 
-            this.button_gudi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi6.FlatAppearance.BorderSize = 0;
-            this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi6.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
-            this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(951, 109);
-            this.button_gudi6.Name = "button_gudi6";
-            this.button_gudi6.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi6.TabIndex = 34;
-            this.button_gudi6.Text = "삭제";
-            this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi6.UseVisualStyleBackColor = false;
             // 
             // button_gudi5
             // 
@@ -218,7 +197,7 @@ namespace FinalProject1_winform
             this.button_gudi5.Location = new System.Drawing.Point(1017, 109);
             this.button_gudi5.Name = "button_gudi5";
             this.button_gudi5.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi5.TabIndex = 35;
+            this.button_gudi5.TabIndex = 36;
             this.button_gudi5.Text = "엑셀";
             this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi5.UseVisualStyleBackColor = false;
@@ -231,7 +210,7 @@ namespace FinalProject1_winform
             this.panel2.Location = new System.Drawing.Point(12, 140);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1066, 475);
-            this.panel2.TabIndex = 36;
+            this.panel2.TabIndex = 37;
             // 
             // dataGridView1
             // 
@@ -243,37 +222,17 @@ namespace FinalProject1_winform
             this.dataGridView1.Size = new System.Drawing.Size(1066, 475);
             this.dataGridView1.TabIndex = 0;
             // 
-            // comboBox_gudi1
-            // 
-            this.comboBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi1.FormattingEnabled = true;
-            this.comboBox_gudi1.Location = new System.Drawing.Point(490, 15);
-            this.comboBox_gudi1.Name = "comboBox_gudi1";
-            this.comboBox_gudi1.Size = new System.Drawing.Size(145, 24);
-            this.comboBox_gudi1.TabIndex = 15;
-            // 
-            // comboBox_gudi2
-            // 
-            this.comboBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi2.FormattingEnabled = true;
-            this.comboBox_gudi2.Location = new System.Drawing.Point(788, 15);
-            this.comboBox_gudi2.Name = "comboBox_gudi2";
-            this.comboBox_gudi2.Size = new System.Drawing.Size(193, 24);
-            this.comboBox_gudi2.TabIndex = 16;
-            // 
-            // frmWorkOrderMake
+            // frmWorkOrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button_gudi5);
-            this.Controls.Add(this.button_gudi6);
-            this.Controls.Add(this.button_gudi10);
             this.Controls.Add(this.label_gudi4);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmWorkOrderMake";
-            this.Text = "frmWorkOrderMake";
+            this.Name = "frmWorkOrderList";
+            this.Text = "frmWorkOrderList";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
@@ -287,6 +246,7 @@ namespace FinalProject1_winform
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private ComboBox_gudi comboBox_gudi2;
         private Label_gudi label_gudi5;
         private UcDateTimePicker ucDateTimePicker1;
         private Label_gudi label_gudi2;
@@ -294,14 +254,11 @@ namespace FinalProject1_winform
         private Button_gudi button_gudi8;
         private Label_gudi label_gudi3;
         private Label_gudi label_gudi1;
+        private Controls.TextBox_gudi textBox_gudi2;
         private Label_gudi label_gudi4;
         private PictureBox_gudi pictureBox_gudi2;
-        private Button_gudi button_gudi10;
-        private Button_gudi button_gudi6;
         private Button_gudi button_gudi5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ComboBox_gudi comboBox_gudi2;
-        private ComboBox_gudi comboBox_gudi1;
     }
 }

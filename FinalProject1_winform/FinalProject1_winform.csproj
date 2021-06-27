@@ -232,6 +232,12 @@
     <Compile Include="Production_Planning\frmProductionPlanningList.Designer.cs">
       <DependentUpon>frmProductionPlanningList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production_Planning\frmWorkOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning\frmWorkOrderList.Designer.cs">
+      <DependentUpon>frmWorkOrderList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Production_Planning\frmWorkOrderMake.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmProductionPlanningList.resx">
       <DependentUpon>frmProductionPlanningList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning\frmWorkOrderList.resx">
+      <DependentUpon>frmWorkOrderList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderMake.resx">
       <DependentUpon>frmWorkOrderMake.cs</DependentUpon>
