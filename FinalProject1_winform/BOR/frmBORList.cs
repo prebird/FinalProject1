@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frmEquipmentList : Basic3
+    public partial class frmBORList : FinalProject1_winform.Basic3
     {
-        public frmEquipmentList()
+        public frmBORList()
         {
             InitializeComponent();
         }

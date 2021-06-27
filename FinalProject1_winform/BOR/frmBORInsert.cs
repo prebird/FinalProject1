@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frmEquipmentList : Basic3
+    public partial class frmBORInsert : Form
     {
-        public frmEquipmentList()
+        public frmBORInsert()
         {
             InitializeComponent();
         }
