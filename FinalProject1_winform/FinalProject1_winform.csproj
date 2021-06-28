@@ -214,11 +214,35 @@
     <Compile Include="Controls\UCMachine.Designer.cs">
       <DependentUpon>UCMachine.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDemandPlannigList.cs">
+    <Compile Include="Demand_Planning\frmDemandPlannig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDemandPlannigList.Designer.cs">
-      <DependentUpon>frmDemandPlannigList.cs</DependentUpon>
+    <Compile Include="Demand_Planning\frmDemandPlannig.Designer.cs">
+      <DependentUpon>frmDemandPlannig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmDPInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmDPInsert.Designer.cs">
+      <DependentUpon>frmDPInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmPOInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmPOInsert.Designer.cs">
+      <DependentUpon>frmPOInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSMInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSMInsert.Designer.cs">
+      <DependentUpon>frmSMInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSalesMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSalesMaster.Designer.cs">
+      <DependentUpon>frmSalesMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="POP\frmPOPMachine.cs">
       <SubType>Form</SubType>
@@ -435,6 +459,21 @@
     <EmbeddedResource Include="Controls\UCMachine.resx">
       <DependentUpon>UCMachine.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmDemandPlannig.resx">
+      <DependentUpon>frmDemandPlannig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmDPInsert.resx">
+      <DependentUpon>frmDPInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmPOInsert.resx">
+      <DependentUpon>frmPOInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmSMInsert.resx">
+      <DependentUpon>frmSMInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
+      <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POP\frmPOPMachine.resx">
       <DependentUpon>frmPOPMachine.cs</DependentUpon>
     </EmbeddedResource>
@@ -527,7 +566,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Demand_Planning\" />
     <Folder Include="InStock\" />
     <Folder Include="MRP\" />
     <Folder Include="ReStock\" />

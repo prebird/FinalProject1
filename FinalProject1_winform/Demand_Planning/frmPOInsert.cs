@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frmDemandPlannigList : FinalProject1_winform.Basic3
+    public partial class frmPOInsert : Form
     {
-        public frmDemandPlannigList()
+        public frmPOInsert()
         {
             InitializeComponent();
         }
