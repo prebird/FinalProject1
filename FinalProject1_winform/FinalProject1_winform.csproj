@@ -82,6 +82,12 @@
     <Compile Include="BaseInformation\Factory\frmFactory.Designer.cs">
       <DependentUpon>frmFactory.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInformation\Factory\frmFactoryIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\Factory\frmFactoryIns.Designer.cs">
+      <DependentUpon>frmFactoryIns.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\Factory\frmFactory.resx">
       <DependentUpon>frmFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\Factory\frmFactoryIns.resx">
+      <DependentUpon>frmFactoryIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
       <DependentUpon>frmMaterialPrice.cs</DependentUpon>
