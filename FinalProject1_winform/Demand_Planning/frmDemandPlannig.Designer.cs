@@ -32,12 +32,8 @@ namespace FinalProject1_winform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDemandPlannig));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button_gudi7 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi4 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,68 +55,12 @@ namespace FinalProject1_winform
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
+            this.button_gudi4 = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button_gudi7
-            // 
-            this.button_gudi7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi7.FlatAppearance.BorderSize = 0;
-            this.button_gudi7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi7.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
-            this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi7.Location = new System.Drawing.Point(666, 109);
-            this.button_gudi7.Name = "button_gudi7";
-            this.button_gudi7.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi7.TabIndex = 32;
-            this.button_gudi7.Text = "수정";
-            this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi7.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi4
-            // 
-            this.button_gudi4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi4.FlatAppearance.BorderSize = 0;
-            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
-            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi4.Location = new System.Drawing.Point(796, 109);
-            this.button_gudi4.Name = "button_gudi4";
-            this.button_gudi4.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi4.TabIndex = 31;
-            this.button_gudi4.Text = "복사";
-            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi4.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi10
-            // 
-            this.button_gudi10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi10.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi10.FlatAppearance.BorderSize = 0;
-            this.button_gudi10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi10.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi10.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi10.Image")));
-            this.button_gudi10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi10.Location = new System.Drawing.Point(926, 109);
-            this.button_gudi10.Name = "button_gudi10";
-            this.button_gudi10.Size = new System.Drawing.Size(149, 25);
-            this.button_gudi10.TabIndex = 27;
-            this.button_gudi10.Text = "양식(양식이름) 다운";
-            this.button_gudi10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi10.UseVisualStyleBackColor = false;
             // 
             // button_gudi5
             // 
@@ -133,7 +73,7 @@ namespace FinalProject1_winform
             this.button_gudi5.ForeColor = System.Drawing.Color.Black;
             this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
             this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi5.Location = new System.Drawing.Point(861, 109);
+            this.button_gudi5.Location = new System.Drawing.Point(896, 112);
             this.button_gudi5.Name = "button_gudi5";
             this.button_gudi5.Size = new System.Drawing.Size(60, 25);
             this.button_gudi5.TabIndex = 28;
@@ -152,32 +92,13 @@ namespace FinalProject1_winform
             this.button_gudi6.ForeColor = System.Drawing.Color.Black;
             this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
             this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(731, 109);
+            this.button_gudi6.Location = new System.Drawing.Point(830, 112);
             this.button_gudi6.Name = "button_gudi6";
             this.button_gudi6.Size = new System.Drawing.Size(60, 25);
             this.button_gudi6.TabIndex = 29;
             this.button_gudi6.Text = "삭제";
             this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi6.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi3
-            // 
-            this.button_gudi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi3.FlatAppearance.BorderSize = 0;
-            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
-            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(601, 109);
-            this.button_gudi3.Name = "button_gudi3";
-            this.button_gudi3.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi3.TabIndex = 30;
-            this.button_gudi3.Text = "등록";
-            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi3.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -399,17 +320,33 @@ namespace FinalProject1_winform
             this.label_gudi2.TabIndex = 33;
             this.label_gudi2.Text = "수요 계획 목록";
             // 
+            // button_gudi4
+            // 
+            this.button_gudi4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi4.FlatAppearance.BorderSize = 0;
+            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
+            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi4.Location = new System.Drawing.Point(962, 112);
+            this.button_gudi4.Name = "button_gudi4";
+            this.button_gudi4.Size = new System.Drawing.Size(113, 25);
+            this.button_gudi4.TabIndex = 31;
+            this.button_gudi4.Text = "생산 계획 생성";
+            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi4.UseVisualStyleBackColor = false;
+            // 
             // frmDemandPlannig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
             this.Controls.Add(this.label_gudi2);
-            this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.button_gudi4);
-            this.Controls.Add(this.button_gudi10);
             this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.button_gudi6);
-            this.Controls.Add(this.button_gudi3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
@@ -425,13 +362,8 @@ namespace FinalProject1_winform
         }
 
         #endregion
-
-        private Button_gudi button_gudi7;
-        private Button_gudi button_gudi4;
-        private Button_gudi button_gudi10;
         private Button_gudi button_gudi5;
         private Button_gudi button_gudi6;
-        private Button_gudi button_gudi3;
         private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private System.Windows.Forms.Panel panel1;
@@ -453,5 +385,6 @@ namespace FinalProject1_winform
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Button_gudi button_gudi4;
     }
 }
