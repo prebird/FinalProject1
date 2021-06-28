@@ -82,6 +82,18 @@
     <Compile Include="BaseInformation\Factory\frmFactory.Designer.cs">
       <DependentUpon>frmFactory.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInformation\Factory\frmFactoryIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\Factory\frmFactoryIns.Designer.cs">
+      <DependentUpon>frmFactoryIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInformation\Inspect\frmMateriaInspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\Inspect\frmMateriaInspect.Designer.cs">
+      <DependentUpon>frmMateriaInspect.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,23 +196,17 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMInsert.cs">
+    <Compile Include="POP\frmPOPMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMInsert.Designer.cs">
-      <DependentUpon>frmBOMInsert.cs</DependentUpon>
+    <Compile Include="POP\frmPOPMain.Designer.cs">
+      <DependentUpon>frmPOPMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMList.cs">
+    <Compile Include="POP\frmPOPProcess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMList.Designer.cs">
-      <DependentUpon>frmBOMList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDemandPlannigList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDemandPlannigList.Designer.cs">
-      <DependentUpon>frmDemandPlannigList.cs</DependentUpon>
+    <Compile Include="POP\frmPOPProcess.Designer.cs">
+      <DependentUpon>frmPOPProcess.cs</DependentUpon>
     </Compile>
     <Compile Include="Production_Planning\frmWorkOrderDone.cs">
       <SubType>Form</SubType>
@@ -351,6 +357,12 @@
     <EmbeddedResource Include="BaseInformation\Factory\frmFactory.resx">
       <DependentUpon>frmFactory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\Factory\frmFactoryIns.resx">
+      <DependentUpon>frmFactoryIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\Inspect\frmMateriaInspect.resx">
+      <DependentUpon>frmMateriaInspect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
       <DependentUpon>frmMaterialPrice.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,11 +384,11 @@
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMInsert.resx">
-      <DependentUpon>frmBOMInsert.cs</DependentUpon>
+    <EmbeddedResource Include="POP\frmPOPMain.resx">
+      <DependentUpon>frmPOPMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMList.resx">
-      <DependentUpon>frmBOMList.cs</DependentUpon>
+    <EmbeddedResource Include="POP\frmPOPProcess.resx">
+      <DependentUpon>frmPOPProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
