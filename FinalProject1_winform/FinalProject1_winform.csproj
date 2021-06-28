@@ -262,17 +262,23 @@
     <Compile Include="POP\frmPOPProcess.Designer.cs">
       <DependentUpon>frmPOPProcess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Release\frmRelease.cs">
+    <Compile Include="POP\frmRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Release\frmRelease.Designer.cs">
+    <Compile Include="POP\frmRecord.Designer.cs">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmRelease.Designer.cs">
       <DependentUpon>frmRelease.cs</DependentUpon>
     </Compile>
-    <Compile Include="Release\frmWorkRecord.cs">
+    <Compile Include="POP\frmReleaseList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Release\frmWorkRecord.Designer.cs">
-      <DependentUpon>frmWorkRecord.cs</DependentUpon>
+    <Compile Include="POP\frmReleaseList.Designer.cs">
+      <DependentUpon>frmReleaseList.cs</DependentUpon>
     </Compile>
     <Compile Include="Production_Planning\frmWorkOrderDone.cs">
       <SubType>Form</SubType>
@@ -483,8 +489,14 @@
     <EmbeddedResource Include="POP\frmPOPProcess.resx">
       <DependentUpon>frmPOPProcess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Release\frmWorkRecord.resx">
-      <DependentUpon>frmWorkRecord.cs</DependentUpon>
+    <EmbeddedResource Include="POP\frmRecord.resx">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmRelease.resx">
+      <DependentUpon>frmRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmReleaseList.resx">
+      <DependentUpon>frmReleaseList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
