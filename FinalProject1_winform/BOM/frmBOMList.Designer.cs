@@ -75,7 +75,6 @@ namespace FinalProject1_winform
             this.btn_Update = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Forward)).BeginInit();
             this.panel1.SuspendLayout();
@@ -491,26 +490,10 @@ namespace FinalProject1_winform
             this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi3.UseVisualStyleBackColor = false;
             // 
-            // button_gudi1
-            // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(678, 293);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(175, 23);
-            this.button_gudi1.TabIndex = 35;
-            this.button_gudi1.Text = "button_gudi1";
-            this.button_gudi1.UseVisualStyleBackColor = false;
-            // 
             // frmBOMList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
-            this.Controls.Add(this.button_gudi1);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.button_gudi3);
@@ -575,6 +558,5 @@ namespace FinalProject1_winform
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private Button_gudi button_gudi1;
     }
 }
