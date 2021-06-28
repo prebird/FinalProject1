@@ -100,20 +100,20 @@ namespace FinalProject1_winform.BaseInformation.Factory
             // label_gudi3
             // 
             this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_gudi3.Location = new System.Drawing.Point(394, 15);
             this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(58, 17);
+            this.label_gudi3.Size = new System.Drawing.Size(55, 16);
             this.label_gudi3.TabIndex = 4;
             this.label_gudi3.Text = "■ 시설군";
             // 
             // label_gudi1
             // 
             this.label_gudi1.AutoSize = true;
-            this.label_gudi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_gudi1.Location = new System.Drawing.Point(12, 15);
             this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(86, 17);
+            this.label_gudi1.Size = new System.Drawing.Size(82, 16);
             this.label_gudi1.TabIndex = 0;
             this.label_gudi1.Text = "■ 시설코드/명";
             // 
@@ -192,10 +192,10 @@ namespace FinalProject1_winform.BaseInformation.Factory
             // label_gudi4
             // 
             this.label_gudi4.AutoSize = true;
-            this.label_gudi4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_gudi4.Location = new System.Drawing.Point(49, 81);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(56, 17);
+            this.label_gudi4.Size = new System.Drawing.Size(52, 16);
             this.label_gudi4.TabIndex = 20;
             this.label_gudi4.Text = "공장정의";
             // 

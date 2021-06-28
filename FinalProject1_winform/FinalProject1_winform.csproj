@@ -238,6 +238,18 @@
     <Compile Include="POP\frmPOPProcess.Designer.cs">
       <DependentUpon>frmPOPProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Release\frmRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Release\frmRelease.Designer.cs">
+      <DependentUpon>frmRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Release\frmWorkRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Release\frmWorkRecord.Designer.cs">
+      <DependentUpon>frmWorkRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Production_Planning\frmWorkOrderDone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +443,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="POP\frmPOPProcess.resx">
       <DependentUpon>frmPOPProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Release\frmWorkRecord.resx">
+      <DependentUpon>frmWorkRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
