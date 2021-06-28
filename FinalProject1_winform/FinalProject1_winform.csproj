@@ -226,11 +226,11 @@
     <Compile Include="Demand_Planning\frmDPInsert.Designer.cs">
       <DependentUpon>frmDPInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmPOInsert.cs">
+    <Compile Include="Demand_Planning\frmSMUpload.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmPOInsert.Designer.cs">
-      <DependentUpon>frmPOInsert.cs</DependentUpon>
+    <Compile Include="Demand_Planning\frmSMUpload.Designer.cs">
+      <DependentUpon>frmSMUpload.cs</DependentUpon>
     </Compile>
     <Compile Include="Demand_Planning\frmSMInsert.cs">
       <SubType>Form</SubType>
@@ -453,8 +453,8 @@
     <EmbeddedResource Include="Demand_Planning\frmDPInsert.resx">
       <DependentUpon>frmDPInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmPOInsert.resx">
-      <DependentUpon>frmPOInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Demand_Planning\frmSMUpload.resx">
+      <DependentUpon>frmSMUpload.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Planning\frmSMInsert.resx">
       <DependentUpon>frmSMInsert.cs</DependentUpon>
