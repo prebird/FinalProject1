@@ -39,12 +39,15 @@ namespace FinalProject1_winform
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.dateTimePicker_gudi2 = new FinalProject1_winform.DateTimePicker_gudi();
             this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
@@ -52,17 +55,14 @@ namespace FinalProject1_winform
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_gudi7
@@ -190,6 +190,61 @@ namespace FinalProject1_winform
             this.panel2.Size = new System.Drawing.Size(1057, 459);
             this.panel2.TabIndex = 26;
             // 
+            // dgV_gudi1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgV_gudi1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgV_gudi1.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_gudi1.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_gudi1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgV_gudi1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_gudi1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgV_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgV_gudi1.HeaderCheckStatus = false;
+            this.dgV_gudi1.Location = new System.Drawing.Point(3, 3);
+            this.dgV_gudi1.Name = "dgV_gudi1";
+            this.dgV_gudi1.RowHeadersVisible = false;
+            this.dgV_gudi1.RowTemplate.Height = 23;
+            this.dgV_gudi1.Size = new System.Drawing.Size(1051, 453);
+            this.dgV_gudi1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "수요계획번호";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "PO 번호";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "계획번호";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "수요날짜";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "수요계획";
+            this.Column5.Name = "Column5";
+            // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
@@ -221,52 +276,14 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(1057, 79);
             this.panel1.TabIndex = 24;
             // 
-            // button_gudi8
+            // textBox_gudi3
             // 
-            this.button_gudi8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi8.FlatAppearance.BorderSize = 0;
-            this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi8.ForeColor = System.Drawing.Color.White;
-            this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
-            this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi8.Location = new System.Drawing.Point(967, 45);
-            this.button_gudi8.Name = "button_gudi8";
-            this.button_gudi8.Size = new System.Drawing.Size(78, 25);
-            this.button_gudi8.TabIndex = 10;
-            this.button_gudi8.Text = "조회";
-            this.button_gudi8.UseVisualStyleBackColor = false;
-            // 
-            // label_gudi2
-            // 
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi2.Location = new System.Drawing.Point(49, 116);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(81, 18);
-            this.label_gudi2.TabIndex = 33;
-            this.label_gudi2.Text = "수요 계획 목록";
-            // 
-            // textBox_gudi2
-            // 
-            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(114, 32);
-            this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.Size = new System.Drawing.Size(92, 25);
-            this.textBox_gudi2.TabIndex = 80;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(13, 36);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(95, 17);
-            this.label_gudi3.TabIndex = 79;
-            this.label_gudi3.Text = "■ 계획 Version";
+            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi3.Location = new System.Drawing.Point(659, 32);
+            this.textBox_gudi3.Name = "textBox_gudi3";
+            this.textBox_gudi3.Size = new System.Drawing.Size(91, 25);
+            this.textBox_gudi3.TabIndex = 89;
             // 
             // label_gudi1
             // 
@@ -335,69 +352,52 @@ namespace FinalProject1_winform
             this.label_gudi4.TabIndex = 81;
             this.label_gudi4.Text = "■ 품목명";
             // 
-            // textBox_gudi3
+            // textBox_gudi2
             // 
-            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi3.Location = new System.Drawing.Point(659, 32);
-            this.textBox_gudi3.Name = "textBox_gudi3";
-            this.textBox_gudi3.Size = new System.Drawing.Size(91, 25);
-            this.textBox_gudi3.TabIndex = 89;
+            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi2.Location = new System.Drawing.Point(114, 32);
+            this.textBox_gudi2.Name = "textBox_gudi2";
+            this.textBox_gudi2.Size = new System.Drawing.Size(92, 25);
+            this.textBox_gudi2.TabIndex = 80;
             // 
-            // dgV_gudi1
+            // label_gudi3
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgV_gudi1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_gudi1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_gudi1.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_gudi1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgV_gudi1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_gudi1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dgV_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgV_gudi1.HeaderCheckStatus = false;
-            this.dgV_gudi1.Location = new System.Drawing.Point(3, 3);
-            this.dgV_gudi1.Name = "dgV_gudi1";
-            this.dgV_gudi1.RowHeadersVisible = false;
-            this.dgV_gudi1.RowTemplate.Height = 23;
-            this.dgV_gudi1.Size = new System.Drawing.Size(1051, 453);
-            this.dgV_gudi1.TabIndex = 0;
+            this.label_gudi3.AutoSize = true;
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi3.Location = new System.Drawing.Point(13, 36);
+            this.label_gudi3.Name = "label_gudi3";
+            this.label_gudi3.Size = new System.Drawing.Size(95, 17);
+            this.label_gudi3.TabIndex = 79;
+            this.label_gudi3.Text = "■ 계획 Version";
             // 
-            // Column1
+            // button_gudi8
             // 
-            this.Column1.HeaderText = "수요계획번호";
-            this.Column1.Name = "Column1";
+            this.button_gudi8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.button_gudi8.FlatAppearance.BorderSize = 0;
+            this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi8.ForeColor = System.Drawing.Color.White;
+            this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
+            this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi8.Location = new System.Drawing.Point(967, 45);
+            this.button_gudi8.Name = "button_gudi8";
+            this.button_gudi8.Size = new System.Drawing.Size(78, 25);
+            this.button_gudi8.TabIndex = 10;
+            this.button_gudi8.Text = "조회";
+            this.button_gudi8.UseVisualStyleBackColor = false;
             // 
-            // Column2
+            // label_gudi2
             // 
-            this.Column2.HeaderText = "PO 번호";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "계획번호";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "수요날짜";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "수요계획";
-            this.Column5.Name = "Column5";
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_gudi2.Location = new System.Drawing.Point(49, 116);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(81, 18);
+            this.label_gudi2.TabIndex = 33;
+            this.label_gudi2.Text = "수요 계획 목록";
             // 
             // frmDemandPlannig
             // 
@@ -414,12 +414,12 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmDemandPlannig";
-            this.Text = "수요 계획";
+            this.Text = "frmDemandPlannig";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
             this.ResumeLayout(false);
 
         }

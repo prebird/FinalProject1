@@ -38,19 +38,6 @@ namespace FinalProject1_winform
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
-            this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.dateTimePicker_gudi2 = new FinalProject1_winform.DateTimePicker_gudi();
-            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
-            this.label_gudi14 = new FinalProject1_winform.Label_gudi();
-            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.button_gudi7 = new FinalProject1_winform.Button_gudi();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +51,19 @@ namespace FinalProject1_winform
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
+            this.dateTimePicker_gudi2 = new FinalProject1_winform.DateTimePicker_gudi();
+            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
+            this.label_gudi14 = new FinalProject1_winform.Label_gudi();
+            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
+            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.button_gudi7 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
@@ -195,6 +195,71 @@ namespace FinalProject1_winform
             this.dgV_gudi1.RowTemplate.Height = 23;
             this.dgV_gudi1.Size = new System.Drawing.Size(1051, 453);
             this.dgV_gudi1.TabIndex = 0;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "계획번호";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "WO ID";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "고객사명";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "도착지명";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "품목명";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "주문수량";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "출고수량";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "취소수량";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "납기일";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "업로드날짜";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "수정자";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "수정일";
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "비고";
+            this.Column14.Name = "Column14";
             // 
             // pictureBox_gudi2
             // 
@@ -347,71 +412,6 @@ namespace FinalProject1_winform
             this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi7.UseVisualStyleBackColor = false;
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "계획번호";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "WO ID";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "고객사명";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "도착지명";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "품목명";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "주문수량";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "출고수량";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "취소수량";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "납기일";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "업로드날짜";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "수정자";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "수정일";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "비고";
-            this.Column14.Name = "Column14";
-            // 
             // button_gudi1
             // 
             this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
@@ -430,7 +430,7 @@ namespace FinalProject1_winform
             this.button_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi1.UseVisualStyleBackColor = false;
             // 
-            // frmSalesMasterList
+            // frmSalesMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
@@ -444,8 +444,8 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmSalesMasterList";
-            this.Text = "PurchaseOrder";
+            this.Name = "frmSalesMaster";
+            this.Text = "frmSalesMaster";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();

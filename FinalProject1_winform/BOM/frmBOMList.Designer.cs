@@ -505,6 +505,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmBOMList";
+            this.Text = "frmBOMList";
             this.Load += new System.EventHandler(this.frmBOM_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Forward)).EndInit();

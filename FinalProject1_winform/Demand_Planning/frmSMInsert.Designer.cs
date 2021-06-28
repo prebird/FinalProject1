@@ -206,7 +206,7 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.TabIndex = 77;
             this.pictureBox_gudi2.TabStop = false;
             // 
-            // frmSalesMasterInsert
+            // frmSMInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
@@ -216,7 +216,8 @@ namespace FinalProject1_winform
             this.Controls.Add(this.button_gudi3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
-            this.Name = "frmSalesMasterInsert";
+            this.Name = "frmSMInsert";
+            this.Text = "frmSMInsert";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
