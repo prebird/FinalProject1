@@ -72,6 +72,7 @@ namespace FinalProject1_winform.POP
             this.button13 = new System.Windows.Forms.Button();
             this.textBox_gudi15 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.lblPprocess = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -83,7 +84,6 @@ namespace FinalProject1_winform.POP
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.lblPprocess = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -282,7 +282,7 @@ namespace FinalProject1_winform.POP
             this.textBox_gudi7.Name = "textBox_gudi7";
             this.textBox_gudi7.Size = new System.Drawing.Size(287, 25);
             this.textBox_gudi7.TabIndex = 16;
-            this.textBox_gudi7.Text = "WO2021062803";
+            this.textBox_gudi7.Text = "A_Leg_01";
             this.textBox_gudi7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_gudi6
@@ -296,7 +296,7 @@ namespace FinalProject1_winform.POP
             this.textBox_gudi6.Name = "textBox_gudi6";
             this.textBox_gudi6.Size = new System.Drawing.Size(287, 25);
             this.textBox_gudi6.TabIndex = 15;
-            this.textBox_gudi6.Text = "WO2021062803";
+            this.textBox_gudi6.Text = "Leg가공";
             this.textBox_gudi6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBox_gudi1
@@ -626,6 +626,16 @@ namespace FinalProject1_winform.POP
             this.panel9.Size = new System.Drawing.Size(434, 90);
             this.panel9.TabIndex = 19;
             // 
+            // lblPprocess
+            // 
+            this.lblPprocess.AutoSize = true;
+            this.lblPprocess.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPprocess.ForeColor = System.Drawing.Color.Black;
+            this.lblPprocess.Location = new System.Drawing.Point(202, 57);
+            this.lblPprocess.Name = "lblPprocess";
+            this.lblPprocess.Size = new System.Drawing.Size(0, 12);
+            this.lblPprocess.TabIndex = 21;
+            // 
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.Black;
@@ -754,16 +764,6 @@ namespace FinalProject1_winform.POP
             this.button14.TabIndex = 19;
             this.button14.Text = "일시 중지";
             this.button14.UseVisualStyleBackColor = false;
-            // 
-            // lblPprocess
-            // 
-            this.lblPprocess.AutoSize = true;
-            this.lblPprocess.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblPprocess.ForeColor = System.Drawing.Color.Black;
-            this.lblPprocess.Location = new System.Drawing.Point(202, 57);
-            this.lblPprocess.Name = "lblPprocess";
-            this.lblPprocess.Size = new System.Drawing.Size(0, 12);
-            this.lblPprocess.TabIndex = 21;
             // 
             // frmPOPProcess
             // 

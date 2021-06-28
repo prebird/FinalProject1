@@ -208,11 +208,23 @@
     <Compile Include="BOM\frmBOMList.Designer.cs">
       <DependentUpon>frmBOMList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UCMachine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCMachine.Designer.cs">
+      <DependentUpon>UCMachine.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDemandPlannigList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDemandPlannigList.Designer.cs">
       <DependentUpon>frmDemandPlannigList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmPOPMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmPOPMachine.Designer.cs">
+      <DependentUpon>frmPOPMachine.cs</DependentUpon>
     </Compile>
     <Compile Include="POP\frmPOPMain.cs">
       <SubType>Form</SubType>
@@ -407,6 +419,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BOM\frmBOMList.resx">
       <DependentUpon>frmBOMList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCMachine.resx">
+      <DependentUpon>UCMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmPOPMachine.resx">
+      <DependentUpon>frmPOPMachine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POP\frmPOPMain.resx">
       <DependentUpon>frmPOPMain.cs</DependentUpon>
