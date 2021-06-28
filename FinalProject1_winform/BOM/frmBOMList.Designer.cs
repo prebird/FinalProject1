@@ -38,6 +38,16 @@ namespace FinalProject1_winform
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Forward = new FinalProject1_winform.DGV_gudi();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
@@ -50,6 +60,13 @@ namespace FinalProject1_winform
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_Product = new FinalProject1_winform.DGV_gudi();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_Reverse = new FinalProject1_winform.DGV_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
@@ -58,23 +75,7 @@ namespace FinalProject1_winform
             this.btn_Update = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Forward)).BeginInit();
             this.panel1.SuspendLayout();
@@ -129,6 +130,56 @@ namespace FinalProject1_winform
             this.dgv_Forward.RowTemplate.Height = 23;
             this.dgv_Forward.Size = new System.Drawing.Size(446, 242);
             this.dgv_Forward.TabIndex = 0;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "품목번호";
+            this.Column7.Name = "Column7";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "품목유형";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "품목코드";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "품목이름";
+            this.Column11.Name = "Column11";
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "BOM Lv";
+            this.Column16.Name = "Column16";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "사용여부";
+            this.Column13.Name = "Column13";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "소요계획";
+            this.Column12.Name = "Column12";
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "수정일";
+            this.Column14.Name = "Column14";
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "수정자";
+            this.Column17.Name = "Column17";
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "비고";
+            this.Column15.Name = "Column15";
             // 
             // panel1
             // 
@@ -286,6 +337,41 @@ namespace FinalProject1_winform
             this.dgv_Product.Size = new System.Drawing.Size(998, 117);
             this.dgv_Product.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "품목번호";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "품목유형";
+            this.Column2.Name = "Column2";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "품목코드";
+            this.Column6.Name = "Column6";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "품목이름";
+            this.Column3.Name = "Column3";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "단위";
+            this.Column8.Name = "Column8";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "안전재고량";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "비고";
+            this.Column5.Name = "Column5";
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -405,95 +491,26 @@ namespace FinalProject1_winform
             this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi3.UseVisualStyleBackColor = false;
             // 
-            // Column1
+            // button_gudi1
             // 
-            this.Column1.HeaderText = "품목번호";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "품목유형";
-            this.Column2.Name = "Column2";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "품목코드";
-            this.Column6.Name = "Column6";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "품목이름";
-            this.Column3.Name = "Column3";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "단위";
-            this.Column8.Name = "Column8";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "안전재고량";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "비고";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "품목번호";
-            this.Column7.Name = "Column7";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "품목유형";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "품목코드";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "품목이름";
-            this.Column11.Name = "Column11";
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "BOM Lv";
-            this.Column16.Name = "Column16";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "사용여부";
-            this.Column13.Name = "Column13";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "소요계획";
-            this.Column12.Name = "Column12";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "수정일";
-            this.Column14.Name = "Column14";
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "수정자";
-            this.Column17.Name = "Column17";
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "비고";
-            this.Column15.Name = "Column15";
+            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.button_gudi1.FlatAppearance.BorderSize = 0;
+            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi1.ForeColor = System.Drawing.Color.White;
+            this.button_gudi1.Location = new System.Drawing.Point(678, 293);
+            this.button_gudi1.Name = "button_gudi1";
+            this.button_gudi1.Size = new System.Drawing.Size(175, 23);
+            this.button_gudi1.TabIndex = 35;
+            this.button_gudi1.Text = "button_gudi1";
+            this.button_gudi1.UseVisualStyleBackColor = false;
             // 
             // frmBOMList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.Controls.Add(this.button_gudi1);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.button_gudi3);
@@ -558,5 +575,6 @@ namespace FinalProject1_winform
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private Button_gudi button_gudi1;
     }
 }
