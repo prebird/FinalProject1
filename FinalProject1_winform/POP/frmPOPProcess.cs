@@ -20,6 +20,7 @@ namespace FinalProject1_winform.POP
         private void frmPOPProcess_Load(object sender, EventArgs e)
         {
             progressBar1.Value = 50;
+            lblPprocess.Text = progressBar1.Value.ToString();
         }
     }
 }
