@@ -184,6 +184,24 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBOMInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBOMInsert.Designer.cs">
+      <DependentUpon>frmBOMInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBOMList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBOMList.Designer.cs">
+      <DependentUpon>frmBOMList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDemandPlannigList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDemandPlannigList.Designer.cs">
+      <DependentUpon>frmDemandPlannigList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Production_Planning\frmWorkOrderDone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +371,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBOMInsert.resx">
+      <DependentUpon>frmBOMInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBOMList.resx">
+      <DependentUpon>frmBOMList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
