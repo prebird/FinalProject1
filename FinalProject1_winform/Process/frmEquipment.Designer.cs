@@ -50,6 +50,10 @@ namespace FinalProject1_winform.Process
             this.label_gudi7 = new FinalProject1_winform.Label_gudi();
             this.textBox_gudi5 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi8 = new FinalProject1_winform.Label_gudi();
+            this.comboBox_gudi3 = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi9 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi10 = new FinalProject1_winform.Label_gudi();
+            this.comboBox_gudi4 = new FinalProject1_winform.ComboBox_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -270,12 +274,56 @@ namespace FinalProject1_winform.Process
             this.label_gudi8.TabIndex = 17;
             this.label_gudi8.Text = "특이 사항";
             // 
+            // comboBox_gudi3
+            // 
+            this.comboBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.comboBox_gudi3.FormattingEnabled = true;
+            this.comboBox_gudi3.Location = new System.Drawing.Point(453, 202);
+            this.comboBox_gudi3.Name = "comboBox_gudi3";
+            this.comboBox_gudi3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_gudi3.TabIndex = 22;
+            // 
+            // label_gudi9
+            // 
+            this.label_gudi9.AutoSize = true;
+            this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi9.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi9.Location = new System.Drawing.Point(354, 205);
+            this.label_gudi9.Name = "label_gudi9";
+            this.label_gudi9.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi9.TabIndex = 21;
+            this.label_gudi9.Text = "양품 창고";
+            // 
+            // label_gudi10
+            // 
+            this.label_gudi10.AutoSize = true;
+            this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi10.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi10.Location = new System.Drawing.Point(354, 164);
+            this.label_gudi10.Name = "label_gudi10";
+            this.label_gudi10.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi10.TabIndex = 20;
+            this.label_gudi10.Text = "소진 창고";
+            // 
+            // comboBox_gudi4
+            // 
+            this.comboBox_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.comboBox_gudi4.FormattingEnabled = true;
+            this.comboBox_gudi4.Location = new System.Drawing.Point(453, 161);
+            this.comboBox_gudi4.Name = "comboBox_gudi4";
+            this.comboBox_gudi4.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_gudi4.TabIndex = 19;
+            // 
             // frmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(611, 475);
+            this.Controls.Add(this.comboBox_gudi3);
+            this.Controls.Add(this.label_gudi9);
+            this.Controls.Add(this.label_gudi10);
+            this.Controls.Add(this.comboBox_gudi4);
             this.Controls.Add(this.textBox_gudi5);
             this.Controls.Add(this.label_gudi8);
             this.Controls.Add(this.textBox_gudi4);
@@ -324,5 +372,9 @@ namespace FinalProject1_winform.Process
         private Label_gudi label_gudi7;
         private Controls.TextBox_gudi textBox_gudi5;
         private Label_gudi label_gudi8;
+        private ComboBox_gudi comboBox_gudi3;
+        private Label_gudi label_gudi9;
+        private Label_gudi label_gudi10;
+        private ComboBox_gudi comboBox_gudi4;
     }
 }
