@@ -196,16 +196,16 @@
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMInsert.cs">
+    <Compile Include="BOM\frmBOMInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMInsert.Designer.cs">
+    <Compile Include="BOM\frmBOMInsert.Designer.cs">
       <DependentUpon>frmBOMInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMList.cs">
+    <Compile Include="BOM\frmBOMList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMList.Designer.cs">
+    <Compile Include="BOM\frmBOMList.Designer.cs">
       <DependentUpon>frmBOMList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDemandPlannigList.cs">
@@ -402,10 +402,10 @@
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMInsert.resx">
+    <EmbeddedResource Include="BOM\frmBOMInsert.resx">
       <DependentUpon>frmBOMInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMList.resx">
+    <EmbeddedResource Include="BOM\frmBOMList.resx">
       <DependentUpon>frmBOMList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POP\frmPOPMain.resx">
@@ -494,7 +494,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BOM\" />
     <Folder Include="Demand_Planning\" />
     <Folder Include="InStock\" />
     <Folder Include="MRP\" />
