@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.BaseInformation.CompanyInfo
+namespace FinalProject1_winform
 {
     partial class frmCompanyInfo
     {
@@ -173,7 +173,7 @@ namespace FinalProject1_winform.BaseInformation.CompanyInfo
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Location = new System.Drawing.Point(17, 143);
             this.panel2.Name = "panel2";
@@ -192,7 +192,7 @@ namespace FinalProject1_winform.BaseInformation.CompanyInfo
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.textBox_gudi3);
