@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.BaseInformation.CompanyInfo
+namespace FinalProject1_winform
 {
     partial class frmCompanyInfoIns
     {

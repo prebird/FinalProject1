@@ -130,6 +130,11 @@
     <Compile Include="BOR\frmBORList.Designer.cs">
       <DependentUpon>frmBORList.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonUtil\CommonUtil.cs" />
+    <Compile Include="CommonUtil\ExcelUtil_List.cs" />
+    <Compile Include="CommonUtil\Helper.cs" />
+    <Compile Include="CommonUtil\LoggingUtility.cs" />
+    <Compile Include="Service\CompanyService.cs" />
     <Compile Include="Controls\ComboBox_gudi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -628,6 +633,16 @@
     <Content Include="Image\Up_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinalProject1_DAC\FinalProject1_DAC.csproj">
+      <Project>{24d26f7b-ec4a-45e5-90db-643e8826b1e8}</Project>
+      <Name>FinalProject1_DAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProject1_VO\FinalProject1_VO.csproj">
+      <Project>{2976884b-c8ae-4a3e-89e6-a3a2228c9132}</Project>
+      <Name>FinalProject1_VO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

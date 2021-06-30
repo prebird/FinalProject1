@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject1_winform
+namespace FinalProject1_POP
 {
-    public partial class frmCompanyInfo : Basic3
+    public partial class Form1 : Form
     {
-        public frmCompanyInfo()
+        public Form1()
         {
             InitializeComponent();
         }
