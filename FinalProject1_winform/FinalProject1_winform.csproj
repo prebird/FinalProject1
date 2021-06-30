@@ -445,8 +445,6 @@
   <ItemGroup>
     <Folder Include="BOM\" />
     <Folder Include="Demand_Planning\" />
-    <Folder Include="InStock\" />
-    <Folder Include="MRP\" />
     <Folder Include="ReStock\" />
   </ItemGroup>
   <ItemGroup>
