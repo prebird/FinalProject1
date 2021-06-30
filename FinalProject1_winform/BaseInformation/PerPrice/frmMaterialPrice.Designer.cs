@@ -45,7 +45,6 @@ namespace FinalProject1_winform.Process
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi4 = new FinalProject1_winform.Button_gudi();
             this.button_gudi7 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -243,24 +242,6 @@ namespace FinalProject1_winform.Process
             this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi3.UseVisualStyleBackColor = false;
             // 
-            // button_gudi4
-            // 
-            this.button_gudi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi4.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi4.FlatAppearance.BorderSize = 0;
-            this.button_gudi4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi4.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi4.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi4.Image")));
-            this.button_gudi4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi4.Location = new System.Drawing.Point(796, 76);
-            this.button_gudi4.Name = "button_gudi4";
-            this.button_gudi4.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi4.TabIndex = 16;
-            this.button_gudi4.Text = "복사";
-            this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi4.UseVisualStyleBackColor = false;
-            // 
             // button_gudi7
             // 
             this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
@@ -285,7 +266,6 @@ namespace FinalProject1_winform.Process
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 620);
             this.Controls.Add(this.button_gudi7);
-            this.Controls.Add(this.button_gudi4);
             this.Controls.Add(this.button_gudi10);
             this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.button_gudi6);
@@ -321,7 +301,6 @@ namespace FinalProject1_winform.Process
         private Button_gudi button_gudi5;
         private Button_gudi button_gudi6;
         private Button_gudi button_gudi3;
-        private Button_gudi button_gudi4;
         private Button_gudi button_gudi7;
     }
 }
