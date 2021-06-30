@@ -88,6 +88,12 @@
     <Compile Include="BaseInformation\Factory\frmFactoryIns.Designer.cs">
       <DependentUpon>frmFactoryIns.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseInformation\Inspect\frmMateriaInspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\Inspect\frmMateriaInspect.Designer.cs">
+      <DependentUpon>frmMateriaInspect.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,90 @@
     </Compile>
     <Compile Include="Controls\DateTimePicker_gudi.Designer.cs">
       <DependentUpon>DateTimePicker_gudi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmBOMInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmBOMInsert.Designer.cs">
+      <DependentUpon>frmBOMInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmBOMList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmBOMList.Designer.cs">
+      <DependentUpon>frmBOMList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCMachine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCMachine.Designer.cs">
+      <DependentUpon>UCMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmDemandPlannig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmDemandPlannig.Designer.cs">
+      <DependentUpon>frmDemandPlannig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmDPInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmDPInsert.Designer.cs">
+      <DependentUpon>frmDPInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSMUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSMUpload.Designer.cs">
+      <DependentUpon>frmSMUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSMInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSMInsert.Designer.cs">
+      <DependentUpon>frmSMInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSalesMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Planning\frmSalesMaster.Designer.cs">
+      <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmPOPMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmPOPMachine.Designer.cs">
+      <DependentUpon>frmPOPMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmPOPMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmPOPMain.Designer.cs">
+      <DependentUpon>frmPOPMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmPOPProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmPOPProcess.Designer.cs">
+      <DependentUpon>frmPOPProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmRecord.Designer.cs">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmRelease.Designer.cs">
+      <DependentUpon>frmRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\frmReleaseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\frmReleaseList.Designer.cs">
+      <DependentUpon>frmReleaseList.cs</DependentUpon>
     </Compile>
     <Compile Include="Production_Planning\frmWorkOrderDone.cs">
       <SubType>Form</SubType>
@@ -342,6 +432,9 @@
     <EmbeddedResource Include="BaseInformation\Factory\frmFactoryIns.resx">
       <DependentUpon>frmFactoryIns.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseInformation\Inspect\frmMateriaInspect.resx">
+      <DependentUpon>frmMateriaInspect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
       <DependentUpon>frmMaterialPrice.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +455,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
       <DependentUpon>UCdateSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmBOMInsert.resx">
+      <DependentUpon>frmBOMInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmBOMList.resx">
+      <DependentUpon>frmBOMList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCMachine.resx">
+      <DependentUpon>UCMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmDemandPlannig.resx">
+      <DependentUpon>frmDemandPlannig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmDPInsert.resx">
+      <DependentUpon>frmDPInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmSMUpload.resx">
+      <DependentUpon>frmSMUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmSMInsert.resx">
+      <DependentUpon>frmSMInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
+      <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmPOPMachine.resx">
+      <DependentUpon>frmPOPMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmPOPMain.resx">
+      <DependentUpon>frmPOPMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmPOPProcess.resx">
+      <DependentUpon>frmPOPProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmRecord.resx">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmRelease.resx">
+      <DependentUpon>frmRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\frmReleaseList.resx">
+      <DependentUpon>frmReleaseList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
@@ -443,8 +578,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BOM\" />
-    <Folder Include="Demand_Planning\" />
+    <Folder Include="InStock\" />
+    <Folder Include="MRP\" />
     <Folder Include="ReStock\" />
   </ItemGroup>
   <ItemGroup>
