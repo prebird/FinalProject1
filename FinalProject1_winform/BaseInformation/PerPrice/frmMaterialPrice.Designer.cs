@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.Process
+namespace FinalProject1_winform
 {
     partial class frmMaterialPrice
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.BaseInformation.Inspect
+namespace FinalProject1_winform
 {
     partial class frmMateriaInspect
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject1_winform.BaseInformation.PerPrice
+namespace FinalProject1_winform
 {
     public partial class frmProductPrice : Basic3
     {

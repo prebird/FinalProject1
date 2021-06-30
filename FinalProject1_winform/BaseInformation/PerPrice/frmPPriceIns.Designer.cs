@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.BaseInformation.PerPrice
+namespace FinalProject1_winform
 {
     partial class frmPPriceIns
     {
