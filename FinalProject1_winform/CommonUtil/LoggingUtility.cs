@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyProject
+namespace FinalProject1_winform
 {
     public class LoggingUtility
     {
