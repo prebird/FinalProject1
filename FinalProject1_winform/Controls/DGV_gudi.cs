@@ -71,7 +71,7 @@ namespace FinalProject1_winform
         {  
             if (checkBoxAll == true && chk == null)
             {
-                chk = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
                 chk.HeaderText = "";
                 chk.Name = "chk";
                 chk.Width = 30;
@@ -82,7 +82,9 @@ namespace FinalProject1_winform
                 headerCheckBox.Size = new Size(18, 18);
                 headerCheckBox.BackColor = Color.White;
                 headerCheckBox.Click += HeaderCheckBox_Click;
-                this.Controls.Add(headerCheckBox); 
+                this.Controls.Add(headerCheckBox);
+
+                this.Columns[0].Frozen = true;
             }
             else if(! checkBoxAll)
             {
