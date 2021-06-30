@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.BaseInformation.Factory
+namespace FinalProject1_winform
 {
     partial class frmFactoryIns
     {
