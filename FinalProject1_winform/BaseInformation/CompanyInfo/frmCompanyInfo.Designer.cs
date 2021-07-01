@@ -30,6 +30,8 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompanyInfo));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btmUpdate = new FinalProject1_winform.Button_gudi();
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.btnExportExcel = new FinalProject1_winform.Button_gudi();
@@ -48,8 +50,11 @@ namespace FinalProject1_winform
             this.txtCompanyName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.lblCompanyName = new FinalProject1_winform.Label_gudi();
             this.lblCompanyCode = new FinalProject1_winform.Label_gudi();
+            this.dgV_Company = new FinalProject1_winform.DGV_gudi();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).BeginInit();
             this.SuspendLayout();
             // 
             // btmUpdate
@@ -156,6 +161,7 @@ namespace FinalProject1_winform
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.dgV_Company);
             this.panel2.Location = new System.Drawing.Point(17, 143);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1057, 466);
@@ -239,10 +245,14 @@ namespace FinalProject1_winform
             // 
             this.cboCompanyType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboCompanyType.FormattingEnabled = true;
+            this.cboCompanyType.Items.AddRange(new object[] {
+            "고객사",
+            "협력사"});
             this.cboCompanyType.Location = new System.Drawing.Point(747, 11);
             this.cboCompanyType.Name = "cboCompanyType";
             this.cboCompanyType.Size = new System.Drawing.Size(139, 24);
             this.cboCompanyType.TabIndex = 5;
+            this.cboCompanyType.SelectedIndexChanged += new System.EventHandler(this.cboCompanyType_SelectedIndexChanged);
             // 
             // lblCompanyType
             // 
@@ -283,6 +293,31 @@ namespace FinalProject1_winform
             this.lblCompanyCode.TabIndex = 0;
             this.lblCompanyCode.Text = "■ 업체코드";
             // 
+            // dgV_Company
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgV_Company.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgV_Company.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_Company.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Company.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgV_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Company.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgV_Company.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgV_Company.HeaderCheckStatus = false;
+            this.dgV_Company.Location = new System.Drawing.Point(0, 0);
+            this.dgV_Company.Name = "dgV_Company";
+            this.dgV_Company.RowHeadersVisible = false;
+            this.dgV_Company.RowTemplate.Height = 23;
+            this.dgV_Company.Size = new System.Drawing.Size(1057, 466);
+            this.dgV_Company.TabIndex = 0;
+            // 
             // frmCompanyInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -300,9 +335,11 @@ namespace FinalProject1_winform
             this.Name = "frmCompanyInfo";
             this.Text = "frmCompanyInfo";
             this.Load += new System.EventHandler(this.frmCompanyInfo_Load);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +365,6 @@ namespace FinalProject1_winform
         private Controls.TextBox_gudi txtCompanyCrum;
         private Controls.TextBox_gudi txtCompanyCode;
         private Label_gudi label_gudi5;
+        private DGV_gudi dgV_Company;
     }
 }

@@ -139,142 +139,160 @@ namespace FinalProject1_winform
             return (Bitmap)tc.ConvertFrom(data);
         }
 
+        // 콤보박스바인딩
+        public static void ComboBinding<T>(ComboBox cbo, List<T> list, string displayMember, string valueMember)
+        {
+            cbo.DisplayMember = displayMember;
+            cbo.ValueMember = valueMember;
+            cbo.DataSource = list;
+        }
 
-        #region 옛날 유틸
-        //public static void ColorChange(object sender, Panel panel)
+        // 사용케이스
+        //LocationVO item = new LocationVO
         //{
-        //    foreach (gudi2Button buttons in panel.Controls)
-        //    {
-        //        buttons.ButtonType = ButtonStyle.Normal;
-        //    }
-        //    gudi2Button me = (gudi2Button)sender;
-        //    me.ButtonType = ButtonStyle.Highlight;
-        //}
+        //    LocationID = "선택",
+        //    availableQuantiity = 0
+        //};
+        //Llist.Insert(0, item);
 
-        //public static void PanelShowAndHide(Panel panel)
-        //{
-        //    if (panel.Visible == false)
-        //    {
-        //        panel.Visible = true;
-        //    }
-        //    else
-        //        panel.Visible = false;
-        //}
+        //ComboBinding<LocationVO>(cboLocationID, Llist, "LocationID", "availableQuantiity");
+    
 
-        //#region 입력값 체크
-        ///*
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="pnl"></param>
-        ///// <returns></returns>
-        //public static string InputYNCheck(Panel pnl)
-        //{
-        //    StringBuilder sb = new StringBuilder();
+    #region 옛날 유틸
+    //public static void ColorChange(object sender, Panel panel)
+    //{
+    //    foreach (gudi2Button buttons in panel.Controls)
+    //    {
+    //        buttons.ButtonType = ButtonStyle.Normal;
+    //    }
+    //    gudi2Button me = (gudi2Button)sender;
+    //    me.ButtonType = ButtonStyle.Highlight;
+    //}
 
-        //    //패널안의 텍스트박스 컨트롤들의 입력여부를 체크
-        //    foreach (Control ctrl in pnl.Controls)
-        //    {
-        //        if (ctrl is GudiTextBox txt)
-        //        {
-        //            if (txt.InputType == validType.Required || txt.InputType == validType.RequiredNumeric)
-        //            {
-        //                if (string.IsNullOrWhiteSpace(txt.Text.Trim()))
-        //                {
-        //                    sb.Append($"- {txt.Tag}을 입력해 주세요.\n");
-        //                }
-        //            }
-        //        }
-        //    }
+    //public static void PanelShowAndHide(Panel panel)
+    //{
+    //    if (panel.Visible == false)
+    //    {
+    //        panel.Visible = true;
+    //    }
+    //    else
+    //        panel.Visible = false;
+    //}
 
-        //    return sb.ToString();
-        //}
-        //*/
+    //#region 입력값 체크
+    ///*
+    ///// <summary>
+    ///// 
+    ///// </summary>
+    ///// <param name="pnl"></param>
+    ///// <returns></returns>
+    //public static string InputYNCheck(Panel pnl)
+    //{
+    //    StringBuilder sb = new StringBuilder();
 
-        //public static string IsPhoneNumber(string input)
-        //{
-        //    string phonePattern = @"^\d{3}-\d{3,4}-\d{4}$";
-        //    if (!Regex.IsMatch(input, phonePattern))
-        //    {
-        //        return $"- 전화번호 형식이 아닙니다.\n";
-        //    }
-        //    else
-        //    {
-        //        return string.Empty;
-        //    }
-        //}
-        //#endregion
+    //    //패널안의 텍스트박스 컨트롤들의 입력여부를 체크
+    //    foreach (Control ctrl in pnl.Controls)
+    //    {
+    //        if (ctrl is GudiTextBox txt)
+    //        {
+    //            if (txt.InputType == validType.Required || txt.InputType == validType.RequiredNumeric)
+    //            {
+    //                if (string.IsNullOrWhiteSpace(txt.Text.Trim()))
+    //                {
+    //                    sb.Append($"- {txt.Tag}을 입력해 주세요.\n");
+    //                }
+    //            }
+    //        }
+    //    }
 
-        //public static void ComboBinding(ComboBox cbo, List<ComboItemVO> list, string gubun, bool blankItem = true, string blankText = "")
-        //{
-        //    //var codeList = (from item in list
-        //    //                where item.Gubun.Equals(gubun)
-        //    //                select item).ToList();
+    //    return sb.ToString();
+    //}
+    //*/
 
-        //    var codeList = list.Where<ComboItemVO>((item) => item.Gubun.Equals(gubun)).ToList();
+    //public static string IsPhoneNumber(string input)
+    //{
+    //    string phonePattern = @"^\d{3}-\d{3,4}-\d{4}$";
+    //    if (!Regex.IsMatch(input, phonePattern))
+    //    {
+    //        return $"- 전화번호 형식이 아닙니다.\n";
+    //    }
+    //    else
+    //    {
+    //        return string.Empty;
+    //    }
+    //}
+    //#endregion
 
-        //    if (blankItem)
-        //    {
-        //        ComboItemVO blank = new ComboItemVO
-        //        { Code = "", Name = blankText };
-        //        codeList.Insert(0, blank);
-        //    }
+    //public static void ComboBinding(ComboBox cbo, List<ComboItemVO> list, string gubun, bool blankItem = true, string blankText = "")
+    //{
+    //    //var codeList = (from item in list
+    //    //                where item.Gubun.Equals(gubun)
+    //    //                select item).ToList();
 
-        //    cbo.DisplayMember = "Name";
-        //    cbo.ValueMember = "Code";
-        //    cbo.DataSource = codeList;       
-        //}       
+    //    var codeList = list.Where<ComboItemVO>((item) => item.Gubun.Equals(gubun)).ToList();
 
-        //// Order 전용 메서드
-        //public static void ComboBindingOrder(ComboBox cbo, List<CompanyVO> list, string Category, bool blankItem = true, string blankText = "")
-        //{
-        //    var CustomerList = list.Where<CompanyVO>((item) => item.CompanyCategory.Equals(Category)).ToList();
+    //    if (blankItem)
+    //    {
+    //        ComboItemVO blank = new ComboItemVO
+    //        { Code = "", Name = blankText };
+    //        codeList.Insert(0, blank);
+    //    }
 
-        //    if (blankItem)
-        //    {
-        //        CompanyVO blank = new CompanyVO
-        //        { CompanyID = 0, 
-        //          CompanyName = blankText };
-        //          CustomerList.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "CompanyName";
-        //    cbo.ValueMember = "CompanyID";
-        //    cbo.DataSource = CustomerList;
-        //}
+    //    cbo.DisplayMember = "Name";
+    //    cbo.ValueMember = "Code";
+    //    cbo.DataSource = codeList;       
+    //}       
 
-        //// OutProduct 전용 메서드
-        //public static void ComboBindingUser(ComboBox cbo, List<UserVO> Userlist, bool blankItem = true, string blankText = "")
-        //{
-        //    if (blankItem)
-        //    {
-        //        UserVO blank = new UserVO
-        //        {
-        //            UserID = null,
-        //            UserName = blankText
-        //        };
-        //        Userlist.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "UserName";
-        //    cbo.ValueMember = "UserID";
-        //    cbo.DataSource = Userlist;
-        //}
+    //// Order 전용 메서드
+    //public static void ComboBindingOrder(ComboBox cbo, List<CompanyVO> list, string Category, bool blankItem = true, string blankText = "")
+    //{
+    //    var CustomerList = list.Where<CompanyVO>((item) => item.CompanyCategory.Equals(Category)).ToList();
 
-        //// OutProduct WareHouse 전용 메서드
-        //public static void ComboBindingPossibleHouse(ComboBox cbo, List<OutProductDetailVO> PossibleHouseList, bool blankItem = true, string blankText = "")
-        //{
-        //    if (blankItem)
-        //    {
-        //        OutProductDetailVO blank = new OutProductDetailVO
-        //        {
-        //            LocationID = blankText,
-        //        };
-        //        PossibleHouseList.Insert(0, blank);
-        //    }
-        //    cbo.DisplayMember = "Locationid";
-        //    cbo.DataSource = PossibleHouseList;
-        //}
-        #endregion
+    //    if (blankItem)
+    //    {
+    //        CompanyVO blank = new CompanyVO
+    //        { CompanyID = 0, 
+    //          CompanyName = blankText };
+    //          CustomerList.Insert(0, blank);
+    //    }
+    //    cbo.DisplayMember = "CompanyName";
+    //    cbo.ValueMember = "CompanyID";
+    //    cbo.DataSource = CustomerList;
+    //}
 
-    }
+    //// OutProduct 전용 메서드
+    //public static void ComboBindingUser(ComboBox cbo, List<UserVO> Userlist, bool blankItem = true, string blankText = "")
+    //{
+    //    if (blankItem)
+    //    {
+    //        UserVO blank = new UserVO
+    //        {
+    //            UserID = null,
+    //            UserName = blankText
+    //        };
+    //        Userlist.Insert(0, blank);
+    //    }
+    //    cbo.DisplayMember = "UserName";
+    //    cbo.ValueMember = "UserID";
+    //    cbo.DataSource = Userlist;
+    //}
+
+    //// OutProduct WareHouse 전용 메서드
+    //public static void ComboBindingPossibleHouse(ComboBox cbo, List<OutProductDetailVO> PossibleHouseList, bool blankItem = true, string blankText = "")
+    //{
+    //    if (blankItem)
+    //    {
+    //        OutProductDetailVO blank = new OutProductDetailVO
+    //        {
+    //            LocationID = blankText,
+    //        };
+    //        PossibleHouseList.Insert(0, blank);
+    //    }
+    //    cbo.DisplayMember = "Locationid";
+    //    cbo.DataSource = PossibleHouseList;
+    //}
+    #endregion
+
+}
 }
 
