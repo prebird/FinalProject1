@@ -36,5 +36,15 @@ namespace FinalProject1_DAC
             }
         }
 
+        public List<CompanyVO> GetAllCompany() //전체 업체정보
+        {
+            string sql = @"select * from Company";
+
+            using(SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
+            }
+        }
+
     }
 }

@@ -17,5 +17,13 @@ namespace FinalProject1_winform
             dac.Dispose();
             return list;
         }
+
+        public List<CompanyVO> GetAllCompany()
+        {
+            CompanyDAC dac = new CompanyDAC();
+            List<CompanyVO> list = dac.GetAllCompany();
+            dac.Dispose();
+            return list;
+        }
     }
 }
