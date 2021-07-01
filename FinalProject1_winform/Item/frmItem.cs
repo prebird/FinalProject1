@@ -15,9 +15,5 @@ namespace FinalProject1_winform
             InitializeComponent();
         }
 
-        private void textBox_gudi1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

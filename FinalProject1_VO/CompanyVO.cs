@@ -8,15 +8,15 @@ namespace FinalProject1_VO
 {
     public class CompanyVO
     {
-         public int CompanyCode { get; set; }
-         public string CompanyName { get; set; }
-         public string CompanyType { get; set; }
-         public string CompanyCeo { get; set; }
-         public string CompanyCrum { get; set; }
-         public string CompanyEmail { get; set; }
-         public string CompanyPhone { get; set; }
-         public string CompanyYn { get; set; }
-         public string CompanyUadmin { get; set; }
-         public string CompanyUdate { get; set; }
+         public string company_code { get; set; }
+         public string company_name { get; set; }
+         public string company_type { get; set; }
+         public string company_ceo { get; set; }
+         public string company_crum { get; set; }
+         public string company_email { get; set; }
+         public string company_phone { get; set; }
+         public string company_yn { get; set; }
+         public string company_uadmin { get; set; }
+         public string company_udate { get; set; }
     }
 }

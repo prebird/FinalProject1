@@ -36,6 +36,10 @@
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel1">
+      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -123,6 +127,7 @@
     <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
       <DependentUpon>frmProductPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\BomService.cs" />
     <Compile Include="BOR\frmBORInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +144,7 @@
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
     <Compile Include="CommonUtil\Helper.cs" />
     <Compile Include="CommonUtil\LoggingUtility.cs" />
+    <Compile Include="Service\ItemService.cs" />
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,17 +309,17 @@
     <Compile Include="Production_Planning\frmWorkOrderDone.Designer.cs">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\frmProduct.cs">
+    <Compile Include="Item\frmItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product\frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <Compile Include="Item\frmItem.Designer.cs">
+      <DependentUpon>frmItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\frmProductInsert.cs">
+    <Compile Include="Item\frmItemInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product\frmProductInsert.Designer.cs">
-      <DependentUpon>frmProductInsert.cs</DependentUpon>
+    <Compile Include="Item\frmItemInsert.Designer.cs">
+      <DependentUpon>frmItemInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Production_Planning\frmDispensing.cs">
       <SubType>Form</SubType>
@@ -521,11 +527,11 @@
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product\frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Item\frmItem.resx">
+      <DependentUpon>frmItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product\frmProductInsert.resx">
-      <DependentUpon>frmProductInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Item\frmItemInsert.resx">
+      <DependentUpon>frmItemInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmDispensing.resx">
       <DependentUpon>frmDispensing.cs</DependentUpon>
