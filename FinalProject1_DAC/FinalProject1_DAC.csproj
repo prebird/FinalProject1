@@ -47,9 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BomDAC.cs" />
     <Compile Include="CommonDAC.cs" />
     <Compile Include="CompanyDAC.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="ItemDAC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
