@@ -16,5 +16,16 @@ namespace FinalProject1_winform.Process
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtCode.Text)||string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("필수 입력사항을 입력해주세요");
+                return;
+            }
+
+
+        }
     }
 }
