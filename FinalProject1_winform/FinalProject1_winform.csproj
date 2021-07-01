@@ -425,12 +425,6 @@
     <Compile Include="Purchasing\frmStockList.Designer.cs">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcMenuButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcMenuButton.Designer.cs">
-      <DependentUpon>UcMenuButton.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -589,9 +583,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchasing\frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcMenuButton.resx">
-      <DependentUpon>UcMenuButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
