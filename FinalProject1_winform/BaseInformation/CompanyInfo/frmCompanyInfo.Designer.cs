@@ -30,8 +30,8 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompanyInfo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btmUpdate = new FinalProject1_winform.Button_gudi();
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.btnExportExcel = new FinalProject1_winform.Button_gudi();
@@ -39,6 +39,7 @@ namespace FinalProject1_winform
             this.btnInsert = new FinalProject1_winform.Button_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgV_Company = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCompanyCrum = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -50,11 +51,10 @@ namespace FinalProject1_winform
             this.txtCompanyName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.lblCompanyName = new FinalProject1_winform.Label_gudi();
             this.lblCompanyCode = new FinalProject1_winform.Label_gudi();
-            this.dgV_Company = new FinalProject1_winform.DGV_gudi();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).BeginInit();
             this.SuspendLayout();
             // 
             // btmUpdate
@@ -146,6 +146,7 @@ namespace FinalProject1_winform
             this.btnInsert.Text = "등록";
             this.btnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label_gudi4
             // 
@@ -166,6 +167,31 @@ namespace FinalProject1_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1057, 466);
             this.panel2.TabIndex = 20;
+            // 
+            // dgV_Company
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgV_Company.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgV_Company.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_Company.CheckBoxAll = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Company.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgV_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Company.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgV_Company.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgV_Company.HeaderCheckStatus = false;
+            this.dgV_Company.Location = new System.Drawing.Point(0, 0);
+            this.dgV_Company.Name = "dgV_Company";
+            this.dgV_Company.RowHeadersVisible = false;
+            this.dgV_Company.RowTemplate.Height = 23;
+            this.dgV_Company.Size = new System.Drawing.Size(1057, 466);
+            this.dgV_Company.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
@@ -240,6 +266,7 @@ namespace FinalProject1_winform
             this.btmSearch.TabIndex = 9;
             this.btmSearch.Text = "조회";
             this.btmSearch.UseVisualStyleBackColor = false;
+            this.btmSearch.Click += new System.EventHandler(this.btmSearch_Click);
             // 
             // cboCompanyType
             // 
@@ -252,7 +279,6 @@ namespace FinalProject1_winform
             this.cboCompanyType.Name = "cboCompanyType";
             this.cboCompanyType.Size = new System.Drawing.Size(139, 24);
             this.cboCompanyType.TabIndex = 5;
-            this.cboCompanyType.SelectedIndexChanged += new System.EventHandler(this.cboCompanyType_SelectedIndexChanged);
             // 
             // lblCompanyType
             // 
@@ -293,31 +319,6 @@ namespace FinalProject1_winform
             this.lblCompanyCode.TabIndex = 0;
             this.lblCompanyCode.Text = "■ 업체코드";
             // 
-            // dgV_Company
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgV_Company.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_Company.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_Company.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Company.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgV_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_Company.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgV_Company.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgV_Company.HeaderCheckStatus = false;
-            this.dgV_Company.Location = new System.Drawing.Point(0, 0);
-            this.dgV_Company.Name = "dgV_Company";
-            this.dgV_Company.RowHeadersVisible = false;
-            this.dgV_Company.RowTemplate.Height = 23;
-            this.dgV_Company.Size = new System.Drawing.Size(1057, 466);
-            this.dgV_Company.TabIndex = 0;
-            // 
             // frmCompanyInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -336,10 +337,10 @@ namespace FinalProject1_winform
             this.Text = "frmCompanyInfo";
             this.Load += new System.EventHandler(this.frmCompanyInfo_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
