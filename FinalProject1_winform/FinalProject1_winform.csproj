@@ -303,17 +303,17 @@
     <Compile Include="Production_Planning\frmWorkOrderDone.Designer.cs">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\frmProduct.cs">
+    <Compile Include="Item\frmItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product\frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <Compile Include="Item\frmItem.Designer.cs">
+      <DependentUpon>frmItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\frmProductInsert.cs">
+    <Compile Include="Item\frmItemInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product\frmProductInsert.Designer.cs">
-      <DependentUpon>frmProductInsert.cs</DependentUpon>
+    <Compile Include="Item\frmItemInsert.Designer.cs">
+      <DependentUpon>frmItemInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Production_Planning\frmDispensing.cs">
       <SubType>Form</SubType>
@@ -527,11 +527,11 @@
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product\frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Item\frmItem.resx">
+      <DependentUpon>frmItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product\frmProductInsert.resx">
-      <DependentUpon>frmProductInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Item\frmItemInsert.resx">
+      <DependentUpon>frmItemInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmDispensing.resx">
       <DependentUpon>frmDispensing.cs</DependentUpon>
@@ -660,16 +660,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FinalProject1_DAC\FinalProject1_DAC.csproj">
-      <Project>{24d26f7b-ec4a-45e5-90db-643e8826b1e8}</Project>
-      <Name>FinalProject1_DAC</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FinalProject1_VO\FinalProject1_VO.csproj">
-      <Project>{2976884b-c8ae-4a3e-89e6-a3a2228c9132}</Project>
-      <Name>FinalProject1_VO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -697,6 +687,16 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinalProject1_DAC\FinalProject1_DAC.csproj">
+      <Project>{24d26f7b-ec4a-45e5-90db-643e8826b1e8}</Project>
+      <Name>FinalProject1_DAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProject1_VO\FinalProject1_VO.csproj">
+      <Project>{2976884b-c8ae-4a3e-89e6-a3a2228c9132}</Project>
+      <Name>FinalProject1_VO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
