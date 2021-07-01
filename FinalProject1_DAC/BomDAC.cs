@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
+using FinalProject1_VO;
+using FinalProject1_winform;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace FinalProject1_DAC
 {
