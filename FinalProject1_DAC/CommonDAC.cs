@@ -26,12 +26,14 @@ namespace FinalProject1_DAC
         public List<MenuVO> GetAllMenu()
         {
 
-            string sql = "";
+            string sql = @"select ma.MenuID, MenuName, MenuLevel, refMenuID, ProgramName, a.AuthName , a.AuthID  
+from Menu m left outer join MenuAuth ma on m.MenuID = ma.MenuID
+left outer join Authority a on ma.AuthID = a.AuthID";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                List<MenuVO> list = null;
+                SqlDataReader dr = cmd.ExecuteReader();
+                List<MenuVO> list = Helper.DataReaderMapToList<MenuVO>(dr);
                 return list;
-
             }
         }
     }

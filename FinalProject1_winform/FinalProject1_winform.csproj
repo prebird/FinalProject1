@@ -36,6 +36,10 @@
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel1">
+      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -427,12 +431,6 @@
     <Compile Include="Purchasing\frmStockList.Designer.cs">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcMenuButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcMenuButton.Designer.cs">
-      <DependentUpon>UcMenuButton.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -591,9 +589,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchasing\frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcMenuButton.resx">
-      <DependentUpon>UcMenuButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

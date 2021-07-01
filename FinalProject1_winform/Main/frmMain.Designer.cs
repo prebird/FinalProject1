@@ -35,6 +35,7 @@ namespace FinalProject1_winform
             // 
             // pnlUpSide
             // 
+            this.pnlUpSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlUpSide.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUpSide.Location = new System.Drawing.Point(0, 0);
             this.pnlUpSide.Name = "pnlUpSide";
@@ -43,6 +44,8 @@ namespace FinalProject1_winform
             // 
             // pnlSideBar
             // 
+            this.pnlSideBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlSideBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
             this.pnlSideBar.Name = "pnlSideBar";

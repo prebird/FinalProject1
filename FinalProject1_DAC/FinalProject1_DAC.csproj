@@ -52,6 +52,7 @@
     <Compile Include="CompanyDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemDAC.cs" />
+    <Compile Include="ProcessEquipmentDAC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
