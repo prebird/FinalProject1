@@ -144,7 +144,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(21, 280);
+            this.label_gudi3.Location = new System.Drawing.Point(21, 278);
             this.label_gudi3.Name = "label_gudi3";
             this.label_gudi3.Size = new System.Drawing.Size(48, 17);
             this.label_gudi3.TabIndex = 7;
@@ -154,7 +154,7 @@ namespace FinalProject1_winform
             // 
             this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(107, 280);
+            this.textBox_gudi1.Location = new System.Drawing.Point(107, 278);
             this.textBox_gudi1.Multiline = true;
             this.textBox_gudi1.Name = "textBox_gudi1";
             this.textBox_gudi1.Size = new System.Drawing.Size(594, 158);
@@ -164,7 +164,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(21, 133);
+            this.label_gudi2.Location = new System.Drawing.Point(21, 134);
             this.label_gudi2.Name = "label_gudi2";
             this.label_gudi2.Size = new System.Drawing.Size(76, 17);
             this.label_gudi2.TabIndex = 9;
@@ -184,7 +184,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi5.AutoSize = true;
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.Location = new System.Drawing.Point(21, 99);
+            this.label_gudi5.Location = new System.Drawing.Point(21, 98);
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(60, 17);
             this.label_gudi5.TabIndex = 11;
@@ -194,7 +194,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi7.AutoSize = true;
             this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi7.Location = new System.Drawing.Point(21, 169);
+            this.label_gudi7.Location = new System.Drawing.Point(21, 170);
             this.label_gudi7.Name = "label_gudi7";
             this.label_gudi7.Size = new System.Drawing.Size(72, 17);
             this.label_gudi7.TabIndex = 13;
@@ -204,7 +204,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi8.AutoSize = true;
             this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi8.Location = new System.Drawing.Point(21, 243);
+            this.label_gudi8.Location = new System.Drawing.Point(21, 242);
             this.label_gudi8.Name = "label_gudi8";
             this.label_gudi8.Size = new System.Drawing.Size(72, 17);
             this.label_gudi8.TabIndex = 14;
@@ -282,7 +282,7 @@ namespace FinalProject1_winform
             // 
             this.comboBox_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.comboBox_gudi6.FormattingEnabled = true;
-            this.comboBox_gudi6.Location = new System.Drawing.Point(107, 130);
+            this.comboBox_gudi6.Location = new System.Drawing.Point(107, 133);
             this.comboBox_gudi6.Name = "comboBox_gudi6";
             this.comboBox_gudi6.Size = new System.Drawing.Size(198, 24);
             this.comboBox_gudi6.TabIndex = 33;
@@ -300,7 +300,7 @@ namespace FinalProject1_winform
             // 
             this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi3.Location = new System.Drawing.Point(107, 97);
+            this.textBox_gudi3.Location = new System.Drawing.Point(107, 96);
             this.textBox_gudi3.Name = "textBox_gudi3";
             this.textBox_gudi3.Size = new System.Drawing.Size(198, 25);
             this.textBox_gudi3.TabIndex = 36;
@@ -309,7 +309,7 @@ namespace FinalProject1_winform
             // 
             this.textBox_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.textBox_gudi4.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi4.Location = new System.Drawing.Point(107, 168);
+            this.textBox_gudi4.Location = new System.Drawing.Point(107, 169);
             this.textBox_gudi4.Name = "textBox_gudi4";
             this.textBox_gudi4.Size = new System.Drawing.Size(198, 25);
             this.textBox_gudi4.TabIndex = 37;
@@ -336,7 +336,7 @@ namespace FinalProject1_winform
             // 
             this.comboBox_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.comboBox_gudi10.FormattingEnabled = true;
-            this.comboBox_gudi10.Location = new System.Drawing.Point(107, 243);
+            this.comboBox_gudi10.Location = new System.Drawing.Point(107, 242);
             this.comboBox_gudi10.Name = "comboBox_gudi10";
             this.comboBox_gudi10.Size = new System.Drawing.Size(198, 24);
             this.comboBox_gudi10.TabIndex = 42;
