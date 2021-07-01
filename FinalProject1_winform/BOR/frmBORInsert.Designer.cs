@@ -91,7 +91,7 @@ namespace FinalProject1_winform
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi2.Location = new System.Drawing.Point(16, 64);
+            this.label_gudi2.Location = new System.Drawing.Point(12, 64);
             this.label_gudi2.Name = "label_gudi2";
             this.label_gudi2.Size = new System.Drawing.Size(60, 17);
             this.label_gudi2.TabIndex = 17;
@@ -120,7 +120,7 @@ namespace FinalProject1_winform
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi3.Location = new System.Drawing.Point(261, 64);
+            this.label_gudi3.Location = new System.Drawing.Point(237, 64);
             this.label_gudi3.Name = "label_gudi3";
             this.label_gudi3.Size = new System.Drawing.Size(48, 17);
             this.label_gudi3.TabIndex = 19;
@@ -140,7 +140,7 @@ namespace FinalProject1_winform
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi4.Location = new System.Drawing.Point(228, 117);
+            this.label_gudi4.Location = new System.Drawing.Point(237, 117);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(81, 17);
             this.label_gudi4.TabIndex = 21;
@@ -160,7 +160,7 @@ namespace FinalProject1_winform
             this.label_gudi5.AutoSize = true;
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi5.Location = new System.Drawing.Point(28, 117);
+            this.label_gudi5.Location = new System.Drawing.Point(12, 117);
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(48, 17);
             this.label_gudi5.TabIndex = 23;
@@ -180,7 +180,7 @@ namespace FinalProject1_winform
             this.label_gudi6.AutoSize = true;
             this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_gudi6.Location = new System.Drawing.Point(4, 167);
+            this.label_gudi6.Location = new System.Drawing.Point(12, 167);
             this.label_gudi6.Name = "label_gudi6";
             this.label_gudi6.Size = new System.Drawing.Size(72, 17);
             this.label_gudi6.TabIndex = 25;
@@ -215,7 +215,7 @@ namespace FinalProject1_winform
             this.label_gudi8.AutoSize = true;
             this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_gudi8.Location = new System.Drawing.Point(28, 218);
+            this.label_gudi8.Location = new System.Drawing.Point(12, 218);
             this.label_gudi8.Name = "label_gudi8";
             this.label_gudi8.Size = new System.Drawing.Size(48, 17);
             this.label_gudi8.TabIndex = 29;
