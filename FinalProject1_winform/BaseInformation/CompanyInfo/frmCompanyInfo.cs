@@ -36,6 +36,7 @@ namespace FinalProject1_winform
             LoadData();
         }
 
+        //전체 조회
         private void LoadData()
         {
             CompanyService service = new CompanyService();
@@ -44,9 +45,27 @@ namespace FinalProject1_winform
             dgV_Company.ClearSelection();
         }
 
-        private void cboCompanyType_SelectedIndexChanged(object sender, EventArgs e)
+        //검색조건 조회
+        private void btmSearch_Click(object sender, EventArgs e) 
         {
-            
+            string companyCode = txtCompanyCode.Text;
+            string companyName = txtCompanyName.Text;
+            string companyCrum = txtCompanyCrum.Text;
+            string companyType = cboCompanyType.Text;
+
+            CompanyService service = new CompanyService();
+            list = service.SearchCompany(companyCode, companyName, companyCrum, companyType);
+            dgV_Company.DataSource = list;
+            dgV_Company.ClearSelection();
+           
+        }
+
+        //업체 등록
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            frmCompanyInfoIns companyIns = new frmCompanyInfoIns();
+            companyIns.ShowDialog();
+
         }
     }
 }

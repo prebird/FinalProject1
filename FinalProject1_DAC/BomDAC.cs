@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject1_DAC
 {
-    class BomDAC : IDisposable
+    public class BomDAC : IDisposable
     {
         SqlConnection conn;
 
