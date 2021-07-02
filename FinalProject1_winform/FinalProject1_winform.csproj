@@ -127,6 +127,12 @@
     <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
       <DependentUpon>frmProductPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomTabControl.Designer.cs">
+      <DependentUpon>CustomTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\BomService.cs" />
     <Compile Include="BOR\frmBORInsert.cs">
       <SubType>Form</SubType>
@@ -574,6 +580,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Controls\UcDateTimePicker.resx">
       <DependentUpon>UcDateTimePicker.cs</DependentUpon>
@@ -655,6 +662,8 @@
     <Content Include="Image\Up_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\close-red.png" />
+    <None Include="Resources\close-grey.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

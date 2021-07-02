@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frmProduct : FinalProject1_winform.Basic3
+    public partial class frmItem : FinalProject1_winform.Basic3
     {
-        public frmProduct()
+        public frmItem()
         {
             InitializeComponent();
         }

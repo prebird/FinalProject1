@@ -31,6 +31,7 @@ namespace FinalProject1_winform
         {
             this.pnlUpSide = new System.Windows.Forms.Panel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
             this.SuspendLayout();
             // 
             // pnlUpSide
@@ -39,7 +40,7 @@ namespace FinalProject1_winform
             this.pnlUpSide.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUpSide.Location = new System.Drawing.Point(0, 0);
             this.pnlUpSide.Name = "pnlUpSide";
-            this.pnlUpSide.Size = new System.Drawing.Size(1329, 99);
+            this.pnlUpSide.Size = new System.Drawing.Size(1661, 99);
             this.pnlUpSide.TabIndex = 0;
             // 
             // pnlSideBar
@@ -49,19 +50,34 @@ namespace FinalProject1_winform
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(200, 554);
+            this.pnlSideBar.Size = new System.Drawing.Size(200, 697);
             this.pnlSideBar.TabIndex = 1;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.Location = new System.Drawing.Point(200, 99);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1461, 22);
+            this.tabControl1.TabIndex = 3;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 653);
+            this.ClientSize = new System.Drawing.Size(1661, 796);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pnlSideBar);
             this.Controls.Add(this.pnlUpSide);
+            this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
             this.ResumeLayout(false);
 
         }
@@ -70,5 +86,6 @@ namespace FinalProject1_winform
 
         private System.Windows.Forms.Panel pnlUpSide;
         private System.Windows.Forms.Panel pnlSideBar;
+        private CustomTabControl tabControl1;
     }
 }
