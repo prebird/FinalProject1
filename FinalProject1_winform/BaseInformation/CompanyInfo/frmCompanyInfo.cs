@@ -13,8 +13,10 @@ namespace FinalProject1_winform
 {
     public partial class frmCompanyInfo : Basic3
     {
-        List<CompanyVO> list;
-
+        List<CompanyVO> List;
+        CompanyVO CompanyInfo;
+        
+        
         public frmCompanyInfo()
         {
             InitializeComponent();
@@ -40,22 +42,26 @@ namespace FinalProject1_winform
         private void LoadData()
         {
             CompanyService service = new CompanyService();
-            list = service.GetAllCompany();
-            dgV_Company.DataSource = list;
+            List = service.GetAllCompany();
+            dgV_Company.DataSource = List;
             dgV_Company.ClearSelection();
         }
 
         //검색조건 조회
         private void btmSearch_Click(object sender, EventArgs e) 
         {
+           
             string companyCode = txtCompanyCode.Text;
             string companyName = txtCompanyName.Text;
             string companyCrum = txtCompanyCrum.Text;
             string companyType = cboCompanyType.Text;
 
+            if (cboCompanyType.Text == "선택")
+                companyType = "";
+
             CompanyService service = new CompanyService();
-            list = service.SearchCompany(companyCode, companyName, companyCrum, companyType);
-            dgV_Company.DataSource = list;
+            List = service.SearchCompany(companyCode, companyName, companyCrum, companyType);
+            dgV_Company.DataSource = List;
             dgV_Company.ClearSelection();
            
         }
@@ -66,6 +72,16 @@ namespace FinalProject1_winform
             frmCompanyInfoIns companyIns = new frmCompanyInfoIns();
             companyIns.ShowDialog();
 
+        }
+
+        private void dgV_Company_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          CompanyInfo.company_code = dgV_Company.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void btmUpdate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -10,13 +10,13 @@ namespace FinalProject1_winform
 {
     public class CompanyService
     {
-        public List<CompanyVO> GetCompanyCode()
-        {
-            CompanyDAC dac = new CompanyDAC();
-            List<CompanyVO> list = dac.GetCompanyCode();
-            dac.Dispose();
-            return list;
-        }
+        //public List<CompanyVO> GetCompanyCode()
+        //{
+        //    CompanyDAC dac = new CompanyDAC();
+        //    List<CompanyVO> list = dac.GetCompanyCode();
+        //    dac.Dispose();
+        //    return list;
+        //}
 
         public List<CompanyVO> GetAllCompany()
         {

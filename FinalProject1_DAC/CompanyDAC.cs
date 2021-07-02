@@ -26,16 +26,19 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
-        //업체코드 바인딩
-        public List<CompanyVO> GetCompanyCode()  
-        {
-            string sql = @"select company_type from Company";
+        //업체조회(업체코드)
+        //public CompanyVO GetCompanyCode(string company_code)  
+        //{
+        //    string sql = @"select * from Company
+        //                    where company_code = @company_code ";
 
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
-            }
-        }
+        //    using (SqlCommand cmd = new SqlCommand(sql, conn))
+        //    {
+        //        cmd.Parameters.AddWithValue("@company_code", company_code);
+        //        cmd.ExecuteReader();
+              
+        //    }
+        //}
 
         //전체 업체정보 조회
         public List<CompanyVO> GetAllCompany()
