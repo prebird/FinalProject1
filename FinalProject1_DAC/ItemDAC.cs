@@ -31,8 +31,8 @@ namespace FinalProject1_DAC
         // 전체 조회
         public List<ItemVO> GetAllItem()
         {
-            string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_InputType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_Customer, Item_CheckType, Item_Content, Item_Barcode
+            string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
                          from Item where Item_Deleted = 0
                          order by Item_Category desc";
 
@@ -45,8 +45,8 @@ namespace FinalProject1_DAC
         // 특정 조회 
         public ItemVO GetOneItem(int itemID)
         {
-            string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_InputType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_Customer, Item_CheckType, Item_Content, Item_Barcode
+            string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
                          from Item
                          where Item_ID = @Item_ID and Item_Deleted = 0";
 
@@ -66,8 +66,8 @@ namespace FinalProject1_DAC
         public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string inHouse, string outHouse, string yn)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_InputType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_Customer, Item_CheckType, Item_Content, Item_Barcode
+            sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
                          from Item 
 						 where Item_Deleted = 0 and 1=1");
 
@@ -109,15 +109,19 @@ namespace FinalProject1_DAC
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                //cmd.Parameters.AddWithValue("@CompanyID", cmp.CompanyID);
-                //cmd.Parameters.AddWithValue("@CompanyName", cmp.CompanyName);
-                //cmd.Parameters.AddWithValue("@CompanyPhone", cmp.CompanyPhone);
-                //cmd.Parameters.AddWithValue("@ManagerName", cmp.ManagerName);
-                //cmd.Parameters.AddWithValue("@ManagerEmail", cmp.ManagerEmail);
-                //cmd.Parameters.AddWithValue("@Addr1", cmp.Addr1);
-                //cmd.Parameters.AddWithValue("@Addr2", cmp.Addr2);
-                //cmd.Parameters.AddWithValue("@ZipCode", cmp.ZipCode);
-                //cmd.Parameters.AddWithValue("@CompanyCategory", cmp.CompanyCategory);
+                cmd.Parameters.AddWithValue("@Item_ID", item.Item_ID);
+                cmd.Parameters.AddWithValue("@Item_Category", item.Item_Category);
+                cmd.Parameters.AddWithValue("@Item_Code", item.Item_Code);
+                cmd.Parameters.AddWithValue("@Item_Name", item.Item_Name);
+                cmd.Parameters.AddWithValue("@Item_UnitQTY", item.Item_UnitQTY);
+                cmd.Parameters.AddWithValue("@Item_CheckType", item.Item_CheckType);
+                cmd.Parameters.AddWithValue("@Item_OrderType", item.Item_OrderType);
+                cmd.Parameters.AddWithValue("@Item_SafetyQTY", item.Item_SafetyQTY);
+                cmd.Parameters.AddWithValue("@Item_InHouse", item.Item_InHouse);
+                cmd.Parameters.AddWithValue("@Item_OutHouse", item.Item_OutHouse);
+                cmd.Parameters.AddWithValue("@Item_Barcode", item.Item_Barcode);
+                cmd.Parameters.AddWithValue("@Item_YN", item.Item_YN);
+                cmd.Parameters.AddWithValue("@Item_Content", item.Item_Content);
 
                 int iRowAffect = cmd.ExecuteNonQuery();
                 return iRowAffect > 0;
