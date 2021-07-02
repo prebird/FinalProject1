@@ -11,7 +11,7 @@ namespace FinalProject1_winform
     class ItemService
     {
         // 전체 조회
-        public List<ItemVO> GetAllCompany()
+        public List<ItemVO> GetAllItem()
         {
             ItemDAC dac = new ItemDAC();
             List<ItemVO> list = dac.GetAllItem();
