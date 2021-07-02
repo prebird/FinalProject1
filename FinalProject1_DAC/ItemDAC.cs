@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
+using FinalProject1_VO;
+using FinalProject1_winform;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FinalProject1_VO;
-using FinalProject1_winform;
+
 
 namespace FinalProject1_DAC
 {
@@ -62,7 +64,7 @@ namespace FinalProject1_DAC
         }
 
         // 부분 조회
-        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string inHouse, string outHouse, string yn) // 조건 인수들
+        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string inHouse, string outHouse, string yn)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_InputType, Item_YN, Item_InHouse, 
@@ -97,20 +99,44 @@ namespace FinalProject1_DAC
 
                 return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
             }
-
-
         }
-
-
 
         // 등록, 수정
         public bool InsertUpdateItem(ItemVO item)
         {
+            string sql = @"SP_InsertUpdateCompany";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@CompanyID", cmp.CompanyID);
+                cmd.Parameters.AddWithValue("@CompanyName", cmp.CompanyName);
+                cmd.Parameters.AddWithValue("@CompanyPhone", cmp.CompanyPhone);
+                cmd.Parameters.AddWithValue("@ManagerName", cmp.ManagerName);
+                cmd.Parameters.AddWithValue("@ManagerEmail", cmp.ManagerEmail);
+                cmd.Parameters.AddWithValue("@Addr1", cmp.Addr1);
+                cmd.Parameters.AddWithValue("@Addr2", cmp.Addr2);
+                cmd.Parameters.AddWithValue("@ZipCode", cmp.ZipCode);
+                cmd.Parameters.AddWithValue("@CompanyCategory", cmp.CompanyCategory);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
         }
 
         // 삭제
         public bool DeleteItem(int itemID)
         {
+            string sql = "update Item set deleted = 1 where Item_ID = @Item_ID";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Item_ID", itemID);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
+            }
         }
 
 
