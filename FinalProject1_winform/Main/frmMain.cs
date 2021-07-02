@@ -25,6 +25,7 @@ namespace FinalProject1_winform
             Menus = service.GetAllMenu();
             DrawDynamicMenu();
             HideSideMenu();
+            SetEvent();
         }
 
         private void DrawDynamicMenu()
@@ -45,7 +46,6 @@ namespace FinalProject1_winform
                 btnBigMenu.TextAlign = ContentAlignment.MiddleLeft;
                 btnBigMenu.BackColor = Color.White;
                 btnBigMenu.FlatStyle = FlatStyle.Flat;
-                btnBigMenu.Dock = DockStyle.Top;
                 btnBigMenu.Tag = prePanel;
                 startYpoint += 55;
                 pnlSideBar.Controls.Add(btnBigMenu);
@@ -74,7 +74,6 @@ namespace FinalProject1_winform
                     btnSmallMenu.FlatStyle = FlatStyle.Flat;
                     btnSmallMenu.TextAlign = ContentAlignment.MiddleLeft;
                     btnSmallMenu.Location = new Point(0, 55*j);
-                    btnSmallMenu.Dock = DockStyle.Top;
                     pnlSmallMenus.Controls.Add(btnSmallMenu);
                 }
                 
@@ -100,6 +99,60 @@ namespace FinalProject1_winform
                 }
             }
         }
+
+        private void SetEvent()
+        {
+            foreach (Control ctrl in pnlSideBar.Controls)
+            {
+                if (ctrl is Button)
+                {
+                    ((Button)ctrl).MouseEnter += buttonColorChangeWhenMouseEnter;
+                    ((Button)ctrl).MouseLeave += buttonColorChangeWhenMouseLeave;
+                    ((Button)ctrl).Click += BigButtonClick;
+                }
+
+                if (ctrl is Panel)
+                {
+                    foreach (Control ctrl2 in ctrl.Controls)
+                    {
+                        ((Button)ctrl2).MouseEnter += buttonColorChangeWhenMouseEnter;
+                        ((Button)ctrl2).MouseLeave += subButtonColorChangeWhenMouseLeave;
+                    }
+                }
+            }
+        }
+
+        private void BigButtonClick(object sender, EventArgs e)
+        {
+            // 대메뉴 버튼 클릭시 패널 보이고 다른 버튼들 위치 수정
+            Button thisButton = (Button)sender;
+            // 버튼의 ID가 패널의 이름이 BigMenu 뒤의 ID에 해당하는 패널을 Visible = true하기
+            int menuID = int.Parse(thisButton.Name.ToString().Replace("btnBing", ""));
+            //int pnlIdx = 0;
+            bool bFind = false;
+            int pnlHeight = 0;
+            foreach (Control ctrl in pnlSideBar.Controls)
+            {
+                if (bFind)
+                {
+                    ctrl.Location = new Point(ctrl.Location.X, ctrl.Location.Y + pnlHeight);
+                }
+                if (ctrl is Panel && ctrl.Name == "pnl"+menuID)
+                {
+                    ctrl.Visible = true;
+                    //pnlIdx = pnlSideBar.Controls.IndexOf(ctrl);
+                    bFind = true;
+                    pnlHeight = ctrl.Size.Height;
+                }
+                
+
+            }
+
+            // 그 패널 밑에있는 버튼들을 패널의 높이 만큼 밑으로 이동시키기
+            
+        }
+
+
 
         private void showSubMenu(Panel subMenu)
         {
