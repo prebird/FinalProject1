@@ -1,5 +1,4 @@
-﻿
-using FinalProject1_VO;
+﻿using FinalProject1_VO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,7 +87,26 @@ namespace FinalProject1_winform
         // 삭제
         private void btn_Delete_Click(object sender, EventArgs e)
         {
+            if (dgv_Item.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("삭제할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int itemID = Convert.ToInt32(dgv_Item.SelectedRows[0].Cells[0].Value);
 
+            if (MessageBox.Show("삭제 하시겠습니까", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ItemService service = new ItemService();
+                bool result = service.Deleteitem(itemID);
+
+                if (result)
+                {
+                    MessageBox.Show("삭제 되었습니다.");
+                    LoadData();
+                }
+                else
+                    MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

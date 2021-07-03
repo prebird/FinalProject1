@@ -131,7 +131,7 @@ namespace FinalProject1_DAC
         // 삭제
         public bool DeleteItem(int itemID)
         {
-            string sql = "update Item set deleted = 1 where Item_ID = @Item_ID";
+            string sql = "update Item set Item_deleted = 1 where Item_ID = @Item_ID";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
