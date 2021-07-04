@@ -31,7 +31,11 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItemInsert));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.lbl_Title = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_InsUp = new FinalProject1_winform.Button_gudi();
+            this.btn_Cancel = new FinalProject1_winform.Button_gudi();
             this.txt_BarCode = new FinalProject1_winform.Controls.TextBox_gudi();
             this.cbo_OrderType = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_YN = new FinalProject1_winform.ComboBox_gudi();
@@ -56,13 +60,9 @@ namespace FinalProject1_winform
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.txt_Content = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.btn_InsUp = new FinalProject1_winform.Button_gudi();
-            this.btn_Cancel = new FinalProject1_winform.Button_gudi();
-            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.lbl_Title = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,6 +76,26 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(737, 37);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 3;
+            this.pictureBox_gudi1.TabStop = false;
+            // 
+            // lbl_Title
+            // 
+            this.lbl_Title.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl_Title.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_Title.Location = new System.Drawing.Point(48, 11);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(155, 23);
+            this.lbl_Title.TabIndex = 2;
+            this.lbl_Title.Text = "품목 정보 등록";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -86,6 +106,40 @@ namespace FinalProject1_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(737, 51);
             this.panel2.TabIndex = 5;
+            // 
+            // btn_InsUp
+            // 
+            this.btn_InsUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_InsUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btn_InsUp.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btn_InsUp.FlatAppearance.BorderSize = 0;
+            this.btn_InsUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InsUp.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_InsUp.ForeColor = System.Drawing.Color.White;
+            this.btn_InsUp.Location = new System.Drawing.Point(278, 6);
+            this.btn_InsUp.Name = "btn_InsUp";
+            this.btn_InsUp.Size = new System.Drawing.Size(80, 33);
+            this.btn_InsUp.TabIndex = 5;
+            this.btn_InsUp.Text = "저장";
+            this.btn_InsUp.UseVisualStyleBackColor = false;
+            this.btn_InsUp.Click += new System.EventHandler(this.btn_InsUp_Click);
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btn_Cancel.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancel.FlatAppearance.BorderSize = 0;
+            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancel.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancel.Location = new System.Drawing.Point(366, 6);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(80, 33);
+            this.btn_Cancel.TabIndex = 6;
+            this.btn_Cancel.Text = "닫기";
+            this.btn_Cancel.UseVisualStyleBackColor = false;
             // 
             // txt_BarCode
             // 
@@ -110,6 +164,9 @@ namespace FinalProject1_winform
             // 
             this.cbo_YN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_YN.FormattingEnabled = true;
+            this.cbo_YN.Items.AddRange(new object[] {
+            "Y",
+            "N"});
             this.cbo_YN.Location = new System.Drawing.Point(417, 199);
             this.cbo_YN.Name = "cbo_YN";
             this.cbo_YN.Size = new System.Drawing.Size(222, 24);
@@ -317,60 +374,6 @@ namespace FinalProject1_winform
             this.label_gudi3.TabIndex = 7;
             this.label_gudi3.Text = "■ 비고";
             // 
-            // btn_InsUp
-            // 
-            this.btn_InsUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_InsUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.btn_InsUp.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.btn_InsUp.FlatAppearance.BorderSize = 0;
-            this.btn_InsUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InsUp.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_InsUp.ForeColor = System.Drawing.Color.White;
-            this.btn_InsUp.Location = new System.Drawing.Point(278, 6);
-            this.btn_InsUp.Name = "btn_InsUp";
-            this.btn_InsUp.Size = new System.Drawing.Size(80, 33);
-            this.btn_InsUp.TabIndex = 5;
-            this.btn_InsUp.Text = "저장";
-            this.btn_InsUp.UseVisualStyleBackColor = false;
-            this.btn_InsUp.Click += new System.EventHandler(this.btn_InsUp_Click);
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.btn_Cancel.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Cancel.FlatAppearance.BorderSize = 0;
-            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cancel.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancel.Location = new System.Drawing.Point(366, 6);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(80, 33);
-            this.btn_Cancel.TabIndex = 6;
-            this.btn_Cancel.Text = "닫기";
-            this.btn_Cancel.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox_gudi1
-            // 
-            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
-            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi1.TabIndex = 3;
-            this.pictureBox_gudi1.TabStop = false;
-            // 
-            // lbl_Title
-            // 
-            this.lbl_Title.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbl_Title.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Title.Location = new System.Drawing.Point(48, 11);
-            this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(155, 23);
-            this.lbl_Title.TabIndex = 2;
-            this.lbl_Title.Text = "품목 정보 등록";
-            // 
             // frmItemInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -406,8 +409,8 @@ namespace FinalProject1_winform
             this.Name = "frmItemInsert";
             this.Text = "frmProductInsert";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
