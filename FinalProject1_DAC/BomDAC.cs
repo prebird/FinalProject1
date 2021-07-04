@@ -28,6 +28,34 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
+        // 정전개
+        public List<BomVO> BOMForward(int JaitemID)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "SP_BOMForward";
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BOM_JaItemID", JaitemID);
+
+                return Helper.DataReaderMapToList<BomVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // 역전개
+        public List<BomVO> BOMReverse(int JaitemID)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "SP_BOMReverse";
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BOM_JaItemID", JaitemID);
+
+                return Helper.DataReaderMapToList<BomVO>(cmd.ExecuteReader());
+            }
+        }
+
 
 
     }
