@@ -42,7 +42,8 @@ namespace FinalProject1_winform
             this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi15 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi10 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.textBox_gudi8 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
@@ -55,10 +56,9 @@ namespace FinalProject1_winform
             this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
             this.textBox_gudi6 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi12 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.label_gudi8 = new FinalProject1_winform.Label_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox_gudi10 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi15 = new FinalProject1_winform.Label_gudi();
             this.textBox_gudi9 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -219,15 +219,25 @@ namespace FinalProject1_winform
             this.panel2.Size = new System.Drawing.Size(485, 539);
             this.panel2.TabIndex = 44;
             // 
-            // label_gudi1
+            // label_gudi15
             // 
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi1.Location = new System.Drawing.Point(19, 171);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(71, 18);
-            this.label_gudi1.TabIndex = 45;
-            this.label_gudi1.Text = "자품목 내역";
+            this.label_gudi15.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_gudi15.Location = new System.Drawing.Point(11, 10);
+            this.label_gudi15.Name = "label_gudi15";
+            this.label_gudi15.Size = new System.Drawing.Size(71, 18);
+            this.label_gudi15.TabIndex = 52;
+            this.label_gudi15.Text = "자품목 조회";
+            // 
+            // textBox_gudi10
+            // 
+            this.textBox_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi10.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi10.Location = new System.Drawing.Point(11, 32);
+            this.textBox_gudi10.Multiline = true;
+            this.textBox_gudi10.Name = "textBox_gudi10";
+            this.textBox_gudi10.Size = new System.Drawing.Size(459, 222);
+            this.textBox_gudi10.TabIndex = 73;
             // 
             // textBox_gudi8
             // 
@@ -344,6 +354,16 @@ namespace FinalProject1_winform
             this.label_gudi12.TabIndex = 63;
             this.label_gudi12.Text = "■ 소요량";
             // 
+            // label_gudi1
+            // 
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_gudi1.Location = new System.Drawing.Point(19, 171);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(71, 18);
+            this.label_gudi1.TabIndex = 45;
+            this.label_gudi1.Text = "자품목 내역";
+            // 
             // label_gudi8
             // 
             this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -362,26 +382,6 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 379);
             this.panel1.TabIndex = 51;
-            // 
-            // textBox_gudi10
-            // 
-            this.textBox_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi10.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi10.Location = new System.Drawing.Point(11, 32);
-            this.textBox_gudi10.Multiline = true;
-            this.textBox_gudi10.Name = "textBox_gudi10";
-            this.textBox_gudi10.Size = new System.Drawing.Size(459, 222);
-            this.textBox_gudi10.TabIndex = 73;
-            // 
-            // label_gudi15
-            // 
-            this.label_gudi15.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi15.Location = new System.Drawing.Point(11, 10);
-            this.label_gudi15.Name = "label_gudi15";
-            this.label_gudi15.Size = new System.Drawing.Size(71, 18);
-            this.label_gudi15.TabIndex = 52;
-            this.label_gudi15.Text = "자품목 조회";
             // 
             // textBox_gudi9
             // 
