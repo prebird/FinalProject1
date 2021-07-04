@@ -16,5 +16,11 @@ namespace FinalProject1_winform
             CommonDAC dac = new CommonDAC();
             return dac.GetAllMenu();
         }
+
+        public List<MenuVO> GetAllMenuMgt()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetAllMenu();
+        }
     }
 }

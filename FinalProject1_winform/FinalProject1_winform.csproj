@@ -133,6 +133,24 @@
     <Compile Include="CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMainMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMgt.Designer.cs">
+      <DependentUpon>frmMainMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBigMenuIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBigMenuIns.Designer.cs">
+      <DependentUpon>frmBigMenuIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSmallMenuIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSmallMenuIns.Designer.cs">
+      <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\BomService.cs" />
     <Compile Include="BOR\frmBORInsert.cs">
       <SubType>Form</SubType>
@@ -437,6 +455,7 @@
     <Compile Include="Purchasing\frmStockList.Designer.cs">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\MenuService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -508,6 +527,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
       <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMgt.resx">
+      <DependentUpon>frmMainMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBigMenuIns.resx">
+      <DependentUpon>frmBigMenuIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSmallMenuIns.resx">
+      <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -653,6 +681,9 @@
     <Content Include="Image\Find_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\gray_dot %281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\Open_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -662,6 +693,8 @@
     <Content Include="Image\Up_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\gray_dot.png" />
+    <None Include="Resources\gray_dot %283%29.png" />
     <None Include="Resources\close-red.png" />
     <None Include="Resources\close-grey.png" />
   </ItemGroup>

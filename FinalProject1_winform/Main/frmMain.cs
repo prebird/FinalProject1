@@ -35,6 +35,8 @@ namespace FinalProject1_winform
 
             int startYpoint = 0;
             Panel prePanel = null;
+            ImageList imageList = new ImageList();
+            imageList.ImageSize = new Size(16, 16);
             for (int i = 0; i < bigMenus.Count; i++)
             {
                 Button btnBigMenu = new Button();
@@ -46,6 +48,11 @@ namespace FinalProject1_winform
                 btnBigMenu.Font = new Font("AppleSDGothicNeoB00", 12);
                 btnBigMenu.ForeColor = Color.Black;
                 btnBigMenu.TextAlign = ContentAlignment.MiddleLeft;
+                imageList.Images.Clear();
+                imageList.Images.Add(Properties.Resources.gray_dot1);  // 이미지 동적으로 읽어올것
+                btnBigMenu.Image = imageList.Images[0];
+                btnBigMenu.ImageAlign = ContentAlignment.MiddleLeft;
+                btnBigMenu.TextImageRelation = TextImageRelation.ImageBeforeText;
                 btnBigMenu.BackColor = Color.White;
                 btnBigMenu.FlatStyle = FlatStyle.Flat;
                 btnBigMenu.Tag = prePanel;
@@ -77,6 +84,9 @@ namespace FinalProject1_winform
                     btnSmallMenu.FlatStyle = FlatStyle.Flat;
                     btnSmallMenu.TextAlign = ContentAlignment.MiddleLeft;
                     btnSmallMenu.Location = new Point(0, 55*j);
+                    btnSmallMenu.Image = Properties.Resources.gray_dot;
+                    btnSmallMenu.ImageAlign = ContentAlignment.MiddleLeft;
+                    btnSmallMenu.TextImageRelation = TextImageRelation.ImageBeforeText;
                     btnSmallMenu.Tag = smallMenus[j].ProgramName;
                     pnlSmallMenus.Controls.Add(btnSmallMenu);
 

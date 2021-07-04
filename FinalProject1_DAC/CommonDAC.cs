@@ -36,5 +36,21 @@ left outer join Authority a on ma.AuthID = a.AuthID";
                 return list;
             }
         }
+
+
+        public List<MenuVO> GetAllMenuMgt()
+        {
+
+            string sql = @"select ma.MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin ,u.user_name, menu_udate
+from Menu m left outer join MenuAuth ma on m.MenuID = ma.MenuID
+left outer join Userinfo u on  u.user_id = m.menu_uadmin";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                List<MenuVO> list = Helper.DataReaderMapToList<MenuVO>(dr);
+                return list;
+            }
+        }
+
     }
 }

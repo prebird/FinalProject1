@@ -15,6 +15,10 @@ namespace FinalProject1_VO
         public string ProgramName { get; set; }
         public int AuthID { get; set; }
         public string AuthName { get; set; }
+        public string menu_uadmin { get; set; }
+        public string user_name { get; set; }
+        public string menu_udate { get; set; }
+        public string menu_Img { get; set; }
 
     }
 }
