@@ -31,6 +31,8 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompanyInfoIns));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.cboCompanyYN = new FinalProject1_winform.ComboBox_gudi();
             this.txtCompanyName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.dtpDateTime = new FinalProject1_winform.DateTimePick_Format_Time();
@@ -43,8 +45,6 @@ namespace FinalProject1_winform
             this.cboCompanyType = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi13 = new FinalProject1_winform.Label_gudi();
             this.label_gudi15 = new FinalProject1_winform.Label_gudi();
-            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.btnSave = new FinalProject1_winform.Button_gudi();
             this.btnClose = new FinalProject1_winform.Button_gudi();
             this.txtCompanyCrum = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -72,13 +72,33 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(894, 37);
             this.panel1.TabIndex = 49;
             // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 3;
+            this.pictureBox_gudi1.TabStop = false;
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
+            this.label_gudi1.TabIndex = 2;
+            this.label_gudi1.Text = "업체정보";
+            // 
             // cboCompanyYN
             // 
             this.cboCompanyYN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboCompanyYN.FormattingEnabled = true;
             this.cboCompanyYN.Items.AddRange(new object[] {
-            "Y",
-            "N"});
+            "사용",
+            "미사용"});
             this.cboCompanyYN.Location = new System.Drawing.Point(421, 152);
             this.cboCompanyYN.Name = "cboCompanyYN";
             this.cboCompanyYN.Size = new System.Drawing.Size(162, 24);
@@ -198,26 +218,6 @@ namespace FinalProject1_winform
             this.label_gudi15.TabIndex = 50;
             this.label_gudi15.Text = "■ 업체타입";
             // 
-            // pictureBox_gudi1
-            // 
-            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
-            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi1.TabIndex = 3;
-            this.pictureBox_gudi1.TabStop = false;
-            // 
-            // label_gudi1
-            // 
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
-            this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "업체정보";
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
@@ -248,6 +248,7 @@ namespace FinalProject1_winform
             this.btnClose.TabIndex = 47;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtCompanyCrum
             // 

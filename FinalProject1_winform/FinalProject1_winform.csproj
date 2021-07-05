@@ -133,22 +133,22 @@
     <Compile Include="CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainMgt.cs">
+    <Compile Include="Main\frmMainMgt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMainMgt.Designer.cs">
+    <Compile Include="Main\frmMainMgt.Designer.cs">
       <DependentUpon>frmMainMgt.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBigMenuIns.cs">
+    <Compile Include="Main\frmBigMenuIns.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBigMenuIns.Designer.cs">
+    <Compile Include="Main\frmBigMenuIns.Designer.cs">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSmallMenuIns.cs">
+    <Compile Include="Main\frmSmallMenuIns.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSmallMenuIns.Designer.cs">
+    <Compile Include="Main\frmSmallMenuIns.Designer.cs">
       <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\BomService.cs" />
@@ -529,13 +529,13 @@
     <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
       <DependentUpon>frmSalesMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMainMgt.resx">
+    <EmbeddedResource Include="Main\frmMainMgt.resx">
       <DependentUpon>frmMainMgt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBigMenuIns.resx">
+    <EmbeddedResource Include="Main\frmBigMenuIns.resx">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSmallMenuIns.resx">
+    <EmbeddedResource Include="Main\frmSmallMenuIns.resx">
       <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">

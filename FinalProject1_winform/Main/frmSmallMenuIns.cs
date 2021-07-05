@@ -15,49 +15,43 @@ namespace FinalProject1_winform
 {
     public partial class frmSmallMenuIns : Form
     {
-        int refMenuID;
-        string gubun;
-        public frmSmallMenuIns(string gubun, int inputrefMenuID)
+        MenuVO throwedMenu;
+        int BigMenuID;
+        public frmSmallMenuIns(int throwedBigMenuID)
         {
             InitializeComponent();
-            if (gubun == "등록")
-            {
-                this.gubun = gubun;
-                btnSave.Text = "등록";
-            }
-            else if (gubun == "수정")
-            {
-                this.gubun = gubun;
-                label_gudi1.Text = "하위메뉴수정";
-                this.refMenuID = inputrefMenuID;
-                dgvBig.Enabled = false;
-                btnSave.Text = "수정";
-            }
+            btnSave.Text = "등록";
+            this.BigMenuID = throwedBigMenuID;
+        }
 
-            // DGV
-            CommonUtil.SetInitGridView(dgvBig);
-            CommonUtil.AddGridTextColumn(dgvBig, "메뉴아이디", "MenuID", colWidth:100);
-            CommonUtil.AddGridTextColumn(dgvBig, "상위메뉴명", "MenuName", colWidth:180);
-
+        public frmSmallMenuIns(MenuVO throwedMenu, int throwedBigMenuID)
+        {
+            InitializeComponent();
+            this.throwedMenu = throwedMenu;
+            btnSave.Text = "수정";
+            this.BigMenuID = throwedBigMenuID;
         }
 
         private void frmSmallMenuIns_Load(object sender, EventArgs e)
         {
             // 유저정보
 
+            // DGV
+            CommonUtil.SetInitGridView(dgvBig);
+            CommonUtil.AddGridTextColumn(dgvBig, "메뉴아이디", "MenuID", colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgvBig, "상위메뉴명", "MenuName", colWidth: 180);
+
             //날짜
             dtpDate.Text = DateTime.Now.ToShortDateString();
 
             // DGV
             CommonDAC DAC = new CommonDAC();
-            List<MenuVO> menu = DAC.GetAllMenuMgt();
+            List<MenuVO> menu = DAC.GetAllMenuMgt().FindAll((x) => x.MenuLevel == 0);
             dgvBig.DataSource = menu;
-            dgvBig.ClearSelection();
-            if (gubun == "수정")
-            {
-                int idx = menu.IndexOf(menu.Find((x) => x.refMenuID == this.refMenuID));
-                dgvBig.CurrentCell = dgvBig[0, idx];
-            }
+            int idx = menu.FindIndex((x) => x.MenuID == BigMenuID);
+            // 넘어온 상위id로 바인딩하기
+            dgvBig.CurrentCell = dgvBig.Rows[idx].Cells[0];
+            
 
             // CBO
             //Form을 상속받은 모든폼들 가져오기
@@ -94,9 +88,9 @@ namespace FinalProject1_winform
             menu.menu_uadmin = txtUserName.Text;
             menu.menu_udate = dtpDate.Text;
 
-            // Insert
-            if (gubun == "등록")
+            if (btnSave.Text == "등록")
             {
+                // insert
                 MenuService service = new MenuService();
                 if (service.insertSmallMenu(menu))
                 {
@@ -106,15 +100,24 @@ namespace FinalProject1_winform
                 }
                 else
                 {
-                    MessageBox.Show("다시 시도해주세요.");
-                } 
+                    MessageBox.Show("다시 시도해 주세요.");
+                }
             }
-            else if (gubun == "수정")
+            else if (btnSave.Text == "수정")
             {
                 // update
+                MenuService service = new MenuService();
+                if (service.updateSmallMenu(menu))
+                {
+                    MessageBox.Show("성공적으로 등록되었습니다.");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("다시 시도해 주세요.");
+                }
             }
-
-
 
         }
 

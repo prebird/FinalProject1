@@ -56,5 +56,10 @@ namespace FinalProject1_winform
         {
             dtpDateTime.Value = DateTime.Now;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
