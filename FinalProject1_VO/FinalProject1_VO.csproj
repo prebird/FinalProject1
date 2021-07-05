@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BomVO.cs" />
     <Compile Include="CompanyVO.cs" />
+    <Compile Include="FactoryVO.cs" />
     <Compile Include="ItemVO.cs" />
     <Compile Include="MenuVO.cs" />
     <Compile Include="Program.cs" />

@@ -50,6 +50,7 @@
     <Compile Include="BomDAC.cs" />
     <Compile Include="CommonDAC.cs" />
     <Compile Include="CompanyDAC.cs" />
+    <Compile Include="FactoryDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemDAC.cs" />
     <Compile Include="MenuDAC.cs" />
