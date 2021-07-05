@@ -37,11 +37,13 @@ namespace FinalProject1_winform
             this.dgv_Item = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.입력초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbo_YN = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_OutHouse = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_InHouse = new FinalProject1_winform.ComboBox_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
-            this.cbo_ItemType = new FinalProject1_winform.ComboBox_gudi();
+            this.cbo_ItemCategory = new FinalProject1_winform.ComboBox_gudi();
             this.txt_ItemName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
@@ -53,8 +55,6 @@ namespace FinalProject1_winform
             this.btn_Update = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.btn_Insert = new FinalProject1_winform.Button_gudi();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.입력초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -118,7 +118,7 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.cbo_OutHouse);
             this.panel1.Controls.Add(this.cbo_InHouse);
             this.panel1.Controls.Add(this.btn_Search);
-            this.panel1.Controls.Add(this.cbo_ItemType);
+            this.panel1.Controls.Add(this.cbo_ItemCategory);
             this.panel1.Controls.Add(this.txt_ItemName);
             this.panel1.Controls.Add(this.label_gudi6);
             this.panel1.Controls.Add(this.label_gudi4);
@@ -129,6 +129,20 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1057, 127);
             this.panel1.TabIndex = 6;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.입력초기화ToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(139, 26);
+            // 
+            // 입력초기화ToolStripMenuItem
+            // 
+            this.입력초기화ToolStripMenuItem.Name = "입력초기화ToolStripMenuItem";
+            this.입력초기화ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.입력초기화ToolStripMenuItem.Text = "입력 초기화";
+            this.입력초기화ToolStripMenuItem.Click += new System.EventHandler(this.입력초기화ToolStripMenuItem_Click);
             // 
             // cbo_YN
             // 
@@ -173,15 +187,16 @@ namespace FinalProject1_winform
             this.btn_Search.TabIndex = 16;
             this.btn_Search.Text = "조회";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-            // cbo_ItemType
+            // cbo_ItemCategory
             // 
-            this.cbo_ItemType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_ItemType.FormattingEnabled = true;
-            this.cbo_ItemType.Location = new System.Drawing.Point(125, 29);
-            this.cbo_ItemType.Name = "cbo_ItemType";
-            this.cbo_ItemType.Size = new System.Drawing.Size(158, 24);
-            this.cbo_ItemType.TabIndex = 7;
+            this.cbo_ItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbo_ItemCategory.FormattingEnabled = true;
+            this.cbo_ItemCategory.Location = new System.Drawing.Point(125, 29);
+            this.cbo_ItemCategory.Name = "cbo_ItemCategory";
+            this.cbo_ItemCategory.Size = new System.Drawing.Size(158, 24);
+            this.cbo_ItemCategory.TabIndex = 7;
             // 
             // txt_ItemName
             // 
@@ -327,20 +342,6 @@ namespace FinalProject1_winform
             this.btn_Insert.UseVisualStyleBackColor = false;
             this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.입력초기화ToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(139, 26);
-            // 
-            // 입력초기화ToolStripMenuItem
-            // 
-            this.입력초기화ToolStripMenuItem.Name = "입력초기화ToolStripMenuItem";
-            this.입력초기화ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.입력초기화ToolStripMenuItem.Text = "입력 초기화";
-            this.입력초기화ToolStripMenuItem.Click += new System.EventHandler(this.입력초기화ToolStripMenuItem_Click);
-            // 
             // frmItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -354,7 +355,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmItem";
-            this.Text = "frmProduct";
+            this.Text = "frmItem";
             this.Load += new System.EventHandler(this.frmItem_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).EndInit();
@@ -379,7 +380,7 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi2;
         private Label_gudi label_gudi1;
         private Controls.TextBox_gudi txt_ItemName;
-        private ComboBox_gudi cbo_ItemType;
+        private ComboBox_gudi cbo_ItemCategory;
         private Button_gudi btn_Search;
         private ComboBox_gudi cbo_YN;
         private ComboBox_gudi cbo_OutHouse;
