@@ -21,7 +21,7 @@ namespace FinalProject1_winform.Process
 
         private void frmProcess_Load(object sender, EventArgs e)
         {
-            txtIns_Date.Text = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:s");
+            txtIns_Date.Text = DateTime.Now.ToString("yy/MM/dd-HH:mm:s");
             //유저 정보 txt박스에 저장
 
             //수정일 경우 데이터 자동 바인딩

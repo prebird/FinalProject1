@@ -27,5 +27,23 @@ namespace FinalProject1_winform.Service
 
             return result;
         }
+
+        public List<ProcessVO> GetAllProcess()
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            List<ProcessVO> list = dac.GetAllProcess();
+            dac.Dispose();
+
+            return list;
+        }
+
+        public List<EquipmentGroupVO> GetAllEquipmentGroup()
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            List<EquipmentGroupVO> list = dac.GetAllEquipmentGroup();
+            dac.Dispose();
+
+            return list;
+        }
     }
 }

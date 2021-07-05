@@ -60,5 +60,25 @@ namespace FinalProject1_DAC
                 return (affectRow > 0);
             }
         }
+
+        public List<ProcessVO> GetAllProcess()
+        {
+            string sql = "select ProcessCode, ProcessName from ProcessInfo where Deleted = 0 and IsActive = 'Y'";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<ProcessVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<EquipmentGroupVO> GetAllEquipmentGroup()
+        {
+            string sql = "select EquipmentGroupCode, EquipmentGroupName from EquipmentGroup where Deleted = 0 and IsActive = 'Y'";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<EquipmentGroupVO>(cmd.ExecuteReader());
+            }
+        }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="BomVO.cs" />
     <Compile Include="CompanyVO.cs" />
     <Compile Include="EquipmentGroupVO.cs" />
+    <Compile Include="EquipmentVO.cs" />
     <Compile Include="ItemVO.cs" />
     <Compile Include="MenuVO.cs" />
     <Compile Include="ProcessVO.cs" />

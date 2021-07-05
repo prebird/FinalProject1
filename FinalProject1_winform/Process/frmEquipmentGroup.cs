@@ -21,7 +21,7 @@ namespace FinalProject1_winform.Process
 
         private void frmEquipmentGroup_Load(object sender, EventArgs e)
         {
-            txtINS_DATE.Text = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:s");
+            txtINS_DATE.Text = DateTime.Now.ToString("yy/MM/dd-HH:mm:s");
             //수정자 데이터 바인딩
 
             //수정일 경우 정보 바인딩
