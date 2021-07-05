@@ -78,7 +78,7 @@ namespace FinalProject1_DAC
                 sb.Append(" and Item_Name like @Item_Name");
 
             if (!string.IsNullOrEmpty(inHouse))
-                sb.Append(" and Item_InHouse like @Item_InHouse");
+                sb.Append(" and Item_InHouse = @Item_InHouse");
 
             if (!string.IsNullOrEmpty(outHouse))
                 sb.Append(" and Item_OutHouse = @Item_OutHouse");
@@ -90,9 +90,9 @@ namespace FinalProject1_DAC
             {
                 cmd.Connection = conn;
                 cmd.CommandText = sb.ToString();
-                cmd.Parameters.AddWithValue("@Item_Category", "%" + itemCategory + "%");
+                cmd.Parameters.AddWithValue("@Item_Category", itemCategory);
                 cmd.Parameters.AddWithValue("@Item_Name", "%" + itemName + "%");
-                cmd.Parameters.AddWithValue("@Item_InHouse", "%" + inHouse + "%");
+                cmd.Parameters.AddWithValue("@Item_InHouse", inHouse);
                 cmd.Parameters.AddWithValue("@Item_OutHouse", outHouse);
                 cmd.Parameters.AddWithValue("@Item_YN", yn);
 
