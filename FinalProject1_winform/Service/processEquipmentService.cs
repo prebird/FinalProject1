@@ -45,5 +45,14 @@ namespace FinalProject1_winform.Service
 
             return list;
         }
+
+        public bool SaveEquipment(EquipmentVO equipment)
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            bool result = dac.SaveEquipment(equipment);
+            dac.Dispose();
+
+            return result;
+        }
     }
 }

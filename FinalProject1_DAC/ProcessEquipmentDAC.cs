@@ -80,5 +80,28 @@ namespace FinalProject1_DAC
                 return Helper.DataReaderMapToList<EquipmentGroupVO>(cmd.ExecuteReader());
             }
         }
+
+        public bool SaveEquipment(EquipmentVO equipment)
+        {
+            string sql = "SP_SaveEquipment";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@P_ProcessCode", equipment.ProcessCode);
+                cmd.Parameters.AddWithValue("@P_EquipmentGroupCode", equipment.EquipmentGroupCode);
+                cmd.Parameters.AddWithValue("@P_EquipmentCode", equipment.EquipmentCode);
+                cmd.Parameters.AddWithValue("@P_EquipmentName", equipment.EquipmentName);
+                cmd.Parameters.AddWithValue("@P_Satus", equipment.Status);
+                cmd.Parameters.AddWithValue("@P_INS_EMP", equipment.INS_EMP);
+                cmd.Parameters.AddWithValue("@P_IsActive", equipment.IsActive);
+                cmd.Parameters.AddWithValue("@P_FromLocationID", equipment.FromLocationID);
+                cmd.Parameters.AddWithValue("@P_ToLocationID", equipment.ToLocationID);
+
+
+                int affectRow = cmd.ExecuteNonQuery();
+                return (affectRow > 0);
+            }
+        }
     }
 }

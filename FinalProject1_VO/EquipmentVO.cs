@@ -9,7 +9,9 @@ namespace FinalProject1_VO
     public class EquipmentVO
     {
         public int ProcessID { get; set; }
+        public string ProcessCode { get; set; }
         public int EquipmentGroupID { get; set; }
+        public string EquipmentGroupCode { get; set; }
         public string EquipmentCode { get; set; }
         public string EquipmentName { get; set; }
         public string Status { get; set; }
