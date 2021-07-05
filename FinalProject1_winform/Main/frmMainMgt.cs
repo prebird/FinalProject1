@@ -26,6 +26,7 @@ namespace FinalProject1_winform
 
             // 하위메뉴DGV설정
             CommonUtil.SetInitGridView(dgvDownMenu);
+            CommonUtil.AddGridTextColumn(dgvDownMenu, "메뉴ID", "MenuID", colWidth: 90);
             CommonUtil.AddGridTextColumn(dgvDownMenu, "메뉴명", "MenuName", colWidth: 150);
             CommonUtil.AddGridTextColumn(dgvDownMenu, "폼이름", "ProgramName", colWidth: 200);
             CommonUtil.AddGridTextColumn(dgvDownMenu, "부모ID", "refMenuID", colWidth: 90);
@@ -56,34 +57,56 @@ namespace FinalProject1_winform
         //상위
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            
+            frmBigMenuIns frm = new frmBigMenuIns();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                // 폼 다시 로드 -> 
+            }
         }
 
         private void btnBigUps_Click(object sender, EventArgs e)
         {
+            // 클릭된 거 VO로만들기
+            MenuVO throwMenu = menus.Find((x) => x.MenuID == Convert.ToInt32(dgvUpMenu.SelectedRows[0].Cells[0].Value));
 
+            frmBigMenuIns frm = new frmBigMenuIns(throwMenu);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                // 폼 다시 로드 -> 
+            }
         }
 
         private void btnBigDelete_Click(object sender, EventArgs e)
         {
-
+            // 진짜 삭제하시겠습니까? 하위 메뉴까지 삭제됩니다.
         }
 
         // 하위
 
         private void btnSmallInsert_Click(object sender, EventArgs e)
         {
-
+            frmSmallMenuIns frm = new frmSmallMenuIns(Convert.ToInt32(dgvUpMenu.SelectedRows[0].Cells[0].Value));
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                // 폼 다시 로드 -> 
+            }
         }
 
         private void btnSmallUps_Click(object sender, EventArgs e)
         {
+            // 클릭된 거 VO로만들기
+            MenuVO throwMenu = menus.Find((x) => x.MenuID == Convert.ToInt32(dgvDownMenu.SelectedRows[0].Cells[0].Value));
 
+            frmBigMenuIns frm = new frmBigMenuIns(throwMenu);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                // 폼 다시 로드 -> 
+            }
         }
 
         private void btnSmallDelete_Click(object sender, EventArgs e)
         {
-
+            // 진짜 삭제하시겠습니까?
         }
         #endregion
 
