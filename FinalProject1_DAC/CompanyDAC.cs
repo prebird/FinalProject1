@@ -80,13 +80,32 @@ namespace FinalProject1_DAC
             }
         }
 
-        //업체정보 등록
+        //업체정보 등록 및 수정
 
-        //public bool InsertCompany(CompanyVO list)
-        //{
-        //    string sql = @""
+        public bool InsUpCompany(CompanyVO info)
+        {
+            string sql = @"SP_InsUpCompany";
 
-        //}
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@company_code", info.company_code);
+                cmd.Parameters.AddWithValue("@company_name", info.company_name);
+                cmd.Parameters.AddWithValue("@company_type", info.company_type);
+                cmd.Parameters.AddWithValue("@company_ceo", info.company_ceo);
+                cmd.Parameters.AddWithValue("@company_crum", info.company_crum);
+                cmd.Parameters.AddWithValue("@company_email", info.company_email);
+                cmd.Parameters.AddWithValue("@company_phone", info.company_phone);
+                cmd.Parameters.AddWithValue("@company_yn", info.company_yn);
+                cmd.Parameters.AddWithValue("@company_uadmin", info.company_uadmin);
+                cmd.Parameters.AddWithValue("@company_udate", info.company_udate);
+                cmd.Parameters.AddWithValue("@company_comment", info.company_comment);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
+        }
 
     }
 }

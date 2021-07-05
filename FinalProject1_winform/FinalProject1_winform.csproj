@@ -456,6 +456,7 @@
       <DependentUpon>frmStockList.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Service\processEquipmentService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
