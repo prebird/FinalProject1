@@ -33,5 +33,15 @@ namespace FinalProject1_winform
             dac.Dispose();
             return list;
         }
+
+        //등록 및 수정
+        public bool InsUpCompany(CompanyVO info)
+        {
+            CompanyDAC dac = new CompanyDAC();
+            bool result = dac.InsUpCompany(info);
+            dac.Dispose();
+
+            return result;
+        }
     }
 }
