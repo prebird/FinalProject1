@@ -233,6 +233,11 @@ namespace FinalProject1_winform
         private void SmallButtonClick(object sender, EventArgs e)
         {
             Button thisButton = (Button)sender;
+            if (thisButton.Tag == null)
+            {
+                MessageBox.Show("폼을 등록해 주세요");
+                return;
+            }
             OpenCreateForm(thisButton.Tag.ToString());
         }
 

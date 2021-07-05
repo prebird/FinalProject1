@@ -13,18 +13,18 @@ namespace FinalProject1_winform
 {
     public partial class frmBigMenuIns : Form
     {
-        public frmBigMenuIns(string gubun)
+        MenuVO throwedMenu;
+        public frmBigMenuIns()
         {
             InitializeComponent();
-            if (gubun == "등록")
-            {
-                btnSave.Text = "등록";
-            }
-            else if (gubun == "수정")
-            {
+            btnSave.Text = "등록";
+        }
 
-                btnSave.Text = "수정";
-            }
+        public frmBigMenuIns(MenuVO throwedMenu)
+        {
+            InitializeComponent();
+            this.throwedMenu = throwedMenu;
+            btnSave.Text = "수정";
         }
 
         private void frmMainMgtInsert_Load(object sender, EventArgs e)
@@ -60,17 +60,35 @@ namespace FinalProject1_winform
             menu.menu_uadmin = txtUserName.Text;
             menu.menu_udate = dtpDate.Text;
 
-            // insert
-            MenuService service = new MenuService();
-            if (service.insertBigMenu(menu))
+            if (btnSave.Text == "등록")
             {
-                MessageBox.Show("성공적으로 등록되었습니다.");
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                // insert
+                MenuService service = new MenuService();
+                if (service.insertBigMenu(menu))
+                {
+                    MessageBox.Show("성공적으로 등록되었습니다.");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("다시 시도해 주세요.");
+                } 
             }
-            else
+            else if (btnSave.Text == "수정")
             {
-                MessageBox.Show("다시 시도해 주세요.");
+                // update
+                MenuService service = new MenuService();
+                if (service.updateBigMenu(menu))
+                {
+                    MessageBox.Show("성공적으로 등록되었습니다.");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("다시 시도해 주세요.");
+                }
             }
 
             

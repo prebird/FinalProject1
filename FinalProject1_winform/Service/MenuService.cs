@@ -21,5 +21,17 @@ namespace FinalProject1_winform
             MenuDAC dac = new MenuDAC();
             return dac.insertSmallMenu(menu);
         }
+
+        public bool updateBigMenu(MenuVO menu)
+        {
+            MenuDAC dac = new MenuDAC();
+            return dac.updateBigMenu(menu);
+        }
+
+        public bool updateSmallMenu(MenuVO menu)
+        {
+            MenuDAC dac = new MenuDAC();
+            return dac.updateSmallMenu(menu);
+        }
     }
 }

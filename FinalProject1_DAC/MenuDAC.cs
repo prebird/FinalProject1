@@ -32,7 +32,32 @@ values (@MenuName, @MenuLevel, @menu_uadmin, @menu_udate, @menu_Img)";
                 cmd.Parameters.AddWithValue("@MenuLevel", 0);
                 cmd.Parameters.AddWithValue("@menu_uadmin", menu.menu_uadmin);
                 cmd.Parameters.AddWithValue("@menu_udate", menu.menu_udate);
+                if (menu.menu_Img != null)
+                {
+                    cmd.Parameters.AddWithValue("@menu_Img", menu.menu_Img); 
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@menu_Img", DBNull.Value);
+                }
+
+                int irows = cmd.ExecuteNonQuery();
+
+                return irows > 0;
+            }
+        }
+
+        public bool updateBigMenu(MenuVO menu)
+        {
+            string sql = @"update menu set MenuName=@MenuName, MenuLevel=@MenuLevel, menu_uadmin=@menu_uadmin, menu_udate=@menu_udate, menu_Img=@menu_Img where menuid = @menuid";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@MenuName", menu.MenuName);
+                cmd.Parameters.AddWithValue("@MenuLevel", 0);
+                cmd.Parameters.AddWithValue("@menu_uadmin", menu.menu_uadmin);
+                cmd.Parameters.AddWithValue("@menu_udate", menu.menu_udate);
                 cmd.Parameters.AddWithValue("@menu_Img", menu.menu_Img);
+                cmd.Parameters.AddWithValue("@menuid", menu.MenuID);
 
                 int irows = cmd.ExecuteNonQuery();
 
@@ -58,5 +83,26 @@ values (@MenuName, @MenuLevel, @refMenuID, @ProgramName, @menu_uadmin, @menu_uda
                 return irows > 0;
             }
         }
+
+        public bool updateSmallMenu(MenuVO menu)
+        {
+            string sql = @"update Menu set MenuName = @MenuName, MenuLevel = @MenuLevel, refMenuID = @refMenuID, ProgramName = @ProgramName, menu_uadmin = @menu_uadmin, menu_udate = @menu_udate
+where MenuID = @menuid";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@MenuName", menu.MenuName);
+                cmd.Parameters.AddWithValue("@MenuLevel", 1);
+                cmd.Parameters.AddWithValue("@refMenuID", menu.refMenuID);
+                cmd.Parameters.AddWithValue("@ProgramName", menu.ProgramName);
+                cmd.Parameters.AddWithValue("@menu_uadmin", menu.menu_uadmin);
+                cmd.Parameters.AddWithValue("@menu_udate", menu.menu_udate);
+                cmd.Parameters.AddWithValue("@menuid", menu.MenuID);
+
+                int irows = cmd.ExecuteNonQuery();
+
+                return irows > 0;
+            }
+        }
+
     }
 }
