@@ -69,7 +69,11 @@ namespace FinalProject1_winform
                 return;
             }
 
+            EquipmentVO equipment = new EquipmentVO();
+            
 
+            processEquipmentService service = new processEquipmentService();
+            
         }
     }
 }
