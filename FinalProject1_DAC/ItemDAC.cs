@@ -103,7 +103,7 @@ namespace FinalProject1_DAC
         // 등록, 수정
         public bool InsertUpdateItem(ItemVO item)
         {
-            string sql = @"SP_InsertUpdateCompany";
+            string sql = @"SP_InsUpItem";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

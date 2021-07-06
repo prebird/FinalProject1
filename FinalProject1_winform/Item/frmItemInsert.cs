@@ -51,6 +51,7 @@ namespace FinalProject1_winform
 
                 ItemVO item = new ItemVO()
                 {
+                    Item_ID = itemID,
                     Item_Code = txt_Code.Text,
                     Item_Name = txt_Name.Text,
                     Item_Category = cbo_Category.Text,
@@ -66,7 +67,7 @@ namespace FinalProject1_winform
                 };
 
                 ItemService service = new ItemService();
-                bool result = service.InsertUpdateItem(itemList);
+                bool result = service.InsertUpdateItem(item);
 
                 if (result)
                     MessageBox.Show("정보가 입력 되었습니다.");
