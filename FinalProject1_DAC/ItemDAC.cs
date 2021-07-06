@@ -34,7 +34,9 @@ namespace FinalProject1_DAC
             string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
                          Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
                          from Item where Item_Deleted = 0
-                         order by Item_Category desc";
+                         order by (case Item_Category when '완제품' then 0
+                                                      when '반제품' then 1
+                                                      when '원자재' then 2 end)";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -141,8 +143,5 @@ namespace FinalProject1_DAC
                 return (iCnt > 0);
             }
         }
-
-
-
     }
 }
