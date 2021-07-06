@@ -14,7 +14,7 @@ namespace FinalProject1_winform
     public partial class frmCompanyInfo : Basic3
     {
         List<CompanyVO> List;
-        CompanyVO CompanyInfo;
+        //CompanyVO CompanyInfo;
         
         
         public frmCompanyInfo()
@@ -34,6 +34,8 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgV_Company, "사업자등록번호", "company_crum", DataGridViewContentAlignment.MiddleCenter, colWidth: 200);
             CommonUtil.AddGridTextColumn(dgV_Company, "이메일", "company_email", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
             CommonUtil.AddGridTextColumn(dgV_Company, "전화번호", "company_phone", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
+            CommonUtil.AddGridTextColumn(dgV_Company, "수정된 날짜", "company_udate", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
+
 
             LoadData();
         }
@@ -69,19 +71,44 @@ namespace FinalProject1_winform
         //업체 등록
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmCompanyInfoIns companyIns = new frmCompanyInfoIns();
-            companyIns.ShowDialog();
+            frmCompanyInfoIns frm = new frmCompanyInfoIns();     
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
 
         }
 
-        private void dgV_Company_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-          CompanyInfo.company_code = dgV_Company.Rows[e.RowIndex].Cells[0].Value.ToString();
-        }
-
+        //업체 수정
         private void btmUpdate_Click(object sender, EventArgs e)
         {
-            
+            if (dgV_Company.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("수정할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string companyCode = (dgV_Company.SelectedRows[0].Cells[0].Value).ToString();
+            CompanyVO CompanyInfo = List.Find((elem) => elem.company_code == companyCode);
+          
+
+            frmCompanyInfoIns frm = new frmCompanyInfoIns(CompanyInfo);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
         }
+
+        //업체 삭제
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgV_Company.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("삭제할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+
     }
 }
