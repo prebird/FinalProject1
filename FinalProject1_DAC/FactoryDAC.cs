@@ -5,11 +5,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinalProject1_VO;
 
 
 namespace FinalProject1_DAC
 {
-    class FactoryDAC : IDisposable
+   public class FactoryDAC : IDisposable
     {
         SqlConnection conn;
 
@@ -23,6 +24,18 @@ namespace FinalProject1_DAC
         {
             conn.Close();
         }
+
+        public List<FactoryVO> GetAllFactory()
+        {
+            string sql = @"select * from Factory where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<FactoryVO>(cmd.ExecuteReader());
+            }
+        }
+
+
 
 
     }

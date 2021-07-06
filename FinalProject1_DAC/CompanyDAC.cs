@@ -43,7 +43,7 @@ namespace FinalProject1_DAC
         //전체 업체정보 조회
         public List<CompanyVO> GetAllCompany()
         {
-            string sql = @"select * from Company";
+            string sql = @"select * from Company where deleted = 0";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -105,6 +105,20 @@ namespace FinalProject1_DAC
 
                 int iRowAffect = cmd.ExecuteNonQuery();
                 return iRowAffect > 0;
+            }
+        }
+
+        //업체 삭제
+        public bool DeleteCompany(int companyid)
+        {
+            string sql = "update Company set deleted = 1 where company_id = @company_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@company_id", companyid);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
             }
         }
 

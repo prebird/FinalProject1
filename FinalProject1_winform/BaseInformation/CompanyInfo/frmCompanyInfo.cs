@@ -34,7 +34,7 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgV_Company, "사업자등록번호", "company_crum", DataGridViewContentAlignment.MiddleCenter, colWidth: 200);
             CommonUtil.AddGridTextColumn(dgV_Company, "이메일", "company_email", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
             CommonUtil.AddGridTextColumn(dgV_Company, "전화번호", "company_phone", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
-            CommonUtil.AddGridTextColumn(dgV_Company, "수정된 날짜", "company_udate", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
+            CommonUtil.AddGridTextColumn(dgV_Company, "수정일자", "company_udate", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
 
 
             LoadData();
@@ -106,6 +106,22 @@ namespace FinalProject1_winform
             {
                 MessageBox.Show("삭제할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            string companyCode = (dgV_Company.SelectedRows[0].Cells[0].Value).ToString();
+            CompanyVO CompanyInfo = List.Find((elem) => elem.company_code == companyCode);
+
+            if (MessageBox.Show("삭제 하시겠습니까", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                CompanyService service = new CompanyService();
+                bool result = service.DeleteCompany(CompanyInfo.company_id);
+
+                if (result)
+                {
+                    MessageBox.Show("삭제 되었습니다.");
+                    LoadData();
+                }
+                else
+                    MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
