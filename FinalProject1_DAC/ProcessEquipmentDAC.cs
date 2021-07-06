@@ -103,5 +103,19 @@ namespace FinalProject1_DAC
                 return (affectRow > 0);
             }
         }
+
+        public List<EquipmentVO> GetAllEquipment()
+        {
+            string sql = @"select EquipmentID, ProcessName, EquipmentGroupName, EquipmentCode, EquipmentName, [Status], FromLocationID, 
+                            ToLocationID, E.IsActive, E.INS_EMP, CONVERT(nvarchar,E.INS_DATE,120) INS_DATE, ProcessCode, EquipmentGroupCode
+                            from Equipment E inner
+                            join ProcessInfo P on E.ProcessID = P.ProcessID inner join EquipmentGroup EG on E.EquipmentGroupID = EG.EquipmentGroupID
+                            where E.Deleted = 0";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader());
+            }
+        }
     }
 }

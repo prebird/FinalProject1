@@ -54,6 +54,8 @@ namespace FinalProject1_winform
             this.label_gudi9 = new FinalProject1_winform.Label_gudi();
             this.label_gudi10 = new FinalProject1_winform.Label_gudi();
             this.cboInputLocation = new FinalProject1_winform.ComboBox_gudi();
+            this.cboIsUse = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -209,7 +211,7 @@ namespace FinalProject1_winform
             this.label_gudi5.AutoSize = true;
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi5.Location = new System.Drawing.Point(68, 201);
+            this.label_gudi5.Location = new System.Drawing.Point(68, 202);
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(44, 17);
             this.label_gudi5.TabIndex = 11;
@@ -261,17 +263,17 @@ namespace FinalProject1_winform
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSpecific.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txtSpecific.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtSpecific.Location = new System.Drawing.Point(55, 263);
+            this.txtSpecific.Location = new System.Drawing.Point(55, 293);
             this.txtSpecific.Multiline = true;
             this.txtSpecific.Name = "txtSpecific";
-            this.txtSpecific.Size = new System.Drawing.Size(519, 116);
+            this.txtSpecific.Size = new System.Drawing.Size(519, 86);
             this.txtSpecific.TabIndex = 18;
             // 
             // label_gudi8
             // 
             this.label_gudi8.AutoSize = true;
             this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi8.Location = new System.Drawing.Point(52, 243);
+            this.label_gudi8.Location = new System.Drawing.Point(52, 273);
             this.label_gudi8.Name = "label_gudi8";
             this.label_gudi8.Size = new System.Drawing.Size(60, 17);
             this.label_gudi8.TabIndex = 17;
@@ -317,12 +319,41 @@ namespace FinalProject1_winform
             this.cboInputLocation.Size = new System.Drawing.Size(121, 24);
             this.cboInputLocation.TabIndex = 19;
             // 
+            // cboIsUse
+            // 
+            this.cboIsUse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboIsUse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboIsUse.FormattingEnabled = true;
+            this.cboIsUse.Items.AddRange(new object[] {
+            "선택",
+            "사용",
+            "사용 안함"});
+            this.cboIsUse.Location = new System.Drawing.Point(167, 239);
+            this.cboIsUse.Name = "cboIsUse";
+            this.cboIsUse.Size = new System.Drawing.Size(121, 24);
+            this.cboIsUse.TabIndex = 24;
+            // 
+            // label_gudi11
+            // 
+            this.label_gudi11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_gudi11.AutoSize = true;
+            this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi11.Location = new System.Drawing.Point(52, 242);
+            this.label_gudi11.Name = "label_gudi11";
+            this.label_gudi11.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi11.TabIndex = 23;
+            this.label_gudi11.Text = "사용 유무";
+            // 
             // frmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(611, 475);
+            this.Controls.Add(this.cboIsUse);
+            this.Controls.Add(this.label_gudi11);
             this.Controls.Add(this.cboOutputLocation);
             this.Controls.Add(this.label_gudi9);
             this.Controls.Add(this.label_gudi10);
@@ -344,6 +375,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmEquipment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEquipment";
             this.Load += new System.EventHandler(this.frmEquipment_Load);
             this.panel1.ResumeLayout(false);
@@ -380,5 +412,7 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi9;
         private Label_gudi label_gudi10;
         private ComboBox_gudi cboInputLocation;
+        private ComboBox_gudi cboIsUse;
+        private Label_gudi label_gudi11;
     }
 }

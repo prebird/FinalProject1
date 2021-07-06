@@ -1,5 +1,4 @@
 ﻿using FinalProject1_VO;
-using FinalProject1_winform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +20,7 @@ namespace FinalProject1_winform
 
         private void frmEquipment_Load(object sender, EventArgs e)
         {
-            //수정 일시 설비 데이터 바인딩
+            //수정일시 설비 데이터 바인딩
 
 
             //수정자 정보 바인딩
@@ -70,10 +69,36 @@ namespace FinalProject1_winform
             }
 
             EquipmentVO equipment = new EquipmentVO();
-            
+            equipment.ProcessCode = cboProcessCode.SelectedValue.ToString();
+            equipment.EquipmentGroupCode = cboEquipmentGroupCode.SelectedValue.ToString();
+            equipment.EquipmentCode = $"{cboProcessCode.SelectedValue}-{cboEquipmentGroupCode.SelectedValue}-{txtCode.Text}";
+            equipment.EquipmentName = txtName.Text;
+            equipment.Status = txtSpecific.Text;
+            equipment.INS_EMP = txtINS_EMP.Text;
+            equipment.FromLocationID = cboInputLocation.SelectedValue.ToString();
+            equipment.ToLocationID = cboOutputLocation.SelectedValue.ToString();
+            if(cboIsUse.SelectedIndex == 0 || cboIsUse.SelectedIndex == 1)
+            {
+                equipment.IsActive = "Y";
+            }
+            else if(cboIsUse.SelectedIndex == 2)
+            {
+                equipment.IsActive = "N";
+            }
 
             processEquipmentService service = new processEquipmentService();
-            
+            bool result = service.SaveEquipment(equipment);
+
+            if(result)
+            {
+                MessageBox.Show("성공적으로 저장되었습니다.");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("저장 실패");
+                return;
+            }
         }
     }
 }

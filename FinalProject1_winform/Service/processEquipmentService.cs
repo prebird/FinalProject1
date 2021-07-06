@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject1_winform.Service
+namespace FinalProject1_winform
 {
     public class processEquipmentService
     {
@@ -53,6 +53,15 @@ namespace FinalProject1_winform.Service
             dac.Dispose();
 
             return result;
+        }
+
+        public List<EquipmentVO> GetAllEquipment()
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            List<EquipmentVO> list = dac.GetAllEquipment();
+            dac.Dispose();
+
+            return list;
         }
     }
 }
