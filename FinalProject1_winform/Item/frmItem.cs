@@ -31,8 +31,8 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_Item, "입고창고", "Item_InHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "출고창고", "Item_OutHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "바코드", "Item_Barcode", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_Content", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
-            CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_ID");
+            CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_YN", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
+            CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_Content");
 
             LoadData();
         }

@@ -31,8 +31,8 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_Item, "입고창고", "Item_InHouse", DataGridViewContentAlignment.MiddleCenter, visibility: false);
             CommonUtil.AddGridTextColumn(dgv_Item, "출고창고", "Item_OutHouse", DataGridViewContentAlignment.MiddleCenter, visibility: false);
             CommonUtil.AddGridTextColumn(dgv_Item, "바코드", "Item_Barcode", DataGridViewContentAlignment.MiddleCenter, visibility: false);
-            CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_Content", DataGridViewContentAlignment.MiddleCenter, colWidth: 85, visibility: false);
-            CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_ID", visibility:false);
+            CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_YN", DataGridViewContentAlignment.MiddleCenter, colWidth: 85, visibility: false);
+            CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_Content", visibility:false);
             LoadData();
 
             // 정전개 바인딩
@@ -76,6 +76,30 @@ namespace FinalProject1_winform
             BOMService service2 = new BOMService();
             dgv_Reverse.DataSource = null;
             dgv_Reverse.DataSource = service2.BOMReverse(itemID);
+        }
+
+        private void btn_Insert_Click(object sender, EventArgs e)
+        {
+            // 유효성 체크 (원자재는 BOM 등록할 수 없음)
+            string Category = dgv_Item.SelectedRows[0].Cells[1].Value.ToString();
+
+            if (Category == "원자재")
+            {
+                MessageBox.Show("원자재는 등록할 수 없습니다.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+               
+            int ItemID = Convert.ToInt32(dgv_Item.SelectedRows[0].Cells[0].Value);
+
+            frmBOMInsert frm = new frmBOMInsert(ItemID, Category);
+            frm.ShowDialog();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }

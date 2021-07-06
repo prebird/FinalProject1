@@ -36,9 +36,10 @@
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel1">
-      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Library\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -133,12 +134,7 @@
     <Compile Include="CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCommonCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCommonCode.Designer.cs">
-      <DependentUpon>frmCommonCode.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Service\FactoryService.cs" />
     <Compile Include="Main\frmMainMgt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,9 +531,6 @@
     <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
       <DependentUpon>frmSalesMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCommonCode.resx">
-      <DependentUpon>frmCommonCode.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMainMgt.resx">
       <DependentUpon>frmMainMgt.cs</DependentUpon>
     </EmbeddedResource>
@@ -703,39 +696,11 @@
     <Content Include="Image\Up_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Library\Microsoft.Office.Interop.Excel.dll" />
     <None Include="Resources\gray_dot.png" />
     <None Include="Resources\gray_dot %283%29.png" />
     <None Include="Resources\close-red.png" />
     <None Include="Resources\close-grey.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>5</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FinalProject1_DAC\FinalProject1_DAC.csproj">

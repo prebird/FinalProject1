@@ -42,8 +42,6 @@ namespace FinalProject1_winform
             this.cbo_ItemYN = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_ItemType = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.dtp_ItemDate = new FinalProject1_winform.DateTimePicker_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.cbo_ItemName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
@@ -111,8 +109,6 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.cbo_ItemYN);
             this.panel1.Controls.Add(this.cbo_ItemType);
             this.panel1.Controls.Add(this.label_gudi6);
-            this.panel1.Controls.Add(this.dtp_ItemDate);
-            this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Controls.Add(this.label_gudi5);
             this.panel1.Controls.Add(this.cbo_ItemName);
             this.panel1.Controls.Add(this.btn_Search);
@@ -129,7 +125,7 @@ namespace FinalProject1_winform
             this.cbo_ItemYN.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbo_ItemYN.Location = new System.Drawing.Point(791, 23);
+            this.cbo_ItemYN.Location = new System.Drawing.Point(571, 24);
             this.cbo_ItemYN.Name = "cbo_ItemYN";
             this.cbo_ItemYN.Size = new System.Drawing.Size(134, 24);
             this.cbo_ItemYN.TabIndex = 41;
@@ -138,7 +134,7 @@ namespace FinalProject1_winform
             // 
             this.cbo_ItemType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_ItemType.FormattingEnabled = true;
-            this.cbo_ItemType.Location = new System.Drawing.Point(343, 23);
+            this.cbo_ItemType.Location = new System.Drawing.Point(104, 23);
             this.cbo_ItemType.Name = "cbo_ItemType";
             this.cbo_ItemType.Size = new System.Drawing.Size(134, 24);
             this.cbo_ItemType.TabIndex = 40;
@@ -147,36 +143,17 @@ namespace FinalProject1_winform
             // 
             this.label_gudi6.AutoSize = true;
             this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.Location = new System.Drawing.Point(261, 27);
+            this.label_gudi6.Location = new System.Drawing.Point(22, 27);
             this.label_gudi6.Name = "label_gudi6";
             this.label_gudi6.Size = new System.Drawing.Size(76, 17);
             this.label_gudi6.TabIndex = 39;
             this.label_gudi6.Text = "■ 품목 유형";
             // 
-            // dtp_ItemDate
-            // 
-            this.dtp_ItemDate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dtp_ItemDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ItemDate.Location = new System.Drawing.Point(110, 23);
-            this.dtp_ItemDate.Name = "dtp_ItemDate";
-            this.dtp_ItemDate.Size = new System.Drawing.Size(134, 25);
-            this.dtp_ItemDate.TabIndex = 38;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(28, 27);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(76, 17);
-            this.label_gudi3.TabIndex = 37;
-            this.label_gudi3.Text = "■ 기준 일자";
-            // 
             // label_gudi5
             // 
             this.label_gudi5.AutoSize = true;
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.Location = new System.Drawing.Point(713, 27);
+            this.label_gudi5.Location = new System.Drawing.Point(493, 28);
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(72, 17);
             this.label_gudi5.TabIndex = 35;
@@ -186,7 +163,7 @@ namespace FinalProject1_winform
             // 
             this.cbo_ItemName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_ItemName.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.cbo_ItemName.Location = new System.Drawing.Point(559, 23);
+            this.cbo_ItemName.Location = new System.Drawing.Point(330, 23);
             this.cbo_ItemName.Name = "cbo_ItemName";
             this.cbo_ItemName.Size = new System.Drawing.Size(135, 25);
             this.cbo_ItemName.TabIndex = 33;
@@ -202,18 +179,19 @@ namespace FinalProject1_winform
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
             this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(958, 23);
+            this.btn_Search.Location = new System.Drawing.Point(943, 23);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(78, 25);
             this.btn_Search.TabIndex = 10;
             this.btn_Search.Text = "조회";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label_gudi4
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(492, 27);
+            this.label_gudi4.Location = new System.Drawing.Point(263, 27);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(60, 17);
             this.label_gudi4.TabIndex = 31;
@@ -375,6 +353,7 @@ namespace FinalProject1_winform
             this.btn_Insert.Text = "BOM등록";
             this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Insert.UseVisualStyleBackColor = false;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
             // frmBOMList
             // 
@@ -415,8 +394,6 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi1;
         private DGV_gudi dgv_Forward;
         private DGV_gudi dgv_Reverse;
-        private DateTimePicker_gudi dtp_ItemDate;
-        private Label_gudi label_gudi3;
         private Label_gudi label_gudi5;
         private Controls.TextBox_gudi cbo_ItemName;
         private Label_gudi label_gudi4;
