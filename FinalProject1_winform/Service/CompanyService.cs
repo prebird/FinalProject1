@@ -43,5 +43,14 @@ namespace FinalProject1_winform
 
             return result;
         }
+
+        //삭제
+        public bool DeleteCompany(int companyid)
+        {
+            CompanyDAC dac = new CompanyDAC();
+            bool result = dac.DeleteCompany(companyid);
+            dac.Dispose();
+            return result;
+        }
     }
 }

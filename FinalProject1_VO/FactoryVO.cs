@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace FinalProject1_VO
 {
-    class FactoryVO
+    public  class FactoryVO
     {
-
         public string factory_grade { get; set; }
         public string factory_parent { get; set; }
         public string factory_name { get; set; }
