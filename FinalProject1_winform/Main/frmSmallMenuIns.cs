@@ -30,6 +30,10 @@ namespace FinalProject1_winform
             this.throwedMenu = throwedMenu;
             btnSave.Text = "수정";
             this.BigMenuID = throwedBigMenuID;
+
+            txtMenuName.Text = throwedMenu.MenuName;
+            cboForm.SelectedText = throwedMenu.ProgramName;
+
         }
 
         private void frmSmallMenuIns_Load(object sender, EventArgs e)
@@ -87,6 +91,7 @@ namespace FinalProject1_winform
             menu.ProgramName = cboForm.Text;
             menu.menu_uadmin = txtUserName.Text;
             menu.menu_udate = dtpDate.Text;
+            menu.MenuID = throwedMenu.MenuID;
 
             if (btnSave.Text == "등록")
             {

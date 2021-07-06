@@ -133,6 +133,12 @@
     <Compile Include="CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCommonCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommonCode.Designer.cs">
+      <DependentUpon>frmCommonCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmMainMgt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -528,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
       <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommonCode.resx">
+      <DependentUpon>frmCommonCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMainMgt.resx">
       <DependentUpon>frmMainMgt.cs</DependentUpon>

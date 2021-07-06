@@ -94,10 +94,15 @@ namespace FinalProject1_winform
 
         private void btnSmallUps_Click(object sender, EventArgs e)
         {
+            if (dgvDownMenu.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("수정할 메뉴를 선택해 주세요");
+                return;
+            }
             // 클릭된 거 VO로만들기
             MenuVO throwMenu = menus.Find((x) => x.MenuID == Convert.ToInt32(dgvDownMenu.SelectedRows[0].Cells[0].Value));
 
-            frmBigMenuIns frm = new frmBigMenuIns(throwMenu);
+            frmSmallMenuIns frm = new frmSmallMenuIns(throwMenu, Convert.ToInt32(dgvUpMenu.SelectedRows[0].Cells[0].Value));
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 // 폼 다시 로드 -> 
