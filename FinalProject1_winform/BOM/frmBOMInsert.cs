@@ -23,12 +23,12 @@ namespace FinalProject1_winform
             // BomList에서 받아온 번호로 해당 아이템 조회 후 컨트롤에 정보 바인딩
             ItemService service = new ItemService();
             ItemVO OneItem = service.GetOneItem(itemID);
-            Txt_Category.Text = Category;
-            Txt_ItemCode.Text = OneItem.Item_Code;
-            Txt_ItemName.Text = OneItem.Item_Name;
-            Txt_UnitQTY.Text = OneItem.Item_UnitQTY.ToString();
+            txt_Category.Text = Category;
+            txt_ItemCode.Text = OneItem.Item_Code;
+            txt_ItemName.Text = OneItem.Item_Name;
+            txt_UnitQTY.Text = OneItem.Item_UnitQTY.ToString();
      
-            #region 자품목 그리드뷰 셋팅
+            #region 자품목 조회
             CommonUtil.SetInitGridView(dgv_JaItemAll);
             CommonUtil.AddGridTextColumn(dgv_JaItemAll, "품목번호", "Item_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
             CommonUtil.AddGridTextColumn(dgv_JaItemAll, "품목유형", "Item_Category", DataGridViewContentAlignment.MiddleCenter);
@@ -45,9 +45,21 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_JaItemAll, "비고", "Item_Content", visibility: false);
             #endregion
 
+            #region 자품목 내역
+            CommonUtil.SetInitGridView(dgv_JaItemMine);
+            CommonUtil.AddGridTextColumn(dgv_JaItemMine, "상위품목 번호", "BOM_MoItemID", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
+            CommonUtil.AddGridTextColumn(dgv_JaItemMine, "자품목 번호", "BOM_JaItemID", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_JaItemMine, "품목유형", "Item_Category", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_JaItemMine, "품목명", "Item_Name", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_JaItemMine, "단위수량", "Item_UnitQTY", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
+            #endregion
+
             // 전체 목록도 전역 List에 추가.
             AllList = service.GetAllItem();
-            SelectJaItem(dgv_JaItemAll, Category);
+
+            SelectJaItem(dgv_JaItemAll, Category); // 자품목 전체
+
+            SelectMyJaItem(itemID); // 이 모품목에 있는 자품목만
         }
 
         // '완제품'이라면 반제품과 원자재, '반제품'이라면 원자재만 자품목으로 조회할 수 있음.
@@ -67,6 +79,45 @@ namespace FinalProject1_winform
                                 select item).ToList();
                 dgv_JaItemAll.DataSource = ItemList;
             }
+        }
+        // 선택한 모품의 기존에 등록된 자품목 조회
+        private void SelectMyJaItem(int itemID)
+        {
+            BOMService service = new BOMService();
+            List<BomVO> bom = service.SearchJaItem(itemID);
+            dgv_JaItemMine.DataSource = bom;
+        }
+
+
+        private void btn_Insert_Click(object sender, EventArgs e)
+        {
+            // 유효성 체크
+
+
+            if (MessageBox.Show("등록 하시겠습니까?", "입력 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                BomVO bom = new BomVO()
+                {
+                    BOM_MoItemID = Convert.ToInt32(lblItemID.Text),
+                    BOM_JaItemID = Convert.ToInt32(dgv_JaItemAll.SelectedRows[0].Cells[0].Value),
+                    BOM_UseQTY = Convert.ToInt32(txt_UseQTY.Text),
+                    BOM_YN = cbo_YN.Text,
+                    BOM_DemandYN = cbo_DemandYN.Text,
+                    BOM_Content = txt_Content.Text
+                };
+
+                BOMService service = new BOMService();
+                bool result = service.InsertBOM(bom);
+
+                if (result)
+                    MessageBox.Show("정보가 입력 되었습니다.");
+                else
+                    MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // 등록 후 입력 내용 초기화
+            txt_UseQTY.Text = cbo_YN.Text = cbo_DemandYN.Text = txt_Content.Text = null;
+
         }
     }
 }

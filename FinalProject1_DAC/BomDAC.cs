@@ -56,6 +56,41 @@ namespace FinalProject1_DAC
             }
         }
 
+        // 해당 모품목에 등록된 자품목만 조회
+        public List<BomVO> SearchJaItem(int MoitemID)
+        {
+            string sql = @"select BOM_MoItemID, BOM_JaItemID, i.Item_Category, i.Item_Name, i.Item_UnitQTY
+                         from BOM B inner
+                         join Item i on b.BOM_JaItemID = i.Item_ID
+                         where BOM_Deleted = 0 and b.BOM_MoItemID = @BOM_MoItemID";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@BOM_MoItemID", MoitemID);
+
+                return Helper.DataReaderMapToList<BomVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // BOM 등록
+        public bool InsertBOM(BomVO bom)
+        {
+            string sql = @"insert into bom (BOM_MoItemID, BOM_JaItemID, BOM_UseQTY, BOM_YN, BOM_DemandYN, BOM_Content)
+                         values(@BOM_MoItemID, @BOM_JaItemID, @BOM_UseQTY, @BOM_YN, @BOM_DemandYN, @BOM_Content)";
+
+            using (SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@BOM_MoItemID", bom.BOM_MoItemID);
+                cmd.Parameters.AddWithValue("@BOM_JaItemID", bom.BOM_JaItemID);
+                cmd.Parameters.AddWithValue("@BOM_UseQTY", bom.BOM_UseQTY);
+                cmd.Parameters.AddWithValue("@BOM_YN", bom.BOM_YN);
+                cmd.Parameters.AddWithValue("@BOM_DemandYN", bom.BOM_DemandYN);
+                cmd.Parameters.AddWithValue("@BOM_Content", bom.BOM_Content);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
+        }
 
 
     }
