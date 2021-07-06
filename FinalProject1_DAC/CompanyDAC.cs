@@ -90,6 +90,7 @@ namespace FinalProject1_DAC
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@company_id", info.company_id);
                 cmd.Parameters.AddWithValue("@company_code", info.company_code);
                 cmd.Parameters.AddWithValue("@company_name", info.company_name);
                 cmd.Parameters.AddWithValue("@company_type", info.company_type);

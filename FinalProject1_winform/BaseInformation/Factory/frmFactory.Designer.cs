@@ -30,7 +30,11 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactory));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboFactoryGrade = new FinalProject1_winform.ComboBox_gudi();
+            this.txtFactoryCode = new FinalProject1_winform.Controls.TextBox_gudi();
             this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
@@ -41,10 +45,11 @@ namespace FinalProject1_winform
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.txtFactoryCode = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.cboFactoryGrade = new FinalProject1_winform.ComboBox_gudi();
+            this.dgv_Factory = new FinalProject1_winform.DGV_gudi();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Factory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +66,24 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1057, 50);
             this.panel1.TabIndex = 2;
+            // 
+            // cboFactoryGrade
+            // 
+            this.cboFactoryGrade.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboFactoryGrade.FormattingEnabled = true;
+            this.cboFactoryGrade.Location = new System.Drawing.Point(472, 11);
+            this.cboFactoryGrade.Name = "cboFactoryGrade";
+            this.cboFactoryGrade.Size = new System.Drawing.Size(172, 24);
+            this.cboFactoryGrade.TabIndex = 11;
+            // 
+            // txtFactoryCode
+            // 
+            this.txtFactoryCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtFactoryCode.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtFactoryCode.Location = new System.Drawing.Point(112, 10);
+            this.txtFactoryCode.Name = "txtFactoryCode";
+            this.txtFactoryCode.Size = new System.Drawing.Size(198, 25);
+            this.txtFactoryCode.TabIndex = 10;
             // 
             // btnSearch
             // 
@@ -185,6 +208,7 @@ namespace FinalProject1_winform
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.dgv_Factory);
             this.panel2.Location = new System.Drawing.Point(17, 114);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1057, 466);
@@ -200,23 +224,30 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.TabIndex = 18;
             this.pictureBox_gudi2.TabStop = false;
             // 
-            // txtFactoryCode
+            // dgv_Factory
             // 
-            this.txtFactoryCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtFactoryCode.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtFactoryCode.Location = new System.Drawing.Point(112, 10);
-            this.txtFactoryCode.Name = "txtFactoryCode";
-            this.txtFactoryCode.Size = new System.Drawing.Size(198, 25);
-            this.txtFactoryCode.TabIndex = 10;
-            // 
-            // cboFactoryGrade
-            // 
-            this.cboFactoryGrade.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboFactoryGrade.FormattingEnabled = true;
-            this.cboFactoryGrade.Location = new System.Drawing.Point(472, 11);
-            this.cboFactoryGrade.Name = "cboFactoryGrade";
-            this.cboFactoryGrade.Size = new System.Drawing.Size(172, 24);
-            this.cboFactoryGrade.TabIndex = 11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_Factory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Factory.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Factory.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Factory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Factory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Factory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Factory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv_Factory.HeaderCheckStatus = false;
+            this.dgv_Factory.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Factory.Name = "dgv_Factory";
+            this.dgv_Factory.RowHeadersVisible = false;
+            this.dgv_Factory.RowTemplate.Height = 23;
+            this.dgv_Factory.Size = new System.Drawing.Size(1057, 466);
+            this.dgv_Factory.TabIndex = 0;
             // 
             // frmFactory
             // 
@@ -233,9 +264,12 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmFactory";
             this.Text = "frmFactory";
+            this.Load += new System.EventHandler(this.frmFactory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Factory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +290,6 @@ namespace FinalProject1_winform
         private PictureBox_gudi pictureBox_gudi2;
         private ComboBox_gudi cboFactoryGrade;
         private Controls.TextBox_gudi txtFactoryCode;
+        private DGV_gudi dgv_Factory;
     }
 }
