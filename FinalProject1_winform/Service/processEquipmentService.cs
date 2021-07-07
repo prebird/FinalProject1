@@ -63,5 +63,50 @@ namespace FinalProject1_winform
 
             return list;
         }
+
+        public bool DeleteEquipment(string equipmentCode)
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            bool result = dac.DeleteEquipment(equipmentCode);
+            dac.Dispose();
+
+            return result;
+        }
+
+        public List<ProcessVO> GetAllProcessInfo()
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            List<ProcessVO> list = dac.GetAllProcessInfo();
+            dac.Dispose();
+
+            return list;
+        }
+
+        public bool DeleteProcess(string processCode)
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            bool result = dac.DeleteProcess(processCode);
+            dac.Dispose();
+
+            return result;
+        }
+
+        public List<EquipmentGroupVO> GetEquipmentGroupInfo()
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            List<EquipmentGroupVO> list = dac.GetEquipmentGroupInfo();
+            dac.Dispose();
+
+            return list;
+        }
+
+        public bool DeleteEquipmentGroup(string equipmentgroupCode)
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            bool result = dac.DeleteEquipmentGroup(equipmentgroupCode);
+            dac.Dispose();
+
+            return result;
+        }
     }
 }
