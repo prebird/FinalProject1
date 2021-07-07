@@ -40,8 +40,8 @@ namespace FinalProject1_winform
 
         private void LoadData()
         {
-            FactoryService service = new FactoryService();
-            List = service.GetAllFactory();
+           // FactoryService service = new FactoryService();
+           // List = service.GetAllFactory();
             dgv_Factory.DataSource = List;
             dgv_Factory.ClearSelection();
         }

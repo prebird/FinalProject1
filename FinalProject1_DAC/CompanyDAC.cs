@@ -51,6 +51,17 @@ namespace FinalProject1_DAC
             }
         }
 
+        //업체 코드 조회
+        public List<CompanyVO> GetAllCompanyCode()
+        {
+            string sql = @"select company_code from company where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
+            }
+        }
+
         //검색조건 조회
         public List<CompanyVO> SearchCompany(string companyCode, string companyName, string companyCrum, string companyType) 
         {
@@ -121,6 +132,7 @@ namespace FinalProject1_DAC
                 return (iCnt > 0);
             }
         }
+
 
     }
 }

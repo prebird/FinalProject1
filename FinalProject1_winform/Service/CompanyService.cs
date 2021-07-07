@@ -52,5 +52,15 @@ namespace FinalProject1_winform
             dac.Dispose();
             return result;
         }
+
+        //업체코드 전체 조회
+       // public List<CompanyVO> GetAllCompany()
+       // {
+       //     CompanyDAC dac = new CompanyDAC();
+       //     List<CompanyVO> list = dac.GetAllCompany();
+       //     dac.Dispose();
+       //     return list;
+       // }
+
     }
 }

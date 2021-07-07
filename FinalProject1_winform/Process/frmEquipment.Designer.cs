@@ -144,7 +144,7 @@ namespace FinalProject1_winform
             this.cboProcessCode.Location = new System.Drawing.Point(167, 73);
             this.cboProcessCode.Name = "cboProcessCode";
             this.cboProcessCode.Size = new System.Drawing.Size(121, 24);
-            this.cboProcessCode.TabIndex = 5;
+            this.cboProcessCode.TabIndex = 0;
             // 
             // label_gudi2
             // 
@@ -175,7 +175,7 @@ namespace FinalProject1_winform
             this.cboEquipmentGroupCode.Location = new System.Drawing.Point(167, 114);
             this.cboEquipmentGroupCode.Name = "cboEquipmentGroupCode";
             this.cboEquipmentGroupCode.Size = new System.Drawing.Size(121, 24);
-            this.cboEquipmentGroupCode.TabIndex = 8;
+            this.cboEquipmentGroupCode.TabIndex = 1;
             // 
             // label_gudi4
             // 
@@ -195,7 +195,7 @@ namespace FinalProject1_winform
             this.txtCode.Location = new System.Drawing.Point(167, 156);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(121, 25);
-            this.txtCode.TabIndex = 10;
+            this.txtCode.TabIndex = 2;
             // 
             // txtName
             // 
@@ -204,7 +204,7 @@ namespace FinalProject1_winform
             this.txtName.Location = new System.Drawing.Point(167, 198);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(121, 25);
-            this.txtName.TabIndex = 12;
+            this.txtName.TabIndex = 3;
             // 
             // label_gudi5
             // 
@@ -267,7 +267,7 @@ namespace FinalProject1_winform
             this.txtSpecific.Multiline = true;
             this.txtSpecific.Name = "txtSpecific";
             this.txtSpecific.Size = new System.Drawing.Size(519, 86);
-            this.txtSpecific.TabIndex = 18;
+            this.txtSpecific.TabIndex = 7;
             // 
             // label_gudi8
             // 
@@ -286,7 +286,7 @@ namespace FinalProject1_winform
             this.cboOutputLocation.Location = new System.Drawing.Point(453, 202);
             this.cboOutputLocation.Name = "cboOutputLocation";
             this.cboOutputLocation.Size = new System.Drawing.Size(121, 24);
-            this.cboOutputLocation.TabIndex = 22;
+            this.cboOutputLocation.TabIndex = 6;
             // 
             // label_gudi9
             // 
@@ -317,7 +317,7 @@ namespace FinalProject1_winform
             this.cboInputLocation.Location = new System.Drawing.Point(453, 161);
             this.cboInputLocation.Name = "cboInputLocation";
             this.cboInputLocation.Size = new System.Drawing.Size(121, 24);
-            this.cboInputLocation.TabIndex = 19;
+            this.cboInputLocation.TabIndex = 5;
             // 
             // cboIsUse
             // 
@@ -332,7 +332,7 @@ namespace FinalProject1_winform
             this.cboIsUse.Location = new System.Drawing.Point(167, 239);
             this.cboIsUse.Name = "cboIsUse";
             this.cboIsUse.Size = new System.Drawing.Size(121, 24);
-            this.cboIsUse.TabIndex = 24;
+            this.cboIsUse.TabIndex = 4;
             // 
             // label_gudi11
             // 
