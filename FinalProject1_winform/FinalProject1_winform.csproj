@@ -134,6 +134,12 @@
     <Compile Include="CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCommonCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommonCode.Designer.cs">
+      <DependentUpon>frmCommonCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmMainMgt.cs">
       <SubType>Form</SubType>
     </Compile>
