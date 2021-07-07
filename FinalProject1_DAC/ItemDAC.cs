@@ -65,7 +65,7 @@ namespace FinalProject1_DAC
         }
 
         // 부분 조회
-        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string inHouse, string outHouse, string yn)
+        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string yn)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
@@ -79,12 +79,6 @@ namespace FinalProject1_DAC
             if (!string.IsNullOrEmpty(itemName))
                 sb.Append(" and Item_Name like @Item_Name");
 
-            if (!string.IsNullOrEmpty(inHouse))
-                sb.Append(" and Item_InHouse = @Item_InHouse");
-
-            if (!string.IsNullOrEmpty(outHouse))
-                sb.Append(" and Item_OutHouse = @Item_OutHouse");
-
             if (!string.IsNullOrEmpty(yn))
                 sb.Append(" and Item_YN = @Item_YN");
 
@@ -94,8 +88,7 @@ namespace FinalProject1_DAC
                 cmd.CommandText = sb.ToString();
                 cmd.Parameters.AddWithValue("@Item_Category", itemCategory);
                 cmd.Parameters.AddWithValue("@Item_Name", "%" + itemName + "%");
-                cmd.Parameters.AddWithValue("@Item_InHouse", inHouse);
-                cmd.Parameters.AddWithValue("@Item_OutHouse", outHouse);
+
                 cmd.Parameters.AddWithValue("@Item_YN", yn);
 
                 return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());

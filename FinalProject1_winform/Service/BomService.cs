@@ -10,10 +10,10 @@ namespace FinalProject1_winform
 {
     public class BOMService
     {
-        public List<BomVO> BOMForward (int JaItemID)
+        public List<BomVO> BOMForward(int MoItemID)
         {
             BomDAC dac = new BomDAC();
-            List<BomVO> result = dac.BOMForward(JaItemID);
+            List<BomVO> result = dac.BOMForward(MoItemID);
             dac.Dispose();
             return result;
         }
@@ -41,6 +41,12 @@ namespace FinalProject1_winform
             return result;
         }
 
-
+        public bool DeleteJaItem(int JaID)
+        {
+            BomDAC dac = new BomDAC();
+            bool result = dac.DeleteJaItem(JaID);
+            dac.Dispose();
+            return result;
+        }
     }
 }

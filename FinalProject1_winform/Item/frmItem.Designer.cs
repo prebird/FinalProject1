@@ -40,15 +40,11 @@ namespace FinalProject1_winform
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.입력초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbo_YN = new FinalProject1_winform.ComboBox_gudi();
-            this.cbo_OutHouse = new FinalProject1_winform.ComboBox_gudi();
-            this.cbo_InHouse = new FinalProject1_winform.ComboBox_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.cbo_ItemCategory = new FinalProject1_winform.ComboBox_gudi();
             this.txt_ItemName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.label_gudi9 = new FinalProject1_winform.Label_gudi();
             this.btn_Excel = new FinalProject1_winform.Button_gudi();
@@ -68,9 +64,9 @@ namespace FinalProject1_winform
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dgv_Item);
-            this.panel2.Location = new System.Drawing.Point(18, 201);
+            this.panel2.Location = new System.Drawing.Point(18, 166);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 398);
+            this.panel2.Size = new System.Drawing.Size(1057, 433);
             this.panel2.TabIndex = 8;
             // 
             // dgv_Item
@@ -95,13 +91,13 @@ namespace FinalProject1_winform
             this.dgv_Item.Name = "dgv_Item";
             this.dgv_Item.RowHeadersVisible = false;
             this.dgv_Item.RowTemplate.Height = 23;
-            this.dgv_Item.Size = new System.Drawing.Size(1057, 398);
+            this.dgv_Item.Size = new System.Drawing.Size(1057, 433);
             this.dgv_Item.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(19, 176);
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(19, 139);
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
             this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,19 +111,15 @@ namespace FinalProject1_winform
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.panel1.ContextMenuStrip = this.contextMenuStrip2;
             this.panel1.Controls.Add(this.cbo_YN);
-            this.panel1.Controls.Add(this.cbo_OutHouse);
-            this.panel1.Controls.Add(this.cbo_InHouse);
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.cbo_ItemCategory);
             this.panel1.Controls.Add(this.txt_ItemName);
             this.panel1.Controls.Add(this.label_gudi6);
             this.panel1.Controls.Add(this.label_gudi4);
-            this.panel1.Controls.Add(this.label_gudi3);
-            this.panel1.Controls.Add(this.label_gudi2);
             this.panel1.Controls.Add(this.label_gudi1);
             this.panel1.Location = new System.Drawing.Point(18, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 127);
+            this.panel1.Size = new System.Drawing.Size(1057, 96);
             this.panel1.TabIndex = 6;
             // 
             // contextMenuStrip2
@@ -148,28 +140,10 @@ namespace FinalProject1_winform
             // 
             this.cbo_YN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_YN.FormattingEnabled = true;
-            this.cbo_YN.Location = new System.Drawing.Point(736, 29);
+            this.cbo_YN.Location = new System.Drawing.Point(662, 32);
             this.cbo_YN.Name = "cbo_YN";
             this.cbo_YN.Size = new System.Drawing.Size(161, 24);
             this.cbo_YN.TabIndex = 19;
-            // 
-            // cbo_OutHouse
-            // 
-            this.cbo_OutHouse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_OutHouse.FormattingEnabled = true;
-            this.cbo_OutHouse.Location = new System.Drawing.Point(441, 70);
-            this.cbo_OutHouse.Name = "cbo_OutHouse";
-            this.cbo_OutHouse.Size = new System.Drawing.Size(161, 24);
-            this.cbo_OutHouse.TabIndex = 18;
-            // 
-            // cbo_InHouse
-            // 
-            this.cbo_InHouse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_InHouse.FormattingEnabled = true;
-            this.cbo_InHouse.Location = new System.Drawing.Point(441, 29);
-            this.cbo_InHouse.Name = "cbo_InHouse";
-            this.cbo_InHouse.Size = new System.Drawing.Size(161, 24);
-            this.cbo_InHouse.TabIndex = 17;
             // 
             // btn_Search
             // 
@@ -181,7 +155,7 @@ namespace FinalProject1_winform
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
             this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(946, 90);
+            this.btn_Search.Location = new System.Drawing.Point(946, 54);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(93, 25);
             this.btn_Search.TabIndex = 16;
@@ -193,7 +167,7 @@ namespace FinalProject1_winform
             // 
             this.cbo_ItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_ItemCategory.FormattingEnabled = true;
-            this.cbo_ItemCategory.Location = new System.Drawing.Point(125, 29);
+            this.cbo_ItemCategory.Location = new System.Drawing.Point(124, 32);
             this.cbo_ItemCategory.Name = "cbo_ItemCategory";
             this.cbo_ItemCategory.Size = new System.Drawing.Size(158, 24);
             this.cbo_ItemCategory.TabIndex = 7;
@@ -202,7 +176,7 @@ namespace FinalProject1_winform
             // 
             this.txt_ItemName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_ItemName.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_ItemName.Location = new System.Drawing.Point(125, 70);
+            this.txt_ItemName.Location = new System.Drawing.Point(384, 32);
             this.txt_ItemName.Name = "txt_ItemName";
             this.txt_ItemName.Size = new System.Drawing.Size(158, 25);
             this.txt_ItemName.TabIndex = 6;
@@ -211,7 +185,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi6.AutoSize = true;
             this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.Location = new System.Drawing.Point(643, 33);
+            this.label_gudi6.Location = new System.Drawing.Point(569, 36);
             this.label_gudi6.Name = "label_gudi6";
             this.label_gudi6.Size = new System.Drawing.Size(72, 17);
             this.label_gudi6.TabIndex = 5;
@@ -221,37 +195,17 @@ namespace FinalProject1_winform
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(51, 33);
+            this.label_gudi4.Location = new System.Drawing.Point(50, 36);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(72, 17);
             this.label_gudi4.TabIndex = 3;
             this.label_gudi4.Text = "■ 품목유형";
             // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(348, 74);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi3.TabIndex = 2;
-            this.label_gudi3.Text = "■ 출고창고";
-            // 
-            // label_gudi2
-            // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(348, 33);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi2.TabIndex = 1;
-            this.label_gudi2.Text = "■ 입고창고";
-            // 
             // label_gudi1
             // 
             this.label_gudi1.AutoSize = true;
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi1.Location = new System.Drawing.Point(51, 74);
+            this.label_gudi1.Location = new System.Drawing.Point(310, 36);
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(60, 17);
             this.label_gudi1.TabIndex = 0;
@@ -261,7 +215,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi9.AutoSize = true;
             this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi9.Location = new System.Drawing.Point(50, 176);
+            this.label_gudi9.Location = new System.Drawing.Point(50, 139);
             this.label_gudi9.Name = "label_gudi9";
             this.label_gudi9.Size = new System.Drawing.Size(60, 17);
             this.label_gudi9.TabIndex = 9;
@@ -277,7 +231,7 @@ namespace FinalProject1_winform
             this.btn_Excel.ForeColor = System.Drawing.Color.Black;
             this.btn_Excel.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.Image")));
             this.btn_Excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Excel.Location = new System.Drawing.Point(1015, 172);
+            this.btn_Excel.Location = new System.Drawing.Point(1015, 135);
             this.btn_Excel.Name = "btn_Excel";
             this.btn_Excel.Size = new System.Drawing.Size(60, 25);
             this.btn_Excel.TabIndex = 10;
@@ -295,7 +249,7 @@ namespace FinalProject1_winform
             this.btn_Update.ForeColor = System.Drawing.Color.Black;
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
             this.btn_Update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Update.Location = new System.Drawing.Point(883, 172);
+            this.btn_Update.Location = new System.Drawing.Point(883, 135);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(60, 25);
             this.btn_Update.TabIndex = 11;
@@ -314,7 +268,7 @@ namespace FinalProject1_winform
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
             this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(949, 172);
+            this.btn_Delete.Location = new System.Drawing.Point(949, 135);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(60, 25);
             this.btn_Delete.TabIndex = 12;
@@ -333,7 +287,7 @@ namespace FinalProject1_winform
             this.btn_Insert.ForeColor = System.Drawing.Color.Black;
             this.btn_Insert.Image = ((System.Drawing.Image)(resources.GetObject("btn_Insert.Image")));
             this.btn_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Insert.Location = new System.Drawing.Point(817, 172);
+            this.btn_Insert.Location = new System.Drawing.Point(817, 135);
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(60, 25);
             this.btn_Insert.TabIndex = 13;
@@ -376,15 +330,11 @@ namespace FinalProject1_winform
         private DGV_gudi dgv_Item;
         private Label_gudi label_gudi6;
         private Label_gudi label_gudi4;
-        private Label_gudi label_gudi3;
-        private Label_gudi label_gudi2;
         private Label_gudi label_gudi1;
         private Controls.TextBox_gudi txt_ItemName;
         private ComboBox_gudi cbo_ItemCategory;
         private Button_gudi btn_Search;
         private ComboBox_gudi cbo_YN;
-        private ComboBox_gudi cbo_OutHouse;
-        private ComboBox_gudi cbo_InHouse;
         private Label_gudi label_gudi9;
         private Button_gudi btn_Excel;
         private Button_gudi btn_Update;
