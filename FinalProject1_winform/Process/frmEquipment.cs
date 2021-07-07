@@ -20,9 +20,6 @@ namespace FinalProject1_winform
 
         private void frmEquipment_Load(object sender, EventArgs e)
         {
-            //수정일시 설비 데이터 바인딩
-
-
             //수정자 정보 바인딩
 
 
@@ -45,6 +42,23 @@ namespace FinalProject1_winform
             //창고 바인딩
 
 
+
+            //수정일시 설비 데이터 바인딩
+            if (this.Owner is frmEquipmentList frm)
+            {
+                EquipmentVO equipment = frm.Equipment;
+                cboProcessCode.Text = equipment.ProcessName;
+                cboEquipmentGroupCode.Text = equipment.EquipmentGroupName;
+                txtCode.Text = equipment.EquipmentCode.Split('-').Last();
+                txtName.Text = equipment.EquipmentName;
+                cboInputLocation.Text = equipment.FromLocationID;
+                cboOutputLocation.Text = equipment.ToLocationID;
+                if (equipment.IsActive == "Y")
+                    cboIsUse.SelectedIndex = 1;
+                else if (equipment.IsActive == "N")
+                    cboIsUse.SelectedIndex = 2;
+                txtSpecific.Text = equipment.Status;
+            }
 
         }
 
@@ -92,7 +106,8 @@ namespace FinalProject1_winform
             if(result)
             {
                 MessageBox.Show("성공적으로 저장되었습니다.");
-                return;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {

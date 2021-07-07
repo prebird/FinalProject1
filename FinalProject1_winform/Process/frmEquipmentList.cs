@@ -16,6 +16,8 @@ namespace FinalProject1_winform
         List<ProcessVO> processes;
         List<EquipmentGroupVO> equipmentGroups;
         EquipmentVO equipment = new EquipmentVO();
+        public string INS_EMP { get; set; }
+        public EquipmentVO Equipment { get { return equipment; } }
 
         public frmEquipmentList()
         {
@@ -42,10 +44,9 @@ namespace FinalProject1_winform
 
 
             processEquipmentService service = new processEquipmentService();
-            equipments = service.GetAllEquipment();
             processes = service.GetAllProcess();
             equipmentGroups = service.GetAllEquipmentGroup();
-            dgvList.DataSource = new BindingList<EquipmentVO>(equipments);
+            LoadData();
 
             ProcessVO process = new ProcessVO();
             process.ProcessCode = "";
@@ -59,6 +60,14 @@ namespace FinalProject1_winform
 
             CommonUtil.ComboBinding<ProcessVO>(cboProcess, processes, "ProcessName", "ProcessCode");
             CommonUtil.ComboBinding<EquipmentGroupVO>(cboEquipmentGroup, equipmentGroups, "EquipmentGroupName", "EquipmentGroupCode");
+        }
+
+        private void LoadData()
+        {
+            processEquipmentService service = new processEquipmentService();
+            equipments = service.GetAllEquipment();
+            dgvList.DataSource = null;
+            dgvList.DataSource = new BindingList<EquipmentVO>(equipments);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -101,12 +110,59 @@ namespace FinalProject1_winform
         {
             equipment.ProcessCode = dgvList["ProcessCode", e.RowIndex].Value.ToString();
             equipment.EquipmentGroupCode = dgvList["EquipmentGroupCode", e.RowIndex].Value.ToString();
+            equipment.EquipmentCode = dgvList["EquipmentCode", e.RowIndex].Value.ToString();
+            equipment.ProcessName = dgvList["ProcessName", e.RowIndex].Value.ToString();
+            equipment.EquipmentGroupName = dgvList["EquipmentGroupName", e.RowIndex].Value.ToString();
+            equipment.EquipmentName = dgvList["EquipmentName", e.RowIndex].Value.ToString();
+            equipment.IsActive = dgvList["IsActive", e.RowIndex].Value.ToString();
+            equipment.FromLocationID = dgvList["FromLocationID", e.RowIndex].Value.ToString();
+            equipment.ToLocationID = dgvList["ToLocationID", e.RowIndex].Value.ToString();
+            equipment.Status = dgvList["Status", e.RowIndex].Value.ToString();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             frmEquipment frm = new frmEquipment();
             frm.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(equipment.EquipmentCode))
+            {
+                MessageBox.Show("설비를 먼저 선택해 주세요");
+                return;
+            }
+
+            frmEquipment frm = new frmEquipment();
+            frm.Owner = this;
+            if(frm.ShowDialog()==DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(equipment.EquipmentCode))
+            {
+                MessageBox.Show("설비를 먼저 선택해 주세요");
+                return;
+            }
+
+            processEquipmentService service = new processEquipmentService();
+            bool result = service.DeleteEquipment(equipment.EquipmentCode.Split('-').Last());
+            if(result)
+            {
+                MessageBox.Show("성공적으로 삭제되었습니다.");
+                LoadData();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("삭제 실패");
+                return;
+            }
         }
     }
 }

@@ -10,7 +10,8 @@ namespace FinalProject1_VO
     {
         public string ProcessCode { get; set; }
         public string ProcessName { get; set; }
-        public char IsActive { get; set; }
+        public string IsActive { get; set; }
         public string INS_EMP { get; set; }
+        public string INS_DATE { get; set; }
     }
 }

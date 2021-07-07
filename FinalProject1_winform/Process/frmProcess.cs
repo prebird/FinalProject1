@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject1_winform.Process
+namespace FinalProject1_winform
 {
     public partial class frmProcess : Form
     {
@@ -24,6 +24,16 @@ namespace FinalProject1_winform.Process
             //유저 정보 txt박스에 저장
 
             //수정일 경우 데이터 자동 바인딩
+            if(this.Owner is frmProcessList frm)
+            {
+                ProcessVO process = frm.Process;
+                txtCode.Text = process.ProcessCode;
+                txtName.Text = process.ProcessName;
+                if (process.IsActive == "Y")
+                    cboIsUse.SelectedIndex = 1;
+                else if (process.IsActive == "N")
+                    cboIsUse.SelectedIndex = 2;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -46,11 +56,11 @@ namespace FinalProject1_winform.Process
             process.INS_EMP = txtIns_Emp.Text;
             if(cboIsUse.SelectedIndex == 1)
             {
-                process.IsActive = 'Y';
+                process.IsActive = "Y";
             }
             else if(cboIsUse.SelectedIndex == 2)
             {
-                process.IsActive = 'N';
+                process.IsActive = "N";
             }
 
             processEquipmentService service = new processEquipmentService();
@@ -59,7 +69,7 @@ namespace FinalProject1_winform.Process
             if(result)
             {
                 MessageBox.Show("저장이 성공적으로 이루어졌습니다.");
-                btnSave.DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else

@@ -117,5 +117,61 @@ namespace FinalProject1_DAC
                 return Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader());
             }
         }
+
+        public bool DeleteEquipment(string equipmentCode)
+        {
+            string sql = "update Equipment set Deleted = 1 where EquipmentCode = @EquipmentCode";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@EquipmentCode", equipmentCode);
+
+                int affectRow = cmd.ExecuteNonQuery();
+
+                return (affectRow > 0);
+            }
+        }
+
+        public List<ProcessVO> GetAllProcessInfo()
+        {
+            string sql = "select ProcessCode, ProcessName, IsActive, INS_EMP, CONVERT(nvarchar,INS_DATE,120) INS_DATE from ProcessInfo where Deleted = 0";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<ProcessVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public bool DeleteProcess(string processCode)
+        {
+            string sql = "update ProcessInfo set Deleted = 1 where ProcessCode = @ProcessCode";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@ProcessCode", processCode);
+
+                int affectRow = cmd.ExecuteNonQuery();
+
+                return (affectRow > 0);
+            }
+        }
+
+        public List<EquipmentGroupVO> GetEquipmentGroupInfo()
+        {
+            string sql = "select EquipmentGroupCode, EquipmentGroupName, IsActive, INS_EMP, CONVERT(nvarchar,INS_DATE,120) INS_DATE from EquipmentGroup where Deleted = 0";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<EquipmentGroupVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public bool DeleteEquipmentGroup(string equipmentgroupCode)
+        {
+            string sql = "update EquipmentGroup set Deleted = 1 where EquipmentGroupCode = @EquipmentGroupCode";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@EquipmentGroupCode", equipmentgroupCode);
+
+                int affectRow = cmd.ExecuteNonQuery();
+                return (affectRow > 0);
+            }
+        }
     }
 }
