@@ -10,6 +10,7 @@ namespace FinalProject1_winform
 {
     public class FactoryService
     {
+        //전체 조회
         public List<FactoryVO> GetAllFactory()
         {
             FactoryDAC dac = new FactoryDAC();
@@ -17,6 +18,25 @@ namespace FinalProject1_winform
             dac.Dispose();
             return list;
         }
+
+        //등록/수정
+        public bool InsUpFactory(FactoryVO info)
+        {
+            FactoryDAC dac = new FactoryDAC();
+            bool result = dac.InsUpFactory(info);
+            dac.Dispose();
+
+            return result;
+        }
+
+       public List<CompanyVO> GetCompanyCode(string companyid)
+        {
+            FactoryDAC dac = new FactoryDAC();
+            List<CompanyVO> list = dac.GetCompanyCode(companyid);
+            dac.Dispose();
+            return list;
+        }
+
 
     }
 }

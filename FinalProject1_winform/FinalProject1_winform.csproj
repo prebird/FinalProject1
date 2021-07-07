@@ -134,7 +134,6 @@
     <Compile Include="CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="FactoryService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +181,7 @@
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
     <Compile Include="CommonUtil\Helper.cs" />
     <Compile Include="CommonUtil\LoggingUtility.cs" />
+    <Compile Include="Service\FactoryService.cs" />
     <Compile Include="Service\ItemService.cs" />
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
