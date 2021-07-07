@@ -128,12 +128,13 @@
     <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
       <DependentUpon>frmProductPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomTabControl.cs">
+    <Compile Include="Controls\CustomTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomTabControl.Designer.cs">
+    <Compile Include="Controls\CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="FactoryService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,24 +159,6 @@
     <Compile Include="Main\frmSmallMenuIns.Designer.cs">
       <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
     </Compile>
-    <Compile Include="MPS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MPS.Designer.cs">
-      <DependentUpon>MPS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Process\frmEquipmentGroupList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Process\frmEquipmentGroupList.Designer.cs">
-      <DependentUpon>frmEquipmentGroupList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Process\frmProcessList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Process\frmProcessList.Designer.cs">
-      <DependentUpon>frmProcessList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Service\BomService.cs" />
     <Compile Include="BOR\frmBORInsert.cs">
       <SubType>Form</SubType>
@@ -193,7 +176,6 @@
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
     <Compile Include="CommonUtil\Helper.cs" />
     <Compile Include="CommonUtil\LoggingUtility.cs" />
-    <Compile Include="Service\FactoryService.cs" />
     <Compile Include="Service\ItemService.cs" />
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
@@ -570,9 +552,6 @@
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MPS.resx">
-      <DependentUpon>MPS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="POP\frmPOPMachine.resx">
       <DependentUpon>frmPOPMachine.cs</DependentUpon>
     </EmbeddedResource>
@@ -590,12 +569,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="POP\frmReleaseList.resx">
       <DependentUpon>frmReleaseList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Process\frmEquipmentGroupList.resx">
-      <DependentUpon>frmEquipmentGroupList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Process\frmProcessList.resx">
-      <DependentUpon>frmProcessList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
