@@ -17,7 +17,7 @@ namespace FinalProject1_winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEquipmentGroupList());
+            Application.Run(new frmBORInsert());
         }
     }
 }
