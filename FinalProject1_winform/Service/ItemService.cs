@@ -31,10 +31,10 @@ namespace FinalProject1_winform
         }
 
         // 부분 조회 
-        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string inHouse, string outHouse, string yn) // 부분 인수
+        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string yn) // 부분 인수
         {
             ItemDAC dac = new ItemDAC();
-            List<ItemVO> list = dac.GetPartialItem(itemCategory, itemName, inHouse, outHouse, yn); // 부분 인수
+            List<ItemVO> list = dac.GetPartialItem(itemCategory, itemName, yn); // 부분 인수
             dac.Dispose();
 
             return list;

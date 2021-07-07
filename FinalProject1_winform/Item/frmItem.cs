@@ -47,7 +47,7 @@ namespace FinalProject1_winform
 
         public void ResetCtrl()
         {
-            cbo_ItemCategory.Text = cbo_InHouse.Text = cbo_OutHouse.Text = cbo_YN.Text = txt_ItemName.Text = null;
+            cbo_ItemCategory.Text = cbo_YN.Text = txt_ItemName.Text = null;
         }
 
         private void 입력초기화ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,16 +113,14 @@ namespace FinalProject1_winform
         {
             string itemCategory = cbo_ItemCategory.Text;
             string itemName = txt_ItemName.Text;
-            string inHouse = cbo_InHouse.Text;
-            string outHouse = cbo_OutHouse.Text;
             string itemYN = cbo_YN.Text;
 
             ItemService service = new ItemService();
-            list = service.GetPartialItem(itemCategory, itemName, inHouse, outHouse, itemYN);
+            list = service.GetPartialItem(itemCategory, itemName, itemYN);
             dgv_Item.DataSource = list;
 
             // 입력후 컨트롤 초기화
-            cbo_ItemCategory.Text = txt_ItemName.Text = cbo_InHouse.Text = cbo_OutHouse.Text = cbo_YN.Text = null;
+            cbo_ItemCategory.Text = txt_ItemName.Text = cbo_YN.Text = null;
         }
     }
 }

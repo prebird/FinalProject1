@@ -29,14 +29,14 @@ namespace FinalProject1_DAC
         }
 
         // 정전개
-        public List<BomVO> BOMForward(int JaitemID)
+        public List<BomVO> BOMForward(int MoItemID)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = conn;
                 cmd.CommandText = "SP_BOMForward";
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@BOM_JaItemID", JaitemID);
+                cmd.Parameters.AddWithValue("@BOM_MoItemID", MoItemID);
 
                 return Helper.DataReaderMapToList<BomVO>(cmd.ExecuteReader());
             }
@@ -89,6 +89,19 @@ namespace FinalProject1_DAC
 
                 int iRowAffect = cmd.ExecuteNonQuery();
                 return iRowAffect > 0;
+            }
+        }
+
+        public bool DeleteJaItem(int JaID)
+        {
+            string sql = "delete from bom where BOM_JaItemID = @BOM_JaItemID";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@BOM_JaItemID", JaID);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
             }
         }
 

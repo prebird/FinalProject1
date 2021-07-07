@@ -53,14 +53,14 @@ namespace FinalProject1_winform
             return result;
         }
 
-        //업체코드 전체 조회
-       // public List<CompanyVO> GetAllCompany()
-       // {
-       //     CompanyDAC dac = new CompanyDAC();
-       //     List<CompanyVO> list = dac.GetAllCompany();
-       //     dac.Dispose();
-       //     return list;
-       // }
+       //업체코드 전체 조회
+        public List<CompanyVO> GetAllCompanyCode()
+        {
+            CompanyDAC dac = new CompanyDAC();
+            List<CompanyVO> list = dac.GetAllCompanyCode();
+            dac.Dispose();
+            return list;
+        }
 
     }
 }

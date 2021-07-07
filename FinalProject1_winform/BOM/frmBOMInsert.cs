@@ -68,7 +68,7 @@ namespace FinalProject1_winform
             if (category == "완제품")
             {
                 var ItemList = (from item in AllList
-                                where item.Item_Category == "반제품" || item.Item_Category == "원자재"
+                                where item.Item_Category == "반제품"
                                 select item).ToList();
                 dgv_JaItemAll.DataSource = ItemList;
             }
@@ -88,7 +88,7 @@ namespace FinalProject1_winform
             dgv_JaItemMine.DataSource = bom;
         }
 
-
+        //BOM 등록
         private void btn_Insert_Click(object sender, EventArgs e)
         {
             // 유효성 체크
@@ -110,14 +110,47 @@ namespace FinalProject1_winform
                 bool result = service.InsertBOM(bom);
 
                 if (result)
+                {
                     MessageBox.Show("정보가 입력 되었습니다.");
+                    SelectMyJaItem(Convert.ToInt32(lblItemID.Text));
+                }
                 else
                     MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             // 등록 후 입력 내용 초기화
             txt_UseQTY.Text = cbo_YN.Text = cbo_DemandYN.Text = txt_Content.Text = null;
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv_JaItemMine.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("삭제할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int JaID = Convert.ToInt32(dgv_JaItemMine.SelectedRows[0].Cells[1].Value);
+
+            if (MessageBox.Show("삭제 하시겠습니까", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+                BOMService service = new BOMService();
+                bool result = service.DeleteJaItem(JaID);
+
+                if (result)
+                {
+                    MessageBox.Show("삭제 되었습니다.");
+                    SelectMyJaItem(Convert.ToInt32(lblItemID.Text));
+                }
+                else
+                    MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+        }
+        // 선택 초기화
+        private void frmBOMInsert_Shown(object sender, EventArgs e)
+        {
+            dgv_JaItemAll.ClearSelection();
+            dgv_JaItemMine.ClearSelection();
         }
     }
 }
