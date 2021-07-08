@@ -31,11 +31,13 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBORInsert));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtPriority = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtTactTime = new FinalProject1_winform.Controls.TextBox_gudi();
             this.btnSave = new FinalProject1_winform.Button_gudi();
             this.btnCancel = new FinalProject1_winform.Button_gudi();
+            this.txtPriority = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtTactTime = new FinalProject1_winform.Controls.TextBox_gudi();
             this.txtStatus = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi8 = new FinalProject1_winform.Label_gudi();
             this.cboIsUse = new FinalProject1_winform.ComboBox_gudi();
@@ -48,11 +50,9 @@ namespace FinalProject1_winform
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.cboItem = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +66,26 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(474, 37);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 3;
+            this.pictureBox_gudi1.TabStop = false;
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
+            this.label_gudi1.TabIndex = 2;
+            this.label_gudi1.Text = "BOR";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -76,26 +96,6 @@ namespace FinalProject1_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(474, 65);
             this.panel2.TabIndex = 31;
-            // 
-            // txtPriority
-            // 
-            this.txtPriority.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtPriority.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtPriority.Location = new System.Drawing.Point(87, 164);
-            this.txtPriority.Name = "txtPriority";
-            this.txtPriority.Size = new System.Drawing.Size(125, 25);
-            this.txtPriority.TabIndex = 33;
-            this.txtPriority.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
-            // 
-            // txtTactTime
-            // 
-            this.txtTactTime.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtTactTime.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtTactTime.Location = new System.Drawing.Point(327, 113);
-            this.txtTactTime.Name = "txtTactTime";
-            this.txtTactTime.Size = new System.Drawing.Size(125, 25);
-            this.txtTactTime.TabIndex = 32;
-            this.txtTactTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
             // 
             // btnSave
             // 
@@ -130,6 +130,26 @@ namespace FinalProject1_winform
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "닫기";
             this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // txtPriority
+            // 
+            this.txtPriority.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtPriority.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtPriority.Location = new System.Drawing.Point(87, 164);
+            this.txtPriority.Name = "txtPriority";
+            this.txtPriority.Size = new System.Drawing.Size(125, 25);
+            this.txtPriority.TabIndex = 33;
+            this.txtPriority.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
+            // 
+            // txtTactTime
+            // 
+            this.txtTactTime.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtTactTime.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtTactTime.Location = new System.Drawing.Point(327, 113);
+            this.txtTactTime.Name = "txtTactTime";
+            this.txtTactTime.Size = new System.Drawing.Size(125, 25);
+            this.txtTactTime.TabIndex = 32;
+            this.txtTactTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
             // 
             // txtStatus
             // 
@@ -259,26 +279,6 @@ namespace FinalProject1_winform
             this.label_gudi2.TabIndex = 17;
             this.label_gudi2.Text = "■ 품목명";
             // 
-            // pictureBox_gudi1
-            // 
-            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
-            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi1.TabIndex = 3;
-            this.pictureBox_gudi1.TabStop = false;
-            // 
-            // label_gudi1
-            // 
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
-            this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "BOR";
-            // 
             // frmBORInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -310,8 +310,8 @@ namespace FinalProject1_winform
             this.Text = "frmBORInsert";
             this.Load += new System.EventHandler(this.frmBORInsert_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

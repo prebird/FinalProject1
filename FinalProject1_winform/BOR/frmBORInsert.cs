@@ -1,4 +1,5 @@
 ﻿using FinalProject1_VO;
+using FinalProject1_winform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,7 @@ namespace FinalProject1_winform
 
             //수정일 경우 바인딩
 
+            //수정자 정보
         }
 
         private void txtTactTime_KeyPress(object sender, KeyPressEventArgs e)
@@ -87,7 +89,19 @@ namespace FinalProject1_winform
             bor.ProcessCode = cboProcess.SelectedValue.ToString();
             bor.EquipmentCode = cboEquipment.SelectedValue.ToString();
             bor.Tact_Time = Convert.ToInt32(txtTactTime.Text);
+            bor.Priority = Convert.ToInt32(txtPriority.Text);
+            if(cboIsUse.SelectedIndex == 0 || cboIsUse.SelectedIndex == 1)
+            {
+                bor.IsUse = "Y";
+            }
+            else if(cboIsUse.SelectedIndex == 2)
+            {
+                bor.IsUse = "N";
+            }
+            //bor.INS_EMP
+            bor.Remark = txtStatus.Text;
 
+            
         }
     }
 }
