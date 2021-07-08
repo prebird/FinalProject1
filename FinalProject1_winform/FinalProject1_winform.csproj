@@ -180,6 +180,7 @@
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
     <Compile Include="CommonUtil\Helper.cs" />
     <Compile Include="CommonUtil\LoggingUtility.cs" />
+    <Compile Include="Service\FactoryService.cs" />
     <Compile Include="Service\ItemService.cs" />
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
@@ -468,6 +469,7 @@
       <DependentUpon>frmStockList.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Service\processEquipmentService.cs" />
     <Compile Include="ShiftService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
