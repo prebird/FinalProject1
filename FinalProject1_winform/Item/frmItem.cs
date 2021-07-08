@@ -31,8 +31,8 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_Item, "입고창고", "Item_InHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "출고창고", "Item_OutHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "바코드", "Item_Barcode", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_Content", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
-            CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_ID");
+            CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_YN", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
+            CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_Content");
 
             LoadData();
         }
@@ -47,7 +47,7 @@ namespace FinalProject1_winform
 
         public void ResetCtrl()
         {
-            cbo_ItemType.Text = cbo_InHouse.Text = cbo_OutHouse.Text = cbo_YN.Text = txt_ItemName.Text = null;
+            cbo_ItemCategory.Text = cbo_YN.Text = txt_ItemName.Text = null;
         }
 
         private void 입력초기화ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +107,20 @@ namespace FinalProject1_winform
                 else
                     MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string itemCategory = cbo_ItemCategory.Text;
+            string itemName = txt_ItemName.Text;
+            string itemYN = cbo_YN.Text;
+
+            ItemService service = new ItemService();
+            list = service.GetPartialItem(itemCategory, itemName, itemYN);
+            dgv_Item.DataSource = list;
+
+            // 입력후 컨트롤 초기화
+            cbo_ItemCategory.Text = txt_ItemName.Text = cbo_YN.Text = null;
         }
     }
 }

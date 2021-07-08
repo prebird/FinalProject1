@@ -33,5 +33,34 @@ namespace FinalProject1_winform
             dac.Dispose();
             return list;
         }
+
+        //등록 및 수정
+        public bool InsUpCompany(CompanyVO info)
+        {
+            CompanyDAC dac = new CompanyDAC();
+            bool result = dac.InsUpCompany(info);
+            dac.Dispose();
+
+            return result;
+        }
+
+        //삭제
+        public bool DeleteCompany(int companyid)
+        {
+            CompanyDAC dac = new CompanyDAC();
+            bool result = dac.DeleteCompany(companyid);
+            dac.Dispose();
+            return result;
+        }
+
+       //업체코드 전체 조회
+        public List<CompanyVO> GetAllCompanyCode()
+        {
+            CompanyDAC dac = new CompanyDAC();
+            List<CompanyVO> list = dac.GetAllCompanyCode();
+            dac.Dispose();
+            return list;
+        }
+
     }
 }

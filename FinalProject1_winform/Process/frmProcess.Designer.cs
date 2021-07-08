@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.Process
+namespace FinalProject1_winform
 {
     partial class frmProcess
     {
@@ -126,6 +126,7 @@ namespace FinalProject1_winform.Process
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtIns_Date
             // 
@@ -283,6 +284,7 @@ namespace FinalProject1_winform.Process
             this.Name = "frmProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmProcess";
+            this.Load += new System.EventHandler(this.frmProcess_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);

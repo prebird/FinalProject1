@@ -34,7 +34,9 @@ namespace FinalProject1_DAC
             string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
                          Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
                          from Item where Item_Deleted = 0
-                         order by Item_Category desc";
+                         order by (case Item_Category when '완제품' then 0
+                                                      when '반제품' then 1
+                                                      when '원자재' then 2 end)";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -63,7 +65,7 @@ namespace FinalProject1_DAC
         }
 
         // 부분 조회
-        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string inHouse, string outHouse, string yn)
+        public List<ItemVO> GetPartialItem(string itemCategory, string itemName, string yn)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
@@ -77,12 +79,6 @@ namespace FinalProject1_DAC
             if (!string.IsNullOrEmpty(itemName))
                 sb.Append(" and Item_Name like @Item_Name");
 
-            if (!string.IsNullOrEmpty(inHouse))
-                sb.Append(" and Item_InHouse like @Item_InHouse");
-
-            if (!string.IsNullOrEmpty(outHouse))
-                sb.Append(" and Item_OutHouse = @Item_OutHouse");
-
             if (!string.IsNullOrEmpty(yn))
                 sb.Append(" and Item_YN = @Item_YN");
 
@@ -90,10 +86,9 @@ namespace FinalProject1_DAC
             {
                 cmd.Connection = conn;
                 cmd.CommandText = sb.ToString();
-                cmd.Parameters.AddWithValue("@Item_Category", "%" + itemCategory + "%");
+                cmd.Parameters.AddWithValue("@Item_Category", itemCategory);
                 cmd.Parameters.AddWithValue("@Item_Name", "%" + itemName + "%");
-                cmd.Parameters.AddWithValue("@Item_InHouse", "%" + inHouse + "%");
-                cmd.Parameters.AddWithValue("@Item_OutHouse", outHouse);
+
                 cmd.Parameters.AddWithValue("@Item_YN", yn);
 
                 return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
@@ -103,7 +98,7 @@ namespace FinalProject1_DAC
         // 등록, 수정
         public bool InsertUpdateItem(ItemVO item)
         {
-            string sql = @"SP_InsertUpdateCompany";
+            string sql = @"SP_InsUpItem";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -141,8 +136,5 @@ namespace FinalProject1_DAC
                 return (iCnt > 0);
             }
         }
-
-
-
     }
 }

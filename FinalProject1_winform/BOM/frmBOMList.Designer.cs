@@ -39,13 +39,11 @@ namespace FinalProject1_winform
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Forward = new FinalProject1_winform.DGV_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbo_ItemYN = new FinalProject1_winform.ComboBox_gudi();
-            this.cbo_ItemType = new FinalProject1_winform.ComboBox_gudi();
+            this.cbo_YN = new FinalProject1_winform.ComboBox_gudi();
+            this.cbo_ItemCategory = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.dtp_ItemDate = new FinalProject1_winform.DateTimePicker_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
-            this.cbo_ItemName = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txt_ItemName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,8 +53,6 @@ namespace FinalProject1_winform
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.label_gudi7 = new FinalProject1_winform.Label_gudi();
-            this.btn_Update = new FinalProject1_winform.Button_gudi();
-            this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.btn_Insert = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Forward)).BeginInit();
@@ -108,13 +104,11 @@ namespace FinalProject1_winform
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.cbo_ItemYN);
-            this.panel1.Controls.Add(this.cbo_ItemType);
+            this.panel1.Controls.Add(this.cbo_YN);
+            this.panel1.Controls.Add(this.cbo_ItemCategory);
             this.panel1.Controls.Add(this.label_gudi6);
-            this.panel1.Controls.Add(this.dtp_ItemDate);
-            this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Controls.Add(this.label_gudi5);
-            this.panel1.Controls.Add(this.cbo_ItemName);
+            this.panel1.Controls.Add(this.txt_ItemName);
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.label_gudi4);
             this.panel1.Location = new System.Drawing.Point(18, 12);
@@ -122,74 +116,55 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(1057, 67);
             this.panel1.TabIndex = 24;
             // 
-            // cbo_ItemYN
+            // cbo_YN
             // 
-            this.cbo_ItemYN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_ItemYN.FormattingEnabled = true;
-            this.cbo_ItemYN.Items.AddRange(new object[] {
+            this.cbo_YN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbo_YN.FormattingEnabled = true;
+            this.cbo_YN.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbo_ItemYN.Location = new System.Drawing.Point(791, 23);
-            this.cbo_ItemYN.Name = "cbo_ItemYN";
-            this.cbo_ItemYN.Size = new System.Drawing.Size(134, 24);
-            this.cbo_ItemYN.TabIndex = 41;
+            this.cbo_YN.Location = new System.Drawing.Point(571, 24);
+            this.cbo_YN.Name = "cbo_YN";
+            this.cbo_YN.Size = new System.Drawing.Size(134, 24);
+            this.cbo_YN.TabIndex = 41;
             // 
-            // cbo_ItemType
+            // cbo_ItemCategory
             // 
-            this.cbo_ItemType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_ItemType.FormattingEnabled = true;
-            this.cbo_ItemType.Location = new System.Drawing.Point(343, 23);
-            this.cbo_ItemType.Name = "cbo_ItemType";
-            this.cbo_ItemType.Size = new System.Drawing.Size(134, 24);
-            this.cbo_ItemType.TabIndex = 40;
+            this.cbo_ItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbo_ItemCategory.FormattingEnabled = true;
+            this.cbo_ItemCategory.Location = new System.Drawing.Point(104, 23);
+            this.cbo_ItemCategory.Name = "cbo_ItemCategory";
+            this.cbo_ItemCategory.Size = new System.Drawing.Size(134, 24);
+            this.cbo_ItemCategory.TabIndex = 40;
             // 
             // label_gudi6
             // 
             this.label_gudi6.AutoSize = true;
             this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.Location = new System.Drawing.Point(261, 27);
+            this.label_gudi6.Location = new System.Drawing.Point(22, 27);
             this.label_gudi6.Name = "label_gudi6";
             this.label_gudi6.Size = new System.Drawing.Size(76, 17);
             this.label_gudi6.TabIndex = 39;
             this.label_gudi6.Text = "■ 품목 유형";
             // 
-            // dtp_ItemDate
-            // 
-            this.dtp_ItemDate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dtp_ItemDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ItemDate.Location = new System.Drawing.Point(110, 23);
-            this.dtp_ItemDate.Name = "dtp_ItemDate";
-            this.dtp_ItemDate.Size = new System.Drawing.Size(134, 25);
-            this.dtp_ItemDate.TabIndex = 38;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(28, 27);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(76, 17);
-            this.label_gudi3.TabIndex = 37;
-            this.label_gudi3.Text = "■ 기준 일자";
-            // 
             // label_gudi5
             // 
             this.label_gudi5.AutoSize = true;
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.Location = new System.Drawing.Point(713, 27);
+            this.label_gudi5.Location = new System.Drawing.Point(493, 28);
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(72, 17);
             this.label_gudi5.TabIndex = 35;
             this.label_gudi5.Text = "■ 사용유무";
             // 
-            // cbo_ItemName
+            // txt_ItemName
             // 
-            this.cbo_ItemName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_ItemName.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.cbo_ItemName.Location = new System.Drawing.Point(559, 23);
-            this.cbo_ItemName.Name = "cbo_ItemName";
-            this.cbo_ItemName.Size = new System.Drawing.Size(135, 25);
-            this.cbo_ItemName.TabIndex = 33;
+            this.txt_ItemName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txt_ItemName.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txt_ItemName.Location = new System.Drawing.Point(330, 23);
+            this.txt_ItemName.Name = "txt_ItemName";
+            this.txt_ItemName.Size = new System.Drawing.Size(135, 25);
+            this.txt_ItemName.TabIndex = 33;
             // 
             // btn_Search
             // 
@@ -202,18 +177,19 @@ namespace FinalProject1_winform
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
             this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(958, 23);
+            this.btn_Search.Location = new System.Drawing.Point(943, 23);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(78, 25);
             this.btn_Search.TabIndex = 10;
             this.btn_Search.Text = "조회";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label_gudi4
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(492, 27);
+            this.label_gudi4.Location = new System.Drawing.Point(263, 27);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(60, 17);
             this.label_gudi4.TabIndex = 31;
@@ -322,42 +298,6 @@ namespace FinalProject1_winform
             this.label_gudi7.TabIndex = 31;
             this.label_gudi7.Text = "품목 정보";
             // 
-            // btn_Update
-            // 
-            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.btn_Update.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.btn_Update.FlatAppearance.BorderSize = 0;
-            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Update.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_Update.ForeColor = System.Drawing.Color.Black;
-            this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
-            this.btn_Update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Update.Location = new System.Drawing.Point(950, 94);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(60, 25);
-            this.btn_Update.TabIndex = 32;
-            this.btn_Update.Text = "수정";
-            this.btn_Update.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Update.UseVisualStyleBackColor = false;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.btn_Delete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.btn_Delete.FlatAppearance.BorderSize = 0;
-            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Delete.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
-            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(1016, 94);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(60, 25);
-            this.btn_Delete.TabIndex = 33;
-            this.btn_Delete.Text = "삭제";
-            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Delete.UseVisualStyleBackColor = false;
-            // 
             // btn_Insert
             // 
             this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
@@ -368,20 +308,19 @@ namespace FinalProject1_winform
             this.btn_Insert.ForeColor = System.Drawing.Color.Black;
             this.btn_Insert.Image = ((System.Drawing.Image)(resources.GetObject("btn_Insert.Image")));
             this.btn_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Insert.Location = new System.Drawing.Point(853, 94);
+            this.btn_Insert.Location = new System.Drawing.Point(961, 94);
             this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(91, 25);
+            this.btn_Insert.Size = new System.Drawing.Size(114, 25);
             this.btn_Insert.TabIndex = 34;
-            this.btn_Insert.Text = "BOM등록";
+            this.btn_Insert.Text = "BOM 신규등록";
             this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Insert.UseVisualStyleBackColor = false;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
             // frmBOMList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
-            this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Insert);
             this.Controls.Add(this.label_gudi7);
             this.Controls.Add(this.label_gudi1);
@@ -415,18 +354,14 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi1;
         private DGV_gudi dgv_Forward;
         private DGV_gudi dgv_Reverse;
-        private DateTimePicker_gudi dtp_ItemDate;
-        private Label_gudi label_gudi3;
         private Label_gudi label_gudi5;
-        private Controls.TextBox_gudi cbo_ItemName;
+        private Controls.TextBox_gudi txt_ItemName;
         private Label_gudi label_gudi4;
         private Label_gudi label_gudi6;
-        private ComboBox_gudi cbo_ItemType;
+        private ComboBox_gudi cbo_ItemCategory;
         private DGV_gudi dgv_Item;
         private Label_gudi label_gudi7;
-        private Button_gudi btn_Update;
-        private Button_gudi btn_Delete;
         private Button_gudi btn_Insert;
-        private ComboBox_gudi cbo_ItemYN;
+        private ComboBox_gudi cbo_YN;
     }
 }

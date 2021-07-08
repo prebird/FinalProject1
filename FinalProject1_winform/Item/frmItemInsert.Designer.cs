@@ -194,7 +194,7 @@ namespace FinalProject1_winform
             // 
             this.txt_Name.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_Name.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_Name.Location = new System.Drawing.Point(107, 96);
+            this.txt_Name.Location = new System.Drawing.Point(107, 130);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(198, 25);
             this.txt_Name.TabIndex = 36;
@@ -203,7 +203,7 @@ namespace FinalProject1_winform
             // 
             this.txt_Code.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_Code.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_Code.Location = new System.Drawing.Point(107, 59);
+            this.txt_Code.Location = new System.Drawing.Point(107, 93);
             this.txt_Code.Name = "txt_Code";
             this.txt_Code.Size = new System.Drawing.Size(198, 25);
             this.txt_Code.TabIndex = 35;
@@ -212,7 +212,11 @@ namespace FinalProject1_winform
             // 
             this.cbo_Category.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_Category.FormattingEnabled = true;
-            this.cbo_Category.Location = new System.Drawing.Point(107, 133);
+            this.cbo_Category.Items.AddRange(new object[] {
+            "원자재",
+            "반제품",
+            "완제품"});
+            this.cbo_Category.Location = new System.Drawing.Point(107, 58);
             this.cbo_Category.Name = "cbo_Category";
             this.cbo_Category.Size = new System.Drawing.Size(198, 24);
             this.cbo_Category.TabIndex = 33;
@@ -328,7 +332,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi5.AutoSize = true;
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.Location = new System.Drawing.Point(21, 98);
+            this.label_gudi5.Location = new System.Drawing.Point(21, 132);
             this.label_gudi5.Name = "label_gudi5";
             this.label_gudi5.Size = new System.Drawing.Size(60, 17);
             this.label_gudi5.TabIndex = 11;
@@ -338,7 +342,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(21, 62);
+            this.label_gudi4.Location = new System.Drawing.Point(21, 96);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(72, 17);
             this.label_gudi4.TabIndex = 10;
@@ -348,7 +352,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(21, 134);
+            this.label_gudi2.Location = new System.Drawing.Point(21, 59);
             this.label_gudi2.Name = "label_gudi2";
             this.label_gudi2.Size = new System.Drawing.Size(72, 17);
             this.label_gudi2.TabIndex = 9;
@@ -407,7 +411,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmItemInsert";
-            this.Text = "frmProductInsert";
+            this.Text = "frmItemInsert";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);

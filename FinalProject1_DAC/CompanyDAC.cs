@@ -43,7 +43,18 @@ namespace FinalProject1_DAC
         //전체 업체정보 조회
         public List<CompanyVO> GetAllCompany()
         {
-            string sql = @"select * from Company";
+            string sql = @"select * from Company where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
+            }
+        }
+
+        //업체 코드 조회
+        public List<CompanyVO> GetAllCompanyCode()
+        {
+            string sql = @"select company_code from company where deleted = 0";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -80,13 +91,48 @@ namespace FinalProject1_DAC
             }
         }
 
-        //업체정보 등록
+        //업체정보 등록 및 수정
 
-        //public bool InsertCompany(CompanyVO list)
-        //{
-        //    string sql = @""
+        public bool InsUpCompany(CompanyVO info)
+        {
+            string sql = @"SP_InsUpCompany";
 
-        //}
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@company_id", info.company_id);
+                cmd.Parameters.AddWithValue("@company_code", info.company_code);
+                cmd.Parameters.AddWithValue("@company_name", info.company_name);
+                cmd.Parameters.AddWithValue("@company_type", info.company_type);
+                cmd.Parameters.AddWithValue("@company_ceo", info.company_ceo);
+                cmd.Parameters.AddWithValue("@company_crum", info.company_crum);
+                cmd.Parameters.AddWithValue("@company_email", info.company_email);
+                cmd.Parameters.AddWithValue("@company_phone", info.company_phone);
+                cmd.Parameters.AddWithValue("@company_yn", info.company_yn);
+                cmd.Parameters.AddWithValue("@company_uadmin", info.company_uadmin);
+                cmd.Parameters.AddWithValue("@company_udate", info.company_udate);
+                cmd.Parameters.AddWithValue("@company_comment", info.company_comment);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
+        }
+
+        //업체 삭제
+        public bool DeleteCompany(int companyid)
+        {
+            string sql = "update Company set deleted = 1 where company_id = @company_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@company_id", companyid);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
+            }
+        }
+
 
     }
 }

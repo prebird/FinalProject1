@@ -8,6 +8,7 @@ namespace FinalProject1_VO
 {
     public class CompanyVO
     {
+        public int company_id { get; set; }
         public string company_code { get; set; }
         public string company_name { get; set; }
         public string company_type { get; set; }

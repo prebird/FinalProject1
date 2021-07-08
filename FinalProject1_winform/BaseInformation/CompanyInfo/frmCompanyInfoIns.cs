@@ -13,31 +13,85 @@ namespace FinalProject1_winform
 {
     public partial class frmCompanyInfoIns : Form
     {
-        CompanyVO list = new CompanyVO();
+        CompanyVO Companylist = new CompanyVO();
 
         public frmCompanyInfoIns()
         {
             InitializeComponent();
         }
 
+        public frmCompanyInfoIns(CompanyVO company)
+        {
+            InitializeComponent();
+
+            Companylist = company;
+
+            txtCompanyCode.Text = company.company_code;
+            txtCompanyName.Text = company.company_name;
+            cboCompanyType.Text = company.company_type;
+            txtCompanyCeo.Text = company.company_ceo;
+            txtCompanyCrum.Text = company.company_crum;
+            txtCompanyEmail.Text = company.company_email;
+            txtCompanyPhone.Text = company.company_phone;
+            cboCompanyYN.Text = company.company_yn;
+            txtCompanyUadmin.Text = company.company_uadmin;
+            dtpDateTime.Value = DateTime.Now;
+            txtCompanyComment.Text = company.company_comment;
+
+        }
+
+
         private void btnSave_Click(object sender, EventArgs e)
-        {    
-            list.company_code = txtCompanyCode.Text;
-            list.company_name = txtCompanyName.Text;
-            list.company_type = cboCompanyType.Text;
-            list.company_ceo = txtCompanyCeo.Text;
-            list.company_crum = txtCompanyCrum.Text;
-            list.company_email = txtCompanyEmail.Text;
-            list.company_phone = txtCompanyPhone.Text;
-            list.company_yn = cboCompanyYN.Text;
-            list.company_uadmin = txtCompanyUadmin.Text;
-            list.company_udate = dtpDateTime.Text;
-            list.company_comment = txtCompanyComment.Text;
+        {
+            if (MessageBox.Show(btnSave.Text + "하시겠습니까", "입력 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                int itemID = (Companylist != null) ? Companylist.company_id : 0;
+
+                CompanyVO companyinfo = new CompanyVO()
+                {
+                    company_id = Companylist.company_id,
+                    company_code = txtCompanyCode.Text,
+                    company_name = txtCompanyName.Text,
+                    company_type = cboCompanyType.Text,
+                    company_ceo = txtCompanyCeo.Text,
+                    company_crum = txtCompanyCrum.Text,
+                    company_email = txtCompanyEmail.Text,
+                    company_phone = txtCompanyPhone.Text,
+                    company_yn = cboCompanyYN.Text,
+                    company_uadmin = txtCompanyUadmin.Text,
+                    company_udate = dtpDateTime.Text,
+                    company_comment = txtCompanyComment.Text
+                };
+
+                Companylist = companyinfo;
+               
+                CompanyService service = new CompanyService();
+                bool result = service.InsUpCompany(Companylist);
+
+                if (result)
+                {
+                    MessageBox.Show("업체 정보가 입력 되었습니다.");
+                }
+
+                else
+                {
+                    MessageBox.Show("처리중 오류가 발생하였습니다.");
+                }
+
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void frmCompanyInfoIns_Load(object sender, EventArgs e)
         {
             dtpDateTime.Value = DateTime.Now;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
