@@ -21,7 +21,6 @@ namespace FinalProject1_winform
 
         private void frmBORList_Load(object sender, EventArgs e)
         {
-            BorService service = new BorService();
             processEquipmentService service1 = new processEquipmentService();
             List<ProcessVO> processes = service1.GetAllProcess();
             ProcessVO item = new ProcessVO();
@@ -30,21 +29,23 @@ namespace FinalProject1_winform
             processes.Insert(0, item);
             CommonUtil.ComboBinding<ProcessVO>(cboProcess, processes, "ProcessName", "ProcessCode");
 
-            
+            BorService service = new BorService();
             bors = service.GetAllBOR();
 
             CommonUtil.SetInitGridView(dgvList);
             CommonUtil.AddGridTextColumn(dgvList, "번호", "BORID", align: DataGridViewContentAlignment.MiddleCenter, colWidth: 60);
-            CommonUtil.AddGridTextColumn(dgvList, "공정명", "Item_Name", colWidth: 90);
-            CommonUtil.AddGridTextColumn(dgvList, "설비군명", "ProcessName");
-            CommonUtil.AddGridTextColumn(dgvList, "설비코드", "EquipmentName", colWidth: 120);
-            CommonUtil.AddGridTextColumn(dgvList, "설비명", "EquipmentCode");
-            CommonUtil.AddGridTextColumn(dgvList, "특이 사항", "Tact_Time", colWidth: 150);
-            CommonUtil.AddGridTextColumn(dgvList, "소진 창고", "Priority");
-            CommonUtil.AddGridTextColumn(dgvList, "양품 창고", "IsUse");
-            CommonUtil.AddGridTextColumn(dgvList, "사용", "INS_EMP", colWidth: 60);
-            CommonUtil.AddGridTextColumn(dgvList, "수정자", "INS_DATE");
-            CommonUtil.AddGridTextColumn(dgvList, "수정 일시", "Remark", colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgvList, "품목명", "Item_Name");
+            CommonUtil.AddGridTextColumn(dgvList, "공정명", "ProcessName");
+            CommonUtil.AddGridTextColumn(dgvList, "설비명", "EquipmentName");
+            CommonUtil.AddGridTextColumn(dgvList, "설비 코드", "EquipmentCode", colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgvList, "Tact-Time", "Tact_Time", align: DataGridViewContentAlignment.MiddleRight);
+            CommonUtil.AddGridTextColumn(dgvList, "우선순위", "Priority", align: DataGridViewContentAlignment.MiddleRight, colWidth: 80);
+            CommonUtil.AddGridTextColumn(dgvList, "사용", "IsUse", align: DataGridViewContentAlignment.MiddleCenter, colWidth: 60);
+            CommonUtil.AddGridTextColumn(dgvList, "수정자", "INS_EMP");
+            CommonUtil.AddGridTextColumn(dgvList, "수정 일시", "INS_DATE", colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgvList, "특이 사항", "Remark", colWidth: 150);
+
+            dgvList.DataSource = new BindingList<BORVO>(bors);
         }
     }
 }
