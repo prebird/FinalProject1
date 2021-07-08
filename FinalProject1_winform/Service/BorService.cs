@@ -18,5 +18,14 @@ namespace FinalProject1_winform.Service
 
             return result;
         }
+
+        public List<BORVO> GetAllBOR()
+        {
+            BORDAC dac = new BORDAC();
+            List<BORVO> list = dac.GetAllBOR();
+            dac.Dispose();
+
+            return list;
+        }
     }
 }

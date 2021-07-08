@@ -130,6 +130,7 @@ namespace FinalProject1_winform
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "닫기";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtPriority
             // 

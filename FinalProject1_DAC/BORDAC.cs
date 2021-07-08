@@ -33,7 +33,7 @@ namespace FinalProject1_DAC
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@P_BORID", bor.BORID);
                 cmd.Parameters.AddWithValue("@P_ItemCode", bor.ItemCode);
-                cmd.Parameters.AddWithValue("@P_ItemName", bor.ItemName);
+                cmd.Parameters.AddWithValue("@P_ItemName", bor.Item_Name);
                 cmd.Parameters.AddWithValue("@P_ProcessCode", bor.ProcessCode);
                 cmd.Parameters.AddWithValue("@P_EquipmentCode", bor.EquipmentCode);
                 cmd.Parameters.AddWithValue("@P_Tact_Time", bor.Tact_Time);
@@ -45,6 +45,19 @@ namespace FinalProject1_DAC
                 int affecRow = cmd.ExecuteNonQuery();
 
                 return (affecRow > 0);
+            }
+        }
+
+        public List<BORVO> GetAllBOR()
+        {
+            string sql = @"select BORID, Item_Name, ProcessName, EquipmentName, EquipmentCode, Tact_Time, [Priority], IsUse, B.INS_EMP, CONVERT(nvarchar,B.INS_DATE,120) INS_DATE, Remark
+                                  from BOR B inner join Item I on B.ItemID = I.Item_ID
+                                             inner join ProcessInfo P on B.ProcessID = P.ProcessID
+                                             inner join Equipment E on E.EquipmentID = B.EquipmentID ";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<BORVO>(cmd.ExecuteReader());
             }
         }
     }

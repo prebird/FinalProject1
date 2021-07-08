@@ -85,7 +85,7 @@ namespace FinalProject1_winform
                 bor.ItemID = 0;
             }
             bor.ItemCode = cboItem.SelectedValue.ToString();
-            bor.ItemName = cboItem.Text;
+            bor.Item_Name = cboItem.Text;
             bor.ProcessCode = cboProcess.SelectedValue.ToString();
             bor.EquipmentCode = cboEquipment.SelectedValue.ToString();
             bor.Tact_Time = Convert.ToInt32(txtTactTime.Text);
@@ -98,7 +98,7 @@ namespace FinalProject1_winform
             {
                 bor.IsUse = "N";
             }
-            //bor.INS_EMP
+            //bor.INS_EMP = "홍길동";
             bor.Remark = txtStatus.Text;
 
             BorService service = new BorService();
@@ -115,6 +115,12 @@ namespace FinalProject1_winform
                 this.DialogResult = DialogResult.Cancel;
                 return;
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
