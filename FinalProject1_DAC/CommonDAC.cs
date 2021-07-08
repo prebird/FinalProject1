@@ -52,5 +52,27 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
             }
         }
 
+        public List<CommonCodeVO> GetCommonCode(string common_type)
+        {
+            string sql = "select common_id, common_type, common_value, common_name from CommonCode where common_type = @common_type";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@common_type", common_type);
+                return Helper.DataReaderMapToList<CommonCodeVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // Equipmet 테이블 열 다 가져오기
+        public List<EquipmentVO1> GetAllEquipment()
+        {
+            string sql = @"select EquipmentID, ProcessID, EquipmentGroupID, EquipmentCode, EquipmentName, Status, Deleted, INS_EMP, INS_DATE, IsActive, FromLocationID, ToLocationID from Equipment";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                SqlDataReader dr = cmd.ExecuteReader();
+                List<EquipmentVO1> list = Helper.DataReaderMapToList<EquipmentVO1>(dr);
+                return list;
+            }
+        }
+
     }
 }

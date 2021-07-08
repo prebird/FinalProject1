@@ -58,6 +58,7 @@
     <Compile Include="ProcessEquipmentDAC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShiftDAC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

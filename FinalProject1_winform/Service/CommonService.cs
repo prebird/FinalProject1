@@ -22,5 +22,11 @@ namespace FinalProject1_winform
             CommonDAC dac = new CommonDAC();
             return dac.GetAllMenu();
         }
+
+        public List<CommonCodeVO> GetCommonCode(string common_type)
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommonCode(common_type);
+        }
     }
 }
