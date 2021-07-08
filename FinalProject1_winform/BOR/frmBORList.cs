@@ -33,7 +33,18 @@ namespace FinalProject1_winform
             
             bors = service.GetAllBOR();
 
-            
+            CommonUtil.SetInitGridView(dgvList);
+            CommonUtil.AddGridTextColumn(dgvList, "번호", "BORID", align: DataGridViewContentAlignment.MiddleCenter, colWidth: 60);
+            CommonUtil.AddGridTextColumn(dgvList, "공정명", "Item_Name", colWidth: 90);
+            CommonUtil.AddGridTextColumn(dgvList, "설비군명", "ProcessName");
+            CommonUtil.AddGridTextColumn(dgvList, "설비코드", "EquipmentName", colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgvList, "설비명", "EquipmentCode");
+            CommonUtil.AddGridTextColumn(dgvList, "특이 사항", "Tact_Time", colWidth: 150);
+            CommonUtil.AddGridTextColumn(dgvList, "소진 창고", "Priority");
+            CommonUtil.AddGridTextColumn(dgvList, "양품 창고", "IsUse");
+            CommonUtil.AddGridTextColumn(dgvList, "사용", "INS_EMP", colWidth: 60);
+            CommonUtil.AddGridTextColumn(dgvList, "수정자", "INS_DATE");
+            CommonUtil.AddGridTextColumn(dgvList, "수정 일시", "Remark", colWidth: 120);
         }
     }
 }
