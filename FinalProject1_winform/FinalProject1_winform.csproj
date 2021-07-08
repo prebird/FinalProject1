@@ -145,6 +145,12 @@
     <Compile Include="frmBigMenuIns.Designer.cs">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShift.Designer.cs">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSmallMenuIns.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +462,7 @@
       <DependentUpon>frmStockList.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\MenuService.cs" />
+    <Compile Include="ShiftService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,6 +540,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBigMenuIns.resx">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShift.resx">
+      <DependentUpon>frmShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSmallMenuIns.resx">
       <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
@@ -643,6 +653,7 @@
     <Folder Include="InStock\" />
     <Folder Include="MRP\" />
     <Folder Include="ReStock\" />
+    <Folder Include="Shift\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\2214523.png">
