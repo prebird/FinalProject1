@@ -9,11 +9,13 @@ using FinalProject1_VO;
 
 namespace FinalProject1_DAC
 {
-    public class ProcessEquipmentDAC : IDisposable
+    public class ShiftDAC : IDisposable
     {
         SqlConnection conn;
 
-        public ProcessEquipmentDAC()
+        //private static LoggingUtility log = new LoggingUtility("FinalProject1_DAC ItemDAC", Level.Info, 30);
+        //public static LoggingUtility Log { get { return log; } }
+        public ShiftDAC()
         {
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FinalProject1"].ConnectionString);
             conn.Open();
@@ -24,18 +26,18 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
-        // Equipmet 다 가져오기
-        public List<EquipmentVO> GetAllEquipment()
+        public List<ShiftVO> GetAllShifts()
         {
-            string sql = @"select EquipmentID, ProcessID, EquipmentGroupID, EquipmentCode, EquipmentName, Status, Deleted, INS_EMP, INS_DATE, IsActive, FromLocationID, ToLocationID from Equipment";
+            string sql = "select Shift_ID, m_ID, shift_stime, shift_etime, shift_edate, shift_sdate, shift_yn, shift_uadmin, shift_udate, shift_comment from Shift";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                SqlDataReader dr = cmd.ExecuteReader();
-                List<EquipmentVO> list = Helper.DataReaderMapToList<EquipmentVO>(dr);
+                List<ShiftVO> list = Helper.DataReaderMapToList<ShiftVO>(cmd.ExecuteReader());
                 return list;
             }
-        }
 
+
+        }
+    
 
     }
 }
