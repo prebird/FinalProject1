@@ -101,7 +101,20 @@ namespace FinalProject1_winform
             //bor.INS_EMP
             bor.Remark = txtStatus.Text;
 
-            
+            BorService service = new BorService();
+            bool result = service.SaveBOR(bor);
+            if(result)
+            {
+                MessageBox.Show("성공적으로 저장했습니다.");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("저장 실패");
+                this.DialogResult = DialogResult.Cancel;
+                return;
+            }
         }
     }
 }
