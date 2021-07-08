@@ -33,23 +33,23 @@ namespace FinalProject1_winform
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.cboItem = new FinalProject1_winform.ComboBox_gudi();
-            this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.cboEquipment = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.cboIsUse = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
-            this.txtStatus = new FinalProject1_winform.Controls.TextBox_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new FinalProject1_winform.Button_gudi();
             this.btnCancel = new FinalProject1_winform.Button_gudi();
-            this.txtTactTime = new FinalProject1_winform.Controls.TextBox_gudi();
             this.txtPriority = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtTactTime = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtStatus = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
+            this.cboIsUse = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
+            this.cboEquipment = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
+            this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.cboItem = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -86,133 +86,6 @@ namespace FinalProject1_winform
             this.label_gudi1.TabIndex = 2;
             this.label_gudi1.Text = "BOR";
             // 
-            // label_gudi2
-            // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi2.Location = new System.Drawing.Point(12, 64);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi2.TabIndex = 17;
-            this.label_gudi2.Text = "■ 품목명";
-            // 
-            // cboItem
-            // 
-            this.cboItem.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboItem.FormattingEnabled = true;
-            this.cboItem.Location = new System.Drawing.Point(87, 61);
-            this.cboItem.Name = "cboItem";
-            this.cboItem.Size = new System.Drawing.Size(125, 24);
-            this.cboItem.TabIndex = 18;
-            // 
-            // cboProcess
-            // 
-            this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Location = new System.Drawing.Point(327, 61);
-            this.cboProcess.Name = "cboProcess";
-            this.cboProcess.Size = new System.Drawing.Size(125, 24);
-            this.cboProcess.TabIndex = 20;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi3.Location = new System.Drawing.Point(237, 64);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(48, 17);
-            this.label_gudi3.TabIndex = 19;
-            this.label_gudi3.Text = "■ 공정";
-            // 
-            // label_gudi4
-            // 
-            this.label_gudi4.AutoSize = true;
-            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi4.Location = new System.Drawing.Point(237, 117);
-            this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(81, 17);
-            this.label_gudi4.TabIndex = 21;
-            this.label_gudi4.Text = "■ Tact Time";
-            // 
-            // cboEquipment
-            // 
-            this.cboEquipment.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboEquipment.FormattingEnabled = true;
-            this.cboEquipment.Location = new System.Drawing.Point(87, 114);
-            this.cboEquipment.Name = "cboEquipment";
-            this.cboEquipment.Size = new System.Drawing.Size(125, 24);
-            this.cboEquipment.TabIndex = 24;
-            // 
-            // label_gudi5
-            // 
-            this.label_gudi5.AutoSize = true;
-            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_gudi5.Location = new System.Drawing.Point(12, 117);
-            this.label_gudi5.Name = "label_gudi5";
-            this.label_gudi5.Size = new System.Drawing.Size(48, 17);
-            this.label_gudi5.TabIndex = 23;
-            this.label_gudi5.Text = "■ 설비";
-            // 
-            // label_gudi6
-            // 
-            this.label_gudi6.AutoSize = true;
-            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_gudi6.Location = new System.Drawing.Point(12, 167);
-            this.label_gudi6.Name = "label_gudi6";
-            this.label_gudi6.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi6.TabIndex = 25;
-            this.label_gudi6.Text = "■ 우선순위";
-            // 
-            // cboIsUse
-            // 
-            this.cboIsUse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboIsUse.FormattingEnabled = true;
-            this.cboIsUse.Items.AddRange(new object[] {
-            "선택",
-            "사용",
-            "사용 안함"});
-            this.cboIsUse.Location = new System.Drawing.Point(327, 167);
-            this.cboIsUse.Name = "cboIsUse";
-            this.cboIsUse.Size = new System.Drawing.Size(125, 24);
-            this.cboIsUse.TabIndex = 28;
-            // 
-            // label_gudi7
-            // 
-            this.label_gudi7.AutoSize = true;
-            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_gudi7.Location = new System.Drawing.Point(237, 170);
-            this.label_gudi7.Name = "label_gudi7";
-            this.label_gudi7.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi7.TabIndex = 27;
-            this.label_gudi7.Text = "■ 사용유무";
-            // 
-            // label_gudi8
-            // 
-            this.label_gudi8.AutoSize = true;
-            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_gudi8.Location = new System.Drawing.Point(12, 218);
-            this.label_gudi8.Name = "label_gudi8";
-            this.label_gudi8.Size = new System.Drawing.Size(48, 17);
-            this.label_gudi8.TabIndex = 29;
-            this.label_gudi8.Text = "■ 비고";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtStatus.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtStatus.Location = new System.Drawing.Point(87, 218);
-            this.txtStatus.Multiline = true;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(365, 97);
-            this.txtStatus.TabIndex = 30;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -239,6 +112,7 @@ namespace FinalProject1_winform
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -256,6 +130,17 @@ namespace FinalProject1_winform
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "닫기";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txtPriority
+            // 
+            this.txtPriority.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtPriority.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtPriority.Location = new System.Drawing.Point(87, 164);
+            this.txtPriority.Name = "txtPriority";
+            this.txtPriority.Size = new System.Drawing.Size(125, 25);
+            this.txtPriority.TabIndex = 33;
+            this.txtPriority.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
             // 
             // txtTactTime
             // 
@@ -267,15 +152,133 @@ namespace FinalProject1_winform
             this.txtTactTime.TabIndex = 32;
             this.txtTactTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
             // 
-            // txtPriority
+            // txtStatus
             // 
-            this.txtPriority.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtPriority.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtPriority.Location = new System.Drawing.Point(87, 164);
-            this.txtPriority.Name = "txtPriority";
-            this.txtPriority.Size = new System.Drawing.Size(125, 25);
-            this.txtPriority.TabIndex = 33;
-            this.txtPriority.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTactTime_KeyPress);
+            this.txtStatus.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtStatus.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtStatus.Location = new System.Drawing.Point(87, 218);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(365, 97);
+            this.txtStatus.TabIndex = 30;
+            // 
+            // label_gudi8
+            // 
+            this.label_gudi8.AutoSize = true;
+            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_gudi8.Location = new System.Drawing.Point(12, 218);
+            this.label_gudi8.Name = "label_gudi8";
+            this.label_gudi8.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi8.TabIndex = 29;
+            this.label_gudi8.Text = "■ 비고";
+            // 
+            // cboIsUse
+            // 
+            this.cboIsUse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboIsUse.FormattingEnabled = true;
+            this.cboIsUse.Items.AddRange(new object[] {
+            "선택",
+            "사용",
+            "사용 안함"});
+            this.cboIsUse.Location = new System.Drawing.Point(327, 167);
+            this.cboIsUse.Name = "cboIsUse";
+            this.cboIsUse.Size = new System.Drawing.Size(125, 24);
+            this.cboIsUse.TabIndex = 28;
+            // 
+            // label_gudi7
+            // 
+            this.label_gudi7.AutoSize = true;
+            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_gudi7.Location = new System.Drawing.Point(237, 170);
+            this.label_gudi7.Name = "label_gudi7";
+            this.label_gudi7.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi7.TabIndex = 27;
+            this.label_gudi7.Text = "■ 사용유무";
+            // 
+            // label_gudi6
+            // 
+            this.label_gudi6.AutoSize = true;
+            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_gudi6.Location = new System.Drawing.Point(12, 167);
+            this.label_gudi6.Name = "label_gudi6";
+            this.label_gudi6.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi6.TabIndex = 25;
+            this.label_gudi6.Text = "■ 우선순위";
+            // 
+            // cboEquipment
+            // 
+            this.cboEquipment.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboEquipment.FormattingEnabled = true;
+            this.cboEquipment.Location = new System.Drawing.Point(87, 114);
+            this.cboEquipment.Name = "cboEquipment";
+            this.cboEquipment.Size = new System.Drawing.Size(125, 24);
+            this.cboEquipment.TabIndex = 24;
+            // 
+            // label_gudi5
+            // 
+            this.label_gudi5.AutoSize = true;
+            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi5.Location = new System.Drawing.Point(12, 117);
+            this.label_gudi5.Name = "label_gudi5";
+            this.label_gudi5.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi5.TabIndex = 23;
+            this.label_gudi5.Text = "■ 설비";
+            // 
+            // label_gudi4
+            // 
+            this.label_gudi4.AutoSize = true;
+            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi4.Location = new System.Drawing.Point(237, 117);
+            this.label_gudi4.Name = "label_gudi4";
+            this.label_gudi4.Size = new System.Drawing.Size(81, 17);
+            this.label_gudi4.TabIndex = 21;
+            this.label_gudi4.Text = "■ Tact Time";
+            // 
+            // cboProcess
+            // 
+            this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboProcess.FormattingEnabled = true;
+            this.cboProcess.Location = new System.Drawing.Point(327, 61);
+            this.cboProcess.Name = "cboProcess";
+            this.cboProcess.Size = new System.Drawing.Size(125, 24);
+            this.cboProcess.TabIndex = 20;
+            this.cboProcess.SelectedIndexChanged += new System.EventHandler(this.cboProcess_SelectedIndexChanged);
+            // 
+            // label_gudi3
+            // 
+            this.label_gudi3.AutoSize = true;
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi3.Location = new System.Drawing.Point(237, 64);
+            this.label_gudi3.Name = "label_gudi3";
+            this.label_gudi3.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi3.TabIndex = 19;
+            this.label_gudi3.Text = "■ 공정";
+            // 
+            // cboItem
+            // 
+            this.cboItem.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboItem.FormattingEnabled = true;
+            this.cboItem.Location = new System.Drawing.Point(87, 61);
+            this.cboItem.Name = "cboItem";
+            this.cboItem.Size = new System.Drawing.Size(125, 24);
+            this.cboItem.TabIndex = 18;
+            // 
+            // label_gudi2
+            // 
+            this.label_gudi2.AutoSize = true;
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label_gudi2.Location = new System.Drawing.Point(12, 64);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi2.TabIndex = 17;
+            this.label_gudi2.Text = "■ 품목명";
             // 
             // frmBORInsert
             // 

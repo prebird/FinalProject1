@@ -411,6 +411,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmItemInsert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmItemInsert";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

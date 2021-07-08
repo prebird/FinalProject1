@@ -140,17 +140,23 @@
     <Compile Include="frmCommonCode.Designer.cs">
       <DependentUpon>frmCommonCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\frmMainMgt.cs">
+    <Compile Include="frmShift.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\frmMainMgt.Designer.cs">
-      <DependentUpon>frmMainMgt.cs</DependentUpon>
+    <Compile Include="frmShift.Designer.cs">
+      <DependentUpon>frmShift.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\frmBigMenuIns.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main\frmBigMenuIns.Designer.cs">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmMainMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmMainMgt.Designer.cs">
+      <DependentUpon>frmMainMgt.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\frmSmallMenuIns.cs">
       <SubType>Form</SubType>
@@ -187,6 +193,7 @@
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
     <Compile Include="CommonUtil\Helper.cs" />
     <Compile Include="CommonUtil\LoggingUtility.cs" />
+    <Compile Include="Service\BorService.cs" />
     <Compile Include="Service\FactoryService.cs" />
     <Compile Include="Service\ItemService.cs" />
     <Compile Include="Main\frmMain.cs">
@@ -477,6 +484,7 @@
     </Compile>
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\processEquipmentService.cs" />
+    <Compile Include="ShiftService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -552,17 +560,20 @@
     <EmbeddedResource Include="frmCommonCode.resx">
       <DependentUpon>frmCommonCode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\frmMainMgt.resx">
-      <DependentUpon>frmMainMgt.cs</DependentUpon>
+    <EmbeddedResource Include="frmShift.resx">
+      <DependentUpon>frmShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmBigMenuIns.resx">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\frmSmallMenuIns.resx">
-      <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMainMgt.resx">
+      <DependentUpon>frmMainMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmSmallMenuIns.resx">
+      <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POP\frmPOPMachine.resx">
       <DependentUpon>frmPOPMachine.cs</DependentUpon>
@@ -673,6 +684,7 @@
     <Folder Include="InStock\" />
     <Folder Include="MRP\" />
     <Folder Include="ReStock\" />
+    <Folder Include="Shift\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\2214523.png">
@@ -728,6 +740,26 @@
     <None Include="Resources\gray_dot %283%29.png" />
     <None Include="Resources\close-red.png" />
     <None Include="Resources\close-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FinalProject1_DAC\FinalProject1_DAC.csproj">
