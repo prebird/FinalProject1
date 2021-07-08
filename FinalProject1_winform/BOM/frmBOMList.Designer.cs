@@ -132,6 +132,10 @@ namespace FinalProject1_winform
             // 
             this.cbo_ItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_ItemCategory.FormattingEnabled = true;
+            this.cbo_ItemCategory.Items.AddRange(new object[] {
+            "완제품",
+            "반제품",
+            "원자재"});
             this.cbo_ItemCategory.Location = new System.Drawing.Point(104, 23);
             this.cbo_ItemCategory.Name = "cbo_ItemCategory";
             this.cbo_ItemCategory.Size = new System.Drawing.Size(134, 24);

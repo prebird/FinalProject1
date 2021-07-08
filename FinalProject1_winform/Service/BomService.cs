@@ -20,7 +20,7 @@ namespace FinalProject1_winform
         public List<BomVO> BOMReverse(int JaItemID)
         {
             BomDAC dac = new BomDAC();
-            List<BomVO> result = dac.BOMForward(JaItemID);
+            List<BomVO> result = dac.BOMReverse(JaItemID);
             dac.Dispose();
             return result;
         }

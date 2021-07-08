@@ -70,14 +70,20 @@ namespace FinalProject1_winform
         private void dgv_Item_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int itemID = Convert.ToInt32(dgv_Item.SelectedRows[0].Cells[0].Value);
+            string Category = dgv_Item.SelectedRows[0].Cells[1].Value.ToString();
 
-            BOMService service1 = new BOMService();
-            dgv_Forward.DataSource = null;
-            dgv_Forward.DataSource = service1.BOMForward(itemID);
-
-            BOMService service2 = new BOMService();
-            dgv_Reverse.DataSource = null;
-            dgv_Reverse.DataSource = service2.BOMReverse(itemID);
+            if (Category.Equals("완제품") || Category.Equals("반제품"))
+            {
+                BOMService service1 = new BOMService();
+                dgv_Forward.DataSource = service1.BOMForward(itemID);
+                dgv_Reverse.DataSource = null;
+            }
+            else
+            {
+                BOMService service2 = new BOMService();
+                dgv_Reverse.DataSource = service2.BOMReverse(itemID);
+                dgv_Forward.DataSource = null;
+            }
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
