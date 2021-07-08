@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BomVO.cs" />
+    <Compile Include="BORVO.cs" />
     <Compile Include="CompanyVO.cs" />
     <Compile Include="EquipmentGroupVO.cs" />
     <Compile Include="EquipmentVO.cs" />

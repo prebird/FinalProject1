@@ -108,5 +108,14 @@ namespace FinalProject1_winform
 
             return result;
         }
+
+        public List<EquipmentVO> GetSpecficEquipment(string processCode)
+        {
+            ProcessEquipmentDAC dac = new ProcessEquipmentDAC();
+            List<EquipmentVO> list = dac.GetSpecficEquipment(processCode);
+            dac.Dispose();
+
+            return list;
+        }
     }
 }
