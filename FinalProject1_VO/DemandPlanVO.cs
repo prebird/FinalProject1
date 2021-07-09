@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace FinalProject1_VO
 {
-    class DemandPlanVO
+    public class DemandPlanVO
     {
+
+
     }
 }

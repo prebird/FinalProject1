@@ -51,6 +51,7 @@
     <Compile Include="BORDAC.cs" />
     <Compile Include="CommonDAC.cs" />
     <Compile Include="CompanyDAC.cs" />
+    <Compile Include="DemandPlanDAC.cs" />
     <Compile Include="FactoryDAC.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="ItemDAC.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="ProcessEquipmentDAC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesMasterDAC.cs" />
     <Compile Include="ShiftDAC.cs" />
   </ItemGroup>
   <ItemGroup>

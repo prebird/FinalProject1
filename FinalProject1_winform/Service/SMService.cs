@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinalProject1_VO;
+using FinalProject1_DAC;
 
-namespace FinalProject1_VO
+namespace FinalProject1_winform
 {
-    public class SalesMasterVO
+    class SMService
     {
-
-
     }
 }
