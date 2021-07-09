@@ -27,5 +27,14 @@ namespace FinalProject1_winform.Service
 
             return list;
         }
+
+        public bool DeleteBOR(int borID)
+        {
+            BORDAC dac = new BORDAC();
+            bool result = dac.DeleteBOR(borID);
+            dac.Dispose();
+
+            return result;
+        }
     }
 }

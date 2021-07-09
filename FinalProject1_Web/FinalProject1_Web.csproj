@@ -1786,6 +1786,7 @@
     <Compile Include="Controllers\CustomerServiceController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\NoticeController.cs" />
+    <Compile Include="Controllers\ProductAPIController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

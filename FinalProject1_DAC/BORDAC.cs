@@ -60,5 +60,18 @@ namespace FinalProject1_DAC
                 return Helper.DataReaderMapToList<BORVO>(cmd.ExecuteReader());
             }
         }
+
+        public bool DeleteBOR(int borID)
+        {
+            string sql = "update BOR set Deleted = 1 where BORID = @BORID";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@BORID", borID);
+
+                int affectRow = cmd.ExecuteNonQuery();
+
+                return (affectRow > 0);
+            }
+        }
     }
 }

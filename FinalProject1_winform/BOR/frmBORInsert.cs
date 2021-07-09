@@ -14,6 +14,7 @@ namespace FinalProject1_winform
 {
     public partial class frmBORInsert : Form
     {
+        BORVO ownerBOR = new BORVO();
         public frmBORInsert()
         {
             InitializeComponent();
@@ -38,6 +39,25 @@ namespace FinalProject1_winform
             CommonUtil.ComboBinding<ProcessVO>(cboProcess, processes, "ProcessName", "ProcessCode");
 
             //수정일 경우 바인딩
+            if(this.Owner is frmBORList frm)
+            {
+                ownerBOR = frm.BOR;
+                cboProcess.Text = ownerBOR.ProcessName;
+                cboItem.Text = ownerBOR.Item_Name;
+                cboEquipment.Text = ownerBOR.EquipmentName;
+                txtTactTime.Text = ownerBOR.Tact_Time.ToString();
+                txtPriority.Text = ownerBOR.Priority.ToString();
+                if(ownerBOR.IsUse == "Y")
+                {
+                    cboIsUse.SelectedIndex = 1;
+                }
+                else if(ownerBOR.IsUse == "N")
+                {
+                    cboIsUse.SelectedIndex = 2;
+                }
+                txtStatus.Text = ownerBOR.Remark;
+            }
+
 
             //수정자 정보
         }
@@ -76,14 +96,7 @@ namespace FinalProject1_winform
             }
 
             BORVO bor = new BORVO();
-            if(this.Owner != null)
-            {
-                //수정일 경우 BORID
-            }
-            else
-            {
-                bor.ItemID = 0;
-            }
+            bor.BORID = ownerBOR.BORID;
             bor.ItemCode = cboItem.SelectedValue.ToString();
             bor.Item_Name = cboItem.Text;
             bor.ProcessCode = cboProcess.SelectedValue.ToString();
