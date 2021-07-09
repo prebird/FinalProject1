@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace FinalProject1_winform
 {
-    public partial class frmDemandPlannig : FinalProject1_winform.Basic3
+    public partial class frmDemandPlan : FinalProject1_winform.Basic3
     {
-        public frmDemandPlannig()
+        public frmDemandPlan()
         {
             InitializeComponent();
         }

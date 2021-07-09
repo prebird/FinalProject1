@@ -126,7 +126,7 @@ namespace FinalProject1_winform
             this.panel2.Controls.Add(this.dgv_PO);
             this.panel2.Location = new System.Drawing.Point(18, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 539);
+            this.panel2.Size = new System.Drawing.Size(1057, 551);
             this.panel2.TabIndex = 78;
             // 
             // dgv_PO
@@ -209,7 +209,7 @@ namespace FinalProject1_winform
             // frmSMInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.ClientSize = new System.Drawing.Size(1093, 632);
             this.Controls.Add(this.label_gudi1);
             this.Controls.Add(this.btn_Template);
             this.Controls.Add(this.btn_POExcel);
