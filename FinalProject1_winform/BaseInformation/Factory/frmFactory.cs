@@ -13,7 +13,7 @@ namespace FinalProject1_winform
 {
     public partial class frmFactory : Basic3
     {
-        List<FactoryVO> List;
+        List<FactoryVO> list;
         public frmFactory()
         {
             InitializeComponent();
@@ -22,6 +22,14 @@ namespace FinalProject1_winform
         private void frmFactory_Load(object sender, EventArgs e)
         {
             cboFactoryGrade.Text = "선택";
+            FactoryVO factory = new FactoryVO();
+            FactoryService bservice = new FactoryService();
+            list = bservice.GetFactoryGrade();
+            factory.factory_grade = "선택";
+            factory.factory_code = "";
+            list.Insert(0, factory);
+
+            CommonUtil.ComboBinding<FactoryVO>(cboFactoryGrade, list, "factory_grade", "factory_code");
 
             CommonUtil.SetInitGridView(dgv_Factory);
             CommonUtil.AddGridTextColumn(dgv_Factory, "시설군", "factory_grade", DataGridViewContentAlignment.MiddleCenter, colWidth: 135);
@@ -40,10 +48,85 @@ namespace FinalProject1_winform
 
         private void LoadData()
         {
-           // FactoryService service = new FactoryService();
-           // List = service.GetAllFactory();
-            dgv_Factory.DataSource = List;
+            FactoryService service = new FactoryService();
+            list = service.GetAllFactory();
+            dgv_Factory.DataSource = list;
             dgv_Factory.ClearSelection();
         }
+
+        //검색 조건 조회
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string factoryCode = txtFactoryCode.Text;
+            string factoryGrade = cboFactoryGrade.Text;
+
+            if (cboFactoryGrade.Text == "선택")
+                factoryGrade = "";
+
+            FactoryService sservice = new FactoryService();
+            list = sservice.SearchFactory(factoryCode, factoryGrade);
+            dgv_Factory.DataSource = list;
+            dgv_Factory.ClearSelection();
+        }
+
+        //공장 등록
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            frmFactoryIns frm = new frmFactoryIns();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+
+        }
+
+        //공장 수정
+        private void btmUpdate_Click(object sender, EventArgs e)
+        {
+            if (dgv_Factory.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("수정할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string factoryCode = (dgv_Factory.SelectedRows[0].Cells[3].Value).ToString();
+            FactoryVO factoryInfo = list.Find((elem) => elem.factory_code == factoryCode);
+
+
+            frmFactoryIns frm = new frmFactoryIns(factoryInfo);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+        
+        //공장 삭제
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv_Factory.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("삭제할 행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string factoryCode = (dgv_Factory.SelectedRows[0].Cells[4].Value).ToString();
+            FactoryVO factoryInfo = list.Find((elem) => elem.factory_code == factoryCode);
+
+            if (MessageBox.Show("삭제 하시겠습니까", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                FactoryService service = new FactoryService();
+                bool result = service.DeleteFactory(factoryInfo.factory_id);
+
+                if (result)
+                {
+                    MessageBox.Show("삭제 되었습니다.");
+                    LoadData();
+                }
+                else
+                    MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
     }
 }

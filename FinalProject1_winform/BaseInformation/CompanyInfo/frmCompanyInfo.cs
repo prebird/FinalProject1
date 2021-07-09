@@ -59,7 +59,7 @@ namespace FinalProject1_winform
             string companyType = cboCompanyType.Text;
 
             if (cboCompanyType.Text == "선택")
-                companyType = "";
+                companyType = " ";
 
             CompanyService service = new CompanyService();
             List = service.SearchCompany(companyCode, companyName, companyCrum, companyType);
@@ -76,7 +76,7 @@ namespace FinalProject1_winform
             {
                 LoadData();
             }
-
+            
         }
 
         //업체 수정

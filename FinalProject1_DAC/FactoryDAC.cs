@@ -36,6 +36,16 @@ namespace FinalProject1_DAC
             }
         }
 
+        public List<FactoryVO> GetFactoryGrade()
+        {
+            string sql = @"select factory_grade, factory_code from Factory where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<FactoryVO>(cmd.ExecuteReader());
+            }
+        }
+
         public bool InsUpFactory(FactoryVO info)
         {
             string sql = @"SP_InsUpFactory";
@@ -76,5 +86,41 @@ namespace FinalProject1_DAC
             }
         }
 
+        //검색 조건 조회
+        public List<FactoryVO> SearchFactory(string factoryCode, string factoryGrade)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"select factory_code, factory_grade
+                        from factory where deleted = 0 ");
+
+            if (!string.IsNullOrEmpty(factoryCode))
+                sb.Append(" and factory_code like @factory_Code");
+            if (!string.IsNullOrEmpty(factoryGrade))
+                sb.Append(" and factory_grade like @factory_grade");
+
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+                cmd.Parameters.AddWithValue("@factory_code", "%" + factoryCode + "%");
+                cmd.Parameters.AddWithValue("@factory_grade", factoryGrade);
+
+                return Helper.DataReaderMapToList<FactoryVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public bool DeleteFactory(int factoryid)
+        {
+            string sql = "update factory set deleted = 1 where factory_id = @factory_id";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@factory_id", factoryid);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
+            }
+        }
     }
 }

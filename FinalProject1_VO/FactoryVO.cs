@@ -19,5 +19,6 @@ namespace FinalProject1_VO
         public string factory_uadmin { get; set; }
         public string factory_udate { get; set; }
         public string factory_comment { get; set; }
+        public int deleted { get; set; }
     }
 }
