@@ -10,9 +10,16 @@ namespace FinalProject1_winform.Production_Planning
 {
     public partial class frmProductionPlanningList : FinalProject1_winform.Basic3
     {
+        string FromDate;
+        string ToDate;
         public frmProductionPlanningList()
         {
             InitializeComponent();
+        }
+
+        private void frmProductionPlanningList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

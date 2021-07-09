@@ -31,6 +31,11 @@ namespace FinalProject1_winform.Production_Planning
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductionPlanningList));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
+            this.ucDateTimePicker1 = new FinalProject1_winform.UcDateTimePicker();
+            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
+            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
@@ -40,11 +45,6 @@ namespace FinalProject1_winform.Production_Planning
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.ucDateTimePicker1 = new FinalProject1_winform.UcDateTimePicker();
-            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +69,53 @@ namespace FinalProject1_winform.Production_Planning
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1065, 93);
             this.panel1.TabIndex = 3;
+            // 
+            // label_gudi5
+            // 
+            this.label_gudi5.AutoSize = true;
+            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi5.Location = new System.Drawing.Point(12, 56);
+            this.label_gudi5.Name = "label_gudi5";
+            this.label_gudi5.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi5.TabIndex = 14;
+            this.label_gudi5.Text = "■ 기간";
+            // 
+            // ucDateTimePicker1
+            // 
+            this.ucDateTimePicker1.FromDate = new System.DateTime(2021, 6, 27, 19, 26, 13, 265);
+            this.ucDateTimePicker1.Location = new System.Drawing.Point(99, 48);
+            this.ucDateTimePicker1.Name = "ucDateTimePicker1";
+            this.ucDateTimePicker1.Size = new System.Drawing.Size(257, 30);
+            this.ucDateTimePicker1.TabIndex = 1;
+            this.ucDateTimePicker1.ToDate = new System.DateTime(2021, 6, 27, 19, 26, 13, 259);
+            // 
+            // textBox_gudi3
+            // 
+            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi3.Location = new System.Drawing.Point(782, 10);
+            this.textBox_gudi3.Name = "textBox_gudi3";
+            this.textBox_gudi3.Size = new System.Drawing.Size(192, 25);
+            this.textBox_gudi3.TabIndex = 13;
+            // 
+            // label_gudi2
+            // 
+            this.label_gudi2.AutoSize = true;
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi2.Location = new System.Drawing.Point(702, 13);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi2.TabIndex = 12;
+            this.label_gudi2.Text = "■ 품목";
+            // 
+            // textBox_gudi2
+            // 
+            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi2.Location = new System.Drawing.Point(423, 10);
+            this.textBox_gudi2.Name = "textBox_gudi2";
+            this.textBox_gudi2.Size = new System.Drawing.Size(192, 25);
+            this.textBox_gudi2.TabIndex = 11;
             // 
             // textBox_gudi1
             // 
@@ -175,53 +222,6 @@ namespace FinalProject1_winform.Production_Planning
             this.dataGridView1.Size = new System.Drawing.Size(1066, 475);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox_gudi2
-            // 
-            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(423, 10);
-            this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.Size = new System.Drawing.Size(192, 25);
-            this.textBox_gudi2.TabIndex = 11;
-            // 
-            // textBox_gudi3
-            // 
-            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi3.Location = new System.Drawing.Point(782, 10);
-            this.textBox_gudi3.Name = "textBox_gudi3";
-            this.textBox_gudi3.Size = new System.Drawing.Size(192, 25);
-            this.textBox_gudi3.TabIndex = 13;
-            // 
-            // label_gudi2
-            // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(702, 13);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(48, 17);
-            this.label_gudi2.TabIndex = 12;
-            this.label_gudi2.Text = "■ 품목";
-            // 
-            // ucDateTimePicker1
-            // 
-            this.ucDateTimePicker1.FromDate = new System.DateTime(2021, 6, 27, 19, 26, 13, 265);
-            this.ucDateTimePicker1.Location = new System.Drawing.Point(99, 48);
-            this.ucDateTimePicker1.Name = "ucDateTimePicker1";
-            this.ucDateTimePicker1.Size = new System.Drawing.Size(257, 30);
-            this.ucDateTimePicker1.TabIndex = 1;
-            this.ucDateTimePicker1.ToDate = new System.DateTime(2021, 6, 27, 19, 26, 13, 259);
-            // 
-            // label_gudi5
-            // 
-            this.label_gudi5.AutoSize = true;
-            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi5.Location = new System.Drawing.Point(12, 56);
-            this.label_gudi5.Name = "label_gudi5";
-            this.label_gudi5.Size = new System.Drawing.Size(48, 17);
-            this.label_gudi5.TabIndex = 14;
-            this.label_gudi5.Text = "■ 기간";
-            // 
             // frmProductionPlanningList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -233,6 +233,7 @@ namespace FinalProject1_winform.Production_Planning
             this.Controls.Add(this.panel1);
             this.Name = "frmProductionPlanningList";
             this.Text = "frmProductionPlanningList";
+            this.Load += new System.EventHandler(this.frmProductionPlanningList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
