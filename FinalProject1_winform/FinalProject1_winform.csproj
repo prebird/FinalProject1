@@ -300,23 +300,23 @@
     <Compile Include="Demand_Planning\frmDPInsert.Designer.cs">
       <DependentUpon>frmDPInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmSMUpload.cs">
+    <Compile Include="Demand_Planning\frmPOUpload.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmSMUpload.Designer.cs">
-      <DependentUpon>frmSMUpload.cs</DependentUpon>
+    <Compile Include="Demand_Planning\frmPOUpload.Designer.cs">
+      <DependentUpon>frmPOUpload.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmSMInsert.cs">
+    <Compile Include="Demand_Planning\frmMasterCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmSMInsert.Designer.cs">
-      <DependentUpon>frmSMInsert.cs</DependentUpon>
+    <Compile Include="Demand_Planning\frmMasterCreate.Designer.cs">
+      <DependentUpon>frmMasterCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmSalesMaster.cs">
+    <Compile Include="Demand_Planning\frmMasterList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmSalesMaster.Designer.cs">
-      <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    <Compile Include="Demand_Planning\frmMasterList.Designer.cs">
+      <DependentUpon>frmMasterList.cs</DependentUpon>
     </Compile>
     <Compile Include="POP\frmPOPMachine.cs">
       <SubType>Form</SubType>
@@ -548,14 +548,14 @@
     <EmbeddedResource Include="Demand_Planning\frmDPInsert.resx">
       <DependentUpon>frmDPInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmSMUpload.resx">
-      <DependentUpon>frmSMUpload.cs</DependentUpon>
+    <EmbeddedResource Include="Demand_Planning\frmPOUpload.resx">
+      <DependentUpon>frmPOUpload.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmSMInsert.resx">
-      <DependentUpon>frmSMInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Demand_Planning\frmMasterCreate.resx">
+      <DependentUpon>frmMasterCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmSalesMaster.resx">
-      <DependentUpon>frmSalesMaster.cs</DependentUpon>
+    <EmbeddedResource Include="Demand_Planning\frmMasterList.resx">
+      <DependentUpon>frmMasterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCommonCode.resx">
       <DependentUpon>frmCommonCode.cs</DependentUpon>

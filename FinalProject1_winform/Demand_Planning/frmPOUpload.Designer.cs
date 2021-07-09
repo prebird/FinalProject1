@@ -30,7 +30,7 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOInsert));
-            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txt_FileName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.button_gudi2 = new FinalProject1_winform.Button_gudi();
@@ -39,24 +39,24 @@ namespace FinalProject1_winform
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_gudi11 = new FinalProject1_winform.Button_gudi();
-            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
+            this.btn_SearchFile = new FinalProject1_winform.Button_gudi();
+            this.dtp_Date = new FinalProject1_winform.DateTimePicker_gudi();
             this.label_gudi14 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txt_Version = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox_gudi2
+            // txt_FileName
             // 
-            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(156, 133);
-            this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.Size = new System.Drawing.Size(134, 25);
-            this.textBox_gudi2.TabIndex = 77;
+            this.txt_FileName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txt_FileName.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txt_FileName.Location = new System.Drawing.Point(156, 133);
+            this.txt_FileName.Name = "txt_FileName";
+            this.txt_FileName.Size = new System.Drawing.Size(134, 25);
+            this.txt_FileName.TabIndex = 77;
             // 
             // pictureBox_gudi1
             // 
@@ -104,7 +104,7 @@ namespace FinalProject1_winform
             this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
             this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(110, 17);
+            this.button_gudi1.Location = new System.Drawing.Point(119, 17);
             this.button_gudi1.Name = "button_gudi1";
             this.button_gudi1.Size = new System.Drawing.Size(80, 33);
             this.button_gudi1.TabIndex = 6;
@@ -137,9 +137,9 @@ namespace FinalProject1_winform
             this.panel2.Controls.Add(this.button_gudi2);
             this.panel2.Controls.Add(this.button_gudi1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 297);
+            this.panel2.Location = new System.Drawing.Point(0, 314);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 53);
+            this.panel2.Size = new System.Drawing.Size(389, 53);
             this.panel2.TabIndex = 48;
             // 
             // panel1
@@ -150,34 +150,34 @@ namespace FinalProject1_winform
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 37);
+            this.panel1.Size = new System.Drawing.Size(389, 37);
             this.panel1.TabIndex = 47;
             // 
-            // button_gudi11
+            // btn_SearchFile
             // 
-            this.button_gudi11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi11.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi11.FlatAppearance.BorderSize = 0;
-            this.button_gudi11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi11.ForeColor = System.Drawing.Color.White;
-            this.button_gudi11.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi11.Image")));
-            this.button_gudi11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi11.Location = new System.Drawing.Point(156, 84);
-            this.button_gudi11.Name = "button_gudi11";
-            this.button_gudi11.Size = new System.Drawing.Size(108, 32);
-            this.button_gudi11.TabIndex = 78;
-            this.button_gudi11.Text = "   파일선택";
-            this.button_gudi11.UseVisualStyleBackColor = false;
+            this.btn_SearchFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btn_SearchFile.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btn_SearchFile.FlatAppearance.BorderSize = 0;
+            this.btn_SearchFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchFile.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_SearchFile.ForeColor = System.Drawing.Color.White;
+            this.btn_SearchFile.Image = ((System.Drawing.Image)(resources.GetObject("btn_SearchFile.Image")));
+            this.btn_SearchFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SearchFile.Location = new System.Drawing.Point(156, 84);
+            this.btn_SearchFile.Name = "btn_SearchFile";
+            this.btn_SearchFile.Size = new System.Drawing.Size(108, 32);
+            this.btn_SearchFile.TabIndex = 78;
+            this.btn_SearchFile.Text = "   파일선택";
+            this.btn_SearchFile.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker_gudi1
+            // dtp_Date
             // 
-            this.dateTimePicker_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dateTimePicker_gudi1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_gudi1.Location = new System.Drawing.Point(156, 175);
-            this.dateTimePicker_gudi1.Name = "dateTimePicker_gudi1";
-            this.dateTimePicker_gudi1.Size = new System.Drawing.Size(134, 25);
-            this.dateTimePicker_gudi1.TabIndex = 80;
+            this.dtp_Date.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dtp_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Date.Location = new System.Drawing.Point(156, 175);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(134, 25);
+            this.dtp_Date.TabIndex = 80;
             // 
             // label_gudi14
             // 
@@ -189,14 +189,14 @@ namespace FinalProject1_winform
             this.label_gudi14.TabIndex = 79;
             this.label_gudi14.Text = "■ 계획일자";
             // 
-            // textBox_gudi1
+            // txt_Version
             // 
-            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(156, 217);
-            this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.Size = new System.Drawing.Size(134, 25);
-            this.textBox_gudi1.TabIndex = 82;
+            this.txt_Version.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txt_Version.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txt_Version.Location = new System.Drawing.Point(156, 217);
+            this.txt_Version.Name = "txt_Version";
+            this.txt_Version.Size = new System.Drawing.Size(134, 25);
+            this.txt_Version.TabIndex = 82;
             // 
             // label_gudi3
             // 
@@ -212,18 +212,19 @@ namespace FinalProject1_winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 350);
-            this.Controls.Add(this.textBox_gudi1);
+            this.ClientSize = new System.Drawing.Size(389, 367);
+            this.Controls.Add(this.txt_Version);
             this.Controls.Add(this.label_gudi3);
-            this.Controls.Add(this.dateTimePicker_gudi1);
+            this.Controls.Add(this.dtp_Date);
             this.Controls.Add(this.label_gudi14);
-            this.Controls.Add(this.button_gudi11);
-            this.Controls.Add(this.textBox_gudi2);
+            this.Controls.Add(this.btn_SearchFile);
+            this.Controls.Add(this.txt_FileName);
             this.Controls.Add(this.label_gudi4);
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmPOInsert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmSMUpload";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -234,7 +235,7 @@ namespace FinalProject1_winform
         }
 
         #endregion
-        private Controls.TextBox_gudi textBox_gudi2;
+        private Controls.TextBox_gudi txt_FileName;
         private PictureBox_gudi pictureBox_gudi1;
         private Label_gudi label_gudi1;
         private Button_gudi button_gudi2;
@@ -243,10 +244,10 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Button_gudi button_gudi11;
-        private DateTimePicker_gudi dateTimePicker_gudi1;
+        private Button_gudi btn_SearchFile;
+        private DateTimePicker_gudi dtp_Date;
         private Label_gudi label_gudi14;
-        private Controls.TextBox_gudi textBox_gudi1;
+        private Controls.TextBox_gudi txt_Version;
         private Label_gudi label_gudi3;
     }
 }

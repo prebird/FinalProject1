@@ -32,7 +32,6 @@ namespace FinalProject1_winform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalesMaster));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
@@ -71,25 +70,6 @@ namespace FinalProject1_winform
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button_gudi10
-            // 
-            this.button_gudi10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi10.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi10.FlatAppearance.BorderSize = 0;
-            this.button_gudi10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi10.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi10.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi10.Image")));
-            this.button_gudi10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi10.Location = new System.Drawing.Point(899, 113);
-            this.button_gudi10.Name = "button_gudi10";
-            this.button_gudi10.Size = new System.Drawing.Size(111, 25);
-            this.button_gudi10.TabIndex = 27;
-            this.button_gudi10.Text = "양식 다운로드";
-            this.button_gudi10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi10.UseVisualStyleBackColor = false;
-            // 
             // button_gudi5
             // 
             this.button_gudi5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -120,7 +100,7 @@ namespace FinalProject1_winform
             this.button_gudi6.ForeColor = System.Drawing.Color.Black;
             this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
             this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(833, 113);
+            this.button_gudi6.Location = new System.Drawing.Point(950, 113);
             this.button_gudi6.Name = "button_gudi6";
             this.button_gudi6.Size = new System.Drawing.Size(60, 25);
             this.button_gudi6.TabIndex = 29;
@@ -139,7 +119,7 @@ namespace FinalProject1_winform
             this.button_gudi3.ForeColor = System.Drawing.Color.Black;
             this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
             this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(582, 113);
+            this.button_gudi3.Location = new System.Drawing.Point(699, 113);
             this.button_gudi3.Name = "button_gudi3";
             this.button_gudi3.Size = new System.Drawing.Size(113, 25);
             this.button_gudi3.TabIndex = 30;
@@ -404,7 +384,7 @@ namespace FinalProject1_winform
             this.button_gudi7.ForeColor = System.Drawing.Color.Black;
             this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
             this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi7.Location = new System.Drawing.Point(767, 113);
+            this.button_gudi7.Location = new System.Drawing.Point(884, 113);
             this.button_gudi7.Name = "button_gudi7";
             this.button_gudi7.Size = new System.Drawing.Size(60, 25);
             this.button_gudi7.TabIndex = 76;
@@ -422,7 +402,7 @@ namespace FinalProject1_winform
             this.button_gudi1.ForeColor = System.Drawing.Color.Black;
             this.button_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi1.Image")));
             this.button_gudi1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi1.Location = new System.Drawing.Point(701, 113);
+            this.button_gudi1.Location = new System.Drawing.Point(818, 113);
             this.button_gudi1.Name = "button_gudi1";
             this.button_gudi1.Size = new System.Drawing.Size(60, 25);
             this.button_gudi1.TabIndex = 77;
@@ -437,7 +417,6 @@ namespace FinalProject1_winform
             this.Controls.Add(this.button_gudi1);
             this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.label_gudi1);
-            this.Controls.Add(this.button_gudi10);
             this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.button_gudi6);
             this.Controls.Add(this.button_gudi3);
@@ -457,7 +436,6 @@ namespace FinalProject1_winform
         }
 
         #endregion
-        private Button_gudi button_gudi10;
         private Button_gudi button_gudi5;
         private Button_gudi button_gudi6;
         private Button_gudi button_gudi3;
