@@ -63,13 +63,13 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
         }
 
         // Equipmet 테이블 열 다 가져오기
-        public List<EquipmentVO1> GetAllEquipment()
+        public List<EquipmentVO> GetAllEquipment()
         {
             string sql = @"select EquipmentID, ProcessID, EquipmentGroupID, EquipmentCode, EquipmentName, Status, Deleted, INS_EMP, INS_DATE, IsActive, FromLocationID, ToLocationID from Equipment";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
-                List<EquipmentVO1> list = Helper.DataReaderMapToList<EquipmentVO1>(dr);
+                List<EquipmentVO> list = Helper.DataReaderMapToList<EquipmentVO>(dr);
                 return list;
             }
         }

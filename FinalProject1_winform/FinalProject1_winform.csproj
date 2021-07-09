@@ -36,9 +36,10 @@
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel1">
-      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Library\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -163,6 +164,18 @@
     <Compile Include="Main\frmSmallMenuIns.Designer.cs">
       <DependentUpon>frmSmallMenuIns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Process\frmEquipmentGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\frmEquipmentGroupList.Designer.cs">
+      <DependentUpon>frmEquipmentGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Process\frmProcessList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\frmProcessList.Designer.cs">
+      <DependentUpon>frmProcessList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\BomService.cs" />
     <Compile Include="BOR\frmBORInsert.cs">
       <SubType>Form</SubType>
@@ -180,6 +193,7 @@
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
     <Compile Include="CommonUtil\Helper.cs" />
     <Compile Include="CommonUtil\LoggingUtility.cs" />
+    <Compile Include="Service\BorService.cs" />
     <Compile Include="Service\FactoryService.cs" />
     <Compile Include="Service\ItemService.cs" />
     <Compile Include="Main\frmMain.cs">
@@ -579,6 +593,12 @@
     <EmbeddedResource Include="POP\frmReleaseList.resx">
       <DependentUpon>frmReleaseList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Process\frmEquipmentGroupList.resx">
+      <DependentUpon>frmEquipmentGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\frmProcessList.resx">
+      <DependentUpon>frmProcessList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>
     </EmbeddedResource>
@@ -715,6 +735,7 @@
     <Content Include="Image\Up_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Library\Microsoft.Office.Interop.Excel.dll" />
     <None Include="Resources\gray_dot.png" />
     <None Include="Resources\gray_dot %283%29.png" />
     <None Include="Resources\close-red.png" />
@@ -725,15 +746,6 @@
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
       <VersionMinor>5</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>7</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>

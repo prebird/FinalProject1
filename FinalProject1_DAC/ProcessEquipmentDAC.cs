@@ -173,5 +173,16 @@ namespace FinalProject1_DAC
                 return (affectRow > 0);
             }
         }
+
+        public List<EquipmentVO> GetSpecficEquipment(string processCode)
+        {
+            string sql = "select EquipmentCode, EquipmentName from Equipment where CHARINDEX(@ProcessCode ,0) = 0";
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@ProcessCode", processCode);
+
+                return Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader());
+            }
+        }
     }
 }
