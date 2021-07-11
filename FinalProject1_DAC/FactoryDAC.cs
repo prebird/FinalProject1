@@ -26,6 +26,7 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
+        //전체 조회
         public List<FactoryVO> GetAllFactory()
         {
             string sql = @"select * from Factory where deleted = 0";
@@ -50,7 +51,14 @@ namespace FinalProject1_DAC
                 cmd.Parameters.AddWithValue("@factory_name", info.factory_name);
                 cmd.Parameters.AddWithValue("@factory_code", info.factory_code);
                 cmd.Parameters.AddWithValue("@factory_type", info.factory_type);
-                cmd.Parameters.AddWithValue("@company_id", info.company_id);
+                if (info.company_id == 0)
+                {
+                    cmd.Parameters.AddWithValue("@company_id", DBNull.Value);
+                }
+                else
+                { 
+                  cmd.Parameters.AddWithValue("@company_id", info.company_id); 
+                }
                 cmd.Parameters.AddWithValue("@factory_yn", info.factory_yn);
                 cmd.Parameters.AddWithValue("@factory_uadmin", info.factory_uadmin);
                 cmd.Parameters.AddWithValue("@factory_udate", info.factory_udate);  
@@ -75,6 +83,40 @@ namespace FinalProject1_DAC
 
             }
         }
+        //시설군, 상위시설, 업체, 시설구분
 
+        //시설군 조회
+        public List<FactoryVO> GetFactoryGrade()
+        {
+            string sql = @"select Factory_grade, factory_code from Factory where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<FactoryVO>(cmd.ExecuteReader());
+            }
+        }
+
+        //상위시설 조회
+        public List<FactoryVO> GetFactoryParent()
+        {
+            string sql = @"select factory_parent, factory_code from Factory where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<FactoryVO>(cmd.ExecuteReader());
+            }
+        }
+
+        //업체 코드, id 조회
+        public List<CompanyVO> GetCompanyInfo()
+        {
+            string sql = @"select company_id, company_code from Company where deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
+            }
+        }
+       
     }
 }

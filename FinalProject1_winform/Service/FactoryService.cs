@@ -29,14 +29,37 @@ namespace FinalProject1_winform
             return result;
         }
 
-       public List<CompanyVO> GetCompanyCode(string companyid)
+        public List<CompanyVO> GetCompanyCode(string companyid)
         {
             FactoryDAC dac = new FactoryDAC();
             List<CompanyVO> list = dac.GetCompanyCode(companyid);
             dac.Dispose();
             return list;
         }
+        //시설군 조회
+        public List<FactoryVO> GetFactoryGrade()
+        {
+            FactoryDAC dac = new FactoryDAC();
+            List<FactoryVO> list = dac.GetFactoryGrade();
+            dac.Dispose();
+            return list;
+        }
+        //상위시설 조회
+        public List<FactoryVO> GetFactoryParent()
+        {
+            FactoryDAC dac = new FactoryDAC();
+            List<FactoryVO> list = dac.GetFactoryParent();
+            dac.Dispose();
+            return list;
+        }
 
-
+        //업체코드, id 조회
+        public List<CompanyVO> GetCompanyInfo()
+        {
+            FactoryDAC dac = new FactoryDAC();
+            List<CompanyVO> list = dac.GetCompanyInfo();
+            dac.Dispose();
+            return list;
+        }
     }
 }
