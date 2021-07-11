@@ -92,7 +92,7 @@ namespace FinalProject1_winform
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(80, 33);
             this.btn_Insert.TabIndex = 5;
-            this.btn_Insert.Text = "저장";
+            this.btn_Insert.Text = "업로드";
             this.btn_Insert.UseVisualStyleBackColor = false;
             // 
             // btn_Cancel
@@ -118,9 +118,9 @@ namespace FinalProject1_winform
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi4.Location = new System.Drawing.Point(55, 135);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi4.Size = new System.Drawing.Size(76, 17);
             this.label_gudi4.TabIndex = 52;
-            this.label_gudi4.Text = "■ 파일명";
+            this.label_gudi4.Text = "■ 파일 경로";
             // 
             // label_gudi2
             // 
@@ -128,9 +128,9 @@ namespace FinalProject1_winform
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi2.Location = new System.Drawing.Point(55, 92);
             this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi2.Size = new System.Drawing.Size(76, 17);
             this.label_gudi2.TabIndex = 51;
-            this.label_gudi2.Text = "■ 발주서";
+            this.label_gudi2.Text = "■ 파일 탐색";
             // 
             // panel2
             // 
@@ -187,9 +187,9 @@ namespace FinalProject1_winform
             this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi14.Location = new System.Drawing.Point(55, 178);
             this.label_gudi14.Name = "label_gudi14";
-            this.label_gudi14.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi14.Size = new System.Drawing.Size(76, 17);
             this.label_gudi14.TabIndex = 79;
-            this.label_gudi14.Text = "■ 계획일자";
+            this.label_gudi14.Text = "■ 계획 일자";
             // 
             // txt_Version
             // 

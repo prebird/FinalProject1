@@ -21,8 +21,12 @@ namespace FinalProject1_winform
             frmPOUpload frm = new frmPOUpload();
             if(frm.ShowDialog() == DialogResult.OK)
             {
+                dgv_PO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgv_PO.AllowUserToAddRows = false;
+
                 dgv_PO.DataSource = frm.ExcelData;
                 
+
             }
             
         }
