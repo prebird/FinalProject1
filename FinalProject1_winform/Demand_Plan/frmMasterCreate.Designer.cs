@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProject1_winform
 {
-    partial class frmSMInsert
+    partial class frmMasterCreate
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,22 +29,15 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSMInsert));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterCreate));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.btn_Template = new FinalProject1_winform.Button_gudi();
             this.btn_POExcel = new FinalProject1_winform.Button_gudi();
             this.btn_Create = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_PO = new FinalProject1_winform.DGV_gudi();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).BeginInit();
@@ -98,6 +91,7 @@ namespace FinalProject1_winform
             this.btn_POExcel.Text = "발주서 엑셀등록";
             this.btn_POExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_POExcel.UseVisualStyleBackColor = false;
+            this.btn_POExcel.Click += new System.EventHandler(this.btn_POExcel_Click);
             // 
             // btn_Create
             // 
@@ -117,6 +111,7 @@ namespace FinalProject1_winform
             this.btn_Create.Text = "영업마스터 생성";
             this.btn_Create.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Create.UseVisualStyleBackColor = false;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // panel2
             // 
@@ -131,27 +126,19 @@ namespace FinalProject1_winform
             // 
             // dgv_PO
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_PO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_PO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_PO.BackgroundColor = System.Drawing.Color.White;
             this.dgv_PO.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_PO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_PO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_PO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_PO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.Column6});
             this.dgv_PO.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_PO.HeaderCheckStatus = false;
             this.dgv_PO.Location = new System.Drawing.Point(3, 3);
@@ -160,41 +147,6 @@ namespace FinalProject1_winform
             this.dgv_PO.RowTemplate.Height = 23;
             this.dgv_PO.Size = new System.Drawing.Size(1049, 533);
             this.dgv_PO.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "PO번호";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "계획번호";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "업체코드";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "품목명";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "납품처";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "총계획수량";
-            this.Column7.Name = "Column7";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "납기일";
-            this.Column6.Name = "Column6";
             // 
             // pictureBox_gudi2
             // 
@@ -206,7 +158,7 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.TabIndex = 77;
             this.pictureBox_gudi2.TabStop = false;
             // 
-            // frmSMInsert
+            // frmMasterCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 632);
@@ -216,7 +168,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
-            this.Name = "frmSMInsert";
+            this.Name = "frmMasterCreate";
             this.Text = "frmSMInsert";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).EndInit();
@@ -235,12 +187,5 @@ namespace FinalProject1_winform
         private System.Windows.Forms.Panel panel2;
         private DGV_gudi dgv_PO;
         private PictureBox_gudi pictureBox_gudi2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
