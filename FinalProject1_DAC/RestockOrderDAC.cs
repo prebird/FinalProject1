@@ -31,7 +31,8 @@ namespace FinalProject1_DAC
             string sql = "";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                
+                List<RestockOrderVO> list = new List<RestockOrderVO>();
+                return list;
             }
         }
     }
