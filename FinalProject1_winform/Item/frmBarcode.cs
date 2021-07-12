@@ -24,7 +24,6 @@ namespace FinalProject1_winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //BarcodeID, B.ProductID, P.ProductName, BoxLevel, Qty
             CommonUtil.SetInitGridView(dataGridView1);
 
             DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
