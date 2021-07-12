@@ -17,7 +17,7 @@ namespace FinalProject1_winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPPriceIns());
+            Application.Run(new frmCommonCode());
         }
     }
 }
