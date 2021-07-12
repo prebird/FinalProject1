@@ -10,10 +10,10 @@ namespace FinalProject1_VO
     {
        public int price_id { get; set; }
        public int CompanyItem_ID { get; set; }
-       public int product_id { get; set; }
+       public int Item_ID { get; set; }
        public int company_id { get; set; }
-       public string price_present { get; set; }
-       public string price_past { get; set; }
+       public int price_present { get; set; }
+       public int price_past { get; set; }
        public string price_sdate { get; set; }
        public string price_edate { get; set; }
        public string price_yn { get; set; }
@@ -25,7 +25,10 @@ namespace FinalProject1_VO
     public class CompanyItemVO
 
     {
+        public int CompanyItem_ID { get; set; }
         public int item_id { get; set; }
+        public string item_category { get; set; }
+        public string item_code { get; set; }
         public string item_name { get; set; }
         public int company_id { get; set; }
         public string company_code { get; set; }

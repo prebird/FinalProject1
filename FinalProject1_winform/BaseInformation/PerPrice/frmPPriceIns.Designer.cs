@@ -75,6 +75,7 @@ namespace FinalProject1_winform
             this.btnSave.TabIndex = 49;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -90,6 +91,7 @@ namespace FinalProject1_winform
             this.btnClose.TabIndex = 48;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtUadmin
             // 
@@ -103,6 +105,7 @@ namespace FinalProject1_winform
             // 
             // txtedate
             // 
+            this.txtedate.Enabled = false;
             this.txtedate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txtedate.InputType = FinalProject1_winform.Controls.validType.Common;
             this.txtedate.Location = new System.Drawing.Point(439, 208);
@@ -112,6 +115,7 @@ namespace FinalProject1_winform
             // 
             // txtPrice_past
             // 
+            this.txtPrice_past.Enabled = false;
             this.txtPrice_past.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txtPrice_past.InputType = FinalProject1_winform.Controls.validType.Common;
             this.txtPrice_past.Location = new System.Drawing.Point(439, 157);
@@ -121,6 +125,7 @@ namespace FinalProject1_winform
             // 
             // cboItemCode
             // 
+            this.cboItemCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboItemCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboItemCode.FormattingEnabled = true;
             this.cboItemCode.Location = new System.Drawing.Point(439, 55);
@@ -162,6 +167,7 @@ namespace FinalProject1_winform
             // 
             // dtpsdate
             // 
+            this.dtpsdate.Enabled = false;
             this.dtpsdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dtpsdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpsdate.Location = new System.Drawing.Point(133, 158);
@@ -180,12 +186,14 @@ namespace FinalProject1_winform
             // 
             // cboCompanyCode
             // 
+            this.cboCompanyCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCompanyCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboCompanyCode.FormattingEnabled = true;
             this.cboCompanyCode.Location = new System.Drawing.Point(133, 55);
             this.cboCompanyCode.Name = "cboCompanyCode";
             this.cboCompanyCode.Size = new System.Drawing.Size(162, 24);
             this.cboCompanyCode.TabIndex = 38;
+            this.cboCompanyCode.SelectedIndexChanged += new System.EventHandler(this.cboCompanyCode_SelectedIndexChanged);
             // 
             // label_gudi12
             // 
@@ -325,6 +333,7 @@ namespace FinalProject1_winform
             // 
             // cboItemCategory
             // 
+            this.cboItemCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboItemCategory.FormattingEnabled = true;
             this.cboItemCategory.Items.AddRange(new object[] {
