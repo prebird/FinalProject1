@@ -61,5 +61,22 @@ namespace FinalProject1_winform
             dac.Dispose();
             return list;
         }
+        //공장 조회
+        public List<FactoryVO> SearchFactory(string factoryCode, string factoryGrade)
+        {
+            FactoryDAC dac = new FactoryDAC();
+            List<FactoryVO> list = dac.SearchFactory(factoryCode, factoryGrade);
+            dac.Dispose();
+            return list;
+        }
+
+
+        public bool DeleteFactory(int factoryid)
+        {
+            FactoryDAC dac = new FactoryDAC();
+            bool result = dac.DeleteFactory(factoryid);
+            dac.Dispose();
+            return result;
+        }
     }
 }

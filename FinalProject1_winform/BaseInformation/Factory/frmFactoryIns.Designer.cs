@@ -31,6 +31,8 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactoryIns));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.dtpUdate = new FinalProject1_winform.DateTimePick_Format_Time();
             this.txtUadmin = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi11 = new FinalProject1_winform.Label_gudi();
@@ -53,8 +55,6 @@ namespace FinalProject1_winform
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,26 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 37);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 3;
+            this.pictureBox_gudi1.TabStop = false;
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
+            this.label_gudi1.TabIndex = 2;
+            this.label_gudi1.Text = "공장정보";
             // 
             // dtpUdate
             // 
@@ -173,8 +193,6 @@ namespace FinalProject1_winform
             // 
             this.cboFactoryParent.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboFactoryParent.FormattingEnabled = true;
-            this.cboFactoryParent.Items.AddRange(new object[] {
-            "(주)구디"});
             this.cboFactoryParent.Location = new System.Drawing.Point(405, 72);
             this.cboFactoryParent.Name = "cboFactoryParent";
             this.cboFactoryParent.Size = new System.Drawing.Size(145, 24);
@@ -309,26 +327,6 @@ namespace FinalProject1_winform
             this.label_gudi2.Size = new System.Drawing.Size(52, 16);
             this.label_gudi2.TabIndex = 6;
             this.label_gudi2.Text = "■시설군";
-            // 
-            // pictureBox_gudi1
-            // 
-            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
-            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi1.TabIndex = 3;
-            this.pictureBox_gudi1.TabStop = false;
-            // 
-            // label_gudi1
-            // 
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
-            this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "공장정보";
             // 
             // frmFactoryIns
             // 

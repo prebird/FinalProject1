@@ -101,6 +101,7 @@ namespace FinalProject1_winform
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblFactoryGrade
             // 
@@ -139,6 +140,7 @@ namespace FinalProject1_winform
             this.btmUpdate.Text = "수정";
             this.btmUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btmUpdate.UseVisualStyleBackColor = false;
+            this.btmUpdate.Click += new System.EventHandler(this.btmUpdate_Click);
             // 
             // btnExcel
             // 
@@ -175,6 +177,7 @@ namespace FinalProject1_winform
             this.btnDelete.Text = "삭제";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnInsert
             // 
@@ -193,6 +196,7 @@ namespace FinalProject1_winform
             this.btnInsert.Text = "등록";
             this.btnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label_gudi4
             // 
