@@ -58,6 +58,7 @@
     <Compile Include="FactoryVO.cs" />
     <Compile Include="ItemVO.cs" />
     <Compile Include="MenuVO.cs" />
+    <Compile Include="PerPriceVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

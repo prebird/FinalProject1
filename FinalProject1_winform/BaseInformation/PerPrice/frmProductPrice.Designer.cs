@@ -146,9 +146,9 @@ namespace FinalProject1_winform
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi4.Location = new System.Drawing.Point(49, 80);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(80, 17);
+            this.label_gudi4.Size = new System.Drawing.Size(56, 17);
             this.label_gudi4.TabIndex = 21;
-            this.label_gudi4.Text = "영업단가관리";
+            this.label_gudi4.Text = "단가관리";
             // 
             // panel2
             // 

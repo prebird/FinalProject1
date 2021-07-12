@@ -30,18 +30,18 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPPriceIns));
-            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.textBox_gudi6 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi5 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi4 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.comboBox_gudi3 = new FinalProject1_winform.ComboBox_gudi();
-            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
-            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
+            this.btnSave = new FinalProject1_winform.Button_gudi();
+            this.btnClose = new FinalProject1_winform.Button_gudi();
+            this.txtUadmin = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtedate = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtPrice_past = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.cboItemCode = new FinalProject1_winform.ComboBox_gudi();
+            this.txtComment = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtUdate = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.cboyn = new FinalProject1_winform.ComboBox_gudi();
+            this.dtpsdate = new FinalProject1_winform.DateTimePicker_gudi();
+            this.txtPrice_present = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.cboCompanyCode = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi12 = new FinalProject1_winform.Label_gudi();
             this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.label_gudi10 = new FinalProject1_winform.Label_gudi();
@@ -55,136 +55,143 @@ namespace FinalProject1_winform
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.cboItemCategory = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi9 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button_gudi2
+            // btnSave
             // 
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi2.ForeColor = System.Drawing.Color.White;
-            this.button_gudi2.Location = new System.Drawing.Point(250, 427);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi2.TabIndex = 49;
-            this.button_gudi2.Text = "저장";
-            this.button_gudi2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btnSave.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(250, 427);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(80, 33);
+            this.btnSave.TabIndex = 49;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // button_gudi1
+            // btnClose
             // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(372, 427);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi1.TabIndex = 48;
-            this.button_gudi1.Text = "닫기";
-            this.button_gudi1.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnClose.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(372, 427);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(80, 33);
+            this.btnClose.TabIndex = 48;
+            this.btnClose.Text = "닫기";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // textBox_gudi6
+            // txtUadmin
             // 
-            this.textBox_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi6.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi6.Location = new System.Drawing.Point(439, 207);
-            this.textBox_gudi6.Name = "textBox_gudi6";
-            this.textBox_gudi6.Size = new System.Drawing.Size(162, 25);
-            this.textBox_gudi6.TabIndex = 47;
+            this.txtUadmin.Enabled = false;
+            this.txtUadmin.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtUadmin.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtUadmin.Location = new System.Drawing.Point(439, 259);
+            this.txtUadmin.Name = "txtUadmin";
+            this.txtUadmin.Size = new System.Drawing.Size(162, 25);
+            this.txtUadmin.TabIndex = 47;
             // 
-            // textBox_gudi5
+            // txtedate
             // 
-            this.textBox_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi5.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi5.Location = new System.Drawing.Point(439, 156);
-            this.textBox_gudi5.Name = "textBox_gudi5";
-            this.textBox_gudi5.Size = new System.Drawing.Size(162, 25);
-            this.textBox_gudi5.TabIndex = 46;
+            this.txtedate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtedate.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtedate.Location = new System.Drawing.Point(439, 208);
+            this.txtedate.Name = "txtedate";
+            this.txtedate.Size = new System.Drawing.Size(162, 25);
+            this.txtedate.TabIndex = 46;
             // 
-            // textBox_gudi4
+            // txtPrice_past
             // 
-            this.textBox_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi4.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi4.Location = new System.Drawing.Point(439, 105);
-            this.textBox_gudi4.Name = "textBox_gudi4";
-            this.textBox_gudi4.Size = new System.Drawing.Size(162, 25);
-            this.textBox_gudi4.TabIndex = 45;
+            this.txtPrice_past.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtPrice_past.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtPrice_past.Location = new System.Drawing.Point(439, 157);
+            this.txtPrice_past.Name = "txtPrice_past";
+            this.txtPrice_past.Size = new System.Drawing.Size(162, 25);
+            this.txtPrice_past.TabIndex = 45;
             // 
-            // comboBox_gudi3
+            // cboItemCode
             // 
-            this.comboBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi3.FormattingEnabled = true;
-            this.comboBox_gudi3.Location = new System.Drawing.Point(439, 55);
-            this.comboBox_gudi3.Name = "comboBox_gudi3";
-            this.comboBox_gudi3.Size = new System.Drawing.Size(162, 24);
-            this.comboBox_gudi3.TabIndex = 44;
+            this.cboItemCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboItemCode.FormattingEnabled = true;
+            this.cboItemCode.Location = new System.Drawing.Point(439, 55);
+            this.cboItemCode.Name = "cboItemCode";
+            this.cboItemCode.Size = new System.Drawing.Size(162, 24);
+            this.cboItemCode.TabIndex = 44;
             // 
-            // textBox_gudi3
+            // txtComment
             // 
-            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi3.Location = new System.Drawing.Point(133, 313);
-            this.textBox_gudi3.Multiline = true;
-            this.textBox_gudi3.Name = "textBox_gudi3";
-            this.textBox_gudi3.Size = new System.Drawing.Size(468, 98);
-            this.textBox_gudi3.TabIndex = 43;
+            this.txtComment.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtComment.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtComment.Location = new System.Drawing.Point(133, 313);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(468, 98);
+            this.txtComment.TabIndex = 43;
             // 
-            // textBox_gudi2
+            // txtUdate
             // 
-            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(133, 260);
-            this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.Size = new System.Drawing.Size(162, 25);
-            this.textBox_gudi2.TabIndex = 42;
+            this.txtUdate.Enabled = false;
+            this.txtUdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtUdate.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtUdate.Location = new System.Drawing.Point(133, 260);
+            this.txtUdate.Name = "txtUdate";
+            this.txtUdate.Size = new System.Drawing.Size(162, 25);
+            this.txtUdate.TabIndex = 42;
             // 
-            // comboBox_gudi2
+            // cboyn
             // 
-            this.comboBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi2.FormattingEnabled = true;
-            this.comboBox_gudi2.Location = new System.Drawing.Point(133, 208);
-            this.comboBox_gudi2.Name = "comboBox_gudi2";
-            this.comboBox_gudi2.Size = new System.Drawing.Size(162, 24);
-            this.comboBox_gudi2.TabIndex = 41;
+            this.cboyn.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboyn.FormattingEnabled = true;
+            this.cboyn.Items.AddRange(new object[] {
+            "사용",
+            "미사용"});
+            this.cboyn.Location = new System.Drawing.Point(133, 208);
+            this.cboyn.Name = "cboyn";
+            this.cboyn.Size = new System.Drawing.Size(162, 24);
+            this.cboyn.TabIndex = 41;
             // 
-            // dateTimePicker_gudi1
+            // dtpsdate
             // 
-            this.dateTimePicker_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dateTimePicker_gudi1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_gudi1.Location = new System.Drawing.Point(133, 158);
-            this.dateTimePicker_gudi1.Name = "dateTimePicker_gudi1";
-            this.dateTimePicker_gudi1.Size = new System.Drawing.Size(162, 25);
-            this.dateTimePicker_gudi1.TabIndex = 40;
+            this.dtpsdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dtpsdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpsdate.Location = new System.Drawing.Point(133, 158);
+            this.dtpsdate.Name = "dtpsdate";
+            this.dtpsdate.Size = new System.Drawing.Size(162, 25);
+            this.dtpsdate.TabIndex = 40;
             // 
-            // textBox_gudi1
+            // txtPrice_present
             // 
-            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(133, 106);
-            this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.Size = new System.Drawing.Size(162, 25);
-            this.textBox_gudi1.TabIndex = 39;
+            this.txtPrice_present.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtPrice_present.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtPrice_present.Location = new System.Drawing.Point(133, 106);
+            this.txtPrice_present.Name = "txtPrice_present";
+            this.txtPrice_present.Size = new System.Drawing.Size(162, 25);
+            this.txtPrice_present.TabIndex = 39;
             // 
-            // comboBox_gudi1
+            // cboCompanyCode
             // 
-            this.comboBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi1.FormattingEnabled = true;
-            this.comboBox_gudi1.Location = new System.Drawing.Point(133, 55);
-            this.comboBox_gudi1.Name = "comboBox_gudi1";
-            this.comboBox_gudi1.Size = new System.Drawing.Size(162, 24);
-            this.comboBox_gudi1.TabIndex = 38;
+            this.cboCompanyCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboCompanyCode.FormattingEnabled = true;
+            this.cboCompanyCode.Location = new System.Drawing.Point(133, 55);
+            this.cboCompanyCode.Name = "cboCompanyCode";
+            this.cboCompanyCode.Size = new System.Drawing.Size(162, 24);
+            this.cboCompanyCode.TabIndex = 38;
             // 
             // label_gudi12
             // 
             this.label_gudi12.AutoSize = true;
             this.label_gudi12.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi12.Location = new System.Drawing.Point(352, 211);
+            this.label_gudi12.Location = new System.Drawing.Point(352, 263);
             this.label_gudi12.Name = "label_gudi12";
             this.label_gudi12.Size = new System.Drawing.Size(60, 17);
             this.label_gudi12.TabIndex = 37;
@@ -194,7 +201,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi11.AutoSize = true;
             this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi11.Location = new System.Drawing.Point(352, 160);
+            this.label_gudi11.Location = new System.Drawing.Point(352, 212);
             this.label_gudi11.Name = "label_gudi11";
             this.label_gudi11.Size = new System.Drawing.Size(60, 17);
             this.label_gudi11.TabIndex = 36;
@@ -205,7 +212,7 @@ namespace FinalProject1_winform
             this.label_gudi10.AutoSize = true;
             this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi10.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi10.Location = new System.Drawing.Point(352, 109);
+            this.label_gudi10.Location = new System.Drawing.Point(352, 161);
             this.label_gudi10.Name = "label_gudi10";
             this.label_gudi10.Size = new System.Drawing.Size(72, 17);
             this.label_gudi10.TabIndex = 35;
@@ -314,7 +321,31 @@ namespace FinalProject1_winform
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(155, 23);
             this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "영업단가관리";
+            this.label_gudi1.Text = "단가관리";
+            // 
+            // cboItemCategory
+            // 
+            this.cboItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboItemCategory.FormattingEnabled = true;
+            this.cboItemCategory.Items.AddRange(new object[] {
+            "원자재",
+            "반제품",
+            "완제품"});
+            this.cboItemCategory.Location = new System.Drawing.Point(439, 106);
+            this.cboItemCategory.Name = "cboItemCategory";
+            this.cboItemCategory.Size = new System.Drawing.Size(162, 24);
+            this.cboItemCategory.TabIndex = 51;
+            // 
+            // label_gudi9
+            // 
+            this.label_gudi9.AutoSize = true;
+            this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi9.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi9.Location = new System.Drawing.Point(352, 109);
+            this.label_gudi9.Name = "label_gudi9";
+            this.label_gudi9.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi9.TabIndex = 50;
+            this.label_gudi9.Text = "■ 품목유형";
             // 
             // frmPPriceIns
             // 
@@ -322,18 +353,20 @@ namespace FinalProject1_winform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(662, 470);
-            this.Controls.Add(this.button_gudi2);
-            this.Controls.Add(this.button_gudi1);
-            this.Controls.Add(this.textBox_gudi6);
-            this.Controls.Add(this.textBox_gudi5);
-            this.Controls.Add(this.textBox_gudi4);
-            this.Controls.Add(this.comboBox_gudi3);
-            this.Controls.Add(this.textBox_gudi3);
-            this.Controls.Add(this.textBox_gudi2);
-            this.Controls.Add(this.comboBox_gudi2);
-            this.Controls.Add(this.dateTimePicker_gudi1);
-            this.Controls.Add(this.textBox_gudi1);
-            this.Controls.Add(this.comboBox_gudi1);
+            this.Controls.Add(this.cboItemCategory);
+            this.Controls.Add(this.label_gudi9);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.txtUadmin);
+            this.Controls.Add(this.txtedate);
+            this.Controls.Add(this.txtPrice_past);
+            this.Controls.Add(this.cboItemCode);
+            this.Controls.Add(this.txtComment);
+            this.Controls.Add(this.txtUdate);
+            this.Controls.Add(this.cboyn);
+            this.Controls.Add(this.dtpsdate);
+            this.Controls.Add(this.txtPrice_present);
+            this.Controls.Add(this.cboCompanyCode);
             this.Controls.Add(this.label_gudi12);
             this.Controls.Add(this.label_gudi11);
             this.Controls.Add(this.label_gudi10);
@@ -347,6 +380,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmPPriceIns";
             this.Text = "frmPPriceIns";
+            this.Load += new System.EventHandler(this.frmPPriceIns_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.ResumeLayout(false);
@@ -356,18 +390,18 @@ namespace FinalProject1_winform
 
         #endregion
 
-        private Button_gudi button_gudi2;
-        private Button_gudi button_gudi1;
-        private Controls.TextBox_gudi textBox_gudi6;
-        private Controls.TextBox_gudi textBox_gudi5;
-        private Controls.TextBox_gudi textBox_gudi4;
-        private ComboBox_gudi comboBox_gudi3;
-        private Controls.TextBox_gudi textBox_gudi3;
-        private Controls.TextBox_gudi textBox_gudi2;
-        private ComboBox_gudi comboBox_gudi2;
-        private DateTimePicker_gudi dateTimePicker_gudi1;
-        private Controls.TextBox_gudi textBox_gudi1;
-        private ComboBox_gudi comboBox_gudi1;
+        private Button_gudi btnSave;
+        private Button_gudi btnClose;
+        private Controls.TextBox_gudi txtUadmin;
+        private Controls.TextBox_gudi txtedate;
+        private Controls.TextBox_gudi txtPrice_past;
+        private ComboBox_gudi cboItemCode;
+        private Controls.TextBox_gudi txtComment;
+        private Controls.TextBox_gudi txtUdate;
+        private ComboBox_gudi cboyn;
+        private DateTimePicker_gudi dtpsdate;
+        private Controls.TextBox_gudi txtPrice_present;
+        private ComboBox_gudi cboCompanyCode;
         private Label_gudi label_gudi12;
         private Label_gudi label_gudi11;
         private Label_gudi label_gudi10;
@@ -381,5 +415,7 @@ namespace FinalProject1_winform
         private System.Windows.Forms.Panel panel1;
         private PictureBox_gudi pictureBox_gudi1;
         private Label_gudi label_gudi1;
+        private ComboBox_gudi cboItemCategory;
+        private Label_gudi label_gudi9;
     }
 }

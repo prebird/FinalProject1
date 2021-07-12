@@ -16,5 +16,10 @@ namespace FinalProject1_winform
         {
             InitializeComponent();
         }
+
+        private void frmPPriceIns_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

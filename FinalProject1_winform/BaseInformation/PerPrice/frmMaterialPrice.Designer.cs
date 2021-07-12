@@ -30,8 +30,8 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaterialPrice));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.cboCompanyCode = new FinalProject1_winform.ComboBox_gudi();
@@ -41,6 +41,7 @@ namespace FinalProject1_winform
             this.dtpUdate = new FinalProject1_winform.DateTimePicker_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvMaterialPrice = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
@@ -48,11 +49,10 @@ namespace FinalProject1_winform
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.button_gudi7 = new FinalProject1_winform.Button_gudi();
-            this.dgvMaterialPrice = new FinalProject1_winform.DGV_gudi();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,6 +156,31 @@ namespace FinalProject1_winform
             this.panel2.Size = new System.Drawing.Size(1057, 466);
             this.panel2.TabIndex = 8;
             // 
+            // dgvMaterialPrice
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvMaterialPrice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMaterialPrice.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMaterialPrice.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMaterialPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMaterialPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaterialPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMaterialPrice.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvMaterialPrice.HeaderCheckStatus = false;
+            this.dgvMaterialPrice.Location = new System.Drawing.Point(0, 0);
+            this.dgvMaterialPrice.Name = "dgvMaterialPrice";
+            this.dgvMaterialPrice.RowHeadersVisible = false;
+            this.dgvMaterialPrice.RowTemplate.Height = 23;
+            this.dgvMaterialPrice.Size = new System.Drawing.Size(1057, 466);
+            this.dgvMaterialPrice.TabIndex = 0;
+            // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
@@ -172,9 +197,9 @@ namespace FinalProject1_winform
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi4.Location = new System.Drawing.Point(49, 80);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(80, 17);
+            this.label_gudi4.Size = new System.Drawing.Size(56, 17);
             this.label_gudi4.TabIndex = 10;
-            this.label_gudi4.Text = "자재단가관리";
+            this.label_gudi4.Text = "단가관리";
             // 
             // button_gudi10
             // 
@@ -266,31 +291,6 @@ namespace FinalProject1_winform
             this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi7.UseVisualStyleBackColor = false;
             // 
-            // dgvMaterialPrice
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvMaterialPrice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMaterialPrice.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMaterialPrice.CheckBoxAll = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMaterialPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvMaterialPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaterialPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMaterialPrice.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgvMaterialPrice.HeaderCheckStatus = false;
-            this.dgvMaterialPrice.Location = new System.Drawing.Point(0, 0);
-            this.dgvMaterialPrice.Name = "dgvMaterialPrice";
-            this.dgvMaterialPrice.RowHeadersVisible = false;
-            this.dgvMaterialPrice.RowTemplate.Height = 23;
-            this.dgvMaterialPrice.Size = new System.Drawing.Size(1057, 466);
-            this.dgvMaterialPrice.TabIndex = 0;
-            // 
             // frmMaterialPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -311,8 +311,8 @@ namespace FinalProject1_winform
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
