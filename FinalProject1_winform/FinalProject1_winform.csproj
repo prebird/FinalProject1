@@ -173,6 +173,12 @@
     <Compile Include="Item\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchasing\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Purchasing\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\DMService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>
@@ -713,6 +719,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchasing\frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
