@@ -32,19 +32,19 @@ namespace FinalProject1_winform
             this.cboProduct = new System.Windows.Forms.ComboBox();
             this.cboBox = new System.Windows.Forms.ComboBox();
             this.txtQty = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new FinalProject1_winform.Button_gudi();
+            this.button2 = new FinalProject1_winform.Button_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cboProduct
             // 
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(24, 30);
+            this.cboProduct.Location = new System.Drawing.Point(22, 32);
             this.cboProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboProduct.Name = "cboProduct";
-            this.cboProduct.Size = new System.Drawing.Size(252, 27);
+            this.cboProduct.Size = new System.Drawing.Size(211, 28);
             this.cboProduct.TabIndex = 0;
             // 
             // cboBox
@@ -54,29 +54,19 @@ namespace FinalProject1_winform
             "대",
             "중",
             "소"});
-            this.cboBox.Location = new System.Drawing.Point(284, 30);
+            this.cboBox.Location = new System.Drawing.Point(241, 32);
             this.cboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboBox.Name = "cboBox";
-            this.cboBox.Size = new System.Drawing.Size(70, 27);
+            this.cboBox.Size = new System.Drawing.Size(70, 28);
             this.cboBox.TabIndex = 1;
             this.cboBox.SelectedIndexChanged += new System.EventHandler(this.cboBox_SelectedIndexChanged);
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(362, 30);
+            this.txtQty.Location = new System.Drawing.Point(318, 33);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(100, 26);
             this.txtQty.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(469, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 27);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "바코드생성";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -87,31 +77,54 @@ namespace FinalProject1_winform
             this.dataGridView1.Size = new System.Drawing.Size(576, 349);
             this.dataGridView1.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.button1.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(434, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "바코드 생성";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(648, 225);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.button2.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(520, 33);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 27);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "바코드출력";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Size = new System.Drawing.Size(80, 29);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "바코드 출력";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // frmBarcode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(620, 452);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.cboBox);
             this.Controls.Add(this.cboProduct);
-            this.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmBarcode";
+            this.Text = "품목 바코드";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -124,9 +137,9 @@ namespace FinalProject1_winform
         private System.Windows.Forms.ComboBox cboProduct;
         private System.Windows.Forms.ComboBox cboBox;
         private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private Button_gudi button1;
+        private Button_gudi button2;
     }
 }
 

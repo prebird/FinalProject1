@@ -14,7 +14,7 @@ namespace FinalProject1_winform
 {
     public partial class frmBarcode : Form
     {
-        string strConn = ConfigurationManager.ConnectionStrings["localDB"].ConnectionString;
+        string strConn = ConfigurationManager.ConnectionStrings["FinalProject1"].ConnectionString;
         CheckBox headerCheckBox = new CheckBox();
 
         public frmBarcode()
@@ -24,7 +24,6 @@ namespace FinalProject1_winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //BarcodeID, B.ProductID, P.ProductName, BoxLevel, Qty
             CommonUtil.SetInitGridView(dataGridView1);
 
             DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
@@ -42,21 +41,21 @@ namespace FinalProject1_winform
             dataGridView1.Controls.Add(headerCheckBox);
 
             CommonUtil.AddGridTextColumn(dataGridView1, "바코드ID", "BarcodeID", visibility: false);
-            CommonUtil.AddGridTextColumn(dataGridView1, "제품ID", "ProductID", visibility: false);
-            CommonUtil.AddGridTextColumn(dataGridView1, "제품명", "ProductName", colWidth:200 );
+            CommonUtil.AddGridTextColumn(dataGridView1, "제품ID", "item_id", visibility: false);
+            CommonUtil.AddGridTextColumn(dataGridView1, "제품명", "Item_Name", colWidth:200 );
             CommonUtil.AddGridTextColumn(dataGridView1, "포장레벨", "BoxLevel");
             CommonUtil.AddGridTextColumn(dataGridView1, "수량", "Qty");
 
             //제품정보 바인딩
-            string sql = "select ProductID,ProductName from Products order by ProductName";
+            string sql = "select item_id, Item_Name from item order by Item_Name";
             DataTable dt = new DataTable();
             using(SqlConnection conn = new SqlConnection(strConn))
             {
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 da.Fill(dt);
 
-                cboProduct.DisplayMember = "ProductName";
-                cboProduct.ValueMember = "ProductID";
+                cboProduct.DisplayMember = "Item_Name";
+                cboProduct.ValueMember = "item_id";
                 cboProduct.DataSource = dt;
             }
 
@@ -86,13 +85,13 @@ namespace FinalProject1_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sql = "insert into BarCodeOutput (ProductID, BoxLevel, Qty) values (@ProductID, @BoxLevel, @Qty)";
+            string sql = "insert into ItemBarcode (item_id, BoxLevel, Qty) values (@item_id, @BoxLevel, @Qty)";
 
             using (SqlConnection conn = new SqlConnection(strConn))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@ProductID", Convert.ToInt32(cboProduct.SelectedValue));
+                    cmd.Parameters.AddWithValue("@item_id", Convert.ToInt32(cboProduct.SelectedValue));
                     cmd.Parameters.AddWithValue("@BoxLevel", cboBox.Text);
                     cmd.Parameters.AddWithValue("@Qty", Convert.ToInt32(txtQty.Text));
 
@@ -107,8 +106,8 @@ namespace FinalProject1_winform
 
         private void DataBinding()
         {
-            string sql = @"select BarcodeID, B.ProductID, P.ProductName, BoxLevel, Qty
-from BarCodeOutput B inner join Products P on B.ProductID = P.ProductID";
+            string sql = @"select BarcodeID, B.item_id, P.Item_Name, BoxLevel, Qty
+                        from ItemBarcode B inner join Item P on B.item_id = P.item_id";
 
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(strConn))
@@ -138,9 +137,9 @@ from BarCodeOutput B inner join Products P on B.ProductID = P.ProductID";
 
             string strCheckBarCodeID = string.Join(",", chkList);  // "11, 12, 13"
 
-            string sql = @"select BarcodeID, B.ProductID, P.ProductName, BoxLevel, Qty
-from BarCodeOutput B inner join Products P on B.ProductID = P.ProductID
-where BarcodeID in (" + strCheckBarCodeID + ")";
+            string sql = @"select BarcodeID, B.item_id, P.Item_Name, BoxLevel, Qty
+                         from ItemBarcode B inner join Item P on B.item_id = P.item_id
+                         where BarcodeID in (" + strCheckBarCodeID + ")";
 
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(strConn))
@@ -153,6 +152,7 @@ where BarcodeID in (" + strCheckBarCodeID + ")";
 
             XtraReport1 rpt = new XtraReport1();
             rpt.DataSource = dt;
+
             ReportPreviewForm frm = new ReportPreviewForm(rpt);
         }
     }
