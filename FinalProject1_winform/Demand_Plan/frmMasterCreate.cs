@@ -48,6 +48,7 @@ namespace FinalProject1_winform
             if (MessageBox.Show("생성 하시겠습니까?", "입력 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
 
+
             SalesMasterVO smVO = new SalesMasterVO()
             {
                 
