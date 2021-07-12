@@ -21,4 +21,15 @@ namespace FinalProject1_VO
        public string price_udate { get; set; }
        public string price_comment { get; set; }
     }
+
+    public class CompanyItemVO
+
+    {
+        public int item_id { get; set; }
+        public string item_name { get; set; }
+        public int company_id { get; set; }
+        public string company_code { get; set; }
+
+    }
+
 }

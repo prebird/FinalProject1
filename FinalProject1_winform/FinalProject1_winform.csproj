@@ -125,11 +125,11 @@
     <Compile Include="BaseInformation\Inspect\frmMateriaInspect.Designer.cs">
       <DependentUpon>frmMateriaInspect.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
+    <Compile Include="BaseInformation\PerPrice\frmPPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.Designer.cs">
-      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    <Compile Include="BaseInformation\PerPrice\frmPPrice.Designer.cs">
+      <DependentUpon>frmPPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseInformation\PerPrice\frmMPriceIns.cs">
       <SubType>Form</SubType>
@@ -142,12 +142,6 @@
     </Compile>
     <Compile Include="BaseInformation\PerPrice\frmPPriceIns.Designer.cs">
       <DependentUpon>frmPPriceIns.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmProductPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
-      <DependentUpon>frmProductPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomTabControl.cs">
       <SubType>Component</SubType>
@@ -173,6 +167,7 @@
     <Compile Include="Item\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\PerPriceService.cs" />
     <Compile Include="Service\DMService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>
@@ -524,6 +519,7 @@
     </Compile>
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\processEquipmentService.cs" />
+    <Compile Include="Service\RestockService.cs" />
     <Compile Include="ShiftService.cs" />
     <Compile Include="Service\SMService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
@@ -553,17 +549,14 @@
     <EmbeddedResource Include="BaseInformation\Inspect\frmMateriaInspect.resx">
       <DependentUpon>frmMateriaInspect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
-      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmPPrice.resx">
+      <DependentUpon>frmPPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmMPriceIns.resx">
       <DependentUpon>frmMPriceIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmPPriceIns.resx">
       <DependentUpon>frmPPriceIns.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInformation\PerPrice\frmProductPrice.resx">
-      <DependentUpon>frmProductPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BOR\frmBORInsert.resx">
       <DependentUpon>frmBORInsert.cs</DependentUpon>
