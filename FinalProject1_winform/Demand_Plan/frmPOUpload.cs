@@ -15,6 +15,7 @@ namespace FinalProject1_winform
     public partial class frmPOUpload : Form
     {
         public DataTable ExcelData { get; set; }
+        public string PlanDate { get; set; }
 
         public frmPOUpload()
         {
@@ -31,7 +32,7 @@ namespace FinalProject1_winform
                 string Excel07ConString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
 
                 string Filename = dlg.FileName;
-                string PlanDate = dtp_Date.Value.ToString();
+                PlanDate = dtp_Date.Value.ToString("yy-MM-dd");
                 txt_FileName.Text = Filename;
 
                 string fileExtension = System.IO.Path.GetExtension(Filename);
