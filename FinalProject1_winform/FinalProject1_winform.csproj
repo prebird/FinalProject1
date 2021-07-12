@@ -179,6 +179,7 @@
     <Compile Include="Purchasing\XtraReport2.Designer.cs">
       <DependentUpon>XtraReport2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\RestockService.cs" />
     <Compile Include="Service\DMService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>

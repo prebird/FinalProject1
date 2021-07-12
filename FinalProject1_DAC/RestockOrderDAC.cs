@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,14 @@ namespace FinalProject1_DAC
     public class RestockOrderDAC : IDisposable
     {
         SqlConnection conn;
-
+        string strConn = ConfigurationManager.ConnectionStrings["FinalProject1"].ConnectionString;
         //private static LoggingUtility log = new LoggingUtility("FinalProject1_DAC ItemDAC", Level.Info, 30);
         //public static LoggingUtility Log { get { return log; } }
+
         public RestockOrderDAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FinalProject1"].ConnectionString);
+            
+            conn = new SqlConnection(strConn);
             conn.Open();
         }
 
@@ -28,12 +31,30 @@ namespace FinalProject1_DAC
 
         public List<RestockOrderVO> GetROList()
         {
-            string sql = "";
+            string sql = @"select RO_ID, RO_Serial, itemid, Companyid, SuggestQty, Qty, dueDate from RestockOrder";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                List<RestockOrderVO> list = new List<RestockOrderVO>();
+                List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
                 return list;
             }
+        }
+
+        public DataTable GetPrintData(string strCheckBarCodeID)
+        {
+            string sql = @"select RO_Serial, Item_Name, company_name, Qty from RestockOrder RO
+inner join item i on i.Item_ID = ro.itemid
+inner join Company c on c.company_id = ro.Companyid
+where ro.ro_id in (" + strCheckBarCodeID + ")";
+
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+                {
+                    da.Fill(dt);
+                }
+            }
+            return dt;
         }
     }
 }
