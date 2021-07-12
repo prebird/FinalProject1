@@ -33,26 +33,28 @@ namespace FinalProject1_winform
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi9 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi10 = new FinalProject1_winform.Label_gudi();
-            this.cboFactoryGrade = new FinalProject1_winform.ComboBox_gudi();
-            this.cboCompanyCode = new FinalProject1_winform.ComboBox_gudi();
-            this.cboFactoryYN = new FinalProject1_winform.ComboBox_gudi();
-            this.cboFactoryParent = new FinalProject1_winform.ComboBox_gudi();
-            this.cboCompanyType = new FinalProject1_winform.ComboBox_gudi();
-            this.txtFactoryName = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtFactoryCode = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtFactoryUdate = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtFactoryComment = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.dtpUdate = new FinalProject1_winform.DateTimePick_Format_Time();
+            this.txtUadmin = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.btnSave = new FinalProject1_winform.Button_gudi();
             this.btnClose = new FinalProject1_winform.Button_gudi();
+            this.txtFactoryComment = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtFactoryCode = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtFactoryName = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.cboCompanyType = new FinalProject1_winform.ComboBox_gudi();
+            this.cboFactoryParent = new FinalProject1_winform.ComboBox_gudi();
+            this.cboFactoryYN = new FinalProject1_winform.ComboBox_gudi();
+            this.cboCompanyCode = new FinalProject1_winform.ComboBox_gudi();
+            this.cboFactoryGrade = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi10 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi9 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi5 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.SuspendLayout();
@@ -88,189 +90,36 @@ namespace FinalProject1_winform
             this.label_gudi1.TabIndex = 2;
             this.label_gudi1.Text = "공장정보";
             // 
-            // label_gudi2
+            // dtpUdate
             // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi2.Location = new System.Drawing.Point(23, 75);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(52, 16);
-            this.label_gudi2.TabIndex = 6;
-            this.label_gudi2.Text = "■시설군";
+            this.dtpUdate.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.dtpUdate.Enabled = false;
+            this.dtpUdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dtpUdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpUdate.Location = new System.Drawing.Point(405, 252);
+            this.dtpUdate.Name = "dtpUdate";
+            this.dtpUdate.Size = new System.Drawing.Size(145, 25);
+            this.dtpUdate.TabIndex = 31;
             // 
-            // label_gudi3
+            // txtUadmin
             // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi3.Location = new System.Drawing.Point(23, 138);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(52, 16);
-            this.label_gudi3.TabIndex = 7;
-            this.label_gudi3.Text = "■시설명";
+            this.txtUadmin.Enabled = false;
+            this.txtUadmin.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtUadmin.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtUadmin.Location = new System.Drawing.Point(97, 314);
+            this.txtUadmin.Name = "txtUadmin";
+            this.txtUadmin.Size = new System.Drawing.Size(145, 25);
+            this.txtUadmin.TabIndex = 30;
             // 
-            // label_gudi4
+            // label_gudi11
             // 
-            this.label_gudi4.AutoSize = true;
-            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi4.Location = new System.Drawing.Point(23, 201);
-            this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(41, 16);
-            this.label_gudi4.TabIndex = 8;
-            this.label_gudi4.Text = "■업체";
-            // 
-            // label_gudi5
-            // 
-            this.label_gudi5.AutoSize = true;
-            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi5.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi5.Location = new System.Drawing.Point(23, 264);
-            this.label_gudi5.Name = "label_gudi5";
-            this.label_gudi5.Size = new System.Drawing.Size(63, 16);
-            this.label_gudi5.TabIndex = 9;
-            this.label_gudi5.Text = "■사용유무";
-            // 
-            // label_gudi6
-            // 
-            this.label_gudi6.AutoSize = true;
-            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi6.Location = new System.Drawing.Point(23, 327);
-            this.label_gudi6.Name = "label_gudi6";
-            this.label_gudi6.Size = new System.Drawing.Size(63, 16);
-            this.label_gudi6.TabIndex = 10;
-            this.label_gudi6.Text = "■시설설명";
-            // 
-            // label_gudi7
-            // 
-            this.label_gudi7.AutoSize = true;
-            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi7.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi7.Location = new System.Drawing.Point(322, 75);
-            this.label_gudi7.Name = "label_gudi7";
-            this.label_gudi7.Size = new System.Drawing.Size(63, 16);
-            this.label_gudi7.TabIndex = 11;
-            this.label_gudi7.Text = "■상위시설";
-            // 
-            // label_gudi8
-            // 
-            this.label_gudi8.AutoSize = true;
-            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi8.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi8.Location = new System.Drawing.Point(322, 138);
-            this.label_gudi8.Name = "label_gudi8";
-            this.label_gudi8.Size = new System.Drawing.Size(63, 16);
-            this.label_gudi8.TabIndex = 12;
-            this.label_gudi8.Text = "■시설코드";
-            // 
-            // label_gudi9
-            // 
-            this.label_gudi9.AutoSize = true;
-            this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi9.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_gudi9.Location = new System.Drawing.Point(322, 201);
-            this.label_gudi9.Name = "label_gudi9";
-            this.label_gudi9.Size = new System.Drawing.Size(63, 16);
-            this.label_gudi9.TabIndex = 13;
-            this.label_gudi9.Text = "■시설구분";
-            // 
-            // label_gudi10
-            // 
-            this.label_gudi10.AutoSize = true;
-            this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi10.Location = new System.Drawing.Point(322, 264);
-            this.label_gudi10.Name = "label_gudi10";
-            this.label_gudi10.Size = new System.Drawing.Size(63, 16);
-            this.label_gudi10.TabIndex = 14;
-            this.label_gudi10.Text = "■수정시간";
-            // 
-            // cboFactoryGrade
-            // 
-            this.cboFactoryGrade.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboFactoryGrade.FormattingEnabled = true;
-            this.cboFactoryGrade.Items.AddRange(new object[] {
-            "회사",
-            "공장",
-            "창고"});
-            this.cboFactoryGrade.Location = new System.Drawing.Point(97, 72);
-            this.cboFactoryGrade.Name = "cboFactoryGrade";
-            this.cboFactoryGrade.Size = new System.Drawing.Size(145, 24);
-            this.cboFactoryGrade.TabIndex = 15;
-            // 
-            // cboCompanyCode
-            // 
-            this.cboCompanyCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboCompanyCode.FormattingEnabled = true;
-            this.cboCompanyCode.Location = new System.Drawing.Point(97, 194);
-            this.cboCompanyCode.Name = "cboCompanyCode";
-            this.cboCompanyCode.Size = new System.Drawing.Size(145, 24);
-            this.cboCompanyCode.TabIndex = 16;
-            // 
-            // cboFactoryYN
-            // 
-            this.cboFactoryYN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboFactoryYN.FormattingEnabled = true;
-            this.cboFactoryYN.Location = new System.Drawing.Point(97, 261);
-            this.cboFactoryYN.Name = "cboFactoryYN";
-            this.cboFactoryYN.Size = new System.Drawing.Size(145, 24);
-            this.cboFactoryYN.TabIndex = 17;
-            // 
-            // cboFactoryParent
-            // 
-            this.cboFactoryParent.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboFactoryParent.FormattingEnabled = true;
-            this.cboFactoryParent.Items.AddRange(new object[] {
-            "(주)구디"});
-            this.cboFactoryParent.Location = new System.Drawing.Point(405, 72);
-            this.cboFactoryParent.Name = "cboFactoryParent";
-            this.cboFactoryParent.Size = new System.Drawing.Size(145, 24);
-            this.cboFactoryParent.TabIndex = 18;
-            // 
-            // cboCompanyType
-            // 
-            this.cboCompanyType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboCompanyType.FormattingEnabled = true;
-            this.cboCompanyType.Location = new System.Drawing.Point(405, 198);
-            this.cboCompanyType.Name = "cboCompanyType";
-            this.cboCompanyType.Size = new System.Drawing.Size(145, 24);
-            this.cboCompanyType.TabIndex = 19;
-            // 
-            // txtFactoryName
-            // 
-            this.txtFactoryName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtFactoryName.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtFactoryName.Location = new System.Drawing.Point(97, 135);
-            this.txtFactoryName.Name = "txtFactoryName";
-            this.txtFactoryName.Size = new System.Drawing.Size(145, 25);
-            this.txtFactoryName.TabIndex = 20;
-            // 
-            // txtFactoryCode
-            // 
-            this.txtFactoryCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtFactoryCode.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtFactoryCode.Location = new System.Drawing.Point(405, 135);
-            this.txtFactoryCode.Name = "txtFactoryCode";
-            this.txtFactoryCode.Size = new System.Drawing.Size(145, 25);
-            this.txtFactoryCode.TabIndex = 21;
-            // 
-            // txtFactoryUdate
-            // 
-            this.txtFactoryUdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtFactoryUdate.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtFactoryUdate.Location = new System.Drawing.Point(405, 261);
-            this.txtFactoryUdate.Name = "txtFactoryUdate";
-            this.txtFactoryUdate.Size = new System.Drawing.Size(145, 25);
-            this.txtFactoryUdate.TabIndex = 22;
-            // 
-            // txtFactoryComment
-            // 
-            this.txtFactoryComment.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtFactoryComment.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtFactoryComment.Location = new System.Drawing.Point(97, 327);
-            this.txtFactoryComment.Multiline = true;
-            this.txtFactoryComment.Name = "txtFactoryComment";
-            this.txtFactoryComment.Size = new System.Drawing.Size(453, 116);
-            this.txtFactoryComment.TabIndex = 23;
+            this.label_gudi11.AutoSize = true;
+            this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi11.Location = new System.Drawing.Point(23, 315);
+            this.label_gudi11.Name = "label_gudi11";
+            this.label_gudi11.Size = new System.Drawing.Size(52, 16);
+            this.label_gudi11.TabIndex = 29;
+            this.label_gudi11.Text = "■수정자";
             // 
             // btnSave
             // 
@@ -280,7 +129,7 @@ namespace FinalProject1_winform
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(203, 456);
+            this.btnSave.Location = new System.Drawing.Point(203, 500);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 33);
             this.btnSave.TabIndex = 28;
@@ -296,23 +145,201 @@ namespace FinalProject1_winform
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(325, 456);
+            this.btnClose.Location = new System.Drawing.Point(325, 500);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(80, 33);
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
+            // txtFactoryComment
+            // 
+            this.txtFactoryComment.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtFactoryComment.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtFactoryComment.Location = new System.Drawing.Point(97, 371);
+            this.txtFactoryComment.Multiline = true;
+            this.txtFactoryComment.Name = "txtFactoryComment";
+            this.txtFactoryComment.Size = new System.Drawing.Size(453, 116);
+            this.txtFactoryComment.TabIndex = 23;
+            // 
+            // txtFactoryCode
+            // 
+            this.txtFactoryCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtFactoryCode.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtFactoryCode.Location = new System.Drawing.Point(405, 132);
+            this.txtFactoryCode.Name = "txtFactoryCode";
+            this.txtFactoryCode.Size = new System.Drawing.Size(145, 25);
+            this.txtFactoryCode.TabIndex = 21;
+            // 
+            // txtFactoryName
+            // 
+            this.txtFactoryName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtFactoryName.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtFactoryName.Location = new System.Drawing.Point(97, 132);
+            this.txtFactoryName.Name = "txtFactoryName";
+            this.txtFactoryName.Size = new System.Drawing.Size(145, 25);
+            this.txtFactoryName.TabIndex = 20;
+            // 
+            // cboCompanyType
+            // 
+            this.cboCompanyType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboCompanyType.FormattingEnabled = true;
+            this.cboCompanyType.Location = new System.Drawing.Point(405, 192);
+            this.cboCompanyType.Name = "cboCompanyType";
+            this.cboCompanyType.Size = new System.Drawing.Size(145, 24);
+            this.cboCompanyType.TabIndex = 19;
+            // 
+            // cboFactoryParent
+            // 
+            this.cboFactoryParent.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboFactoryParent.FormattingEnabled = true;
+            this.cboFactoryParent.Location = new System.Drawing.Point(405, 72);
+            this.cboFactoryParent.Name = "cboFactoryParent";
+            this.cboFactoryParent.Size = new System.Drawing.Size(145, 24);
+            this.cboFactoryParent.TabIndex = 18;
+            // 
+            // cboFactoryYN
+            // 
+            this.cboFactoryYN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboFactoryYN.FormattingEnabled = true;
+            this.cboFactoryYN.Items.AddRange(new object[] {
+            "사용",
+            "미사용"});
+            this.cboFactoryYN.Location = new System.Drawing.Point(97, 252);
+            this.cboFactoryYN.Name = "cboFactoryYN";
+            this.cboFactoryYN.Size = new System.Drawing.Size(145, 24);
+            this.cboFactoryYN.TabIndex = 17;
+            // 
+            // cboCompanyCode
+            // 
+            this.cboCompanyCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboCompanyCode.FormattingEnabled = true;
+            this.cboCompanyCode.Location = new System.Drawing.Point(97, 192);
+            this.cboCompanyCode.Name = "cboCompanyCode";
+            this.cboCompanyCode.Size = new System.Drawing.Size(145, 24);
+            this.cboCompanyCode.TabIndex = 16;
+            // 
+            // cboFactoryGrade
+            // 
+            this.cboFactoryGrade.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboFactoryGrade.FormattingEnabled = true;
+            this.cboFactoryGrade.Items.AddRange(new object[] {
+            "회사",
+            "공장",
+            "창고"});
+            this.cboFactoryGrade.Location = new System.Drawing.Point(97, 72);
+            this.cboFactoryGrade.Name = "cboFactoryGrade";
+            this.cboFactoryGrade.Size = new System.Drawing.Size(145, 24);
+            this.cboFactoryGrade.TabIndex = 15;
+            // 
+            // label_gudi10
+            // 
+            this.label_gudi10.AutoSize = true;
+            this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi10.Location = new System.Drawing.Point(322, 255);
+            this.label_gudi10.Name = "label_gudi10";
+            this.label_gudi10.Size = new System.Drawing.Size(63, 16);
+            this.label_gudi10.TabIndex = 14;
+            this.label_gudi10.Text = "■수정시간";
+            // 
+            // label_gudi9
+            // 
+            this.label_gudi9.AutoSize = true;
+            this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi9.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi9.Location = new System.Drawing.Point(322, 195);
+            this.label_gudi9.Name = "label_gudi9";
+            this.label_gudi9.Size = new System.Drawing.Size(63, 16);
+            this.label_gudi9.TabIndex = 13;
+            this.label_gudi9.Text = "■시설구분";
+            // 
+            // label_gudi8
+            // 
+            this.label_gudi8.AutoSize = true;
+            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi8.Location = new System.Drawing.Point(322, 135);
+            this.label_gudi8.Name = "label_gudi8";
+            this.label_gudi8.Size = new System.Drawing.Size(63, 16);
+            this.label_gudi8.TabIndex = 12;
+            this.label_gudi8.Text = "■시설코드";
+            // 
+            // label_gudi7
+            // 
+            this.label_gudi7.AutoSize = true;
+            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi7.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi7.Location = new System.Drawing.Point(322, 75);
+            this.label_gudi7.Name = "label_gudi7";
+            this.label_gudi7.Size = new System.Drawing.Size(63, 16);
+            this.label_gudi7.TabIndex = 11;
+            this.label_gudi7.Text = "■상위시설";
+            // 
+            // label_gudi6
+            // 
+            this.label_gudi6.AutoSize = true;
+            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi6.Location = new System.Drawing.Point(23, 371);
+            this.label_gudi6.Name = "label_gudi6";
+            this.label_gudi6.Size = new System.Drawing.Size(63, 16);
+            this.label_gudi6.TabIndex = 10;
+            this.label_gudi6.Text = "■시설설명";
+            // 
+            // label_gudi5
+            // 
+            this.label_gudi5.AutoSize = true;
+            this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi5.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi5.Location = new System.Drawing.Point(23, 255);
+            this.label_gudi5.Name = "label_gudi5";
+            this.label_gudi5.Size = new System.Drawing.Size(63, 16);
+            this.label_gudi5.TabIndex = 9;
+            this.label_gudi5.Text = "■사용유무";
+            // 
+            // label_gudi4
+            // 
+            this.label_gudi4.AutoSize = true;
+            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi4.Location = new System.Drawing.Point(23, 195);
+            this.label_gudi4.Name = "label_gudi4";
+            this.label_gudi4.Size = new System.Drawing.Size(41, 16);
+            this.label_gudi4.TabIndex = 8;
+            this.label_gudi4.Text = "■업체";
+            // 
+            // label_gudi3
+            // 
+            this.label_gudi3.AutoSize = true;
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi3.Location = new System.Drawing.Point(23, 135);
+            this.label_gudi3.Name = "label_gudi3";
+            this.label_gudi3.Size = new System.Drawing.Size(52, 16);
+            this.label_gudi3.TabIndex = 7;
+            this.label_gudi3.Text = "■시설명";
+            // 
+            // label_gudi2
+            // 
+            this.label_gudi2.AutoSize = true;
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi2.Location = new System.Drawing.Point(23, 75);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(52, 16);
+            this.label_gudi2.TabIndex = 6;
+            this.label_gudi2.Text = "■시설군";
+            // 
             // frmFactoryIns
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(601, 501);
+            this.ClientSize = new System.Drawing.Size(601, 574);
+            this.Controls.Add(this.dtpUdate);
+            this.Controls.Add(this.txtUadmin);
+            this.Controls.Add(this.label_gudi11);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtFactoryComment);
-            this.Controls.Add(this.txtFactoryUdate);
             this.Controls.Add(this.txtFactoryCode);
             this.Controls.Add(this.txtFactoryName);
             this.Controls.Add(this.cboCompanyType);
@@ -332,6 +359,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmFactoryIns";
             this.Text = "frmFactoryIns";
+            this.Load += new System.EventHandler(this.frmFactoryIns_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.ResumeLayout(false);
@@ -360,9 +388,11 @@ namespace FinalProject1_winform
         private ComboBox_gudi cboCompanyType;
         private Controls.TextBox_gudi txtFactoryName;
         private Controls.TextBox_gudi txtFactoryCode;
-        private Controls.TextBox_gudi txtFactoryUdate;
         private Controls.TextBox_gudi txtFactoryComment;
         private Button_gudi btnSave;
         private Button_gudi btnClose;
+        private Controls.TextBox_gudi txtUadmin;
+        private Label_gudi label_gudi11;
+        private DateTimePick_Format_Time dtpUdate;
     }
 }

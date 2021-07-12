@@ -19,5 +19,7 @@ namespace FinalProject1_VO
         public string factory_uadmin { get; set; }
         public string factory_udate { get; set; }
         public string factory_comment { get; set; }
+        public string common_name { get; set; }
+        public string common_value { get; set; }
     }
 }

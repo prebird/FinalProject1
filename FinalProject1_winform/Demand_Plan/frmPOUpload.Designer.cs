@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProject1_winform
 {
-    partial class frmPOInsert
+    partial class frmPOUpload
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOInsert));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOUpload));
             this.txt_FileName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
+            this.btn_Insert = new FinalProject1_winform.Button_gudi();
+            this.btn_Cancel = new FinalProject1_winform.Button_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -78,38 +78,39 @@ namespace FinalProject1_winform
             this.label_gudi1.TabIndex = 2;
             this.label_gudi1.Text = "고객 발주서 업로드";
             // 
-            // button_gudi2
+            // btn_Insert
             // 
-            this.button_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi2.ForeColor = System.Drawing.Color.White;
-            this.button_gudi2.Location = new System.Drawing.Point(196, 17);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi2.TabIndex = 5;
-            this.button_gudi2.Text = "저장";
-            this.button_gudi2.UseVisualStyleBackColor = false;
+            this.btn_Insert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btn_Insert.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btn_Insert.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_Insert.FlatAppearance.BorderSize = 0;
+            this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Insert.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Insert.ForeColor = System.Drawing.Color.White;
+            this.btn_Insert.Location = new System.Drawing.Point(123, 17);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(80, 33);
+            this.btn_Insert.TabIndex = 5;
+            this.btn_Insert.Text = "업로드";
+            this.btn_Insert.UseVisualStyleBackColor = false;
             // 
-            // button_gudi1
+            // btn_Cancel
             // 
-            this.button_gudi1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(119, 17);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi1.TabIndex = 6;
-            this.button_gudi1.Text = "닫기";
-            this.button_gudi1.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btn_Cancel.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancel.FlatAppearance.BorderSize = 0;
+            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancel.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancel.Location = new System.Drawing.Point(210, 17);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(80, 33);
+            this.btn_Cancel.TabIndex = 6;
+            this.btn_Cancel.Text = "닫기";
+            this.btn_Cancel.UseVisualStyleBackColor = false;
             // 
             // label_gudi4
             // 
@@ -117,9 +118,9 @@ namespace FinalProject1_winform
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi4.Location = new System.Drawing.Point(55, 135);
             this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi4.Size = new System.Drawing.Size(76, 17);
             this.label_gudi4.TabIndex = 52;
-            this.label_gudi4.Text = "■ 파일명";
+            this.label_gudi4.Text = "■ 파일 경로";
             // 
             // label_gudi2
             // 
@@ -127,15 +128,15 @@ namespace FinalProject1_winform
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi2.Location = new System.Drawing.Point(55, 92);
             this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi2.Size = new System.Drawing.Size(76, 17);
             this.label_gudi2.TabIndex = 51;
-            this.label_gudi2.Text = "■ 발주서";
+            this.label_gudi2.Text = "■ 파일 탐색";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.button_gudi2);
-            this.panel2.Controls.Add(this.button_gudi1);
+            this.panel2.Controls.Add(this.btn_Insert);
+            this.panel2.Controls.Add(this.btn_Cancel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 314);
             this.panel2.Name = "panel2";
@@ -169,6 +170,7 @@ namespace FinalProject1_winform
             this.btn_SearchFile.TabIndex = 78;
             this.btn_SearchFile.Text = "   파일선택";
             this.btn_SearchFile.UseVisualStyleBackColor = false;
+            this.btn_SearchFile.Click += new System.EventHandler(this.btn_SearchFile_Click);
             // 
             // dtp_Date
             // 
@@ -185,9 +187,9 @@ namespace FinalProject1_winform
             this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi14.Location = new System.Drawing.Point(55, 178);
             this.label_gudi14.Name = "label_gudi14";
-            this.label_gudi14.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi14.Size = new System.Drawing.Size(76, 17);
             this.label_gudi14.TabIndex = 79;
-            this.label_gudi14.Text = "■ 계획일자";
+            this.label_gudi14.Text = "■ 계획 일자";
             // 
             // txt_Version
             // 
@@ -208,7 +210,7 @@ namespace FinalProject1_winform
             this.label_gudi3.TabIndex = 81;
             this.label_gudi3.Text = "■ Version";
             // 
-            // frmPOInsert
+            // frmPOUpload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +225,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmPOInsert";
+            this.Name = "frmPOUpload";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmSMUpload";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
@@ -238,8 +240,8 @@ namespace FinalProject1_winform
         private Controls.TextBox_gudi txt_FileName;
         private PictureBox_gudi pictureBox_gudi1;
         private Label_gudi label_gudi1;
-        private Button_gudi button_gudi2;
-        private Button_gudi button_gudi1;
+        private Button_gudi btn_Insert;
+        private Button_gudi btn_Cancel;
         private Label_gudi label_gudi4;
         private Label_gudi label_gudi2;
         private System.Windows.Forms.Panel panel2;
