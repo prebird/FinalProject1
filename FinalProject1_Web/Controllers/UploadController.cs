@@ -14,34 +14,30 @@ namespace FinalProject1_Web.Controllers
     public class UploadController : ApiController
     {
         //POST : https://localhost:44394/api/Upload
-        public async Task<HttpResponseMessage> PostFormData()
+        public HttpResponseMessage Post()
         {
-            // Check if the request contains multipart/form-data.
-            if (!Request.Content.IsMimeMultipartContent())
+            HttpResponseMessage result = null;
+
+            if (HttpContext.Current.Request.Files.Count > 0)
             {
-                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
-            }
-
-            string root = HttpContext.Current.Server.MapPath("~/App_Data");
-            var provider = new MultipartFormDataStreamProvider(root);
-
-            try
-            {
-                // Read the form data.
-                await Request.Content.ReadAsMultipartAsync(provider);
-
-                // This illustrates how to get the file names.
-                foreach (MultipartFileData file in provider.FileData)
+                foreach (string file in HttpContext.Current.Request.Files)
                 {
-                    Trace.WriteLine(file.Headers.ContentDisposition.FileName);
-                    Trace.WriteLine("Server file path: " + file.LocalFileName);
+                    var postedFile = HttpContext.Current.Request.Files[file];
+                    var orgFileName = postedFile.FileName;
+
+                    //웹서버의 URL로부터 물리적인 서버의 경로를 알아낸다.
+                    var filePath = HttpContext.Current.Server.MapPath("~/Uploads/");
+                    postedFile.SaveAs(filePath + orgFileName);
                 }
-                return Request.CreateResponse(HttpStatusCode.OK);
+
+                result = Request.CreateResponse(HttpStatusCode.Created);
             }
-            catch (System.Exception e)
+            else
             {
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
+                result = Request.CreateResponse(HttpStatusCode.BadRequest);
             }
+
+            return result;
         }
     }
 }

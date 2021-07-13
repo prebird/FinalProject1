@@ -143,6 +143,7 @@
     <Compile Include="BaseInformation\PerPrice\frmPPriceIns.Designer.cs">
       <DependentUpon>frmPPriceIns.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonUtil\CallService.cs" />
     <Compile Include="Controls\CustomTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
