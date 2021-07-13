@@ -16,6 +16,7 @@ namespace FinalProject1_winform
     {
         public DataTable ExcelData { get; set; }
         public string PlanDate { get; set; }
+        public string PlanID { get; set; }
 
         public frmPOUpload()
         {
@@ -26,13 +27,13 @@ namespace FinalProject1_winform
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "Excel Files(*.xlsx)| *.xlsx|Excel Files(*.xls)|*.xls";
+
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 string Excel03ConString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
                 string Excel07ConString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
 
                 string Filename = dlg.FileName;
-                PlanDate = dtp_Date.Value.ToString("yy-MM-dd");
                 txt_FileName.Text = Filename;
 
                 string fileExtension = System.IO.Path.GetExtension(Filename);
@@ -61,6 +62,19 @@ namespace FinalProject1_winform
 
                 ExcelData = dt;
             }
+        }
+
+        private void btn_Insert_Click(object sender, EventArgs e)
+        {
+            //if (string.IsNullOrWhiteSpace(txt_PlanID.Text))
+            //{
+            //    MessageBox.Show("계획기준 버전 내용을 입력하세요.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+
+            PlanDate = dtp_Date.Value.ToString("yy-MM-dd");
+            PlanID = txt_PlanID.Text;
+
         }
     }
 }
