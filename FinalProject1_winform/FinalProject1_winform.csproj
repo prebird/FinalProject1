@@ -168,6 +168,12 @@
     <Compile Include="Item\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchasing\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Purchasing\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\PerPriceService.cs" />
     <Compile Include="Service\DMService.cs" />
     <Compile Include="frmCommonCode.cs">
@@ -521,7 +527,7 @@
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\processEquipmentService.cs" />
     <Compile Include="Service\RestockService.cs" />
-    <Compile Include="ShiftService.cs" />
+    <Compile Include="Service\ShiftService.cs" />
     <Compile Include="Service\SMService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
@@ -708,6 +714,9 @@
     <EmbeddedResource Include="Purchasing\frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -724,7 +733,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InStock\" />
-    <Folder Include="MRP\" />
     <Folder Include="ReStock\" />
     <Folder Include="Shift\" />
   </ItemGroup>
