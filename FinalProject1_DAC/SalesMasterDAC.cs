@@ -114,6 +114,20 @@ namespace FinalProject1_DAC
             }
         }
 
+        // 삭제
+        public bool DeleteSM(int SalesMasterID)
+        {
+            string sql = "update PurchaseOrder set PO_Deleted = 1 where PO_ID = @PO_ID";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@PO_ID", SalesMasterID);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
+            }
+        }
+
 
 
     }

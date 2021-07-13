@@ -33,7 +33,7 @@ namespace FinalProject1_winform
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi6 = new FinalProject1_winform.Button_gudi();
+            this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_SalesMaster = new FinalProject1_winform.DGV_gudi();
@@ -76,24 +76,25 @@ namespace FinalProject1_winform
             this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi5.UseVisualStyleBackColor = false;
             // 
-            // button_gudi6
+            // btn_Delete
             // 
-            this.button_gudi6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi6.FlatAppearance.BorderSize = 0;
-            this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi6.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
-            this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(950, 113);
-            this.button_gudi6.Name = "button_gudi6";
-            this.button_gudi6.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi6.TabIndex = 29;
-            this.button_gudi6.Text = "삭제";
-            this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi6.UseVisualStyleBackColor = false;
+            this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_Delete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Delete.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Delete.ForeColor = System.Drawing.Color.Black;
+            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
+            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Delete.Location = new System.Drawing.Point(950, 113);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(60, 25);
+            this.btn_Delete.TabIndex = 29;
+            this.btn_Delete.Text = "삭제";
+            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // button_gudi3
             // 
@@ -326,7 +327,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.label_gudi1);
             this.Controls.Add(this.button_gudi5);
-            this.Controls.Add(this.button_gudi6);
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.button_gudi3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
@@ -346,7 +347,7 @@ namespace FinalProject1_winform
 
         #endregion
         private Button_gudi button_gudi5;
-        private Button_gudi button_gudi6;
+        private Button_gudi btn_Delete;
         private Button_gudi button_gudi3;
         private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;

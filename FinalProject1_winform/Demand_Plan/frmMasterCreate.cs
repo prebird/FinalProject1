@@ -47,10 +47,14 @@ namespace FinalProject1_winform
         // 영업 마스터 생성
         private void btn_Create_Click(object sender, EventArgs e)
         {
+            if (dgv_PO.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
 
             if (MessageBox.Show("생성 하시겠습니까?", "입력 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
 
                 SalesMasterVO smVO = new SalesMasterVO()
                 {
@@ -62,7 +66,7 @@ namespace FinalProject1_winform
                     PO_ProductID = Convert.ToInt32(dgv_PO.SelectedRows[0].Cells[5].Value),
                     PO_OrderCnt = Convert.ToInt32(dgv_PO.SelectedRows[0].Cells[6].Value),
                     PO_DeadLine = dgv_PO.SelectedRows[0].Cells[7].Value.ToString(),
-                    PO_UploadDate = DateTime.Now.ToString("yy-MM-dd")
+                    PO_UploadDate = DateTime.Now.ToString("yyyy-MM-dd")
                 };
 
                 SMService service = new SMService();
@@ -73,9 +77,6 @@ namespace FinalProject1_winform
                 else
                     MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
 
         private void frmMasterCreate_Load(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace FinalProject1_VO
         public string PO_Destination { get; set; }
         public string PO_CusProductName { get; set; } // Excel 선입력
         public int PO_ProductID { get; set; } // Excel 선입력
-        public int Item_Name { get; set; } // PO_ProductID로 Join
+        public string Item_Name { get; set; } // PO_ProductID로 Join
         public int PO_OrderCnt { get; set; } // Excel 선입력
         public int PO_OutCnt { get; set; }
         public int PO_CancelCnt { get; set; }

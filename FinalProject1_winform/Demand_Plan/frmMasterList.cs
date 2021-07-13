@@ -44,5 +44,33 @@ namespace FinalProject1_winform
             List<SalesMasterVO> list = service.GetAllSM();
             dgv_SalesMaster.DataSource = list;
         }
+
+        // 삭제
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (dgv_SalesMaster.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (MessageBox.Show("삭제 하시겠습니까?", "입력 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                int SalesMasterID = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[0].Value);
+
+                SMService service = new SMService();
+                bool result = service.DeleteSM(SalesMasterID);
+
+                if (result)
+                {
+                    MessageBox.Show("삭제 되었습니다.");
+                    LoadData();
+                }
+                else
+                    MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }
+
