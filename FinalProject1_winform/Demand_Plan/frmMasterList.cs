@@ -19,14 +19,15 @@ namespace FinalProject1_winform
         private void frmMasterList_Load(object sender, EventArgs e)
         {
             CommonUtil.SetInitGridView(dgv_SalesMaster);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "영업마스터 번호", "PO_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "WO", "PO_WorkOrderID", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획기준 버전", "PO_PlanID", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "일련 번호", "PO_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 95);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "WO ID", "PO_WorkOrderID", DataGridViewContentAlignment.MiddleCenter, colWidth: 115);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획기준 버전", "PO_PlanID", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "업체명", "PO_CompanyName", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "납품처", "PO_CompanyType", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "도착지", "PO_Destination", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "입고P/NO", "PO_CusProductName", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "제품명", "Item_Name", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획수량 합계", "PO_OrderCnt", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획수량 합계", "PO_OrderCnt", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "출고 수량", "PO_OutCnt", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "취소 수량", "PO_CancelCnt", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "납기일", "PO_DeadLine", DataGridViewContentAlignment.MiddleCenter);

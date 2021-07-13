@@ -52,9 +52,9 @@ namespace FinalProject1_DAC
         // 전체 조회
         public List<SalesMasterVO> GetAllSM()
         {
-            string sql = @"select PO_ID, PO_WorkOrderID, PO_PlanID, PO_CompanyName, PO_CompanyType, PO_Destination, PO_CusProductName, PO_ProductID, 
+            string sql = @"select PO_ID, PO_WorkOrderID, PO_PlanID, PO_CompanyName, PO_CompanyType, PO_Destination, PO_CusProductName, Item_Name, 
                            PO_OrderCnt, PO_OutCnt, PO_CancelCnt, PO_DeadLine, PO_UploadDate, PO_EditManger, PO_EditDate, PO_Content
-                           from PurchaseOrder
+                           from PurchaseOrder PO inner join Item I on po.PO_ProductID = i.Item_ID
                            where PO_Deleted = 0";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
