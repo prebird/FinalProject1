@@ -8,7 +8,7 @@ namespace FinalProject1_VO
 {
     public class DemandPlanVO
     {
-
+        public string PlanID { get; set; }
 
     }
 }

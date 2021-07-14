@@ -11,7 +11,7 @@ namespace FinalProject1_winform
 {
     public partial class frmMrp : FinalProject1_winform.Basic3
     {
-        List<MRPVO> mrpDatas;
+        DataTable dtMRP;
         public frmMrp()
         {
             InitializeComponent();
@@ -23,9 +23,20 @@ namespace FinalProject1_winform
             dtp1.ToDate = DateTime.Now;
 
             // 콤보바인딩
-            
+            CommonUtil.ComboBindingPlanID(cboPlanID);
+
+            //
+            CommonUtil.ComboBindingProductID(cboProductID);
 
             // dgv
+            //CommonUtil.SetInitGridView(dgv1);
+            CommonUtil.AddGridTextColumn(dgv1, "품번", "itemid", colWidth: 80);
+            CommonUtil.AddGridTextColumn(dgv1, "품명", "Item_Name", colWidth: 200);
+            CommonUtil.AddGridTextColumn(dgv1, "구분", "gubun", colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgv1, "카테고리", "Category", colWidth: 100, visibility: false);
+            CommonUtil.AddGridTextColumn(dgv1, "정렬", "SortNum", colWidth: 100, visibility: false);
+
+
 
 
 
@@ -35,15 +46,15 @@ namespace FinalProject1_winform
         private void btnSearch_Click(object sender, EventArgs e)
         {
             MRPSearchVO search = new MRPSearchVO();
-            search.PlanID = cboPlanID.SelectedText;
+            search.PlanID = (cboPlanID.SelectedText == "선택")? "": cboPlanID.SelectedText;
             search.FromDate = dtp1.FromDate.ToString();
             search.Todate = dtp1.ToDate.ToString();
-            search.ProductID = Convert.ToInt32(cboProductID.SelectedValue.ToString());
+            search.ProductID = cboProductID.SelectedValue.ToString().ZeroOrNum();
 
             RestockService service = new RestockService();
-            mrpDatas =  service.GetMRP(search);
+            dtMRP =  service.GetMRP(search);
 
-            dgv1.DataSource = mrpDatas;
+            dgv1.DataSource = dtMRP;
         }
     }
 }

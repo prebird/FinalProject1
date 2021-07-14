@@ -74,5 +74,26 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
             }
         }
 
+        // 콤보박스 planid 가져오기용
+        public List<DemandPlanVO> GetCommboDemandPlan()
+        {
+            string sql = "Select distinct PlanID from Demandplan ";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<DemandPlanVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // 콤보박스 productName 가져오기용
+        public List<ItemVO> GetCommboProductName()
+        {
+            string sql = "select Item_ID, Item_Name from Item where Item_Category = '완제품'";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+            }
+        }
+
+
     }
 }

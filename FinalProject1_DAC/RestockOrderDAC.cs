@@ -57,19 +57,22 @@ where ro.ro_id in (" + strCheckBarCodeID + ")";
             return dt;
         }
 
-        public List<MRPVO> GetMRP(MRPSearchVO search)
+        public DataTable GetMRP(MRPSearchVO search)
         {
             string sql = "SP_ShowMRP";
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(strConn))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@P_StartDT", search.FromDate);
-                cmd.Parameters.AddWithValue("@P_EndDT", search.Todate);
-                cmd.Parameters.AddWithValue("@PlanID", search.PlanID);
-                cmd.Parameters.AddWithValue("@ProductID", search.ProductID);
-
-                return Helper.DataReaderMapToList<MRPVO>(cmd.ExecuteReader());
+                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@P_StartDT", search.FromDate);
+                da.SelectCommand.Parameters.AddWithValue("@P_EndDT", search.Todate);
+                da.SelectCommand.Parameters.AddWithValue("@PlanID", search.PlanID);
+                da.SelectCommand.Parameters.AddWithValue("@ProductID", search.ProductID);
+                da.Fill(dt);
             }
+            return dt;
+
         }
     }
 }

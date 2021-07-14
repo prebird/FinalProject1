@@ -36,6 +36,7 @@ namespace FinalProject1_winform
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.dtp1 = new FinalProject1_winform.UcDateTimePicker();
+            this.cboProductID = new FinalProject1_winform.ComboBox_gudi();
             this.cboPlanID = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
@@ -44,7 +45,6 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.btnExcel = new FinalProject1_winform.Button_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
-            this.cboProductID = new FinalProject1_winform.ComboBox_gudi();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -53,6 +53,8 @@ namespace FinalProject1_winform
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.label_gudi6);
             this.panel1.Controls.Add(this.btnSearch);
@@ -103,6 +105,15 @@ namespace FinalProject1_winform
             this.dtp1.Size = new System.Drawing.Size(257, 36);
             this.dtp1.TabIndex = 2;
             this.dtp1.ToDate = new System.DateTime(2021, 6, 25, 14, 0, 31, 69);
+            // 
+            // cboProductID
+            // 
+            this.cboProductID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboProductID.FormattingEnabled = true;
+            this.cboProductID.Location = new System.Drawing.Point(824, 26);
+            this.cboProductID.Name = "cboProductID";
+            this.cboProductID.Size = new System.Drawing.Size(200, 24);
+            this.cboProductID.TabIndex = 1;
             // 
             // cboPlanID
             // 
@@ -159,13 +170,14 @@ namespace FinalProject1_winform
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv1.HeaderCheckStatus = false;
-            this.dgv1.Location = new System.Drawing.Point(3, 3);
+            this.dgv1.Location = new System.Drawing.Point(0, 0);
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersVisible = false;
             this.dgv1.RowTemplate.Height = 23;
-            this.dgv1.Size = new System.Drawing.Size(1353, 494);
+            this.dgv1.Size = new System.Drawing.Size(1359, 497);
             this.dgv1.TabIndex = 0;
             // 
             // pictureBox_gudi2
@@ -205,15 +217,6 @@ namespace FinalProject1_winform
             this.label_gudi5.Size = new System.Drawing.Size(82, 18);
             this.label_gudi5.TabIndex = 10;
             this.label_gudi5.Text = "자재소요계획";
-            // 
-            // cboProductID
-            // 
-            this.cboProductID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboProductID.FormattingEnabled = true;
-            this.cboProductID.Location = new System.Drawing.Point(824, 26);
-            this.cboProductID.Name = "cboProductID";
-            this.cboProductID.Size = new System.Drawing.Size(200, 24);
-            this.cboProductID.TabIndex = 1;
             // 
             // frmMrp
             // 
