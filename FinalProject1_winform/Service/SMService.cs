@@ -50,6 +50,15 @@ namespace FinalProject1_winform
         //    return list;
         //}
 
+        public bool UpdateSM(SalesMasterVO smVO)
+        {
+            SalesMasterDAC dac = new SalesMasterDAC();
+            bool result = dac.UpdateSM(smVO);
+            dac.Dispose();
+
+            return result;
+        }
+
         public bool DeleteSM(int SalesMasterID)
         {
             SalesMasterDAC dac = new SalesMasterDAC();
@@ -58,6 +67,5 @@ namespace FinalProject1_winform
 
             return result;
         }
-
     }
 }

@@ -11,7 +11,7 @@ namespace FinalProject1_winform
 {
     public partial class frmMasterCreate : FinalProject1_winform.Basic3
     {
-        string PlanID;
+        string _PlanID;
 
         public frmMasterCreate()
         {
@@ -29,7 +29,7 @@ namespace FinalProject1_winform
 
                 DataTable dt = frm.ExcelData;
                 string planDate = frm.PlanDate;
-                PlanID = frm.PlanID;
+                _PlanID = frm.PlanID;
 
                 // 계획일자를 POUpload 폼에서 받아와 그리드뷰 맨 첫칸에 표시.
                 dt.Columns.Add(new DataColumn("planDate", typeof(string)));
@@ -49,7 +49,7 @@ namespace FinalProject1_winform
         {
             if (dgv_PO.SelectedRows.Count < 1)
             {
-                MessageBox.Show("행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("발주서 엑셀을 업로드 해주세요..", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }    
 
@@ -58,7 +58,7 @@ namespace FinalProject1_winform
 
                 SalesMasterVO smVO = new SalesMasterVO()
                 {
-                    PO_PlanID = PlanID,
+                    PO_PlanID = _PlanID,
                     PO_WorkOrderID = dgv_PO.SelectedRows[0].Cells[1].Value.ToString(),
                     PO_CompanyName = dgv_PO.SelectedRows[0].Cells[2].Value.ToString(),
                     PO_CompanyType = dgv_PO.SelectedRows[0].Cells[3].Value.ToString(),

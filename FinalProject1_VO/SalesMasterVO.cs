@@ -22,7 +22,7 @@ namespace FinalProject1_VO
         public int PO_CancelCnt { get; set; }
         public string PO_DeadLine { get; set; } // Excel 선입력
         public string PO_UploadDate { get; set; } // 업로드시 선택
-        public string PO_EditManger { get; set; }
+        public string PO_EditManager { get; set; }
         public string PO_EditDate { get; set; } // 등록하는 날짜로 
         public string PO_Content { get; set; }
 
