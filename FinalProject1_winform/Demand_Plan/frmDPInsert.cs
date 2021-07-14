@@ -12,9 +12,10 @@ namespace FinalProject1_winform
 {
     public partial class frmDPInsert : Form
     {
-        public frmDPInsert()
+        public frmDPInsert(string PlanID)
         {
             InitializeComponent();
+            txt_PlanID.Text = PlanID;
         }
     }
 }

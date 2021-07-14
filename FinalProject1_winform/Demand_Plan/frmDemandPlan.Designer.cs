@@ -36,11 +36,6 @@ namespace FinalProject1_winform
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -126,12 +121,6 @@ namespace FinalProject1_winform
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgV_gudi1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgV_gudi1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_gudi1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dgV_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgV_gudi1.HeaderCheckStatus = false;
             this.dgV_gudi1.Location = new System.Drawing.Point(3, 3);
@@ -140,31 +129,6 @@ namespace FinalProject1_winform
             this.dgV_gudi1.RowTemplate.Height = 23;
             this.dgV_gudi1.Size = new System.Drawing.Size(1051, 453);
             this.dgV_gudi1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "수요계획번호";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "PO 번호";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "계획번호";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "수요날짜";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "수요계획";
-            this.Column5.Name = "Column5";
             // 
             // pictureBox_gudi2
             // 
@@ -339,7 +303,7 @@ namespace FinalProject1_winform
             this.button_gudi4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi4.UseVisualStyleBackColor = false;
             // 
-            // frmDemandPlannig
+            // frmDemandPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
@@ -350,7 +314,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmDemandPlannig";
+            this.Name = "frmDemandPlan";
             this.Text = "frmDemandPlan";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
@@ -380,11 +344,6 @@ namespace FinalProject1_winform
         private Controls.TextBox_gudi textBox_gudi1;
         private Label_gudi label_gudi4;
         private DGV_gudi dgV_gudi1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private Button_gudi button_gudi4;
     }
 }

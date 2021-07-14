@@ -32,11 +32,10 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "취소 수량", "PO_CancelCnt", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "납기일", "PO_DeadLine", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "업로드 날짜", "PO_UploadDate", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "수정자", "PO_EditManger", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "수정자", "PO_EditManager", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "수정일", "PO_EditDate", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "비고", "PO_Content", DataGridViewContentAlignment.MiddleCenter);
             LoadData();
-
         }
         public void LoadData()
         {
@@ -70,6 +69,47 @@ namespace FinalProject1_winform
                     MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        // 영업마스터 정보 취합 등록.
+        private void btn_Insert_Click(object sender, EventArgs e)
+        {
+            if (dgv_SalesMaster.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int SalesMasterID = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[0].Value);
+
+            frmMasterInsert frm = new frmMasterInsert(SalesMasterID);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("입력 되었습니다.");
+                LoadData();
+            }
+        }
+
+        private void btn_PlanCreate_Click(object sender, EventArgs e)
+        {
+            if (dgv_SalesMaster.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("행을 선택해 주십시오.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string PlanID = dgv_SalesMaster.SelectedRows[0].Cells[2].Value.ToString();
+
+            DemandPlanVO dmVO = new DemandPlanVO()
+            {
+                //PO_ID = ,
+                //PlanID = ,
+                //Dplan_Date =,
+                //Dplan_Quantity = ,
+            };
+            
+
+   
         }
     }
 }
