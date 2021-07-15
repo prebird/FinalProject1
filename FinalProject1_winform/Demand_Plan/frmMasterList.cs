@@ -99,9 +99,9 @@ namespace FinalProject1_winform
             }
 
             frmDPInsert frm = new frmDPInsert();
-
             if (frm.ShowDialog() == DialogResult.OK)
             {
+                MessageBox.Show("입력 되었습니다.");
                 LoadData();
             }
             //else

@@ -24,9 +24,9 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
-        //public DataTable GetPlanList()
-        //{
-            
-        //}
+        public DataTable GetPlanList()
+        {
+
+        }
     }
 }

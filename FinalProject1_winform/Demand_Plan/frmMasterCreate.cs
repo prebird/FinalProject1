@@ -49,7 +49,7 @@ namespace FinalProject1_winform
         {
             if (dgv_PO.SelectedRows.Count < 1)
             {
-                MessageBox.Show("발주서 엑셀을 업로드 해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("발주서 엑셀을 업로드 해주세요..", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }    
 
