@@ -35,6 +35,7 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv1, "구분", "gubun", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv1, "카테고리", "Category", colWidth: 100, visibility: false);
             CommonUtil.AddGridTextColumn(dgv1, "정렬", "SortNum", colWidth: 100, visibility: false);
+            CommonUtil.AddGridTextColumn(dgv1, "a", "a", colWidth: 200, visibility: false);
 
 
 

@@ -41,7 +41,7 @@ namespace FinalProject1_winform
             this.pnlUpSide.Location = new System.Drawing.Point(0, 0);
             this.pnlUpSide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlUpSide.Name = "pnlUpSide";
-            this.pnlUpSide.Size = new System.Drawing.Size(1924, 148);
+            this.pnlUpSide.Size = new System.Drawing.Size(1684, 99);
             this.pnlUpSide.TabIndex = 0;
             // 
             // pnlSideBar
@@ -49,30 +49,29 @@ namespace FinalProject1_winform
             this.pnlSideBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlSideBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSideBar.Location = new System.Drawing.Point(0, 148);
+            this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
             this.pnlSideBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(285, 913);
+            this.pnlSideBar.Size = new System.Drawing.Size(206, 862);
             this.pnlSideBar.TabIndex = 1;
             // 
             // tabControl1
             // 
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Location = new System.Drawing.Point(285, 148);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(206, 99);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1639, 33);
+            this.tabControl1.Size = new System.Drawing.Size(1478, 33);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1684, 961);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pnlSideBar);
             this.Controls.Add(this.pnlUpSide);
