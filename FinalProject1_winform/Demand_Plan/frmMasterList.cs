@@ -98,18 +98,17 @@ namespace FinalProject1_winform
                 return;
             }
 
-            string PlanID = dgv_SalesMaster.SelectedRows[0].Cells[2].Value.ToString();
+            frmDPInsert frm = new frmDPInsert();
 
-            DemandPlanVO dmVO = new DemandPlanVO()
+            if (frm.ShowDialog() == DialogResult.OK)
             {
-                //PO_ID = ,
-                //PlanID = ,
-                //Dplan_Date =,
-                //Dplan_Quantity = ,
-            };
-            
+                LoadData();
+            }
+            //else
+            //{
+            //    MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
-   
         }
     }
 }

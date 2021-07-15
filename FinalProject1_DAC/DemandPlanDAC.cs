@@ -26,6 +26,36 @@ namespace FinalProject1_DAC
         {
             conn.Close();
         }
-    
+
+        public List<SalesMasterVO> GetPlanSM()
+        {
+            string sql = @"select PO_ID, PO_WorkOrderID, PO_PlanID, PO_CompanyName, PO_CompanyType, PO_Destination, PO_CusProductName, Item_Name, 
+                           PO_OrderCnt, PO_OutCnt, PO_CancelCnt, PO_DeadLine, PO_UploadDate, PO_EditManager, PO_EditDate, PO_Content
+                           from PurchaseOrder PO inner join Item I on po.PO_ProductID = i.Item_ID
+                           where PO_Deleted = 0 and ISNULL(PO_PlanID,'') = ''";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<SalesMasterVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public bool DMInsertTrans(DemandPlanVO dmVO)
+        {
+            string sql = @"SP_DemandPlanTransInsert";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@PO_ID", dmVO.PO_ID);
+                cmd.Parameters.AddWithValue("@PlanID", dmVO.PlanID);
+                cmd.Parameters.AddWithValue("@Dplan_Date", dmVO.Dplan_Date);
+                cmd.Parameters.AddWithValue("@Dplan_Quantity", dmVO.Dplan_Quantity);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
+        }
     }
 }

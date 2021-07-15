@@ -50,5 +50,13 @@ namespace FinalProject1_winform
             return result;
         }
 
+        public List<PerPriceVO> GetSelectedPrice(string itemCode, string price_sdate, string itemCategory)
+        {
+            PerPriceDAC dac = new PerPriceDAC();
+            List<PerPriceVO> list = dac.GetSelectedPrice(itemCode, price_sdate, itemCategory);
+            dac.Dispose();
+            return list;
+        }
+
     }
 }

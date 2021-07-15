@@ -89,7 +89,7 @@ namespace FinalProject1_DAC
         //시설군 조회
         public List<FactoryVO> GetFactoryGrade()
         {
-            string sql = @"select Factory_grade, factory_code from Factory where deleted = 0";
+            string sql = @"select Factory_grade, factory_code from Factory where deleted = 0 ";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

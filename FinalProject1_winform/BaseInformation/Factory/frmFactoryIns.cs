@@ -55,10 +55,10 @@ namespace FinalProject1_winform
             List<FactoryVO> factoryParent = service.GetFactoryParent();
             CompanyInfo = service.GetCompanyInfo();
 
-            FactoryVO fitem = new FactoryVO();
-            fitem.factory_code = "";
+          //  FactoryVO fitem = new FactoryVO();
+           // fitem.factory_code = "";
             // fitem.factory_grade = "선택";
-            fitem.factory_parent = "선택";
+           // fitem.factory_parent = "선택";
             CompanyVO citem = new CompanyVO();
             citem.company_code = "선택";
             citem.company_id = 0;
@@ -66,14 +66,14 @@ namespace FinalProject1_winform
             type.common_value = "";
             type.common_name = "선택";
 
-            FactoryInfo.Insert(0, fitem);
-            factoryParent.Insert(0, fitem);
+          //  FactoryInfo.Insert(0, fitem);
+          //  factoryParent.Insert(0, fitem);
             CompanyInfo.Insert(0, citem);
             TypeInfo.Insert(0, type);
 
             //FactroyInfo를 다르게 줘야할 듯 
             // CommonUtil.ComboBinding<FactoryVO>(cboFactoryGrade, FactoryInfo, "factory_grade", "factory_code");
-            CommonUtil.ComboBinding<FactoryVO>(cboFactoryParent, factoryParent, "factory_parent", "factory_code");
+            //CommonUtil.ComboBinding<FactoryVO>(cboFactoryParent, factoryParent, "factory_parent", "factory_code");
             CommonUtil.ComboBinding<CompanyVO>(cboCompanyCode, CompanyInfo, "Company_code", "Company_id");
             CommonUtil.ComboBinding<CommonCodeVO>(cboCompanyType, TypeInfo, "common_name", "common_value");
 
