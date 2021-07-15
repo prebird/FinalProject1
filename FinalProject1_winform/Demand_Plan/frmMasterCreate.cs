@@ -11,7 +11,7 @@ namespace FinalProject1_winform
 {
     public partial class frmMasterCreate : FinalProject1_winform.Basic3
     {
-        string PlanID;
+        string _PlanID;
 
         public frmMasterCreate()
         {
@@ -29,7 +29,7 @@ namespace FinalProject1_winform
 
                 DataTable dt = frm.ExcelData;
                 string planDate = frm.PlanDate;
-                PlanID = frm.PlanID;
+                _PlanID = frm.PlanID;
 
                 // 계획일자를 POUpload 폼에서 받아와 그리드뷰 맨 첫칸에 표시.
                 dt.Columns.Add(new DataColumn("planDate", typeof(string)));
@@ -47,14 +47,18 @@ namespace FinalProject1_winform
         // 영업 마스터 생성
         private void btn_Create_Click(object sender, EventArgs e)
         {
+            if (dgv_PO.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("발주서 엑셀을 업로드 해주세요..", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
 
             if (MessageBox.Show("생성 하시겠습니까?", "입력 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
 
-
                 SalesMasterVO smVO = new SalesMasterVO()
                 {
-                    PO_PlanID = PlanID,
+                    PO_PlanID = _PlanID,
                     PO_WorkOrderID = dgv_PO.SelectedRows[0].Cells[1].Value.ToString(),
                     PO_CompanyName = dgv_PO.SelectedRows[0].Cells[2].Value.ToString(),
                     PO_CompanyType = dgv_PO.SelectedRows[0].Cells[3].Value.ToString(),
@@ -62,7 +66,7 @@ namespace FinalProject1_winform
                     PO_ProductID = Convert.ToInt32(dgv_PO.SelectedRows[0].Cells[5].Value),
                     PO_OrderCnt = Convert.ToInt32(dgv_PO.SelectedRows[0].Cells[6].Value),
                     PO_DeadLine = dgv_PO.SelectedRows[0].Cells[7].Value.ToString(),
-                    PO_UploadDate = DateTime.Now.ToString("yy-MM-dd")
+                    PO_UploadDate = DateTime.Now.ToString("yyyy-MM-dd")
                 };
 
                 SMService service = new SMService();
@@ -73,9 +77,6 @@ namespace FinalProject1_winform
                 else
                     MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
 
         private void frmMasterCreate_Load(object sender, EventArgs e)

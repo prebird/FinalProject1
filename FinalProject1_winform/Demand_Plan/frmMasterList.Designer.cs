@@ -30,11 +30,11 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi6 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi3 = new FinalProject1_winform.Button_gudi();
+            this.btn_Delete = new FinalProject1_winform.Button_gudi();
+            this.btn_PlanCreate = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_SalesMaster = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
@@ -50,7 +50,7 @@ namespace FinalProject1_winform
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.button_gudi7 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
+            this.btn_Insert = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SalesMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -76,43 +76,45 @@ namespace FinalProject1_winform
             this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi5.UseVisualStyleBackColor = false;
             // 
-            // button_gudi6
+            // btn_Delete
             // 
-            this.button_gudi6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi6.FlatAppearance.BorderSize = 0;
-            this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi6.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
-            this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(950, 113);
-            this.button_gudi6.Name = "button_gudi6";
-            this.button_gudi6.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi6.TabIndex = 29;
-            this.button_gudi6.Text = "삭제";
-            this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi6.UseVisualStyleBackColor = false;
+            this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_Delete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Delete.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Delete.ForeColor = System.Drawing.Color.Black;
+            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
+            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Delete.Location = new System.Drawing.Point(950, 113);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(60, 25);
+            this.btn_Delete.TabIndex = 29;
+            this.btn_Delete.Text = "삭제";
+            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // button_gudi3
+            // btn_PlanCreate
             // 
-            this.button_gudi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi3.FlatAppearance.BorderSize = 0;
-            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
-            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(699, 113);
-            this.button_gudi3.Name = "button_gudi3";
-            this.button_gudi3.Size = new System.Drawing.Size(113, 25);
-            this.button_gudi3.TabIndex = 30;
-            this.button_gudi3.Text = "수요 계획 생성";
-            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi3.UseVisualStyleBackColor = false;
+            this.btn_PlanCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_PlanCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_PlanCreate.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_PlanCreate.FlatAppearance.BorderSize = 0;
+            this.btn_PlanCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_PlanCreate.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_PlanCreate.ForeColor = System.Drawing.Color.Black;
+            this.btn_PlanCreate.Image = ((System.Drawing.Image)(resources.GetObject("btn_PlanCreate.Image")));
+            this.btn_PlanCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_PlanCreate.Location = new System.Drawing.Point(699, 113);
+            this.btn_PlanCreate.Name = "btn_PlanCreate";
+            this.btn_PlanCreate.Size = new System.Drawing.Size(113, 25);
+            this.btn_PlanCreate.TabIndex = 30;
+            this.btn_PlanCreate.Text = "수요 계획 생성";
+            this.btn_PlanCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_PlanCreate.UseVisualStyleBackColor = false;
+            this.btn_PlanCreate.Click += new System.EventHandler(this.btn_PlanCreate_Click);
             // 
             // panel2
             // 
@@ -127,18 +129,18 @@ namespace FinalProject1_winform
             // 
             // dgv_SalesMaster
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_SalesMaster.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_SalesMaster.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_SalesMaster.BackgroundColor = System.Drawing.Color.White;
             this.dgv_SalesMaster.CheckBoxAll = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_SalesMaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_SalesMaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_SalesMaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_SalesMaster.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_SalesMaster.HeaderCheckStatus = false;
@@ -300,39 +302,40 @@ namespace FinalProject1_winform
             this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi7.UseVisualStyleBackColor = false;
             // 
-            // button_gudi1
+            // btn_Insert
             // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi1.Image")));
-            this.button_gudi1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi1.Location = new System.Drawing.Point(818, 113);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi1.TabIndex = 77;
-            this.button_gudi1.Text = "등록";
-            this.button_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi1.UseVisualStyleBackColor = false;
+            this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_Insert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_Insert.FlatAppearance.BorderSize = 0;
+            this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Insert.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Insert.ForeColor = System.Drawing.Color.Black;
+            this.btn_Insert.Image = ((System.Drawing.Image)(resources.GetObject("btn_Insert.Image")));
+            this.btn_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Insert.Location = new System.Drawing.Point(818, 113);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(60, 25);
+            this.btn_Insert.TabIndex = 77;
+            this.btn_Insert.Text = "등록";
+            this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Insert.UseVisualStyleBackColor = false;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
             // frmMasterList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
-            this.Controls.Add(this.button_gudi1);
+            this.Controls.Add(this.btn_Insert);
             this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.label_gudi1);
             this.Controls.Add(this.button_gudi5);
-            this.Controls.Add(this.button_gudi6);
-            this.Controls.Add(this.button_gudi3);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_PlanCreate);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmMasterList";
-            this.Text = "frmSalesMaster";
+            this.Text = "frmMasterList";
             this.Load += new System.EventHandler(this.frmMasterList_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SalesMaster)).EndInit();
@@ -346,8 +349,8 @@ namespace FinalProject1_winform
 
         #endregion
         private Button_gudi button_gudi5;
-        private Button_gudi button_gudi6;
-        private Button_gudi button_gudi3;
+        private Button_gudi btn_Delete;
+        private Button_gudi btn_PlanCreate;
         private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private System.Windows.Forms.Panel panel1;
@@ -363,6 +366,6 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi14;
         private Label_gudi label_gudi1;
         private Button_gudi button_gudi7;
-        private Button_gudi button_gudi1;
+        private Button_gudi btn_Insert;
     }
 }

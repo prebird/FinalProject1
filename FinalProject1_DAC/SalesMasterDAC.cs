@@ -49,12 +49,33 @@ namespace FinalProject1_DAC
             }
         }
 
-        // 전체 조회
+        public bool UpdateSM(SalesMasterVO smVO)
+        {
+            string sql = @"update PurchaseOrder set PO_Destination = @PO_Destination, PO_OutCnt=@PO_OutCnt, PO_CancelCnt=@PO_CancelCnt, 
+                         PO_EditManager = @PO_EditManager, PO_EditDate = @PO_EditDate, PO_Content = @PO_Content
+                         where PO_ID = @PO_ID";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@PO_ID", smVO.PO_ID);
+                cmd.Parameters.AddWithValue("@PO_Destination", smVO.PO_Destination);
+                cmd.Parameters.AddWithValue("@PO_OutCnt", smVO.PO_OutCnt);
+                cmd.Parameters.AddWithValue("@PO_CancelCnt", smVO.PO_CancelCnt);
+                cmd.Parameters.AddWithValue("@PO_EditManager", smVO.PO_EditManager);
+                cmd.Parameters.AddWithValue("@PO_EditDate", smVO.PO_EditDate);
+                cmd.Parameters.AddWithValue("@PO_Content", smVO.PO_Content);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
+
+        }
+            // 전체 조회
         public List<SalesMasterVO> GetAllSM()
         {
-            string sql = @"select PO_ID, PO_WorkOrderID, PO_PlanID, PO_CompanyName, PO_CompanyType, PO_Destination, PO_CusProductName, PO_ProductID, 
-                           PO_OrderCnt, PO_OutCnt, PO_CancelCnt, PO_DeadLine, PO_UploadDate, PO_EditManger, PO_EditDate, PO_Content
-                           from PurchaseOrder
+            string sql = @"select PO_ID, PO_WorkOrderID, PO_PlanID, PO_CompanyName, PO_CompanyType, PO_Destination, PO_CusProductName, Item_Name, 
+                           PO_OrderCnt, PO_OutCnt, PO_CancelCnt, PO_DeadLine, PO_UploadDate, PO_EditManager, PO_EditDate, PO_Content
+                           from PurchaseOrder PO inner join Item I on po.PO_ProductID = i.Item_ID
                            where PO_Deleted = 0";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -111,6 +132,20 @@ namespace FinalProject1_DAC
                 cmd.Parameters.AddWithValue("@Item_YN", yn);
 
                 return Helper.DataReaderMapToList<SalesMasterVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // 삭제
+        public bool DeleteSM(int SalesMasterID)
+        {
+            string sql = "update PurchaseOrder set PO_Deleted = 1 where PO_ID = @PO_ID";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@PO_ID", SalesMasterID);
+
+                int iCnt = cmd.ExecuteNonQuery();
+                return (iCnt > 0);
             }
         }
 

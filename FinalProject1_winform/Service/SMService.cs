@@ -10,6 +10,7 @@ namespace FinalProject1_winform
 {
     class SMService
     {
+        // 등록
         public bool InsertSalesMaster(SalesMasterVO smVO)
         {
             SalesMasterDAC dac = new SalesMasterDAC();
@@ -49,5 +50,22 @@ namespace FinalProject1_winform
         //    return list;
         //}
 
+        public bool UpdateSM(SalesMasterVO smVO)
+        {
+            SalesMasterDAC dac = new SalesMasterDAC();
+            bool result = dac.UpdateSM(smVO);
+            dac.Dispose();
+
+            return result;
+        }
+
+        public bool DeleteSM(int SalesMasterID)
+        {
+            SalesMasterDAC dac = new SalesMasterDAC();
+            bool result = dac.DeleteSM(SalesMasterID);
+            dac.Dispose();
+
+            return result;
+        }
     }
 }

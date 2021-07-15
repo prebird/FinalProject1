@@ -22,5 +22,11 @@ namespace FinalProject1_winform
             RestockOrderDAC dac = new RestockOrderDAC();
             return dac.GetPrintData(strCheckBarCodeID);
         }
+
+        public DataTable GetMRP(MRPSearchVO search)
+        {
+            RestockOrderDAC dac = new RestockOrderDAC();
+            return dac.GetMRP(search);
+        }
     }
 }

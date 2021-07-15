@@ -44,23 +44,23 @@ namespace FinalProject1_winform
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
+            this.dgvCompany = new FinalProject1_winform.DGV_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
+            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
             this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
-            this.dgV_gudi2 = new FinalProject1_winform.DGV_gudi();
+            this.dgvRO = new FinalProject1_winform.DGV_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRO)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,7 +72,7 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.label_gudi1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1079, 38);
+            this.panel1.Size = new System.Drawing.Size(1095, 38);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox_gudi1
@@ -107,7 +107,7 @@ namespace FinalProject1_winform
             this.panel2.Controls.Add(this.button_gudi8);
             this.panel2.Location = new System.Drawing.Point(12, 73);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1079, 56);
+            this.panel2.Size = new System.Drawing.Size(1095, 56);
             this.panel2.TabIndex = 25;
             // 
             // textBox_gudi1
@@ -159,7 +159,7 @@ namespace FinalProject1_winform
             this.button_gudi8.ForeColor = System.Drawing.Color.White;
             this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
             this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi8.Location = new System.Drawing.Point(951, 14);
+            this.button_gudi8.Location = new System.Drawing.Point(967, 14);
             this.button_gudi8.Name = "button_gudi8";
             this.button_gudi8.Size = new System.Drawing.Size(105, 25);
             this.button_gudi8.TabIndex = 10;
@@ -170,29 +170,39 @@ namespace FinalProject1_winform
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.Controls.Add(this.dgV_gudi1);
+            this.panel3.Controls.Add(this.dgvCompany);
             this.panel3.Controls.Add(this.label_gudi5);
             this.panel3.Controls.Add(this.pictureBox_gudi2);
-            this.panel3.Location = new System.Drawing.Point(12, 145);
+            this.panel3.Location = new System.Drawing.Point(728, 149);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(379, 471);
+            this.panel3.Size = new System.Drawing.Size(379, 478);
             this.panel3.TabIndex = 26;
             // 
-            // button_gudi1
+            // dgvCompany
             // 
-            this.button_gudi1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.White;
-            this.button_gudi1.Location = new System.Drawing.Point(504, 626);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(80, 33);
-            this.button_gudi1.TabIndex = 5;
-            this.button_gudi1.Text = "닫기";
-            this.button_gudi1.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvCompany.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvCompany.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCompany.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCompany.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompany.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvCompany.HeaderCheckStatus = false;
+            this.dgvCompany.Location = new System.Drawing.Point(21, 40);
+            this.dgvCompany.Name = "dgvCompany";
+            this.dgvCompany.RowHeadersVisible = false;
+            this.dgvCompany.RowTemplate.Height = 23;
+            this.dgvCompany.Size = new System.Drawing.Size(343, 422);
+            this.dgvCompany.TabIndex = 28;
             // 
             // label_gudi5
             // 
@@ -213,6 +223,22 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_gudi2.TabIndex = 27;
             this.pictureBox_gudi2.TabStop = false;
+            // 
+            // button_gudi1
+            // 
+            this.button_gudi1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.button_gudi1.FlatAppearance.BorderSize = 0;
+            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi1.ForeColor = System.Drawing.Color.White;
+            this.button_gudi1.Location = new System.Drawing.Point(512, 633);
+            this.button_gudi1.Name = "button_gudi1";
+            this.button_gudi1.Size = new System.Drawing.Size(80, 33);
+            this.button_gudi1.TabIndex = 5;
+            this.button_gudi1.Text = "닫기";
+            this.button_gudi1.UseVisualStyleBackColor = false;
             // 
             // pictureBox_gudi3
             // 
@@ -239,49 +265,23 @@ namespace FinalProject1_winform
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.dgV_gudi2);
+            this.panel4.Controls.Add(this.dgvRO);
             this.panel4.Controls.Add(this.label_gudi3);
             this.panel4.Controls.Add(this.pictureBox_gudi3);
-            this.panel4.Location = new System.Drawing.Point(412, 145);
+            this.panel4.Location = new System.Drawing.Point(12, 149);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(679, 471);
+            this.panel4.Size = new System.Drawing.Size(695, 478);
             this.panel4.TabIndex = 26;
             // 
-            // dgV_gudi1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgV_gudi1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_gudi1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgV_gudi1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_gudi1.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_gudi1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgV_gudi1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgV_gudi1.HeaderCheckStatus = false;
-            this.dgV_gudi1.Location = new System.Drawing.Point(21, 40);
-            this.dgV_gudi1.Name = "dgV_gudi1";
-            this.dgV_gudi1.RowHeadersVisible = false;
-            this.dgV_gudi1.RowTemplate.Height = 23;
-            this.dgV_gudi1.Size = new System.Drawing.Size(343, 415);
-            this.dgV_gudi1.TabIndex = 28;
-            // 
-            // dgV_gudi2
+            // dgvRO
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgV_gudi2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgV_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvRO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvRO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgV_gudi2.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_gudi2.CheckBoxAll = false;
+            this.dgvRO.BackgroundColor = System.Drawing.Color.White;
+            this.dgvRO.CheckBoxAll = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
@@ -289,23 +289,23 @@ namespace FinalProject1_winform
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_gudi2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgV_gudi2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgV_gudi2.HeaderCheckStatus = false;
-            this.dgV_gudi2.Location = new System.Drawing.Point(14, 39);
-            this.dgV_gudi2.Name = "dgV_gudi2";
-            this.dgV_gudi2.RowHeadersVisible = false;
-            this.dgV_gudi2.RowTemplate.Height = 23;
-            this.dgV_gudi2.Size = new System.Drawing.Size(652, 416);
-            this.dgV_gudi2.TabIndex = 28;
+            this.dgvRO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvRO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRO.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvRO.HeaderCheckStatus = false;
+            this.dgvRO.Location = new System.Drawing.Point(14, 39);
+            this.dgvRO.Name = "dgvRO";
+            this.dgvRO.RowHeadersVisible = false;
+            this.dgvRO.RowTemplate.Height = 23;
+            this.dgvRO.Size = new System.Drawing.Size(668, 423);
+            this.dgvRO.TabIndex = 28;
             // 
             // frmRestockOrderPopUP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1103, 675);
+            this.ClientSize = new System.Drawing.Size(1119, 682);
             this.Controls.Add(this.button_gudi1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -313,16 +313,17 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmRestockOrderPopUP";
             this.Text = "발주";
+            this.Load += new System.EventHandler(this.frmRestockOrderPopUP_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,10 +343,10 @@ namespace FinalProject1_winform
         private Button_gudi button_gudi1;
         private Label_gudi label_gudi5;
         private PictureBox_gudi pictureBox_gudi2;
-        private DGV_gudi dgV_gudi1;
+        private DGV_gudi dgvCompany;
         private PictureBox_gudi pictureBox_gudi3;
         private Label_gudi label_gudi3;
         private System.Windows.Forms.Panel panel4;
-        private DGV_gudi dgV_gudi2;
+        private DGV_gudi dgvRO;
     }
 }

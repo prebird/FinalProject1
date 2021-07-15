@@ -29,27 +29,27 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShift));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbSulbi = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.cbShift = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.btnCopy = new FinalProject1_winform.Button_gudi();
             this.btnExcel = new FinalProject1_winform.Button_gudi();
             this.btnDel = new FinalProject1_winform.Button_gudi();
             this.btnAdd = new FinalProject1_winform.Button_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.cbSulbi = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.cbShift = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.dgV_gudi1 = new FinalProject1_winform.DGV_gudi();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -61,6 +61,31 @@ namespace FinalProject1_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1371, 530);
             this.panel2.TabIndex = 26;
+            // 
+            // dgV_gudi1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgV_gudi1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgV_gudi1.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_gudi1.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_gudi1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgV_gudi1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_gudi1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgV_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgV_gudi1.HeaderCheckStatus = false;
+            this.dgV_gudi1.Location = new System.Drawing.Point(0, 0);
+            this.dgV_gudi1.Name = "dgV_gudi1";
+            this.dgV_gudi1.RowHeadersVisible = false;
+            this.dgV_gudi1.RowTemplate.Height = 23;
+            this.dgV_gudi1.Size = new System.Drawing.Size(1371, 530);
+            this.dgV_gudi1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -76,6 +101,64 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1371, 79);
             this.panel1.TabIndex = 24;
+            // 
+            // cbSulbi
+            // 
+            this.cbSulbi.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbSulbi.FormattingEnabled = true;
+            this.cbSulbi.Location = new System.Drawing.Point(515, 28);
+            this.cbSulbi.Name = "cbSulbi";
+            this.cbSulbi.Size = new System.Drawing.Size(219, 24);
+            this.cbSulbi.TabIndex = 44;
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.AutoSize = true;
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_gudi1.Location = new System.Drawing.Point(437, 31);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi1.TabIndex = 42;
+            this.label_gudi1.Text = "■ 설비";
+            // 
+            // cbShift
+            // 
+            this.cbShift.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbShift.FormattingEnabled = true;
+            this.cbShift.Location = new System.Drawing.Point(124, 28);
+            this.cbShift.Name = "cbShift";
+            this.cbShift.Size = new System.Drawing.Size(219, 24);
+            this.cbShift.TabIndex = 45;
+            // 
+            // label_gudi3
+            // 
+            this.label_gudi3.AutoSize = true;
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_gudi3.Location = new System.Drawing.Point(46, 31);
+            this.label_gudi3.Name = "label_gudi3";
+            this.label_gudi3.Size = new System.Drawing.Size(50, 17);
+            this.label_gudi3.TabIndex = 43;
+            this.label_gudi3.Text = "■ Shift";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(1262, 45);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(97, 25);
+            this.btnSearch.TabIndex = 10;
+            this.btnSearch.Text = "조회";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnCopy
             // 
@@ -163,24 +246,6 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.TabIndex = 25;
             this.pictureBox_gudi2.TabStop = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(1262, 45);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(97, 25);
-            this.btnSearch.TabIndex = 10;
-            this.btnSearch.Text = "조회";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
             // label_gudi2
             // 
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -190,71 +255,6 @@ namespace FinalProject1_winform
             this.label_gudi2.Size = new System.Drawing.Size(71, 18);
             this.label_gudi2.TabIndex = 32;
             this.label_gudi2.Text = "Shift 관리";
-            // 
-            // cbSulbi
-            // 
-            this.cbSulbi.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbSulbi.FormattingEnabled = true;
-            this.cbSulbi.Location = new System.Drawing.Point(515, 28);
-            this.cbSulbi.Name = "cbSulbi";
-            this.cbSulbi.Size = new System.Drawing.Size(219, 24);
-            this.cbSulbi.TabIndex = 44;
-            // 
-            // label_gudi1
-            // 
-            this.label_gudi1.AutoSize = true;
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi1.Location = new System.Drawing.Point(437, 31);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(48, 17);
-            this.label_gudi1.TabIndex = 42;
-            this.label_gudi1.Text = "■ 설비";
-            // 
-            // cbShift
-            // 
-            this.cbShift.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbShift.FormattingEnabled = true;
-            this.cbShift.Location = new System.Drawing.Point(124, 28);
-            this.cbShift.Name = "cbShift";
-            this.cbShift.Size = new System.Drawing.Size(219, 24);
-            this.cbShift.TabIndex = 45;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi3.Location = new System.Drawing.Point(46, 31);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(50, 17);
-            this.label_gudi3.TabIndex = 43;
-            this.label_gudi3.Text = "■ Shift";
-            // 
-            // dgV_gudi1
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgV_gudi1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgV_gudi1.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_gudi1.CheckBoxAll = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_gudi1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgV_gudi1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_gudi1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgV_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgV_gudi1.HeaderCheckStatus = false;
-            this.dgV_gudi1.Location = new System.Drawing.Point(0, 0);
-            this.dgV_gudi1.Name = "dgV_gudi1";
-            this.dgV_gudi1.RowHeadersVisible = false;
-            this.dgV_gudi1.RowTemplate.Height = 23;
-            this.dgV_gudi1.Size = new System.Drawing.Size(1371, 530);
-            this.dgV_gudi1.TabIndex = 0;
             // 
             // frmShift
             // 
@@ -269,12 +269,13 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmShift";
+            this.Text = "근무관리";
             this.Load += new System.EventHandler(this.frmShift_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_gudi1)).EndInit();
             this.ResumeLayout(false);
 
         }
