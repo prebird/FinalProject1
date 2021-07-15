@@ -130,6 +130,7 @@ namespace FinalProject1_winform
                 if (result)
                 {
                     MessageBox.Show("단가 정보가 입력되었습니다.");
+                    this.Close();
                 }
 
                 else
