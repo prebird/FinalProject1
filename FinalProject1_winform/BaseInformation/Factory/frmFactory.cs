@@ -23,6 +23,8 @@ namespace FinalProject1_winform
         {
             cboFactoryGrade.Text = "선택";
 
+            //List = 
+
             CommonUtil.SetInitGridView(dgv_Factory);
             CommonUtil.AddGridTextColumn(dgv_Factory, "시설군", "factory_grade", DataGridViewContentAlignment.MiddleCenter, colWidth: 135);
             CommonUtil.AddGridTextColumn(dgv_Factory, "시설구분", "factory_type", DataGridViewContentAlignment.MiddleCenter, colWidth: 180);
