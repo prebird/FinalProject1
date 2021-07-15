@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject1_DAC
 {
-    class ProductPlanDAC : IDisposable
+    public class ProductPlanDAC : IDisposable
     {
         SqlConnection conn;
 
@@ -26,7 +26,12 @@ namespace FinalProject1_DAC
 
         public DataTable GetPlanList()
         {
+            string sql = "SP_GetProductPlan";
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
+            return dt;
         }
     }
 }

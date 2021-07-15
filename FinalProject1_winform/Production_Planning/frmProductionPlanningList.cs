@@ -7,9 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Linq;
 
-namespace FinalProject1_winform.Production_Planning
+namespace FinalProject1_winform
 {
-    public partial class frmProductionPlanningList : FinalProject1_winform.Basic3
+    public partial class frmProductionPlanningList : Basic3
     {
         string FromDate;
         string ToDate;
@@ -23,7 +23,10 @@ namespace FinalProject1_winform.Production_Planning
             date.ToDate = DateTime.Now;
             date.ToDate = DateTime.Now.AddDays(-7);
 
+            ProductionPlanService service = new ProductionPlanService();
+            DataTable dt = service.GetPlanList();
 
+            dgvList.DataSource = dt;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

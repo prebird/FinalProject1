@@ -1,5 +1,5 @@
 ﻿
-namespace FinalProject1_winform.Production_Planning
+namespace FinalProject1_winform
 {
     partial class frmProductionPlanningList
     {

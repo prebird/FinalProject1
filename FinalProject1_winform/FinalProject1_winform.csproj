@@ -527,6 +527,7 @@
     </Compile>
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\processEquipmentService.cs" />
+    <Compile Include="Service\ProductionPlanService.cs" />
     <Compile Include="Service\RestockService.cs" />
     <Compile Include="Service\ShiftService.cs" />
     <Compile Include="Service\SMService.cs" />
