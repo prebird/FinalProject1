@@ -337,7 +337,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmCompanyInfo";
-            this.Text = "frmCompanyInfo";
+            this.Text = "업체정보관리";
             this.Load += new System.EventHandler(this.frmCompanyInfo_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).EndInit();

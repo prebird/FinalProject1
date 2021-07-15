@@ -361,7 +361,6 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmFactoryIns";
-            this.Text = "frmFactoryIns";
             this.Load += new System.EventHandler(this.frmFactoryIns_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
