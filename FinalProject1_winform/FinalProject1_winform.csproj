@@ -132,12 +132,6 @@
     <Compile Include="BaseInformation\PerPrice\frmPPrice.Designer.cs">
       <DependentUpon>frmPPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.Designer.cs">
-      <DependentUpon>frmMPriceIns.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaseInformation\PerPrice\frmPPriceIns.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -565,9 +559,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmPPrice.resx">
       <DependentUpon>frmPPrice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInformation\PerPrice\frmMPriceIns.resx">
-      <DependentUpon>frmMPriceIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmPPriceIns.resx">
       <DependentUpon>frmPPriceIns.cs</DependentUpon>

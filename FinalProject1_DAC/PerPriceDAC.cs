@@ -33,7 +33,7 @@ namespace FinalProject1_DAC
 	                                    from CompanyItem R join Item I ON R.Item_id = I.item_id
 		                                    join company C ON R.company_id = C.company_id
                                           where R.deleted = 0
-										  order by 1,2,3,4";
+										  ";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -100,7 +100,6 @@ namespace FinalProject1_DAC
         }
 
         //단가 변경
-
         public bool InsUpPerPrice(PerPriceVO info)
         {
 
@@ -152,5 +151,10 @@ namespace FinalProject1_DAC
                 }
             }
         }
+
+//        public List<CompanyItemVO>
+//            {
+//}
+
     }
 }
