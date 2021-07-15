@@ -152,6 +152,9 @@ namespace FinalProject1_DAC
             }
         }
 
-        public List<CompanyItemVO>
+//        public List<CompanyItemVO>
+//            {
+//}
+
     }
 }
