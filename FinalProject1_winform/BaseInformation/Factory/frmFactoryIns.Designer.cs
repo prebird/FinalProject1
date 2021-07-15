@@ -193,6 +193,8 @@ namespace FinalProject1_winform
             // 
             this.cboFactoryParent.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboFactoryParent.FormattingEnabled = true;
+            this.cboFactoryParent.Items.AddRange(new object[] {
+            "GudiMain"});
             this.cboFactoryParent.Location = new System.Drawing.Point(405, 72);
             this.cboFactoryParent.Name = "cboFactoryParent";
             this.cboFactoryParent.Size = new System.Drawing.Size(145, 24);
@@ -268,7 +270,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi7.AutoSize = true;
             this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi7.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label_gudi7.ForeColor = System.Drawing.Color.Black;
             this.label_gudi7.Location = new System.Drawing.Point(322, 75);
             this.label_gudi7.Name = "label_gudi7";
             this.label_gudi7.Size = new System.Drawing.Size(63, 16);
@@ -300,6 +302,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi4.ForeColor = System.Drawing.Color.Black;
             this.label_gudi4.Location = new System.Drawing.Point(23, 195);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(41, 16);
@@ -358,7 +361,6 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmFactoryIns";
-            this.Text = "frmFactoryIns";
             this.Load += new System.EventHandler(this.frmFactoryIns_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

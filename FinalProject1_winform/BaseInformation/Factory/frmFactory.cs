@@ -23,6 +23,19 @@ namespace FinalProject1_winform
         {
             cboFactoryGrade.Text = "선택";
 
+            //List<FactoryVO> CboList = new List<FactoryVO>();
+            //FactoryService service = new FactoryService();
+            //CboList = service.GetFactoryGrade();
+
+            //FactoryVO info = new FactoryVO();
+            //info.factory_code = "";
+            //info.factory_grade = "선택";
+
+            //CboList.Insert(0, info);
+
+            //CommonUtil.ComboBinding<FactoryVO>(cboFactoryGrade, CboList, "factory_grade", "factory_code");
+              
+
             CommonUtil.SetInitGridView(dgv_Factory);
             CommonUtil.AddGridTextColumn(dgv_Factory, "시설군", "factory_grade", DataGridViewContentAlignment.MiddleCenter, colWidth: 135);
             CommonUtil.AddGridTextColumn(dgv_Factory, "시설구분", "factory_type", DataGridViewContentAlignment.MiddleCenter, colWidth: 180);

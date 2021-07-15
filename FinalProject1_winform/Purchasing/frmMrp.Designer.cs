@@ -63,16 +63,18 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.cboPlanID);
             this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Controls.Add(this.label_gudi1);
-            this.panel1.Location = new System.Drawing.Point(24, 21);
+            this.panel1.Location = new System.Drawing.Point(34, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1359, 78);
+            this.panel1.Size = new System.Drawing.Size(1941, 117);
             this.panel1.TabIndex = 0;
             // 
             // label_gudi6
             // 
             this.label_gudi6.AutoSize = true;
             this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.Location = new System.Drawing.Point(748, 28);
+            this.label_gudi6.Location = new System.Drawing.Point(1069, 42);
+            this.label_gudi6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi6.Name = "label_gudi6";
             this.label_gudi6.Size = new System.Drawing.Size(48, 17);
             this.label_gudi6.TabIndex = 7;
@@ -89,9 +91,10 @@ namespace FinalProject1_winform
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(1247, 44);
+            this.btnSearch.Location = new System.Drawing.Point(1781, 66);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 25);
+            this.btnSearch.Size = new System.Drawing.Size(133, 38);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@ namespace FinalProject1_winform
             // dtp1
             // 
             this.dtp1.FromDate = new System.DateTime(2021, 6, 25, 14, 0, 31, 72);
-            this.dtp1.Location = new System.Drawing.Point(443, 23);
+            this.dtp1.Location = new System.Drawing.Point(633, 34);
+            this.dtp1.Margin = new System.Windows.Forms.Padding(6);
             this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(257, 36);
+            this.dtp1.Size = new System.Drawing.Size(367, 54);
             this.dtp1.TabIndex = 2;
             this.dtp1.ToDate = new System.DateTime(2021, 6, 25, 14, 0, 31, 69);
             // 
@@ -110,25 +114,28 @@ namespace FinalProject1_winform
             // 
             this.cboProductID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboProductID.FormattingEnabled = true;
-            this.cboProductID.Location = new System.Drawing.Point(824, 26);
+            this.cboProductID.Location = new System.Drawing.Point(1177, 39);
+            this.cboProductID.Margin = new System.Windows.Forms.Padding(4);
             this.cboProductID.Name = "cboProductID";
-            this.cboProductID.Size = new System.Drawing.Size(200, 24);
+            this.cboProductID.Size = new System.Drawing.Size(284, 24);
             this.cboProductID.TabIndex = 1;
             // 
             // cboPlanID
             // 
             this.cboPlanID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboPlanID.FormattingEnabled = true;
-            this.cboPlanID.Location = new System.Drawing.Point(105, 23);
+            this.cboPlanID.Location = new System.Drawing.Point(150, 34);
+            this.cboPlanID.Margin = new System.Windows.Forms.Padding(4);
             this.cboPlanID.Name = "cboPlanID";
-            this.cboPlanID.Size = new System.Drawing.Size(163, 24);
+            this.cboPlanID.Size = new System.Drawing.Size(231, 24);
             this.cboPlanID.TabIndex = 1;
             // 
             // label_gudi3
             // 
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(366, 29);
+            this.label_gudi3.Location = new System.Drawing.Point(523, 44);
+            this.label_gudi3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi3.Name = "label_gudi3";
             this.label_gudi3.Size = new System.Drawing.Size(52, 17);
             this.label_gudi3.TabIndex = 0;
@@ -138,7 +145,8 @@ namespace FinalProject1_winform
             // 
             this.label_gudi1.AutoSize = true;
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi1.Location = new System.Drawing.Point(29, 30);
+            this.label_gudi1.Location = new System.Drawing.Point(41, 45);
+            this.label_gudi1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(62, 17);
             this.label_gudi1.TabIndex = 0;
@@ -150,9 +158,10 @@ namespace FinalProject1_winform
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dgv1);
-            this.panel2.Location = new System.Drawing.Point(24, 144);
+            this.panel2.Location = new System.Drawing.Point(34, 216);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1359, 497);
+            this.panel2.Size = new System.Drawing.Size(1941, 746);
             this.panel2.TabIndex = 7;
             // 
             // dgv1
@@ -174,24 +183,27 @@ namespace FinalProject1_winform
             this.dgv1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv1.HeaderCheckStatus = false;
             this.dgv1.Location = new System.Drawing.Point(0, 0);
+            this.dgv1.Margin = new System.Windows.Forms.Padding(4);
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersVisible = false;
             this.dgv1.RowTemplate.Height = 23;
-            this.dgv1.Size = new System.Drawing.Size(1359, 497);
+            this.dgv1.Size = new System.Drawing.Size(1941, 746);
             this.dgv1.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(24, 119);
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(34, 178);
+            this.pictureBox_gudi2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
-            this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi2.Size = new System.Drawing.Size(36, 28);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_gudi2.TabIndex = 6;
             this.pictureBox_gudi2.TabStop = false;
             // 
             // btnExcel
             // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnExcel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnExcel.FlatAppearance.BorderSize = 0;
@@ -200,9 +212,10 @@ namespace FinalProject1_winform
             this.btnExcel.ForeColor = System.Drawing.Color.Black;
             this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(1320, 115);
+            this.btnExcel.Location = new System.Drawing.Point(1825, 170);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(60, 25);
+            this.btnExcel.Size = new System.Drawing.Size(86, 38);
             this.btnExcel.TabIndex = 9;
             this.btnExcel.Text = "엑셀";
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,21 +225,23 @@ namespace FinalProject1_winform
             // 
             this.label_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_gudi5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_gudi5.Location = new System.Drawing.Point(53, 122);
+            this.label_gudi5.Location = new System.Drawing.Point(76, 183);
+            this.label_gudi5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi5.Name = "label_gudi5";
-            this.label_gudi5.Size = new System.Drawing.Size(82, 18);
+            this.label_gudi5.Size = new System.Drawing.Size(117, 27);
             this.label_gudi5.TabIndex = 10;
             this.label_gudi5.Text = "자재소요계획";
             // 
             // frmMrp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1395, 672);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.ClientSize = new System.Drawing.Size(1924, 1008);
             this.Controls.Add(this.label_gudi5);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMrp";
             this.Text = "자재소요계획";
             this.Load += new System.EventHandler(this.frmMrp_Load);

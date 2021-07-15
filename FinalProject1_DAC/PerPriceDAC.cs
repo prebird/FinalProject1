@@ -33,7 +33,7 @@ namespace FinalProject1_DAC
 	                                    from CompanyItem R join Item I ON R.Item_id = I.item_id
 		                                    join company C ON R.company_id = C.company_id
                                           where R.deleted = 0
-										  order by 1,2,3,4";
+										  ";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -100,7 +100,6 @@ namespace FinalProject1_DAC
         }
 
         //단가 변경
-
         public bool InsUpPerPrice(PerPriceVO info)
         {
 
@@ -152,5 +151,24 @@ namespace FinalProject1_DAC
                 }
             }
         }
+
+        public List<PerPriceVO> GetSelectedPrice(string itemCode, string price_sdate, string itemCategory)
+        {
+            string sql = @"select Company_code, Company_name, Item_code, Item_name, Item_Category, price_present, price_past, price_sdate,price_edate,price_comment,price_yn,price_udate,price_uadmin
+                                         from P_Price P join CompanyItem T on P.CompanyItem_ID = T.CompanyItem_ID
+                                         join Company C on T.company_id = C.company_id
+                                         join Item I on T.item_id = I.item_id
+                                where item_code = @item_code and price_sdate >= @price_sdate and Item_Category = @Item_Category";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@item_code", itemCode);
+                cmd.Parameters.AddWithValue("@price_sdate", price_sdate);
+                cmd.Parameters.AddWithValue("@Item_Category", itemCategory);
+                return Helper.DataReaderMapToList<PerPriceVO>(cmd.ExecuteReader());
+            }
+        }
+
+
     }
 }
