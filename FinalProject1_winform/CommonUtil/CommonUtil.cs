@@ -167,7 +167,7 @@ namespace FinalProject1_winform
             DemandPlanVO item = new DemandPlanVO
             {
                 PlanID = "선택"
-        };
+            };
             list.Insert(0, item);
 
             ComboBinding<DemandPlanVO>(cbo, list, "PlanID", "");
