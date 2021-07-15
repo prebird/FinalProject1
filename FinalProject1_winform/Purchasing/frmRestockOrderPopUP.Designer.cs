@@ -30,19 +30,19 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRestockOrderPopUP));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
+            this.cboCompany = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
-            this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
+            this.cboParts = new FinalProject1_winform.ComboBox_gudi();
             this.dgvRO = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
@@ -51,11 +51,11 @@ namespace FinalProject1_winform
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.button_gudi2 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtqty = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
-            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
+            this.dtp1 = new FinalProject1_winform.DateTimePicker_gudi();
             this.label_gudi7 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtCompany = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi8 = new FinalProject1_winform.Label_gudi();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,8 +71,8 @@ namespace FinalProject1_winform
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.panel2.Controls.Add(this.button_gudi8);
             this.panel2.Controls.Add(this.label_gudi6);
-            this.panel2.Controls.Add(this.comboBox_gudi2);
-            this.panel2.Controls.Add(this.comboBox_gudi1);
+            this.panel2.Controls.Add(this.cboParts);
+            this.panel2.Controls.Add(this.cboCompany);
             this.panel2.Controls.Add(this.label_gudi2);
             this.panel2.Location = new System.Drawing.Point(17, 56);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -91,15 +91,15 @@ namespace FinalProject1_winform
             this.label_gudi6.TabIndex = 15;
             this.label_gudi6.Text = "■ Part No";
             // 
-            // comboBox_gudi1
+            // cboCompany
             // 
-            this.comboBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi1.FormattingEnabled = true;
-            this.comboBox_gudi1.Location = new System.Drawing.Point(82, 23);
-            this.comboBox_gudi1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_gudi1.Name = "comboBox_gudi1";
-            this.comboBox_gudi1.Size = new System.Drawing.Size(231, 24);
-            this.comboBox_gudi1.TabIndex = 13;
+            this.cboCompany.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboCompany.FormattingEnabled = true;
+            this.cboCompany.Location = new System.Drawing.Point(82, 23);
+            this.cboCompany.Margin = new System.Windows.Forms.Padding(4);
+            this.cboCompany.Name = "cboCompany";
+            this.cboCompany.Size = new System.Drawing.Size(231, 24);
+            this.cboCompany.TabIndex = 13;
             // 
             // label_gudi2
             // 
@@ -159,30 +159,30 @@ namespace FinalProject1_winform
             this.button_gudi8.Text = "조회";
             this.button_gudi8.UseVisualStyleBackColor = false;
             // 
-            // comboBox_gudi2
+            // cboParts
             // 
-            this.comboBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.comboBox_gudi2.FormattingEnabled = true;
-            this.comboBox_gudi2.Location = new System.Drawing.Point(438, 23);
-            this.comboBox_gudi2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_gudi2.Name = "comboBox_gudi2";
-            this.comboBox_gudi2.Size = new System.Drawing.Size(231, 24);
-            this.comboBox_gudi2.TabIndex = 13;
+            this.cboParts.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboParts.FormattingEnabled = true;
+            this.cboParts.Location = new System.Drawing.Point(438, 23);
+            this.cboParts.Margin = new System.Windows.Forms.Padding(4);
+            this.cboParts.Name = "cboParts";
+            this.cboParts.Size = new System.Drawing.Size(231, 24);
+            this.cboParts.TabIndex = 13;
             // 
             // dgvRO
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvRO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvRO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRO.BackgroundColor = System.Drawing.Color.White;
             this.dgvRO.CheckBoxAll = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRO.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgvRO.HeaderCheckStatus = false;
@@ -216,18 +216,18 @@ namespace FinalProject1_winform
             // 
             // dgvCompany
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvCompany.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvCompany.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCompany.BackgroundColor = System.Drawing.Color.White;
             this.dgvCompany.CheckBoxAll = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCompany.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCompany.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompany.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgvCompany.HeaderCheckStatus = false;
@@ -289,14 +289,14 @@ namespace FinalProject1_winform
             this.button_gudi1.Text = "닫기";
             this.button_gudi1.UseVisualStyleBackColor = false;
             // 
-            // textBox_gudi1
+            // txtqty
             // 
-            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(333, 527);
-            this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.Size = new System.Drawing.Size(158, 25);
-            this.textBox_gudi1.TabIndex = 44;
+            this.txtqty.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtqty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtqty.Location = new System.Drawing.Point(333, 527);
+            this.txtqty.Name = "txtqty";
+            this.txtqty.Size = new System.Drawing.Size(158, 25);
+            this.txtqty.TabIndex = 44;
             // 
             // label_gudi5
             // 
@@ -308,14 +308,14 @@ namespace FinalProject1_winform
             this.label_gudi5.TabIndex = 45;
             this.label_gudi5.Text = "발주일자";
             // 
-            // dateTimePicker_gudi1
+            // dtp1
             // 
-            this.dateTimePicker_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dateTimePicker_gudi1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_gudi1.Location = new System.Drawing.Point(80, 523);
-            this.dateTimePicker_gudi1.Name = "dateTimePicker_gudi1";
-            this.dateTimePicker_gudi1.Size = new System.Drawing.Size(158, 25);
-            this.dateTimePicker_gudi1.TabIndex = 46;
+            this.dtp1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp1.Location = new System.Drawing.Point(80, 523);
+            this.dtp1.Name = "dtp1";
+            this.dtp1.Size = new System.Drawing.Size(158, 25);
+            this.dtp1.TabIndex = 46;
             // 
             // label_gudi7
             // 
@@ -327,14 +327,14 @@ namespace FinalProject1_winform
             this.label_gudi7.TabIndex = 45;
             this.label_gudi7.Text = "발주량";
             // 
-            // textBox_gudi2
+            // txtCompany
             // 
-            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(596, 530);
-            this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.Size = new System.Drawing.Size(158, 25);
-            this.textBox_gudi2.TabIndex = 44;
+            this.txtCompany.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtCompany.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtCompany.Location = new System.Drawing.Point(596, 530);
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.Size = new System.Drawing.Size(158, 25);
+            this.txtCompany.TabIndex = 44;
             // 
             // label_gudi8
             // 
@@ -351,12 +351,12 @@ namespace FinalProject1_winform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1062, 642);
-            this.Controls.Add(this.dateTimePicker_gudi1);
+            this.Controls.Add(this.dtp1);
             this.Controls.Add(this.label_gudi8);
             this.Controls.Add(this.label_gudi7);
             this.Controls.Add(this.label_gudi5);
-            this.Controls.Add(this.textBox_gudi2);
-            this.Controls.Add(this.textBox_gudi1);
+            this.Controls.Add(this.txtCompany);
+            this.Controls.Add(this.txtqty);
             this.Controls.Add(this.button_gudi2);
             this.Controls.Add(this.button_gudi1);
             this.Controls.Add(this.pictureBox_gudi2);
@@ -388,13 +388,13 @@ namespace FinalProject1_winform
         #endregion
         private System.Windows.Forms.Panel panel2;
         private Label_gudi label_gudi6;
-        private ComboBox_gudi comboBox_gudi1;
+        private ComboBox_gudi cboCompany;
         private Label_gudi label_gudi2;
         private System.Windows.Forms.Panel panel1;
         private PictureBox_gudi pictureBox_gudi1;
         private Label_gudi label_gudi1;
         private Button_gudi button_gudi8;
-        private ComboBox_gudi comboBox_gudi2;
+        private ComboBox_gudi cboParts;
         private DGV_gudi dgvRO;
         private PictureBox_gudi pictureBox_gudi3;
         private Label_gudi label_gudi3;
@@ -403,11 +403,11 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi4;
         private Button_gudi button_gudi2;
         private Button_gudi button_gudi1;
-        private Controls.TextBox_gudi textBox_gudi1;
+        private Controls.TextBox_gudi txtqty;
         private Label_gudi label_gudi5;
-        private DateTimePicker_gudi dateTimePicker_gudi1;
+        private DateTimePicker_gudi dtp1;
         private Label_gudi label_gudi7;
-        private Controls.TextBox_gudi textBox_gudi2;
+        private Controls.TextBox_gudi txtCompany;
         private Label_gudi label_gudi8;
     }
 }
