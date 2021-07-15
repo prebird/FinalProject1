@@ -76,8 +76,8 @@ namespace FinalProject1_winform
         private void btnSave_Click(object sender, EventArgs e)
         {
             // 유효성체크
-            if (CommonUtil.CheckNullOrEmptyOk(txtMenuName, "메뉴이름") == false) return;
-            if (CommonUtil.CheckCboValidateValue(cboForm, "메뉴 클릭시 열릴 폼") == false) return;
+            if (!CommonUtil.CheckNullOrEmptyOk(txtMenuName, "메뉴이름")) return;
+            if (!CommonUtil.CheckCboValidateValue(cboForm, "메뉴 클릭시 열릴 폼")) return;
             if (dgvBig.SelectedRows.Count < 1)
             {
                 MessageBox.Show("상위메뉴를 선택해 주세요");
@@ -91,7 +91,7 @@ namespace FinalProject1_winform
             menu.ProgramName = cboForm.Text;
             menu.menu_uadmin = txtUserName.Text;
             menu.menu_udate = dtpDate.Text;
-            menu.MenuID = throwedMenu.MenuID;
+            menu.MenuID = BigMenuID;
 
             if (btnSave.Text == "등록")
             {

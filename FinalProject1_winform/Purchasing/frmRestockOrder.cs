@@ -35,9 +35,11 @@ namespace FinalProject1_winform
             //CommonUtil.SetInitGridView(dgv1);
             CommonUtil.AddGridTextColumn(dgv1, "품번", "itemid", colWidth: 80);
             CommonUtil.AddGridTextColumn(dgv1, "품명", "Item_Name", colWidth: 200);
+            
             CommonUtil.AddGridTextColumn(dgv1, "구분", "gubun", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv1, "카테고리", "Category", colWidth: 100, visibility: false);
             CommonUtil.AddGridTextColumn(dgv1, "정렬", "SortNum", colWidth: 100, visibility: false);
+            CommonUtil.AddGridTextColumn(dgv1, "a", "a", colWidth: 200, visibility: false);
 
 
             btnSearch.PerformClick();
@@ -82,7 +84,7 @@ namespace FinalProject1_winform
             
                 if (dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != DBNull.Value)
                 {
-                if ((dgv1.Rows[e.RowIndex].Cells[2].Value.ToString() == "생산제안" || dgv1.Rows[e.RowIndex].Cells[2].Value.ToString() == "발주제안")  &&(e.ColumnIndex != 0 && e.ColumnIndex != 1 && e.ColumnIndex != 2))
+                if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "생산제안" || dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안")  &&(e.ColumnIndex != 0 && e.ColumnIndex != 1 && e.ColumnIndex != 2))
                 {
                     if (Information.IsNumeric(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
                     {
