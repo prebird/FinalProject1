@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using FinalProject1_VO;
 using FinalProject1_DAC;
+using System.Data;
 
 namespace FinalProject1_winform
 {
@@ -40,6 +41,12 @@ namespace FinalProject1_winform
         {
             CommonDAC dac = new CommonDAC();
             return dac.GetCommboProductName();
+        }
+
+        public DataTable GetMenuList()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetMenuList();
         }
     }
 }
