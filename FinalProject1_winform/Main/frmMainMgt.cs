@@ -41,6 +41,8 @@ namespace FinalProject1_winform
             menus = service.GetAllMenuMgt();
 
             UpMenuLoad();
+
+            TreeMenuBinding();
         }
 
         
@@ -128,8 +130,34 @@ namespace FinalProject1_winform
             dgvDownMenu.DataSource = menus.FindAll((x) => x.MenuLevel == 1 && x.refMenuID == parentID);
             dgvDownMenu.ClearSelection();
         }
+
+        private void TreeMenuBinding()
+        {
+            CommonService service = new CommonService();
+            DataTable dtMenu = service.GetMenuList();
+            DataView dv0 = new DataView(dtMenu);
+            dv0.RowFilter = "MenuLevel = 0";
+            //dv0.Sort = "menu_sort";
+            for (int i = 0; i < dv0.Count; i++)
+            {
+                TreeNode node = new TreeNode(dv0[i]["MenuName"].ToString());
+                node.Tag = $"{dv0[i]["MenuLevel"].ToString()}|{dv0[i]["MenuID"].ToString()}";
+                treeView1.Nodes.Add(node);
+
+                DataView dv1 = new DataView(dtMenu);
+                dv1.RowFilter = "MenuLevel = 1 and refMenuID=" + dv0[i]["MenuID"].ToString();
+                //dv1.Sort = "menu_sort";
+                for (int k = 0; k < dv1.Count; k++)
+                {
+                    TreeNode c_node = new TreeNode(dv1[k]["MenuName"].ToString());
+                    c_node.Tag = $"{dv1[k]["MenuLevel"].ToString()}|{dv1[k]["MenuID"].ToString()}";
+                    node.Nodes.Add(c_node);
+                }
+            }
+            treeView1.ExpandAll();
+        }
         #endregion
 
-        
+
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using FinalProject1_VO;
+using System.Data;
 
 namespace FinalProject1_DAC
 {
@@ -92,6 +93,18 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
             {
                 return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
             }
+        }
+
+        public DataTable GetMenuList()
+        {
+            string sql = "select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img from Menu";
+
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+            return dt;
         }
 
 

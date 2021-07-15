@@ -60,7 +60,8 @@ namespace FinalProject1_winform
             // 
             this.label_gudi4.AutoSize = true;
             this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi4.Location = new System.Drawing.Point(53, 21);
+            this.label_gudi4.Location = new System.Drawing.Point(75, 35);
+            this.label_gudi4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi4.Name = "label_gudi4";
             this.label_gudi4.Size = new System.Drawing.Size(77, 16);
             this.label_gudi4.TabIndex = 23;
@@ -69,9 +70,10 @@ namespace FinalProject1_winform
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(22, 19);
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(31, 28);
+            this.pictureBox_gudi2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_gudi2.Name = "pictureBox_gudi2";
-            this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi2.Size = new System.Drawing.Size(36, 28);
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_gudi2.TabIndex = 22;
             this.pictureBox_gudi2.TabStop = false;
@@ -79,9 +81,10 @@ namespace FinalProject1_winform
             // pictureBox_gudi1
             // 
             this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(22, 341);
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(31, 512);
+            this.pictureBox_gudi1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 28);
             this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_gudi1.TabIndex = 22;
             this.pictureBox_gudi1.TabStop = false;
@@ -90,7 +93,8 @@ namespace FinalProject1_winform
             // 
             this.label_gudi1.AutoSize = true;
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.Location = new System.Drawing.Point(53, 343);
+            this.label_gudi1.Location = new System.Drawing.Point(75, 519);
+            this.label_gudi1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(77, 16);
             this.label_gudi1.TabIndex = 23;
@@ -113,11 +117,12 @@ namespace FinalProject1_winform
             this.dgvUpMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUpMenu.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgvUpMenu.HeaderCheckStatus = false;
-            this.dgvUpMenu.Location = new System.Drawing.Point(22, 44);
+            this.dgvUpMenu.Location = new System.Drawing.Point(31, 66);
+            this.dgvUpMenu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUpMenu.Name = "dgvUpMenu";
             this.dgvUpMenu.RowHeadersVisible = false;
             this.dgvUpMenu.RowTemplate.Height = 23;
-            this.dgvUpMenu.Size = new System.Drawing.Size(657, 291);
+            this.dgvUpMenu.Size = new System.Drawing.Size(939, 436);
             this.dgvUpMenu.TabIndex = 24;
             this.dgvUpMenu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUpMenu_CellClick);
             // 
@@ -140,19 +145,21 @@ namespace FinalProject1_winform
             this.dgvDownMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDownMenu.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgvDownMenu.HeaderCheckStatus = false;
-            this.dgvDownMenu.Location = new System.Drawing.Point(22, 366);
+            this.dgvDownMenu.Location = new System.Drawing.Point(31, 548);
+            this.dgvDownMenu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDownMenu.Name = "dgvDownMenu";
             this.dgvDownMenu.RowHeadersVisible = false;
             this.dgvDownMenu.RowTemplate.Height = 23;
-            this.dgvDownMenu.Size = new System.Drawing.Size(657, 378);
+            this.dgvDownMenu.Size = new System.Drawing.Size(939, 373);
             this.dgvDownMenu.TabIndex = 24;
             // 
             // pictureBox_gudi3
             // 
             this.pictureBox_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi3.Image")));
-            this.pictureBox_gudi3.Location = new System.Drawing.Point(700, 20);
+            this.pictureBox_gudi3.Location = new System.Drawing.Point(1000, 30);
+            this.pictureBox_gudi3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_gudi3.Name = "pictureBox_gudi3";
-            this.pictureBox_gudi3.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi3.Size = new System.Drawing.Size(36, 28);
             this.pictureBox_gudi3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_gudi3.TabIndex = 22;
             this.pictureBox_gudi3.TabStop = false;
@@ -161,7 +168,8 @@ namespace FinalProject1_winform
             // 
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi2.Location = new System.Drawing.Point(731, 22);
+            this.label_gudi2.Location = new System.Drawing.Point(1044, 35);
+            this.label_gudi2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gudi2.Name = "label_gudi2";
             this.label_gudi2.Size = new System.Drawing.Size(66, 16);
             this.label_gudi2.TabIndex = 23;
@@ -169,9 +177,14 @@ namespace FinalProject1_winform
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(700, 41);
+            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeView1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.treeView1.Location = new System.Drawing.Point(1000, 62);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(646, 703);
+            this.treeView1.Size = new System.Drawing.Size(558, 921);
             this.treeView1.TabIndex = 25;
             // 
             // btnBigDelete
@@ -184,9 +197,10 @@ namespace FinalProject1_winform
             this.btnBigDelete.ForeColor = System.Drawing.Color.Black;
             this.btnBigDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnBigDelete.Image")));
             this.btnBigDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBigDelete.Location = new System.Drawing.Point(619, 14);
+            this.btnBigDelete.Location = new System.Drawing.Point(898, 28);
+            this.btnBigDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnBigDelete.Name = "btnBigDelete";
-            this.btnBigDelete.Size = new System.Drawing.Size(60, 25);
+            this.btnBigDelete.Size = new System.Drawing.Size(72, 31);
             this.btnBigDelete.TabIndex = 26;
             this.btnBigDelete.Text = "삭제";
             this.btnBigDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -203,9 +217,10 @@ namespace FinalProject1_winform
             this.btnBigInsert.ForeColor = System.Drawing.Color.Black;
             this.btnBigInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnBigInsert.Image")));
             this.btnBigInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBigInsert.Location = new System.Drawing.Point(487, 14);
+            this.btnBigInsert.Location = new System.Drawing.Point(737, 27);
+            this.btnBigInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnBigInsert.Name = "btnBigInsert";
-            this.btnBigInsert.Size = new System.Drawing.Size(60, 25);
+            this.btnBigInsert.Size = new System.Drawing.Size(71, 31);
             this.btnBigInsert.TabIndex = 27;
             this.btnBigInsert.Text = "등록";
             this.btnBigInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,9 +237,10 @@ namespace FinalProject1_winform
             this.btnSmallDelete.ForeColor = System.Drawing.Color.Black;
             this.btnSmallDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnSmallDelete.Image")));
             this.btnSmallDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmallDelete.Location = new System.Drawing.Point(619, 339);
+            this.btnSmallDelete.Location = new System.Drawing.Point(898, 514);
+            this.btnSmallDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnSmallDelete.Name = "btnSmallDelete";
-            this.btnSmallDelete.Size = new System.Drawing.Size(60, 25);
+            this.btnSmallDelete.Size = new System.Drawing.Size(72, 32);
             this.btnSmallDelete.TabIndex = 26;
             this.btnSmallDelete.Text = "삭제";
             this.btnSmallDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,9 +257,10 @@ namespace FinalProject1_winform
             this.btnBigUps.ForeColor = System.Drawing.Color.Black;
             this.btnBigUps.Image = ((System.Drawing.Image)(resources.GetObject("btnBigUps.Image")));
             this.btnBigUps.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBigUps.Location = new System.Drawing.Point(553, 14);
+            this.btnBigUps.Location = new System.Drawing.Point(816, 28);
+            this.btnBigUps.Margin = new System.Windows.Forms.Padding(4);
             this.btnBigUps.Name = "btnBigUps";
-            this.btnBigUps.Size = new System.Drawing.Size(60, 25);
+            this.btnBigUps.Size = new System.Drawing.Size(74, 31);
             this.btnBigUps.TabIndex = 28;
             this.btnBigUps.Text = "수정";
             this.btnBigUps.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -260,9 +277,10 @@ namespace FinalProject1_winform
             this.btnSmallInsert.ForeColor = System.Drawing.Color.Black;
             this.btnSmallInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnSmallInsert.Image")));
             this.btnSmallInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmallInsert.Location = new System.Drawing.Point(487, 339);
+            this.btnSmallInsert.Location = new System.Drawing.Point(730, 514);
+            this.btnSmallInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnSmallInsert.Name = "btnSmallInsert";
-            this.btnSmallInsert.Size = new System.Drawing.Size(60, 25);
+            this.btnSmallInsert.Size = new System.Drawing.Size(76, 32);
             this.btnSmallInsert.TabIndex = 27;
             this.btnSmallInsert.Text = "등록";
             this.btnSmallInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -279,9 +297,10 @@ namespace FinalProject1_winform
             this.btnSmallUps.ForeColor = System.Drawing.Color.Black;
             this.btnSmallUps.Image = ((System.Drawing.Image)(resources.GetObject("btnSmallUps.Image")));
             this.btnSmallUps.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmallUps.Location = new System.Drawing.Point(553, 339);
+            this.btnSmallUps.Location = new System.Drawing.Point(814, 514);
+            this.btnSmallUps.Margin = new System.Windows.Forms.Padding(4);
             this.btnSmallUps.Name = "btnSmallUps";
-            this.btnSmallUps.Size = new System.Drawing.Size(60, 25);
+            this.btnSmallUps.Size = new System.Drawing.Size(76, 32);
             this.btnSmallUps.TabIndex = 28;
             this.btnSmallUps.Text = "수정";
             this.btnSmallUps.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -290,8 +309,8 @@ namespace FinalProject1_winform
             // 
             // frmMainMgt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.ClientSize = new System.Drawing.Size(1370, 768);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1561, 930);
             this.Controls.Add(this.btnSmallUps);
             this.Controls.Add(this.btnBigUps);
             this.Controls.Add(this.btnSmallDelete);
@@ -307,6 +326,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi3);
             this.Controls.Add(this.label_gudi4);
             this.Controls.Add(this.pictureBox_gudi2);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMainMgt";
             this.Text = "메뉴관리";
             this.Load += new System.EventHandler(this.frmMainMgt_Load);
