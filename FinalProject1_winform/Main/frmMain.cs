@@ -65,7 +65,7 @@ namespace FinalProject1_winform
                 pnlSmallMenus.Size = new Size(196, 55 * smallMenus.Count);
                 pnlSmallMenus.Location = new Point(0, startYpoint);
                 //pnlSmallMenus.Dock = DockStyle.Top;
-                startYpoint += 55 * smallMenus.Count;
+                //startYpoint += 55 * smallMenus.Count;
                 pnlSideBar.Controls.Add(pnlSmallMenus);
 
                 prePanel = pnlSmallMenus;

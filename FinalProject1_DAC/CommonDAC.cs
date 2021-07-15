@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using FinalProject1_VO;
+using System.Data;
 
 namespace FinalProject1_DAC
 {
@@ -73,6 +74,39 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
                 return list;
             }
         }
+
+        // 콤보박스 planid 가져오기용
+        public List<DemandPlanVO> GetCommboDemandPlan()
+        {
+            string sql = "Select distinct PlanID from Demandplan ";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<DemandPlanVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // 콤보박스 productName 가져오기용
+        public List<ItemVO> GetCommboProductName()
+        {
+            string sql = "select Item_ID, Item_Name from Item where Item_Category = '완제품'";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public DataTable GetMenuList()
+        {
+            string sql = "select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img from Menu";
+
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
 
     }
 }

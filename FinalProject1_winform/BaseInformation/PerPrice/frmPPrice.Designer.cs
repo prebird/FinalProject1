@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProject1_winform
 {
-    partial class frmMaterialPrice
+    partial class frmPPrice
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaterialPrice));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPPrice));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,20 +38,19 @@ namespace FinalProject1_winform
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.txtItemCode = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.dtpUdate = new FinalProject1_winform.DateTimePicker_gudi();
+            this.dtpdate = new FinalProject1_winform.DateTimePicker_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvMaterialPrice = new FinalProject1_winform.DGV_gudi();
+            this.dgvPprice = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
             this.button_gudi3 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi7 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPprice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +64,7 @@ namespace FinalProject1_winform
             this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Controls.Add(this.txtItemCode);
             this.panel1.Controls.Add(this.label_gudi2);
-            this.panel1.Controls.Add(this.dtpUdate);
+            this.panel1.Controls.Add(this.dtpdate);
             this.panel1.Controls.Add(this.label_gudi1);
             this.panel1.Location = new System.Drawing.Point(17, 16);
             this.panel1.Name = "panel1";
@@ -85,7 +84,7 @@ namespace FinalProject1_winform
             this.button_gudi8.Location = new System.Drawing.Point(959, 11);
             this.button_gudi8.Name = "button_gudi8";
             this.button_gudi8.Size = new System.Drawing.Size(78, 25);
-            this.button_gudi8.TabIndex = 9;
+            this.button_gudi8.TabIndex = 1;
             this.button_gudi8.Text = "조회";
             this.button_gudi8.UseVisualStyleBackColor = false;
             // 
@@ -115,7 +114,7 @@ namespace FinalProject1_winform
             this.txtItemCode.Location = new System.Drawing.Point(426, 11);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(187, 25);
-            this.txtItemCode.TabIndex = 3;
+            this.txtItemCode.TabIndex = 0;
             // 
             // label_gudi2
             // 
@@ -127,14 +126,14 @@ namespace FinalProject1_winform
             this.label_gudi2.TabIndex = 2;
             this.label_gudi2.Text = "■ 품목";
             // 
-            // dtpUdate
+            // dtpdate
             // 
-            this.dtpUdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dtpUdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpUdate.Location = new System.Drawing.Point(90, 11);
-            this.dtpUdate.Name = "dtpUdate";
-            this.dtpUdate.Size = new System.Drawing.Size(200, 25);
-            this.dtpUdate.TabIndex = 1;
+            this.dtpdate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dtpdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpdate.Location = new System.Drawing.Point(90, 11);
+            this.dtpdate.Name = "dtpdate";
+            this.dtpdate.Size = new System.Drawing.Size(200, 25);
+            this.dtpdate.TabIndex = 1;
             // 
             // label_gudi1
             // 
@@ -143,25 +142,25 @@ namespace FinalProject1_winform
             this.label_gudi1.Location = new System.Drawing.Point(12, 15);
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi1.TabIndex = 0;
+            this.label_gudi1.TabIndex = 9;
             this.label_gudi1.Text = "■ 기준일자";
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dgvMaterialPrice);
+            this.panel2.Controls.Add(this.dgvPprice);
             this.panel2.Location = new System.Drawing.Point(17, 113);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1057, 466);
             this.panel2.TabIndex = 8;
             // 
-            // dgvMaterialPrice
+            // dgvPprice
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvMaterialPrice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMaterialPrice.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMaterialPrice.CheckBoxAll = false;
+            this.dgvPprice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPprice.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPprice.CheckBoxAll = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
@@ -169,17 +168,17 @@ namespace FinalProject1_winform
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMaterialPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMaterialPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaterialPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMaterialPrice.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgvMaterialPrice.HeaderCheckStatus = false;
-            this.dgvMaterialPrice.Location = new System.Drawing.Point(0, 0);
-            this.dgvMaterialPrice.Name = "dgvMaterialPrice";
-            this.dgvMaterialPrice.RowHeadersVisible = false;
-            this.dgvMaterialPrice.RowTemplate.Height = 23;
-            this.dgvMaterialPrice.Size = new System.Drawing.Size(1057, 466);
-            this.dgvMaterialPrice.TabIndex = 0;
+            this.dgvPprice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPprice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPprice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPprice.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvPprice.HeaderCheckStatus = false;
+            this.dgvPprice.Location = new System.Drawing.Point(0, 0);
+            this.dgvPprice.Name = "dgvPprice";
+            this.dgvPprice.RowHeadersVisible = false;
+            this.dgvPprice.RowTemplate.Height = 23;
+            this.dgvPprice.Size = new System.Drawing.Size(1057, 466);
+            this.dgvPprice.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
@@ -214,7 +213,7 @@ namespace FinalProject1_winform
             this.button_gudi10.Location = new System.Drawing.Point(926, 76);
             this.button_gudi10.Name = "button_gudi10";
             this.button_gudi10.Size = new System.Drawing.Size(149, 25);
-            this.button_gudi10.TabIndex = 11;
+            this.button_gudi10.TabIndex = 5;
             this.button_gudi10.Text = "양식(양식이름) 다운";
             this.button_gudi10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi10.UseVisualStyleBackColor = false;
@@ -232,7 +231,7 @@ namespace FinalProject1_winform
             this.button_gudi5.Location = new System.Drawing.Point(861, 76);
             this.button_gudi5.Name = "button_gudi5";
             this.button_gudi5.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi5.TabIndex = 12;
+            this.button_gudi5.TabIndex = 4;
             this.button_gudi5.Text = "엑셀";
             this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi5.UseVisualStyleBackColor = false;
@@ -247,10 +246,10 @@ namespace FinalProject1_winform
             this.button_gudi6.ForeColor = System.Drawing.Color.Black;
             this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
             this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(731, 76);
+            this.button_gudi6.Location = new System.Drawing.Point(795, 76);
             this.button_gudi6.Name = "button_gudi6";
             this.button_gudi6.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi6.TabIndex = 14;
+            this.button_gudi6.TabIndex = 3;
             this.button_gudi6.Text = "삭제";
             this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi6.UseVisualStyleBackColor = false;
@@ -265,38 +264,19 @@ namespace FinalProject1_winform
             this.button_gudi3.ForeColor = System.Drawing.Color.Black;
             this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
             this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(601, 76);
+            this.button_gudi3.Location = new System.Drawing.Point(729, 76);
             this.button_gudi3.Name = "button_gudi3";
             this.button_gudi3.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi3.TabIndex = 15;
+            this.button_gudi3.TabIndex = 2;
             this.button_gudi3.Text = "등록";
             this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi3.UseVisualStyleBackColor = false;
             // 
-            // button_gudi7
-            // 
-            this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi7.FlatAppearance.BorderSize = 0;
-            this.button_gudi7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi7.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
-            this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi7.Location = new System.Drawing.Point(666, 76);
-            this.button_gudi7.Name = "button_gudi7";
-            this.button_gudi7.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi7.TabIndex = 17;
-            this.button_gudi7.Text = "수정";
-            this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi7.UseVisualStyleBackColor = false;
-            // 
-            // frmMaterialPrice
+            // frmPPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 620);
-            this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.button_gudi10);
             this.Controls.Add(this.button_gudi5);
             this.Controls.Add(this.button_gudi6);
@@ -305,13 +285,13 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmMaterialPrice";
+            this.Name = "frmPPrice";
             this.Text = "frmMaterialPrice";
             this.Load += new System.EventHandler(this.frmMaterialPrice_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPprice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,7 +304,7 @@ namespace FinalProject1_winform
         private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private Label_gudi label_gudi1;
-        private DateTimePicker_gudi dtpUdate;
+        private DateTimePicker_gudi dtpdate;
         private ComboBox_gudi cboCompanyCode;
         private Label_gudi label_gudi3;
         private Controls.TextBox_gudi txtItemCode;
@@ -335,7 +315,6 @@ namespace FinalProject1_winform
         private Button_gudi button_gudi5;
         private Button_gudi button_gudi6;
         private Button_gudi button_gudi3;
-        private Button_gudi button_gudi7;
-        private DGV_gudi dgvMaterialPrice;
+        private DGV_gudi dgvPprice;
     }
 }

@@ -47,7 +47,7 @@ namespace FinalProject1_winform
         private void btnSave_Click(object sender, EventArgs e)
         {
             // 유효성체크
-            CommonUtil.CheckNullOrEmptyOk(txtMenuName, "메뉴이름");
+            if(!CommonUtil.CheckNullOrEmptyOk(txtMenuName, "메뉴이름")) return ;
 
             // VO에 담기
             MenuVO menu = new MenuVO();

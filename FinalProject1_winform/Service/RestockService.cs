@@ -23,7 +23,7 @@ namespace FinalProject1_winform
             return dac.GetPrintData(strCheckBarCodeID);
         }
 
-        public List<MRPVO> GetMRP(MRPSearchVO search)
+        public DataTable GetMRP(MRPSearchVO search)
         {
             RestockOrderDAC dac = new RestockOrderDAC();
             return dac.GetMRP(search);

@@ -12,9 +12,22 @@ namespace FinalProject1_winform
 {
     public partial class frmRestockOrderPopUP : Form
     {
-        public frmRestockOrderPopUP()
+        DataView dvRO = new DataView();
+        public frmRestockOrderPopUP(DataView dv)
         {
             InitializeComponent();
+            dvRO = dv;
+        }
+
+        private void frmRestockOrderPopUP_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //닫기
+        private void button_gudi1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
