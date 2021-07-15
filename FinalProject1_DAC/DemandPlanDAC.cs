@@ -42,7 +42,7 @@ namespace FinalProject1_DAC
 
         public bool DMInsertTrans(DemandPlanVO dmVO)
         {
-            string sql = @"SP_DMPlanTrans";
+            string sql = @"SP_DemandPlanTransInsert";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
@@ -56,9 +56,6 @@ namespace FinalProject1_DAC
                 int iRowAffect = cmd.ExecuteNonQuery();
                 return iRowAffect > 0;
             }
-
-
-
         }
     }
 }

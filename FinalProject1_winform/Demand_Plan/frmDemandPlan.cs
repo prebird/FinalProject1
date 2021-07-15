@@ -14,5 +14,35 @@ namespace FinalProject1_winform
         {
             InitializeComponent();
         }
+
+        private void frmDemandPlan_Load(object sender, EventArgs e)
+        {
+            CommonUtil.SetInitGridView(dgv_DemandPlan);
+
+
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (dgv_DemandPlan.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("행을 선택 해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
