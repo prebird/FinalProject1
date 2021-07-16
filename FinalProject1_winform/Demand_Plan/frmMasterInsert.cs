@@ -40,14 +40,13 @@ namespace FinalProject1_winform
                 bool result =  service.UpdateSM(SMVO);
 
                 if (result)
-                    MessageBox.Show("정보가 입력 되었습니다.");
-                else
-                    MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                //else
+                //    this.DialogResult = DialogResult.No;
             }
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-
-        }
+       }
     }
 }

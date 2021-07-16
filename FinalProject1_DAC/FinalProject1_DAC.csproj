@@ -51,6 +51,7 @@
     <Compile Include="BORDAC.cs" />
     <Compile Include="CommonDAC.cs" />
     <Compile Include="CompanyDAC.cs" />
+    <Compile Include="CompanyItemDAC.cs" />
     <Compile Include="DemandPlanDAC.cs" />
     <Compile Include="FactoryDAC.cs" />
     <Compile Include="Helper.cs" />

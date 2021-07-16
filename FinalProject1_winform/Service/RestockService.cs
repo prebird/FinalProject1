@@ -28,5 +28,11 @@ namespace FinalProject1_winform
             RestockOrderDAC dac = new RestockOrderDAC();
             return dac.GetMRP(search);
         }
+
+        public DataTable GetROSuggest(MRPSearchVO search)
+        {
+            RestockOrderDAC dac = new RestockOrderDAC();
+            return dac.GetROSuggest(search);
+        }
     }
 }

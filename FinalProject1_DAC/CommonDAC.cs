@@ -95,6 +95,24 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
             }
         }
 
+        public List<ItemVO> GetCommboItemName()
+        {
+            string sql = "select Item_ID, Item_Name from Item";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<CompanyVO> GetCommboCompanyName()
+        {
+            string sql = "select company_id, company_name from Company";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
+            }
+        }
+
         public DataTable GetMenuList()
         {
             string sql = "select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img from Menu";
@@ -106,6 +124,8 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
             }
             return dt;
         }
+
+
 
 
     }

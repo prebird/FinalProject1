@@ -187,7 +187,34 @@ namespace FinalProject1_winform
             ComboBinding<ItemVO>(cbo, list, "Item_Name", "Item_ID");
         }
 
+        public static void ComboBindingCompanyID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<CompanyVO> list = service.GetCommboCompanyName();
+            CompanyVO item = new CompanyVO
+            {
+                company_id = 0,
+                company_name = "선택"
+            };
+            list.Insert(0, item);
 
+            ComboBinding<CompanyVO>(cbo, list, "company_name", "company_id");
+        }
+
+
+        public static void ComboBindingItemID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<ItemVO> list = service.GetCommboItemName();
+            ItemVO item = new ItemVO
+            {
+                Item_ID = 0,
+                Item_Name = "선택"
+            };
+            list.Insert(0, item);
+
+            ComboBinding<ItemVO>(cbo, list, "Item_Name", "Item_ID");
+        }
 
         #region 옛날 유틸
         //public static void ColorChange(object sender, Panel panel)
