@@ -13,7 +13,7 @@ namespace FinalProject1_winform
 {
     public partial class frmRestockOrder : FinalProject1_winform.Basic3
     {
-        DataTable dtMRP;
+        MRPSearchVO search;
         public frmRestockOrder()
         {
             InitializeComponent();
@@ -50,16 +50,15 @@ namespace FinalProject1_winform
         //검색
         private void button_gudi8_Click(object sender, EventArgs e)
         {
-            MRPSearchVO search = new MRPSearchVO();
+            search = new MRPSearchVO();
             search.PlanID = (cboPlanID.SelectedText == "선택") ? "" : cboPlanID.SelectedText;
             search.FromDate = dtp1.FromDate.ToString();
             search.Todate = dtp1.ToDate.ToString();
             search.ProductID = cboProductID.SelectedValue.ToString().ZeroOrNum();
 
             RestockService service = new RestockService();
-            dtMRP = service.GetMRP(search);
 
-            dgv1.DataSource = dtMRP;
+            dgv1.DataSource = service.GetMRP(search);
         }
 
        
@@ -101,10 +100,7 @@ namespace FinalProject1_winform
 
         private void btnAddRestock_Click(object sender, EventArgs e)
         {
-            DataView dvMRP = new DataView(dtMRP);
-            dvMRP.RowFilter = "gubun = '발주제안'";
-
-            frmRestockOrderPopUP frm = new frmRestockOrderPopUP(dvMRP);
+            frmRestockOrderPopUP frm = new frmRestockOrderPopUP(search);
             frm.ShowDialog();
         }
     }

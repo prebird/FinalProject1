@@ -26,17 +26,6 @@ namespace FinalProject1_VO
         public string company_code { get; set; }
         public string item_code { get; set; }
     }
-    public class CompanyItemVO
-
-    {
-        public int CompanyItem_ID { get; set; }
-        public int item_id { get; set; }
-        public string item_category { get; set; }
-        public string item_code { get; set; }
-        public string item_name { get; set; }
-        public int company_id { get; set; }
-        public string company_code { get; set; }
-
-    }
+    
 
 }
