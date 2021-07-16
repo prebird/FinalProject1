@@ -1926,6 +1926,9 @@
     <Content Include="Views\LogIn\Index.cshtml" />
     <Content Include="Views\LogIn\SignUp.cshtml" />
     <Content Include="Views\LogIn\Success.cshtml" />
+    <None Include="Properties\PublishProfiles\GDC7FinalProject1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\GDC7FinalProject1 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\GDC7FinalProject1 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

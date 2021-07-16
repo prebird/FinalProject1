@@ -13,7 +13,7 @@ namespace FinalProject1_winform
 {
     public partial class frmRestockOrder : FinalProject1_winform.Basic3
     {
-        DataTable dtMRP;
+        MRPSearchVO search;
         public frmRestockOrder()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv1, "구분", "gubun", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv1, "카테고리", "Category", colWidth: 100, visibility: false);
             CommonUtil.AddGridTextColumn(dgv1, "정렬", "SortNum", colWidth: 100, visibility: false);
-            CommonUtil.AddGridTextColumn(dgv1, "a", "a", colWidth: 200, visibility: false);
+            CommonUtil.AddGridTextColumn(dgv1, "ProductName", "ProductName", colWidth: 200, visibility: false);
 
 
             btnSearch.PerformClick();
@@ -50,16 +50,15 @@ namespace FinalProject1_winform
         //검색
         private void button_gudi8_Click(object sender, EventArgs e)
         {
-            MRPSearchVO search = new MRPSearchVO();
+            search = new MRPSearchVO();
             search.PlanID = (cboPlanID.SelectedText == "선택") ? "" : cboPlanID.SelectedText;
             search.FromDate = dtp1.FromDate.ToString();
             search.Todate = dtp1.ToDate.ToString();
             search.ProductID = cboProductID.SelectedValue.ToString().ZeroOrNum();
 
             RestockService service = new RestockService();
-            dtMRP = service.GetMRP(search);
 
-            dgv1.DataSource = dtMRP;
+            dgv1.DataSource = service.GetMRP(search);
         }
 
        
@@ -84,16 +83,21 @@ namespace FinalProject1_winform
             
                 if (dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != DBNull.Value)
                 {
-                if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "생산제안" || dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안")  &&(e.ColumnIndex != 0 && e.ColumnIndex != 1 && e.ColumnIndex != 2))
-                {
-                    if (Information.IsNumeric(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
+                    if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "생산제안" || dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안")  &&(e.ColumnIndex != 0 && e.ColumnIndex != 1 && e.ColumnIndex != 2))
                     {
-                        if (Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) > 0)
+                        if (Information.IsNumeric(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
                         {
-                            dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
+                            if (Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) > 0)
+                            {
+                                dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
+                            }
                         }
-                    } 
-                }
+
+                        if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안"))
+                        {
+                            dgv1.Rows[e.RowIndex].Cells[3].Style.BackColor = Color.Orange;
+                        }   
+                    }
                 }  
             
             
@@ -101,10 +105,7 @@ namespace FinalProject1_winform
 
         private void btnAddRestock_Click(object sender, EventArgs e)
         {
-            DataView dvMRP = new DataView(dtMRP);
-            dvMRP.RowFilter = "gubun = '발주제안'";
-
-            frmRestockOrderPopUP frm = new frmRestockOrderPopUP(dvMRP);
+            frmRestockOrderPopUP frm = new frmRestockOrderPopUP(search);
             frm.ShowDialog();
         }
     }
