@@ -14,5 +14,39 @@ namespace FinalProject1_winform
         {
             InitializeComponent();
         }
+
+        private void frmDemandPlan_Load(object sender, EventArgs e)
+        {
+            CommonUtil.SetInitGridView(dgv_DemandPlan);
+
+
+        }
+
+        // 삭제
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        //생산 계획 생성
+        private void btn_PlanPP_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        // 엑셀 출력 버튼
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        // 부분 조회 검색 패널
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
