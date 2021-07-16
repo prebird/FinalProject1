@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject1_VO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,15 @@ namespace FinalProject1_winform
         // 부분 조회 검색 패널
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            DemandPlanVO dmVO = new DemandPlanVO()
+            {
+               PlanID = txt_PlanID.Text,
+               StartDate = dtp_Start.Value.ToString("yyyy-MM-dd"),
+               EndDate = dtp_End.Value.ToString("yyyy-MM-dd"),
+            };
+
+
+
 
         }
     }
