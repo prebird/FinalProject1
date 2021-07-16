@@ -84,7 +84,7 @@ namespace FinalProject1_winform
                     btnSmallMenu.FlatStyle = FlatStyle.Flat;
                     btnSmallMenu.TextAlign = ContentAlignment.MiddleLeft;
                     btnSmallMenu.Location = new Point(0, 55*j);
-                    btnSmallMenu.Image = Properties.Resources.gray_dot;
+                    //btnSmallMenu.Image = Properties.Resources.gray_dot;
                     btnSmallMenu.ImageAlign = ContentAlignment.MiddleLeft;
                     btnSmallMenu.TextImageRelation = TextImageRelation.ImageBeforeText;
                     btnSmallMenu.Tag = smallMenus[j].ProgramName;

@@ -92,5 +92,32 @@ where ro.ro_id in (" + strCheckBarCodeID + ")";
             return dt;
 
         }
+
+        public bool insertRO(RestockOrderVO ro)
+        {
+            string sql = @"insert into RestockOrder (itemid, Companyid, SuggestQty, Qty,dueDate, unitPrice, RegDate)
+values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate)";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("itemid", ro.itemid);
+                cmd.Parameters.AddWithValue("companyid", ro.Companyid);
+                cmd.Parameters.AddWithValue("SuggestQty", ro.SuggestQty);
+                cmd.Parameters.AddWithValue("Qty", ro.Qty);
+                cmd.Parameters.AddWithValue("dueDate", ro.dueDate);
+                cmd.Parameters.AddWithValue("unitPrice", ro.unitPrice);
+                cmd.Parameters.AddWithValue("RegDate", ro.RegDate);
+
+                int irows  = cmd.ExecuteNonQuery();
+                if (irows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+        }
     }
 }
