@@ -33,8 +33,8 @@ namespace FinalProject1_winform
             CommonUtil.SetInitGridView(dgvRO);
             CommonUtil.AddGridTextColumn(dgvRO, "품번", "Itemid", colWidth: 60);
             CommonUtil.AddGridTextColumn(dgvRO, "품명", "Item_Name", colWidth: 100);
-            CommonUtil.AddGridTextColumn(dgvRO, "발주제안일", "out_dt", colWidth: 80);
-            CommonUtil.AddGridTextColumn(dgvRO, "발주제안량", "suggestQty", colWidth:80);
+            CommonUtil.AddGridTextColumn(dgvRO, "발주제안일", "out_dt", colWidth: 110);
+            CommonUtil.AddGridTextColumn(dgvRO, "발주제안량", "suggestQty", colWidth:110);
             CommonUtil.AddGridTextColumn(dgvRO, "발주량", "Qty", colWidth:70);
 
             CommonUtil.SetInitGridView(dgvCompany);
@@ -129,6 +129,7 @@ namespace FinalProject1_winform
             if (service.insertRO(restockOrderVO))
             {
                 MessageBox.Show("성공적으로 발주되었습니다.");
+                ROSuggestBinding();
             }
             else
             {

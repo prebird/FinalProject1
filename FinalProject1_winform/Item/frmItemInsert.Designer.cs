@@ -60,9 +60,13 @@ namespace FinalProject1_winform
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.txt_Content = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.pictureBox1 = new FinalProject1_winform.PictureBox_gudi();
+            this.btnSearchPic = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +77,7 @@ namespace FinalProject1_winform
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(737, 37);
+            this.panel1.Size = new System.Drawing.Size(729, 37);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox_gudi1
@@ -102,9 +106,9 @@ namespace FinalProject1_winform
             this.panel2.Controls.Add(this.btn_InsUp);
             this.panel2.Controls.Add(this.btn_Cancel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 444);
+            this.panel2.Location = new System.Drawing.Point(0, 558);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(737, 51);
+            this.panel2.Size = new System.Drawing.Size(729, 51);
             this.panel2.TabIndex = 5;
             // 
             // btn_InsUp
@@ -134,7 +138,7 @@ namespace FinalProject1_winform
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancel.Location = new System.Drawing.Point(366, 6);
+            this.btn_Cancel.Location = new System.Drawing.Point(370, 6);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(80, 33);
             this.btn_Cancel.TabIndex = 6;
@@ -145,7 +149,7 @@ namespace FinalProject1_winform
             // 
             this.txt_BarCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_BarCode.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_BarCode.Location = new System.Drawing.Point(418, 167);
+            this.txt_BarCode.Location = new System.Drawing.Point(479, 91);
             this.txt_BarCode.Multiline = true;
             this.txt_BarCode.Name = "txt_BarCode";
             this.txt_BarCode.Size = new System.Drawing.Size(222, 23);
@@ -167,7 +171,7 @@ namespace FinalProject1_winform
             this.cbo_YN.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbo_YN.Location = new System.Drawing.Point(417, 199);
+            this.cbo_YN.Location = new System.Drawing.Point(478, 123);
             this.cbo_YN.Name = "cbo_YN";
             this.cbo_YN.Size = new System.Drawing.Size(222, 24);
             this.cbo_YN.TabIndex = 40;
@@ -176,7 +180,7 @@ namespace FinalProject1_winform
             // 
             this.txt_SafetyQTY.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_SafetyQTY.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_SafetyQTY.Location = new System.Drawing.Point(417, 59);
+            this.txt_SafetyQTY.Location = new System.Drawing.Point(107, 282);
             this.txt_SafetyQTY.Name = "txt_SafetyQTY";
             this.txt_SafetyQTY.Size = new System.Drawing.Size(222, 25);
             this.txt_SafetyQTY.TabIndex = 39;
@@ -234,7 +238,7 @@ namespace FinalProject1_winform
             // 
             this.cbo_OutHouse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_OutHouse.FormattingEnabled = true;
-            this.cbo_OutHouse.Location = new System.Drawing.Point(418, 135);
+            this.cbo_OutHouse.Location = new System.Drawing.Point(479, 59);
             this.cbo_OutHouse.Name = "cbo_OutHouse";
             this.cbo_OutHouse.Size = new System.Drawing.Size(221, 24);
             this.cbo_OutHouse.TabIndex = 29;
@@ -243,7 +247,7 @@ namespace FinalProject1_winform
             // 
             this.cbo_InHouse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_InHouse.FormattingEnabled = true;
-            this.cbo_InHouse.Location = new System.Drawing.Point(418, 98);
+            this.cbo_InHouse.Location = new System.Drawing.Point(108, 321);
             this.cbo_InHouse.Name = "cbo_InHouse";
             this.cbo_InHouse.Size = new System.Drawing.Size(221, 24);
             this.cbo_InHouse.TabIndex = 28;
@@ -252,7 +256,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi21.AutoSize = true;
             this.label_gudi21.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi21.Location = new System.Drawing.Point(329, 168);
+            this.label_gudi21.Location = new System.Drawing.Point(389, 92);
             this.label_gudi21.Name = "label_gudi21";
             this.label_gudi21.Size = new System.Drawing.Size(60, 17);
             this.label_gudi21.TabIndex = 27;
@@ -272,7 +276,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi14.AutoSize = true;
             this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi14.Location = new System.Drawing.Point(328, 137);
+            this.label_gudi14.Location = new System.Drawing.Point(389, 61);
             this.label_gudi14.Name = "label_gudi14";
             this.label_gudi14.Size = new System.Drawing.Size(72, 17);
             this.label_gudi14.TabIndex = 20;
@@ -282,7 +286,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi13.AutoSize = true;
             this.label_gudi13.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi13.Location = new System.Drawing.Point(328, 101);
+            this.label_gudi13.Location = new System.Drawing.Point(18, 324);
             this.label_gudi13.Name = "label_gudi13";
             this.label_gudi13.Size = new System.Drawing.Size(72, 17);
             this.label_gudi13.TabIndex = 19;
@@ -292,7 +296,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi11.AutoSize = true;
             this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi11.Location = new System.Drawing.Point(327, 203);
+            this.label_gudi11.Location = new System.Drawing.Point(389, 127);
             this.label_gudi11.Name = "label_gudi11";
             this.label_gudi11.Size = new System.Drawing.Size(72, 17);
             this.label_gudi11.TabIndex = 17;
@@ -302,7 +306,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi10.AutoSize = true;
             this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi10.Location = new System.Drawing.Point(327, 65);
+            this.label_gudi10.Location = new System.Drawing.Point(17, 288);
             this.label_gudi10.Name = "label_gudi10";
             this.label_gudi10.Size = new System.Drawing.Size(84, 17);
             this.label_gudi10.TabIndex = 16;
@@ -362,7 +366,7 @@ namespace FinalProject1_winform
             // 
             this.txt_Content.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_Content.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_Content.Location = new System.Drawing.Point(107, 278);
+            this.txt_Content.Location = new System.Drawing.Point(106, 367);
             this.txt_Content.Multiline = true;
             this.txt_Content.Name = "txt_Content";
             this.txt_Content.Size = new System.Drawing.Size(594, 158);
@@ -372,18 +376,56 @@ namespace FinalProject1_winform
             // 
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(21, 278);
+            this.label_gudi3.Location = new System.Drawing.Point(20, 367);
             this.label_gudi3.Name = "label_gudi3";
             this.label_gudi3.Size = new System.Drawing.Size(48, 17);
             this.label_gudi3.TabIndex = 7;
             this.label_gudi3.Text = "■ 비고";
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.AutoSize = true;
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi1.Location = new System.Drawing.Point(390, 161);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi1.TabIndex = 17;
+            this.label_gudi1.Text = "■ 이미지";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(479, 159);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 148);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnSearchPic
+            // 
+            this.btnSearchPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btnSearchPic.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btnSearchPic.FlatAppearance.BorderSize = 0;
+            this.btnSearchPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchPic.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnSearchPic.ForeColor = System.Drawing.Color.White;
+            this.btnSearchPic.Location = new System.Drawing.Point(478, 318);
+            this.btnSearchPic.Name = "btnSearchPic";
+            this.btnSearchPic.Size = new System.Drawing.Size(223, 27);
+            this.btnSearchPic.TabIndex = 52;
+            this.btnSearchPic.Text = "이미지검색";
+            this.btnSearchPic.UseVisualStyleBackColor = false;
+            this.btnSearchPic.Click += new System.EventHandler(this.btnSearchPic_Click);
             // 
             // frmItemInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(737, 495);
+            this.ClientSize = new System.Drawing.Size(729, 609);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnSearchPic);
             this.Controls.Add(this.txt_BarCode);
             this.Controls.Add(this.cbo_OrderType);
             this.Controls.Add(this.cbo_YN);
@@ -399,6 +441,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi17);
             this.Controls.Add(this.label_gudi14);
             this.Controls.Add(this.label_gudi13);
+            this.Controls.Add(this.label_gudi1);
             this.Controls.Add(this.label_gudi11);
             this.Controls.Add(this.label_gudi10);
             this.Controls.Add(this.label_gudi8);
@@ -416,6 +459,7 @@ namespace FinalProject1_winform
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,5 +497,8 @@ namespace FinalProject1_winform
         private Controls.TextBox_gudi txt_BarCode;
         private Label_gudi label_gudi17;
         private ComboBox_gudi cbo_CheckType;
+        private Label_gudi label_gudi1;
+        private PictureBox_gudi pictureBox1;
+        private Button_gudi btnSearchPic;
     }
 }

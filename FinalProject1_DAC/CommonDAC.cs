@@ -27,9 +27,7 @@ namespace FinalProject1_DAC
         public List<MenuVO> GetAllMenu()
         {
 
-            string sql = @"select m.MenuID, MenuName, MenuLevel, refMenuID, ProgramName, a.AuthName , a.AuthID  
-from Menu m left outer join MenuAuth ma on m.MenuID = ma.MenuID
-left outer join Authority a on ma.AuthID = a.AuthID";
+            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img  from Menu" ;
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -42,9 +40,7 @@ left outer join Authority a on ma.AuthID = a.AuthID";
         public List<MenuVO> GetAllMenuMgt()
         {
 
-            string sql = @"select m.MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin ,u.user_name, menu_udate
-from Menu m left outer join MenuAuth ma on m.MenuID = ma.MenuID
-left outer join Userinfo u on  u.user_id = m.menu_uadmin";
+            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img  from Menu";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
