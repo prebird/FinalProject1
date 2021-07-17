@@ -67,7 +67,7 @@ namespace FinalProject1_winform
                     Dplan_Quantity = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[8].Value),
                 };
 
-                DMService service = new DMService();
+                DemandPlanService service = new DemandPlanService();
                 bool result = service.DMInsertTrans(dmVO);
 
                 if (result)

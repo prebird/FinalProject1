@@ -36,7 +36,7 @@ namespace FinalProject1_winform
                     PO_EditDate = dtp_EditDate.Text,
                 };
 
-                SMService service = new SMService();
+                SalesMasterService service = new SalesMasterService();
                 bool result =  service.UpdateSM(SMVO);
 
                 if (result)

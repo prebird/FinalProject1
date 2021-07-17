@@ -69,7 +69,7 @@ namespace FinalProject1_winform
                     PO_UploadDate = DateTime.Now.ToString("yyyy-MM-dd")
                 };
 
-                SMService service = new SMService();
+                SalesMasterService service = new SalesMasterService();
                 bool result = service.InsertSalesMaster(smVO);
 
                 if (result)

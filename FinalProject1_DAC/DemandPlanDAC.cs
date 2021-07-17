@@ -13,6 +13,7 @@ namespace FinalProject1_DAC
     public class DemandPlanDAC : IDisposable
     {
         SqlConnection conn;
+        string strConn = ConfigurationManager.ConnectionStrings["FinalProject1"].ConnectionString;
 
         //private static LoggingUtility log = new LoggingUtility("FinalProject1_DAC ItemDAC", Level.Info, 30);
         //public static LoggingUtility Log { get { return log; } }
@@ -56,6 +57,25 @@ namespace FinalProject1_DAC
                 int iRowAffect = cmd.ExecuteNonQuery();
                 return iRowAffect > 0;
             }
+        }
+
+        public DataTable GetDemandPlanList(DemandPlanVO dmVO)
+        {
+            string sql = "SP_DemandPlanList";
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                da.SelectCommand.Parameters.AddWithValue("@StartDate", dmVO.StartDate);
+                da.SelectCommand.Parameters.AddWithValue("@EndDate", dmVO.EndDate);
+
+                da.Fill(dt);
+            }
+            return dt;
+
         }
 
     }

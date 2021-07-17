@@ -11,6 +11,7 @@ namespace FinalProject1_winform
 {
     public partial class frmDemandPlan : FinalProject1_winform.Basic3
     {
+
         public frmDemandPlan()
         {
             InitializeComponent();
@@ -18,7 +19,7 @@ namespace FinalProject1_winform
 
         private void frmDemandPlan_Load(object sender, EventArgs e)
         {
-            CommonUtil.SetInitGridView(dgv_DemandPlan);
+            //CommonUtil.SetInitGridView(dgv_DemandPlan);
 
 
         }
@@ -54,10 +55,10 @@ namespace FinalProject1_winform
                EndDate = dtp_End.Value.ToString("yyyy-MM-dd"),
             };
 
+            DemandPlanService service = new DemandPlanService();
+            DataTable DemandPlanDT = service.GetDemandPlanList(dmVO);
 
-
-
-
+            dgv_DemandPlan.DataSource = DemandPlanDT;
 
         }
     }

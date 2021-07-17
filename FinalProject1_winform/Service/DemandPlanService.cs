@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FinalProject1_VO;
 using FinalProject1_DAC;
+using System.Data;
 
 namespace FinalProject1_winform
 {
@@ -27,6 +28,12 @@ namespace FinalProject1_winform
             dac.Dispose();
 
             return result;
+        }
+
+        public DataTable GetDemandPlanList(DemandPlanVO dmVO)
+        {
+            DemandPlanDAC dac = new DemandPlanDAC();
+            return dac.GetDemandPlanList(dmVO);
         }
 
     }
