@@ -56,7 +56,14 @@ values (@MenuName, @MenuLevel, @menu_uadmin, @menu_udate, @menu_Img)";
                 cmd.Parameters.AddWithValue("@MenuLevel", 0);
                 cmd.Parameters.AddWithValue("@menu_uadmin", menu.menu_uadmin);
                 cmd.Parameters.AddWithValue("@menu_udate", menu.menu_udate);
-                cmd.Parameters.AddWithValue("@menu_Img", menu.menu_Img);
+                if (menu.menu_Img != null)
+                {
+                    cmd.Parameters.AddWithValue("@menu_Img", menu.menu_Img);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@menu_Img", DBNull.Value);
+                }
                 cmd.Parameters.AddWithValue("@menuid", menu.MenuID);
 
                 int irows = cmd.ExecuteNonQuery();
