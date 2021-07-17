@@ -8,7 +8,7 @@ using FinalProject1_DAC;
 
 namespace FinalProject1_winform
 {
-    class DMService
+    class DemandPlanService
     {   
         // 계획 번호가 없는 영업 마스터만 조회.
         public List<SalesMasterVO> GetPlanSM()

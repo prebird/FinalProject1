@@ -56,9 +56,7 @@ namespace FinalProject1_DAC
                 int iRowAffect = cmd.ExecuteNonQuery();
                 return iRowAffect > 0;
             }
-
-
-
         }
+
     }
 }
