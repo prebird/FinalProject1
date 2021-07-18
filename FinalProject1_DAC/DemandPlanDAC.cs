@@ -69,6 +69,7 @@ namespace FinalProject1_DAC
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
+                da.SelectCommand.Parameters.AddWithValue("@PlanID", dmVO.PlanID);
                 da.SelectCommand.Parameters.AddWithValue("@StartDate", dmVO.StartDate);
                 da.SelectCommand.Parameters.AddWithValue("@EndDate", dmVO.EndDate);
 
