@@ -18,10 +18,11 @@ namespace FinalProject1_winform
             InitializeComponent();
         }
 
-        // 영업 마스터 업로드 후 그리드뷰 출력
+        // 발주서 엑셀 등록.
         private void btn_POExcel_Click(object sender, EventArgs e)
         {
             frmPOUpload frm = new frmPOUpload();
+
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 dgv_PO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -49,7 +50,7 @@ namespace FinalProject1_winform
         {
             if (dgv_PO.SelectedRows.Count < 1)
             {
-                MessageBox.Show("발주서 엑셀을 업로드 해주세요..", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("발주서 엑셀을 업로드 해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }    
 
