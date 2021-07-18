@@ -1,4 +1,5 @@
-﻿
+﻿@model FinalProject1_Web.Models.Cart
+
 @{
     Layout = null;
 }
@@ -8,10 +9,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>결제하기</title>
 </head>
 <body>
     <div> 
+        <h1>@Model.Lines.Count</h1>
     </div>
 </body>
 </html>

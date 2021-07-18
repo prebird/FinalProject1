@@ -8,6 +8,7 @@ namespace FinalProject1_Web.Controllers
 {
     public class MainController : Controller
     {
+
         // GET: Main
         public ActionResult Index()
         {

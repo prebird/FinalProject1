@@ -65,6 +65,7 @@
     <Compile Include="RestockOrderDAC.cs" />
     <Compile Include="SalesMasterDAC.cs" />
     <Compile Include="ShiftDAC.cs" />
+    <Compile Include="UserInfoDAC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

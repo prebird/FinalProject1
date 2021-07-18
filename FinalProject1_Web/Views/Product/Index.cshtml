@@ -1,5 +1,7 @@
-﻿@model List<FinalProject1_Web.Models.Item>
-@using FinalProject1_Web.Models;
+﻿@model List<ItemVO>
+@using FinalProject1_VO;
+
+
 
 @{
     ViewBag.Title = "Index";
@@ -11,7 +13,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">제품목록</h1>
+                <h1 class="border-dark">제품목록</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -28,49 +30,56 @@
     <div>
         <div>
             @{
-                List<Item> items = Model;
-                int columnCnt = 3;
-                int RowCnt = (int)Math.Ceiling(items.Count / 3.0);
-                int columnDist = 70;
-                int RowDist = 30;
-                int idx = 0;
+                List<ItemVO> items = Model;
             }
 
-            @for (int r = 0; r < RowCnt; r++)
-            {
-                for (int c = 0; c < columnCnt; c++)
-                {
-                    <div class="card">
-                        <h5 class="card-header">@items[idx].Item_Name</h5>
-                        @using (Html.BeginForm("AddToCart", "Cart"))
-                        {
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach (var p in items)
+                { 
+                    <div class="col">
+                        <div class="card h-100">
+                            <h4 class="card-header">@p.Item_Code-@p.Item_Name</h4>
+                            <img src="@ViewBag.apiurl@p.Item_img" class="card-img-top" alt="..." width="250" height="250">
                             <div class="card-body">
-                                @*<p class="card-text">@p.Description &nbsp;</p>*@  <!--  -->
-                                <h5 class="card-title">@items[idx].Item_Category</h5>
-                                <div class="text-right">
-                                    @Html.Hidden("itemId", items[idx].ItemID)
-                                    <input type="submit" value="Add to Cart" class="btn btn-success">
-                                </div>
+                                <p class="card-text">@p.Item_Content</p>
+                                <h5 class="card-text" style="float:right">30000</h5>
                             </div>
-                        }
+                            @using (Html.BeginForm("AddToCart", "Cart"))
+                            {
+                                @Html.Hidden("productID", p.Item_ID)
+                                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                                <input type="submit" value="장바구니" class="btn btn-success" style="float:right">
+                            }
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
                     </div>
-                    idx++;
-                    if (idx >= items.Count)
-                    {
-                        break;
-
-                    }
                 }
-            }
+            </div>
 
 
-            @*<nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                @Html.PageLinks(Model.PageInfo, (x) => Url.Action("Index", new { category = Model.CurrentCategory, page = x }))
-            </ul>
-        </nav>*@
+
+                    @*<div class="card">
+                    <h5 class="card-header">@p.Item_Name</h5>
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        <div class="card-body">
+                            <img src= "@ViewBag.apiurl@p.Item_img" class="img-thumbnail" alt="...">
+                            <p class="card-text">@p.Item_Category &nbsp;</p>
+                            <h5 class="card-title">@p.Item_ID - @ViewBag.apiurl@p.Item_img</h5>
+                            @Html.Hidden("productID", p.Item_ID)
+                            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                            <input type="submit" value="Add to Cart" class="btn btn-success">
+                        </div>
+                    }
+                </div>
+                <p></p>*@
+             
+
         </div>
-        <!-- /.row -->
+                <!-- /.row -->
     </div><!-- /.container-fluid -->
 </div>
 <!-- /.content -->

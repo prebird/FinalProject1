@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FinalProject1_Web.Models;
+using FinalProject1_DAC;
+using FinalProject1_VO;
+using System.Web.Configuration;
+using System.Configuration;
 
 namespace FinalProject1_Web.Controllers
 {
@@ -12,10 +16,18 @@ namespace FinalProject1_Web.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            ItemManager db = new ItemManager();
-            List<Item> model = db.GetItems();
+            ItemDAC dac = new ItemDAC();
+            List<ItemVO> allItem = dac.GetAllItem();
+            List<ItemVO> model = allItem.FindAll((x) => x.Item_Category == "완제품");
+            string apiurl = "http://gdc7finalproject1.azurewebsites.net/Uploads/";
+            ViewBag.apiurl = apiurl;
             return View(model);
         }
+
+
+
+
+
 
         // GET: Product/Details/5
         public ActionResult Details(int id)
