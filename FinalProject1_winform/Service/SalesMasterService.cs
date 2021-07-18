@@ -8,7 +8,7 @@ using FinalProject1_DAC;
 
 namespace FinalProject1_winform
 {
-    class SMService
+    class SalesMasterService
     {
         // 등록
         public bool InsertSalesMaster(SalesMasterVO smVO)

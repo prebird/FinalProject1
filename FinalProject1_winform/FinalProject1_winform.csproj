@@ -176,7 +176,7 @@
       <DependentUpon>XtraReport2.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\PerPriceService.cs" />
-    <Compile Include="Service\DMService.cs" />
+    <Compile Include="Service\DemandPlanService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -529,7 +529,7 @@
     <Compile Include="Service\processEquipmentService.cs" />
     <Compile Include="Service\RestockService.cs" />
     <Compile Include="Service\ShiftService.cs" />
-    <Compile Include="Service\SMService.cs" />
+    <Compile Include="Service\SalesMasterService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>

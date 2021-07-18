@@ -39,7 +39,7 @@ namespace FinalProject1_winform
         }
         public void LoadData()
         {
-            SMService service = new SMService();
+            SalesMasterService service = new SalesMasterService();
             List<SalesMasterVO> list = service.GetAllSM();
             dgv_SalesMaster.DataSource = list;
         }
@@ -57,7 +57,7 @@ namespace FinalProject1_winform
             {
                 int SalesMasterID = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[0].Value);
 
-                SMService service = new SMService();
+                SalesMasterService service = new SalesMasterService();
                 bool result = service.DeleteSM(SalesMasterID);
 
                 if (result)

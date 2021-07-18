@@ -34,7 +34,7 @@ namespace FinalProject1_DAC
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("@PO_PlanID", smVO.PO_PlanID);
+                cmd.Parameters.AddWithValue("@PO_PlanID", DBNull.Value);
                 cmd.Parameters.AddWithValue("@PO_WorkOrderID", smVO.PO_WorkOrderID);
                 cmd.Parameters.AddWithValue("@PO_CompanyName", smVO.PO_CompanyName);
                 cmd.Parameters.AddWithValue("@PO_CompanyType", smVO.PO_CompanyType);
