@@ -63,6 +63,7 @@
     <Compile Include="MRPVO.cs" />
     <Compile Include="NoteVO.cs" />
     <Compile Include="PerPriceVO.cs" />
+    <Compile Include="POPVO.cs" />
     <Compile Include="ProcessVO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
