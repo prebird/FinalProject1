@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject1_VO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace FinalProject1_POP
 {
     public partial class POPMain : Form
     {
-        public POPMain()
+        POPVO User;
+        public POPMain(POPVO user)
         {
             InitializeComponent();
+            User = user;
+        }
+        
+
+        private void POPMain_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

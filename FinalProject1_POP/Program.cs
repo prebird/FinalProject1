@@ -16,7 +16,7 @@ namespace FinalProject1_POP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new POPMain());
+            Application.Run(new POPLogin());
         }
     }
 }
