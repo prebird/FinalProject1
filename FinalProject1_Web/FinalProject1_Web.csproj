@@ -1812,10 +1812,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\CustomerServiceController.cs" />
-    <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Controllers\NoticeController.cs" />
+    <Compile Include="Controllers\NoteApiController.cs" />
+    <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\ProductAPIController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
@@ -1827,6 +1826,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\DAC\Helper.cs" />
     <Compile Include="Models\DAC\ItemManager.cs" />
+    <Compile Include="Models\NoteListViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1923,9 +1923,6 @@
     <Content Include="plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="plugins\toastr\toastr.js.map" />
     <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\LogIn\Index.cshtml" />
-    <Content Include="Views\LogIn\SignUp.cshtml" />
-    <Content Include="Views\LogIn\Success.cshtml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProject1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProject1 - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProject1 - Web Deploy.pubxml" />
@@ -1933,6 +1930,9 @@
     <Content Include="Views\Cart\Buy.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\UserJoin\Create.cshtml" />
+    <Content Include="Views\UserJoin\Login.cshtml" />
+    <Content Include="Views\Main\LoginSuccess.cshtml" />
+    <Content Include="Views\Note\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1944,7 +1944,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\" />
     <Folder Include="Views\CustomerService\" />
-    <Folder Include="Views\Notice\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="plugins\fullcalendar-bootstrap\main.d.ts" />

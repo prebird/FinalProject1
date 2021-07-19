@@ -156,12 +156,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
-                    </div>
+                    @if (Session["User"] == null)
+                    {
+                        <button type="button" class="btn btn-dark" onclick="location.href='/UserJoin/LogIn'"> 로그인</button>
+                        @:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-dark" style="float:right" onclick="location.href='/UserJoin/Index'">회원가입</button>
+                    }
+                    else
+                    {
+                        <div class="image">
+                            <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">정용규</a>
+                        </div>
+                        <button type="button" class="btn btn-dark" style="float:right">LogOut</button>
+                    }
+
+
+
                 </div>
 
                 <!-- Sidebar Menu -->
