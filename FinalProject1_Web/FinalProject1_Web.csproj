@@ -1933,6 +1933,8 @@
     <Content Include="Views\UserJoin\Login.cshtml" />
     <Content Include="Views\Main\LoginSuccess.cshtml" />
     <Content Include="Views\Note\Index.cshtml" />
+    <Content Include="Views\Note\Details.cshtml" />
+    <Content Include="Views\Note\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

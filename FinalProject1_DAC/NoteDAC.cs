@@ -24,7 +24,7 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
-        public List<NoteVO> GetAllList(int pageNo, int pageSize)
+        public List<NoteVO> GetAllListInPage(int pageNo, int pageSize)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
@@ -39,6 +39,19 @@ namespace FinalProject1_DAC
                 conn.Open();
                 List<NoteVO> list = Helper.DataReaderMapToList<NoteVO>(cmd.ExecuteReader());
                 conn.Close();
+                return list;
+            }
+        }
+
+        public List<NoteVO> GetAllList()
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "select note_id, note_userid, note_subject, note_contents, note_readCount, note_date from Note";
+
+                conn.Open();
+                List<NoteVO> list = Helper.DataReaderMapToList<NoteVO>(cmd.ExecuteReader());
                 return list;
             }
         }
@@ -69,7 +82,7 @@ namespace FinalProject1_DAC
         /// </summary>
         /// <param name="note_id"></param>
         /// <returns></returns>
-        public NoteVO GetProductInfo(int note_id)
+        public NoteVO GetNoteInfo(int note_id)
         {
             using (SqlCommand cmd = new SqlCommand())
             {
@@ -82,6 +95,26 @@ namespace FinalProject1_DAC
                 conn.Close();
 
                 return (list != null && list.Count > 0) ? list[0] : null;
+            }
+        }
+
+        public bool SaveBoard(NoteVO post)
+        {
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "insert into Note(note_userid, note_subject, note_contents) values(@note_userid, @note_subject, @note_contents)";
+
+                cmd.Parameters.AddWithValue("@note_userid", post.note_userid);
+                cmd.Parameters.AddWithValue("@note_subject", post.note_subject);
+                cmd.Parameters.AddWithValue("@note_contents", post.note_contents);
+
+                cmd.Connection.Open();
+                int iRowAffect = cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+
+                return (iRowAffect > 0);
             }
         }
 
