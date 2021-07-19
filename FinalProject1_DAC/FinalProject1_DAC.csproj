@@ -58,6 +58,7 @@
     <Compile Include="ItemDAC.cs" />
     <Compile Include="MenuDAC.cs" />
     <Compile Include="PerPriceDAC.cs" />
+    <Compile Include="POPDAC.cs" />
     <Compile Include="ProcessEquipmentDAC.cs" />
     <Compile Include="ProductPlanDAC.cs" />
     <Compile Include="Program.cs" />
