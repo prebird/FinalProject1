@@ -73,7 +73,8 @@ namespace FinalProject1_winform
                 if (result)
                 {
                     MessageBox.Show("생성 되었습니다.");
-                    LoadData();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else
                     MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);

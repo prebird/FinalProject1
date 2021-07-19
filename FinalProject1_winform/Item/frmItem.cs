@@ -60,7 +60,7 @@ namespace FinalProject1_winform
         private void btn_Insert_Click(object sender, EventArgs e)
         {
             frmItemInsert frm = new frmItemInsert();
-            if(frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
             }
@@ -122,6 +122,23 @@ namespace FinalProject1_winform
 
             // 입력후 컨트롤 초기화
             cbo_ItemCategory.Text = txt_ItemName.Text = cbo_YN.Text = null;
+        }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Excel Files(*.xls)|*.xls|Excel Files(*.xlsx)|*.xlsx";
+            dlg.Title = "엑셀파일로 내보내기";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                bool result = ExcelUtil.ExportExcelToList<ItemVO>(list, dlg.FileName, "deleted");
+
+                if (result)
+                {
+                    MessageBox.Show("엑셀 다운로드 완료");
+                }
+
+            }
         }
     }
 }

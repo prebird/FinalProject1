@@ -2,31 +2,48 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
+using FinalProject1_VO;
+using FinalProject1_DAC;
+using FinalProject1_Web.Models;
 
 namespace FinalProject1_Web.Controllers
 {
-    public class CustomerServiceController : Controller
+    public class NoteController : Controller
     {
-        // GET: CustomerService
-        public ActionResult Index()
+        // GET: Note
+        public ActionResult Index(int page = 1)
         {
-            return View();
+            int pageSize = Convert.ToInt32(WebConfigurationManager.AppSettings["pagesize"]);
+            NoteDAC dac = new NoteDAC();
+
+            NoteListViewModel model = new NoteListViewModel();
+            model.Notes = dac.GetAllList(page, pageSize);
+            model.PageInfo = new PagingInfo
+            {
+                TotalItems = dac.GetNoteTotalCount(),
+                ItemsPerPage = pageSize,
+                CurrentPage = page
+            };
+            
+
+            return View(model);
         }
 
-        // GET: CustomerService/Details/5
+        // GET: Note/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: CustomerService/Create
+        // GET: Note/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CustomerService/Create
+        // POST: Note/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +59,13 @@ namespace FinalProject1_Web.Controllers
             }
         }
 
-        // GET: CustomerService/Edit/5
+        // GET: Note/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: CustomerService/Edit/5
+        // POST: Note/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +81,13 @@ namespace FinalProject1_Web.Controllers
             }
         }
 
-        // GET: CustomerService/Delete/5
+        // GET: Note/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: CustomerService/Delete/5
+        // POST: Note/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -60,6 +61,7 @@
     <Compile Include="ItemVO.cs" />
     <Compile Include="MenuVO.cs" />
     <Compile Include="MRPVO.cs" />
+    <Compile Include="NoteVO.cs" />
     <Compile Include="PerPriceVO.cs" />
     <Compile Include="POPVO.cs" />
     <Compile Include="ProcessVO.cs" />

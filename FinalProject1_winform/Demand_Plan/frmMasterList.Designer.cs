@@ -32,7 +32,7 @@ namespace FinalProject1_winform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button_gudi5 = new FinalProject1_winform.Button_gudi();
+            this.btn_Excel = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.btn_PlanCreate = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,24 +57,25 @@ namespace FinalProject1_winform
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button_gudi5
+            // btn_Excel
             // 
-            this.button_gudi5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi5.FlatAppearance.BorderSize = 0;
-            this.button_gudi5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi5.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi5.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi5.Image")));
-            this.button_gudi5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi5.Location = new System.Drawing.Point(1016, 113);
-            this.button_gudi5.Name = "button_gudi5";
-            this.button_gudi5.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi5.TabIndex = 28;
-            this.button_gudi5.Text = "엑셀";
-            this.button_gudi5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi5.UseVisualStyleBackColor = false;
+            this.btn_Excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_Excel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_Excel.FlatAppearance.BorderSize = 0;
+            this.btn_Excel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Excel.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Excel.ForeColor = System.Drawing.Color.Black;
+            this.btn_Excel.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.Image")));
+            this.btn_Excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Excel.Location = new System.Drawing.Point(1016, 113);
+            this.btn_Excel.Name = "btn_Excel";
+            this.btn_Excel.Size = new System.Drawing.Size(60, 25);
+            this.btn_Excel.TabIndex = 28;
+            this.btn_Excel.Text = "엑셀";
+            this.btn_Excel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Excel.UseVisualStyleBackColor = false;
+            this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
             // 
             // btn_Delete
             // 
@@ -328,7 +329,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.btn_Insert);
             this.Controls.Add(this.button_gudi7);
             this.Controls.Add(this.label_gudi1);
-            this.Controls.Add(this.button_gudi5);
+            this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_PlanCreate);
             this.Controls.Add(this.panel2);
@@ -348,7 +349,7 @@ namespace FinalProject1_winform
         }
 
         #endregion
-        private Button_gudi button_gudi5;
+        private Button_gudi btn_Excel;
         private Button_gudi btn_Delete;
         private Button_gudi btn_PlanCreate;
         private System.Windows.Forms.Panel panel2;

@@ -48,6 +48,7 @@ namespace FinalProject1_winform
         {
 
 
+
         }
 
         // 부분 조회 검색 패널
