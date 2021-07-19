@@ -17,8 +17,8 @@ namespace FinalProject1_Web.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-
-            return View();
+            UserInfoVO model = new UserInfoVO();
+            return View(model);
         }
 
         [HttpPost]

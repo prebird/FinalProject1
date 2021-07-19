@@ -1,0 +1,64 @@
+﻿@model FinalProject1_VO.NoteVO
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Board</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.note_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note_userid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note_userid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note_subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note_subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note_contents)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.note_contents.Replace("\r\n", "<br/>"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(m => m.note_readCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note_readCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.note_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
