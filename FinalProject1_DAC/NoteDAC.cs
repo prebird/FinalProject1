@@ -118,6 +118,45 @@ namespace FinalProject1_DAC
             }
         }
 
+        public bool UpdateNote(int note_id, NoteVO post)
+        {
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "update Note set note_userid=@note_userid, note_subject= @note_subject, note_contents=@note_contents where note_id = @note_id";
+
+                cmd.Parameters.AddWithValue("@note_userid", post.note_userid);
+                cmd.Parameters.AddWithValue("@note_subject", post.note_subject);
+                cmd.Parameters.AddWithValue("@note_contents", post.note_contents);
+                cmd.Parameters.AddWithValue("@note_id", note_id);
+
+                cmd.Connection.Open();
+                int iRowAffect = cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+
+                return (iRowAffect > 0);
+            }
+        }
+
+        public bool DeleteNote(int noteid)
+        {
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "delete from Note where note_id = @note_id";
+
+                cmd.Parameters.AddWithValue("@note_id", noteid);
+
+                cmd.Connection.Open();
+                int iRowAffect = cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+
+                return (iRowAffect > 0);
+            }
+        }
+
 
     }
 }

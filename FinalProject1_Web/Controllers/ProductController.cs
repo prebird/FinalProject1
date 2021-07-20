@@ -26,9 +26,6 @@ namespace FinalProject1_Web.Controllers
 
 
 
-
-
-
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
