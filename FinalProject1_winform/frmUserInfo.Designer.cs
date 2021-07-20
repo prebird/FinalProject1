@@ -29,14 +29,12 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserInfo));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserInfo));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvAuth = new FinalProject1_winform.DGV_gudi();
-            this.Pic1 = new FinalProject1_winform.PictureBox_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.cbo_searchDepart = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_searchUserCategory = new FinalProject1_winform.ComboBox_gudi();
@@ -44,6 +42,8 @@ namespace FinalProject1_winform
             this.label_gudi7 = new FinalProject1_winform.Label_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.txtSearchName = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.dgvAuth = new FinalProject1_winform.DGV_gudi();
+            this.Pic1 = new FinalProject1_winform.PictureBox_gudi();
             this.dgvUser = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi4 = new FinalProject1_winform.PictureBox_gudi();
             this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
@@ -66,10 +66,13 @@ namespace FinalProject1_winform
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi7 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi6 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi10 = new FinalProject1_winform.Button_gudi();
+            this.btnAdd = new FinalProject1_winform.Button_gudi();
+            this.btnUpdate = new FinalProject1_winform.Button_gudi();
+            this.btnDel = new FinalProject1_winform.Button_gudi();
+            this.btnPrint = new FinalProject1_winform.Button_gudi();
+            this.btnAdd2 = new FinalProject1_winform.Button_gudi();
+            this.btnDel2 = new FinalProject1_winform.Button_gudi();
+            this.btnUpdate2 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic1)).BeginInit();
@@ -95,40 +98,6 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 112);
             this.panel1.TabIndex = 7;
-            // 
-            // dgvAuth
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvAuth.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAuth.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAuth.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAuth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAuth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAuth.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgvAuth.HeaderCheckStatus = false;
-            this.dgvAuth.Location = new System.Drawing.Point(784, 352);
-            this.dgvAuth.Name = "dgvAuth";
-            this.dgvAuth.RowHeadersVisible = false;
-            this.dgvAuth.RowTemplate.Height = 23;
-            this.dgvAuth.Size = new System.Drawing.Size(688, 410);
-            this.dgvAuth.TabIndex = 46;
-            // 
-            // Pic1
-            // 
-            this.Pic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Pic1.Location = new System.Drawing.Point(1158, 80);
-            this.Pic1.Name = "Pic1";
-            this.Pic1.Size = new System.Drawing.Size(279, 209);
-            this.Pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Pic1.TabIndex = 45;
-            this.Pic1.TabStop = false;
             // 
             // btn_Search
             // 
@@ -213,6 +182,40 @@ namespace FinalProject1_winform
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Size = new System.Drawing.Size(166, 25);
             this.txtSearchName.TabIndex = 44;
+            // 
+            // dgvAuth
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvAuth.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAuth.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAuth.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAuth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAuth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuth.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvAuth.HeaderCheckStatus = false;
+            this.dgvAuth.Location = new System.Drawing.Point(784, 352);
+            this.dgvAuth.Name = "dgvAuth";
+            this.dgvAuth.RowHeadersVisible = false;
+            this.dgvAuth.RowTemplate.Height = 23;
+            this.dgvAuth.Size = new System.Drawing.Size(688, 410);
+            this.dgvAuth.TabIndex = 46;
+            // 
+            // Pic1
+            // 
+            this.Pic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pic1.Location = new System.Drawing.Point(1158, 80);
+            this.Pic1.Name = "Pic1";
+            this.Pic1.Size = new System.Drawing.Size(279, 209);
+            this.Pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Pic1.TabIndex = 45;
+            this.Pic1.TabStop = false;
             // 
             // dgvUser
             // 
@@ -449,77 +452,138 @@ namespace FinalProject1_winform
             this.label_gudi2.TabIndex = 4;
             this.label_gudi2.Text = "유저검색";
             // 
-            // button_gudi1
+            // btnAdd
             // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi1.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi1.Image")));
-            this.button_gudi1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi1.Location = new System.Drawing.Point(510, 171);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi1.TabIndex = 4;
-            this.button_gudi1.Text = "등록";
-            this.button_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnAdd.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(510, 171);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(60, 25);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "등록";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button_gudi7
+            // btnUpdate
             // 
-            this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi7.FlatAppearance.BorderSize = 0;
-            this.button_gudi7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi7.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi7.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi7.Image")));
-            this.button_gudi7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi7.Location = new System.Drawing.Point(576, 172);
-            this.button_gudi7.Name = "button_gudi7";
-            this.button_gudi7.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi7.TabIndex = 4;
-            this.button_gudi7.Text = "수정";
-            this.button_gudi7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi7.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnUpdate.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(576, 172);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(60, 25);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "수정";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button_gudi6
+            // btnDel
             // 
-            this.button_gudi6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi6.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi6.FlatAppearance.BorderSize = 0;
-            this.button_gudi6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi6.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi6.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi6.Image")));
-            this.button_gudi6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi6.Location = new System.Drawing.Point(642, 172);
-            this.button_gudi6.Name = "button_gudi6";
-            this.button_gudi6.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi6.TabIndex = 4;
-            this.button_gudi6.Text = "삭제";
-            this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi6.UseVisualStyleBackColor = false;
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnDel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnDel.ForeColor = System.Drawing.Color.Black;
+            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(642, 172);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(60, 25);
+            this.btnDel.TabIndex = 4;
+            this.btnDel.Text = "삭제";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // button_gudi10
+            // btnPrint
             // 
-            this.button_gudi10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi10.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi10.FlatAppearance.BorderSize = 0;
-            this.button_gudi10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi10.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi10.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi10.Image")));
-            this.button_gudi10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi10.Location = new System.Drawing.Point(708, 172);
-            this.button_gudi10.Name = "button_gudi10";
-            this.button_gudi10.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi10.TabIndex = 4;
-            this.button_gudi10.Text = "인쇄";
-            this.button_gudi10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi10.UseVisualStyleBackColor = false;
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnPrint.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrint.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(708, 172);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(60, 25);
+            this.btnPrint.TabIndex = 4;
+            this.btnPrint.Text = "인쇄";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnAdd2
+            // 
+            this.btnAdd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnAdd2.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnAdd2.FlatAppearance.BorderSize = 0;
+            this.btnAdd2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnAdd2.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd2.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd2.Image")));
+            this.btnAdd2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd2.Location = new System.Drawing.Point(1280, 317);
+            this.btnAdd2.Name = "btnAdd2";
+            this.btnAdd2.Size = new System.Drawing.Size(60, 25);
+            this.btnAdd2.TabIndex = 4;
+            this.btnAdd2.Text = "등록";
+            this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd2.UseVisualStyleBackColor = false;
+            this.btnAdd2.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDel2
+            // 
+            this.btnDel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnDel2.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnDel2.FlatAppearance.BorderSize = 0;
+            this.btnDel2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnDel2.ForeColor = System.Drawing.Color.Black;
+            this.btnDel2.Image = ((System.Drawing.Image)(resources.GetObject("btnDel2.Image")));
+            this.btnDel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel2.Location = new System.Drawing.Point(1412, 318);
+            this.btnDel2.Name = "btnDel2";
+            this.btnDel2.Size = new System.Drawing.Size(60, 25);
+            this.btnDel2.TabIndex = 4;
+            this.btnDel2.Text = "삭제";
+            this.btnDel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDel2.UseVisualStyleBackColor = false;
+            this.btnDel2.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnUpdate2
+            // 
+            this.btnUpdate2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btnUpdate2.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btnUpdate2.FlatAppearance.BorderSize = 0;
+            this.btnUpdate2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnUpdate2.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate2.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate2.Image")));
+            this.btnUpdate2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate2.Location = new System.Drawing.Point(1346, 318);
+            this.btnUpdate2.Name = "btnUpdate2";
+            this.btnUpdate2.Size = new System.Drawing.Size(60, 25);
+            this.btnUpdate2.TabIndex = 4;
+            this.btnUpdate2.Text = "수정";
+            this.btnUpdate2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate2.UseVisualStyleBackColor = false;
+            this.btnUpdate2.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmUserInfo
             // 
@@ -531,16 +595,19 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.pictureBox_gudi4);
-            this.Controls.Add(this.button_gudi10);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pictureBox_gudi3);
             this.Controls.Add(this.label_gudi13);
             this.Controls.Add(this.label_gudi12);
             this.Controls.Add(this.label_gudi11);
-            this.Controls.Add(this.button_gudi7);
-            this.Controls.Add(this.button_gudi6);
+            this.Controls.Add(this.btnUpdate2);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDel2);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.label_gudi10);
+            this.Controls.Add(this.btnAdd2);
             this.Controls.Add(this.label_gudi9);
-            this.Controls.Add(this.button_gudi1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label_gudi14);
             this.Controls.Add(this.label_gudi5);
             this.Controls.Add(this.pictureBox_gudi1);
@@ -606,9 +673,12 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi14;
         private PictureBox_gudi Pic1;
         private DGV_gudi dgvAuth;
-        private Button_gudi button_gudi1;
-        private Button_gudi button_gudi7;
-        private Button_gudi button_gudi6;
-        private Button_gudi button_gudi10;
+        private Button_gudi btnAdd;
+        private Button_gudi btnUpdate;
+        private Button_gudi btnDel;
+        private Button_gudi btnPrint;
+        private Button_gudi btnAdd2;
+        private Button_gudi btnDel2;
+        private Button_gudi btnUpdate2;
     }
 }
