@@ -167,6 +167,18 @@
     <Compile Include="Demand_Plan\frmMasterInsert.Designer.cs">
       <DependentUpon>frmMasterInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserJoin.Designer.cs">
+      <DependentUpon>frmUserJoin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item\frmBarcode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -621,6 +633,12 @@
     <EmbeddedResource Include="frmShift.resx">
       <DependentUpon>frmShift.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserJoin.resx">
+      <DependentUpon>frmUserJoin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Item\frmBarcode.resx">
       <DependentUpon>frmBarcode.cs</DependentUpon>
     </EmbeddedResource>
@@ -792,6 +810,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\gray_dot %281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\logo1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\noimage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Open_16x16.png">
