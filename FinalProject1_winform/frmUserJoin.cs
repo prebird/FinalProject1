@@ -32,6 +32,7 @@ namespace FinalProject1_winform
             this.user = user;
             btnSave.Text = "수정";
 
+            
            
 
         }
@@ -39,10 +40,25 @@ namespace FinalProject1_winform
         private void frmUserJoin_Load(object sender, EventArgs e)
         {
             // 바인딩
+            CommonUtil.ComboBindingCommonCode(cboDept, "Dept_type");
+            CommonUtil.ComboBindingCommonCode(cboCategory, "User_type");
+
+
             if (btnSave.Text == "수정")
             {
+                // 중복체크 하지 않게
                 isVaildId = true;
-                pic.ImageLocation = (user.user_pic == null) ? null : ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + user.user_pic;
+                // 바인딩
+                txtID.Text = user.user_id;
+                txtPwd.Text = user.user_pwd;
+                txtEmail.Text = user.user_email;
+                txtName.Text = user.user_name;
+                cboCategory.SelectedIndex = cboCategory.FindString(user.category_name);
+                cboDept.SelectedIndex = cboDept.FindString(user.depart_name);
+                if (user.user_pic != null)
+                {
+                    pic.ImageLocation = ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + user.user_pic;
+                }
             }
         }
 

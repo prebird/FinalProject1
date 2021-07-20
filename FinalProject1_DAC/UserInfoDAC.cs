@@ -59,7 +59,7 @@ namespace FinalProject1_DAC
                 sb.Append(@"select user_id, user_pwd, user_name, user_Category, user_birthday, user_depart_id, user_pic, authID, user_email, cc1.common_name category_name, cc2.common_name depart_name
 from Userinfo u inner
 join CommonCode cc1 on cc1.common_value = u.user_Category
-inner
+left outer
 join CommonCode cc2 on cc2.common_value = u.user_depart_id
 where deleted = 0 ");
                 if (deptid != "0")
@@ -158,8 +158,8 @@ values(@user_id, @user_pwd, @user_name, @user_Category, @user_depart_id, @user_e
 
         public bool UpdateData(UserInfoVO user)
         {
-            string sql = @"update Userinfo set(user_pwd = @user_pwd, user_name = @user_name, user_Category = @user_Category, 
-user_birthday = @user_birthday, user_depart_id = @user_depart_id, user_email = @user_email, user_pic = @user_pic, authID = @authID) where user_id = @user_id";
+            string sql = @"update Userinfo set user_pwd = @user_pwd, user_name = @user_name, user_Category = @user_Category, 
+ user_depart_id = @user_depart_id, user_email = @user_email, user_pic = @user_pic, authID = @authID where user_id = @user_id";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@user_id", user.user_id);

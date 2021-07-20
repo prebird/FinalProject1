@@ -50,6 +50,7 @@ namespace FinalProject1_winform
             UserInfoDAC dac = new UserInfoDAC();
             users = dac.SearchUserInfo(cbo_searchDepart.SelectedValue.ToString(), cbo_searchUserCategory.SelectedValue.ToString(), txtSearchName.Text);
             dgvUser.DataSource = users;
+            dgvUser.ClearSelection();
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -59,12 +60,12 @@ namespace FinalProject1_winform
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 1) 
+            if (e.RowIndex < 0) 
             {
                 return;
             }
             string userid = dgvUser.Rows[e.RowIndex].Cells[0].Value.ToString();
-            UserInfoVO thisUser = users.Find((x) => x.user_id == userid);
+            UserInfoVO thisUser = users.Find((x) => x.user_id.Equals(userid));
             txtUserId.Text = thisUser.user_id;
             txtPwd.Text = thisUser.user_pwd;
             txtName.Text = thisUser.user_name;
@@ -77,6 +78,38 @@ namespace FinalProject1_winform
             }
 
 
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmUserJoin frm = new frmUserJoin();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                // 로드
+                SearchUserInfo();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string userid = dgvUser.SelectedRows[0].Cells[0].Value.ToString();
+            UserInfoVO thisUser = users.Find((x) => x.user_id.Equals(userid));
+            frmUserJoin frm = new frmUserJoin(thisUser);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                //로드
+                SearchUserInfo();
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
 
         }
     }
