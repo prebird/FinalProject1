@@ -30,7 +30,7 @@ namespace FinalProject1_DAC
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
+            
             return dt;
         }
     }
