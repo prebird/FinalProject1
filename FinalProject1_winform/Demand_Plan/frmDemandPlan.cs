@@ -29,7 +29,7 @@ namespace FinalProject1_winform
             
         }
 
-        // 삭제
+        // 삭제 (구현 X)
         private void btn_Delete_Click(object sender, EventArgs e)
         {
 
@@ -43,10 +43,9 @@ namespace FinalProject1_winform
 
         }
 
-        // 엑셀 출력 버튼
+        // 엑셀 출력 버튼 (구현 X)
         private void btn_Excel_Click(object sender, EventArgs e)
-        {
-
+        {    
 
 
         }
