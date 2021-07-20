@@ -24,10 +24,13 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
-        public DataTable GetPlanList()
+        public DataTable GetPlanList(string fromDate, string toDate)
         {
-            string sql = "SP_GetProductPlan";
+            string sql = "SP_ProductPlanLIst";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@P_StartDT", fromDate);
+            da.SelectCommand.Parameters.AddWithValue("@P_EndDT", toDate);
             DataTable dt = new DataTable();
             da.Fill(dt);
             

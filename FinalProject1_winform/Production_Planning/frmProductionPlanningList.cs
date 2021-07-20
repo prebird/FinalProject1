@@ -21,10 +21,10 @@ namespace FinalProject1_winform
         private void frmProductionPlanningList_Load(object sender, EventArgs e)
         {
             date.ToDate = DateTime.Now;
-            date.ToDate = DateTime.Now.AddDays(-7);
+            date.FromDate = DateTime.Now.AddDays(-7);
 
             ProductionPlanService service = new ProductionPlanService();
-            DataTable dt = service.GetPlanList();
+            DataTable dt = service.GetPlanList(date.FromDate.ToString("yyyy-MM-dd"),date.ToDate.ToString("yyyy-MM-dd"));
 
             dgvList.DataSource = dt;
         }
@@ -33,6 +33,12 @@ namespace FinalProject1_winform
         {
             FromDate = date.FromDate.ToString("yyyy-MM-dd");
             ToDate = date.ToDate.ToString("yyyy-MM-dd");
+
+            ProductionPlanService service = new ProductionPlanService();
+            DataTable dt = service.GetPlanList(FromDate, ToDate);
+
+            dgvList.DataSource = null;
+            dgvList.DataSource = dt;
         }
     }
 }
