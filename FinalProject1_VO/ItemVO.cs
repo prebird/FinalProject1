@@ -22,5 +22,6 @@ namespace FinalProject1_VO
         public string Item_YN { get; set; }
         public string Item_Content { get; set; }
 
+        public string Item_img { get; set; }
     }
 }

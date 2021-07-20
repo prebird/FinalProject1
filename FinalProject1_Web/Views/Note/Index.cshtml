@@ -1,0 +1,64 @@
+﻿@model FinalProject1_Web.Models.NoteListViewModel
+
+@using FinalProject1_Web.Html;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <br />
+    <h1 class="display-6 ">공지사항</h1>
+    <br />
+    <table class="table table-striped">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+            <th></th>
+
+        </tr>
+
+        @foreach (var item in Model.Notes)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note_subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note_userid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note_readCount)
+                </td>
+                <td>
+                    @Html.ActionLink("보기", "Details", new { id = item.note_id }) |
+                    @Html.ActionLink("수정", "Edit", new { id = item.note_id }) |
+                    @Html.ActionLink("삭제", "Delete", new { id = item.note_id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <a class="btn btn-success fa-pull-right" style="color:white" onclick="location.href='/Note/Create'">글쓰기</a>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            @Html.PageLinks(Model.PageInfo, (x) => Url.Action("Index", new { page = x }))
+        </ul>
+    </nav>
+
+</div>
+

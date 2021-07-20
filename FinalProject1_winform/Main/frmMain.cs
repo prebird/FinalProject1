@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -36,12 +37,12 @@ namespace FinalProject1_winform
             int startYpoint = 0;
             Panel prePanel = null;
             ImageList imageList = new ImageList();
-            imageList.ImageSize = new Size(16, 16);
+            imageList.ImageSize = new Size(40, 40);
             for (int i = 0; i < bigMenus.Count; i++)
             {
                 Button btnBigMenu = new Button();
                 btnBigMenu.Name = "btnBig" + bigMenus[i].MenuID.ToString();
-                btnBigMenu.FlatAppearance.BorderSize = 0;
+                btnBigMenu.FlatAppearance.BorderSize = 1;
                 btnBigMenu.Size = new Size(196, 55);
                 btnBigMenu.Text = "  " + bigMenus[i].MenuName;
                 btnBigMenu.Location = new Point(0, startYpoint);
@@ -49,7 +50,23 @@ namespace FinalProject1_winform
                 btnBigMenu.ForeColor = Color.Black;
                 btnBigMenu.TextAlign = ContentAlignment.MiddleLeft;
                 imageList.Images.Clear();
-                imageList.Images.Add(Properties.Resources.gray_dot1);  // 이미지 동적으로 읽어올것
+
+                if (bigMenus[i].menu_Img == null)
+                {
+                    imageList.Images.Add(Properties.Resources.gray_dot1);  // 이미지 동적으로 읽어올것
+                }
+                else
+                {
+                    //Image image = new Bitmap(ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + bigMenus[i].menu_Img);
+                    //Image image = System.Drawing.Image.FromFile(ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + bigMenus[i].menu_Img);
+                    System.Net.WebRequest request = System.Net.WebRequest.Create(ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + bigMenus[i].menu_Img);
+                    System.Net.WebResponse resp = request.GetResponse();
+                    System.IO.Stream respStream = resp.GetResponseStream();
+                    Bitmap bmp = new Bitmap(respStream);
+                    respStream.Dispose();
+                    imageList.Images.Add(bmp);  // 이미지 동적으로 읽어올것
+                }
+
                 btnBigMenu.Image = imageList.Images[0];
                 btnBigMenu.ImageAlign = ContentAlignment.MiddleLeft;
                 btnBigMenu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -77,14 +94,14 @@ namespace FinalProject1_winform
                     btnSmallMenu.Name = "btnSmall" + smallMenus[j].MenuID.ToString();
                     btnSmallMenu.FlatAppearance.BorderSize = 0;
                     btnSmallMenu.Size = new Size(196, 55);
-                    btnSmallMenu.Text = "      "+ smallMenus[j].MenuName;
+                    btnSmallMenu.Text = "        "+ smallMenus[j].MenuName;
                     btnSmallMenu.Font = new Font("AppleSDGothicNeoB00", 12);
                     btnSmallMenu.ForeColor = Color.DimGray;
                     btnSmallMenu.BackColor = Color.White;
                     btnSmallMenu.FlatStyle = FlatStyle.Flat;
                     btnSmallMenu.TextAlign = ContentAlignment.MiddleLeft;
                     btnSmallMenu.Location = new Point(0, 55*j);
-                    btnSmallMenu.Image = Properties.Resources.gray_dot;
+                    //btnSmallMenu.Image = Properties.Resources.gray_dot;
                     btnSmallMenu.ImageAlign = ContentAlignment.MiddleLeft;
                     btnSmallMenu.TextImageRelation = TextImageRelation.ImageBeforeText;
                     btnSmallMenu.Tag = smallMenus[j].ProgramName;

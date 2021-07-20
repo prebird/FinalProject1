@@ -34,5 +34,11 @@ namespace FinalProject1_winform
             RestockOrderDAC dac = new RestockOrderDAC();
             return dac.GetROSuggest(search);
         }
+
+        public bool insertRO(RestockOrderVO ro)
+        {
+            RestockOrderDAC dac = new RestockOrderDAC();
+            return dac.insertRO(ro);
+        }
     }
 }

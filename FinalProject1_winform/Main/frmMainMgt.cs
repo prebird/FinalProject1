@@ -20,7 +20,8 @@ namespace FinalProject1_winform
             CommonUtil.SetInitGridView(dgvUpMenu);
             CommonUtil.AddGridTextColumn(dgvUpMenu, "메뉴ID", "MenuID", colWidth: 90);
             CommonUtil.AddGridTextColumn(dgvUpMenu, "메뉴명", "MenuName", colWidth:150);
-            CommonUtil.AddGridTextColumn(dgvUpMenu, "수정자", "user_name", colWidth:100);
+            CommonUtil.AddGridTextColumn(dgvUpMenu, "사진", "menu_Img", colWidth:150);
+            CommonUtil.AddGridTextColumn(dgvUpMenu, "수정자", "menu_uadmin", colWidth:100);
             CommonUtil.AddGridTextColumn(dgvUpMenu, "수정일", "menu_udate", colWidth:100);
 
 
@@ -30,12 +31,17 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvDownMenu, "메뉴명", "MenuName", colWidth: 150);
             CommonUtil.AddGridTextColumn(dgvDownMenu, "폼이름", "ProgramName", colWidth: 200);
             CommonUtil.AddGridTextColumn(dgvDownMenu, "부모ID", "refMenuID", colWidth: 90);
-            CommonUtil.AddGridTextColumn(dgvDownMenu, "수정자", "user_name", colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgvDownMenu, "수정자", "menu_uadmin", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgvDownMenu, "수정일", "menu_udate", colWidth: 100);
 
         }
 
         private void frmMainMgt_Load(object sender, EventArgs e)
+        {
+            formLoad();   
+        }
+
+        private void formLoad()
         {
             CommonService service = new CommonService();
             menus = service.GetAllMenuMgt();
@@ -44,8 +50,6 @@ namespace FinalProject1_winform
 
             TreeMenuBinding();
         }
-
-        
 
         private void dgvUpMenu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -68,6 +72,11 @@ namespace FinalProject1_winform
 
         private void btnBigUps_Click(object sender, EventArgs e)
         {
+            if (dgvUpMenu.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("수정할 메뉴를 클릭해 주세요");
+                return;
+            }
             // 클릭된 거 VO로만들기
             MenuVO throwMenu = menus.Find((x) => x.MenuID == Convert.ToInt32(dgvUpMenu.SelectedRows[0].Cells[0].Value));
 
@@ -75,6 +84,7 @@ namespace FinalProject1_winform
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 // 폼 다시 로드 -> 
+                formLoad();
             }
         }
 
@@ -108,6 +118,7 @@ namespace FinalProject1_winform
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 // 폼 다시 로드 -> 
+
             }
         }
 
@@ -133,6 +144,7 @@ namespace FinalProject1_winform
 
         private void TreeMenuBinding()
         {
+            treeView1.Nodes.Clear();
             CommonService service = new CommonService();
             DataTable dtMenu = service.GetMenuList();
             DataView dv0 = new DataView(dtMenu);

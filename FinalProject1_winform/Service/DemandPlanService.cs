@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using FinalProject1_VO;
 using FinalProject1_DAC;
+using System.Data;
 
 namespace FinalProject1_winform
 {
-    class DMService
+    class DemandPlanService
     {   
         // 계획 번호가 없는 영업 마스터만 조회.
         public List<SalesMasterVO> GetPlanSM()
@@ -27,6 +28,12 @@ namespace FinalProject1_winform
             dac.Dispose();
 
             return result;
+        }
+
+        public DataTable GetDemandPlanList(DemandPlanVO dmVO)
+        {
+            DemandPlanDAC dac = new DemandPlanDAC();
+            return dac.GetDemandPlanList(dmVO);
         }
 
     }

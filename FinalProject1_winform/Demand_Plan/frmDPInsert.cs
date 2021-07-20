@@ -67,13 +67,14 @@ namespace FinalProject1_winform
                     Dplan_Quantity = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[8].Value),
                 };
 
-                DMService service = new DMService();
+                DemandPlanService service = new DemandPlanService();
                 bool result = service.DMInsertTrans(dmVO);
 
                 if (result)
                 {
                     MessageBox.Show("생성 되었습니다.");
-                    LoadData();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else
                     MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);

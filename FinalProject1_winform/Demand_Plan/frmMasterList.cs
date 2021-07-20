@@ -11,6 +11,8 @@ namespace FinalProject1_winform
 {
     public partial class frmMasterList : FinalProject1_winform.Basic3
     {
+        List<SalesMasterVO> _list;
+
         public frmMasterList()
         {
             InitializeComponent();
@@ -39,9 +41,9 @@ namespace FinalProject1_winform
         }
         public void LoadData()
         {
-            SMService service = new SMService();
-            List<SalesMasterVO> list = service.GetAllSM();
-            dgv_SalesMaster.DataSource = list;
+            SalesMasterService service = new SalesMasterService();
+            _list = service.GetAllSM();
+            dgv_SalesMaster.DataSource = _list;
         }
 
         // 삭제
@@ -57,7 +59,7 @@ namespace FinalProject1_winform
             {
                 int SalesMasterID = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[0].Value);
 
-                SMService service = new SMService();
+                SalesMasterService service = new SalesMasterService();
                 bool result = service.DeleteSM(SalesMasterID);
 
                 if (result)
@@ -67,7 +69,6 @@ namespace FinalProject1_winform
                 }
                 else
                     MessageBox.Show("처리중 오류가 발생했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -99,16 +100,28 @@ namespace FinalProject1_winform
             }
 
             frmDPInsert frm = new frmDPInsert();
+
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("입력 되었습니다.");
                 LoadData();
             }
-            //else
-            //{
-            //    MessageBox.Show("처리중 오류가 발생 했습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+        }
 
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Excel Files(*.xls)|*.xls|Excel Files(*.xlsx)|*.xlsx";
+            dlg.Title = "엑셀파일로 내보내기";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                bool result = ExcelUtil.ExportExcelToList<SalesMasterVO>(_list, dlg.FileName, "deleted");
+
+                if (result)
+                {
+                    MessageBox.Show("엑셀 다운로드 완료");
+                }
+            }
         }
     }
 }

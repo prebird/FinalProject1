@@ -30,27 +30,23 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDemandPlan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Excel = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_DemandPlan = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_CompanyName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.dtp_End = new FinalProject1_winform.DateTimePicker_gudi();
             this.dtp_Start = new FinalProject1_winform.DateTimePicker_gudi();
             this.label_gudi14 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.txt_ItemName = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.txt_PlanID = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.btn_PlanPP = new FinalProject1_winform.Button_gudi();
+            this.cbo_PlanID = new FinalProject1_winform.ComboBox_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -110,18 +106,18 @@ namespace FinalProject1_winform
             // 
             // dgv_DemandPlan
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_DemandPlan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_DemandPlan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DemandPlan.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DemandPlan.CheckBoxAll = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DemandPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DemandPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DemandPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DemandPlan.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_DemandPlan.HeaderCheckStatus = false;
@@ -147,15 +143,11 @@ namespace FinalProject1_winform
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.txt_CompanyName);
+            this.panel1.Controls.Add(this.cbo_PlanID);
             this.panel1.Controls.Add(this.label_gudi1);
             this.panel1.Controls.Add(this.dtp_End);
             this.panel1.Controls.Add(this.dtp_Start);
             this.panel1.Controls.Add(this.label_gudi14);
-            this.panel1.Controls.Add(this.label_gudi6);
-            this.panel1.Controls.Add(this.txt_ItemName);
-            this.panel1.Controls.Add(this.label_gudi4);
-            this.panel1.Controls.Add(this.txt_PlanID);
             this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Location = new System.Drawing.Point(18, 22);
@@ -163,20 +155,11 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(1057, 79);
             this.panel1.TabIndex = 24;
             // 
-            // txt_CompanyName
-            // 
-            this.txt_CompanyName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txt_CompanyName.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_CompanyName.Location = new System.Drawing.Point(659, 32);
-            this.txt_CompanyName.Name = "txt_CompanyName";
-            this.txt_CompanyName.Size = new System.Drawing.Size(91, 25);
-            this.txt_CompanyName.TabIndex = 89;
-            // 
             // label_gudi1
             // 
             this.label_gudi1.AutoSize = true;
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi1.Location = new System.Drawing.Point(432, 36);
+            this.label_gudi1.Location = new System.Drawing.Point(557, 32);
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(16, 17);
             this.label_gudi1.TabIndex = 88;
@@ -186,7 +169,7 @@ namespace FinalProject1_winform
             // 
             this.dtp_End.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dtp_End.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_End.Location = new System.Drawing.Point(454, 32);
+            this.dtp_End.Location = new System.Drawing.Point(585, 28);
             this.dtp_End.Name = "dtp_End";
             this.dtp_End.Size = new System.Drawing.Size(111, 25);
             this.dtp_End.TabIndex = 87;
@@ -195,7 +178,7 @@ namespace FinalProject1_winform
             // 
             this.dtp_Start.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dtp_Start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_Start.Location = new System.Drawing.Point(315, 32);
+            this.dtp_Start.Location = new System.Drawing.Point(433, 28);
             this.dtp_Start.Name = "dtp_Start";
             this.dtp_Start.Size = new System.Drawing.Size(111, 25);
             this.dtp_Start.TabIndex = 86;
@@ -204,59 +187,21 @@ namespace FinalProject1_winform
             // 
             this.label_gudi14.AutoSize = true;
             this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi14.Location = new System.Drawing.Point(220, 36);
+            this.label_gudi14.Location = new System.Drawing.Point(325, 32);
             this.label_gudi14.Name = "label_gudi14";
             this.label_gudi14.Size = new System.Drawing.Size(88, 17);
             this.label_gudi14.TabIndex = 85;
             this.label_gudi14.Text = "■ 고객 납기일";
             // 
-            // label_gudi6
-            // 
-            this.label_gudi6.AutoSize = true;
-            this.label_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi6.Location = new System.Drawing.Point(581, 36);
-            this.label_gudi6.Name = "label_gudi6";
-            this.label_gudi6.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi6.TabIndex = 83;
-            this.label_gudi6.Text = "■ 고객사명";
-            // 
-            // txt_ItemName
-            // 
-            this.txt_ItemName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txt_ItemName.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_ItemName.Location = new System.Drawing.Point(827, 32);
-            this.txt_ItemName.Name = "txt_ItemName";
-            this.txt_ItemName.Size = new System.Drawing.Size(91, 25);
-            this.txt_ItemName.TabIndex = 82;
-            // 
-            // label_gudi4
-            // 
-            this.label_gudi4.AutoSize = true;
-            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(761, 36);
-            this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi4.TabIndex = 81;
-            this.label_gudi4.Text = "■ 품목명";
-            // 
-            // txt_PlanID
-            // 
-            this.txt_PlanID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txt_PlanID.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_PlanID.Location = new System.Drawing.Point(114, 32);
-            this.txt_PlanID.Name = "txt_PlanID";
-            this.txt_PlanID.Size = new System.Drawing.Size(92, 25);
-            this.txt_PlanID.TabIndex = 80;
-            // 
             // label_gudi3
             // 
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(13, 36);
+            this.label_gudi3.Location = new System.Drawing.Point(65, 32);
             this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(95, 17);
+            this.label_gudi3.Size = new System.Drawing.Size(90, 17);
             this.label_gudi3.TabIndex = 79;
-            this.label_gudi3.Text = "■ 계획 Version";
+            this.label_gudi3.Text = "■ 계획 PlanID";
             // 
             // btn_Search
             // 
@@ -307,6 +252,15 @@ namespace FinalProject1_winform
             this.btn_PlanPP.UseVisualStyleBackColor = false;
             this.btn_PlanPP.Click += new System.EventHandler(this.btn_PlanPP_Click);
             // 
+            // cbo_PlanID
+            // 
+            this.cbo_PlanID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbo_PlanID.FormattingEnabled = true;
+            this.cbo_PlanID.Location = new System.Drawing.Point(171, 28);
+            this.cbo_PlanID.Name = "cbo_PlanID";
+            this.cbo_PlanID.Size = new System.Drawing.Size(111, 24);
+            this.cbo_PlanID.TabIndex = 90;
+            // 
             // frmDemandPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -338,17 +292,13 @@ namespace FinalProject1_winform
         private System.Windows.Forms.Panel panel1;
         private Button_gudi btn_Search;
         private Label_gudi label_gudi2;
-        private Controls.TextBox_gudi txt_PlanID;
         private Label_gudi label_gudi3;
-        private Controls.TextBox_gudi txt_CompanyName;
         private Label_gudi label_gudi1;
         private DateTimePicker_gudi dtp_End;
         private DateTimePicker_gudi dtp_Start;
         private Label_gudi label_gudi14;
-        private Label_gudi label_gudi6;
-        private Controls.TextBox_gudi txt_ItemName;
-        private Label_gudi label_gudi4;
         private DGV_gudi dgv_DemandPlan;
         private Button_gudi btn_PlanPP;
+        private ComboBox_gudi cbo_PlanID;
     }
 }

@@ -39,7 +39,7 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv1, "구분", "gubun", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv1, "카테고리", "Category", colWidth: 100, visibility: false);
             CommonUtil.AddGridTextColumn(dgv1, "정렬", "SortNum", colWidth: 100, visibility: false);
-            CommonUtil.AddGridTextColumn(dgv1, "a", "a", colWidth: 200, visibility: false);
+            CommonUtil.AddGridTextColumn(dgv1, "ProductName", "ProductName", colWidth: 200, visibility: false);
 
 
             btnSearch.PerformClick();
@@ -83,16 +83,21 @@ namespace FinalProject1_winform
             
                 if (dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != DBNull.Value)
                 {
-                if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "생산제안" || dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안")  &&(e.ColumnIndex != 0 && e.ColumnIndex != 1 && e.ColumnIndex != 2))
-                {
-                    if (Information.IsNumeric(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
+                    if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "생산제안" || dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안")  &&(e.ColumnIndex != 0 && e.ColumnIndex != 1 && e.ColumnIndex != 2))
                     {
-                        if (Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) > 0)
+                        if (Information.IsNumeric(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
                         {
-                            dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
+                            if (Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) > 0)
+                            {
+                                dgv1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
+                            }
                         }
-                    } 
-                }
+
+                        if ((dgv1.Rows[e.RowIndex].Cells[3].Value.ToString() == "발주제안"))
+                        {
+                            dgv1.Rows[e.RowIndex].Cells[3].Style.BackColor = Color.Orange;
+                        }   
+                    }
                 }  
             
             

@@ -17,6 +17,8 @@ namespace FinalProject1_winform
         public DataTable ExcelData { get; set; }
         public string PlanDate { get; set; }
         public string PlanID { get; set; }
+        
+        string _strConn = string.Empty;
 
         public frmPOUpload()
         {
@@ -37,44 +39,53 @@ namespace FinalProject1_winform
                 txt_FileName.Text = Filename;
 
                 string fileExtension = System.IO.Path.GetExtension(Filename);
-                string strConn = string.Empty;
 
                 if (fileExtension == ".xls")
-                    strConn = string.Format(Excel03ConString, Filename, "Yes");
+                    _strConn = string.Format(Excel03ConString, Filename, "Yes");
                 else if (fileExtension == ".xlsx")
-                    strConn = string.Format(Excel07ConString, Filename, "Yes");
-
-                //엑셀파일을 OLEDB 방식으로 읽어서 DataTable로 읽어들인다.
-                string sheetName = string.Empty;
-
-                OleDbConnection conn = new OleDbConnection(strConn);
-                OleDbCommand cmd = new OleDbCommand();
-                cmd.Connection = conn;
-                conn.Open();
-                DataTable dtSchema = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-                sheetName = dtSchema.Rows[0]["TABLE_NAME"].ToString();
-
-                string sql = "select * from [" + sheetName + "]";
-                OleDbDataAdapter oda = new OleDbDataAdapter(sql, conn);
-                DataTable dt = new DataTable();
-                oda.Fill(dt);
-                conn.Close();
-
-                ExcelData = dt;
+                    _strConn = string.Format(Excel07ConString, Filename, "Yes");         
             }
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrWhiteSpace(txt_PlanID.Text))
-            //{
-            //    MessageBox.Show("계획기준 버전 내용을 입력하세요.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            // 유효성 체크
+            if (string.IsNullOrWhiteSpace(txt_FileName.Text))
+            {
+                MessageBox.Show("업로드할 파일을 선택 하세요.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.No;
+                return;
+            }
+
+            if (dtp_Date.Value <= DateTime.Now)
+            {
+                MessageBox.Show("계획 일자 금일 이전일 수 없습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.No;
+                return;
+            }    
 
             PlanDate = dtp_Date.Value.ToString("yy-MM-dd");
-            PlanID = txt_PlanID.Text;
 
+            //엑셀파일을 OLEDB 방식으로 읽어서 DataTable로 읽어들인다.
+            string sheetName = string.Empty;
+
+            OleDbConnection conn = new OleDbConnection(_strConn);
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = conn;
+            conn.Open();
+            DataTable dtSchema = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+            sheetName = dtSchema.Rows[0]["TABLE_NAME"].ToString();
+
+            string sql = "select * from [" + sheetName + "]";
+            OleDbDataAdapter oda = new OleDbDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            oda.Fill(dt);
+            conn.Close();
+
+            if (dt != null)
+                ExcelData = dt; // 바인딩 할 자료를 DataTable로 전달.
+            else
+                MessageBox.Show("데이터가 없습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

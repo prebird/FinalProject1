@@ -140,6 +140,9 @@ namespace FinalProject1_winform
             // 
             this.cbo_YN.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_YN.FormattingEnabled = true;
+            this.cbo_YN.Items.AddRange(new object[] {
+            "Y",
+            "N"});
             this.cbo_YN.Location = new System.Drawing.Point(662, 32);
             this.cbo_YN.Name = "cbo_YN";
             this.cbo_YN.Size = new System.Drawing.Size(161, 24);
@@ -167,6 +170,10 @@ namespace FinalProject1_winform
             // 
             this.cbo_ItemCategory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_ItemCategory.FormattingEnabled = true;
+            this.cbo_ItemCategory.Items.AddRange(new object[] {
+            "완제품",
+            "반제품",
+            "원자재"});
             this.cbo_ItemCategory.Location = new System.Drawing.Point(124, 32);
             this.cbo_ItemCategory.Name = "cbo_ItemCategory";
             this.cbo_ItemCategory.Size = new System.Drawing.Size(158, 24);
@@ -238,6 +245,7 @@ namespace FinalProject1_winform
             this.btn_Excel.Text = "엑셀";
             this.btn_Excel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Excel.UseVisualStyleBackColor = false;
+            this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
             // 
             // btn_Update
             // 

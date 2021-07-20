@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -13,7 +14,18 @@ namespace FinalProject1_Web.Controllers
     
     public class UploadController : ApiController
     {
-        //POST : https://localhost:44394/api/Upload
+        /// <summary>
+        /// 파일 목록 가져오기
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/Upload/GetFileList")]
+        public void getFileList()
+        {
+
+        }
+
+        //POST : http://gdc7finalproject1.azurewebsites.net/api/Upload
         public HttpResponseMessage Post()
         {
             HttpResponseMessage result = null;
@@ -27,6 +39,10 @@ namespace FinalProject1_Web.Controllers
 
                     //웹서버의 URL로부터 물리적인 서버의 경로를 알아낸다.
                     var filePath = HttpContext.Current.Server.MapPath("~/Uploads/");
+                    if (! Directory.Exists(filePath))
+                    {
+                        Directory.CreateDirectory(filePath);
+                    }
                     postedFile.SaveAs(filePath + orgFileName);
                 }
 

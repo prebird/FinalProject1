@@ -46,7 +46,6 @@ namespace FinalProject1_winform
             }
         }
 
-
         // 사용 하는쪽 코드 예시
         //private async void button1_Click(object sender, EventArgs e)
         //{
@@ -64,5 +63,31 @@ namespace FinalProject1_winform
         //            MessageBox.Show("업로드 실패");
         //    }
         //}
+
+        // db 인서트용 
+        public async Task<bool> ServerUploadForDBInsert(string localFileName, string uploadfile)
+        {
+            
+            var fileStream = File.Open(localFileName, FileMode.Open);
+            
+
+            MultipartFormDataContent content = new MultipartFormDataContent();
+            content.Add(new StreamContent(fileStream), "file1", uploadfile);
+
+            using (HttpResponseMessage res = await client.PostAsync("", content))
+            {
+                if (res.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+
+        
     }
 }

@@ -10,7 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>AdminLTE 3 | Starter</title>
+    <title>OkDolCompany</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
@@ -147,21 +147,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="~/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-                     style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <img src="~/dist/img/OkdolCompany3.png" alt="OkDolCompany Logo" class="brand-image img-circle elevation-3"
+                     style="opacity: 1" >
+                <span class="font-weight-bolder" >옥돌컴퍼니</span>
             </a>
 
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
-                    </div>
+                    @if (Session["User"] == null)
+                    {
+                        <button type="button" class="btn btn-dark" onclick="location.href='/UserJoin/LogIn'"> 로그인</button>
+                        @:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-dark" style="float:right" onclick="location.href='/UserJoin/Index'">회원가입</button>
+                    }
+                    else
+                    {
+                        <div class="image">
+                            <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">정용규</a>
+                        </div>
+                        <button type="button" class="btn btn-dark" style="float:right">LogOut</button>
+                    }
+
+
+
                 </div>
 
                 <!-- Sidebar Menu -->
@@ -171,19 +184,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-bar"></i>
+                                <p>
+                                    대쉬보드
+                                    <span class="right fas fa-angle-left"></span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active">
+                                        <i class="nav-icon far fa-circle text-danger"></i>
+                                        <p>Dashboard v1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index2.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle text-warning"></i>
+                                        <p>Dashboard v2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index3.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>Dashboard v3</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Product/Index" class="nav-link active">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    홈
-                                    <span class="right badge badge-danger">New</span>
+                                    제품구매
+                                    <span class="right badge badge-danger">신제품입고</span>
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="/Product/Index" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="/Note/Index" class="nav-link">
                                 <i class="nav-icon fas fa-address-book"></i>
                                 <p>
-                                    제품
-                                    <i class="right fas fa-angle-left"></i>
+                                    공지사항
+                                    <i class="right badge badge-danger"></i>
                                 </p>
                             </a>
                            
@@ -192,8 +234,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-chart-bar"></i>
                                 <p>
-                                    연락처
-                                    <span class="right badge badge-danger">Phone</span>
+                                    대쉬보드
+                                    <span class="right badge badge-danger"></span>
                                 </p>
                             </a>
                         </li>

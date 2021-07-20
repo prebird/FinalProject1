@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject1_VO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ namespace FinalProject1_winform
 {
     public partial class frmDemandPlan : FinalProject1_winform.Basic3
     {
+
         public frmDemandPlan()
         {
             InitializeComponent();
@@ -17,9 +19,14 @@ namespace FinalProject1_winform
 
         private void frmDemandPlan_Load(object sender, EventArgs e)
         {
-            CommonUtil.SetInitGridView(dgv_DemandPlan);
+            CommonUtil.ComboBindingPlanID(cbo_PlanID);
 
+            //CommonUtil.SetInitGridView(dgv_DemandPlan);
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "수요 계획 PlanID", "Planid", DataGridViewContentAlignment.MiddleCenter, colWidth : 150);
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목 번호", "itemid", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목명", "Item_Name", DataGridViewContentAlignment.MiddleCenter);
 
+            
         }
 
         // 삭제
@@ -41,11 +48,23 @@ namespace FinalProject1_winform
         {
 
 
+
         }
 
         // 부분 조회 검색 패널
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            DemandPlanVO dmVO = new DemandPlanVO()
+            {
+               PlanID = cbo_PlanID.Text,
+               StartDate = dtp_Start.Value.ToString("yyyy-MM-dd"),
+               EndDate = dtp_End.Value.ToString("yyyy-MM-dd"),
+            };
+
+            DemandPlanService service = new DemandPlanService();
+            DataTable DemandPlanDT = service.GetDemandPlanList(dmVO);
+
+            dgv_DemandPlan.DataSource = DemandPlanDT;
 
         }
     }
