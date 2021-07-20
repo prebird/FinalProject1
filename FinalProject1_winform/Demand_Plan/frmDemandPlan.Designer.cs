@@ -33,11 +33,11 @@ namespace FinalProject1_winform
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Excel = new FinalProject1_winform.Button_gudi();
-            this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_DemandPlan = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbo_PlanID = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.dtp_End = new FinalProject1_winform.DateTimePicker_gudi();
             this.dtp_Start = new FinalProject1_winform.DateTimePicker_gudi();
@@ -46,7 +46,7 @@ namespace FinalProject1_winform
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.btn_PlanPP = new FinalProject1_winform.Button_gudi();
-            this.cbo_PlanID = new FinalProject1_winform.ComboBox_gudi();
+            this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -72,26 +72,6 @@ namespace FinalProject1_winform
             this.btn_Excel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Excel.UseVisualStyleBackColor = false;
             this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.btn_Delete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.btn_Delete.FlatAppearance.BorderSize = 0;
-            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Delete.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
-            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(830, 112);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(60, 25);
-            this.btn_Delete.TabIndex = 29;
-            this.btn_Delete.Text = "삭제";
-            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Delete.UseVisualStyleBackColor = false;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // panel2
             // 
@@ -154,6 +134,15 @@ namespace FinalProject1_winform
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1057, 79);
             this.panel1.TabIndex = 24;
+            // 
+            // cbo_PlanID
+            // 
+            this.cbo_PlanID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cbo_PlanID.FormattingEnabled = true;
+            this.cbo_PlanID.Location = new System.Drawing.Point(171, 28);
+            this.cbo_PlanID.Name = "cbo_PlanID";
+            this.cbo_PlanID.Size = new System.Drawing.Size(111, 24);
+            this.cbo_PlanID.TabIndex = 90;
             // 
             // label_gudi1
             // 
@@ -252,14 +241,25 @@ namespace FinalProject1_winform
             this.btn_PlanPP.UseVisualStyleBackColor = false;
             this.btn_PlanPP.Click += new System.EventHandler(this.btn_PlanPP_Click);
             // 
-            // cbo_PlanID
+            // btn_Delete
             // 
-            this.cbo_PlanID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cbo_PlanID.FormattingEnabled = true;
-            this.cbo_PlanID.Location = new System.Drawing.Point(171, 28);
-            this.cbo_PlanID.Name = "cbo_PlanID";
-            this.cbo_PlanID.Size = new System.Drawing.Size(111, 24);
-            this.cbo_PlanID.TabIndex = 90;
+            this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_Delete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Delete.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Delete.ForeColor = System.Drawing.Color.Black;
+            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
+            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Delete.Location = new System.Drawing.Point(830, 112);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(60, 25);
+            this.btn_Delete.TabIndex = 29;
+            this.btn_Delete.Text = "삭제";
+            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // frmDemandPlan
             // 
@@ -286,7 +286,6 @@ namespace FinalProject1_winform
 
         #endregion
         private Button_gudi btn_Excel;
-        private Button_gudi btn_Delete;
         private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private System.Windows.Forms.Panel panel1;
@@ -300,5 +299,6 @@ namespace FinalProject1_winform
         private DGV_gudi dgv_DemandPlan;
         private Button_gudi btn_PlanPP;
         private ComboBox_gudi cbo_PlanID;
+        private Button_gudi btn_Delete;
     }
 }
