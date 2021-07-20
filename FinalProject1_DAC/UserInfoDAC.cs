@@ -50,6 +50,41 @@ namespace FinalProject1_DAC
             }
         }
 
+        public List<UserInfoVO> SearchUserInfo(string deptid, string userCategory, string Name)
+        {
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append(@"select user_id, user_pwd, user_name, user_Category, user_birthday, user_depart_id, user_pic, authID, user_email, cc1.common_name category_name, cc2.common_name depart_name
+from Userinfo u inner
+join CommonCode cc1 on cc1.common_value = u.user_Category
+left outer
+join CommonCode cc2 on cc2.common_value = u.user_depart_id
+where deleted = 0 ");
+                if (deptid != "0")
+                {
+                    sb.Append(" and user_depart_id = @user_depart_id");
+                    cmd.Parameters.AddWithValue("@user_depart_id", deptid);
+                }
+                if (userCategory != "0")
+                {
+                    sb.Append(" and user_Category = @user_Category");
+                    cmd.Parameters.AddWithValue("@user_Category", userCategory);
+                }
+                sb.Append(" and user_name like @user_name");
+
+                
+
+                cmd.Parameters.AddWithValue("@user_name", $"%{Name}%");
+
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+
+                return Helper.DataReaderMapToList<UserInfoVO>(cmd.ExecuteReader());
+            }
+        }
+
         public bool IsValidID(string ID)
         {
             string sql = "select count(*) from Userinfo where user_id = @UserID";
@@ -78,7 +113,10 @@ values(@user_id, @user_pwd, @user_name, @user_Category, @user_depart_id, @user_e
                 cmd.Parameters.AddWithValue("@user_pwd", user.user_pwd);
                 cmd.Parameters.AddWithValue("@user_name", user.user_name);
                 cmd.Parameters.AddWithValue("@user_Category", user.user_Category);
-                cmd.Parameters.AddWithValue("@user_email", user.user_email);
+                if (user.user_email != null)
+                {
+                    cmd.Parameters.AddWithValue("@user_email", user.user_email); 
+                }
                 if (user.user_depart_id != null)
                 {
                     cmd.Parameters.AddWithValue("@user_depart_id", user.user_depart_id); 
@@ -120,19 +158,43 @@ values(@user_id, @user_pwd, @user_name, @user_Category, @user_depart_id, @user_e
 
         public bool UpdateData(UserInfoVO user)
         {
-            string sql = @"update Userinfo set(user_id = @user_id, user_pwd = @user_pwd, user_name = @user_name, user_Category = @user_Category, 
-user_birthday = @user_birthday, user_depart_id = @user_depart_id, user_email = @user_email, user_pic = @user_pic, authID = @authID)";
+            string sql = @"update Userinfo set user_pwd = @user_pwd, user_name = @user_name, user_Category = @user_Category, 
+ user_depart_id = @user_depart_id, user_email = @user_email, user_pic = @user_pic, authID = @authID where user_id = @user_id";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@user_id", user.user_id);
                 cmd.Parameters.AddWithValue("@user_pwd", user.user_pwd);
                 cmd.Parameters.AddWithValue("@user_name", user.user_name);
                 cmd.Parameters.AddWithValue("@user_Category", user.user_Category);
-                cmd.Parameters.AddWithValue("@user_birthday", user.user_birthday);
-                cmd.Parameters.AddWithValue("@user_depart_id", user.user_depart_id);
-                cmd.Parameters.AddWithValue("@user_email", user.user_email);
-                cmd.Parameters.AddWithValue("@user_pic", user.user_pic);
-                cmd.Parameters.AddWithValue("@authID", user.authID);
+                if (user.user_email != null)
+                {
+                    cmd.Parameters.AddWithValue("@user_email", user.user_email);
+                }
+                if (user.user_depart_id != null)
+                {
+                    cmd.Parameters.AddWithValue("@user_depart_id", user.user_depart_id);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@user_depart_id", DBNull.Value);
+                }
+
+                if (user.user_pic != null)
+                {
+                    cmd.Parameters.AddWithValue("@user_pic", user.user_pic);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@user_pic", DBNull.Value);
+                }
+                if (user.authID != null)
+                {
+                    cmd.Parameters.AddWithValue("@authID", user.authID);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@authID", DBNull.Value);
+                }
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {

@@ -31,7 +31,7 @@ namespace FinalProject1_Web.Controllers
                 {
                     UserInfoVO user = dac.GetUserInfo(model.user_id, model.user_pwd);
                     Session["User"] = user;
-                    return RedirectToAction("LoginSuccess", "Main");
+                    return RedirectToAction("Index", "Main");
                 }
                 else //로그인 실패
                 {
@@ -47,7 +47,7 @@ namespace FinalProject1_Web.Controllers
         public ActionResult LogOut()
         {
             Session.Remove("User");
-            return RedirectToAction("LoginSuccess", "Main");
+            return RedirectToAction("Index", "Main");
         }
 
         /// <summary>
@@ -83,6 +83,7 @@ namespace FinalProject1_Web.Controllers
             }
             catch (Exception err)
             {
+                ModelState.AddModelError(string.Empty, "다른 아이디를 입력해 주세요");
                 string str = err.Message;
                 return View(user);
             }

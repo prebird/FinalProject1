@@ -42,14 +42,13 @@ namespace FinalProject1_winform
             this.button_gudi4 = new FinalProject1_winform.Button_gudi();
             this.button_gudi7 = new FinalProject1_winform.Button_gudi();
             this.button_gudi6 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.button_gudi9 = new FinalProject1_winform.Button_gudi();
             this.button_gudi10 = new FinalProject1_winform.Button_gudi();
             this.button_gudi11 = new FinalProject1_winform.Button_gudi();
             this.button_gudi12 = new FinalProject1_winform.Button_gudi();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button_gudi3 = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -204,24 +203,6 @@ namespace FinalProject1_winform
             this.button_gudi6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_gudi6.UseVisualStyleBackColor = false;
             // 
-            // button_gudi3
-            // 
-            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.button_gudi3.FlatAppearance.BorderSize = 0;
-            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
-            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi3.Location = new System.Drawing.Point(54, 223);
-            this.button_gudi3.Name = "button_gudi3";
-            this.button_gudi3.Size = new System.Drawing.Size(60, 25);
-            this.button_gudi3.TabIndex = 4;
-            this.button_gudi3.Text = "등록";
-            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_gudi3.UseVisualStyleBackColor = false;
-            // 
             // button_gudi1
             // 
             this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
@@ -236,23 +217,6 @@ namespace FinalProject1_winform
             this.button_gudi1.TabIndex = 4;
             this.button_gudi1.Text = "닫기";
             this.button_gudi1.UseVisualStyleBackColor = false;
-            // 
-            // button_gudi8
-            // 
-            this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi8.FlatAppearance.BorderSize = 0;
-            this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi8.ForeColor = System.Drawing.Color.White;
-            this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
-            this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi8.Location = new System.Drawing.Point(54, 192);
-            this.button_gudi8.Name = "button_gudi8";
-            this.button_gudi8.Size = new System.Drawing.Size(93, 25);
-            this.button_gudi8.TabIndex = 4;
-            this.button_gudi8.Text = "조회";
-            this.button_gudi8.UseVisualStyleBackColor = false;
             // 
             // button_gudi9
             // 
@@ -330,13 +294,30 @@ namespace FinalProject1_winform
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // button_gudi3
+            // 
+            this.button_gudi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.button_gudi3.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.button_gudi3.FlatAppearance.BorderSize = 0;
+            this.button_gudi3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi3.ForeColor = System.Drawing.Color.Black;
+            this.button_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi3.Image")));
+            this.button_gudi3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi3.Location = new System.Drawing.Point(43, 241);
+            this.button_gudi3.Name = "button_gudi3";
+            this.button_gudi3.Size = new System.Drawing.Size(60, 25);
+            this.button_gudi3.TabIndex = 4;
+            this.button_gudi3.Text = "등록";
+            this.button_gudi3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_gudi3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 604);
             this.Controls.Add(this.button_gudi11);
-            this.Controls.Add(this.button_gudi8);
             this.Controls.Add(this.button_gudi2);
             this.Controls.Add(this.button_gudi12);
             this.Controls.Add(this.button_gudi10);
@@ -368,17 +349,16 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi2;
         private Button_gudi button_gudi1;
         private Button_gudi button_gudi2;
-        private Button_gudi button_gudi3;
         private Button_gudi button_gudi4;
         private Button_gudi button_gudi5;
         private Button_gudi button_gudi6;
         private Button_gudi button_gudi7;
-        private Button_gudi button_gudi8;
         private Button_gudi button_gudi9;
         private Button_gudi button_gudi10;
         private Button_gudi button_gudi11;
         private Button_gudi button_gudi12;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private Button_gudi button_gudi3;
     }
 }
 

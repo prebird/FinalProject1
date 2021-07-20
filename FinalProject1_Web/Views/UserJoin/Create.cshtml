@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Registration Page</title>
+    <title>Registration Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,6 +36,8 @@
 
                 <form action="~/UserJoin/Create" method="post">
 
+                    @Html.ValidationMessageFor(model => model, "", new { @class = "text-danger" })
+
                     <div class="input-group mb-3">
                         @Html.EditorFor(model => model.user_id, new { htmlAttributes = new { @class = "form-control", placeholder = "ID" } })
                         <div class="input-group-append">
@@ -43,8 +45,9 @@
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
-                        @Html.ValidationMessageFor(model => model.user_id, "", new { @class = "text-danger" })
+
                     </div>
+                    @Html.ValidationMessageFor(model => model.user_id, "", new { @class = "text-danger" })
 
                     <div class="input-group mb-3">
                         @Html.EditorFor(model => model.user_pwd, new { htmlAttributes = new { @class = "form-control", placeholder = "pwd", @type = "password" } })
@@ -53,8 +56,9 @@
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
-                        @Html.ValidationMessageFor(model => model.user_pwd, "", new { @class = "text-danger" })
+
                     </div>
+                    @Html.ValidationMessageFor(model => model.user_pwd, "", new { @class = "text-danger" })
 
                     <div class="input-group mb-3">
                         @Html.EditorFor(model => model.user_name, new { htmlAttributes = new { @class = "form-control", placeholder = "name" } })
@@ -76,7 +80,7 @@
                         @Html.ValidationMessageFor(model => model.user_email, "", new { @class = "text-danger" })
                     </div>
 
-                    
+
 
 
                     <div class="row">

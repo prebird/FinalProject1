@@ -154,10 +154,22 @@ namespace FinalProject1_winform
         //    common_name = "선택",
         //    common_value = "0"
         //};
+        // CCList.Insert(0, item);
+        //CommonUtil.ComboBinding<CommonCodeVO>(cbShift, CClist, "common_name", "common_value");
 
-        //CommonUtil.ComboBinding<CommonCodeVO>(cbShift, CClist, "common_value", "common_name");
+        public static void ComboBindingCommonCode(ComboBox cbo, string commontype)
+        {
+            CommonService service1 = new CommonService();
+            List<CommonCodeVO> list = service1.GetCommonCode(commontype);
+            CommonCodeVO item = new CommonCodeVO
+            {
+                common_name = "선택",
+                common_value = "0"
+            };
+            list.Insert(0, item);
 
-
+            CommonUtil.ComboBinding<CommonCodeVO>(cbo, list, "common_name", "common_value");
+        }
 
         // DemandPlan의 PlanID 바인딩
         public static void ComboBindingPlanID(ComboBox cbo)

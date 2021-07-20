@@ -20,5 +20,8 @@ namespace FinalProject1_VO
         public string user_pic { get; set; }
         public string user_email { get; set; }
         public int? authID { get; set; }
+
+        public string category_name { get; set; }
+        public string depart_name { get; set; }
     }
 }
