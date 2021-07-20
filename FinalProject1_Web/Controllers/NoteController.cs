@@ -16,6 +16,11 @@ namespace FinalProject1_Web.Controllers
         // GET: Note
         public ActionResult Index(int page = 1)
         {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("Login", "UserJoin");
+            }
+
             int pageSize = Convert.ToInt32(WebConfigurationManager.AppSettings["pagesize"]);
             NoteDAC dac = new NoteDAC();
 
@@ -92,29 +97,39 @@ namespace FinalProject1_Web.Controllers
         // GET: Note/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            NoteDAC dac = new NoteDAC();
+            NoteVO model = dac.GetNoteInfo(id);
+            return View(model);
         }
 
         // POST: Note/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, NoteVO note)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                NoteDAC dac = new NoteDAC();
+                if (dac.UpdateNote(id, note))
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View(note);
+                }
             }
             catch
             {
-                return View();
+                return View(note);
             }
         }
 
         // GET: Note/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            NoteDAC dac = new NoteDAC();
+            NoteVO model = dac.GetNoteInfo(id);
+            return View(model);
         }
 
         // POST: Note/Delete/5
@@ -123,9 +138,10 @@ namespace FinalProject1_Web.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
+                NoteDAC dac = new NoteDAC();
+                dac.DeleteNote(id);
                 return RedirectToAction("Index");
+
             }
             catch
             {

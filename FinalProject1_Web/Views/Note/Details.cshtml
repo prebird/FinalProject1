@@ -5,60 +5,54 @@
 }
 
 <div class="container">
-    <h4>Board</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.note_id)
-        </dt>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_id)
-        </dd>
+                        <div class="login-logo fa-pull-left">
+                            <a href="#"><b>Notice</b>Details</a>
+                        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_userid)
-        </dt>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.EditorFor(model => model.note_subject, new { htmlAttributes = new { @class = "form-control", placeholder = "제목", @readonly = "readonly" } })
+                            </div>
+                        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_userid)
-        </dd>
+                        <div class="form-group">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_subject)
-        </dt>
+                            <div class="col-md-6">
+                                @Html.EditorFor(model => model.note_userid, new { rows = 15, htmlAttributes = new { @class = "form-control", placeholder = "작성자", @readonly = "readonly" } })
+                            </div>
+                        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_subject)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_contents)
-        </dt>
+                        <div class="form-group">
+                            <div class="col-md-9">
+                                @Html.TextAreaFor(m => m.note_contents, new { @class= "form-control", @readonly = "readonly", rows=15})
+                                
+                            </div>
+                        </div>
 
-        <dd>
-            @Html.Raw(Model.note_contents.Replace("\r\n", "<br/>"))
-        </dd>
+                    </fieldset>
+                </form>
+                <div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-success btn-lg" onclick="location.href='@Url.Action("Edit", "Note" ,new { id = Model.note_id })'">글 수정</button> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-success btn-lg" onclick="location.href='/Note/Index'">글 목록으로</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(m => m.note_readCount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.note_readCount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.note_date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.note_date)
-        </dd>
-
-    </dl>
+    @*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.note_id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.note_id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
