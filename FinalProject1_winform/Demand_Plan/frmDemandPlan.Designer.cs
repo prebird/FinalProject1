@@ -30,8 +30,8 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDemandPlan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Excel = new FinalProject1_winform.Button_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_DemandPlan = new FinalProject1_winform.DGV_gudi();
@@ -45,7 +45,7 @@ namespace FinalProject1_winform
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.btn_PlanPP = new FinalProject1_winform.Button_gudi();
+            this.btn_ProductionPlan = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).BeginInit();
@@ -86,18 +86,18 @@ namespace FinalProject1_winform
             // 
             // dgv_DemandPlan
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_DemandPlan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_DemandPlan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_DemandPlan.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DemandPlan.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DemandPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DemandPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_DemandPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DemandPlan.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_DemandPlan.HeaderCheckStatus = false;
@@ -221,25 +221,25 @@ namespace FinalProject1_winform
             this.label_gudi2.TabIndex = 33;
             this.label_gudi2.Text = "수요 계획 목록";
             // 
-            // btn_PlanPP
+            // btn_ProductionPlan
             // 
-            this.btn_PlanPP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_PlanPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.btn_PlanPP.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.btn_PlanPP.FlatAppearance.BorderSize = 0;
-            this.btn_PlanPP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_PlanPP.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_PlanPP.ForeColor = System.Drawing.Color.Black;
-            this.btn_PlanPP.Image = ((System.Drawing.Image)(resources.GetObject("btn_PlanPP.Image")));
-            this.btn_PlanPP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PlanPP.Location = new System.Drawing.Point(962, 112);
-            this.btn_PlanPP.Name = "btn_PlanPP";
-            this.btn_PlanPP.Size = new System.Drawing.Size(113, 25);
-            this.btn_PlanPP.TabIndex = 31;
-            this.btn_PlanPP.Text = "생산 계획 생성";
-            this.btn_PlanPP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_PlanPP.UseVisualStyleBackColor = false;
-            this.btn_PlanPP.Click += new System.EventHandler(this.btn_PlanPP_Click);
+            this.btn_ProductionPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ProductionPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_ProductionPlan.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_ProductionPlan.FlatAppearance.BorderSize = 0;
+            this.btn_ProductionPlan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ProductionPlan.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_ProductionPlan.ForeColor = System.Drawing.Color.Black;
+            this.btn_ProductionPlan.Image = ((System.Drawing.Image)(resources.GetObject("btn_ProductionPlan.Image")));
+            this.btn_ProductionPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ProductionPlan.Location = new System.Drawing.Point(962, 112);
+            this.btn_ProductionPlan.Name = "btn_ProductionPlan";
+            this.btn_ProductionPlan.Size = new System.Drawing.Size(113, 25);
+            this.btn_ProductionPlan.TabIndex = 31;
+            this.btn_ProductionPlan.Text = "생산 계획 생성";
+            this.btn_ProductionPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ProductionPlan.UseVisualStyleBackColor = false;
+            this.btn_ProductionPlan.Click += new System.EventHandler(this.btn_ProductionPlan_Click);
             // 
             // btn_Delete
             // 
@@ -266,7 +266,7 @@ namespace FinalProject1_winform
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
             this.Controls.Add(this.label_gudi2);
-            this.Controls.Add(this.btn_PlanPP);
+            this.Controls.Add(this.btn_ProductionPlan);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.panel2);
@@ -297,7 +297,7 @@ namespace FinalProject1_winform
         private DateTimePicker_gudi dtp_Start;
         private Label_gudi label_gudi14;
         private DGV_gudi dgv_DemandPlan;
-        private Button_gudi btn_PlanPP;
+        private Button_gudi btn_ProductionPlan;
         private ComboBox_gudi cbo_PlanID;
         private Button_gudi btn_Delete;
     }

@@ -36,13 +36,6 @@ namespace FinalProject1_winform
 
         }
 
-        //생산 계획 생성
-        private void btn_PlanPP_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         // 엑셀 출력 버튼 (구현 X)
         private void btn_Excel_Click(object sender, EventArgs e)
         {    
@@ -64,6 +57,15 @@ namespace FinalProject1_winform
             DataTable DemandPlanDT = service.GetDemandPlanList(dmVO);
 
             dgv_DemandPlan.DataSource = DemandPlanDT;
+
+        }
+
+        // 생산 계획 생성
+        private void btn_ProductionPlan_Click(object sender, EventArgs e)
+        {
+
+
+
 
         }
     }
