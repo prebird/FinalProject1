@@ -167,6 +167,12 @@
     <Compile Include="Demand_Plan\frmMasterInsert.Designer.cs">
       <DependentUpon>frmMasterInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Demand_Plan\frmProductionPlanMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Plan\frmProductionPlanMake.Designer.cs">
+      <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -624,6 +630,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Plan\frmMasterList.resx">
       <DependentUpon>frmMasterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Plan\frmProductionPlanMake.resx">
+      <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCommonCode.resx">
       <DependentUpon>frmCommonCode.cs</DependentUpon>
