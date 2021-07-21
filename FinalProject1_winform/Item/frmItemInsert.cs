@@ -38,7 +38,6 @@ namespace FinalProject1_winform
             txt_SafetyQTY.Text = item.Item_SafetyQTY.ToString();
             cbo_InHouse.Text = item.Item_InHouse;
             cbo_OutHouse.Text = item.Item_OutHouse;
-            txt_BarCode.Text = item.Item_Barcode;
             cbo_YN.Text = item.Item_YN;
             txt_Content.Text =item.Item_Content;
             if (item.Item_img != null)
@@ -71,7 +70,6 @@ namespace FinalProject1_winform
                     Item_SafetyQTY = Convert.ToInt32(txt_SafetyQTY.Text),
                     Item_InHouse = cbo_InHouse.Text,
                     Item_OutHouse = cbo_OutHouse.Text,
-                    Item_Barcode = txt_BarCode.Text,
                     Item_YN = cbo_YN.Text,
                     Item_Content = txt_Content.Text,
                 };

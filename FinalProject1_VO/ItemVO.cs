@@ -18,7 +18,6 @@ namespace FinalProject1_VO
         public int Item_SafetyQTY { get; set; }
         public string Item_InHouse { get; set; }
         public string Item_OutHouse { get; set; }
-        public string Item_Barcode { get; set; }
         public string Item_YN { get; set; }
         public string Item_Content { get; set; }
 
