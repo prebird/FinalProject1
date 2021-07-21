@@ -36,7 +36,6 @@ namespace FinalProject1_winform
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_InsUp = new FinalProject1_winform.Button_gudi();
             this.btn_Cancel = new FinalProject1_winform.Button_gudi();
-            this.txt_BarCode = new FinalProject1_winform.Controls.TextBox_gudi();
             this.cbo_OrderType = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_YN = new FinalProject1_winform.ComboBox_gudi();
             this.txt_SafetyQTY = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -47,7 +46,6 @@ namespace FinalProject1_winform
             this.cbo_CheckType = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_OutHouse = new FinalProject1_winform.ComboBox_gudi();
             this.cbo_InHouse = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi21 = new FinalProject1_winform.Label_gudi();
             this.label_gudi17 = new FinalProject1_winform.Label_gudi();
             this.label_gudi14 = new FinalProject1_winform.Label_gudi();
             this.label_gudi13 = new FinalProject1_winform.Label_gudi();
@@ -145,16 +143,6 @@ namespace FinalProject1_winform
             this.btn_Cancel.Text = "닫기";
             this.btn_Cancel.UseVisualStyleBackColor = false;
             // 
-            // txt_BarCode
-            // 
-            this.txt_BarCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txt_BarCode.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_BarCode.Location = new System.Drawing.Point(478, 105);
-            this.txt_BarCode.Multiline = true;
-            this.txt_BarCode.Name = "txt_BarCode";
-            this.txt_BarCode.Size = new System.Drawing.Size(222, 23);
-            this.txt_BarCode.TabIndex = 46;
-            // 
             // cbo_OrderType
             // 
             this.cbo_OrderType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
@@ -171,7 +159,7 @@ namespace FinalProject1_winform
             this.cbo_YN.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbo_YN.Location = new System.Drawing.Point(478, 140);
+            this.cbo_YN.Location = new System.Drawing.Point(478, 105);
             this.cbo_YN.Name = "cbo_YN";
             this.cbo_YN.Size = new System.Drawing.Size(222, 24);
             this.cbo_YN.TabIndex = 40;
@@ -198,7 +186,7 @@ namespace FinalProject1_winform
             // 
             this.txt_Name.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_Name.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_Name.Location = new System.Drawing.Point(132, 142);
+            this.txt_Name.Location = new System.Drawing.Point(132, 143);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(198, 25);
             this.txt_Name.TabIndex = 36;
@@ -207,7 +195,7 @@ namespace FinalProject1_winform
             // 
             this.txt_Code.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.txt_Code.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txt_Code.Location = new System.Drawing.Point(132, 104);
+            this.txt_Code.Location = new System.Drawing.Point(132, 105);
             this.txt_Code.Name = "txt_Code";
             this.txt_Code.Size = new System.Drawing.Size(198, 25);
             this.txt_Code.TabIndex = 35;
@@ -238,7 +226,7 @@ namespace FinalProject1_winform
             // 
             this.cbo_OutHouse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_OutHouse.FormattingEnabled = true;
-            this.cbo_OutHouse.Location = new System.Drawing.Point(478, 70);
+            this.cbo_OutHouse.Location = new System.Drawing.Point(478, 67);
             this.cbo_OutHouse.Name = "cbo_OutHouse";
             this.cbo_OutHouse.Size = new System.Drawing.Size(221, 24);
             this.cbo_OutHouse.TabIndex = 29;
@@ -251,16 +239,6 @@ namespace FinalProject1_winform
             this.cbo_InHouse.Name = "cbo_InHouse";
             this.cbo_InHouse.Size = new System.Drawing.Size(197, 24);
             this.cbo_InHouse.TabIndex = 28;
-            // 
-            // label_gudi21
-            // 
-            this.label_gudi21.AutoSize = true;
-            this.label_gudi21.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi21.Location = new System.Drawing.Point(389, 108);
-            this.label_gudi21.Name = "label_gudi21";
-            this.label_gudi21.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi21.TabIndex = 27;
-            this.label_gudi21.Text = "■ 바코드";
             // 
             // label_gudi17
             // 
@@ -276,7 +254,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi14.AutoSize = true;
             this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi14.Location = new System.Drawing.Point(389, 74);
+            this.label_gudi14.Location = new System.Drawing.Point(389, 71);
             this.label_gudi14.Name = "label_gudi14";
             this.label_gudi14.Size = new System.Drawing.Size(72, 17);
             this.label_gudi14.TabIndex = 20;
@@ -296,7 +274,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi11.AutoSize = true;
             this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi11.Location = new System.Drawing.Point(389, 144);
+            this.label_gudi11.Location = new System.Drawing.Point(389, 109);
             this.label_gudi11.Name = "label_gudi11";
             this.label_gudi11.Size = new System.Drawing.Size(72, 17);
             this.label_gudi11.TabIndex = 17;
@@ -386,7 +364,7 @@ namespace FinalProject1_winform
             // 
             this.label_gudi1.AutoSize = true;
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi1.Location = new System.Drawing.Point(390, 182);
+            this.label_gudi1.Location = new System.Drawing.Point(390, 147);
             this.label_gudi1.Name = "label_gudi1";
             this.label_gudi1.Size = new System.Drawing.Size(60, 17);
             this.label_gudi1.TabIndex = 17;
@@ -395,7 +373,7 @@ namespace FinalProject1_winform
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(478, 178);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 143);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -410,7 +388,7 @@ namespace FinalProject1_winform
             this.btnSearchPic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchPic.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
             this.btnSearchPic.ForeColor = System.Drawing.Color.White;
-            this.btnSearchPic.Location = new System.Drawing.Point(478, 336);
+            this.btnSearchPic.Location = new System.Drawing.Point(478, 303);
             this.btnSearchPic.Name = "btnSearchPic";
             this.btnSearchPic.Size = new System.Drawing.Size(221, 27);
             this.btnSearchPic.TabIndex = 52;
@@ -426,7 +404,6 @@ namespace FinalProject1_winform
             this.ClientSize = new System.Drawing.Size(729, 609);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSearchPic);
-            this.Controls.Add(this.txt_BarCode);
             this.Controls.Add(this.cbo_OrderType);
             this.Controls.Add(this.cbo_YN);
             this.Controls.Add(this.txt_SafetyQTY);
@@ -437,7 +414,6 @@ namespace FinalProject1_winform
             this.Controls.Add(this.cbo_CheckType);
             this.Controls.Add(this.cbo_OutHouse);
             this.Controls.Add(this.cbo_InHouse);
-            this.Controls.Add(this.label_gudi21);
             this.Controls.Add(this.label_gudi17);
             this.Controls.Add(this.label_gudi14);
             this.Controls.Add(this.label_gudi13);
@@ -484,7 +460,6 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi11;
         private Label_gudi label_gudi13;
         private Label_gudi label_gudi14;
-        private Label_gudi label_gudi21;
         private ComboBox_gudi cbo_InHouse;
         private ComboBox_gudi cbo_OutHouse;
         private ComboBox_gudi cbo_Category;
@@ -494,7 +469,6 @@ namespace FinalProject1_winform
         private Controls.TextBox_gudi txt_SafetyQTY;
         private ComboBox_gudi cbo_YN;
         private ComboBox_gudi cbo_OrderType;
-        private Controls.TextBox_gudi txt_BarCode;
         private Label_gudi label_gudi17;
         private ComboBox_gudi cbo_CheckType;
         private Label_gudi label_gudi1;

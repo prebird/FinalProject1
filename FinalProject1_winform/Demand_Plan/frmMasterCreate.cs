@@ -66,7 +66,7 @@ namespace FinalProject1_winform
                     PO_CusProductName = dgv_PO.SelectedRows[0].Cells[4].Value.ToString(),
                     PO_ProductID = Convert.ToInt32(dgv_PO.SelectedRows[0].Cells[5].Value),
                     PO_OrderCnt = Convert.ToInt32(dgv_PO.SelectedRows[0].Cells[6].Value),
-                    PO_DeadLine = dgv_PO.SelectedRows[0].Cells[7].Value.ToString(),
+                    PO_DeadLine = Convert.ToDateTime(dgv_PO.SelectedRows[0].Cells[7].Value).ToString("yyyy-MM-dd"),
                     PO_UploadDate = DateTime.Now.ToString("yyyy-MM-dd")
                 };
 

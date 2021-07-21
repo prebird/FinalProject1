@@ -173,6 +173,12 @@
     <Compile Include="Demand_Plan\frmProductionPlanMake.Designer.cs">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInstockWatiPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstockWatiPopUp.Designer.cs">
+      <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -639,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Plan\frmMasterInsert.resx">
       <DependentUpon>frmMasterInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstockWatiPopUp.resx">
+      <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShift.resx">
       <DependentUpon>frmShift.cs</DependentUpon>
