@@ -56,6 +56,7 @@ namespace FinalProject1_winform
             RestockOrderDAC dac = new RestockOrderDAC();
             reorders = dac.GetInsWaitList(txtRO.Text, dtp1.FromDate.ToShortDateString(), dtp1.ToDate.ToShortDateString(), cboCompany.SelectedValue.ToString());
             dgv1.DataSource = reorders;
+            dgv2.DataSource = null;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -91,6 +92,15 @@ namespace FinalProject1_winform
 
             dgv2.DataSource = waits;
 
+        }
+
+        private void dgv2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8)
+            {
+                dgv2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
+
+            }
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -132,6 +142,11 @@ namespace FinalProject1_winform
             }
 
             // frmInstockWaitPopUp
+            frmInstockWatiPopUp frm = new frmInstockWatiPopUp(throwWaits);
+            frm.ShowDialog();
+
+            // 데이터 인서트 된것들 
+            dgv2.DataSource = throwWaits;
             
         }
 
@@ -165,11 +180,10 @@ namespace FinalProject1_winform
 
         private void HeaderCheckBox1_Click(object sender, EventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
 
-            dgv.EndEdit();
+            dgv1.EndEdit();
 
-            foreach (DataGridViewRow row in dgv.Rows)
+            foreach (DataGridViewRow row in dgv1.Rows)
             {
                 DataGridViewCheckBoxCell chkCell = (DataGridViewCheckBoxCell)row.Cells["chk"];
 
@@ -200,11 +214,10 @@ namespace FinalProject1_winform
 
         private void HeaderCheckBox2_Click(object sender, EventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
 
-            dgv.EndEdit();
+            dgv2.EndEdit();
 
-            foreach (DataGridViewRow row in dgv.Rows)
+            foreach (DataGridViewRow row in dgv2.Rows)
             {
                 DataGridViewCheckBoxCell chkCell = (DataGridViewCheckBoxCell)row.Cells["chk"];
 
@@ -212,5 +225,7 @@ namespace FinalProject1_winform
             }
         }
         #endregion
+
+        
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -190,5 +191,47 @@ values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate)";
             }
             
         }
+
+        public bool InsertInsWait(int roid, int ins_cnt, string ins_date)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction trans = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.Transaction = trans;
+
+                try
+                {
+                    cmd.CommandText = "insert Instock(Ro_id, ins_cnt, ins_date) values (@Ro_id, @ins_cnt, @ins_date)";
+                    cmd.Parameters.AddWithValue("@Ro_id", roid);
+                    cmd.Parameters.AddWithValue("@ins_cnt", ins_cnt);
+                    cmd.Parameters.AddWithValue("@ins_date", ins_date);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "update RestockOrder set RO_Status = @RO_Status where RO_ID = @RO_ID";
+                    cmd.Parameters.AddWithValue("@RO_Status", "RO_02");
+                    cmd.Parameters.AddWithValue("@RO_ID", roid);
+
+                    cmd.ExecuteNonQuery();
+
+                    trans.Commit();
+                    Dispose();
+                    return true;
+                }
+                catch (Exception err)
+                {
+                    Debug.WriteLine(err.Message);
+                    trans.Rollback();
+                    Dispose();
+                    return false;
+                }
+
+               
+                
+            }
+        }
+
+        
     }
 }

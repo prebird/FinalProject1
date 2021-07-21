@@ -34,6 +34,7 @@ namespace FinalProject1_winform
         private void frmInstockWatiPopUp_Load(object sender, EventArgs e)
         {
             dgv1.DataSource = throwedWaits;
+            dgv1.ClearSelection();
         }
 
         private void dgV_gudi1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -47,6 +48,7 @@ namespace FinalProject1_winform
             txtCompany.Text = thisRO.company_name;
             txtDue.Text = thisRO.dueDate;
             txtQty.Text = thisRO.Qty.ToString();
+            txtInQty.Text = thisRO.Qty.ToString();
         }
 
         //저장
@@ -56,16 +58,26 @@ namespace FinalProject1_winform
             if (!txtInQty.CheckNullOrEmptyOk("입고수량")) return;
 
             // DB업데이트
+            RestockOrderDAC dac = new RestockOrderDAC();
+            if (dac.InsertInsWait(Convert.ToInt32(txtRO.Text), Convert.ToInt32(txtQty.Text), dtp1.Value.ToShortDateString()))
+            {
+
+
+                // 전역변수 바꾸기
+                int idx = throwedWaits.FindIndex((x) => x.RO_ID == Convert.ToInt32(txtRO.Text));
+                throwedWaits[idx].ins_cnt = Convert.ToInt32(txtQty.Text);
+                throwedWaits[idx].ins_date = dtp1.Value.ToShortDateString();
+
+                MessageBox.Show("입고대기정보가 입력되었습니다.");
+            }
             
-
-            // 전역변수 바꾸기
-
+            
         }
 
         //닫기
         private void button_gudi1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         

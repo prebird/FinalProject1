@@ -29,14 +29,16 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInstockWait));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dgv2 = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgv1 = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboCompany = new FinalProject1_winform.ComboBox_gudi();
@@ -52,15 +54,13 @@ namespace FinalProject1_winform
             this.btnSelect = new FinalProject1_winform.Button_gudi();
             this.btnCancel = new FinalProject1_winform.Button_gudi();
             this.btnGO = new FinalProject1_winform.Button_gudi();
-            this.dgv1 = new FinalProject1_winform.DGV_gudi();
-            this.dgv2 = new FinalProject1_winform.DGV_gudi();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -73,6 +73,32 @@ namespace FinalProject1_winform
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1057, 223);
             this.panel3.TabIndex = 13;
+            // 
+            // dgv2
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv2.BackgroundColor = System.Drawing.Color.White;
+            this.dgv2.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv2.HeaderCheckStatus = false;
+            this.dgv2.Location = new System.Drawing.Point(0, 0);
+            this.dgv2.Name = "dgv2";
+            this.dgv2.RowHeadersVisible = false;
+            this.dgv2.RowTemplate.Height = 23;
+            this.dgv2.Size = new System.Drawing.Size(1057, 223);
+            this.dgv2.TabIndex = 0;
+            this.dgv2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv2_CellFormatting);
             // 
             // pictureBox_gudi1
             // 
@@ -93,6 +119,31 @@ namespace FinalProject1_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1057, 196);
             this.panel2.TabIndex = 11;
+            // 
+            // dgv1
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv1.BackgroundColor = System.Drawing.Color.White;
+            this.dgv1.CheckBoxAll = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv1.HeaderCheckStatus = false;
+            this.dgv1.Location = new System.Drawing.Point(0, 0);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.RowHeadersVisible = false;
+            this.dgv1.RowTemplate.Height = 23;
+            this.dgv1.Size = new System.Drawing.Size(1057, 196);
+            this.dgv1.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
@@ -297,56 +348,6 @@ namespace FinalProject1_winform
             this.btnGO.UseVisualStyleBackColor = false;
             this.btnGO.Click += new System.EventHandler(this.btnGO_Click);
             // 
-            // dgv1
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv1.BackgroundColor = System.Drawing.Color.White;
-            this.dgv1.CheckBoxAll = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgv1.HeaderCheckStatus = false;
-            this.dgv1.Location = new System.Drawing.Point(0, 0);
-            this.dgv1.Name = "dgv1";
-            this.dgv1.RowHeadersVisible = false;
-            this.dgv1.RowTemplate.Height = 23;
-            this.dgv1.Size = new System.Drawing.Size(1057, 196);
-            this.dgv1.TabIndex = 0;
-            // 
-            // dgv2
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv2.BackgroundColor = System.Drawing.Color.White;
-            this.dgv2.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgv2.HeaderCheckStatus = false;
-            this.dgv2.Location = new System.Drawing.Point(0, 0);
-            this.dgv2.Name = "dgv2";
-            this.dgv2.RowHeadersVisible = false;
-            this.dgv2.RowTemplate.Height = 23;
-            this.dgv2.Size = new System.Drawing.Size(1057, 223);
-            this.dgv2.TabIndex = 0;
-            // 
             // frmInstockWait
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -366,13 +367,13 @@ namespace FinalProject1_winform
             this.Text = "입고대기";
             this.Load += new System.EventHandler(this.frmInstockWait_Load);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.ResumeLayout(false);
 
         }
