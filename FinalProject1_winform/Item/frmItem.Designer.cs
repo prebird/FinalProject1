@@ -51,6 +51,7 @@ namespace FinalProject1_winform
             this.btn_Update = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.btn_Insert = new FinalProject1_winform.Button_gudi();
+            this.btn_Barcode = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -257,7 +258,7 @@ namespace FinalProject1_winform
             this.btn_Update.ForeColor = System.Drawing.Color.Black;
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
             this.btn_Update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Update.Location = new System.Drawing.Point(883, 135);
+            this.btn_Update.Location = new System.Drawing.Point(803, 135);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(60, 25);
             this.btn_Update.TabIndex = 11;
@@ -276,7 +277,7 @@ namespace FinalProject1_winform
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
             this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(949, 135);
+            this.btn_Delete.Location = new System.Drawing.Point(869, 135);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(60, 25);
             this.btn_Delete.TabIndex = 12;
@@ -295,7 +296,7 @@ namespace FinalProject1_winform
             this.btn_Insert.ForeColor = System.Drawing.Color.Black;
             this.btn_Insert.Image = ((System.Drawing.Image)(resources.GetObject("btn_Insert.Image")));
             this.btn_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Insert.Location = new System.Drawing.Point(817, 135);
+            this.btn_Insert.Location = new System.Drawing.Point(737, 135);
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(60, 25);
             this.btn_Insert.TabIndex = 13;
@@ -304,10 +305,30 @@ namespace FinalProject1_winform
             this.btn_Insert.UseVisualStyleBackColor = false;
             this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
+            // btn_Barcode
+            // 
+            this.btn_Barcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.btn_Barcode.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
+            this.btn_Barcode.FlatAppearance.BorderSize = 0;
+            this.btn_Barcode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Barcode.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btn_Barcode.ForeColor = System.Drawing.Color.Black;
+            this.btn_Barcode.Image = ((System.Drawing.Image)(resources.GetObject("btn_Barcode.Image")));
+            this.btn_Barcode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Barcode.Location = new System.Drawing.Point(935, 135);
+            this.btn_Barcode.Name = "btn_Barcode";
+            this.btn_Barcode.Size = new System.Drawing.Size(74, 25);
+            this.btn_Barcode.TabIndex = 14;
+            this.btn_Barcode.Text = "바코드";
+            this.btn_Barcode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Barcode.UseVisualStyleBackColor = false;
+            this.btn_Barcode.Click += new System.EventHandler(this.btn_Barcode_Click);
+            // 
             // frmItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.Controls.Add(this.btn_Barcode);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Delete);
@@ -350,5 +371,6 @@ namespace FinalProject1_winform
         private Button_gudi btn_Insert;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem 입력초기화ToolStripMenuItem;
+        private Button_gudi btn_Barcode;
     }
 }

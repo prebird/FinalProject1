@@ -33,8 +33,8 @@ namespace FinalProject1_winform
             this.cboBox = new System.Windows.Forms.ComboBox();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new FinalProject1_winform.Button_gudi();
             this.button2 = new FinalProject1_winform.Button_gudi();
+            this.button1 = new FinalProject1_winform.Button_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,22 +77,6 @@ namespace FinalProject1_winform
             this.dataGridView1.Size = new System.Drawing.Size(576, 349);
             this.dataGridView1.TabIndex = 4;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button1.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(434, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 29);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "바코드 생성";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
@@ -109,6 +93,22 @@ namespace FinalProject1_winform
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.button1.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(434, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "바코드 생성";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmBarcode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -124,6 +124,7 @@ namespace FinalProject1_winform
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmBarcode";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "품목 바코드";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

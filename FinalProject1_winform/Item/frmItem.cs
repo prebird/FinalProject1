@@ -140,5 +140,12 @@ namespace FinalProject1_winform
 
             }
         }
+
+        private void btn_Barcode_Click(object sender, EventArgs e)
+        {
+            frmBarcode frm = new frmBarcode();
+            frm.ShowDialog();
+
+        }
     }
 }
