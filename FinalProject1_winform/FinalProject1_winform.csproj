@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
@@ -41,10 +77,12 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>Library\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,17 +142,11 @@
     <Compile Include="BaseInformation\Inspect\frmMateriaInspect.Designer.cs">
       <DependentUpon>frmMateriaInspect.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.cs">
+    <Compile Include="BaseInformation\PerPrice\frmPPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMaterialPrice.Designer.cs">
-      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmMPriceIns.Designer.cs">
-      <DependentUpon>frmMPriceIns.cs</DependentUpon>
+    <Compile Include="BaseInformation\PerPrice\frmPPrice.Designer.cs">
+      <DependentUpon>frmPPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseInformation\PerPrice\frmPPriceIns.cs">
       <SubType>Form</SubType>
@@ -122,18 +154,57 @@
     <Compile Include="BaseInformation\PerPrice\frmPPriceIns.Designer.cs">
       <DependentUpon>frmPPriceIns.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmProductPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseInformation\PerPrice\frmProductPrice.Designer.cs">
-      <DependentUpon>frmProductPrice.cs</DependentUpon>
-    </Compile>
+    <Compile Include="CommonUtil\CallService.cs" />
     <Compile Include="Controls\CustomTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\CustomTabControl.Designer.cs">
       <DependentUpon>CustomTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Demand_Plan\frmMasterInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Plan\frmMasterInsert.Designer.cs">
+      <DependentUpon>frmMasterInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserJoin.Designer.cs">
+      <DependentUpon>frmUserJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\frmBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\frmBarcode.Designer.cs">
+      <DependentUpon>frmBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\ReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\ReportPreviewForm.Designer.cs">
+      <DependentUpon>ReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Item\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Purchasing\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\PerPriceService.cs" />
+    <Compile Include="Service\DemandPlanService.cs" />
     <Compile Include="frmCommonCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,34 +359,34 @@
     <Compile Include="Controls\UCMachine.Designer.cs">
       <DependentUpon>UCMachine.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmDemandPlannig.cs">
+    <Compile Include="Demand_Plan\frmDemandPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmDemandPlannig.Designer.cs">
-      <DependentUpon>frmDemandPlannig.cs</DependentUpon>
+    <Compile Include="Demand_Plan\frmDemandPlan.Designer.cs">
+      <DependentUpon>frmDemandPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmDPInsert.cs">
+    <Compile Include="Demand_Plan\frmDPInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmDPInsert.Designer.cs">
+    <Compile Include="Demand_Plan\frmDPInsert.Designer.cs">
       <DependentUpon>frmDPInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmPOUpload.cs">
+    <Compile Include="Demand_Plan\frmPOUpload.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmPOUpload.Designer.cs">
+    <Compile Include="Demand_Plan\frmPOUpload.Designer.cs">
       <DependentUpon>frmPOUpload.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmMasterCreate.cs">
+    <Compile Include="Demand_Plan\frmMasterCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmMasterCreate.Designer.cs">
+    <Compile Include="Demand_Plan\frmMasterCreate.Designer.cs">
       <DependentUpon>frmMasterCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demand_Planning\frmMasterList.cs">
+    <Compile Include="Demand_Plan\frmMasterList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Demand_Planning\frmMasterList.Designer.cs">
+    <Compile Include="Demand_Plan\frmMasterList.Designer.cs">
       <DependentUpon>frmMasterList.cs</DependentUpon>
     </Compile>
     <Compile Include="POP\frmPOPMachine.cs">
@@ -484,7 +555,10 @@
     </Compile>
     <Compile Include="Service\MenuService.cs" />
     <Compile Include="Service\processEquipmentService.cs" />
-    <Compile Include="ShiftService.cs" />
+    <Compile Include="Service\ProductionPlanService.cs" />
+    <Compile Include="Service\RestockService.cs" />
+    <Compile Include="Service\ShiftService.cs" />
+    <Compile Include="Service\SalesMasterService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,17 +586,11 @@
     <EmbeddedResource Include="BaseInformation\Inspect\frmMateriaInspect.resx">
       <DependentUpon>frmMateriaInspect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseInformation\PerPrice\frmMaterialPrice.resx">
-      <DependentUpon>frmMaterialPrice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInformation\PerPrice\frmMPriceIns.resx">
-      <DependentUpon>frmMPriceIns.cs</DependentUpon>
+    <EmbeddedResource Include="BaseInformation\PerPrice\frmPPrice.resx">
+      <DependentUpon>frmPPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseInformation\PerPrice\frmPPriceIns.resx">
       <DependentUpon>frmPPriceIns.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseInformation\PerPrice\frmProductPrice.resx">
-      <DependentUpon>frmProductPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BOR\frmBORInsert.resx">
       <DependentUpon>frmBORInsert.cs</DependentUpon>
@@ -542,26 +610,41 @@
     <EmbeddedResource Include="Controls\UCMachine.resx">
       <DependentUpon>UCMachine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmDemandPlannig.resx">
-      <DependentUpon>frmDemandPlannig.cs</DependentUpon>
+    <EmbeddedResource Include="Demand_Plan\frmDemandPlan.resx">
+      <DependentUpon>frmDemandPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmDPInsert.resx">
+    <EmbeddedResource Include="Demand_Plan\frmDPInsert.resx">
       <DependentUpon>frmDPInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmPOUpload.resx">
+    <EmbeddedResource Include="Demand_Plan\frmPOUpload.resx">
       <DependentUpon>frmPOUpload.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmMasterCreate.resx">
+    <EmbeddedResource Include="Demand_Plan\frmMasterCreate.resx">
       <DependentUpon>frmMasterCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demand_Planning\frmMasterList.resx">
+    <EmbeddedResource Include="Demand_Plan\frmMasterList.resx">
       <DependentUpon>frmMasterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCommonCode.resx">
       <DependentUpon>frmCommonCode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Demand_Plan\frmMasterInsert.resx">
+      <DependentUpon>frmMasterInsert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmShift.resx">
       <DependentUpon>frmShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserJoin.resx">
+      <DependentUpon>frmUserJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\frmBarcode.resx">
+      <DependentUpon>frmBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmBigMenuIns.resx">
       <DependentUpon>frmBigMenuIns.cs</DependentUpon>
@@ -611,6 +694,7 @@
     <EmbeddedResource Include="Production_Planning\frmDispensing.resx">
       <DependentUpon>frmDispensing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Purchasing\frmInstock.resx">
       <DependentUpon>frmInstock.cs</DependentUpon>
     </EmbeddedResource>
@@ -666,6 +750,9 @@
     <EmbeddedResource Include="Purchasing\frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -682,9 +769,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InStock\" />
-    <Folder Include="MRP\" />
     <Folder Include="ReStock\" />
     <Folder Include="Shift\" />
+    <Folder Include="UserInfo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\2214523.png">
@@ -724,6 +811,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\gray_dot %281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\logo1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\noimage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Open_16x16.png">
@@ -770,6 +863,18 @@
       <Project>{2976884b-c8ae-4a3e-89e6-a3a2228c9132}</Project>
       <Name>FinalProject1_VO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

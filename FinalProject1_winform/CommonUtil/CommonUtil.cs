@@ -74,11 +74,11 @@ namespace FinalProject1_winform
         }
 
         // int? 타입일때 텍스트가 비어있으면 null을 리턴, 아니면 숫자로 바꿔서 리턴
-        public static int? NullOrNum(this string inputText)
+        public static int ZeroOrNum(this string inputText)
         {
             if (string.IsNullOrEmpty(inputText))
             {
-                return null;
+                return 0;
             }
             else
             {
@@ -146,7 +146,6 @@ namespace FinalProject1_winform
             cbo.ValueMember = valueMember;
             cbo.DataSource = list;
         }
-
         // 사용케이스
         //CommonService service1 = new CommonService();
         //List<CommonCodeVO> CCList = service1.GetCommonCode("shift_type");
@@ -155,9 +154,79 @@ namespace FinalProject1_winform
         //    common_name = "선택",
         //    common_value = "0"
         //};
+        // CCList.Insert(0, item);
+        //CommonUtil.ComboBinding<CommonCodeVO>(cbShift, CClist, "common_name", "common_value");
 
-        //CommonUtil.ComboBinding<CommonCodeVO>(cbShift, CClist, "common_value", "common_name");
+        public static void ComboBindingCommonCode(ComboBox cbo, string commontype)
+        {
+            CommonService service1 = new CommonService();
+            List<CommonCodeVO> list = service1.GetCommonCode(commontype);
+            CommonCodeVO item = new CommonCodeVO
+            {
+                common_name = "선택",
+                common_value = "0"
+            };
+            list.Insert(0, item);
 
+            CommonUtil.ComboBinding<CommonCodeVO>(cbo, list, "common_name", "common_value");
+        }
+
+        // DemandPlan의 PlanID 바인딩
+        public static void ComboBindingPlanID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<DemandPlanVO> list = service.GetCommboDemandPlan();
+            DemandPlanVO item = new DemandPlanVO
+            {
+                PlanID = "선택"
+            };
+            list.Insert(0, item);
+
+            ComboBinding<DemandPlanVO>(cbo, list, "PlanID", "");
+        }
+
+        public static void ComboBindingProductID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<ItemVO> list = service.GetCommboProductName();
+            ItemVO item = new ItemVO
+            {
+                Item_ID = 0,
+                Item_Name = "선택"
+            };
+            list.Insert(0, item);
+
+            ComboBinding<ItemVO>(cbo, list, "Item_Name", "Item_ID");
+        }
+
+        public static void ComboBindingCompanyID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<CompanyVO> list = service.GetCommboCompanyName();
+            CompanyVO item = new CompanyVO
+            {
+                company_id = 0,
+                company_name = "선택"
+            };
+            list.Insert(0, item);
+
+            ComboBinding<CompanyVO>(cbo, list, "company_name", "company_id");
+        }
+
+
+        public static void ComboBindingItemID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<ItemVO> list = service.GetCommboItemName();
+            ItemVO item = new ItemVO
+            {
+                Item_ID = 0,
+                Item_Name = "선택"
+            };
+            list.Insert(0, item);
+
+            ComboBinding<ItemVO>(cbo, list, "Item_Name", "Item_ID");
+        }
 
         #region 옛날 유틸
         //public static void ColorChange(object sender, Panel panel)

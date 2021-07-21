@@ -31,6 +31,7 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_Item, "입고창고", "Item_InHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "출고창고", "Item_OutHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "바코드", "Item_Barcode", DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgv_Item, "이미지", "Item_img", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_YN", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
             CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_Content");
 
@@ -59,7 +60,7 @@ namespace FinalProject1_winform
         private void btn_Insert_Click(object sender, EventArgs e)
         {
             frmItemInsert frm = new frmItemInsert();
-            if(frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
             }
@@ -121,6 +122,23 @@ namespace FinalProject1_winform
 
             // 입력후 컨트롤 초기화
             cbo_ItemCategory.Text = txt_ItemName.Text = cbo_YN.Text = null;
+        }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Excel Files(*.xls)|*.xls|Excel Files(*.xlsx)|*.xlsx";
+            dlg.Title = "엑셀파일로 내보내기";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                bool result = ExcelUtil.ExportExcelToList<ItemVO>(list, dlg.FileName, "deleted");
+
+                if (result)
+                {
+                    MessageBox.Show("엑셀 다운로드 완료");
+                }
+
+            }
         }
     }
 }

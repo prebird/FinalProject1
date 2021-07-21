@@ -69,8 +69,13 @@ namespace FinalProject1_winform
             // 
             // cboFactoryGrade
             // 
+            this.cboFactoryGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFactoryGrade.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboFactoryGrade.FormattingEnabled = true;
+            this.cboFactoryGrade.Items.AddRange(new object[] {
+            "회사",
+            "공장",
+            "창고"});
             this.cboFactoryGrade.Location = new System.Drawing.Point(472, 11);
             this.cboFactoryGrade.Name = "cboFactoryGrade";
             this.cboFactoryGrade.Size = new System.Drawing.Size(172, 24);
@@ -140,6 +145,7 @@ namespace FinalProject1_winform
             this.btmUpdate.Text = "수정";
             this.btmUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btmUpdate.UseVisualStyleBackColor = false;
+            this.btmUpdate.Click += new System.EventHandler(this.btmUpdate_Click);
             // 
             // btnExcel
             // 
@@ -266,7 +272,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmFactory";
-            this.Text = "frmFactory";
+            this.Text = "공장정보관리";
             this.Load += new System.EventHandler(this.frmFactory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

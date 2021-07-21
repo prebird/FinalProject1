@@ -16,6 +16,7 @@ namespace FinalProject1_VO
         public string BOM_DemandYN { get; set; } // 소요 계획 사용 여부
         public string BOM_Content { get; set; }
 
+
         public int level { get; set; }
         public string Info { get; set; }
         public string Item_Category { get; set; }

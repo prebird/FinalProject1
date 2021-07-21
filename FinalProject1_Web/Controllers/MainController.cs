@@ -8,8 +8,20 @@ namespace FinalProject1_Web.Controllers
 {
     public class MainController : Controller
     {
+
         // GET: Main
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        // 로그인 성공시
+        public ActionResult LoginSuccess()
+        {
+            return View();
+        }
+
+        public ActionResult Error()
         {
             return View();
         }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using FinalProject1_VO;
 using FinalProject1_DAC;
+using System.Data;
 
 namespace FinalProject1_winform
 {
@@ -27,6 +28,37 @@ namespace FinalProject1_winform
         {
             CommonDAC dac = new CommonDAC();
             return dac.GetCommonCode(common_type);
+        }
+
+        // planid 콤보바인딩용
+        public List<DemandPlanVO> GetCommboDemandPlan()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommboDemandPlan();
+        }
+
+        public List<ItemVO> GetCommboProductName()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommboProductName();
+        }
+
+        public DataTable GetMenuList()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetMenuList();
+        }
+
+        public List<ItemVO> GetCommboItemName()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommboItemName();
+        }
+
+        public List<CompanyVO> GetCommboCompanyName()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommboCompanyName();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using FinalProject1_VO;
+using System.Data;
 
 namespace FinalProject1_DAC
 {
@@ -26,9 +27,7 @@ namespace FinalProject1_DAC
         public List<MenuVO> GetAllMenu()
         {
 
-            string sql = @"select m.MenuID, MenuName, MenuLevel, refMenuID, ProgramName, a.AuthName , a.AuthID  
-from Menu m left outer join MenuAuth ma on m.MenuID = ma.MenuID
-left outer join Authority a on ma.AuthID = a.AuthID";
+            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img  from Menu" ;
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -41,9 +40,7 @@ left outer join Authority a on ma.AuthID = a.AuthID";
         public List<MenuVO> GetAllMenuMgt()
         {
 
-            string sql = @"select m.MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin ,u.user_name, menu_udate
-from Menu m left outer join MenuAuth ma on m.MenuID = ma.MenuID
-left outer join Userinfo u on  u.user_id = m.menu_uadmin";
+            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img  from Menu";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -73,6 +70,59 @@ left outer join Userinfo u on  u.user_id = m.menu_uadmin";
                 return list;
             }
         }
+
+        // 콤보박스 planid 가져오기용
+        public List<DemandPlanVO> GetCommboDemandPlan()
+        {
+            string sql = "Select distinct PlanID from Demandplan ";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<DemandPlanVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // 콤보박스 productName 가져오기용
+        public List<ItemVO> GetCommboProductName()
+        {
+            string sql = "select Item_ID, Item_Name from Item where Item_Category = '완제품'";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<ItemVO> GetCommboItemName()
+        {
+            string sql = "select Item_ID, Item_Name from Item";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<CompanyVO> GetCommboCompanyName()
+        {
+            string sql = "select company_id, company_name from Company";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<CompanyVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public DataTable GetMenuList()
+        {
+            string sql = "select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img from Menu";
+
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
+
+
 
     }
 }

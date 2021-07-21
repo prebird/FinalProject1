@@ -1,0 +1,78 @@
+﻿@model FinalProject1_Web.Models.Cart
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">장바구니</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">장바구니</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>제품명</th>
+                                <th class="text-right">가격</th>
+                                <th class="text-center">수량</th>
+                                <th class="text-right">소계</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var line in Model.Lines)
+                            {
+                                <tr>
+                                    <td>@line.Product.Item_Name</td>
+                                    <td class="text-right">1000</td>
+                                    <td class="text-center">@line.Qty</td>
+                                    <td class="text-right">@((1000 * line.Qty).ToString("c"))</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-right">Total:</td>
+                                <td class="text-right">@Model.CalcTotalValue().ToString("c")</td>
+                            </tr>
+
+                        </tfoot>
+
+                    </table>
+                    <script>
+                        function openInNewWindowWithSettings() {
+                            window.open('@Url.Content("~/Cart/Buy")',target = '_blank', width = '1000px', height = '800px');
+                        }
+                    </script>
+
+
+                    @using (Html.BeginForm("Buy", "Cart", FormMethod.Get, new { target = "_blank" }))
+                    {
+                        @Html.Hidden("Cart", Model)
+                        <a href='javascript:openInNewWindowWithSettings();' class="btn btn-primary" role="button" style="float:right">결제하기</a>
+                      
+                        @*<input type="submit" value="결제하기" class="btn btn-primary btn-lg" style="float:right">*@
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
