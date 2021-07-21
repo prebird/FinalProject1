@@ -32,7 +32,7 @@ namespace FinalProject1_DAC
         public List<ItemVO> GetAllItem()
         {
             string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode, Item_img
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_img
                          from Item where Item_Deleted = 0
                          order by (case Item_Category when '완제품' then 0
                                                       when '반제품' then 1
@@ -48,7 +48,7 @@ namespace FinalProject1_DAC
         public ItemVO GetOneItem(int itemID)
         {
             string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode, Item_img
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_img
                          from Item
                          where Item_ID = @Item_ID and Item_Deleted = 0";
 
@@ -69,7 +69,7 @@ namespace FinalProject1_DAC
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode, Item_img
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_img
                          from Item 
 						 where Item_Deleted = 0 and 1=1");
 
@@ -114,7 +114,6 @@ namespace FinalProject1_DAC
                 cmd.Parameters.AddWithValue("@Item_SafetyQTY", item.Item_SafetyQTY);
                 cmd.Parameters.AddWithValue("@Item_InHouse", item.Item_InHouse);
                 cmd.Parameters.AddWithValue("@Item_OutHouse", item.Item_OutHouse);
-                cmd.Parameters.AddWithValue("@Item_Barcode", item.Item_Barcode);
                 cmd.Parameters.AddWithValue("@Item_YN", item.Item_YN);
                 cmd.Parameters.AddWithValue("@Item_Content", item.Item_Content);
                 if (item.Item_img != null)

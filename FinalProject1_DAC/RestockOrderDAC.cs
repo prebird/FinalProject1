@@ -31,7 +31,7 @@ namespace FinalProject1_DAC
 
         public List<RestockOrderVO> GetROList()
         {
-            string sql = @"select RO_ID, RO_Serial, itemid, Companyid, SuggestQty, Qty, dueDate from RestockOrder";
+            string sql = @"select RO_ID, itemid, Companyid, SuggestQty, Qty, dueDate, inputFlag, RegDate, RO_Status from RestockOrder";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
@@ -39,9 +39,80 @@ namespace FinalProject1_DAC
             }
         }
 
+        public List<RestockOrderVO> GetROandInsList(string ro_id, string fromdate, string todate, string companyid)
+        {
+            StringBuilder sb = new StringBuilder(); 
+            sb.Append(@"select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date from RestockOrder ro
+inner join item i on i.Item_ID = ro.itemid
+inner join Company c on c.company_id = ro.Companyid
+left outer join CommonCode cc on cc.common_value = RO_Status
+left outer join Instock ins on ins.Ro_id = ro.RO_ID
+where 1=1 ");
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                if (!string.IsNullOrEmpty(ro_id))
+                {
+                    sb.Append(" and ro.ro_id like @ro_id");
+                    cmd.Parameters.AddWithValue("@ro_id", $"%{ro_id}%");
+                }
+                if (companyid != "0")
+                {
+                    sb.Append(" and Companyid = @companyid");
+                    cmd.Parameters.AddWithValue("@companyid", companyid);
+                }
+                sb.Append(" and dueDate >= @fromdate");
+                cmd.Parameters.AddWithValue("@fromdate", fromdate);
+                sb.Append(" and dueDate <= @todate");
+                cmd.Parameters.AddWithValue("@todate", todate);
+
+
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+
+                List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
+                return list;
+            }
+        }
+
+        public List<RestockOrderVO> GetInsWaitList(string ro_id, string fromdate, string todate, string companyid)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date from RestockOrder ro
+inner join item i on i.Item_ID = ro.itemid
+inner join Company c on c.company_id = ro.Companyid
+left outer join CommonCode cc on cc.common_value = RO_Status
+left outer join Instock ins on ins.Ro_id = ro.RO_ID
+where 1=1 and RO_Status = 'RO_01'");
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                if (!string.IsNullOrEmpty(ro_id))
+                {
+                    sb.Append(" and ro.ro_id like @ro_id");
+                    cmd.Parameters.AddWithValue("@ro_id", $"%{ro_id}%");
+                }
+                if (companyid != "0")
+                {
+                    sb.Append(" and Companyid = @companyid");
+                    cmd.Parameters.AddWithValue("@companyid", companyid);
+                }
+                sb.Append(" and dueDate >= @fromdate");
+                cmd.Parameters.AddWithValue("@fromdate", fromdate);
+                sb.Append(" and dueDate <= @todate");
+                cmd.Parameters.AddWithValue("@todate", todate);
+
+
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+
+                List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
+                return list;
+            }
+        }
+
         public DataTable GetPrintData(string strCheckBarCodeID)
         {
-            string sql = @"select RO_Serial, Item_Name, company_name, Qty from RestockOrder RO
+            string sql = @"select RO_ID Item_Name, company_name, Qty from RestockOrder RO
 inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 where ro.ro_id in (" + strCheckBarCodeID + ")";
