@@ -57,12 +57,12 @@ namespace FinalProject1_winform
                 return;
             }
 
-            if (dtp_Date.Value <= DateTime.Now)
-            {
-                MessageBox.Show("계획 일자 금일 이전일 수 없습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.DialogResult = DialogResult.No;
-                return;
-            }    
+            //if (dtp_Date.Value <= DateTime.Now)
+            //{
+            //    MessageBox.Show("계획 일자 금일 이전일 수 없습니다.", "처리 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.DialogResult = DialogResult.No;
+            //    return;
+            //}    
 
             PlanDate = dtp_Date.Value.ToString("yy-MM-dd");
 
