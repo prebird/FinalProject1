@@ -78,6 +78,8 @@ namespace FinalProject1_winform
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.dgv_Forward.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Forward.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgv_Forward.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Forward.CheckBoxAll = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -89,7 +91,6 @@ namespace FinalProject1_winform
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Forward.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Forward.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Forward.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Forward.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_Forward.HeaderCheckStatus = false;
             this.dgv_Forward.Location = new System.Drawing.Point(0, 0);
@@ -251,6 +252,9 @@ namespace FinalProject1_winform
             // 
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.dgv_Reverse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Reverse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Reverse.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Reverse.CheckBoxAll = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -262,7 +266,6 @@ namespace FinalProject1_winform
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Reverse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Reverse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Reverse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Reverse.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_Reverse.HeaderCheckStatus = false;
             this.dgv_Reverse.Location = new System.Drawing.Point(0, 0);

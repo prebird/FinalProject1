@@ -39,7 +39,6 @@ namespace FinalProject1_winform
                     dt.Rows[i]["planDate"] = planDate;
                 }
                 dt.AcceptChanges();
-
                 dgv_PO.DataSource = dt;
  
             }   
@@ -83,6 +82,15 @@ namespace FinalProject1_winform
         private void frmMasterCreate_Load(object sender, EventArgs e)
         {
             CommonUtil.AddGridTextColumn(dgv_PO, "계획 날짜", "planDate", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgv_PO, "순번", "순번", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgv_PO, "WORK_ORDER_ID", "WORK_ORDER_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
+            CommonUtil.AddGridTextColumn(dgv_PO, "업체명", "업체명", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgv_PO, "납품처", "납품처", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgv_PO, "입고P/NO", "입고P/NO", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
+            CommonUtil.AddGridTextColumn(dgv_PO, "품목 번호", "품목ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
+            CommonUtil.AddGridTextColumn(dgv_PO, "계획수량합계", "계획수량합계", DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
+            CommonUtil.AddGridTextColumn(dgv_PO, "납기일", "납기일", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
+
 
         }
     }

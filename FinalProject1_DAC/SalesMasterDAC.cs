@@ -85,53 +85,47 @@ namespace FinalProject1_DAC
         }
 
         // 특정 조회 
-        public SalesMasterVO GetOneSM(int itemID)
-        {
-            string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
-                         from Item
-                         where Item_ID = @Item_ID and Item_Deleted = 0";
+        //public SalesMasterVO GetOneSM(int itemID)
+        //{
+        //    string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
+        //                 Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
+        //                 from Item
+        //                 where Item_ID = @Item_ID and Item_Deleted = 0";
 
-            using (SqlCommand cmd = new SqlCommand(sql, conn))
-            {
-                cmd.Parameters.AddWithValue("Item_ID", itemID);
-                List<SalesMasterVO> list = Helper.DataReaderMapToList<SalesMasterVO>(cmd.ExecuteReader());
+        //    using (SqlCommand cmd = new SqlCommand(sql, conn))
+        //    {
+        //        cmd.Parameters.AddWithValue("Item_ID", itemID);
+        //        List<SalesMasterVO> list = Helper.DataReaderMapToList<SalesMasterVO>(cmd.ExecuteReader());
 
-                if (list != null && list.Count > 0)
-                    return list[0];
-                else
-                    return null;
-            }
-        }
+        //        if (list != null && list.Count > 0)
+        //            return list[0];
+        //        else
+        //            return null;
+        //    }
+        //}
 
         // 부분 조회
-        public List<SalesMasterVO> GetPartialSM(string itemCategory, string itemName, string yn)
+        public List<SalesMasterVO> GetPartialSM(DateTime StartDate, DateTime EndDate, string companyName)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(@"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
-                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_Barcode
-                         from Item 
-						 where Item_Deleted = 0 and 1=1");
+            sb.Append(@"select PO_ID, PO_WorkOrderID, PO_PlanID, PO_CompanyName, PO_CompanyType, PO_Destination, PO_CusProductName, 
+                        PO_ProductID, PO_OrderCnt, PO_OutCnt, PO_CancelCnt, PO_DeadLine, PO_UploadDate, PO_EditManager, PO_EditDate, PO_Content
+                        from PurchaseOrder
+                        where PO_Deleted = 0 and 1=1 and PO_DeadLine between @StartDate and @EndDate");
 
-            if (!string.IsNullOrEmpty(itemCategory))
-                sb.Append(" and Item_Category like @Item_Category");
-
-            if (!string.IsNullOrEmpty(itemName))
-                sb.Append(" and Item_Name like @Item_Name");
-
-            if (!string.IsNullOrEmpty(yn))
-                sb.Append(" and Item_YN = @Item_YN");
+            if (!string.IsNullOrEmpty(companyName))
+                sb.Append(" and PO_CompanyName like @PO_CompanyName");
 
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = conn;
                 cmd.CommandText = sb.ToString();
-                cmd.Parameters.AddWithValue("@Item_Category", itemCategory);
-                cmd.Parameters.AddWithValue("@Item_Name", "%" + itemName + "%");
-
-                cmd.Parameters.AddWithValue("@Item_YN", yn);
+                cmd.Parameters.AddWithValue("@PO_CompanyName", companyName);
+                cmd.Parameters.AddWithValue("@StartDate","'" + StartDate + "'");
+                cmd.Parameters.AddWithValue("@EndDate", "'" + EndDate + "'");
 
                 return Helper.DataReaderMapToList<SalesMasterVO>(cmd.ExecuteReader());
+
             }
         }
 
