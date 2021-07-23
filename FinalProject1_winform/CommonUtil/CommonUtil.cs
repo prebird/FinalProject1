@@ -184,6 +184,18 @@ namespace FinalProject1_winform
 
             ComboBinding<DemandPlanVO>(cbo, list, "PlanID", "");
         }
+        public static void ComboBindingROID(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<RestockOrderVO> list = service.GetCommboROID();
+            RestockOrderVO item = new RestockOrderVO
+            {
+                RO_ID = 0
+            };
+            list.Insert(0, item);
+
+            ComboBinding<RestockOrderVO>(cbo, list, "RO_ID", "");
+        }
 
         public static void ComboBindingProductID(ComboBox cbo)
         {

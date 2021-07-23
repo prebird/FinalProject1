@@ -37,6 +37,12 @@ namespace FinalProject1_winform
             return dac.GetCommboDemandPlan();
         }
 
+        public List<RestockOrderVO> GetCommboROID()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommboROID();
+        }
+
         public List<ItemVO> GetCommboProductName()
         {
             CommonDAC dac = new CommonDAC();

@@ -27,7 +27,7 @@ namespace FinalProject1_DAC
         public List<MenuVO> GetAllMenu()
         {
 
-            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img  from Menu" ;
+            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img, sortorder  from Menu order by sortorder" ;
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -78,6 +78,16 @@ namespace FinalProject1_DAC
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 return Helper.DataReaderMapToList<DemandPlanVO>(cmd.ExecuteReader());
+            }
+        }
+
+        // RO_id 콤보바인딩
+        public List<RestockOrderVO> GetCommboROID()
+        {
+            string sql = "Select distinct RO_ID from RestockOrder ";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
             }
         }
 
