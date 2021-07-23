@@ -109,6 +109,7 @@ namespace FinalProject1_winform
             }
         }
 
+        // 부분 조회
         private void btn_Search_Click(object sender, EventArgs e)
         {
             string itemCategory = cbo_ItemCategory.Text;

@@ -11,7 +11,7 @@ namespace FinalProject1_winform
 {
     public partial class frmMasterList : FinalProject1_winform.Basic3
     {
-        List<SalesMasterVO> _list;
+        List<SalesMasterVO> list;
 
         public frmMasterList()
         {
@@ -20,10 +20,12 @@ namespace FinalProject1_winform
 
         private void frmMasterList_Load(object sender, EventArgs e)
         {
+            CommonUtil.ComboBindingCompanyID(cbo_CompanyName);
+
             CommonUtil.SetInitGridView(dgv_SalesMaster);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "일련 번호", "PO_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 95);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "WO ID", "PO_WorkOrderID", DataGridViewContentAlignment.MiddleCenter, colWidth: 115);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획기준 버전", "PO_PlanID", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획기준 번호", "PO_PlanID", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "업체명", "PO_CompanyName", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "납품처", "PO_CompanyType", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "도착지", "PO_Destination", DataGridViewContentAlignment.MiddleCenter);
@@ -42,8 +44,8 @@ namespace FinalProject1_winform
         public void LoadData()
         {
             SalesMasterService service = new SalesMasterService();
-            _list = service.GetAllSM();
-            dgv_SalesMaster.DataSource = _list;
+            list = service.GetAllSM();
+            dgv_SalesMaster.DataSource = list;
         }
 
         // 삭제
@@ -115,13 +117,29 @@ namespace FinalProject1_winform
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                bool result = ExcelUtil.ExportExcelToList<SalesMasterVO>(_list, dlg.FileName, "deleted");
+                bool result = ExcelUtil.ExportExcelToList<SalesMasterVO>(list, dlg.FileName, "deleted");
 
                 if (result)
                 {
                     MessageBox.Show("엑셀 다운로드 완료");
                 }
             }
+        }
+
+        // 부분조회 버튼
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            DateTime StartDate = dtp_Start.Value;
+            DateTime EndDate = dtp_End.Value;
+            string companyName = cbo_CompanyName.Text;
+
+            SalesMasterService service = new SalesMasterService();
+            list = service.GetPartialSM(StartDate, EndDate, companyName);
+            dgv_SalesMaster.DataSource = list;
+
+            // 입력후 컨트롤 초기화
+            cbo_CompanyName.Text = null;
+
         }
     }
 }

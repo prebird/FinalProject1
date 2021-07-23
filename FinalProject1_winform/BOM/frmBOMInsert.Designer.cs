@@ -29,14 +29,14 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBOMInsert));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblItemID = new FinalProject1_winform.Label_gudi();
             this.txt_Category = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.lblItemID = new FinalProject1_winform.Label_gudi();
             this.txt_UnitQTY = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.txt_ItemCode = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -87,16 +87,6 @@ namespace FinalProject1_winform
             this.panel4.Size = new System.Drawing.Size(994, 58);
             this.panel4.TabIndex = 39;
             // 
-            // lblItemID
-            // 
-            this.lblItemID.AutoSize = true;
-            this.lblItemID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.lblItemID.Location = new System.Drawing.Point(34, 38);
-            this.lblItemID.Name = "lblItemID";
-            this.lblItemID.Size = new System.Drawing.Size(56, 17);
-            this.lblItemID.TabIndex = 50;
-            this.lblItemID.Text = "품목번호";
-            // 
             // txt_Category
             // 
             this.txt_Category.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
@@ -106,6 +96,17 @@ namespace FinalProject1_winform
             this.txt_Category.ReadOnly = true;
             this.txt_Category.Size = new System.Drawing.Size(135, 25);
             this.txt_Category.TabIndex = 49;
+            // 
+            // lblItemID
+            // 
+            this.lblItemID.AutoSize = true;
+            this.lblItemID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.lblItemID.Location = new System.Drawing.Point(34, 38);
+            this.lblItemID.Name = "lblItemID";
+            this.lblItemID.Size = new System.Drawing.Size(56, 17);
+            this.lblItemID.TabIndex = 50;
+            this.lblItemID.Text = "품목번호";
+            this.lblItemID.Visible = false;
             // 
             // txt_UnitQTY
             // 
@@ -209,18 +210,18 @@ namespace FinalProject1_winform
             // 
             // dgv_JaItemAll
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_JaItemAll.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_JaItemAll.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_JaItemAll.BackgroundColor = System.Drawing.Color.White;
             this.dgv_JaItemAll.CheckBoxAll = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_JaItemAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_JaItemAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_JaItemAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_JaItemAll.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_JaItemAll.HeaderCheckStatus = false;
@@ -376,18 +377,18 @@ namespace FinalProject1_winform
             // 
             // dgv_JaItemMine
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_JaItemMine.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_JaItemMine.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_JaItemMine.BackgroundColor = System.Drawing.Color.White;
             this.dgv_JaItemMine.CheckBoxAll = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_JaItemMine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_JaItemMine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_JaItemMine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_JaItemMine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_JaItemMine.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
