@@ -83,6 +83,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -172,6 +173,12 @@
     </Compile>
     <Compile Include="Demand_Plan\frmProductionPlanMake.Designer.cs">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInspectAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInspectAdd.Designer.cs">
+      <DependentUpon>frmInspectAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInstockWatiPopUp.cs">
       <SubType>Form</SubType>
@@ -645,6 +652,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Plan\frmMasterInsert.resx">
       <DependentUpon>frmMasterInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInspectAdd.resx">
+      <DependentUpon>frmInspectAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInstockWatiPopUp.resx">
       <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>

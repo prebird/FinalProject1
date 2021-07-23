@@ -47,7 +47,7 @@ namespace FinalProject1_DAC
 inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 left outer join CommonCode cc on cc.common_value = RO_Status
-left outer join Instock ins on ins.Ro_id = ro.RO_ID
+left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
 where 1=1 ");
             using (SqlCommand cmd = new SqlCommand())
             {
@@ -82,7 +82,7 @@ where 1=1 ");
 inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 left outer join CommonCode cc on cc.common_value = RO_Status
-left outer join Instock ins on ins.Ro_id = ro.RO_ID
+left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
 where 1=1 and RO_Status = 'RO_01'");
 
             using (SqlCommand cmd = new SqlCommand())
@@ -202,7 +202,7 @@ values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate)";
 
                 try
                 {
-                    cmd.CommandText = "insert Instock(Ro_id, ins_cnt, ins_date) values (@Ro_id, @ins_cnt, @ins_date)";
+                    cmd.CommandText = "insert InstockWait(Ro_id, ins_cnt, ins_date) values (@Ro_id, @ins_cnt, @ins_date)";
                     cmd.Parameters.AddWithValue("@Ro_id", roid);
                     cmd.Parameters.AddWithValue("@ins_cnt", ins_cnt);
                     cmd.Parameters.AddWithValue("@ins_date", ins_date);
@@ -229,6 +229,129 @@ values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate)";
 
                
                 
+            }
+        }
+
+        public List<InspectVO> GetAllInspect()
+        {
+            string sql = @"select iw.ins_id, i.Item_Name, i.Item_ID ,ins_cnt, iw.ins_id, insp_noCnt, iw.Ro_id , insp_result ,insp_date, insp_user, iw.Ro_id, ins_date from InstockWait iw
+left outer join Inspect ip on ip.ins_id = iw.ins_id
+inner join RestockOrder ro on ro.RO_ID = iw.Ro_id
+inner join item i on i.Item_ID = ro.itemid
+where RO_Status = 'RO_02'";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<InspectVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<InspectCriteriaVO> GetInspectCriteriaByID(int itemid)
+        {
+            string sql = @"select Inc_ID, ic.Item_ID, Mean, USL, LSL, Item_Name from InspectCriteria ic
+inner join Item i on i.Item_ID = ic.Item_ID
+where ic.Item_ID = @Item_ID";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Item_ID", itemid);
+                return Helper.DataReaderMapToList<InspectCriteriaVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<InspectVO> SearchInspectData(string fromdate, string todate, int ROid, string status, string result)
+        {
+            string status_code;
+            if (status == "입고대기중")
+            {
+                status_code = "RO_02";
+            }
+            else if (status == "검사완료")
+            {
+                status_code = "RO_03";
+            }
+            else 
+            {
+                status_code = "";
+            }
+
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append(@"select iw.ins_id, i.Item_Name, ins_cnt, iw.ins_id, insp_noCnt, insp_result ,insp_date, insp_user, iw.Ro_id, ins_date from InstockWait iw
+left outer join Inspect ip on ip.ins_id = iw.ins_id
+inner join RestockOrder ro on ro.RO_ID = iw.Ro_id
+inner join item i on i.Item_ID = ro.itemid");
+
+                if (ROid != 0)
+                {
+                    sb.Append(" and Ro_id == @Ro_id");
+                    cmd.Parameters.AddWithValue("@RO_id", ROid);
+                }
+                if (status != "선택")
+                {
+                    sb.Append(" and ro.Ro_Status == @Ro_Status");
+                    cmd.Parameters.AddWithValue("@Ro_Status", status_code);
+                }
+                if (result != "선택")
+                {
+                    sb.Append(" and insp_result == @insp_result");
+                    cmd.Parameters.AddWithValue("@insp_result", result);
+                }
+
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+
+                cmd.Parameters.AddWithValue("@fromdate", fromdate);
+                cmd.Parameters.AddWithValue("@todate", todate);
+                return Helper.DataReaderMapToList<InspectVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public bool InsertInspectData(int ins_id, int insp_noCnt, string insp_result, string insp_user, int roid)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction trans = conn.BeginTransaction();
+                cmd.Connection = conn;  
+                cmd.Transaction = trans;
+
+                try
+                {
+                    cmd.CommandText = "insert inspect (ins_id, insp_noCnt, insp_result, insp_user) values (@ins_id, @insp_noCnt, @insp_result, @insp_user)";
+                    cmd.Parameters.AddWithValue("@ins_id", ins_id);
+                    cmd.Parameters.AddWithValue("@insp_noCnt", insp_noCnt);
+                    cmd.Parameters.AddWithValue("@insp_result", insp_result);
+                    if (insp_user != null)
+                    {
+                        cmd.Parameters.AddWithValue("@insp_user", insp_user); 
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@insp_user", DBNull.Value);
+                    }
+                    cmd.ExecuteNonQuery();
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "update RestockOrder set RO_Status = @RO_Status where RO_ID = @RO_ID";
+                    cmd.Parameters.AddWithValue("@RO_Status", "RO_03");
+                    cmd.Parameters.AddWithValue("@RO_ID", roid);
+
+                    cmd.ExecuteNonQuery();
+
+                    trans.Commit();
+                    Dispose();
+                    return true;
+                }
+                catch (Exception err)
+                {
+                    Debug.WriteLine(err.Message);
+                    trans.Rollback();
+                    Dispose();
+                    return false;
+                }
+
+
+
             }
         }
 

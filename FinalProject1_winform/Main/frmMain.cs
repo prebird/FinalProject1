@@ -111,7 +111,7 @@ namespace FinalProject1_winform
             }
         }
 
-        private void OpenCreateForm(string prgName)
+        public void OpenCreateForm(string prgName)
         {
             //문자열로부터 클래스명을 얻고 싶을때 => Type
             string appName = Assembly.GetEntryAssembly().GetName().Name;
