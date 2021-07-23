@@ -39,23 +39,23 @@ namespace FinalProject1_DAC
 
         public DataTable GetSpecialPlanList(string fromDate, string toDate, string ItemName, string EquipmentName, string planID)
         {
-            string sql = @"DECLARE @v_date		varchar(MAX),
-             @QRY varchar(MAX)
+            string sql = @"DECLARE @v_date		nvarchar(MAX),
+             @QRY nvarchar(MAX)
 
 ;
 
             WITH Dates
 
     AS(
-        select ''@fromDate'' as CalDate
+        select @fromDate as CalDate
 
         union all
 
-        select convert(varchar(10), DATEADD(day, 1, CalDate), 23) CalDate
+        select convert(nvarchar(10), DATEADD(day, 1, CalDate), 23) CalDate
 
         from Dates
 
-        where CalDate < ''@toDate''
+        where CalDate < @toDate 
 
     )
 select distinct @v_date = STUFF((SELECT ',' + '[' + CalDate + ']' FROM Dates FOR XML PATH('')), 1, 1, '') FROM Dates
