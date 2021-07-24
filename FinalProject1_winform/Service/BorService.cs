@@ -36,5 +36,14 @@ namespace FinalProject1_winform.Service
 
             return result;
         }
+
+        public BORVO GetSpecialBOR(string processName, string EquipmentName, string itemName)
+        {
+            BORDAC dac = new BORDAC();
+            BORVO item = dac.GetSpecialBOR(processName, EquipmentName, itemName);
+            dac.Dispose();
+
+            return item;
+        }
     }
 }

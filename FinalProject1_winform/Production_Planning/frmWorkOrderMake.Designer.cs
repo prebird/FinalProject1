@@ -204,6 +204,7 @@ namespace FinalProject1_winform
             this.btnMake.Text = "작업지시확정";
             this.btnMake.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMake.UseVisualStyleBackColor = false;
+            this.btnMake.Click += new System.EventHandler(this.btnMake_Click);
             // 
             // btnDelete
             // 

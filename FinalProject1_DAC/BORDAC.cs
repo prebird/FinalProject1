@@ -73,5 +73,25 @@ namespace FinalProject1_DAC
                 return (affectRow > 0);
             }
         }
+
+        public BORVO GetSpecialBOR(string processName, string EquipmentName, string itemName)
+        {
+            string sql = @"select B.ProcessID, B.EquipmentID, BORID
+                           from BOR B inner join ProcessInfo P on B.ProcessID = P.ProcessID
+		                              inner join Equipment E  on B.EquipmentID = E.EquipmentID
+		                              inner join Item I on B.ItemID = I.Item_ID
+                           where ProcessName = @ProcessName and EquipmentName = @EquipmentName and Item_Name = @Item_Name";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@ProcessName", processName);
+                cmd.Parameters.AddWithValue("@EquipmentName", EquipmentName);
+                cmd.Parameters.AddWithValue("@Item_Name", itemName);
+
+                List<BORVO> list = Helper.DataReaderMapToList<BORVO>(cmd.ExecuteReader());
+
+                return list[0];
+            }
+        }
     }
 }

@@ -234,6 +234,12 @@
     <Compile Include="Controls\OvalPictureBox.Designer.cs">
       <DependentUpon>OvalPictureBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production_Planning\frmWorkDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning\frmWorkDate.Designer.cs">
+      <DependentUpon>frmWorkDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchasing\XtraReport2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -733,6 +739,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Process\frmProcessList.resx">
       <DependentUpon>frmProcessList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning\frmWorkDate.resx">
+      <DependentUpon>frmWorkDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_Planning\frmWorkOrderDone.resx">
       <DependentUpon>frmWorkOrderDone.cs</DependentUpon>

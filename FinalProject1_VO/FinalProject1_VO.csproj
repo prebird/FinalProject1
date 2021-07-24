@@ -73,6 +73,7 @@
     <Compile Include="SalesMasterVO.cs" />
     <Compile Include="ShiftVO.cs" />
     <Compile Include="UserInfoVO.cs" />
+    <Compile Include="WorkOrderVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

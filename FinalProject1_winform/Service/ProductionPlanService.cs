@@ -34,5 +34,21 @@ namespace FinalProject1_winform
             dac.Dispose();
             return list;
         }
+
+        public bool InsertWorkOrder(WorkOrderVO workOrder)
+        {
+            ProductPlanDAC dac = new ProductPlanDAC();
+            bool result = dac.InsertWorkOrder(workOrder);
+            dac.Dispose();
+            return result;
+        }
+
+        public List<UserInfoVO> GetAllUser()
+        {
+            UserInfoDAC dac = new UserInfoDAC();
+            List<UserInfoVO> list = dac.GetAllUser();
+            dac.Dispose();
+            return list;
+        }
     }
 }

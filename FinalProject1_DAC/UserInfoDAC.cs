@@ -209,5 +209,15 @@ values(@user_id, @user_pwd, @user_name, @user_Category, @user_depart_id, @user_e
 
             }
         }
+
+        public List<UserInfoVO> GetAllUser()
+        {
+            string sql = "select user_id, user_name from Userinfo";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                return Helper.DataReaderMapToList<UserInfoVO>(cmd.ExecuteReader());
+            }
+        }
     }
 }

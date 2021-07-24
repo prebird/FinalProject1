@@ -119,5 +119,24 @@ EXEC(@QRY)
                 return Helper.DataReaderMapToList<BORVO>(cmd.ExecuteReader());
             }
         }
+
+        public bool InsertWorkOrder(WorkOrderVO workOrder)
+        {
+            string sql = "insert into WorkOrder(WorkOrderID,PlanID,EmpID,WorkDate,BORID,Status) values(@WorkOrderID, @PlanID, @EmpID, @WorkDate, @BORID, @Status)";
+
+            using (SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@WorkOrderID", workOrder.WorkOrderID);
+                cmd.Parameters.AddWithValue("@PlanID", workOrder.PlanID);
+                cmd.Parameters.AddWithValue("@EmpID", workOrder.EmpID);
+                cmd.Parameters.AddWithValue("@WorkDate", workOrder.WorkDate);
+                cmd.Parameters.AddWithValue("@BORID", workOrder.BORID);
+                cmd.Parameters.AddWithValue("@Status", workOrder.Status);
+
+                int affectRow = cmd.ExecuteNonQuery();
+
+                return (affectRow > 0);
+            }
+        }
     }
 }
