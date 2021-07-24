@@ -538,7 +538,7 @@ namespace FinalProject1_winform
             this.btnAdd2.ForeColor = System.Drawing.Color.Black;
             this.btnAdd2.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd2.Image")));
             this.btnAdd2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd2.Location = new System.Drawing.Point(1280, 317);
+            this.btnAdd2.Location = new System.Drawing.Point(1280, 19);
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(60, 25);
             this.btnAdd2.TabIndex = 4;
@@ -557,7 +557,7 @@ namespace FinalProject1_winform
             this.btnDel2.ForeColor = System.Drawing.Color.Black;
             this.btnDel2.Image = ((System.Drawing.Image)(resources.GetObject("btnDel2.Image")));
             this.btnDel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel2.Location = new System.Drawing.Point(1412, 318);
+            this.btnDel2.Location = new System.Drawing.Point(1412, 20);
             this.btnDel2.Name = "btnDel2";
             this.btnDel2.Size = new System.Drawing.Size(60, 25);
             this.btnDel2.TabIndex = 4;
@@ -576,7 +576,7 @@ namespace FinalProject1_winform
             this.btnUpdate2.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate2.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate2.Image")));
             this.btnUpdate2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate2.Location = new System.Drawing.Point(1346, 318);
+            this.btnUpdate2.Location = new System.Drawing.Point(1346, 20);
             this.btnUpdate2.Name = "btnUpdate2";
             this.btnUpdate2.Size = new System.Drawing.Size(60, 25);
             this.btnUpdate2.TabIndex = 4;

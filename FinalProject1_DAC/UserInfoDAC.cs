@@ -40,7 +40,9 @@ namespace FinalProject1_DAC
 
         public UserInfoVO GetUserInfo(string UserID, string PWD)
         {
-            string sql = "select user_id, user_pwd, user_name, user_Category, user_birthday, user_depart_id, user_pic, authID, user_email from Userinfo where deleted = 0 and user_id = @UserID and user_pwd=@PWD";
+            string sql = @"select user_id, user_pwd, user_name, user_Category, user_birthday, user_depart_id, cc.common_name depart_name ,user_pic, authID, user_email from Userinfo u
+left outer join commoncode cc on cc.common_value = u.user_depart_id
+where deleted = 0 and user_id = @UserID and user_pwd=@PWD";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@UserID", UserID);

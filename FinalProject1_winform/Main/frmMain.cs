@@ -16,9 +16,13 @@ namespace FinalProject1_winform
     public partial class frmMain : Form
     {
         List<MenuVO> Menus;
-        public frmMain()
+        UserInfoVO user;
+
+        public frmMain(UserInfoVO user, Form loginform)
         {
             InitializeComponent();
+            this.user = user;
+            this.Tag = loginform;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -28,7 +32,27 @@ namespace FinalProject1_winform
             DrawDynamicMenu();
             HideSideMenu();
             SetEvent();
+
+            // 유저바인딩
+            if (user.user_pic != null)
+            {
+                picUser.ImageLocation = ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + user.user_pic;
+            }
+            else
+            {
+                picUser.ImageLocation = null;
+            }
+
+            lbluserName.Text = user.user_name + " 님";
+            lbluserTitle.Text = "부서 : " + user.depart_name;
+
         }
+
+        private void GetAuthByUserID()
+        {
+
+        }
+
 
         private void DrawDynamicMenu()
         {
@@ -347,6 +371,15 @@ namespace FinalProject1_winform
                     break;
                 }
             }
+        }
+
+        private void label_gudi1_Click(object sender, EventArgs e)
+        {
+            // 로그아웃 버튼
+            this.Close();
+            frmLogin frm = (frmLogin)this.Tag;
+            frm.Show();
+
         }
     }
 }

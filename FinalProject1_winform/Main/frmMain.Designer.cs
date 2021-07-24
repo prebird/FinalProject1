@@ -29,15 +29,32 @@ namespace FinalProject1_winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlUpSide = new System.Windows.Forms.Panel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.tabControl1 = new FinalProject1_winform.CustomTabControl();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.lbluserTitle = new FinalProject1_winform.Label_gudi();
+            this.lbluserName = new FinalProject1_winform.Label_gudi();
+            this.picUser = new FinalProject1_winform.OvalPictureBox();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
+            this.pnlUpSide.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUpSide
             // 
             this.pnlUpSide.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlUpSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlUpSide.Controls.Add(this.pictureBox_gudi2);
+            this.pnlUpSide.Controls.Add(this.label_gudi1);
+            this.pnlUpSide.Controls.Add(this.lbluserTitle);
+            this.pnlUpSide.Controls.Add(this.lbluserName);
+            this.pnlUpSide.Controls.Add(this.picUser);
+            this.pnlUpSide.Controls.Add(this.pictureBox_gudi1);
             this.pnlUpSide.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUpSide.Location = new System.Drawing.Point(0, 0);
             this.pnlUpSide.Margin = new System.Windows.Forms.Padding(4);
@@ -69,6 +86,66 @@ namespace FinalProject1_winform
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
+            // label_gudi1
+            // 
+            this.label_gudi1.AutoSize = true;
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.Location = new System.Drawing.Point(1460, 62);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(74, 23);
+            this.label_gudi1.TabIndex = 2;
+            this.label_gudi1.Text = "로그아웃";
+            this.label_gudi1.Click += new System.EventHandler(this.label_gudi1_Click);
+            // 
+            // lbluserTitle
+            // 
+            this.lbluserTitle.AutoSize = true;
+            this.lbluserTitle.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbluserTitle.Location = new System.Drawing.Point(1460, 39);
+            this.lbluserTitle.Name = "lbluserTitle";
+            this.lbluserTitle.Size = new System.Drawing.Size(58, 23);
+            this.lbluserTitle.TabIndex = 2;
+            this.lbluserTitle.Text = "ㅇㅇ부";
+            // 
+            // lbluserName
+            // 
+            this.lbluserName.AutoSize = true;
+            this.lbluserName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbluserName.Location = new System.Drawing.Point(1460, 12);
+            this.lbluserName.Name = "lbluserName";
+            this.lbluserName.Size = new System.Drawing.Size(58, 23);
+            this.lbluserName.TabIndex = 2;
+            this.lbluserName.Text = "ㅇㅇㅇ";
+            // 
+            // picUser
+            // 
+            this.picUser.BackColor = System.Drawing.Color.White;
+            this.picUser.Location = new System.Drawing.Point(1354, 3);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(100, 91);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 1;
+            this.picUser.TabStop = false;
+            // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(198, 99);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 0;
+            this.pictureBox_gudi1.TabStop = false;
+            // 
+            // pictureBox_gudi2
+            // 
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(1540, 25);
+            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
+            this.pictureBox_gudi2.Size = new System.Drawing.Size(69, 60);
+            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi2.TabIndex = 3;
+            this.pictureBox_gudi2.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -82,6 +159,11 @@ namespace FinalProject1_winform
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
+            this.pnlUpSide.ResumeLayout(false);
+            this.pnlUpSide.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -91,5 +173,11 @@ namespace FinalProject1_winform
         private System.Windows.Forms.Panel pnlUpSide;
         private System.Windows.Forms.Panel pnlSideBar;
         private CustomTabControl tabControl1;
+        private PictureBox_gudi pictureBox_gudi1;
+        private Label_gudi lbluserName;
+        private OvalPictureBox picUser;
+        private Label_gudi lbluserTitle;
+        private Label_gudi label_gudi1;
+        private PictureBox_gudi pictureBox_gudi2;
     }
 }
