@@ -30,16 +30,16 @@ namespace FinalProject1_POP
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PanelCildForm = new System.Windows.Forms.Panel();
             this.btnMachine = new System.Windows.Forms.Button();
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PanelCildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,6 +51,16 @@ namespace FinalProject1_POP
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1684, 156);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.수정됨_logo1___복사본;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -64,15 +74,6 @@ namespace FinalProject1_POP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 805);
             this.panel2.TabIndex = 1;
-            // 
-            // PanelCildForm
-            // 
-            this.PanelCildForm.BackColor = System.Drawing.Color.White;
-            this.PanelCildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCildForm.Location = new System.Drawing.Point(257, 156);
-            this.PanelCildForm.Name = "PanelCildForm";
-            this.PanelCildForm.Size = new System.Drawing.Size(1427, 805);
-            this.PanelCildForm.TabIndex = 2;
             // 
             // btnMachine
             // 
@@ -132,15 +133,14 @@ namespace FinalProject1_POP
             this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // pictureBox1
+            // PanelCildForm
             // 
-            this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.수정됨_logo1___복사본;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PanelCildForm.BackColor = System.Drawing.Color.White;
+            this.PanelCildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCildForm.Location = new System.Drawing.Point(257, 156);
+            this.PanelCildForm.Name = "PanelCildForm";
+            this.PanelCildForm.Size = new System.Drawing.Size(1427, 805);
+            this.PanelCildForm.TabIndex = 2;
             // 
             // POPMain
             // 
@@ -155,13 +155,13 @@ namespace FinalProject1_POP
             this.Name = "POPMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "생산실적관리";
+            this.Text = "(주)OKDOL COMPONY POP SYSTEM";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.POPMain_FormClosed);
             this.Load += new System.EventHandler(this.POPMain_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

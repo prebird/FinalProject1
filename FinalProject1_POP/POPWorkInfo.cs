@@ -57,12 +57,40 @@ namespace FinalProject1_POP
         private void LoadData()
         {
             POPService service = new POPService();
-            List<POPUserVO> WList = service.GetUserWork(User.user_id);
+            List<POPUserVO> WList = service.GetUserWork(User.user_id, DateTime.Now.ToString("yyyy-MM-dd"));
             dgv_WorkList.DataSource = WList;
             dgv_WorkList.ClearSelection();
             dgv_WorkList.Font = new Font("AppleSDGothicNeoB00", 18, FontStyle.Regular);
             dgv_WorkList.DefaultCellStyle.Font = new Font("AppleSDGothicNeoB00", 15, FontStyle.Regular);
 
+
+        }
+
+        private void dgv_WorkList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string workorderid = dgv_WorkList.SelectedRows[0].Cells[0].Value.ToString();
+            string workState = dgv_WorkList.SelectedRows[0].Cells[3].Value.ToString();
+            POPService service = new POPService();
+            if (workState == "작업계획")
+            {
+                List<POPWorkOrderVO> List = service.GetWorkOrder(workorderid);
+                txtWorkid.Text = List[0].WorkOrderID;
+                txtPlanid.Text = List[0].PlanID;
+                txtItemCode.Text = List[0].Item_code;
+                txtEName.Text = List[0].EquipmentName;
+                txtStart.Text = List[0].pd_stime;
+                txtEnd.Text = List[0].pd_etim;
+            }
+            else
+            {
+                List<POPWorkOrderVO> List = service.GetStartWork(workorderid);
+                txtWorkid.Text = List[0].WorkOrderID;
+                txtPlanid.Text = List[0].PlanID;
+                txtItemCode.Text = List[0].Item_code;
+                txtEName.Text = List[0].EquipmentName;
+                txtStart.Text = List[0].pd_stime;
+                txtEnd.Text = List[0].pd_etim;
+            }
 
         }
     }

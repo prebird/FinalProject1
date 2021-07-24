@@ -19,12 +19,12 @@ namespace FinalProject1_POP
             return list;
         }
 
-        public List<POPUserVO> GetUserWork(string userId)
+        public List<POPUserVO> GetUserWork(string userId, string workDate)
         {
             POPDAC dac = new POPDAC();
-            List<POPUserVO> list = dac.GetUserWork(userId);
+            List<POPUserVO> list = dac.GetUserWork(userId, workDate);
             dac.Dispose();
-
+            
             return list;
         }
 
@@ -45,6 +45,24 @@ namespace FinalProject1_POP
 
             return list;
         }
+
+        public List<POPWorkOrderVO> GetWorkOrder(string workOrderId)
+        {
+            POPDAC dac = new POPDAC();
+            List<POPWorkOrderVO> list = dac.GetWorkOrder(workOrderId);
+            dac.Dispose();
+            return list;
+        }
+
+        public List<POPWorkOrderVO> GetStartWork(string workOrderId)
+        {
+            POPDAC dac = new POPDAC();
+            List<POPWorkOrderVO> list = dac.GetStartWork(workOrderId);
+            dac.Dispose();
+            return list;
+        }
+
+
 
     }
 }
