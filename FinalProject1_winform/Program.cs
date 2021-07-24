@@ -1,4 +1,5 @@
-﻿using FinalProject1_winform.POP;
+﻿using FinalProject1_winform.Demand_Plan;
+using FinalProject1_winform.POP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace FinalProject1_winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin ());
+            Application.Run(new frmDemandPlan());
         }
     }
 }
