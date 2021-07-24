@@ -174,6 +174,12 @@
     <Compile Include="Demand_Plan\frmProductionPlanMake.Designer.cs">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAuthAddpop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuthAddpop.Designer.cs">
+      <DependentUpon>frmAuthAddpop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInspectAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,12 @@
     </Compile>
     <Compile Include="frmInstockWatiPopUp.Designer.cs">
       <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserInfo.cs">
       <SubType>Form</SubType>
@@ -215,6 +227,12 @@
     </Compile>
     <Compile Include="Item\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OvalPictureBox.Designer.cs">
+      <DependentUpon>OvalPictureBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchasing\XtraReport2.cs">
       <SubType>Component</SubType>
@@ -647,6 +665,9 @@
     <EmbeddedResource Include="Demand_Plan\frmProductionPlanMake.resx">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAuthAddpop.resx">
+      <DependentUpon>frmAuthAddpop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCommonCode.resx">
       <DependentUpon>frmCommonCode.cs</DependentUpon>
     </EmbeddedResource>
@@ -658,6 +679,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInstockWatiPopUp.resx">
       <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShift.resx">
       <DependentUpon>frmShift.cs</DependentUpon>
@@ -854,6 +878,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Up_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\수정됨_logo1 - 복사본.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Library\Microsoft.Office.Interop.Excel.dll" />

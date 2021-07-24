@@ -1937,6 +1937,9 @@
     <Content Include="Views\Note\Create.cshtml" />
     <Content Include="Views\Note\Edit.cshtml" />
     <Content Include="Views\Note\Delete.cshtml" />
+    <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

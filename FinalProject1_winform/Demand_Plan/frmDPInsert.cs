@@ -63,6 +63,7 @@ namespace FinalProject1_winform
                 {
                     PO_ID = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[0].Value),
                     PlanID = txt_PlanID.Text,
+                    ItemName = dgv_SalesMaster.SelectedRows[0].Cells[7].Value.ToString(),
                     Dplan_Date = dgv_SalesMaster.SelectedRows[0].Cells[11].Value.ToString(),
                     Dplan_Quantity = Convert.ToInt32(dgv_SalesMaster.SelectedRows[0].Cells[8].Value),
                 };

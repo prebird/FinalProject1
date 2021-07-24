@@ -21,6 +21,7 @@ namespace FinalProject1_winform
             return list;
         }
 
+        // 수요 계획 등록 + 영업 마스터의 플랜 번호 추가
         public bool DMInsertTrans(DemandPlanVO dmVO)
         {
             DemandPlanDAC dac = new DemandPlanDAC();
@@ -30,11 +31,11 @@ namespace FinalProject1_winform
             return result;
         }
 
+        // 수요 계획 조회
         public DataTable GetDemandPlanList(DemandPlanVO dmVO)
         {
             DemandPlanDAC dac = new DemandPlanDAC();
             return dac.GetDemandPlanList(dmVO);
         }
-
     }
 }

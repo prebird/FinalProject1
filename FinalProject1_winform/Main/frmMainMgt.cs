@@ -176,8 +176,13 @@ namespace FinalProject1_winform
             }
             treeView1.ExpandAll();
         }
+
         #endregion
 
-
+        private void btnAuthAdd_Click(object sender, EventArgs e)
+        {
+            frmAuthAddpop frm = new frmAuthAddpop();
+            frm.ShowDialog();
+        }
     }
 }

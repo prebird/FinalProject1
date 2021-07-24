@@ -1,4 +1,5 @@
 ﻿using FinalProject1_VO;
+using FinalProject1_winform.Demand_Plan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,18 +22,14 @@ namespace FinalProject1_winform
         {
             CommonUtil.ComboBindingPlanID(cbo_PlanID);
 
-            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "수요 계획 PlanID", "Planid", DataGridViewContentAlignment.MiddleCenter, colWidth : 150);
-            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목 번호", "itemid", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목명", "Item_Name", DataGridViewContentAlignment.MiddleCenter);
+            // 그리드뷰 수동 설정 셋팅
+            dgv_DemandPlan.AllowUserToAddRows = false;
+            dgv_DemandPlan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            
-        }
-
-        // 삭제 (구현 X)
-        private void btn_Delete_Click(object sender, EventArgs e)
-        {
-
-
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "수요계획 번호", "Dplan_ID", DataGridViewContentAlignment.MiddleCenter, colWidth : 130);
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "PlanID", "PlanID", DataGridViewContentAlignment.MiddleCenter, colWidth: 135);
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목 번호", "Item_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목명", "ItemName", DataGridViewContentAlignment.MiddleCenter, colWidth: 135);
         }
 
         // 엑셀 출력 버튼 (구현 X)
@@ -62,7 +59,12 @@ namespace FinalProject1_winform
         // 생산 계획 생성
         private void btn_ProductionPlan_Click(object sender, EventArgs e)
         {
+            string planID = dgv_DemandPlan.SelectedRows[0].Cells[1].Value.ToString();
+            int itemID = Convert.ToInt32(dgv_DemandPlan.SelectedRows[0].Cells[2].Value);
+            string itemName = dgv_DemandPlan.SelectedRows[0].Cells[3].Value.ToString();
 
+            frmProductionPlanMake frm = new frmProductionPlanMake(planID, itemID, itemName);
+            frm.ShowDialog();
 
 
 
