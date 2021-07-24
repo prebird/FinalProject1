@@ -8,6 +8,7 @@ namespace FinalProject1_VO
 {
     public class ProcessVO
     {
+        public int ProcessID { get; set; }
         public string ProcessCode { get; set; }
         public string ProcessName { get; set; }
         public string IsActive { get; set; }

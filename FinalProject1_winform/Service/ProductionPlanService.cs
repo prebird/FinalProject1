@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FinalProject1_DAC;
+using FinalProject1_VO;
 
 namespace FinalProject1_winform
 {
@@ -24,6 +25,14 @@ namespace FinalProject1_winform
             DataTable dt = dac.GetSpecialPlanList(fromDate, toDate, ItemName, EquipmentName, planID);
             dac.Dispose();
             return dt;
+        }
+
+        public List<BORVO> GetBORInfo(int itemID)
+        {
+            ProductPlanDAC dac = new ProductPlanDAC();
+            List<BORVO> list = dac.GetBORInfo(itemID);
+            dac.Dispose();
+            return list;
         }
     }
 }
