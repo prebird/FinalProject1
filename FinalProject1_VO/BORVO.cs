@@ -25,5 +25,6 @@ namespace FinalProject1_VO
         public string INS_EMP { get; set; }
         public string INS_DATE { get; set; }
         public string Remark { get; set; }
+        public int PriorDate { get; set; }
     }
 }

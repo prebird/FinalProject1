@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject1_VO;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -101,6 +102,22 @@ EXEC(@QRY)
             da.Fill(dt);
 
             return dt;
+        }
+
+        public List<BORVO> GetBORInfo(int itemID)
+        {
+            string sql = @"select Item_Name, B.EquipmentID, EquipmentName, B.ProcessID, ProcessName, PriorDate
+                           from BOR B inner join Item I on B.ItemID = I.Item_ID
+                                      inner join ProcessInfo P on B.ProcessID = P.ProcessID
+                                      inner join Equipment E on B.EquipmentID = E.EquipmentID
+                                      where B.ItemID = @ItemID order by B.Priority";
+
+            using(SqlCommand cmd = new SqlCommand(sql,conn))
+            {
+                cmd.Parameters.AddWithValue("@ItemID", itemID);
+
+                return Helper.DataReaderMapToList<BORVO>(cmd.ExecuteReader());
+            }
         }
     }
 }
