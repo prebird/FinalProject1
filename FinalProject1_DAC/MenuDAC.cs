@@ -5,6 +5,7 @@ using System.Text;
 using System.Configuration;
 using System.Data.SqlClient;
 using FinalProject1_VO;
+using System.Data;
 
 namespace FinalProject1_DAC
 {
@@ -22,6 +23,63 @@ namespace FinalProject1_DAC
             conn.Close();
         }
 
+        
+
+        public DataTable GetMenuList()
+        {
+
+            string sql = @"select MenuID, MenuName, MenuLevel, refMenuID, ProgramName, menu_uadmin, menu_udate, menu_Img, sortorder  from Menu order by sortorder";
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
+        public DataTable GetAuthList()
+        {
+            string sql = "select AuthID, AuthName from Authority order by AuthID";
+
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
+        public DataTable GetMenuAuthList()
+        {
+            string sql = "select MenuAuthID, MenuID, m.AuthID, AuthName from MenuAuth m inner join Authority a on m.AuthID = a.AuthID order by MenuID, AuthID";
+
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
+        public bool SaveMenuAuth(int menu_id, List<int> authList)
+        {
+            string authStr = string.Join(",", authList);
+            string sql = @"delete from MenuAuth where MenuID = @MenuID;
+                                insert into MenuAuth (MenuID, AuthID)
+                                select @MenuID, item from dbo.SplitString(@auths, ',')";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@menu_id", menu_id);
+                cmd.Parameters.AddWithValue("@auths", authStr);
+                conn.Open();
+                int icnt = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                return (icnt > 0);
+            }
+        }
+
         public bool insertBigMenu(MenuVO menu)
         {
             string sql = @"insert into Menu (MenuName, MenuLevel, menu_uadmin, menu_udate, menu_Img) 
@@ -34,7 +92,7 @@ values (@MenuName, @MenuLevel, @menu_uadmin, @menu_udate, @menu_Img)";
                 cmd.Parameters.AddWithValue("@menu_udate", menu.menu_udate);
                 if (menu.menu_Img != null)
                 {
-                    cmd.Parameters.AddWithValue("@menu_Img", menu.menu_Img); 
+                    cmd.Parameters.AddWithValue("@menu_Img", menu.menu_Img);
                 }
                 else
                 {

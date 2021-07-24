@@ -32,16 +32,20 @@ namespace FinalProject1_POP
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanelCildForm = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMachine = new System.Windows.Forms.Button();
+            this.btnFactory = new System.Windows.Forms.Button();
+            this.btnWork = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -51,10 +55,10 @@ namespace FinalProject1_POP
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnMachine);
+            this.panel2.Controls.Add(this.btnFactory);
+            this.panel2.Controls.Add(this.btnWork);
+            this.panel2.Controls.Add(this.btnUser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 156);
             this.panel2.Name = "panel2";
@@ -70,61 +74,73 @@ namespace FinalProject1_POP
             this.PanelCildForm.Size = new System.Drawing.Size(1427, 805);
             this.PanelCildForm.TabIndex = 2;
             // 
-            // button1
+            // btnMachine
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Image = global::FinalProject1_POP.Properties.Resources.user128x;
-            this.button1.Location = new System.Drawing.Point(3, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 131);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "유저관리";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMachine.BackColor = System.Drawing.Color.White;
+            this.btnMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMachine.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMachine.Image = global::FinalProject1_POP.Properties.Resources.engineer128x;
+            this.btnMachine.Location = new System.Drawing.Point(3, 412);
+            this.btnMachine.Name = "btnMachine";
+            this.btnMachine.Size = new System.Drawing.Size(248, 131);
+            this.btnMachine.TabIndex = 3;
+            this.btnMachine.Text = "공정관리";
+            this.btnMachine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMachine.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnFactory
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Image = global::FinalProject1_POP.Properties.Resources.pie_chart128x;
-            this.button2.Location = new System.Drawing.Point(3, 140);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(248, 131);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "작업관리";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFactory.BackColor = System.Drawing.Color.White;
+            this.btnFactory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactory.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnFactory.Image = global::FinalProject1_POP.Properties.Resources.factory128x;
+            this.btnFactory.Location = new System.Drawing.Point(3, 276);
+            this.btnFactory.Name = "btnFactory";
+            this.btnFactory.Size = new System.Drawing.Size(248, 131);
+            this.btnFactory.TabIndex = 2;
+            this.btnFactory.Text = "장비관리";
+            this.btnFactory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFactory.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnWork
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Image = global::FinalProject1_POP.Properties.Resources.factory128x;
-            this.button3.Location = new System.Drawing.Point(3, 276);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(248, 131);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "장비관리";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnWork.BackColor = System.Drawing.Color.White;
+            this.btnWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWork.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnWork.Image = global::FinalProject1_POP.Properties.Resources.pie_chart128x;
+            this.btnWork.Location = new System.Drawing.Point(3, 140);
+            this.btnWork.Name = "btnWork";
+            this.btnWork.Size = new System.Drawing.Size(248, 131);
+            this.btnWork.TabIndex = 1;
+            this.btnWork.Text = "작업관리";
+            this.btnWork.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnWork.UseVisualStyleBackColor = false;
+            this.btnWork.Click += new System.EventHandler(this.btnWork_Click);
             // 
-            // button4
+            // btnUser
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Image = global::FinalProject1_POP.Properties.Resources.engineer128x;
-            this.button4.Location = new System.Drawing.Point(3, 412);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(248, 131);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "공정관리";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnUser.BackColor = System.Drawing.Color.White;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUser.Image = global::FinalProject1_POP.Properties.Resources.user128x;
+            this.btnUser.Location = new System.Drawing.Point(3, 6);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(248, 131);
+            this.btnUser.TabIndex = 0;
+            this.btnUser.Text = "유저관리";
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.수정됨_logo1___복사본;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // POPMain
             // 
@@ -134,10 +150,18 @@ namespace FinalProject1_POP
             this.Controls.Add(this.PanelCildForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MinimizeBox = false;
             this.Name = "POPMain";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "생산실적관리";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.POPMain_FormClosed);
             this.Load += new System.EventHandler(this.POPMain_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,9 +171,10 @@ namespace FinalProject1_POP
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel PanelCildForm;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMachine;
+        private System.Windows.Forms.Button btnFactory;
+        private System.Windows.Forms.Button btnWork;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

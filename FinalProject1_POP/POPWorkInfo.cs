@@ -1,0 +1,69 @@
+﻿using FinalProject1_VO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FinalProject1_POP
+{
+    public partial class POPWorkInfo : Form
+    {
+        POPVO User;
+        List<POPItemVO> Item;
+        List<POPProcessVO> Process;
+        public POPWorkInfo(POPVO user)
+        {
+            InitializeComponent();
+            User = user;
+        }
+
+        private void POPWorkInfo_Load(object sender, EventArgs e)
+        {
+            dtpWorkDate.Value = DateTime.Now;
+
+            POPService service = new POPService();
+            Item = service.GetItemInfo();
+            POPItemVO iBlank = new POPItemVO();
+            iBlank.Item_ID = 0;
+            iBlank.Item_Name = "전체";
+            Item.Insert(0, iBlank);
+
+            POPService service2 = new POPService();
+            Process = service2.GetProcessInfo();
+            POPProcessVO pBlank = new POPProcessVO();
+            pBlank.ProcessID = 0;
+            pBlank.ProcessName = "전체";
+            Process.Insert(0, pBlank);
+           
+            CommonUtil.ComboBinding<POPItemVO>(cboItem, Item, "Item_Name", "Item_id");
+            CommonUtil.ComboBinding<POPProcessVO>(cboProcess, Process, "ProcessName", "ProcessID");
+
+
+            CommonUtil.SetInitGridView(dgv_WorkList);
+                  
+            CommonUtil.AddGridTextColumn(dgv_WorkList, "작업지시번호", "WorkOrderID", DataGridViewContentAlignment.MiddleCenter, colWidth: 500);
+            CommonUtil.AddGridTextColumn(dgv_WorkList, "품목", "Item_Code", DataGridViewContentAlignment.MiddleCenter, colWidth: 500);
+            CommonUtil.AddGridTextColumn(dgv_WorkList, "계획수량", "OrderQuantity", DataGridViewContentAlignment.MiddleCenter, colWidth: 300);
+            CommonUtil.AddGridTextColumn(dgv_WorkList, "작업지시상태", "Status", DataGridViewContentAlignment.MiddleCenter, colWidth: 350);
+
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            POPService service = new POPService();
+            List<POPUserVO> WList = service.GetUserWork(User.user_id);
+            dgv_WorkList.DataSource = WList;
+            dgv_WorkList.ClearSelection();
+            dgv_WorkList.Font = new Font("AppleSDGothicNeoB00", 18, FontStyle.Regular);
+            dgv_WorkList.DefaultCellStyle.Font = new Font("AppleSDGothicNeoB00", 15, FontStyle.Regular);
+
+
+        }
+    }
+}

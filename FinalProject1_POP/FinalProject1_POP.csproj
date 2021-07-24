@@ -93,6 +93,18 @@
       <DependentUpon>POPMain.cs</DependentUpon>
     </Compile>
     <Compile Include="POPService.cs" />
+    <Compile Include="POPUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POPUser.Designer.cs">
+      <DependentUpon>POPUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POPWorkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POPWorkInfo.Designer.cs">
+      <DependentUpon>POPWorkInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
@@ -109,6 +121,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="POPMain.resx">
       <DependentUpon>POPMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POPUser.resx">
+      <DependentUpon>POPUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POPWorkInfo.resx">
+      <DependentUpon>POPWorkInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +222,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\user128x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\수정됨_logo1 - 복사본.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Image\groupx512.png">
