@@ -54,5 +54,33 @@ namespace FinalProject1_DAC
             }
         }
 
+        //공정 조회
+
+        public List<POPProcessVO> GetProcessInfo()
+        {
+            string sql = @"select ProcessID, ProcessCode, ProcessName
+                                    from ProcessInfo";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                
+                return Helper.DataReaderMapToList<POPProcessVO>(cmd.ExecuteReader());
+            }
+        }
+
+        public List<POPItemVO> GetItemInfo()
+        {
+            string sql = @"select Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY
+                                    from Item
+                                    where Item_Category in('완제품','반제품')";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                return Helper.DataReaderMapToList<POPItemVO>(cmd.ExecuteReader());
+            }
+        }
     }
+
+    
 }

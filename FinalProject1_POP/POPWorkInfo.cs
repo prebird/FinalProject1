@@ -14,6 +14,8 @@ namespace FinalProject1_POP
     public partial class POPWorkInfo : Form
     {
         POPVO User;
+        List<POPItemVO> Item;
+        List<POPProcessVO> Process;
         public POPWorkInfo(POPVO user)
         {
             InitializeComponent();
@@ -22,11 +24,28 @@ namespace FinalProject1_POP
 
         private void POPWorkInfo_Load(object sender, EventArgs e)
         {
+            dtpWorkDate.Value = DateTime.Now;
+
+            POPService service = new POPService();
+            Item = service.GetItemInfo();
+            POPItemVO iBlank = new POPItemVO();
+            iBlank.Item_ID = 0;
+            iBlank.Item_Name = "전체";
+            Item.Insert(0, iBlank);
+
+            POPService service2 = new POPService();
+            Process = service2.GetProcessInfo();
+            POPProcessVO pBlank = new POPProcessVO();
+            pBlank.ProcessID = 0;
+            pBlank.ProcessName = "전체";
+            Process.Insert(0, pBlank);
+           
+            CommonUtil.ComboBinding<POPItemVO>(cboItem, Item, "Item_Name", "Item_id");
+            CommonUtil.ComboBinding<POPProcessVO>(cboProcess, Process, "ProcessName", "ProcessID");
+
 
             CommonUtil.SetInitGridView(dgv_WorkList);
-            
-
-        
+                  
             CommonUtil.AddGridTextColumn(dgv_WorkList, "작업지시번호", "WorkOrderID", DataGridViewContentAlignment.MiddleCenter, colWidth: 500);
             CommonUtil.AddGridTextColumn(dgv_WorkList, "품목", "Item_Code", DataGridViewContentAlignment.MiddleCenter, colWidth: 500);
             CommonUtil.AddGridTextColumn(dgv_WorkList, "계획수량", "OrderQuantity", DataGridViewContentAlignment.MiddleCenter, colWidth: 300);
