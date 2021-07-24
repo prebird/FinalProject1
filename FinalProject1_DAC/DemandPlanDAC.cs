@@ -51,6 +51,7 @@ namespace FinalProject1_DAC
 
                 cmd.Parameters.AddWithValue("@PO_ID", dmVO.PO_ID);
                 cmd.Parameters.AddWithValue("@PlanID", dmVO.PlanID);
+                cmd.Parameters.AddWithValue("@ItemName", dmVO.ItemName);
                 cmd.Parameters.AddWithValue("@Dplan_Date", dmVO.Dplan_Date);
                 cmd.Parameters.AddWithValue("@Dplan_Quantity", dmVO.Dplan_Quantity);
 
@@ -61,7 +62,7 @@ namespace FinalProject1_DAC
 
         public DataTable GetDemandPlanList(DemandPlanVO dmVO)
         {
-            string sql = "SP_DemandPlanList";
+            string sql = "SP_NewDemandPlan";
             DataTable dt = new DataTable();
 
             using (SqlConnection conn = new SqlConnection(strConn))
@@ -70,8 +71,8 @@ namespace FinalProject1_DAC
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                 da.SelectCommand.Parameters.AddWithValue("@PlanID", dmVO.PlanID);
-                da.SelectCommand.Parameters.AddWithValue("@StartDate", dmVO.StartDate);
-                da.SelectCommand.Parameters.AddWithValue("@EndDate", dmVO.EndDate);
+                da.SelectCommand.Parameters.AddWithValue("@P_StartDT", dmVO.StartDate);
+                da.SelectCommand.Parameters.AddWithValue("@P_EndDT", dmVO.EndDate);
 
                 da.Fill(dt);
             }

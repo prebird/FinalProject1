@@ -21,9 +21,9 @@ namespace FinalProject1_winform
         {
             CommonUtil.ComboBindingPlanID(cbo_PlanID);
 
-            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "수요 계획 PlanID", "Planid", DataGridViewContentAlignment.MiddleCenter, colWidth : 150);
-            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목 번호", "itemid", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목명", "Item_Name", DataGridViewContentAlignment.MiddleCenter);
+            //CommonUtil.AddGridTextColumn(dgv_DemandPlan, "수요 계획 PlanID", "Planid", DataGridViewContentAlignment.MiddleCenter, colWidth : 150);
+            //CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목 번호", "itemid", DataGridViewContentAlignment.MiddleCenter);
+            //CommonUtil.AddGridTextColumn(dgv_DemandPlan, "품목명", "Item_Name", DataGridViewContentAlignment.MiddleCenter);
 
             
         }
