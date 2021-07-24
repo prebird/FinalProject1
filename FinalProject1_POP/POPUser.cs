@@ -44,7 +44,7 @@ namespace FinalProject1_POP
         private void LoadData()
         {
             POPService service = new POPService();
-            List<POPUserVO> WList = service.GetUserWork(User.user_id);
+            List<POPUserVO> WList = service.GetUserWork(User.user_id, DateTime.Now.ToString("yyyy-MM-dd"));
             dgv_workList.DataSource = WList;
             dgv_workList.ClearSelection();
         }

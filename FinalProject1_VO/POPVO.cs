@@ -25,6 +25,7 @@ namespace FinalProject1_VO
     {
         public string WorkOrderID { get; set; }
         public string Item_Code { get; set; }
+        public string WorkDate { get; set; }
         public string Status { get; set; }
         public int OrderQuantity { get; set; }
 
@@ -45,5 +46,16 @@ namespace FinalProject1_VO
         public string Item_Code { get; set; }
         public string Item_Name { get; set; }
         public int Item_UnitQTY { get; set; }
+    }
+
+    public class POPWorkOrderVO
+    {
+        public string  WorkOrderID { get; set; }
+        public string  PlanID { get; set; }
+        public string  Item_code { get; set; }
+        public string  EquipmentName { get; set; }
+        public string  pd_stime { get; set; }
+        public string  pd_etim { get; set; }
+
     }
 }

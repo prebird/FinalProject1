@@ -50,12 +50,12 @@ namespace FinalProject1_POP
             this.label_gudi13 = new FinalProject1_winform.Label_gudi();
             this.label_gudi12 = new FinalProject1_winform.Label_gudi();
             this.label_gudi11 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi4 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi5 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi6 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi3 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi2 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtEnd = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtStart = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtEName = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtItemCode = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtPlanid = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtWorkid = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi8 = new FinalProject1_winform.Label_gudi();
             this.label_gudi9 = new FinalProject1_winform.Label_gudi();
             this.label_gudi10 = new FinalProject1_winform.Label_gudi();
@@ -137,12 +137,12 @@ namespace FinalProject1_POP
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox_gudi4);
-            this.groupBox2.Controls.Add(this.textBox_gudi5);
-            this.groupBox2.Controls.Add(this.textBox_gudi6);
-            this.groupBox2.Controls.Add(this.textBox_gudi3);
-            this.groupBox2.Controls.Add(this.textBox_gudi2);
-            this.groupBox2.Controls.Add(this.textBox_gudi1);
+            this.groupBox2.Controls.Add(this.txtEnd);
+            this.groupBox2.Controls.Add(this.txtStart);
+            this.groupBox2.Controls.Add(this.txtEName);
+            this.groupBox2.Controls.Add(this.txtItemCode);
+            this.groupBox2.Controls.Add(this.txtPlanid);
+            this.groupBox2.Controls.Add(this.txtWorkid);
             this.groupBox2.Controls.Add(this.label_gudi8);
             this.groupBox2.Controls.Add(this.label_gudi9);
             this.groupBox2.Controls.Add(this.label_gudi10);
@@ -205,6 +205,7 @@ namespace FinalProject1_POP
             this.dgv_WorkList.RowTemplate.Height = 23;
             this.dgv_WorkList.Size = new System.Drawing.Size(1620, 362);
             this.dgv_WorkList.TabIndex = 85;
+            this.dgv_WorkList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkList_CellClick);
             // 
             // textBox_gudi11
             // 
@@ -214,6 +215,7 @@ namespace FinalProject1_POP
             this.textBox_gudi11.Name = "textBox_gudi11";
             this.textBox_gudi11.Size = new System.Drawing.Size(207, 45);
             this.textBox_gudi11.TabIndex = 41;
+            this.textBox_gudi11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox_gudi10
             // 
@@ -223,6 +225,7 @@ namespace FinalProject1_POP
             this.textBox_gudi10.Name = "textBox_gudi10";
             this.textBox_gudi10.Size = new System.Drawing.Size(207, 45);
             this.textBox_gudi10.TabIndex = 40;
+            this.textBox_gudi10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox_gudi9
             // 
@@ -232,6 +235,7 @@ namespace FinalProject1_POP
             this.textBox_gudi9.Name = "textBox_gudi9";
             this.textBox_gudi9.Size = new System.Drawing.Size(207, 45);
             this.textBox_gudi9.TabIndex = 39;
+            this.textBox_gudi9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox_gudi8
             // 
@@ -241,6 +245,7 @@ namespace FinalProject1_POP
             this.textBox_gudi8.Name = "textBox_gudi8";
             this.textBox_gudi8.Size = new System.Drawing.Size(207, 45);
             this.textBox_gudi8.TabIndex = 38;
+            this.textBox_gudi8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox_gudi7
             // 
@@ -250,6 +255,7 @@ namespace FinalProject1_POP
             this.textBox_gudi7.Name = "textBox_gudi7";
             this.textBox_gudi7.Size = new System.Drawing.Size(207, 45);
             this.textBox_gudi7.TabIndex = 32;
+            this.textBox_gudi7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label_gudi15
             // 
@@ -301,59 +307,65 @@ namespace FinalProject1_POP
             this.label_gudi11.TabIndex = 33;
             this.label_gudi11.Text = "지시 수량";
             // 
-            // textBox_gudi4
+            // txtEnd
             // 
-            this.textBox_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi4.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi4.Location = new System.Drawing.Point(317, 329);
-            this.textBox_gudi4.Name = "textBox_gudi4";
-            this.textBox_gudi4.Size = new System.Drawing.Size(295, 45);
-            this.textBox_gudi4.TabIndex = 19;
+            this.txtEnd.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtEnd.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtEnd.Location = new System.Drawing.Point(317, 329);
+            this.txtEnd.Name = "txtEnd";
+            this.txtEnd.Size = new System.Drawing.Size(295, 45);
+            this.txtEnd.TabIndex = 19;
+            this.txtEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox_gudi5
+            // txtStart
             // 
-            this.textBox_gudi5.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi5.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi5.Location = new System.Drawing.Point(317, 271);
-            this.textBox_gudi5.Name = "textBox_gudi5";
-            this.textBox_gudi5.Size = new System.Drawing.Size(295, 45);
-            this.textBox_gudi5.TabIndex = 18;
+            this.txtStart.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStart.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtStart.Location = new System.Drawing.Point(317, 271);
+            this.txtStart.Name = "txtStart";
+            this.txtStart.Size = new System.Drawing.Size(295, 45);
+            this.txtStart.TabIndex = 18;
+            this.txtStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox_gudi6
+            // txtEName
             // 
-            this.textBox_gudi6.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi6.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi6.Location = new System.Drawing.Point(317, 213);
-            this.textBox_gudi6.Name = "textBox_gudi6";
-            this.textBox_gudi6.Size = new System.Drawing.Size(294, 45);
-            this.textBox_gudi6.TabIndex = 17;
+            this.txtEName.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtEName.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtEName.Location = new System.Drawing.Point(317, 213);
+            this.txtEName.Name = "txtEName";
+            this.txtEName.Size = new System.Drawing.Size(294, 45);
+            this.txtEName.TabIndex = 17;
+            this.txtEName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox_gudi3
+            // txtItemCode
             // 
-            this.textBox_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi3.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi3.Location = new System.Drawing.Point(317, 155);
-            this.textBox_gudi3.Name = "textBox_gudi3";
-            this.textBox_gudi3.Size = new System.Drawing.Size(294, 45);
-            this.textBox_gudi3.TabIndex = 16;
+            this.txtItemCode.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtItemCode.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtItemCode.Location = new System.Drawing.Point(317, 155);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(294, 45);
+            this.txtItemCode.TabIndex = 16;
+            this.txtItemCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox_gudi2
+            // txtPlanid
             // 
-            this.textBox_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi2.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi2.Location = new System.Drawing.Point(317, 97);
-            this.textBox_gudi2.Name = "textBox_gudi2";
-            this.textBox_gudi2.Size = new System.Drawing.Size(295, 45);
-            this.textBox_gudi2.TabIndex = 15;
+            this.txtPlanid.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPlanid.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtPlanid.Location = new System.Drawing.Point(317, 97);
+            this.txtPlanid.Name = "txtPlanid";
+            this.txtPlanid.Size = new System.Drawing.Size(295, 45);
+            this.txtPlanid.TabIndex = 15;
+            this.txtPlanid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox_gudi1
+            // txtWorkid
             // 
-            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(317, 39);
-            this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.Size = new System.Drawing.Size(295, 45);
-            this.textBox_gudi1.TabIndex = 14;
+            this.txtWorkid.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWorkid.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtWorkid.Location = new System.Drawing.Point(317, 39);
+            this.txtWorkid.Name = "txtWorkid";
+            this.txtWorkid.Size = new System.Drawing.Size(295, 45);
+            this.txtWorkid.TabIndex = 14;
+            this.txtWorkid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_gudi8
             // 
@@ -432,6 +444,7 @@ namespace FinalProject1_POP
             // 
             // cboItem
             // 
+            this.cboItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboItem.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboItem.FormattingEnabled = true;
             this.cboItem.Location = new System.Drawing.Point(309, 234);
@@ -441,6 +454,7 @@ namespace FinalProject1_POP
             // 
             // cboProcess
             // 
+            this.cboProcess.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboProcess.FormattingEnabled = true;
             this.cboProcess.Location = new System.Drawing.Point(309, 147);
@@ -545,12 +559,12 @@ namespace FinalProject1_POP
         private FinalProject1_winform.Label_gudi label_gudi12;
         private FinalProject1_winform.Label_gudi label_gudi11;
         private System.Windows.Forms.GroupBox groupBox2;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi4;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi5;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi6;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi3;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi2;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi1;
+        private FinalProject1_winform.Controls.TextBox_gudi txtEnd;
+        private FinalProject1_winform.Controls.TextBox_gudi txtStart;
+        private FinalProject1_winform.Controls.TextBox_gudi txtEName;
+        private FinalProject1_winform.Controls.TextBox_gudi txtItemCode;
+        private FinalProject1_winform.Controls.TextBox_gudi txtPlanid;
+        private FinalProject1_winform.Controls.TextBox_gudi txtWorkid;
         private FinalProject1_winform.Label_gudi label_gudi8;
         private FinalProject1_winform.Label_gudi label_gudi9;
         private FinalProject1_winform.Label_gudi label_gudi10;
