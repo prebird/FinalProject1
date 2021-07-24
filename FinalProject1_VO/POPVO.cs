@@ -20,4 +20,13 @@ namespace FinalProject1_VO
       public int authID { get; set; }
       public string deleted { get; set; }
     }
+
+    public class POPUserVO
+    {
+        public string WorkOrderID { get; set; }
+        public string Item_Code { get; set; }
+        public string Status { get; set; }
+        public int OrderQuantity { get; set; }
+
+    }
 }

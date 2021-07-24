@@ -18,5 +18,14 @@ namespace FinalProject1_POP
 
             return list;
         }
+
+        public List<POPUserVO> GetUserWork(string userId)
+        {
+            POPDAC dac = new POPDAC();
+            List<POPUserVO> list = dac.GetUserWork(userId);           
+            dac.Dispose();
+
+            return list;
+        }
     }
 }

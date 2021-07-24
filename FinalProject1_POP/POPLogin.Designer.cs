@@ -40,7 +40,8 @@ namespace FinalProject1_POP
             // txtUserID
             // 
             this.txtUserID.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtUserID.Location = new System.Drawing.Point(123, 49);
+            this.txtUserID.Location = new System.Drawing.Point(123, 61);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(218, 34);
             this.txtUserID.TabIndex = 0;
@@ -49,7 +50,7 @@ namespace FinalProject1_POP
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(129, 12);
+            this.label1.Location = new System.Drawing.Point(129, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 25);
             this.label1.TabIndex = 2;
@@ -60,7 +61,7 @@ namespace FinalProject1_POP
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(121, 94);
+            this.label2.Location = new System.Drawing.Point(121, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(259, 19);
             this.label2.TabIndex = 3;
@@ -74,9 +75,10 @@ namespace FinalProject1_POP
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.Location = new System.Drawing.Point(357, 49);
+            this.btnOK.Location = new System.Drawing.Point(357, 61);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(102, 34);
+            this.btnOK.Size = new System.Drawing.Size(102, 42);
             this.btnOK.TabIndex = 8;
             this.btnOK.Text = "확인";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -85,28 +87,33 @@ namespace FinalProject1_POP
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.groupx5121;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 71);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // POPLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(473, 143);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(473, 179);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUserID);
+            this.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "POPLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "로그인";
+            this.Text = "OKDOLCOMPANY";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
