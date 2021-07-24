@@ -17,5 +17,13 @@ namespace FinalProject1_winform
             dac.Dispose();
             return dt;
         }
+
+        public DataTable GetSpecialPlanList(string fromDate, string toDate, string ItemName, string EquipmentName, string planID)
+        {
+            ProductPlanDAC dac = new ProductPlanDAC();
+            DataTable dt = dac.GetSpecialPlanList(fromDate, toDate, ItemName, EquipmentName, planID);
+            dac.Dispose();
+            return dt;
+        }
     }
 }

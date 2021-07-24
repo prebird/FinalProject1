@@ -30,7 +30,6 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv_Item, "안전재고량", "Item_SafetyQTY", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv_Item, "입고창고", "Item_InHouse", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "출고창고", "Item_OutHouse", DataGridViewContentAlignment.MiddleCenter);
-            CommonUtil.AddGridTextColumn(dgv_Item, "바코드", "Item_Barcode", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_Item, "이미지", "Item_img", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv_Item, "사용여부", "Item_YN", DataGridViewContentAlignment.MiddleCenter, colWidth: 85);
             CommonUtil.AddGridTextColumn(dgv_Item, "비고", "Item_Content");
@@ -110,6 +109,7 @@ namespace FinalProject1_winform
             }
         }
 
+        // 부분 조회
         private void btn_Search_Click(object sender, EventArgs e)
         {
             string itemCategory = cbo_ItemCategory.Text;
@@ -139,6 +139,13 @@ namespace FinalProject1_winform
                 }
 
             }
+        }
+
+        private void btn_Barcode_Click(object sender, EventArgs e)
+        {
+            frmBarcode frm = new frmBarcode();
+            frm.ShowDialog();
+
         }
     }
 }

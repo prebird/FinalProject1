@@ -40,15 +40,15 @@ namespace FinalProject1_winform
         //    return cmp;
         //}
 
-        //// 부분 조회 
-        //public List<SalesMasterVO> GetPartialItem(string itemCategory, string itemName, string yn) // 부분 인수
-        //{
-        //    SalesMasterDAC dac = new SalesMasterDAC();
-        //    List<SalesMasterVO> list = dac.GetPartialItem(itemCategory, itemName, yn); // 부분 인수
-        //    dac.Dispose();
+        // 부분 조회 
+        public List<SalesMasterVO> GetPartialSM(DateTime StartDate, DateTime EndDate, string companyName)
+        {
+            SalesMasterDAC dac = new SalesMasterDAC();
+            List<SalesMasterVO> list = dac.GetPartialSM(StartDate, EndDate, companyName); // 부분 인수
+            dac.Dispose();
 
-        //    return list;
-        //}
+            return list;
+        }
 
         public bool UpdateSM(SalesMasterVO smVO)
         {

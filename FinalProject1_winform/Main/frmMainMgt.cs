@@ -67,6 +67,7 @@ namespace FinalProject1_winform
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 // 폼 다시 로드 -> 
+                formLoad();
             }
         }
 
@@ -85,6 +86,7 @@ namespace FinalProject1_winform
             {
                 // 폼 다시 로드 -> 
                 formLoad();
+                
             }
         }
 
@@ -101,6 +103,9 @@ namespace FinalProject1_winform
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 // 폼 다시 로드 -> 
+                formLoad();
+                
+
             }
         }
 
@@ -118,6 +123,9 @@ namespace FinalProject1_winform
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 // 폼 다시 로드 -> 
+                formLoad();
+                int parentID = Convert.ToInt32(dgvUpMenu.SelectedRows[0].Cells[0].Value);
+                DownMenuLoad(parentID);
 
             }
         }

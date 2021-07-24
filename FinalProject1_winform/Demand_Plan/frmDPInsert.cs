@@ -24,7 +24,7 @@ namespace FinalProject1_winform
             CommonUtil.SetInitGridView(dgv_SalesMaster);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "일련 번호", "PO_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 95);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "WO ID", "PO_WorkOrderID", DataGridViewContentAlignment.MiddleCenter, colWidth: 115);
-            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획기준 버전", "PO_PlanID", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
+            CommonUtil.AddGridTextColumn(dgv_SalesMaster, "계획기준 번호", "PO_PlanID", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "업체명", "PO_CompanyName", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "납품처", "PO_CompanyType", DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgv_SalesMaster, "도착지", "PO_Destination", DataGridViewContentAlignment.MiddleCenter);

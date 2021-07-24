@@ -60,6 +60,7 @@ namespace FinalProject1_winform
             }
 
             DataBinding();
+
         }
 
         private void HeaderCheckBox_Clicked(object sender, EventArgs e)
@@ -75,11 +76,11 @@ namespace FinalProject1_winform
 
         private void cboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboBox.Text.Equals("대"))
-                txtQty.Text = "30";
-            else if (cboBox.Text.Equals("중"))
+            if (cboBox.Text.Equals("대량"))
+                txtQty.Text = "15";
+            else if (cboBox.Text.Equals("중량"))
                 txtQty.Text = "5";
-            else if (cboBox.Text.Equals("소"))
+            else if (cboBox.Text.Equals("단일"))
                 txtQty.Text = "1";
         }
 
