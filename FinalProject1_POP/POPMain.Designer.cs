@@ -31,17 +31,21 @@ namespace FinalProject1_POP
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelCildForm = new System.Windows.Forms.Panel();
             this.btnMachine = new System.Windows.Forms.Button();
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
-            this.PanelCildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -60,6 +64,15 @@ namespace FinalProject1_POP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 805);
             this.panel2.TabIndex = 1;
+            // 
+            // PanelCildForm
+            // 
+            this.PanelCildForm.BackColor = System.Drawing.Color.White;
+            this.PanelCildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCildForm.Location = new System.Drawing.Point(257, 156);
+            this.PanelCildForm.Name = "PanelCildForm";
+            this.PanelCildForm.Size = new System.Drawing.Size(1427, 805);
+            this.PanelCildForm.TabIndex = 2;
             // 
             // btnMachine
             // 
@@ -102,6 +115,7 @@ namespace FinalProject1_POP
             this.btnWork.Text = "작업관리";
             this.btnWork.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnWork.UseVisualStyleBackColor = false;
+            this.btnWork.Click += new System.EventHandler(this.btnWork_Click);
             // 
             // btnUser
             // 
@@ -118,14 +132,15 @@ namespace FinalProject1_POP
             this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // PanelCildForm
+            // pictureBox1
             // 
-            this.PanelCildForm.BackColor = System.Drawing.Color.White;
-            this.PanelCildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCildForm.Location = new System.Drawing.Point(257, 156);
-            this.PanelCildForm.Name = "PanelCildForm";
-            this.PanelCildForm.Size = new System.Drawing.Size(1427, 805);
-            this.PanelCildForm.TabIndex = 2;
+            this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.수정됨_logo1___복사본;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // POPMain
             // 
@@ -144,7 +159,9 @@ namespace FinalProject1_POP
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.POPMain_FormClosed);
             this.Load += new System.EventHandler(this.POPMain_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +175,6 @@ namespace FinalProject1_POP
         private System.Windows.Forms.Button btnFactory;
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -224,6 +224,9 @@
     <Content Include="Image\user128x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\수정됨_logo1 - 복사본.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Image\groupx512.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

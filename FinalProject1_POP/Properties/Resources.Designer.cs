@@ -159,5 +159,15 @@ namespace FinalProject1_POP.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 수정됨_logo1___복사본 {
+            get {
+                object obj = ResourceManager.GetObject("수정됨_logo1 - 복사본", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

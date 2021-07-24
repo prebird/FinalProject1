@@ -45,10 +45,15 @@ namespace FinalProject1_POP
         {
             openChildForm(new POPUser(User));
         }
-
+        private void btnWork_Click(object sender, EventArgs e)
+        {
+            openChildForm(new POPWorkInfo(User));
+        }
         private void POPMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+
+        
     }
 }
