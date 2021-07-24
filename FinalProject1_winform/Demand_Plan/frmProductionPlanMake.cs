@@ -12,9 +12,12 @@ namespace FinalProject1_winform.Demand_Plan
 {
     public partial class frmProductionPlanMake : Form
     {
-        public frmProductionPlanMake()
+        public frmProductionPlanMake(string planID, int itemID, string itemName)
         {
             InitializeComponent();
+            txtPlanID.Text = planID;
+            txtItemName.Text = itemName;
+            txtItemName.Tag = itemID;
         }
 
         private void frmProductionPlanMake_Load(object sender, EventArgs e)
