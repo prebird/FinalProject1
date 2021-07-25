@@ -34,6 +34,7 @@ namespace FinalProject1_POP
             this.ucMachine1 = new FinalProject1_winform.Controls.UCMachine();
             this.ucMachine2 = new FinalProject1_winform.Controls.UCMachine();
             this.ucMachine3 = new FinalProject1_winform.Controls.UCMachine();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,14 @@ namespace FinalProject1_POP
             this.ucMachine3.Size = new System.Drawing.Size(411, 612);
             this.ucMachine3.TabIndex = 13;
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1634, 911);
+            this.panel2.TabIndex = 14;
+            // 
             // POPFactoryInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -90,6 +99,7 @@ namespace FinalProject1_POP
             this.Controls.Add(this.ucMachine2);
             this.Controls.Add(this.ucMachine1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "POPFactoryInfo";
             this.Text = "POPFactory";
             this.panel1.ResumeLayout(false);
@@ -104,5 +114,6 @@ namespace FinalProject1_POP
         private FinalProject1_winform.Controls.UCMachine ucMachine1;
         private FinalProject1_winform.Controls.UCMachine ucMachine2;
         private FinalProject1_winform.Controls.UCMachine ucMachine3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

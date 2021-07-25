@@ -180,7 +180,8 @@ namespace FinalProject1_POP
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = @"insert into WorkQtyLog(MachineID, ProductID, Qty, BadQty, WorkRegPC, WorkRegIP) values(@MachineID, @ProductID, @Qty, @BadQty, @WorkRegPC, @WorkRegIP)";
+                        cmd.CommandText = @"insert into WorkQtyLog(MachineID, ProductID, Qty, BadQty, WorkRegPC, WorkRegIP) 
+                                            values(@MachineID, @ProductID, @Qty, @BadQty, @WorkRegPC, @WorkRegIP)";
                         cmd.Parameters.AddWithValue("@MachineID", taskID);
                         cmd.Parameters.AddWithValue("@ProductID", arrData[0]);
                         cmd.Parameters.AddWithValue("@Qty", int.Parse(arrData[1]));

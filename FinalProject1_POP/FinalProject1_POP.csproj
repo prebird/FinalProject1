@@ -51,9 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncSocket\AsyncSocket.cs" />
-    <Compile Include="AsyncSocket\AsyncSocketClient.cs" />
-    <Compile Include="AsyncSocket\AsyncSocketServer.cs" />
     <Compile Include="CommonUtil\CallService.cs" />
     <Compile Include="CommonUtil\CommonUtil.cs" />
     <Compile Include="CommonUtil\ExcelUtil_List.cs" />
@@ -122,6 +119,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskListSection.cs" />
     <Compile Include="TcpControl.cs" />
     <Compile Include="ThreadPLCTASK.cs" />
     <EmbeddedResource Include="Controls\UCdateSearcher.resx">
