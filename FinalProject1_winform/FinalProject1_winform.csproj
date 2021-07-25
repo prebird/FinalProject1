@@ -608,6 +608,7 @@
     <Compile Include="Service\RestockService.cs" />
     <Compile Include="Service\ShiftService.cs" />
     <Compile Include="Service\SalesMasterService.cs" />
+    <Compile Include="Service\WorkOrderService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
