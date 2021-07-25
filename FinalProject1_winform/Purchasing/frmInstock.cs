@@ -42,17 +42,23 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvIn, "입고량", "RO_Status", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgvIn, "발주상태", "in_product_count", colWidth: 100);
 
-        }
-
-        private void frmInstock_Load(object sender, EventArgs e)
-        {
-            frmMain frm = (frmMain)this.MdiParent;
-            user = frm.User;
 
             CommonUtil.ComboBindingCompanyID(cboCompany);
             CommonUtil.ComboBindingCommonCode(cboStatus, "RO_type");
 
+            dtp1.FromDate = DateTime.Now.AddDays(-30);
+            dtp1.ToDate = DateTime.Now;
+        }
+
+        private void frmInstock_Load(object sender, EventArgs e)
+        {
+            // 유저
+            frmMain frm = (frmMain)this.MdiParent;
+            user = frm.User;
+
             
+
+            //로드
             GetAllData();
             CompeteData();
         }
@@ -83,6 +89,9 @@ namespace FinalProject1_winform
 
             frmInstockAdd frm = new frmInstockAdd(throwVO, user);
             frm.ShowDialog();
+
+            GetAllData();
+            CompeteData();
         }
     }
 }
