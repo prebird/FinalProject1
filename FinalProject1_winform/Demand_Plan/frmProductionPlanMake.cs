@@ -76,8 +76,6 @@ namespace FinalProject1_winform.Demand_Plan
                     Quantity = Convert.ToInt32(txtQuantity.Text)
                 };
 
-
-
                 DemandPlanService service2 = new DemandPlanService();
                 bool result = service2.ProductionPlanTrans(ppVO);
 
