@@ -174,16 +174,16 @@
     <Compile Include="Demand_Plan\frmProductionPlanMake.Designer.cs">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInstockAdd.cs">
+    <Compile Include="Purchasing\frmInstockAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInstockAdd.Designer.cs">
+    <Compile Include="Purchasing\frmInstockAdd.Designer.cs">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInstockList.cs">
+    <Compile Include="Purchasing\frmInstockList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInstockList.Designer.cs">
+    <Compile Include="Purchasing\frmInstockList.Designer.cs">
       <DependentUpon>frmInstockList.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\frmNotice.cs">
@@ -696,10 +696,10 @@
     <EmbeddedResource Include="Demand_Plan\frmProductionPlanMake.resx">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInstockAdd.resx">
+    <EmbeddedResource Include="Purchasing\frmInstockAdd.resx">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInstockList.resx">
+    <EmbeddedResource Include="Purchasing\frmInstockList.resx">
       <DependentUpon>frmInstockList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmNotice.resx">
@@ -866,7 +866,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="InStock\" />
     <Folder Include="ReStock\" />
     <Folder Include="Shift\" />
     <Folder Include="UserInfo\" />
@@ -921,6 +920,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Open_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\refreshing.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\threeBar.png">

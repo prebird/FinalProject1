@@ -247,17 +247,19 @@ where ro.ro_id in (" + strCheckBarCodeID + ")";
 
         public bool insertRO(RestockOrderVO ro)
         {
-            string sql = @"insert into RestockOrder (itemid, Companyid, SuggestQty, Qty,dueDate, unitPrice, RegDate)
-values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate)";
+            string sql = @"insert into RestockOrder (itemid, Companyid, SuggestQty, Qty,dueDate, unitPrice, RegDate, RO_Status)
+values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate, @RO_Status)";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("itemid", ro.itemid);
-                cmd.Parameters.AddWithValue("companyid", ro.Companyid);
-                cmd.Parameters.AddWithValue("SuggestQty", ro.SuggestQty);
-                cmd.Parameters.AddWithValue("Qty", ro.Qty);
-                cmd.Parameters.AddWithValue("dueDate", ro.dueDate);
-                cmd.Parameters.AddWithValue("unitPrice", ro.unitPrice);
-                cmd.Parameters.AddWithValue("RegDate", ro.RegDate);
+                cmd.Parameters.AddWithValue("@itemid", ro.itemid);
+                cmd.Parameters.AddWithValue("@companyid", ro.Companyid);
+                cmd.Parameters.AddWithValue("@SuggestQty", ro.SuggestQty);
+                cmd.Parameters.AddWithValue("@Qty", ro.Qty);
+                cmd.Parameters.AddWithValue("@dueDate", ro.dueDate);
+                cmd.Parameters.AddWithValue("@unitPrice", ro.unitPrice);
+                cmd.Parameters.AddWithValue("@RegDate", ro.RegDate);
+                cmd.Parameters.AddWithValue("@RO_Status", "RO_01");
+                
 
                 int irows  = cmd.ExecuteNonQuery();
                 if (irows > 0)

@@ -117,6 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlDataSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date from RestockOrder ro
+inner join item i on i.Item_ID = ro.itemid
+inner join Company c on c.company_id = ro.Companyid
+left outer join CommonCode cc on cc.common_value = RO_Status
+left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
+where 1=1</value>
+  </data>
+  <data name="sqlDataSource4.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTQiPjxWaWV3IE5hbWU9IlF1ZXJ5XzEiPjxGaWVsZCBOYW1lPSJST19JRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Iml0ZW1pZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ikl0ZW1fTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55aWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJjb21wYW55X25hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3VnZ2VzdFF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlJPX1N0YXR1cyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkdWVEYXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFibGV0b0NhbmNlbCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImlucHV0RmxhZyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJpbnNfY250IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iaW5zX2RhdGUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
   <metadata name="sqlDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
