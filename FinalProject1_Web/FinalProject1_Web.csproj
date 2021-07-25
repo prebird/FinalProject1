@@ -1928,7 +1928,6 @@
     <None Include="Properties\PublishProfiles\GDC7FinalProject1 - Web Deploy.pubxml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Buy.cshtml" />
-    <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\UserJoin\Create.cshtml" />
     <Content Include="Views\UserJoin\Login.cshtml" />
     <Content Include="Views\Main\LoginSuccess.cshtml" />
@@ -1940,7 +1939,7 @@
     <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - Web Deploy.pubxml" />
-    <Content Include="Views\Main\Index1.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

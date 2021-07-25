@@ -119,7 +119,7 @@ inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 left outer join CommonCode cc on cc.common_value = RO_Status
 left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
-where 1=1 and RO_Status = 'RO_02' and RO_Status = 'RO_03' and and RO_Status = 'RO_04'");
+where 1=1 and RO_Status = 'RO_02' or RO_Status = 'RO_03' or RO_Status = 'RO_04'");
 
             using (SqlCommand cmd = new SqlCommand())
             {
@@ -148,6 +148,7 @@ where 1=1 and RO_Status = 'RO_02' and RO_Status = 'RO_03' and and RO_Status = 'R
                 cmd.CommandText = sb.ToString();
 
                 List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
+                cmd.Dispose();
                 return list;
             }
         }
@@ -155,13 +156,14 @@ where 1=1 and RO_Status = 'RO_02' and RO_Status = 'RO_03' and and RO_Status = 'R
         public List<RestockOrderVO> GetCompleteList(string ro_id, string fromdate, string todate, string companyid)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(@"select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date, factory_id, factory_name, ih_product_count from RestockOrder ro
+            sb.Append(@"select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date, ih.factory_id, factory_name, ih_product_count from RestockOrder ro
 inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 inner join inventory_hist ih on ih.RO_ID = ro.RO_ID 
+inner join Factory f on f.factory_id = ih.factory_id
 left outer join CommonCode cc on cc.common_value = RO_Status
 left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
-where 1=1 RO_Status = 'RO_04'");
+where 1=1 and RO_Status = 'RO_04'");
 
             using (SqlCommand cmd = new SqlCommand())
             {

@@ -4,47 +4,48 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="well well-sm">
-                <form class="form-horizontal" method="post">
-                    <fieldset>
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post">
+                        <fieldset>
 
-                        <div class="login-logo fa-pull-left">
-                            <a href="#"><b>Notice</b>Add</a>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6">
-                                @Html.EditorFor(model => model.note_subject, new { htmlAttributes = new { @class = "form-control", placeholder = "제목" } })
+                            <div class="login-logo fa-pull-left">
+                                <a href="#"><b>Notice</b>Add</a>
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            
-                            <div class="col-md-6">
-                                @Html.EditorFor(model => model.note_userid, new { rows = 15  , htmlAttributes = new { @class = "form-control", placeholder = "작성자" } })
+
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    @Html.EditorFor(model => model.note_subject, new { htmlAttributes = new { @class = "form-control", placeholder = "제목" } })
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="form-group">
+
+                                <div class="col-md-6">
+                                    @Html.EditorFor(model => model.note_userid, new { rows = 15, htmlAttributes = new { @class = "form-control", placeholder = "작성자" } })
+                                </div>
+                            </div>
 
 
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                @*@Html.TextAreaFor(model => model.note_userid, new { htmlAttributes = new { @class = "form-control", placeholder = "내용" , rows=13 } })*@
-                                <textarea class="form-control text-box multi-line" id="note_contents" name="note_contents" placeholder="글 내용을 입력하세요" rows="15"></textarea>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    @*@Html.TextAreaFor(model => model.note_userid, new { htmlAttributes = new { @class = "form-control", placeholder = "내용" , rows=13 } })*@
+                                    <textarea class="form-control text-box multi-line" id="note_contents" name="note_contents" placeholder="글 내용을 입력하세요" rows="15"></textarea>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg fa-pull-left">글 등록</button>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg fa-pull-left">글 등록</button>
+                                </div>
                             </div>
-                        </div>
-                    </fieldset>
-                </form>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
