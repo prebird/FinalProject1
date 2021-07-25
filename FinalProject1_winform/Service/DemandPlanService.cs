@@ -37,5 +37,15 @@ namespace FinalProject1_winform
             DemandPlanDAC dac = new DemandPlanDAC();
             return dac.GetDemandPlanList(dmVO);
         }
+
+        // 생산 계획 생성 트랜잭션
+        public bool ProductionPlanTrans(ProductionPlanVO ppVO)
+        {
+            DemandPlanDAC dac = new DemandPlanDAC();
+            bool result = dac.ProductionPlanTrans(ppVO);
+            dac.Dispose();
+
+            return result;
+        }
     }
 }
