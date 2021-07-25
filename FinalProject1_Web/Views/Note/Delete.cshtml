@@ -4,68 +4,70 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h3>정말 삭제하시겠습니까?</h3>
-<div>
-    <h4></h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.note_id)
-        </dt>
+<div class="content-wrapper">
+    <h3>정말 삭제하시겠습니까?</h3>
+    <div>
+        <h4></h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.note_id)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_id)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.note_id)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_userid)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.note_userid)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_userid)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.note_userid)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_subject)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.note_subject)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_subject)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.note_subject)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_contents)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.note_contents)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_contents)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.note_contents)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_readCount)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.note_readCount)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_readCount)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.note_readCount)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.note_date)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.note_date)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.note_date)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.note_date)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-success" /> | 
-            <button type="submit" class="btn btn-success btn-lg" onclick="location.href='/Note/Index'">글 목록으로</button>
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-success" /> |
+                <button type="submit" class="btn btn-success btn-lg" onclick="location.href='/Note/Index'">글 목록으로</button>
+            </div>
+        }
+    </div>
 </div>

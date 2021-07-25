@@ -30,39 +30,39 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInstock));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCancel = new FinalProject1_winform.Button_gudi();
             this.btnAdd = new FinalProject1_winform.Button_gudi();
             this.btnExcel = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvIn = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvWait = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtROID = new FinalProject1_winform.Controls.TextBox_gudi();
             this.cboCompany = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.cboStatus = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.dtp1 = new FinalProject1_winform.UcDateTimePicker();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.button_gudi8 = new FinalProject1_winform.Button_gudi();
-            this.dgvWait = new FinalProject1_winform.DGV_gudi();
-            this.dgvIn = new FinalProject1_winform.DGV_gudi();
             this.btnEdit = new FinalProject1_winform.Button_gudi();
-            this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.txtROID = new FinalProject1_winform.Controls.TextBox_gudi();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWait)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIn)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -102,6 +102,7 @@ namespace FinalProject1_winform
             this.btnAdd.Text = "입고처리";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnExcel
             // 
@@ -153,6 +154,31 @@ namespace FinalProject1_winform
             this.panel3.Size = new System.Drawing.Size(1229, 311);
             this.panel3.TabIndex = 36;
             // 
+            // dgvIn
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvIn.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvIn.BackgroundColor = System.Drawing.Color.White;
+            this.dgvIn.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvIn.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvIn.HeaderCheckStatus = false;
+            this.dgvIn.Location = new System.Drawing.Point(0, 0);
+            this.dgvIn.Name = "dgvIn";
+            this.dgvIn.RowHeadersVisible = false;
+            this.dgvIn.RowTemplate.Height = 23;
+            this.dgvIn.Size = new System.Drawing.Size(1229, 311);
+            this.dgvIn.TabIndex = 0;
+            // 
             // pictureBox_gudi1
             // 
             this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
@@ -172,6 +198,31 @@ namespace FinalProject1_winform
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1229, 196);
             this.panel2.TabIndex = 34;
+            // 
+            // dgvWait
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgvWait.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvWait.BackgroundColor = System.Drawing.Color.White;
+            this.dgvWait.CheckBoxAll = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWait.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvWait.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWait.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvWait.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgvWait.HeaderCheckStatus = false;
+            this.dgvWait.Location = new System.Drawing.Point(0, 0);
+            this.dgvWait.Name = "dgvWait";
+            this.dgvWait.RowHeadersVisible = false;
+            this.dgvWait.RowTemplate.Height = 23;
+            this.dgvWait.Size = new System.Drawing.Size(1229, 196);
+            this.dgvWait.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
@@ -202,6 +253,15 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(1229, 79);
             this.panel1.TabIndex = 32;
             // 
+            // txtROID
+            // 
+            this.txtROID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtROID.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtROID.Location = new System.Drawing.Point(89, 12);
+            this.txtROID.Name = "txtROID";
+            this.txtROID.Size = new System.Drawing.Size(257, 25);
+            this.txtROID.TabIndex = 23;
+            // 
             // cboCompany
             // 
             this.cboCompany.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
@@ -210,6 +270,16 @@ namespace FinalProject1_winform
             this.cboCompany.Name = "cboCompany";
             this.cboCompany.Size = new System.Drawing.Size(193, 24);
             this.cboCompany.TabIndex = 20;
+            // 
+            // label_gudi4
+            // 
+            this.label_gudi4.AutoSize = true;
+            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi4.Location = new System.Drawing.Point(11, 16);
+            this.label_gudi4.Name = "label_gudi4";
+            this.label_gudi4.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi4.TabIndex = 19;
+            this.label_gudi4.Text = "■ 발주번호";
             // 
             // cboStatus
             // 
@@ -278,58 +348,9 @@ namespace FinalProject1_winform
             this.button_gudi8.UseVisualStyleBackColor = false;
             this.button_gudi8.Click += new System.EventHandler(this.button_gudi8_Click);
             // 
-            // dgvWait
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvWait.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvWait.BackgroundColor = System.Drawing.Color.White;
-            this.dgvWait.CheckBoxAll = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvWait.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvWait.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWait.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvWait.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgvWait.HeaderCheckStatus = false;
-            this.dgvWait.Location = new System.Drawing.Point(0, 0);
-            this.dgvWait.Name = "dgvWait";
-            this.dgvWait.RowHeadersVisible = false;
-            this.dgvWait.RowTemplate.Height = 23;
-            this.dgvWait.Size = new System.Drawing.Size(1229, 196);
-            this.dgvWait.TabIndex = 0;
-            // 
-            // dgvIn
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgvIn.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvIn.BackgroundColor = System.Drawing.Color.White;
-            this.dgvIn.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvIn.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgvIn.HeaderCheckStatus = false;
-            this.dgvIn.Location = new System.Drawing.Point(0, 0);
-            this.dgvIn.Name = "dgvIn";
-            this.dgvIn.RowHeadersVisible = false;
-            this.dgvIn.RowTemplate.Height = 23;
-            this.dgvIn.Size = new System.Drawing.Size(1229, 311);
-            this.dgvIn.TabIndex = 0;
-            // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnEdit.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnEdit.FlatAppearance.BorderSize = 0;
@@ -345,25 +366,6 @@ namespace FinalProject1_winform
             this.btnEdit.Text = "수정";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // label_gudi4
-            // 
-            this.label_gudi4.AutoSize = true;
-            this.label_gudi4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi4.Location = new System.Drawing.Point(11, 16);
-            this.label_gudi4.Name = "label_gudi4";
-            this.label_gudi4.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi4.TabIndex = 19;
-            this.label_gudi4.Text = "■ 발주번호";
-            // 
-            // txtROID
-            // 
-            this.txtROID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtROID.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtROID.Location = new System.Drawing.Point(89, 12);
-            this.txtROID.Name = "txtROID";
-            this.txtROID.Size = new System.Drawing.Size(257, 25);
-            this.txtROID.TabIndex = 23;
             // 
             // frmInstock
             // 
@@ -384,13 +386,13 @@ namespace FinalProject1_winform
             this.Text = "자재입고";
             this.Load += new System.EventHandler(this.frmInstock_Load);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWait)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIn)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -91,7 +91,7 @@ namespace FinalProject1_winform
             menu.ProgramName = cboForm.Text;
             menu.menu_uadmin = txtUserName.Text;
             menu.menu_udate = dtpDate.Text;
-            menu.MenuID = BigMenuID;
+            menu.MenuID = throwedMenu.MenuID;
 
             if (btnSave.Text == "등록")
             {
