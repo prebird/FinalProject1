@@ -1940,6 +1940,7 @@
     <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GDC7FinalProjectTeam1 - Web Deploy.pubxml" />
+    <Content Include="Views\Main\Index1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -10,12 +10,22 @@ namespace FinalProject1_Web.Controllers
     {
 
         // GET: Main
-        public ActionResult Index()
+        public ActionResult Index1()
         {
             return View();
         }
 
-        // 로그인 성공시
+        public ActionResult Index2()
+        {
+            return View();
+        }
+
+        public ActionResult Index3()
+        {
+            return View();
+        }
+
+        // 로그인 성공시  
         public ActionResult LoginSuccess()
         {
             return View();
