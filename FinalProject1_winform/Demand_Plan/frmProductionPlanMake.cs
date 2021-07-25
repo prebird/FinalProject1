@@ -1,4 +1,5 @@
 ﻿using FinalProject1_VO;
+using FinalProject1_winform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,11 @@ namespace FinalProject1_winform.Demand_Plan
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //BORID 불러오기
+            BorService service = new BorService();
+            BORVO bor = service.GetSpecialBOR(cboProcess.Text, cboEquipment.Text, txtItemName.Text);
+            int borID = bor.BORID;
+
 
         }
     }
