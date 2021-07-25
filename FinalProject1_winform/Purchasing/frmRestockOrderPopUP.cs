@@ -119,7 +119,7 @@ namespace FinalProject1_winform
                 Companyid = _companyid,
                 SuggestQty = Convert.ToInt32(txtSQ.Text),
                 Qty = Convert.ToInt32(txtQty.Text),
-                RO_Status = "RO_1",
+                RO_Status = "RO_01",
                 dueDate = dtpRO.Value.ToString("yyyy-MM-dd"),
                 unitPrice = Convert.ToInt32(dgvCompany.SelectedRows[0].Cells[5].Value),
                 RegDate = DateTime.Now.ToShortDateString(),
