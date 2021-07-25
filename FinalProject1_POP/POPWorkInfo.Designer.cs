@@ -40,11 +40,11 @@ namespace FinalProject1_POP
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpWorkDate = new System.Windows.Forms.DateTimePicker();
             this.dgv_WorkList = new FinalProject1_winform.DGV_gudi();
-            this.textBox_gudi11 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi10 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi9 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi8 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.textBox_gudi7 = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtNGQTy = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtOKQty = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtRemain = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtWorkQty = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtOrderQty = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi15 = new FinalProject1_winform.Label_gudi();
             this.label_gudi14 = new FinalProject1_winform.Label_gudi();
             this.label_gudi13 = new FinalProject1_winform.Label_gudi();
@@ -62,13 +62,15 @@ namespace FinalProject1_POP
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.label_gudi7 = new FinalProject1_winform.Label_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
-            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
+            this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.cboItem = new FinalProject1_winform.ComboBox_gudi();
             this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.btnStart = new FinalProject1_winform.Button_gudi();
+            this.btnStop = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -92,12 +94,11 @@ namespace FinalProject1_POP
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabControl1.Location = new System.Drawing.Point(0, 498);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1634, 413);
+            this.tabControl1.Size = new System.Drawing.Size(1653, 342);
             this.tabControl1.TabIndex = 42;
             // 
             // tabPage1
@@ -109,7 +110,7 @@ namespace FinalProject1_POP
             this.tabPage1.Location = new System.Drawing.Point(4, 41);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1626, 368);
+            this.tabPage1.Size = new System.Drawing.Size(1645, 297);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "생산 현황";
             // 
@@ -120,7 +121,7 @@ namespace FinalProject1_POP
             this.tabPage2.Location = new System.Drawing.Point(4, 41);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1626, 368);
+            this.tabPage2.Size = new System.Drawing.Size(1645, 297);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "불량 현황";
             // 
@@ -131,7 +132,7 @@ namespace FinalProject1_POP
             this.tabPage3.Location = new System.Drawing.Point(4, 41);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1626, 368);
+            this.tabPage3.Size = new System.Drawing.Size(1645, 297);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "투입 현황";
             // 
@@ -160,7 +161,7 @@ namespace FinalProject1_POP
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtpWorkDate);
-            this.groupBox1.Controls.Add(this.button_gudi2);
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.cboItem);
             this.groupBox1.Controls.Add(this.cboProcess);
             this.groupBox1.Controls.Add(this.label_gudi4);
@@ -203,59 +204,59 @@ namespace FinalProject1_POP
             this.dgv_WorkList.Name = "dgv_WorkList";
             this.dgv_WorkList.RowHeadersVisible = false;
             this.dgv_WorkList.RowTemplate.Height = 23;
-            this.dgv_WorkList.Size = new System.Drawing.Size(1620, 362);
+            this.dgv_WorkList.Size = new System.Drawing.Size(1639, 291);
             this.dgv_WorkList.TabIndex = 85;
             this.dgv_WorkList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkList_CellClick);
             // 
-            // textBox_gudi11
+            // txtNGQTy
             // 
-            this.textBox_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi11.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi11.Location = new System.Drawing.Point(1446, 425);
-            this.textBox_gudi11.Name = "textBox_gudi11";
-            this.textBox_gudi11.Size = new System.Drawing.Size(207, 45);
-            this.textBox_gudi11.TabIndex = 41;
-            this.textBox_gudi11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNGQTy.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtNGQTy.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtNGQTy.Location = new System.Drawing.Point(1446, 425);
+            this.txtNGQTy.Name = "txtNGQTy";
+            this.txtNGQTy.Size = new System.Drawing.Size(207, 45);
+            this.txtNGQTy.TabIndex = 41;
+            this.txtNGQTy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox_gudi10
+            // txtOKQty
             // 
-            this.textBox_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi10.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi10.Location = new System.Drawing.Point(1446, 352);
-            this.textBox_gudi10.Name = "textBox_gudi10";
-            this.textBox_gudi10.Size = new System.Drawing.Size(207, 45);
-            this.textBox_gudi10.TabIndex = 40;
-            this.textBox_gudi10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtOKQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtOKQty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtOKQty.Location = new System.Drawing.Point(1446, 352);
+            this.txtOKQty.Name = "txtOKQty";
+            this.txtOKQty.Size = new System.Drawing.Size(207, 45);
+            this.txtOKQty.TabIndex = 40;
+            this.txtOKQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox_gudi9
+            // txtRemain
             // 
-            this.textBox_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi9.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi9.Location = new System.Drawing.Point(1446, 279);
-            this.textBox_gudi9.Name = "textBox_gudi9";
-            this.textBox_gudi9.Size = new System.Drawing.Size(207, 45);
-            this.textBox_gudi9.TabIndex = 39;
-            this.textBox_gudi9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRemain.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtRemain.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtRemain.Location = new System.Drawing.Point(1446, 279);
+            this.txtRemain.Name = "txtRemain";
+            this.txtRemain.Size = new System.Drawing.Size(207, 45);
+            this.txtRemain.TabIndex = 39;
+            this.txtRemain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox_gudi8
+            // txtWorkQty
             // 
-            this.textBox_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi8.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi8.Location = new System.Drawing.Point(1446, 206);
-            this.textBox_gudi8.Name = "textBox_gudi8";
-            this.textBox_gudi8.Size = new System.Drawing.Size(207, 45);
-            this.textBox_gudi8.TabIndex = 38;
-            this.textBox_gudi8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWorkQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWorkQty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtWorkQty.Location = new System.Drawing.Point(1446, 206);
+            this.txtWorkQty.Name = "txtWorkQty";
+            this.txtWorkQty.Size = new System.Drawing.Size(207, 45);
+            this.txtWorkQty.TabIndex = 38;
+            this.txtWorkQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox_gudi7
+            // txtOrderQty
             // 
-            this.textBox_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_gudi7.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi7.Location = new System.Drawing.Point(1446, 133);
-            this.textBox_gudi7.Name = "textBox_gudi7";
-            this.textBox_gudi7.Size = new System.Drawing.Size(207, 45);
-            this.textBox_gudi7.TabIndex = 32;
-            this.textBox_gudi7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtOrderQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtOrderQty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtOrderQty.Location = new System.Drawing.Point(1446, 133);
+            this.txtOrderQty.Name = "txtOrderQty";
+            this.txtOrderQty.Size = new System.Drawing.Size(207, 45);
+            this.txtOrderQty.TabIndex = 32;
+            this.txtOrderQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label_gudi15
             // 
@@ -281,7 +282,7 @@ namespace FinalProject1_POP
             // 
             this.label_gudi13.AutoSize = true;
             this.label_gudi13.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi13.Location = new System.Drawing.Point(1287, 282);
+            this.label_gudi13.Location = new System.Drawing.Point(1287, 209);
             this.label_gudi13.Name = "label_gudi13";
             this.label_gudi13.Size = new System.Drawing.Size(114, 32);
             this.label_gudi13.TabIndex = 35;
@@ -291,11 +292,11 @@ namespace FinalProject1_POP
             // 
             this.label_gudi12.AutoSize = true;
             this.label_gudi12.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi12.Location = new System.Drawing.Point(1287, 209);
+            this.label_gudi12.Location = new System.Drawing.Point(1287, 282);
             this.label_gudi12.Name = "label_gudi12";
             this.label_gudi12.Size = new System.Drawing.Size(114, 32);
             this.label_gudi12.TabIndex = 34;
-            this.label_gudi12.Text = "실적 합계";
+            this.label_gudi12.Text = "생산 잔량";
             // 
             // label_gudi11
             // 
@@ -427,20 +428,21 @@ namespace FinalProject1_POP
             this.label_gudi6.TabIndex = 9;
             this.label_gudi6.Text = "Plan_ID";
             // 
-            // button_gudi2
+            // btnSearch
             // 
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_gudi2.ForeColor = System.Drawing.Color.Black;
-            this.button_gudi2.Location = new System.Drawing.Point(36, 304);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(530, 64);
-            this.button_gudi2.TabIndex = 7;
-            this.button_gudi2.Text = "검색";
-            this.button_gudi2.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(36, 304);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(530, 64);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "검색";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cboItem
             // 
@@ -504,18 +506,50 @@ namespace FinalProject1_POP
             this.label_gudi1.Text = "생산작업관리";
             this.label_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnStart.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnStart.ForeColor = System.Drawing.Color.Lime;
+            this.btnStart.Location = new System.Drawing.Point(0, 842);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(530, 64);
+            this.btnStart.TabIndex = 9;
+            this.btnStart.Text = "시작";
+            this.btnStart.UseVisualStyleBackColor = false;
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnStop.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnStop.ForeColor = System.Drawing.Color.Red;
+            this.btnStop.Location = new System.Drawing.Point(536, 842);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(530, 64);
+            this.btnStop.TabIndex = 43;
+            this.btnStop.Text = "정지";
+            this.btnStop.UseVisualStyleBackColor = false;
+            // 
             // POPWorkInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.ClientSize = new System.Drawing.Size(1634, 911);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.textBox_gudi11);
-            this.Controls.Add(this.textBox_gudi10);
-            this.Controls.Add(this.textBox_gudi9);
-            this.Controls.Add(this.textBox_gudi8);
-            this.Controls.Add(this.textBox_gudi7);
+            this.Controls.Add(this.txtNGQTy);
+            this.Controls.Add(this.txtOKQty);
+            this.Controls.Add(this.txtRemain);
+            this.Controls.Add(this.txtWorkQty);
+            this.Controls.Add(this.txtOrderQty);
             this.Controls.Add(this.label_gudi15);
             this.Controls.Add(this.label_gudi14);
             this.Controls.Add(this.label_gudi13);
@@ -548,11 +582,11 @@ namespace FinalProject1_POP
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi11;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi10;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi9;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi8;
-        private FinalProject1_winform.Controls.TextBox_gudi textBox_gudi7;
+        private FinalProject1_winform.Controls.TextBox_gudi txtNGQTy;
+        private FinalProject1_winform.Controls.TextBox_gudi txtOKQty;
+        private FinalProject1_winform.Controls.TextBox_gudi txtRemain;
+        private FinalProject1_winform.Controls.TextBox_gudi txtWorkQty;
+        private FinalProject1_winform.Controls.TextBox_gudi txtOrderQty;
         private FinalProject1_winform.Label_gudi label_gudi15;
         private FinalProject1_winform.Label_gudi label_gudi14;
         private FinalProject1_winform.Label_gudi label_gudi13;
@@ -572,7 +606,7 @@ namespace FinalProject1_POP
         private FinalProject1_winform.Label_gudi label_gudi7;
         private FinalProject1_winform.Label_gudi label_gudi6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private FinalProject1_winform.Button_gudi button_gudi2;
+        private FinalProject1_winform.Button_gudi btnSearch;
         private FinalProject1_winform.ComboBox_gudi cboItem;
         private FinalProject1_winform.ComboBox_gudi cboProcess;
         private FinalProject1_winform.Label_gudi label_gudi4;
@@ -580,5 +614,7 @@ namespace FinalProject1_POP
         private FinalProject1_winform.Label_gudi label_gudi2;
         private System.Windows.Forms.DateTimePicker dtpWorkDate;
         private FinalProject1_winform.DGV_gudi dgv_WorkList;
+        private FinalProject1_winform.Button_gudi btnStart;
+        private FinalProject1_winform.Button_gudi btnStop;
     }
 }

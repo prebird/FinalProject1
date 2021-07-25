@@ -56,7 +56,6 @@ namespace FinalProject1_DAC
         }
 
         //공정 조회
-
         public List<POPProcessVO> GetProcessInfo()
         {
             string sql = @"select ProcessID, ProcessCode, ProcessName
@@ -86,7 +85,7 @@ namespace FinalProject1_DAC
         //작업계획 상태일때
         public List<POPWorkOrderVO> GetWorkOrder(string workOrderID)
         {
-            string sql = @"select WO.WorkOrderID, WO.PlanID, I.Item_code, EquipmentName
+            string sql = @"select WO.WorkOrderID, WO.PlanID, I.Item_code, EquipmentName, OrderQuantity
                            from WorkOrder WO inner join BOR B on WO.BORID = B.BORID
 				                             inner join Item I on B.ItemID = I.Item_ID
 											 inner join Equipment E on B.EquipmentID = E.EquipmentID
@@ -102,19 +101,48 @@ namespace FinalProject1_DAC
         //작업계획 이외의 상태일때
         public List<POPWorkOrderVO> GetStartWork(string workOrderID)
         {
-            string sql = @"select WO.WorkOrderID, WO.PlanID, I.Item_code, EquipmentName, pd_stime, pd_etime
+            string sql = @"select WO.WorkOrderID, WO.PlanID, I.Item_code, EquipmentName, pd_stime, pd_etime, ok_cnt, ng_cnt
                            from WorkOrder WO inner join WorkRecord WR on WO.WorkOrderID = WR.WorkOrderID
 				                                inner join BOR B on WO.BORID = B.BORID
 				                                inner join Item I on B.ItemID = I.Item_ID
 												inner join Equipment E on B.EquipmentID = E.EquipmentID
                             where WO.WorkOrderID = @WorkOrderID";
-
+            
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@WorkOrderID", workOrderID);
                 return Helper.DataReaderMapToList<POPWorkOrderVO>(cmd.ExecuteReader());
             }
 
+        }
+
+
+        public List<POPUserVO> GetWOSearch(string userId, string workDate, int processId, int itemId)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(@"select workOrderID, Item_Code, OrderQuantity, WO.[Status]
+                from WorkOrder WO inner join Production_Plan PP on WO.PlanID = PP.PlanID
+				                  inner join Production_PlanDetail PD on PP.ProductionPlanID = PD.ProductionPlanID
+				                  inner join BOR B on PD.BORID = B.BORID
+				                  inner Join Item I on B.ItemID = I.Item_ID
+                where EmpID = @EmpID and WorkDate = @WorkDate");
+
+            if (processId != 0)
+                sb.Append(" and ProcessID = @ProcessID ");
+            if (itemId != 0)
+                sb.Append(" and itemid = @itemid");
+
+            using(SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+                cmd.Parameters.AddWithValue("@EmpID", userId);
+                cmd.Parameters.AddWithValue("@WorkDate", workDate);
+                cmd.Parameters.AddWithValue("@ProcessID", processId);
+                cmd.Parameters.AddWithValue("@itemid", itemId);
+                return Helper.DataReaderMapToList<POPUserVO>(cmd.ExecuteReader());
+            }
         }
     }
 

@@ -102,6 +102,7 @@ namespace FinalProject1_POP
             this.btnFactory.Text = "장비관리";
             this.btnFactory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFactory.UseVisualStyleBackColor = false;
+            this.btnFactory.Click += new System.EventHandler(this.btnFactory_Click);
             // 
             // btnWork
             // 

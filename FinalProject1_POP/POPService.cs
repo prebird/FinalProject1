@@ -62,7 +62,14 @@ namespace FinalProject1_POP
             return list;
         }
 
+        public List<POPUserVO> GetWOSearch(string userId, string workDate, int processId, int itemId)
+        {
+            POPDAC dac = new POPDAC();
+            List<POPUserVO> list = dac.GetWOSearch(userId, workDate, processId, itemId);
+            dac.Dispose();
 
+            return list;
+        }
 
     }
 }
