@@ -51,11 +51,14 @@ namespace FinalProject1_VO
     public class POPWorkOrderVO
     {
         public string  WorkOrderID { get; set; }
+        public int OrderQuantity { get; set; }
         public string  PlanID { get; set; }
         public string  Item_code { get; set; }
         public string  EquipmentName { get; set; }
         public string  pd_stime { get; set; }
         public string  pd_etim { get; set; }
+        public int ok_cnt { get; set; }
+        public int ng_cnt { get; set; }
 
     }
 }

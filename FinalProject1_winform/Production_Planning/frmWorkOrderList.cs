@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -46,6 +47,44 @@ namespace FinalProject1_winform
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(cboStatus.SelectedIndex == 0 && string.IsNullOrWhiteSpace(txtPlanID.Text) && string.IsNullOrWhiteSpace(txtItem.Text))
+            {
+                MessageBox.Show("검색 조건을 입력해 주세요");
+                return;
+            }
+
+            string status = null;
+            string planID = null;
+            string itemName = null;
+
+            if (cboStatus.SelectedIndex != 0)
+            {
+                status = cboStatus.Text;
+            }
+            if (!string.IsNullOrWhiteSpace(txtPlanID.Text))
+            {
+                planID = txtPlanID.Text;
+            }
+            if (!string.IsNullOrWhiteSpace(txtItem.Text))
+            {
+                itemName = txtItem.Text;
+            }
+
+            var list = (from item in worklist
+                        where (status != null ? status.Contains(item.Status) : true) &&
+                        (planID != null ? planID.Contains(item.PlanID) : true) &&
+                        (itemName != null ? itemName.Contains(item.Item_Name) : true) &&
+                        Convert.ToDateTime(item.WorkDate) <= dateControl.ToDate &&
+                        Convert.ToDateTime(item.WorkDate) >= dateControl.FromDate
+                        select item
+                        ).ToList();
+
+            dgvList.DataSource = null;
+            dgvList.DataSource = new BindingList<WorkOrderVO>(list);
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
         {
 
         }

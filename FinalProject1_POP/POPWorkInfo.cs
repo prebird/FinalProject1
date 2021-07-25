@@ -78,8 +78,10 @@ namespace FinalProject1_POP
                 txtPlanid.Text = List[0].PlanID;
                 txtItemCode.Text = List[0].Item_code;
                 txtEName.Text = List[0].EquipmentName;
-                txtStart.Text = List[0].pd_stime;
-                txtEnd.Text = List[0].pd_etim;
+                txtStart.Text = "00:00"; //List[0].pd_stime;
+                txtEnd.Text = "00:00"; //List[0].pd_etim;
+                txtOrderQty.Text = List[0].OrderQuantity.ToString();
+                
             }
             else
             {
@@ -90,8 +92,23 @@ namespace FinalProject1_POP
                 txtEName.Text = List[0].EquipmentName;
                 txtStart.Text = List[0].pd_stime;
                 txtEnd.Text = List[0].pd_etim;
+                txtOrderQty.Text = List[0].OrderQuantity.ToString();
+                txtWorkQty.Text = (List[0].ok_cnt + List[0].ng_cnt).ToString();
+                txtOKQty.Text = List[0].ok_cnt.ToString();
+                txtNGQTy.Text = List[0].ng_cnt.ToString();
+                txtRemain.Text = (List[0].OrderQuantity - (List[0].ok_cnt + List[0].ng_cnt)).ToString();
             }
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            POPService service = new POPService();
+            string searchDate = dtpWorkDate.Value.ToString("yyyy-MM-dd");
+            List<POPUserVO> list = service.GetWOSearch(User.user_id, searchDate ,
+                Convert.ToInt32(cboItem.SelectedValue), Convert.ToInt32(cboProcess.SelectedValue));
+            dgv_WorkList.DataSource = list;
+            dgv_WorkList.ClearSelection();
         }
     }
 }
