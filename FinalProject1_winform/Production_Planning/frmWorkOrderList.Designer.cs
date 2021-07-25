@@ -84,6 +84,11 @@ namespace FinalProject1_winform
             // 
             this.cboStatus.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "선택",
+            "작업계획",
+            "작업중",
+            "작업완료"});
             this.cboStatus.Location = new System.Drawing.Point(806, 16);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(134, 24);
@@ -241,6 +246,7 @@ namespace FinalProject1_winform
             this.btnDone.Text = "작업실적등록";
             this.btnDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // frmWorkOrderList
             // 
