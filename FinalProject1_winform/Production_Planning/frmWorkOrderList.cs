@@ -48,7 +48,7 @@ namespace FinalProject1_winform
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(cboStatus.SelectedIndex == 0 || string.IsNullOrWhiteSpace(txtPlanID.Text) || string.IsNullOrWhiteSpace(txtItem.Text))
+            if(cboStatus.SelectedIndex == 0 && string.IsNullOrWhiteSpace(txtPlanID.Text) && string.IsNullOrWhiteSpace(txtItem.Text))
             {
                 MessageBox.Show("검색 조건을 입력해 주세요");
                 return;
