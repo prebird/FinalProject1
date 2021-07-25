@@ -85,6 +85,7 @@ namespace FinalProject1_winform.Demand_Plan
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
