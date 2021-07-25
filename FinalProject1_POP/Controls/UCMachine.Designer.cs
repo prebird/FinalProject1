@@ -30,6 +30,9 @@ namespace FinalProject1_winform.Controls
         private void InitializeComponent()
         {
             this.gbProcess = new System.Windows.Forms.GroupBox();
+            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
+            this.btnStop = new FinalProject1_winform.Button_gudi();
+            this.btnStart = new FinalProject1_winform.Button_gudi();
             this.txtNGQty = new System.Windows.Forms.TextBox();
             this.txtOKQty = new System.Windows.Forms.TextBox();
             this.txtRemainQty = new System.Windows.Forms.TextBox();
@@ -47,9 +50,10 @@ namespace FinalProject1_winform.Controls
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMachineName = new System.Windows.Forms.Label();
             this.lblYN = new System.Windows.Forms.Label();
-            this.btnOK = new FinalProject1_winform.Button_gudi();
-            this.button_gudi1 = new FinalProject1_winform.Button_gudi();
-            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
+            this.lblTaskID = new System.Windows.Forms.Label();
+            this.lblIP = new System.Windows.Forms.Label();
+            this.lblPort = new System.Windows.Forms.Label();
+            this.lblRemark = new System.Windows.Forms.Label();
             this.gbProcess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +62,8 @@ namespace FinalProject1_winform.Controls
             // 
             this.gbProcess.BackColor = System.Drawing.Color.White;
             this.gbProcess.Controls.Add(this.button_gudi2);
-            this.gbProcess.Controls.Add(this.button_gudi1);
-            this.gbProcess.Controls.Add(this.btnOK);
+            this.gbProcess.Controls.Add(this.btnStop);
+            this.gbProcess.Controls.Add(this.btnStart);
             this.gbProcess.Controls.Add(this.txtNGQty);
             this.gbProcess.Controls.Add(this.txtOKQty);
             this.gbProcess.Controls.Add(this.txtRemainQty);
@@ -83,6 +87,53 @@ namespace FinalProject1_winform.Controls
             this.gbProcess.TabIndex = 0;
             this.gbProcess.TabStop = false;
             this.gbProcess.Text = "Leg가공(공정이름)";
+            // 
+            // button_gudi2
+            // 
+            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.button_gudi2.FlatAppearance.BorderSize = 0;
+            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_gudi2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.button_gudi2.Location = new System.Drawing.Point(273, 508);
+            this.button_gudi2.Name = "button_gudi2";
+            this.button_gudi2.Size = new System.Drawing.Size(124, 57);
+            this.button_gudi2.TabIndex = 18;
+            this.button_gudi2.Text = "실적저장";
+            this.button_gudi2.UseVisualStyleBackColor = false;
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnStop.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnStop.ForeColor = System.Drawing.Color.Red;
+            this.btnStop.Location = new System.Drawing.Point(139, 508);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(124, 57);
+            this.btnStop.TabIndex = 17;
+            this.btnStop.Text = "중지";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnStart.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnStart.ForeColor = System.Drawing.Color.Lime;
+            this.btnStart.Location = new System.Drawing.Point(4, 508);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(125, 57);
+            this.btnStart.TabIndex = 16;
+            this.btnStart.Text = "시작";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // txtNGQty
             // 
@@ -242,55 +293,54 @@ namespace FinalProject1_winform.Controls
             this.lblYN.TabIndex = 16;
             this.lblYN.Text = "(가동)/(비가동)";
             // 
-            // btnOK
+            // lblTaskID
             // 
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.btnOK.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.btnOK.FlatAppearance.BorderSize = 0;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOK.ForeColor = System.Drawing.Color.Lime;
-            this.btnOK.Location = new System.Drawing.Point(4, 508);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(125, 57);
-            this.btnOK.TabIndex = 16;
-            this.btnOK.Text = "시작";
-            this.btnOK.UseVisualStyleBackColor = false;
+            this.lblTaskID.AutoSize = true;
+            this.lblTaskID.Enabled = false;
+            this.lblTaskID.Location = new System.Drawing.Point(5, 10);
+            this.lblTaskID.Name = "lblTaskID";
+            this.lblTaskID.Size = new System.Drawing.Size(44, 12);
+            this.lblTaskID.TabIndex = 19;
+            this.lblTaskID.Text = "TaskID";
             // 
-            // button_gudi1
+            // lblIP
             // 
-            this.button_gudi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi1.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi1.FlatAppearance.BorderSize = 0;
-            this.button_gudi1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_gudi1.ForeColor = System.Drawing.Color.Red;
-            this.button_gudi1.Location = new System.Drawing.Point(139, 508);
-            this.button_gudi1.Name = "button_gudi1";
-            this.button_gudi1.Size = new System.Drawing.Size(124, 57);
-            this.button_gudi1.TabIndex = 17;
-            this.button_gudi1.Text = "중지";
-            this.button_gudi1.UseVisualStyleBackColor = false;
+            this.lblIP.AutoSize = true;
+            this.lblIP.Enabled = false;
+            this.lblIP.Location = new System.Drawing.Point(65, 10);
+            this.lblIP.Name = "lblIP";
+            this.lblIP.Size = new System.Drawing.Size(16, 12);
+            this.lblIP.TabIndex = 20;
+            this.lblIP.Text = "IP";
             // 
-            // button_gudi2
+            // lblPort
             // 
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_gudi2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.button_gudi2.Location = new System.Drawing.Point(273, 508);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(124, 57);
-            this.button_gudi2.TabIndex = 18;
-            this.button_gudi2.Text = "실적저장";
-            this.button_gudi2.UseVisualStyleBackColor = false;
+            this.lblPort.AutoSize = true;
+            this.lblPort.Enabled = false;
+            this.lblPort.Location = new System.Drawing.Point(97, 10);
+            this.lblPort.Name = "lblPort";
+            this.lblPort.Size = new System.Drawing.Size(27, 12);
+            this.lblPort.TabIndex = 21;
+            this.lblPort.Text = "Port";
+            // 
+            // lblRemark
+            // 
+            this.lblRemark.AutoSize = true;
+            this.lblRemark.Enabled = false;
+            this.lblRemark.Location = new System.Drawing.Point(140, 10);
+            this.lblRemark.Name = "lblRemark";
+            this.lblRemark.Size = new System.Drawing.Size(48, 12);
+            this.lblRemark.TabIndex = 22;
+            this.lblRemark.Text = "Remark";
             // 
             // UCMachine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblRemark);
+            this.Controls.Add(this.lblPort);
+            this.Controls.Add(this.lblIP);
+            this.Controls.Add(this.lblTaskID);
             this.Controls.Add(this.lblYN);
             this.Controls.Add(this.gbProcess);
             this.Name = "UCMachine";
@@ -324,7 +374,11 @@ namespace FinalProject1_winform.Controls
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblYN;
         private Button_gudi button_gudi2;
-        private Button_gudi button_gudi1;
-        private Button_gudi btnOK;
+        private Button_gudi btnStop;
+        private Button_gudi btnStart;
+        private System.Windows.Forms.Label lblTaskID;
+        private System.Windows.Forms.Label lblIP;
+        private System.Windows.Forms.Label lblPort;
+        private System.Windows.Forms.Label lblRemark;
     }
 }
