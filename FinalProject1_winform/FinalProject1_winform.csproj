@@ -180,6 +180,12 @@
     <Compile Include="frmInstockAdd.Designer.cs">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInstockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstockList.Designer.cs">
+      <DependentUpon>frmInstockList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmNotice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -692,6 +698,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInstockAdd.resx">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstockList.resx">
+      <DependentUpon>frmInstockList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmNotice.resx">
       <DependentUpon>frmNotice.cs</DependentUpon>

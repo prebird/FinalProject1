@@ -65,7 +65,7 @@ namespace FinalProject1_winform
             if (!cboType.CheckCboValidateValue("입출고타입")) return;
             if (!cbofactory.CheckCboValidateValue("입출고창고")) return;
             if (!cboItem.CheckCboValidateValue("품목")) return;
-            if (txtCnt.CheckNullOrEmptyOk("입출고 갯수")) return;
+            if (!txtCnt.CheckNullOrEmptyOk("입출고 갯수")) return;
 
 
             
