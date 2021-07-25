@@ -51,5 +51,10 @@ namespace FinalProject1_winform.Demand_Plan
             CommonUtil.ComboBinding<ProcessVO>(cboProcess, processes, "ProcessName", "ProcessID");
             CommonUtil.ComboBinding<EquipmentVO>(cboEquipment, equipments, "EquipmentName", "EquipmentID");
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
