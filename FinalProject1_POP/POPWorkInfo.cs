@@ -16,6 +16,7 @@ namespace FinalProject1_POP
         POPVO User;
         List<POPItemVO> Item;
         List<POPProcessVO> Process;
+        POPWorkOrderVO Order;
         public POPWorkInfo(POPVO user)
         {
             InitializeComponent();
@@ -81,6 +82,7 @@ namespace FinalProject1_POP
                 txtStart.Text = "00:00"; //List[0].pd_stime;
                 txtEnd.Text = "00:00"; //List[0].pd_etim;
                 txtOrderQty.Text = List[0].OrderQuantity.ToString();
+                Order = List[0];
                 
             }
             else
@@ -109,6 +111,21 @@ namespace FinalProject1_POP
                 Convert.ToInt32(cboItem.SelectedValue), Convert.ToInt32(cboProcess.SelectedValue));
             dgv_WorkList.DataSource = list;
             dgv_WorkList.ClearSelection();
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+           if(txtWorkid.Text == "")
+           {              
+               MessageBox.Show("작업을 선택하여 주십시오.");
+               return;
+           }
+           
+           
+           //1. POPFactoryInfo에 필드Order 넘기기
+           //2. Main에 Order 넘기기
+
+
         }
     }
 }

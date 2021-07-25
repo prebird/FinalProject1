@@ -59,6 +59,7 @@ namespace FinalProject1_VO
         public string  pd_etim { get; set; }
         public int ok_cnt { get; set; }
         public int ng_cnt { get; set; }
+        public string processName { get; set; }
 
     }
 }

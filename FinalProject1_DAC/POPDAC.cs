@@ -85,10 +85,11 @@ namespace FinalProject1_DAC
         //작업계획 상태일때
         public List<POPWorkOrderVO> GetWorkOrder(string workOrderID)
         {
-            string sql = @"select WO.WorkOrderID, WO.PlanID, I.Item_code, EquipmentName, OrderQuantity
+            string sql = @"select WO.WorkOrderID, WO.PlanID, I.Item_code, EquipmentName, OrderQuantity, processName
                            from WorkOrder WO inner join BOR B on WO.BORID = B.BORID
 				                             inner join Item I on B.ItemID = I.Item_ID
 											 inner join Equipment E on B.EquipmentID = E.EquipmentID
+											 inner join ProcessInfo P on B.ProcessID = P.ProcessID
                             where WO.WorkOrderID = @WorkOrderID";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))

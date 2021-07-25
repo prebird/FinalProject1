@@ -14,6 +14,8 @@ namespace FinalProject1_POP
     public partial class POPMain : Form
     {
         POPVO User;
+        POPWorkOrderVO Order;
+
         public POPMain(POPVO user)
         {
             InitializeComponent();
@@ -41,6 +43,7 @@ namespace FinalProject1_POP
             childForm.Show();
         }
 
+
         private void btnUser_Click(object sender, EventArgs e)
         {
             openChildForm(new POPUser(User));
@@ -48,6 +51,7 @@ namespace FinalProject1_POP
         private void btnWork_Click(object sender, EventArgs e)
         {
             openChildForm(new POPWorkInfo(User));
+            
         }
         private void POPMain_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -56,7 +60,7 @@ namespace FinalProject1_POP
 
         private void btnFactory_Click(object sender, EventArgs e)
         {
-            openChildForm(new POPFactoryInfo());
+            openChildForm(new POPFactoryInfo(Order));
         }
     }
 }
