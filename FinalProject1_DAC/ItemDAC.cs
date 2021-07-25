@@ -144,5 +144,46 @@ namespace FinalProject1_DAC
                 return (iCnt > 0);
             }
         }
+
+        public List<OrderStatsVO> GetOrderBestProduct()
+        {
+            string sql = @" with Best3Product as
+ (
+	select top 3 po.PO_ProductID ProductID, i.Item_Name ProductName
+	from PurchaseOrder po inner join Item i on po.PO_ProductID = i.Item_ID 
+	group by po.PO_ProductID, i.Item_Name
+	order by Sum(po.PO_OrderCnt) desc
+ ), B_Month as
+ (
+	select 1 as mon
+	union all
+	select mon+1 as mon from B_Month where mon < 12
+ ), BaseData as
+ (
+	select ProductID, ProductName, mon
+	from Best3Product, B_Month
+ )
+
+ select B.ProductID, B.ProductName, B.mon MM, isnull(O.qty, 0) qty
+  from BaseData B left outer join
+			(select po.PO_ProductID, P.ProductName, Month(po.PO_UploadDate) MM, sum(po.PO_OrderCnt) qty
+			  from PurchaseOrder po inner join Best3Product P on po.PO_ProductID = P.ProductID
+			 group by po.PO_ProductID, P.ProductName, Month(po.PO_UploadDate)
+			 ) O 
+			 on B.ProductID = O.PO_ProductID and B.mon = O.MM
+ order by 1, 2";
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+
+                cmd.Connection.Open();
+                List<OrderStatsVO> list = Helper.DataReaderMapToList<OrderStatsVO>(cmd.ExecuteReader());
+                cmd.Connection.Close();
+
+                return list;
+            }
+        }
     }
 }

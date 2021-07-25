@@ -31,11 +31,15 @@ namespace FinalProject1_winform.Demand_Plan
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductionPlanMake));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSave = new FinalProject1_winform.Button_gudi();
-            this.btnClose = new FinalProject1_winform.Button_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.dtpMakeDate = new FinalProject1_winform.DateTimePicker_gudi();
+            this.label_gudi10 = new FinalProject1_winform.Label_gudi();
+            this.txtINS_EMP = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi9 = new FinalProject1_winform.Label_gudi();
+            this.txtQuantity = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
+            this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
             this.txtIns_Date = new FinalProject1_winform.Controls.TextBox_gudi();
             this.txtPriorDate = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
@@ -46,14 +50,10 @@ namespace FinalProject1_winform.Demand_Plan
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi7 = new FinalProject1_winform.Label_gudi();
-            this.txtQuantity = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi8 = new FinalProject1_winform.Label_gudi();
-            this.txtINS_EMP = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi9 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi10 = new FinalProject1_winform.Label_gudi();
-            this.dtpMakeDate = new FinalProject1_winform.DateTimePicker_gudi();
+            this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.btnSave = new FinalProject1_winform.Button_gudi();
+            this.btnClose = new FinalProject1_winform.Button_gudi();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
@@ -70,40 +70,6 @@ namespace FinalProject1_winform.Demand_Plan
             this.panel2.Size = new System.Drawing.Size(474, 65);
             this.panel2.TabIndex = 5;
             // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.btnSave.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(150, 16);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 33);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.btnClose.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(242, 16);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 33);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "닫기";
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
@@ -115,25 +81,100 @@ namespace FinalProject1_winform.Demand_Plan
             this.panel1.Size = new System.Drawing.Size(474, 37);
             this.panel1.TabIndex = 6;
             // 
-            // pictureBox_gudi1
+            // dtpMakeDate
             // 
-            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
-            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi1.TabIndex = 3;
-            this.pictureBox_gudi1.TabStop = false;
+            this.dtpMakeDate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dtpMakeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpMakeDate.Location = new System.Drawing.Point(304, 197);
+            this.dtpMakeDate.Name = "dtpMakeDate";
+            this.dtpMakeDate.Size = new System.Drawing.Size(149, 25);
+            this.dtpMakeDate.TabIndex = 41;
             // 
-            // label_gudi1
+            // label_gudi10
             // 
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
-            this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "생산계획 생성";
+            this.label_gudi10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_gudi10.AutoSize = true;
+            this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi10.Location = new System.Drawing.Point(228, 200);
+            this.label_gudi10.Name = "label_gudi10";
+            this.label_gudi10.Size = new System.Drawing.Size(68, 17);
+            this.label_gudi10.TabIndex = 40;
+            this.label_gudi10.Text = "생산계획일";
+            // 
+            // txtINS_EMP
+            // 
+            this.txtINS_EMP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtINS_EMP.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtINS_EMP.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtINS_EMP.Location = new System.Drawing.Point(304, 228);
+            this.txtINS_EMP.Name = "txtINS_EMP";
+            this.txtINS_EMP.Size = new System.Drawing.Size(149, 25);
+            this.txtINS_EMP.TabIndex = 39;
+            this.txtINS_EMP.Text = "박기덕";
+            // 
+            // label_gudi9
+            // 
+            this.label_gudi9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_gudi9.AutoSize = true;
+            this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi9.Location = new System.Drawing.Point(252, 231);
+            this.label_gudi9.Name = "label_gudi9";
+            this.label_gudi9.Size = new System.Drawing.Size(44, 17);
+            this.label_gudi9.TabIndex = 38;
+            this.label_gudi9.Text = "수정자";
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtQuantity.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.txtQuantity.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtQuantity.Location = new System.Drawing.Point(72, 138);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(149, 25);
+            this.txtQuantity.TabIndex = 37;
+            // 
+            // label_gudi8
+            // 
+            this.label_gudi8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_gudi8.AutoSize = true;
+            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi8.Location = new System.Drawing.Point(6, 141);
+            this.label_gudi8.Name = "label_gudi8";
+            this.label_gudi8.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi8.TabIndex = 36;
+            this.label_gudi8.Text = "생산 수량";
+            // 
+            // cboProcess
+            // 
+            this.cboProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboProcess.FormattingEnabled = true;
+            this.cboProcess.Items.AddRange(new object[] {
+            "선택",
+            "사용",
+            "사용 안함"});
+            this.cboProcess.Location = new System.Drawing.Point(304, 72);
+            this.cboProcess.Name = "cboProcess";
+            this.cboProcess.Size = new System.Drawing.Size(149, 24);
+            this.cboProcess.TabIndex = 35;
+            // 
+            // label_gudi7
+            // 
+            this.label_gudi7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_gudi7.AutoSize = true;
+            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi7.Location = new System.Drawing.Point(252, 75);
+            this.label_gudi7.Name = "label_gudi7";
+            this.label_gudi7.Size = new System.Drawing.Size(44, 17);
+            this.label_gudi7.TabIndex = 34;
+            this.label_gudi7.Text = "공정명";
             // 
             // txtIns_Date
             // 
@@ -266,100 +307,59 @@ namespace FinalProject1_winform.Demand_Plan
             this.label_gudi2.TabIndex = 24;
             this.label_gudi2.Text = "PlanID";
             // 
-            // cboProcess
+            // pictureBox_gudi1
             // 
-            this.cboProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Items.AddRange(new object[] {
-            "선택",
-            "사용",
-            "사용 안함"});
-            this.cboProcess.Location = new System.Drawing.Point(304, 72);
-            this.cboProcess.Name = "cboProcess";
-            this.cboProcess.Size = new System.Drawing.Size(149, 24);
-            this.cboProcess.TabIndex = 35;
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 3;
+            this.pictureBox_gudi1.TabStop = false;
             // 
-            // label_gudi7
+            // label_gudi1
             // 
-            this.label_gudi7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_gudi7.AutoSize = true;
-            this.label_gudi7.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi7.Location = new System.Drawing.Point(252, 75);
-            this.label_gudi7.Name = "label_gudi7";
-            this.label_gudi7.Size = new System.Drawing.Size(44, 17);
-            this.label_gudi7.TabIndex = 34;
-            this.label_gudi7.Text = "공정명";
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label_gudi1.Location = new System.Drawing.Point(48, 11);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(155, 23);
+            this.label_gudi1.TabIndex = 2;
+            this.label_gudi1.Text = "생산계획 생성";
             // 
-            // txtQuantity
+            // btnSave
             // 
-            this.txtQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQuantity.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtQuantity.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtQuantity.Location = new System.Drawing.Point(72, 138);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(149, 25);
-            this.txtQuantity.TabIndex = 37;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.btnSave.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(150, 16);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(80, 33);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label_gudi8
+            // btnClose
             // 
-            this.label_gudi8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_gudi8.AutoSize = true;
-            this.label_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi8.Location = new System.Drawing.Point(6, 141);
-            this.label_gudi8.Name = "label_gudi8";
-            this.label_gudi8.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi8.TabIndex = 36;
-            this.label_gudi8.Text = "생산 수량";
-            // 
-            // txtINS_EMP
-            // 
-            this.txtINS_EMP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtINS_EMP.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtINS_EMP.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtINS_EMP.Location = new System.Drawing.Point(304, 228);
-            this.txtINS_EMP.Name = "txtINS_EMP";
-            this.txtINS_EMP.ReadOnly = true;
-            this.txtINS_EMP.Size = new System.Drawing.Size(149, 25);
-            this.txtINS_EMP.TabIndex = 39;
-            // 
-            // label_gudi9
-            // 
-            this.label_gudi9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_gudi9.AutoSize = true;
-            this.label_gudi9.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi9.Location = new System.Drawing.Point(252, 231);
-            this.label_gudi9.Name = "label_gudi9";
-            this.label_gudi9.Size = new System.Drawing.Size(44, 17);
-            this.label_gudi9.TabIndex = 38;
-            this.label_gudi9.Text = "수정자";
-            // 
-            // label_gudi10
-            // 
-            this.label_gudi10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_gudi10.AutoSize = true;
-            this.label_gudi10.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi10.Location = new System.Drawing.Point(228, 200);
-            this.label_gudi10.Name = "label_gudi10";
-            this.label_gudi10.Size = new System.Drawing.Size(68, 17);
-            this.label_gudi10.TabIndex = 40;
-            this.label_gudi10.Text = "생산계획일";
-            // 
-            // dtpMakeDate
-            // 
-            this.dtpMakeDate.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dtpMakeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpMakeDate.Location = new System.Drawing.Point(304, 197);
-            this.dtpMakeDate.Name = "dtpMakeDate";
-            this.dtpMakeDate.Size = new System.Drawing.Size(149, 25);
-            this.dtpMakeDate.TabIndex = 41;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnClose.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(242, 16);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(80, 33);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "닫기";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // frmProductionPlanMake
             // 

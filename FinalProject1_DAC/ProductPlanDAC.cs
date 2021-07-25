@@ -122,7 +122,7 @@ EXEC(@QRY)
 
         public bool InsertWorkOrder(WorkOrderVO workOrder)
         {
-            string sql = "insert into WorkOrder(WorkOrderID,PlanID,EmpID,WorkDate,BORID,Status) values(@WorkOrderID, @PlanID, @EmpID, @WorkDate, @BORID, @Status)";
+            string sql = "insert into WorkOrder(WorkOrderID,PlanID,EmpID,WorkDate,BORID,Status,OrderQuantity) values(@WorkOrderID, @PlanID, @EmpID, @WorkDate, @BORID, @Status,@OrderQuantity)";
 
             using (SqlCommand cmd = new SqlCommand(sql,conn))
             {
@@ -132,6 +132,7 @@ EXEC(@QRY)
                 cmd.Parameters.AddWithValue("@WorkDate", workOrder.WorkDate);
                 cmd.Parameters.AddWithValue("@BORID", workOrder.BORID);
                 cmd.Parameters.AddWithValue("@Status", workOrder.Status);
+                cmd.Parameters.AddWithValue("@OrderQuantity", workOrder.OrderQuantity);
 
                 int affectRow = cmd.ExecuteNonQuery();
 

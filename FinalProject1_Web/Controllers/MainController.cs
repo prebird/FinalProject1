@@ -10,7 +10,7 @@ namespace FinalProject1_Web.Controllers
     {
 
         // GET: Main
-        public ActionResult Index1()
+        public ActionResult Index()
         {
             return View();
         }

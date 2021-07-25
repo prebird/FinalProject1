@@ -14,10 +14,13 @@ namespace FinalProject1_winform
 {
     public partial class frmInstockAdd : Form
     {
-
-        public frmInstockAdd()
+        RestockOrderVO throwedVO;
+        UserInfoVO user;
+        public frmInstockAdd(RestockOrderVO throwedvo, UserInfoVO user)
         {
             InitializeComponent();
+            this.throwedVO = throwedvo;
+            this.user = user;
         }
 
         private void frmInstockAdd_Load(object sender, EventArgs e)
@@ -25,8 +28,18 @@ namespace FinalProject1_winform
             //바인딩
             CommonUtil.ComboBindingWHid(cbofactory);
             CommonUtil.ComboBindingItemID(cboItem);
+            cbofactory.SelectedIndex = 0;
+
             txtTime.Text = DateTime.Now.ToString();
-            
+
+            txtROID.Text = throwedVO.RO_ID.ToString();
+            txtUser.Text = user.user_name;
+            txtCnt.Text = throwedVO.ins_cnt.ToString();
+
+            // cbo품목 바인딩
+            cboItem.SelectedIndex = cboItem.FindString(throwedVO.Item_Name);
+
+
         }
 
         private void cboType_SelectedIndexChanged(object sender, EventArgs e)

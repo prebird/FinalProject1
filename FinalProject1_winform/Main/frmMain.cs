@@ -17,6 +17,11 @@ namespace FinalProject1_winform
     {
         List<MenuVO> Menus;
         UserInfoVO user;
+        public UserInfoVO User 
+        {
+            get { return user; }
+        
+        }
 
         public frmMain(UserInfoVO user, Form loginform)
         {
@@ -45,6 +50,9 @@ namespace FinalProject1_winform
 
             lbluserName.Text = user.user_name + " 님";
             lbluserTitle.Text = "부서 : " + user.depart_name;
+
+            // 노트
+            
 
         }
 
@@ -380,6 +388,12 @@ namespace FinalProject1_winform
             frmLogin frm = (frmLogin)this.Tag;
             frm.Show();
 
+        }
+
+        private void pictureBox_gudi2_Click(object sender, EventArgs e)
+        {
+            frmNotice frm = new frmNotice();
+            frm.ShowDialog();
         }
     }
 }

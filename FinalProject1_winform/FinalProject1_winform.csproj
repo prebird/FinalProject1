@@ -180,6 +180,18 @@
     <Compile Include="frmInstockAdd.Designer.cs">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\frmNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmNotice.Designer.cs">
+      <DependentUpon>frmNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmNoticeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmNoticeDetail.Designer.cs">
+      <DependentUpon>frmNoticeDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmAuthAddpop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -608,6 +620,7 @@
     <Compile Include="Service\RestockService.cs" />
     <Compile Include="Service\ShiftService.cs" />
     <Compile Include="Service\SalesMasterService.cs" />
+    <Compile Include="Service\WorkOrderService.cs" />
     <EmbeddedResource Include="BaseForms\BasicControls.resx">
       <DependentUpon>BasicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -679,6 +692,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInstockAdd.resx">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmNotice.resx">
+      <DependentUpon>frmNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmNoticeDetail.resx">
+      <DependentUpon>frmNoticeDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmAuthAddpop.resx">
       <DependentUpon>frmAuthAddpop.cs</DependentUpon>
@@ -854,6 +873,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\bar-chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\bell.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Copy_16x16.png">

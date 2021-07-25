@@ -78,5 +78,27 @@ namespace FinalProject1_DAC
             }
             return dt;
         }
+
+        public bool ProductionPlanTrans(ProductionPlanVO ppVO)
+        {
+            string sql = @"SP_ProductionPlanTrans";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@PlanID", ppVO.PlanID);
+                cmd.Parameters.AddWithValue("@Status", ppVO.Status);
+                cmd.Parameters.AddWithValue("@INS_EMP", ppVO.INS_EMP);
+
+                cmd.Parameters.AddWithValue("@BORID", ppVO.BORID);
+                cmd.Parameters.AddWithValue("@PlanDate", ppVO.PlanDate);
+                cmd.Parameters.AddWithValue("@Quantity", ppVO.Quantity);
+
+                int iRowAffect = cmd.ExecuteNonQuery();
+                return iRowAffect > 0;
+            }
+        }
+
     }
 }
