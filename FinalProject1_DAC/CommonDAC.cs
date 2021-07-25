@@ -131,6 +131,15 @@ namespace FinalProject1_DAC
             return dt;
         }
 
+        public List<FactoryVO> GetCommboWHid()
+        {
+            string sql = "select factory_id, factory_name from factory where factory_grade = '창고' and deleted = 0";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<FactoryVO>(cmd.ExecuteReader());
+            }
+        }
+
 
 
 

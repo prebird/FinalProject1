@@ -18,7 +18,7 @@ namespace FinalProject1_winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmWorkOrderMake());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -24,5 +24,9 @@ namespace FinalProject1_VO
 
         public int ins_cnt { get; set; }
         public string ins_date { get; set; }
+        public int factory_id { get; set; }
+        public string factory_name { get; set; }
+
+        public int ih_product_count { get; set; }
     }
 }

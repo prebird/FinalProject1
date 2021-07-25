@@ -66,5 +66,11 @@ namespace FinalProject1_winform
             CommonDAC dac = new CommonDAC();
             return dac.GetCommboCompanyName();
         }
+
+        public List<FactoryVO> GetCommboWHid()
+        {
+            CommonDAC dac = new CommonDAC();
+            return dac.GetCommboWHid();
+        }
     }
 }

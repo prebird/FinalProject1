@@ -174,40 +174,46 @@
     <Compile Include="Demand_Plan\frmProductionPlanMake.Designer.cs">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAuthAddpop.cs">
+    <Compile Include="frmInstockAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuthAddpop.Designer.cs">
+    <Compile Include="frmInstockAdd.Designer.cs">
+      <DependentUpon>frmInstockAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmAuthAddpop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmAuthAddpop.Designer.cs">
       <DependentUpon>frmAuthAddpop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInspectAdd.cs">
+    <Compile Include="Purchasing\frmInspectAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInspectAdd.Designer.cs">
+    <Compile Include="Purchasing\frmInspectAdd.Designer.cs">
       <DependentUpon>frmInspectAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInstockWatiPopUp.cs">
+    <Compile Include="Main\frmInstockWatiPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInstockWatiPopUp.Designer.cs">
+    <Compile Include="Main\frmInstockWatiPopUp.Designer.cs">
       <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Main\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Main\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserInfo.cs">
+    <Compile Include="Main\frmUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserInfo.Designer.cs">
+    <Compile Include="Main\frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserJoin.cs">
+    <Compile Include="Main\frmUserJoin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserJoin.Designer.cs">
+    <Compile Include="Main\frmUserJoin.Designer.cs">
       <DependentUpon>frmUserJoin.cs</DependentUpon>
     </Compile>
     <Compile Include="Item\frmBarcode.cs">
@@ -671,7 +677,10 @@
     <EmbeddedResource Include="Demand_Plan\frmProductionPlanMake.resx">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAuthAddpop.resx">
+    <EmbeddedResource Include="frmInstockAdd.resx">
+      <DependentUpon>frmInstockAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmAuthAddpop.resx">
       <DependentUpon>frmAuthAddpop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCommonCode.resx">
@@ -680,22 +689,22 @@
     <EmbeddedResource Include="Demand_Plan\frmMasterInsert.resx">
       <DependentUpon>frmMasterInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInspectAdd.resx">
+    <EmbeddedResource Include="Purchasing\frmInspectAdd.resx">
       <DependentUpon>frmInspectAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInstockWatiPopUp.resx">
+    <EmbeddedResource Include="Main\frmInstockWatiPopUp.resx">
       <DependentUpon>frmInstockWatiPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShift.resx">
       <DependentUpon>frmShift.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUserInfo.resx">
+    <EmbeddedResource Include="Main\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUserJoin.resx">
+    <EmbeddedResource Include="Main\frmUserJoin.resx">
       <DependentUpon>frmUserJoin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Item\frmBarcode.resx">

@@ -240,6 +240,20 @@ namespace FinalProject1_winform
             ComboBinding<ItemVO>(cbo, list, "Item_Name", "Item_ID");
         }
 
+        public static void ComboBindingWHid(ComboBox cbo)
+        {
+            CommonService service = new CommonService();
+            List<FactoryVO> list = service.GetCommboWHid();
+            FactoryVO item = new FactoryVO
+            {
+                factory_id = 0,
+                factory_name = "선택"
+            };
+            list.Insert(0, item);
+
+            ComboBinding<FactoryVO>(cbo, list, "factory_name", "factory_id");
+        }
+
         #region 옛날 유틸
         //public static void ColorChange(object sender, Panel panel)
         //{

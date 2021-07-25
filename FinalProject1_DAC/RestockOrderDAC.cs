@@ -111,6 +111,84 @@ where 1=1 and RO_Status = 'RO_01'");
             }
         }
 
+        public List<RestockOrderVO> GetInsWaitAndAfterInspectList(string ro_id, string fromdate, string todate, string companyid, string status)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date from RestockOrder ro
+inner join item i on i.Item_ID = ro.itemid
+inner join Company c on c.company_id = ro.Companyid
+left outer join CommonCode cc on cc.common_value = RO_Status
+left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
+where 1=1 and RO_Status = 'RO_02' and RO_Status = 'RO_03' and and RO_Status = 'RO_04'");
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                if (!string.IsNullOrEmpty(ro_id))
+                {
+                    sb.Append(" and ro.ro_id like @ro_id");
+                    cmd.Parameters.AddWithValue("@ro_id", $"%{ro_id}%");
+                }
+                if (companyid != "0")
+                {
+                    sb.Append(" and Companyid = @companyid");
+                    cmd.Parameters.AddWithValue("@companyid", companyid);
+                }
+                if (status != "0")
+                {
+                    sb.Append(" and RO_Status = @RO_Status");
+                    cmd.Parameters.AddWithValue("@RO_Status", status);
+                }
+                sb.Append(" and dueDate >= @fromdate");
+                cmd.Parameters.AddWithValue("@fromdate", fromdate);
+                sb.Append(" and dueDate <= @todate");
+                cmd.Parameters.AddWithValue("@todate", todate);
+
+
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+
+                List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
+                return list;
+            }
+        }
+
+        public List<RestockOrderVO> GetCompleteList(string ro_id, string fromdate, string todate, string companyid)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date, factory_id, factory_name, ih_product_count from RestockOrder ro
+inner join item i on i.Item_ID = ro.itemid
+inner join Company c on c.company_id = ro.Companyid
+inner join inventory_hist ih on ih.RO_ID = ro.RO_ID 
+left outer join CommonCode cc on cc.common_value = RO_Status
+left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
+where 1=1 RO_Status = 'RO_04'");
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                if (!string.IsNullOrEmpty(ro_id))
+                {
+                    sb.Append(" and ro.ro_id like @ro_id");
+                    cmd.Parameters.AddWithValue("@ro_id", $"%{ro_id}%");
+                }
+                if (companyid != "0")
+                {
+                    sb.Append(" and Companyid = @companyid");
+                    cmd.Parameters.AddWithValue("@companyid", companyid);
+                }
+                sb.Append(" and dueDate >= @fromdate");
+                cmd.Parameters.AddWithValue("@fromdate", fromdate);
+                sb.Append(" and dueDate <= @todate");
+                cmd.Parameters.AddWithValue("@todate", todate);
+
+
+                cmd.Connection = conn;
+                cmd.CommandText = sb.ToString();
+
+                List<RestockOrderVO> list = Helper.DataReaderMapToList<RestockOrderVO>(cmd.ExecuteReader());
+                return list;
+            }
+        }
+
         public DataTable GetPrintData(string strCheckBarCodeID)
         {
             string sql = @"select RO_ID Item_Name, company_name, Qty from RestockOrder RO
@@ -355,6 +433,155 @@ inner join item i on i.Item_ID = ro.itemid");
             }
         }
 
-        
+        public bool insertInventoryIN(InventoryHistVO hist)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction trans = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.Transaction = trans;
+
+                try
+                {
+                    // 인벤토리 히스토리 데이터 업데이트
+                    cmd.CommandText = @"insert Inventory_hist (factory_id, Item_id, PO_ID, RO_ID, ih_product_count, ih_category, ih_uadmin, ih_udate, ih_comment)
+values (@factory_id, @Item_id, @PO_ID, @RO_ID, @ih_product_count, @ih_category, @ih_uadmin, @ih_udate, @ih_comment)";
+                    cmd.Parameters.AddWithValue("@factory_id", hist.factory_id);
+                    cmd.Parameters.AddWithValue("@Item_id", hist.Item_id);
+                    if (hist.PO_ID != null)
+                    {
+                        cmd.Parameters.AddWithValue("@PO_ID", hist.PO_ID); 
+                    }
+                    if (hist.RO_ID != null)
+                    {
+                        cmd.Parameters.AddWithValue("@RO_ID", hist.RO_ID); 
+                    }
+                    cmd.Parameters.AddWithValue("@ih_product_count", hist.ih_product_count);
+                    cmd.Parameters.AddWithValue("@ih_category", hist.ih_category);
+                    if (hist.ih_uadmin != null)
+                    {
+                        cmd.Parameters.AddWithValue("@ih_uadmin", hist.ih_uadmin); 
+                    }
+                    cmd.Parameters.AddWithValue("@ih_udate", hist.ih_udate);
+                    if (hist.ih_comment != null)
+                    {
+                        cmd.Parameters.AddWithValue("@ih_comment", hist.ih_comment); 
+                    }
+                    cmd.ExecuteNonQuery();
+
+                    // 인벤토리 데이터 업데이트
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "InsertInventoryIN";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@P_factory_id", hist.factory_id);
+                    cmd.Parameters.AddWithValue("@P_item_id", hist.Item_id);
+                    cmd.Parameters.AddWithValue("@P_count", hist.ih_product_count);
+
+                    cmd.ExecuteNonQuery();
+
+                    // RO 상태 업데이트
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = @"Update RestockOrder set RO_Status = 'RO_04' where RO_ID = @roid";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@roid", hist.RO_ID);
+                    cmd.ExecuteNonQuery();
+
+                    trans.Commit();
+                    Dispose();
+                    return true;
+                }
+                catch (Exception err)
+                {
+                    Debug.WriteLine(err.Message);
+                    trans.Rollback();
+                    Dispose();
+                    return false;
+                }
+
+
+
+            }
+        }
+
+        public bool insertInventoryOUT(InventoryHistVO hist)
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                SqlTransaction trans = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.Transaction = trans;
+
+                try
+                {
+                    // 재고가 있는지 체크
+                    cmd.CommandText = "SELECT count_present FROM Inventory where factory_id = @factory_id and item_id = @item_id";
+                    cmd.Parameters.AddWithValue("@factory_id", hist.factory_id);
+                    cmd.Parameters.AddWithValue("@item_id", hist.Item_id);
+
+
+                    // 재고의 갯수가 출고하는 갯수보다 많으면
+                    if (Convert.ToInt32(cmd.ExecuteScalar()) > hist.ih_product_count)
+                    {
+                        // 인벤토리 히스토리 데이터 업데이트
+                        cmd.CommandText = @"insert Inventory_hist (factory_id, Item_id, PO_ID, RO_ID, ih_product_count, ih_category, ih_uadmin, ih_udate, ih_comment)
+values (@factory_id, @Item_id, @PO_ID, @RO_ID, @ih_product_count, @ih_category, @ih_uadmin, @ih_udate, @ih_comment)";
+                        cmd.Parameters.AddWithValue("@factory_id", hist.factory_id);
+                        cmd.Parameters.AddWithValue("@Item_id", hist.Item_id);
+                        if (hist.PO_ID != null)
+                        {
+                            cmd.Parameters.AddWithValue("@PO_ID", hist.PO_ID);
+                        }
+                        if (hist.RO_ID != null)
+                        {
+                            cmd.Parameters.AddWithValue("@RO_ID", hist.RO_ID);
+                        }
+                        cmd.Parameters.AddWithValue("@ih_product_count", hist.ih_product_count);
+                        cmd.Parameters.AddWithValue("@ih_category", hist.ih_category);
+                        if (hist.ih_uadmin != null)
+                        {
+                            cmd.Parameters.AddWithValue("@ih_uadmin", hist.ih_uadmin);
+                        }
+                        cmd.Parameters.AddWithValue("@ih_udate", hist.ih_udate);
+                        if (hist.ih_comment != null)
+                        {
+                            cmd.Parameters.AddWithValue("@ih_comment", hist.ih_comment);
+                        }
+                        cmd.ExecuteNonQuery();
+
+                        // 인벤토리 데이터 업데이트
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = "InsertInventoryOUT";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@P_factory_id", hist.factory_id);
+                        cmd.Parameters.AddWithValue("@P_item_id", hist.Item_id);
+                        cmd.Parameters.AddWithValue("@P_count", hist.ih_product_count);
+
+                        cmd.ExecuteNonQuery(); 
+                    }
+                    else
+                    {
+                        Debug.WriteLine("출고할 물품의 재고가 부족합니다.");
+                        return false;
+                    }
+
+
+                    trans.Commit();
+                    Dispose();
+                    return true;
+                }
+                catch (Exception err)
+                {
+                    Debug.WriteLine(err.Message);
+                    trans.Rollback();
+                    Dispose();
+                    return false;
+                }
+
+
+
+            }
+        }
+
+
     }
 }

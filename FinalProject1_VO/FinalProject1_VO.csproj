@@ -60,6 +60,8 @@
     <Compile Include="FactoryVO.cs" />
     <Compile Include="InspectCriteriaVO.cs" />
     <Compile Include="InspectVO.cs" />
+    <Compile Include="InventoryHistVO.cs" />
+    <Compile Include="InventoryVO.cs" />
     <Compile Include="ItemVO.cs" />
     <Compile Include="MenuVO.cs" />
     <Compile Include="MRPVO.cs" />
