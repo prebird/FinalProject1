@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using FinalProject1_DAC;
 using FinalProject1_VO;
+using FinalProject1_winform.Purchasing;
+
 
 namespace FinalProject1_winform
 {
@@ -67,7 +69,7 @@ namespace FinalProject1_winform
             string strCheckBarCodeID = string.Join(",", chkList);  // "11, 12, 13"
             RestockService service = new RestockService();
 
-            XtraReport1 rpt = new XtraReport1();
+            XtraReport2 rpt = new XtraReport2();
             rpt.DataSource = service.GetPrintData(strCheckBarCodeID);
             ReportPreviewForm frm = new ReportPreviewForm(rpt);
         }

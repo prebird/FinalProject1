@@ -54,6 +54,9 @@ namespace FinalProject1_POP
             Application.Exit();
         }
 
-        
+        private void btnFactory_Click(object sender, EventArgs e)
+        {
+            openChildForm(new POPFactoryInfo());
+        }
     }
 }

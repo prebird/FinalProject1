@@ -395,5 +395,16 @@ namespace FinalProject1_winform
             frmNotice frm = new frmNotice();
             frm.ShowDialog();
         }
+
+        private void pictureBox_gudi3_Click(object sender, EventArgs e)
+        {
+            CommonService service = new CommonService();
+            Menus = service.GetAllMenu();
+            pnlSideBar.Controls.Clear();
+            DrawDynamicMenu();
+            HideSideMenu();
+            SetEvent();
+            this.Refresh();
+        }
     }
 }

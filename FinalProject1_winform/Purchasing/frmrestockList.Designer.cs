@@ -127,6 +127,9 @@ namespace FinalProject1_winform
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.dgv1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv1.BackgroundColor = System.Drawing.Color.White;
             this.dgv1.CheckBoxAll = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -138,7 +141,6 @@ namespace FinalProject1_winform
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv1.HeaderCheckStatus = false;
             this.dgv1.Location = new System.Drawing.Point(0, 0);

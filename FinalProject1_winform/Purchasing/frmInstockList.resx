@@ -117,36 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="sqlDataSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
-  </metadata>
-  <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>select ro.RO_ID, itemid, i.Item_Name ,Companyid, c.company_name ,SuggestQty, Qty, cc.common_name RO_Status ,dueDate, Qty-isnull(ins_cnt,0) abletoCancel, inputFlag, ins.ins_cnt, ins.ins_date from RestockOrder ro
-inner join item i on i.Item_ID = ro.itemid
-inner join Company c on c.company_id = ro.Companyid
-left outer join CommonCode cc on cc.common_value = RO_Status
-left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
-where 1=1</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_gudi8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAmdEVYdFRpdGxlAEZpbmQ7QmFycztSaWJib247U3Rh
+        bmRhcmQ7U2VhcmNou2WcCAAAALlJREFUOE+lktsRgjAQRaEdakgpFGEFoj3QBaM1+SNtxHuY3QyziegM
+        Hydk9j4gQJdzPsW2pJSgF6NYxGqwZ4ZWhWFbzHAT+QtofQyDF3AXjG8xicFgzwxtjGHwAh4V0xQNzExb
+        ogZu4ryYhmhgZtoaNXDT6YLTRzh6iczhIfAW9gW/PqNzFc0CL2n9SE/RLCkFR5j5LqoS9CoQwWjEkhm9
+        GdojY7mKfcmLeRVoYWFnJiwuaM3A/+TuA3z+LAyTGFNzAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="sqlDataSource4.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTQiPjxWaWV3IE5hbWU9IlF1ZXJ5XzEiPjxGaWVsZCBOYW1lPSJST19JRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Iml0ZW1pZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ikl0ZW1fTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55aWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJjb21wYW55X25hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3VnZ2VzdFF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlJPX1N0YXR1cyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkdWVEYXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFibGV0b0NhbmNlbCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImlucHV0RmxhZyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJpbnNfY250IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iaW5zX2RhdGUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  <data name="btnExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAfdEVYdFRpdGxlAEV4cG9ydDtYc2x0O0V4cG9ydFRv
+        WHNsdDsT1nubAAAAf0lEQVQ4T62O0Q3AIAhEHczZuofT0p7xDEc0WtuPF0DgSTKzTs7ZFlx+HkgxWBgh
+        kpkAeWQoORWAKvkieFbeCTwq4MMJXeBEMYLSaulhJwo4GAU+Z11EgAc2Wu2XYq/XuxcQ39MLGFuTMeZy
+        nQhOqQLiGvxxRp3DzkywxQ8CSzeoz7/0Vbqm7gAAAABJRU5ErkJggg==
+</value>
   </data>
-  <metadata name="sqlDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <data name="sqlDataSource3.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTMiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iT1BfSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJJdGVtX05hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29tcGFueV9uYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImR1ZURhdGUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
-  </data>
-  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iT1BfU2VyaWFsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikl0ZW1fTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb21wYW55X25hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUXR5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iZHVlRGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
-  </data>
-  <metadata name="sqlDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iT1BfU2VyaWFsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikl0ZW1fTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb21wYW55X25hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUXR5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iZHVlRGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  <data name="pictureBox_gudi2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAT
+        FgAAExYBayTZjwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJrSURBVHhe7dux
+        URtRGEXhF5GKkBk1ocSBmyC1Y3qgChUAOSktuALKIPAQOSUwI/8/XmBZbgXvHM18mtXRZnfDfeN0Ogks
+        RnF8XIxxKNflptxqSr1tb3z49ADU51heSv/Q/Hrr47L9uCrbG8TQ24+HVRBLbz+eV0EsvX38QxwxiiNG
+        ccQojhjFEaM4YhRHjOKIURwxiiNGccQojhjFEaM4YhRHjOKIURwximM8boI4evtxtwpi6e3HRXlagjh6
+        84u3gyH7cl/+lO2Nmktv3Fvv308GrdVnV841pd2XvbdBLDGKI0ZxxCiOGMURozhiFEeM4ohRHDGKI0Zx
+        xCiOGMURozhiFEeM4ohRHDGKI0ZxxCiOj4sxzsq38qP81JR629747NMDUJ/L8rv0D82vt75cth/fy9+y
+        vUlz6817+/FrCeLp7T0NBNbbxz/EEaM4YhRHjOKIURwxiiNGccQojhjFEaM4YhRHjOKIURwxiiNGccQo
+        jhjFEaM4fCUM7PWVMF8K5Xp9KdTXwpn+vxbuwRCkj4Mh/bU8BB4Nm18+GiauGMURozhiFEeM4ohRHDGK
+        I0ZxxCiOGMURozhiFEeM4ohRHDGKI0ZxxCiOGMURozhiFMfXMMaunGtKuy97L6Pvy33xlND8euPeer9s
+        Py7KU9neqLn15r39uFuCeHr78bgKYunt4x/iiFEcMYojRnHEKI4YxRGjOGIUR4ziiFEcMYojRnHEKI4Y
+        xRGjOGIUR4ziiFEc43kTxNHbj4dVEEtvP65WQSxXbwdDjuVliZpfb318Pxm0PASHcl1uyq2m1Nv2xof3
+        3d8uxBSjKE7jH0xj8GwBNV4eAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

@@ -119,7 +119,7 @@ inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 left outer join CommonCode cc on cc.common_value = RO_Status
 left outer join InstockWait ins on ins.Ro_id = ro.RO_ID
-where 1=1 and RO_Status = 'RO_02' or RO_Status = 'RO_03' or RO_Status = 'RO_04'");
+where 1=1 and RO_Status = 'RO_03'");
 
             using (SqlCommand cmd = new SqlCommand())
             {
@@ -138,9 +138,9 @@ where 1=1 and RO_Status = 'RO_02' or RO_Status = 'RO_03' or RO_Status = 'RO_04'"
                     sb.Append(" and RO_Status = @RO_Status");
                     cmd.Parameters.AddWithValue("@RO_Status", status);
                 }
-                sb.Append(" and dueDate >= @fromdate");
+                sb.Append(" and ins_date >= @fromdate");
                 cmd.Parameters.AddWithValue("@fromdate", fromdate);
-                sb.Append(" and dueDate <= @todate");
+                sb.Append(" and ins_date <= @todate");
                 cmd.Parameters.AddWithValue("@todate", todate);
 
 
@@ -177,9 +177,9 @@ where 1=1 and RO_Status = 'RO_04'");
                     sb.Append(" and Companyid = @companyid");
                     cmd.Parameters.AddWithValue("@companyid", companyid);
                 }
-                sb.Append(" and dueDate >= @fromdate");
+                sb.Append(" and ins_date >= @fromdate");
                 cmd.Parameters.AddWithValue("@fromdate", fromdate);
-                sb.Append(" and dueDate <= @todate");
+                sb.Append(" and ins_date <= @todate");
                 cmd.Parameters.AddWithValue("@todate", todate);
 
 
@@ -247,17 +247,19 @@ where ro.ro_id in (" + strCheckBarCodeID + ")";
 
         public bool insertRO(RestockOrderVO ro)
         {
-            string sql = @"insert into RestockOrder (itemid, Companyid, SuggestQty, Qty,dueDate, unitPrice, RegDate)
-values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate)";
+            string sql = @"insert into RestockOrder (itemid, Companyid, SuggestQty, Qty,dueDate, unitPrice, RegDate, RO_Status)
+values (@itemid, @Companyid, @SuggestQty, @Qty,@dueDate, @unitPrice, @RegDate, @RO_Status)";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                cmd.Parameters.AddWithValue("itemid", ro.itemid);
-                cmd.Parameters.AddWithValue("companyid", ro.Companyid);
-                cmd.Parameters.AddWithValue("SuggestQty", ro.SuggestQty);
-                cmd.Parameters.AddWithValue("Qty", ro.Qty);
-                cmd.Parameters.AddWithValue("dueDate", ro.dueDate);
-                cmd.Parameters.AddWithValue("unitPrice", ro.unitPrice);
-                cmd.Parameters.AddWithValue("RegDate", ro.RegDate);
+                cmd.Parameters.AddWithValue("@itemid", ro.itemid);
+                cmd.Parameters.AddWithValue("@companyid", ro.Companyid);
+                cmd.Parameters.AddWithValue("@SuggestQty", ro.SuggestQty);
+                cmd.Parameters.AddWithValue("@Qty", ro.Qty);
+                cmd.Parameters.AddWithValue("@dueDate", ro.dueDate);
+                cmd.Parameters.AddWithValue("@unitPrice", ro.unitPrice);
+                cmd.Parameters.AddWithValue("@RegDate", ro.RegDate);
+                cmd.Parameters.AddWithValue("@RO_Status", "RO_01");
+                
 
                 int irows  = cmd.ExecuteNonQuery();
                 if (irows > 0)
@@ -450,24 +452,42 @@ inner join item i on i.Item_ID = ro.itemid");
 values (@factory_id, @Item_id, @PO_ID, @RO_ID, @ih_product_count, @ih_category, @ih_uadmin, @ih_udate, @ih_comment)";
                     cmd.Parameters.AddWithValue("@factory_id", hist.factory_id);
                     cmd.Parameters.AddWithValue("@Item_id", hist.Item_id);
+                    cmd.Parameters.AddWithValue("@ih_product_count", hist.ih_product_count);
+                    cmd.Parameters.AddWithValue("@ih_category", hist.ih_category);
+                    cmd.Parameters.AddWithValue("@ih_udate", hist.ih_udate);
                     if (hist.PO_ID != null)
                     {
                         cmd.Parameters.AddWithValue("@PO_ID", hist.PO_ID); 
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@PO_ID", DBNull.Value);
                     }
                     if (hist.RO_ID != null)
                     {
                         cmd.Parameters.AddWithValue("@RO_ID", hist.RO_ID); 
                     }
-                    cmd.Parameters.AddWithValue("@ih_product_count", hist.ih_product_count);
-                    cmd.Parameters.AddWithValue("@ih_category", hist.ih_category);
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@RO_ID", DBNull.Value);
+                    }
+                    
                     if (hist.ih_uadmin != null)
                     {
                         cmd.Parameters.AddWithValue("@ih_uadmin", hist.ih_uadmin); 
                     }
-                    cmd.Parameters.AddWithValue("@ih_udate", hist.ih_udate);
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@ih_uadmin", DBNull.Value);
+                    }
+                    
                     if (hist.ih_comment != null)
                     {
                         cmd.Parameters.AddWithValue("@ih_comment", hist.ih_comment); 
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@ih_comment", DBNull.Value);
                     }
                     cmd.ExecuteNonQuery();
 

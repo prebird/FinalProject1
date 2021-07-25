@@ -31,8 +31,6 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlUpSide = new System.Windows.Forms.Panel();
-            this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
@@ -40,16 +38,21 @@ namespace FinalProject1_winform
             this.lbluserName = new FinalProject1_winform.Label_gudi();
             this.picUser = new FinalProject1_winform.OvalPictureBox();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
+            this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
             this.pnlUpSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUpSide
             // 
             this.pnlUpSide.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlUpSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlUpSide.Controls.Add(this.pictureBox_gudi3);
             this.pnlUpSide.Controls.Add(this.label_gudi2);
             this.pnlUpSide.Controls.Add(this.pictureBox_gudi2);
             this.pnlUpSide.Controls.Add(this.label_gudi1);
@@ -63,30 +66,6 @@ namespace FinalProject1_winform
             this.pnlUpSide.Name = "pnlUpSide";
             this.pnlUpSide.Size = new System.Drawing.Size(1684, 99);
             this.pnlUpSide.TabIndex = 0;
-            // 
-            // pnlSideBar
-            // 
-            this.pnlSideBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlSideBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
-            this.pnlSideBar.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(198, 862);
-            this.pnlSideBar.TabIndex = 1;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Location = new System.Drawing.Point(198, 99);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1486, 33);
-            this.tabControl1.TabIndex = 3;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // label_gudi2
             // 
@@ -162,6 +141,41 @@ namespace FinalProject1_winform
             this.pictureBox_gudi1.TabIndex = 0;
             this.pictureBox_gudi1.TabStop = false;
             // 
+            // pnlSideBar
+            // 
+            this.pnlSideBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlSideBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
+            this.pnlSideBar.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlSideBar.Name = "pnlSideBar";
+            this.pnlSideBar.Size = new System.Drawing.Size(198, 862);
+            this.pnlSideBar.TabIndex = 1;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.Location = new System.Drawing.Point(198, 99);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1486, 33);
+            this.tabControl1.TabIndex = 3;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
+            // 
+            // pictureBox_gudi3
+            // 
+            this.pictureBox_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi3.Image")));
+            this.pictureBox_gudi3.Location = new System.Drawing.Point(1325, 43);
+            this.pictureBox_gudi3.Name = "pictureBox_gudi3";
+            this.pictureBox_gudi3.Size = new System.Drawing.Size(46, 44);
+            this.pictureBox_gudi3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi3.TabIndex = 5;
+            this.pictureBox_gudi3.TabStop = false;
+            this.pictureBox_gudi3.Click += new System.EventHandler(this.pictureBox_gudi3_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -180,6 +194,7 @@ namespace FinalProject1_winform
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,5 +211,6 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi1;
         private PictureBox_gudi pictureBox_gudi2;
         private Label_gudi label_gudi2;
+        private PictureBox_gudi pictureBox_gudi3;
     }
 }
