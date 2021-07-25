@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject1_POP", "FinalP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject1_Web", "FinalProject1_Web\FinalProject1_Web.csproj", "{9ECEB374-4021-4328-844B-E24516C1E540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputTcpServer", "OutPutTcpServer\OutputTcpServer.csproj", "{A8549184-99EA-4773-B156-6580BB4E9FD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9ECEB374-4021-4328-844B-E24516C1E540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ECEB374-4021-4328-844B-E24516C1E540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ECEB374-4021-4328-844B-E24516C1E540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8549184-99EA-4773-B156-6580BB4E9FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8549184-99EA-4773-B156-6580BB4E9FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8549184-99EA-4773-B156-6580BB4E9FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8549184-99EA-4773-B156-6580BB4E9FD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

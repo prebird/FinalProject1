@@ -32,7 +32,7 @@ namespace FinalProject1_POP
         int taskID;
         string clientName;
         string clientIP;
-   //     int timer_CONNECT = 1000;
+        int timer_CONNECT = 1000;
         int timer_KEEP_ALIVE = 1000;
         int timer_READ_PLC = 1000;
 
@@ -49,7 +49,7 @@ namespace FinalProject1_POP
             this.taskID = taskID;
             this.hostIP = hostIP;
             this.hostPort = hostPort;
-      //      this.timer_CONNECT = timer_CONNECT;
+            this.timer_CONNECT = timer_CONNECT;
             this.timer_KEEP_ALIVE = timer_KEEP_ALIVE;
             this.timer_READ_PLC = timer_READ_PLC;
             this.clientName = clientName;
