@@ -88,9 +88,8 @@ namespace FinalProject1_DAC
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@PlanID", ppVO.PlanID);
-                cmd.Parameters.AddWithValue("@@Status", ppVO.Status);
-                cmd.Parameters.AddWithValue("@@INS_EMP", ppVO.INS_EMP);
-                //cmd.Parameters.AddWithValue("@Dplan_Date", ppVO.INS_DATE);
+                cmd.Parameters.AddWithValue("@Status", ppVO.Status);
+                cmd.Parameters.AddWithValue("@INS_EMP", ppVO.INS_EMP);
 
                 cmd.Parameters.AddWithValue("@BORID", ppVO.BORID);
                 cmd.Parameters.AddWithValue("@PlanDate", ppVO.PlanDate);
