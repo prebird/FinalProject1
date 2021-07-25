@@ -31,6 +31,7 @@ namespace FinalProject1_DAC
 				                            inner join BOR B on W.BORID = B.BORID
 				                            inner join Equipment E on B.EquipmentID = E.EquipmentID
 				                            inner join Item I on B.ItemID = I.Item_ID";
+
             using(SqlCommand cmd = new SqlCommand(sql,conn))
             {
                 return Helper.DataReaderMapToList<WorkOrderVO>(cmd.ExecuteReader());
