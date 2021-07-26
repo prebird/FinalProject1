@@ -14,6 +14,7 @@ namespace FinalProject1_VO
         public int insp_noCnt { get; set; }
         public string insp_date { get; set; }
         public string insp_user { get; set; }
+        public string insp_result { get; set; }
         public int Ro_id { get; set; }
         public int ins_cnt { get; set; }
         public string ins_date { get; set; }

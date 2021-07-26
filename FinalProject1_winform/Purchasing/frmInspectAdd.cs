@@ -16,6 +16,7 @@ namespace FinalProject1_winform
     {
         List<InspectVO> inspects;
         int ro_id = 0;
+        
         public frmInspectAdd()
         {
             InitializeComponent();
@@ -164,8 +165,12 @@ namespace FinalProject1_winform
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            // 유저
+            frmMain main = (frmMain)this.MdiParent;
+            UserInfoVO user = main.User;
+
             RestockOrderDAC dac = new RestockOrderDAC();
-            if (dac.InsertInspectData(Convert.ToInt32(txtinsid.Text), Convert.ToInt32(txtNoCnt.Text), txtResult.Text, null, ro_id))
+            if (dac.InsertInspectData(Convert.ToInt32(txtinsid.Text), Convert.ToInt32(txtNoCnt.Text), txtResult.Text, user.user_name, ro_id))
             {
                 MessageBox.Show("데이터가 성공적으로 삽입되었습니다.");
                 LoadData();

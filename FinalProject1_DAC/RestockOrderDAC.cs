@@ -193,7 +193,7 @@ where 1=1 and RO_Status = 'RO_04'");
 
         public DataTable GetPrintData(string strCheckBarCodeID)
         {
-            string sql = @"select RO_ID Item_Name, company_name, Qty from RestockOrder RO
+            string sql = @"select RO_ID, Item_Name, company_name, Qty, dueDate  from RestockOrder RO
 inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 where ro.ro_id in (" + strCheckBarCodeID + ")";
@@ -362,7 +362,8 @@ where ic.Item_ID = @Item_ID";
                 sb.Append(@"select iw.ins_id, i.Item_Name, ins_cnt, iw.ins_id, insp_noCnt, insp_result ,insp_date, insp_user, iw.Ro_id, ins_date from InstockWait iw
 left outer join Inspect ip on ip.ins_id = iw.ins_id
 inner join RestockOrder ro on ro.RO_ID = iw.Ro_id
-inner join item i on i.Item_ID = ro.itemid");
+inner join item i on i.Item_ID = ro.itemid
+where ins_date >= @fromdate and ins_date <= @todate");
 
                 if (ROid != 0)
                 {
@@ -399,10 +400,11 @@ inner join item i on i.Item_ID = ro.itemid");
 
                 try
                 {
-                    cmd.CommandText = "insert inspect (ins_id, insp_noCnt, insp_result, insp_user) values (@ins_id, @insp_noCnt, @insp_result, @insp_user)";
+                    cmd.CommandText = "insert inspect (ins_id, insp_noCnt, insp_result, insp_user, insp_date) values (@ins_id, @insp_noCnt, @insp_result, @insp_user, @insp_date)";
                     cmd.Parameters.AddWithValue("@ins_id", ins_id);
                     cmd.Parameters.AddWithValue("@insp_noCnt", insp_noCnt);
                     cmd.Parameters.AddWithValue("@insp_result", insp_result);
+                    cmd.Parameters.AddWithValue("@insp_date", DateTime.Now.ToString());
                     if (insp_user != null)
                     {
                         cmd.Parameters.AddWithValue("@insp_user", insp_user); 
