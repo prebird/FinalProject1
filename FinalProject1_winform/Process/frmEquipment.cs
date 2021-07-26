@@ -13,15 +13,17 @@ namespace FinalProject1_winform
 {
     public partial class frmEquipment : Form
     {
-        public frmEquipment()
+        string INS_EMP = null;
+        public frmEquipment(UserInfoVO user)
         {
             InitializeComponent();
+            INS_EMP = user.user_name;
         }
 
         private void frmEquipment_Load(object sender, EventArgs e)
         {
             //수정자 정보 바인딩
-
+            txtINS_EMP.Text = INS_EMP;
 
             txtINS_DATE.Text = DateTime.Now.ToString("yy/MM/dd-HH:mm:s");
             processEquipmentService service = new processEquipmentService();

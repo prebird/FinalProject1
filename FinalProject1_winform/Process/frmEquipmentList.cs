@@ -16,7 +16,7 @@ namespace FinalProject1_winform
         List<ProcessVO> processes;
         List<EquipmentGroupVO> equipmentGroups;
         EquipmentVO equipment = new EquipmentVO();
-        public string INS_EMP { get; set; }
+        public UserInfoVO User { get; set; }
         public EquipmentVO Equipment { get { return equipment; } }
 
         public frmEquipmentList()
@@ -41,7 +41,10 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvList, "", "ProcessCode", visibility: false);
             CommonUtil.AddGridTextColumn(dgvList, "", "EquipmentGroupCode", visibility: false);
 
-
+            if(this.MdiParent is frmMain frm)
+            {
+                User = frm.User;
+            }
 
             processEquipmentService service = new processEquipmentService();
             processes = service.GetAllProcess();
@@ -60,6 +63,7 @@ namespace FinalProject1_winform
 
             CommonUtil.ComboBinding<ProcessVO>(cboProcess, processes, "ProcessName", "ProcessCode");
             CommonUtil.ComboBinding<EquipmentGroupVO>(cboEquipmentGroup, equipmentGroups, "EquipmentGroupName", "EquipmentGroupCode");
+
         }
 
         private void LoadData()
@@ -122,7 +126,7 @@ namespace FinalProject1_winform
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmEquipment frm = new frmEquipment();
+            frmEquipment frm = new frmEquipment(User);
             frm.ShowDialog();
         }
 
@@ -134,7 +138,7 @@ namespace FinalProject1_winform
                 return;
             }
 
-            frmEquipment frm = new frmEquipment();
+            frmEquipment frm = new frmEquipment(User);
             frm.Owner = this;
             if(frm.ShowDialog()==DialogResult.OK)
             {
