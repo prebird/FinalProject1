@@ -19,9 +19,9 @@ namespace OutputTcpServer
         static void Main(string[] args)
         {           
                 Service1 service = new Service1();
-                service.taskID = args[0];
-                service.hostIP = args[1];
-                service.hostPort = int.Parse(args[2]);
+                service.taskID = args[1];
+                service.hostIP = args[2];
+                service.hostPort = int.Parse(args[3]);
                 service.OnStart();
 
                 Console.ReadLine();       
@@ -78,7 +78,7 @@ namespace OutputTcpServer
             Random rnd = new Random((int)DateTime.UtcNow.Ticks);
 
             //50|2|1
-            string msg = $"{rnd.Next(1, 77)}|{rnd.Next(3, 5)}|{rnd.Next(0, 2)}";
+            string msg = $"{rnd.Next(1, 77)}|{rnd.Next(10, 10)}|{rnd.Next(0, 1)}";
             byte[] buff = Encoding.Default.GetBytes(msg);
 
             stream.Write(buff, 0, buff.Length);

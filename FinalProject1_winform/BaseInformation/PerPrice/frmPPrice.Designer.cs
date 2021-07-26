@@ -106,11 +106,11 @@ namespace FinalProject1_winform
             // 
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(669, 15);
+            this.label_gudi3.Location = new System.Drawing.Point(658, 15);
             this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi3.Size = new System.Drawing.Size(72, 17);
             this.label_gudi3.TabIndex = 4;
-            this.label_gudi3.Text = "■ 업체";
+            this.label_gudi3.Text = "■ 품목구분";
             // 
             // txtItemCode
             // 
@@ -125,11 +125,11 @@ namespace FinalProject1_winform
             // 
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(360, 15);
+            this.label_gudi2.Location = new System.Drawing.Point(348, 14);
             this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi2.Size = new System.Drawing.Size(72, 17);
             this.label_gudi2.TabIndex = 2;
-            this.label_gudi2.Text = "■ 품목";
+            this.label_gudi2.Text = "■ 품목코드";
             // 
             // dtpdate
             // 
