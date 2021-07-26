@@ -432,6 +432,7 @@ namespace FinalProject1_winform
             this.Name = "frmItemInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmItemInsert";
+            this.Load += new System.EventHandler(this.frmItemInsert_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel2.ResumeLayout(false);
