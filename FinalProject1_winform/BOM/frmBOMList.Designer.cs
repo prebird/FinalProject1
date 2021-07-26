@@ -285,6 +285,7 @@ namespace FinalProject1_winform
             this.dgv_Item.RowTemplate.Height = 23;
             this.dgv_Item.Size = new System.Drawing.Size(1057, 163);
             this.dgv_Item.TabIndex = 37;
+            this.dgv_Item.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Item_CellClick);
             // 
             // frmBOMList
             // 
