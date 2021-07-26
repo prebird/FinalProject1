@@ -251,7 +251,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmDemandPlan";
-            this.Text = "frmDemandPlan";
+            this.Text = "수요 계획 관리";
             this.Load += new System.EventHandler(this.frmDemandPlan_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).EndInit();
