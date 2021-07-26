@@ -27,6 +27,7 @@ namespace FinalProject1_POP
         {
             POPUser frmUser = new POPUser(User);
             openChildForm(frmUser);
+            timer1.Start();
         }
 
        private Form activeForm = null;
@@ -35,8 +36,8 @@ namespace FinalProject1_POP
            if (activeForm != null) activeForm.Close();
            activeForm = childForm;
            childForm.TopLevel = false;
-           childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.WindowState = FormWindowState.Maximized;
+           childForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+           childForm.WindowState = FormWindowState.Maximized;
            childForm.MdiParent = this;
            childForm.BringToFront();
            childForm.Show();
@@ -61,6 +62,12 @@ namespace FinalProject1_POP
         private void btnFactory_Click(object sender, EventArgs e)
         {
             openChildForm(new POPFactoryInfo(Order));
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            lblDate.Text = $"{DateTime.Now.ToString("yyyy-MM-dd(dddd)")} " + $"{DateTime.Now.ToString("T")}";
         }
     }
 }

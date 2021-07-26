@@ -86,7 +86,7 @@ namespace FinalProject1_POP
             {
                 Log.WriteInfo("DB서버 연결");
 
-                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString);
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FinalProject1"].ConnectionString);
                 conn.Open();
 
                 m_thread = new ThreadPLCTask(conn, _logging, WorkNum, taskID, hostIP, hostPort, timer_CONNECT, timer_KEEP_ALIVE, timer_READ_PLC, clientName, clientIP);

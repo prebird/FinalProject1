@@ -30,11 +30,11 @@ namespace FinalProject1_POP
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.ucMachine1 = new FinalProject1_winform.Controls.UCMachine();
-            this.ucMachine2 = new FinalProject1_winform.Controls.UCMachine();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.ucMachine3 = new FinalProject1_winform.Controls.UCMachine();
+            this.ucMachine2 = new FinalProject1_winform.Controls.UCMachine();
+            this.ucMachine1 = new FinalProject1_winform.Controls.UCMachine();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,17 +49,6 @@ namespace FinalProject1_POP
             this.panel1.Size = new System.Drawing.Size(1634, 75);
             this.panel1.TabIndex = 10;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ucMachine3);
-            this.panel2.Controls.Add(this.ucMachine2);
-            this.panel2.Controls.Add(this.ucMachine1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1634, 911);
-            this.panel2.TabIndex = 14;
-            // 
             // label_gudi1
             // 
             this.label_gudi1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -72,41 +61,67 @@ namespace FinalProject1_POP
             this.label_gudi1.Text = "장비/공정관리";
             this.label_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ucMachine1
+            // panel2
             // 
-            this.ucMachine1.IsTaskEnable = true;
-            this.ucMachine1.Location = new System.Drawing.Point(31, 156);
-            this.ucMachine1.Name = "ucMachine1";
-            this.ucMachine1.Size = new System.Drawing.Size(411, 612);
-            this.ucMachine1.TabIndex = 0;
-            this.ucMachine1.Task_ID = "TaskID";
-            this.ucMachine1.Task_IP = "IP";
-            this.ucMachine1.Task_Port = "Port";
-            this.ucMachine1.Task_Remark = "Remark";
-            // 
-            // ucMachine2
-            // 
-            this.ucMachine2.IsTaskEnable = true;
-            this.ucMachine2.Location = new System.Drawing.Point(582, 156);
-            this.ucMachine2.Name = "ucMachine2";
-            this.ucMachine2.Size = new System.Drawing.Size(411, 612);
-            this.ucMachine2.TabIndex = 1;
-            this.ucMachine2.Task_ID = "TaskID";
-            this.ucMachine2.Task_IP = "IP";
-            this.ucMachine2.Task_Port = "Port";
-            this.ucMachine2.Task_Remark = "Remark";
+            this.panel2.Controls.Add(this.ucMachine3);
+            this.panel2.Controls.Add(this.ucMachine2);
+            this.panel2.Controls.Add(this.ucMachine1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1634, 911);
+            this.panel2.TabIndex = 14;
             // 
             // ucMachine3
             // 
             this.ucMachine3.IsTaskEnable = true;
+            this.ucMachine3.ItemCode = "";
             this.ucMachine3.Location = new System.Drawing.Point(1133, 156);
+            this.ucMachine3.MachineName = "";
             this.ucMachine3.Name = "ucMachine3";
+            this.ucMachine3.ProcessName = "";
             this.ucMachine3.Size = new System.Drawing.Size(411, 612);
             this.ucMachine3.TabIndex = 2;
             this.ucMachine3.Task_ID = "TaskID";
             this.ucMachine3.Task_IP = "IP";
             this.ucMachine3.Task_Port = "Port";
             this.ucMachine3.Task_Remark = "Remark";
+            this.ucMachine3.Worknum = "";
+            this.ucMachine3.YN = "";
+            // 
+            // ucMachine2
+            // 
+            this.ucMachine2.IsTaskEnable = true;
+            this.ucMachine2.ItemCode = "";
+            this.ucMachine2.Location = new System.Drawing.Point(582, 156);
+            this.ucMachine2.MachineName = "";
+            this.ucMachine2.Name = "ucMachine2";
+            this.ucMachine2.ProcessName = "";
+            this.ucMachine2.Size = new System.Drawing.Size(411, 612);
+            this.ucMachine2.TabIndex = 1;
+            this.ucMachine2.Task_ID = "TaskID";
+            this.ucMachine2.Task_IP = "IP";
+            this.ucMachine2.Task_Port = "Port";
+            this.ucMachine2.Task_Remark = "Remark";
+            this.ucMachine2.Worknum = "";
+            this.ucMachine2.YN = "";
+            // 
+            // ucMachine1
+            // 
+            this.ucMachine1.IsTaskEnable = true;
+            this.ucMachine1.ItemCode = "";
+            this.ucMachine1.Location = new System.Drawing.Point(31, 156);
+            this.ucMachine1.MachineName = "";
+            this.ucMachine1.Name = "ucMachine1";
+            this.ucMachine1.ProcessName = "";
+            this.ucMachine1.Size = new System.Drawing.Size(411, 612);
+            this.ucMachine1.TabIndex = 0;
+            this.ucMachine1.Task_ID = "TaskID";
+            this.ucMachine1.Task_IP = "IP";
+            this.ucMachine1.Task_Port = "Port";
+            this.ucMachine1.Task_Remark = "Remark";
+            this.ucMachine1.Worknum = "";
+            this.ucMachine1.YN = "";
             // 
             // POPFactoryInfo
             // 
@@ -118,6 +133,7 @@ namespace FinalProject1_POP
             this.Controls.Add(this.panel2);
             this.Name = "POPFactoryInfo";
             this.Text = "POPFactory";
+            this.Load += new System.EventHandler(this.POPFactoryInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
