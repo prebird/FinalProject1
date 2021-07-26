@@ -206,15 +206,15 @@ namespace FinalProject1_POP
         public static void ComboBindingItemID(ComboBox cbo)
         {
             CommonService service = new CommonService();
-            List<ItemVO> list = service.GetCommboItemName();
-            ItemVO item = new ItemVO
+            List<Item_Combo_VO> list = service.GetCommboItemName();
+            Item_Combo_VO item = new Item_Combo_VO
             {
                 Item_ID = 0,
                 Item_Name = "선택"
             };
             list.Insert(0, item);
 
-            ComboBinding<ItemVO>(cbo, list, "Item_Name", "Item_ID");
+            ComboBinding<Item_Combo_VO>(cbo, list, "Item_Name", "Item_ID");
         }
 
         #region 옛날 유틸

@@ -15,6 +15,7 @@ namespace FinalProject1_winform
     {
         List<BORVO> bors = new List<BORVO>();
         BORVO bor = new BORVO();
+        public UserInfoVO user { get; set; }
         public BORVO BOR { get { return bor; } }
 
         public frmBORList()
@@ -46,6 +47,11 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvList, "수정자", "INS_EMP");
             CommonUtil.AddGridTextColumn(dgvList, "수정 일시", "INS_DATE", colWidth: 120);
             CommonUtil.AddGridTextColumn(dgvList, "특이 사항", "Remark", colWidth: 150);
+
+            if(this.MdiParent is frmMain frm)
+            {
+                user = frm.User;
+            }
 
             LoadData();
         }
@@ -95,7 +101,7 @@ namespace FinalProject1_winform
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmBORInsert frm = new frmBORInsert();
+            frmBORInsert frm = new frmBORInsert(user);
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
@@ -111,7 +117,7 @@ namespace FinalProject1_winform
             }
 
             bor.BORID = 0;
-            frmBORInsert frm = new frmBORInsert();
+            frmBORInsert frm = new frmBORInsert(user);
             frm.Owner = this;
             if(frm.ShowDialog() == DialogResult.OK)
             {
@@ -127,7 +133,7 @@ namespace FinalProject1_winform
                 return;
             }
 
-            frmBORInsert frm = new frmBORInsert();
+            frmBORInsert frm = new frmBORInsert(user);
             frm.Owner = this;
             if (frm.ShowDialog() == DialogResult.OK)
             {

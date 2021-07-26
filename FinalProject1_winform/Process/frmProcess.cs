@@ -13,15 +13,18 @@ namespace FinalProject1_winform
 {
     public partial class frmProcess : Form
     {
-        public frmProcess()
+        string INS_EMP = null;
+        public frmProcess(UserInfoVO user)
         {
             InitializeComponent();
+            INS_EMP = user.user_name;
         }
 
         private void frmProcess_Load(object sender, EventArgs e)
         {
             txtIns_Date.Text = DateTime.Now.ToString("yy/MM/dd-HH:mm:s");
             //유저 정보 txt박스에 저장
+            txtIns_Emp.Text = INS_EMP;
 
             //수정일 경우 데이터 자동 바인딩
             if(this.Owner is frmProcessList frm)
