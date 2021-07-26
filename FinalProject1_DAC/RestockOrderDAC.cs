@@ -503,12 +503,16 @@ values (@factory_id, @Item_id, @PO_ID, @RO_ID, @ih_product_count, @ih_category, 
 
                     cmd.ExecuteNonQuery();
 
-                    // RO 상태 업데이트
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = @"Update RestockOrder set RO_Status = 'RO_04' where RO_ID = @roid";
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@roid", hist.RO_ID);
-                    cmd.ExecuteNonQuery();
+                    // 발주 입고인 경우
+                    if (hist.RO_ID != null)
+                    {
+                        // RO 상태 업데이트
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"Update RestockOrder set RO_Status = 'RO_04' where RO_ID = @roid";
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@roid", hist.RO_ID);
+                        cmd.ExecuteNonQuery(); 
+                    }
 
                     trans.Commit();
                     Dispose();
