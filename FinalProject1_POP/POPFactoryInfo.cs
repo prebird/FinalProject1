@@ -22,24 +22,26 @@ namespace FinalProject1_POP
             Order = order;
         }
 
-        private void ucMachine1_Load(object sender, EventArgs e)
-        {
-           List<taskItem> tasks = (List<taskItem>)ConfigurationManager.GetSection("taskList");
-                         
-           ucMachine1.Name = $"taskControl{0}";
-           ucMachine1.Task_ID = tasks[0].taskID;
-           ucMachine1.Task_IP = tasks[0].hostIP;
-           ucMachine1.Task_Port = tasks[0].hostPort;
-           ucMachine1.Task_Remark = tasks[0].remark;
-           
-           ucMachine1.IsTaskEnable = false;
 
-           ucMachine1.Worknum = Order.WorkOrderID;
-           ucMachine1.WorkQty = Order.OrderQuantity;
-           ucMachine1.MachineName = Order.EquipmentName;
-           ucMachine1.ProcessName = Order.processName;
-           ucMachine1.YN = "(가동준비)";
-           
+        private void POPFactoryInfo_Load(object sender, EventArgs e)
+        {
+            if (Order == null)
+                return;
+            List<taskItem> tasks = (List<taskItem>)ConfigurationManager.GetSection("taskList");
+            
+            ucMachine1.Task_ID = tasks[0].taskID;
+            ucMachine1.Task_IP = tasks[0].hostIP;
+            ucMachine1.Task_Port = tasks[0].hostPort;
+            ucMachine1.Task_Remark = tasks[0].remark;
+
+            ucMachine1.IsTaskEnable = false;
+
+            ucMachine1.Worknum = Order.WorkOrderID;
+            ucMachine1.WorkQty = Order.OrderQuantity;
+            ucMachine1.MachineName = Order.EquipmentName;
+            ucMachine1.ProcessName = Order.processName;
+            ucMachine1.YN = "(가동준비)";
+
         }
     }
 }

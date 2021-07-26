@@ -50,7 +50,7 @@ namespace OutputTcpServer
             Log.WriteInfo("서비스 시작");
 
             if (listener == null)
-            {
+            { 
                 listener = new TcpListener(IPAddress.Parse(hostIP), hostPort);
             }
 

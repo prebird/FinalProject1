@@ -140,8 +140,10 @@ namespace FinalProject1_winform.Controls
             this.txtNGQty.ForeColor = System.Drawing.Color.Red;
             this.txtNGQty.Location = new System.Drawing.Point(295, 467);
             this.txtNGQty.Name = "txtNGQty";
+            this.txtNGQty.ReadOnly = true;
             this.txtNGQty.Size = new System.Drawing.Size(101, 35);
             this.txtNGQty.TabIndex = 15;
+            this.txtNGQty.TabStop = false;
             this.txtNGQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtOKQty
@@ -150,8 +152,10 @@ namespace FinalProject1_winform.Controls
             this.txtOKQty.ForeColor = System.Drawing.Color.ForestGreen;
             this.txtOKQty.Location = new System.Drawing.Point(295, 423);
             this.txtOKQty.Name = "txtOKQty";
+            this.txtOKQty.ReadOnly = true;
             this.txtOKQty.Size = new System.Drawing.Size(101, 35);
             this.txtOKQty.TabIndex = 14;
+            this.txtOKQty.TabStop = false;
             this.txtOKQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtRemainQty
@@ -160,8 +164,10 @@ namespace FinalProject1_winform.Controls
             this.txtRemainQty.ForeColor = System.Drawing.Color.Black;
             this.txtRemainQty.Location = new System.Drawing.Point(147, 467);
             this.txtRemainQty.Name = "txtRemainQty";
+            this.txtRemainQty.ReadOnly = true;
             this.txtRemainQty.Size = new System.Drawing.Size(88, 35);
             this.txtRemainQty.TabIndex = 13;
+            this.txtRemainQty.TabStop = false;
             this.txtRemainQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtWorkQty
@@ -169,8 +175,10 @@ namespace FinalProject1_winform.Controls
             this.txtWorkQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtWorkQty.Location = new System.Drawing.Point(147, 423);
             this.txtWorkQty.Name = "txtWorkQty";
+            this.txtWorkQty.ReadOnly = true;
             this.txtWorkQty.Size = new System.Drawing.Size(88, 35);
             this.txtWorkQty.TabIndex = 12;
+            this.txtWorkQty.TabStop = false;
             this.txtWorkQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
@@ -242,8 +250,10 @@ namespace FinalProject1_winform.Controls
             this.txtOrderQty.ForeColor = System.Drawing.Color.Black;
             this.txtOrderQty.Location = new System.Drawing.Point(147, 381);
             this.txtOrderQty.Name = "txtOrderQty";
+            this.txtOrderQty.ReadOnly = true;
             this.txtOrderQty.Size = new System.Drawing.Size(249, 35);
             this.txtOrderQty.TabIndex = 4;
+            this.txtOrderQty.TabStop = false;
             this.txtOrderQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtItemCode
@@ -251,8 +261,10 @@ namespace FinalProject1_winform.Controls
             this.txtItemCode.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtItemCode.Location = new System.Drawing.Point(147, 337);
             this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.ReadOnly = true;
             this.txtItemCode.Size = new System.Drawing.Size(249, 35);
             this.txtItemCode.TabIndex = 3;
+            this.txtItemCode.TabStop = false;
             this.txtItemCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtWorkNum
@@ -260,8 +272,10 @@ namespace FinalProject1_winform.Controls
             this.txtWorkNum.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtWorkNum.Location = new System.Drawing.Point(147, 290);
             this.txtWorkNum.Name = "txtWorkNum";
+            this.txtWorkNum.ReadOnly = true;
             this.txtWorkNum.Size = new System.Drawing.Size(249, 35);
             this.txtWorkNum.TabIndex = 2;
+            this.txtWorkNum.TabStop = false;
             this.txtWorkNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pictureBox1

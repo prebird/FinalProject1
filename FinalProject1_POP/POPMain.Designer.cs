@@ -29,6 +29,7 @@ namespace FinalProject1_POP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -36,6 +37,8 @@ namespace FinalProject1_POP
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblDate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -44,6 +47,7 @@ namespace FinalProject1_POP
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -133,6 +137,21 @@ namespace FinalProject1_POP
             this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblDate.Location = new System.Drawing.Point(1432, 105);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(425, 35);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "2021-07-26(월요일) 오후 2:28:29";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // POPMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -151,6 +170,7 @@ namespace FinalProject1_POP
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.POPMain_FormClosed);
             this.Load += new System.EventHandler(this.POPMain_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -166,5 +186,7 @@ namespace FinalProject1_POP
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblDate;
     }
 }

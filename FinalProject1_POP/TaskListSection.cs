@@ -8,29 +8,29 @@ using System.Xml;
 
 namespace FinalProject1_POP
 {
-    //class TaskListSection : IConfigurationSectionHandler
-    //{
-    //    public object Create(object parent, object configContext, XmlNode section)
-    //    {
-    //        List<taskItem> myConfigObject = new List<taskItem>();
+    class TaskListSection : IConfigurationSectionHandler
+    {
+        public object Create(object parent, object configContext, XmlNode section)
+        {
+            List<taskItem> myConfigObject = new List<taskItem>();
 
-    //        foreach (XmlNode childNode in section.ChildNodes)
-    //        {
-    //            string staskID = "", shostIP = "", shostPort = "", sremark = "";
-    //            foreach (XmlAttribute attrib in childNode.Attributes)
-    //            {
-    //                if (attrib.Name.Equals("taskID")) staskID = attrib.Value;
-    //                if (attrib.Name.Equals("hostIP")) shostIP = attrib.Value;
-    //                if (attrib.Name.Equals("hostPort")) shostPort = attrib.Value;
-    //                if (attrib.Name.Equals("remark")) sremark = attrib.Value;
-    //            }
+            foreach (XmlNode childNode in section.ChildNodes)
+            {
+                string staskID = "", shostIP = "", shostPort = "", sremark = "";
+                foreach (XmlAttribute attrib in childNode.Attributes)
+                {
+                    if (attrib.Name.Equals("taskID")) staskID = attrib.Value;
+                    if (attrib.Name.Equals("hostIP")) shostIP = attrib.Value;
+                    if (attrib.Name.Equals("hostPort")) shostPort = attrib.Value;
+                    if (attrib.Name.Equals("remark")) sremark = attrib.Value;
+                }
 
-    //            myConfigObject.Add(new taskItem() { taskID = staskID, hostIP = shostIP, hostPort = shostPort, remark = sremark });
-    //        }
+                myConfigObject.Add(new taskItem() { taskID = staskID, hostIP = shostIP, hostPort = shostPort, remark = sremark });
+            }
 
-    //        return myConfigObject;
-    //    }
-    //}
+            return myConfigObject;
+        }
+    }
 
     public class taskItem
     {

@@ -29,15 +29,11 @@ namespace FinalProject1_POP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgv_WorkList = new FinalProject1_winform.DGV_gudi();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEnd = new FinalProject1_winform.Controls.TextBox_gudi();
             this.txtStart = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -70,13 +66,14 @@ namespace FinalProject1_POP
             this.label_gudi12 = new FinalProject1_winform.Label_gudi();
             this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.btnStart = new FinalProject1_winform.Button_gudi();
-            this.btnStop = new FinalProject1_winform.Button_gudi();
+            this.dgv_WorkList = new FinalProject1_winform.DGV_gudi();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,75 +101,12 @@ namespace FinalProject1_POP
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabControl1.Location = new System.Drawing.Point(0, 498);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1653, 342);
+            this.tabControl1.Size = new System.Drawing.Size(1653, 305);
             this.tabControl1.TabIndex = 42;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.tabPage1.Controls.Add(this.dgv_WorkList);
-            this.tabPage1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 41);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1645, 297);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "생산 현황";
-            // 
-            // dgv_WorkList
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_WorkList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_WorkList.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_WorkList.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_WorkList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_WorkList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_WorkList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_WorkList.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgv_WorkList.HeaderCheckStatus = false;
-            this.dgv_WorkList.Location = new System.Drawing.Point(3, 3);
-            this.dgv_WorkList.Name = "dgv_WorkList";
-            this.dgv_WorkList.RowHeadersVisible = false;
-            this.dgv_WorkList.RowTemplate.Height = 23;
-            this.dgv_WorkList.Size = new System.Drawing.Size(1639, 291);
-            this.dgv_WorkList.TabIndex = 85;
-            this.dgv_WorkList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkList_CellClick);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.tabPage2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 41);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1645, 297);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "불량 현황";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.tabPage3.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 41);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1645, 297);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "투입 현황";
             // 
             // groupBox2
             // 
@@ -510,40 +444,65 @@ namespace FinalProject1_POP
             // 
             this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
             this.btnStart.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnStart.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnStart.ForeColor = System.Drawing.Color.Lime;
-            this.btnStart.Location = new System.Drawing.Point(0, 842);
+            this.btnStart.Location = new System.Drawing.Point(0, 802);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(530, 64);
+            this.btnStart.Size = new System.Drawing.Size(1634, 79);
             this.btnStart.TabIndex = 9;
             this.btnStart.Text = "작업준비";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // btnStop
+            // dgv_WorkList
             // 
-            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.btnStop.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.btnStop.FlatAppearance.BorderSize = 0;
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnStop.ForeColor = System.Drawing.Color.Red;
-            this.btnStop.Location = new System.Drawing.Point(536, 842);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(530, 64);
-            this.btnStop.TabIndex = 43;
-            this.btnStop.Text = "정지";
-            this.btnStop.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_WorkList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_WorkList.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_WorkList.CheckBoxAll = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_WorkList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_WorkList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_WorkList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_WorkList.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv_WorkList.HeaderCheckStatus = false;
+            this.dgv_WorkList.Location = new System.Drawing.Point(3, 3);
+            this.dgv_WorkList.Name = "dgv_WorkList";
+            this.dgv_WorkList.RowHeadersVisible = false;
+            this.dgv_WorkList.RowTemplate.Height = 23;
+            this.dgv_WorkList.Size = new System.Drawing.Size(1639, 254);
+            this.dgv_WorkList.TabIndex = 85;
+            this.dgv_WorkList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkList_CellClick);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
+            this.tabPage1.Controls.Add(this.dgv_WorkList);
+            this.tabPage1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 41);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1645, 260);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "생산 현황";
             // 
             // POPWorkInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.ClientSize = new System.Drawing.Size(1634, 911);
-            this.Controls.Add(this.btnStop);
+            this.ClientSize = new System.Drawing.Size(1634, 881);
+            this.ControlBox = false;
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtNGQTy);
@@ -564,12 +523,12 @@ namespace FinalProject1_POP
             this.Load += new System.EventHandler(this.POPWorkInfo_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,9 +539,6 @@ namespace FinalProject1_POP
         private System.Windows.Forms.Panel panel1;
         private FinalProject1_winform.Label_gudi label_gudi1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private FinalProject1_winform.Controls.TextBox_gudi txtNGQTy;
         private FinalProject1_winform.Controls.TextBox_gudi txtOKQty;
         private FinalProject1_winform.Controls.TextBox_gudi txtRemain;
@@ -614,8 +570,8 @@ namespace FinalProject1_POP
         private FinalProject1_winform.Label_gudi label_gudi3;
         private FinalProject1_winform.Label_gudi label_gudi2;
         private System.Windows.Forms.DateTimePicker dtpWorkDate;
-        private FinalProject1_winform.DGV_gudi dgv_WorkList;
         private FinalProject1_winform.Button_gudi btnStart;
-        private FinalProject1_winform.Button_gudi btnStop;
+        private System.Windows.Forms.TabPage tabPage1;
+        private FinalProject1_winform.DGV_gudi dgv_WorkList;
     }
 }
