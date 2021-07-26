@@ -1,5 +1,4 @@
-﻿using FinalProject1_POP;
-using log4net.Core;
+﻿using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -78,7 +77,7 @@ namespace OutputTcpServer
             Random rnd = new Random((int)DateTime.UtcNow.Ticks);
 
             //50|2|1
-            string msg = $"{rnd.Next(1, 77)}|{rnd.Next(3, 5)}|{rnd.Next(0, 2)}";
+            string msg = $"{rnd.Next(1, 77)}|{rnd.Next(10, 10)}|{rnd.Next(0, 1)}";
             byte[] buff = Encoding.Default.GetBytes(msg);
 
             stream.Write(buff, 0, buff.Length);

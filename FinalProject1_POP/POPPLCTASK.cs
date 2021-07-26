@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static FinalProject1_POP.ThreadPLCTask;
 
 namespace FinalProject1_POP
 {
@@ -45,7 +46,9 @@ namespace FinalProject1_POP
         int timer_KEEP_ALIVE = 1000;
         int timer_READ_PLC = 1000;
 
-       public POPPLCTASK(string workNum, string taskid, string ip, string port)
+        public event ReacDataEventHandle UCReadData;
+
+        public POPPLCTASK(string workNum, string taskid, string ip, string port)
        {
            InitializeComponent();
            WorkNum = workNum;
@@ -108,16 +111,21 @@ namespace FinalProject1_POP
         /// <param name="args"></param>
         private void M_thread_ReadData(object sender, ReadDataEventArgs args)
         {
-            if (logVisible)
+            //if (logVisible)
+            //{
+            //    if (listBox1.Items.Count > 50)
+            //        listBox1.Items.Clear();
+
+            //    this.Invoke((MethodInvoker)(() => listBox1.Items.Add($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {args.Data}")));
+            //    this.Invoke((MethodInvoker)(() => listBox1.SelectedIndex = listBox1.Items.Count - 1));
+            //}
+
+            //this.Invoke((MethodInvoker)(() => txtReadPLC.Text = args.Data));
+
+            if (UCReadData != null)
             {
-                if (listBox1.Items.Count > 50)
-                    listBox1.Items.Clear();
-
-                this.Invoke((MethodInvoker)(() => listBox1.Items.Add($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {args.Data}")));
-                this.Invoke((MethodInvoker)(() => listBox1.SelectedIndex = listBox1.Items.Count - 1));
+                UCReadData(this, args);
             }
-
-            this.Invoke((MethodInvoker)(() => txtReadPLC.Text = args.Data));
         }
 
         private void frmPLCTask_KeyDown(object sender, KeyEventArgs e)

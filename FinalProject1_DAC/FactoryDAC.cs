@@ -30,7 +30,7 @@ namespace FinalProject1_DAC
         public List<FactoryVO> GetAllFactory()
         {
             string sql = @"select factory_id, factory_grade, factory_parent, factory_name, factory_code, factory_type, company_id, factory_yn, factory_uadmin, factory_udate, factory_comment, common_value
-                           from Factory F join CommonCode C on F.factory_type = C.common_name
+                           from Factory F join CommonCode C on F.factory_type = C.common_value
                            where deleted = 0";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -123,7 +123,7 @@ namespace FinalProject1_DAC
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(@"select factory_id, factory_grade, factory_parent, factory_name, factory_code, factory_type, company_id, factory_yn, factory_uadmin, factory_udate, factory_comment, common_value
-                           from Factory F join CommonCode C on F.factory_type = C.common_name
+                           from Factory F join CommonCode C on F.factory_type = C.common_value
                            where deleted = 0");
 
             if (!string.IsNullOrEmpty(factoryCode))

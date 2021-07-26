@@ -38,6 +38,8 @@ namespace FinalProject1_winform.Controls
 
         int process_id = 0;
 
+        int totQty = 0, totBadQty = 0;
+
         public bool IsTaskEnable
         {
             get
@@ -68,16 +70,29 @@ namespace FinalProject1_winform.Controls
         private void btnStart_Click(object sender, EventArgs e)
         {
             string server = Application.StartupPath + "\\OutputTcpServer.exe";
-            Process pro = Process.Start(server, $"{Worknum} {Task_ID} {Task_IP} {Task_Port}");
+            Process pro = Process.Start(server, $"{Task_ID} {Task_IP} {Task_Port}");
             process_id = pro.Id;
             YN = "(가동 중)";
             lblYN.ForeColor = Color.Lime;
 
             POP = new POPPLCTASK(Worknum ,Task_ID, Task_IP, Task_Port);
+            POP.UCReadData += POP_UCReadData;
             POP.Show();
             POP.Hide();
 
             IsTaskEnable = true;
+        }
+
+        private void POP_UCReadData(object sender, ReadDataEventArgs args)
+        {
+            string[] datas = args.Data.Split('|');
+            totQty += int.Parse(datas[1]);
+            totBadQty += int.Parse(datas[2]);
+
+            txtOKQty.Text = totQty.ToString();
+            txtNGQty.Text = totBadQty.ToString();
+
+            //if 
         }
 
         private void btnStop_Click(object sender, EventArgs e)

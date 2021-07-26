@@ -73,6 +73,7 @@ namespace FinalProject1_winform
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btnSearch.FlatAppearance.BorderSize = 0;
@@ -106,11 +107,11 @@ namespace FinalProject1_winform
             // 
             this.label_gudi3.AutoSize = true;
             this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(669, 15);
+            this.label_gudi3.Location = new System.Drawing.Point(658, 15);
             this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi3.Size = new System.Drawing.Size(72, 17);
             this.label_gudi3.TabIndex = 4;
-            this.label_gudi3.Text = "■ 업체";
+            this.label_gudi3.Text = "■ 품목구분";
             // 
             // txtItemCode
             // 
@@ -125,11 +126,11 @@ namespace FinalProject1_winform
             // 
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(360, 15);
+            this.label_gudi2.Location = new System.Drawing.Point(348, 14);
             this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(48, 17);
+            this.label_gudi2.Size = new System.Drawing.Size(72, 17);
             this.label_gudi2.TabIndex = 2;
-            this.label_gudi2.Text = "■ 품목";
+            this.label_gudi2.Text = "■ 품목코드";
             // 
             // dtpdate
             // 
@@ -152,7 +153,8 @@ namespace FinalProject1_winform
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dgvPprice);
             this.panel2.Location = new System.Drawing.Point(17, 113);
@@ -207,6 +209,7 @@ namespace FinalProject1_winform
             // 
             // button_gudi10
             // 
+            this.button_gudi10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_gudi10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.button_gudi10.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi10.FlatAppearance.BorderSize = 0;
@@ -225,6 +228,7 @@ namespace FinalProject1_winform
             // 
             // button_gudi5
             // 
+            this.button_gudi5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi5.FlatAppearance.BorderSize = 0;
@@ -243,6 +247,7 @@ namespace FinalProject1_winform
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnDelete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnDelete.FlatAppearance.BorderSize = 0;
@@ -261,6 +266,7 @@ namespace FinalProject1_winform
             // 
             // btnInsert
             // 
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnInsert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnInsert.FlatAppearance.BorderSize = 0;

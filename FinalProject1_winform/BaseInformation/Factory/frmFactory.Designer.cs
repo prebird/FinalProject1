@@ -30,8 +30,8 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboFactoryGrade = new FinalProject1_winform.ComboBox_gudi();
             this.txtFactoryCode = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -43,13 +43,13 @@ namespace FinalProject1_winform
             this.btnDelete = new FinalProject1_winform.Button_gudi();
             this.btnInsert = new FinalProject1_winform.Button_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_Factory = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
+            this.dgv_Factory = new FinalProject1_winform.DGV_gudi();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Factory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Factory)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,6 +92,7 @@ namespace FinalProject1_winform
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btnSearch.FlatAppearance.BorderSize = 0;
@@ -130,6 +131,7 @@ namespace FinalProject1_winform
             // 
             // btmUpdate
             // 
+            this.btmUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btmUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btmUpdate.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btmUpdate.FlatAppearance.BorderSize = 0;
@@ -149,6 +151,7 @@ namespace FinalProject1_winform
             // 
             // btnExcel
             // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnExcel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnExcel.FlatAppearance.BorderSize = 0;
@@ -167,6 +170,7 @@ namespace FinalProject1_winform
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnDelete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnDelete.FlatAppearance.BorderSize = 0;
@@ -186,6 +190,7 @@ namespace FinalProject1_winform
             // 
             // btnInsert
             // 
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnInsert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnInsert.FlatAppearance.BorderSize = 0;
@@ -213,41 +218,6 @@ namespace FinalProject1_winform
             this.label_gudi4.TabIndex = 20;
             this.label_gudi4.Text = "공장정의";
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dgv_Factory);
-            this.panel2.Location = new System.Drawing.Point(17, 114);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 466);
-            this.panel2.TabIndex = 19;
-            // 
-            // dgv_Factory
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_Factory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_Factory.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Factory.CheckBoxAll = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Factory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_Factory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Factory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Factory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgv_Factory.HeaderCheckStatus = false;
-            this.dgv_Factory.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Factory.Name = "dgv_Factory";
-            this.dgv_Factory.RowHeadersVisible = false;
-            this.dgv_Factory.RowTemplate.Height = 23;
-            this.dgv_Factory.Size = new System.Drawing.Size(1057, 466);
-            this.dgv_Factory.TabIndex = 0;
-            // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
@@ -257,6 +227,42 @@ namespace FinalProject1_winform
             this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_gudi2.TabIndex = 18;
             this.pictureBox_gudi2.TabStop = false;
+            // 
+            // dgv_Factory
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_Factory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Factory.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Factory.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Factory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Factory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Factory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Factory.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv_Factory.HeaderCheckStatus = false;
+            this.dgv_Factory.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Factory.Name = "dgv_Factory";
+            this.dgv_Factory.RowHeadersVisible = false;
+            this.dgv_Factory.RowTemplate.Height = 23;
+            this.dgv_Factory.Size = new System.Drawing.Size(1057, 494);
+            this.dgv_Factory.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.dgv_Factory);
+            this.panel2.Location = new System.Drawing.Point(17, 114);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1057, 494);
+            this.panel2.TabIndex = 19;
             // 
             // frmFactory
             // 
@@ -276,9 +282,9 @@ namespace FinalProject1_winform
             this.Load += new System.EventHandler(this.frmFactory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Factory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Factory)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,10 +301,10 @@ namespace FinalProject1_winform
         private Button_gudi btnDelete;
         private Button_gudi btnInsert;
         private Label_gudi label_gudi4;
-        private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private ComboBox_gudi cboFactoryGrade;
         private Controls.TextBox_gudi txtFactoryCode;
         private DGV_gudi dgv_Factory;
+        private System.Windows.Forms.Panel panel2;
     }
 }

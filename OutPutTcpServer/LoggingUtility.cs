@@ -12,15 +12,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject1_winform
+namespace OutputTcpServer
 {
     public class LoggingUtility
     {
+        private static LoggingUtility _loggingUtility = null;
         private ILog log;
         private RollingFileAppender roller;
         private string logFileName;
         private bool runAsConsole = false;
         private int logContinueDays = 30;
+
+        public static LoggingUtility GetLoggingUtility(string loggerName, Level logLevel, int saveDays)
+        {
+            if (_loggingUtility == null)
+            {
+                _loggingUtility = new LoggingUtility(loggerName, logLevel, saveDays);
+            }
+
+            return _loggingUtility;
+        }
 
         public LoggingUtility(string loggerName, Level logLevel, int logDays)
         {
@@ -55,7 +66,7 @@ namespace FinalProject1_winform
             }
             if (!exists)
             {
-                repository = LogManager.CreateRepository(loggerName);                
+                repository = LogManager.CreateRepository(loggerName);
             }
 
             Hierarchy hierarchy = (Hierarchy)repository;
