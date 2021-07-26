@@ -340,7 +340,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi1);
             this.Controls.Add(this.pictureBox_gudi1);
             this.Name = "frmUserJoin";
-            this.Text = "frmUserJoin";
+            this.Text = "회원가입";
             this.Load += new System.EventHandler(this.frmUserJoin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

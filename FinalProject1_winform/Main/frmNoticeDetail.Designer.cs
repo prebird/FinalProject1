@@ -86,7 +86,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.txtTitle);
             this.Name = "frmNoticeDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmNoticeDetail";
+            this.Text = "공지사항 세부";
             this.Load += new System.EventHandler(this.frmNoticeDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
