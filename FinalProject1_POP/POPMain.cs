@@ -36,9 +36,7 @@ namespace FinalProject1_POP
            activeForm = childForm;
            childForm.TopLevel = false;
            childForm.FormBorderStyle = FormBorderStyle.None;
-           childForm.Dock = DockStyle.Fill;
-           PanelCildForm.Controls.Add(childForm);
-           PanelCildForm.Tag = childForm;
+            childForm.WindowState = FormWindowState.Maximized;
            childForm.MdiParent = this;
            childForm.BringToFront();
            childForm.Show();
