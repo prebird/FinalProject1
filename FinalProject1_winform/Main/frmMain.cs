@@ -29,6 +29,7 @@ namespace FinalProject1_winform
             InitializeComponent();
             this.user = user;
             this.Tag = loginform;
+            bFlag = true;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
