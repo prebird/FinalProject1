@@ -16,7 +16,7 @@ namespace FinalProject1_POP
         POPVO User;
         List<POPItemVO> Item;
         List<POPProcessVO> Process;
-        POPWorkOrderVO Order;
+        POPWorkOrderVO Order = new POPWorkOrderVO();
         public POPWorkInfo(POPVO user)
         {
             InitializeComponent();
@@ -120,8 +120,13 @@ namespace FinalProject1_POP
                MessageBox.Show("작업을 선택하여 주십시오.");
                return;
            }
-           
-           
+
+             POPMain main = (POPMain)this.MdiParent;
+             main.openChildForm(new POPFactoryInfo(Order));
+
+            // POPMain main = new POPMain(User);
+           //  main = (POPMain)this.MdiParent;
+
            //1. POPFactoryInfo에 필드Order 넘기기
            //2. Main에 Order 넘기기
 

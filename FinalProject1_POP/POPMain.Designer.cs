@@ -152,6 +152,7 @@ namespace FinalProject1_POP
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.IsMdiContainer = true;
             this.MinimizeBox = false;
             this.Name = "POPMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
