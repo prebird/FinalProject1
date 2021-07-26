@@ -21,7 +21,7 @@ namespace FinalProject1_VO
         public string INS_EMP { get; set; }
         public string INS_DATE { get; set; }
         public string IsActive { get; set; }
-        public string FromLocationID { get; set; }
-        public string ToLocationID { get; set; }
+        public int FromLocationID { get; set; }
+        public int ToLocationID { get; set; }
     }
 }

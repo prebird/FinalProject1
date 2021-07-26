@@ -16,7 +16,7 @@ namespace FinalProject1_winform
         List<ProcessVO> processes;
         List<EquipmentGroupVO> equipmentGroups;
         EquipmentVO equipment = new EquipmentVO();
-        public string INS_EMP { get; set; }
+        public UserInfoVO User { get; set; }
         public EquipmentVO Equipment { get { return equipment; } }
 
         public frmEquipmentList()
@@ -41,7 +41,10 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvList, "", "ProcessCode", visibility: false);
             CommonUtil.AddGridTextColumn(dgvList, "", "EquipmentGroupCode", visibility: false);
 
-
+            if(this.MdiParent is frmMain frm)
+            {
+                User = frm.User;
+            }
 
             processEquipmentService service = new processEquipmentService();
             processes = service.GetAllProcess();
@@ -60,6 +63,7 @@ namespace FinalProject1_winform
 
             CommonUtil.ComboBinding<ProcessVO>(cboProcess, processes, "ProcessName", "ProcessCode");
             CommonUtil.ComboBinding<EquipmentGroupVO>(cboEquipmentGroup, equipmentGroups, "EquipmentGroupName", "EquipmentGroupCode");
+
         }
 
         private void LoadData()
@@ -115,14 +119,14 @@ namespace FinalProject1_winform
             equipment.EquipmentGroupName = dgvList["EquipmentGroupName", e.RowIndex].Value.ToString();
             equipment.EquipmentName = dgvList["EquipmentName", e.RowIndex].Value.ToString();
             equipment.IsActive = dgvList["IsActive", e.RowIndex].Value.ToString();
-            equipment.FromLocationID = dgvList["FromLocationID", e.RowIndex].Value.ToString();
-            equipment.ToLocationID = dgvList["ToLocationID", e.RowIndex].Value.ToString();
+            equipment.FromLocationID = Convert.ToInt32(dgvList["FromLocationID", e.RowIndex].Value);
+            equipment.ToLocationID = Convert.ToInt32(dgvList["ToLocationID", e.RowIndex].Value);
             equipment.Status = dgvList["Status", e.RowIndex].Value.ToString();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmEquipment frm = new frmEquipment();
+            frmEquipment frm = new frmEquipment(User);
             frm.ShowDialog();
         }
 
@@ -134,7 +138,7 @@ namespace FinalProject1_winform
                 return;
             }
 
-            frmEquipment frm = new frmEquipment();
+            frmEquipment frm = new frmEquipment(User);
             frm.Owner = this;
             if(frm.ShowDialog()==DialogResult.OK)
             {

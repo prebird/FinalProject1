@@ -15,6 +15,7 @@ namespace FinalProject1_winform
         List<EquipmentGroupVO> equipmentGroups;
         EquipmentGroupVO equipmentGroup = new EquipmentGroupVO();
         public EquipmentGroupVO EquipmentGroup { get { return equipmentGroup; } }
+        public UserInfoVO User { get; set; }
         public frmEquipmentGroupList()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvList, "수정자", "INS_EMP");
             CommonUtil.AddGridTextColumn(dgvList, "수정 일시", "INS_DATE", colWidth: 120);
             LoadData();
+
+            if(this.MdiParent is frmMain frm)
+            {
+                User = frm.User;
+            }
         }
 
         private void LoadData()
@@ -61,7 +67,7 @@ namespace FinalProject1_winform
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmEquipmentGroup frm = new frmEquipmentGroup();
+            frmEquipmentGroup frm = new frmEquipmentGroup(User);
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
@@ -76,7 +82,7 @@ namespace FinalProject1_winform
                 return;
             }
 
-            frmEquipmentGroup frm = new frmEquipmentGroup();
+            frmEquipmentGroup frm = new frmEquipmentGroup(User);
             frm.Owner = this;
             if(frm.ShowDialog() == DialogResult.OK)
             {
