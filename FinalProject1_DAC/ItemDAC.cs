@@ -145,6 +145,8 @@ namespace FinalProject1_DAC
             }
         }
 
+
+        // 차트
         public List<OrderStatsVO> GetOrderBestProduct()
         {
             string sql = @" with Best3Product as
@@ -178,9 +180,9 @@ namespace FinalProject1_DAC
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
 
-                cmd.Connection.Open();
+                
                 List<OrderStatsVO> list = Helper.DataReaderMapToList<OrderStatsVO>(cmd.ExecuteReader());
-                cmd.Connection.Close();
+
 
                 return list;
             }
