@@ -69,6 +69,11 @@ namespace FinalProject1_winform.Controls
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            if (YN == "(작업완료)")
+            {
+                MessageBox.Show("완료된 작업입니다.");
+                return;
+            }
             string server = Application.StartupPath + "\\OutputTcpServer.exe";
             Process pro = Process.Start(server, $"{Task_ID} {Task_IP} {Task_Port}");
             process_id = pro.Id;
@@ -79,20 +84,51 @@ namespace FinalProject1_winform.Controls
             POP.UCReadData += POP_UCReadData;
             POP.Show();
             POP.Hide();
-
+            
             IsTaskEnable = true;
         }
 
         private void POP_UCReadData(object sender, ReadDataEventArgs args)
         {
-            string[] datas = args.Data.Split('|');
-            totQty += int.Parse(datas[1]);
-            totBadQty += int.Parse(datas[2]);
+            if (POP.InvokeRequired == true)
+            {
+                POP.Invoke((MethodInvoker)delegate
+                {
 
-            txtOKQty.Text = totQty.ToString();
-            txtNGQty.Text = totBadQty.ToString();
+                    string[] datas = args.Data.Split('|');
+                    totQty += int.Parse(datas[1]);
+                    totBadQty += int.Parse(datas[2]);
 
-            //if 
+                    txtWorkQty.Text = totQty.ToString();
+                    txtNGQty.Text = totBadQty.ToString();
+                    txtOKQty.Text = (totQty - totBadQty).ToString();
+                    txtNGQty.Text = totBadQty.ToString();
+                    txtRemainQty.Text = (Convert.ToInt32(txtOrderQty.Text) - Convert.ToInt32(txtWorkQty.Text)).ToString();
+
+                    if (Convert.ToInt32(txtOrderQty.Text) == Convert.ToInt32(txtWorkQty.Text))
+                    {
+                       
+                        IsTaskEnable = false;
+                        YN = "(작업완료)";
+                        lblYN.ForeColor = Color.Blue;
+                        POP.bExit = true;
+                        //POP.Close();
+
+                        foreach (Process process in Process.GetProcesses())
+                        {
+                            if (process.Id.Equals(process_id))
+                            {
+                                process.Kill();
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        private void btnSaveData_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnStop_Click(object sender, EventArgs e)
