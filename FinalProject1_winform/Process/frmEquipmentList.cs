@@ -119,8 +119,8 @@ namespace FinalProject1_winform
             equipment.EquipmentGroupName = dgvList["EquipmentGroupName", e.RowIndex].Value.ToString();
             equipment.EquipmentName = dgvList["EquipmentName", e.RowIndex].Value.ToString();
             equipment.IsActive = dgvList["IsActive", e.RowIndex].Value.ToString();
-            equipment.FromLocationID = dgvList["FromLocationID", e.RowIndex].Value.ToString();
-            equipment.ToLocationID = dgvList["ToLocationID", e.RowIndex].Value.ToString();
+            equipment.FromLocationID = Convert.ToInt32(dgvList["FromLocationID", e.RowIndex].Value);
+            equipment.ToLocationID = Convert.ToInt32(dgvList["ToLocationID", e.RowIndex].Value);
             equipment.Status = dgvList["Status", e.RowIndex].Value.ToString();
         }
 
