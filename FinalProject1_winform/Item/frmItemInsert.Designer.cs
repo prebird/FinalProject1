@@ -437,7 +437,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmItemInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmItemInsert";
+            this.Text = "품목 등록";
             this.Load += new System.EventHandler(this.frmItemInsert_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

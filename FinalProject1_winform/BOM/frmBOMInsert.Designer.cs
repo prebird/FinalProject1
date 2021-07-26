@@ -445,7 +445,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel4);
             this.Name = "frmBOMInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmBOMInsert";
+            this.Text = "BOM 등록";
             this.Shown += new System.EventHandler(this.frmBOMInsert_Shown);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

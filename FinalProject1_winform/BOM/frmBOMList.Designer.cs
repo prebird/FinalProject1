@@ -300,7 +300,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmBOMList";
-            this.Text = "frmBOMList";
+            this.Text = "BOM 관리";
             this.Load += new System.EventHandler(this.frmBOM_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

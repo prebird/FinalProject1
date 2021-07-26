@@ -344,7 +344,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmItem";
-            this.Text = "frmItem";
+            this.Text = "품목 관리";
             this.Load += new System.EventHandler(this.frmItem_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).EndInit();

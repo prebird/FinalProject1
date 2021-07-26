@@ -205,7 +205,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmPOUpload";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmSMUpload";
+            this.Text = "고객 발주서 업로드";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
