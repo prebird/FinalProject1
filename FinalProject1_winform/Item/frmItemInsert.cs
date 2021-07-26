@@ -159,5 +159,12 @@ namespace FinalProject1_winform
                 pictureBox1.ImageLocation = dlg.FileName;
             }
         }
+
+        private void frmItemInsert_Load(object sender, EventArgs e)
+        {
+            CommonUtil.ComboBindingWHid(cbo_InHouse);
+            CommonUtil.ComboBindingWHid(cbo_OutHouse);
+
+        }
     }
 }

@@ -38,8 +38,6 @@ namespace FinalProject1_winform
             this.btnDelete = new FinalProject1_winform.Button_gudi();
             this.btnInsert = new FinalProject1_winform.Button_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgV_Company = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCompanyCrum = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -51,14 +49,15 @@ namespace FinalProject1_winform
             this.txtCompanyName = new FinalProject1_winform.Controls.TextBox_gudi();
             this.lblCompanyName = new FinalProject1_winform.Label_gudi();
             this.lblCompanyCode = new FinalProject1_winform.Label_gudi();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).BeginInit();
+            this.dgV_Company = new FinalProject1_winform.DGV_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).BeginInit();
             this.SuspendLayout();
             // 
             // btmUpdate
             // 
+            this.btmUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btmUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btmUpdate.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btmUpdate.FlatAppearance.BorderSize = 0;
@@ -78,6 +77,7 @@ namespace FinalProject1_winform
             // 
             // button_gudi10
             // 
+            this.button_gudi10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_gudi10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.button_gudi10.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi10.FlatAppearance.BorderSize = 0;
@@ -96,6 +96,7 @@ namespace FinalProject1_winform
             // 
             // btnExportExcel
             // 
+            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnExportExcel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnExportExcel.FlatAppearance.BorderSize = 0;
@@ -114,6 +115,7 @@ namespace FinalProject1_winform
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnDelete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnDelete.FlatAppearance.BorderSize = 0;
@@ -133,6 +135,7 @@ namespace FinalProject1_winform
             // 
             // btnInsert
             // 
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnInsert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnInsert.FlatAppearance.BorderSize = 0;
@@ -159,41 +162,6 @@ namespace FinalProject1_winform
             this.label_gudi4.Size = new System.Drawing.Size(74, 16);
             this.label_gudi4.TabIndex = 21;
             this.label_gudi4.Text = "업체코드정의";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dgV_Company);
-            this.panel2.Location = new System.Drawing.Point(17, 143);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 466);
-            this.panel2.TabIndex = 20;
-            // 
-            // dgV_Company
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgV_Company.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgV_Company.BackgroundColor = System.Drawing.Color.White;
-            this.dgV_Company.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgV_Company.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgV_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgV_Company.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgV_Company.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgV_Company.HeaderCheckStatus = false;
-            this.dgV_Company.Location = new System.Drawing.Point(0, 0);
-            this.dgV_Company.Name = "dgV_Company";
-            this.dgV_Company.RowHeadersVisible = false;
-            this.dgV_Company.RowTemplate.Height = 23;
-            this.dgV_Company.Size = new System.Drawing.Size(1057, 466);
-            this.dgV_Company.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
@@ -254,6 +222,7 @@ namespace FinalProject1_winform
             // 
             // btmSearch
             // 
+            this.btmSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btmSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btmSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btmSearch.FlatAppearance.BorderSize = 0;
@@ -322,28 +291,54 @@ namespace FinalProject1_winform
             this.lblCompanyCode.TabIndex = 0;
             this.lblCompanyCode.Text = "■ 업체코드";
             // 
+            // dgV_Company
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgV_Company.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgV_Company.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgV_Company.BackgroundColor = System.Drawing.Color.White;
+            this.dgV_Company.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgV_Company.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgV_Company.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Company.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgV_Company.HeaderCheckStatus = false;
+            this.dgV_Company.Location = new System.Drawing.Point(24, 142);
+            this.dgV_Company.Name = "dgV_Company";
+            this.dgV_Company.RowHeadersVisible = false;
+            this.dgV_Company.RowTemplate.Height = 23;
+            this.dgV_Company.Size = new System.Drawing.Size(1057, 466);
+            this.dgV_Company.TabIndex = 28;
+            // 
             // frmCompanyInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.Controls.Add(this.dgV_Company);
             this.Controls.Add(this.btmUpdate);
             this.Controls.Add(this.button_gudi10);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.label_gudi4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmCompanyInfo";
             this.Text = "업체정보관리";
             this.Load += new System.EventHandler(this.frmCompanyInfo_Load);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Company)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +352,6 @@ namespace FinalProject1_winform
         private Button_gudi btnDelete;
         private Button_gudi btnInsert;
         private Label_gudi label_gudi4;
-        private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private System.Windows.Forms.Panel panel1;
         private Button_gudi btmSearch;

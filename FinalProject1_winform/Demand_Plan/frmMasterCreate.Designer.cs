@@ -33,15 +33,12 @@ namespace FinalProject1_winform
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
-            this.btn_Template = new FinalProject1_winform.Button_gudi();
             this.btn_POExcel = new FinalProject1_winform.Button_gudi();
             this.btn_Create = new FinalProject1_winform.Button_gudi();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_PO = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).BeginInit();
+            this.dgv_PO = new FinalProject1_winform.DGV_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).BeginInit();
             this.SuspendLayout();
             // 
             // label_gudi1
@@ -50,28 +47,9 @@ namespace FinalProject1_winform
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi1.Location = new System.Drawing.Point(49, 25);
             this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi1.Size = new System.Drawing.Size(122, 17);
             this.label_gudi1.TabIndex = 83;
-            this.label_gudi1.Text = "영업 마스터";
-            // 
-            // btn_Template
-            // 
-            this.btn_Template.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Template.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
-            this.btn_Template.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
-            this.btn_Template.FlatAppearance.BorderSize = 0;
-            this.btn_Template.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Template.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.btn_Template.ForeColor = System.Drawing.Color.Black;
-            this.btn_Template.Image = ((System.Drawing.Image)(resources.GetObject("btn_Template.Image")));
-            this.btn_Template.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Template.Location = new System.Drawing.Point(829, 21);
-            this.btn_Template.Name = "btn_Template";
-            this.btn_Template.Size = new System.Drawing.Size(111, 25);
-            this.btn_Template.TabIndex = 79;
-            this.btn_Template.Text = "양식 다운로드";
-            this.btn_Template.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Template.UseVisualStyleBackColor = false;
+            this.label_gudi1.Text = "영업 마스터 PO 출력";
             // 
             // btn_POExcel
             // 
@@ -104,7 +82,7 @@ namespace FinalProject1_winform
             this.btn_Create.ForeColor = System.Drawing.Color.Black;
             this.btn_Create.Image = ((System.Drawing.Image)(resources.GetObject("btn_Create.Image")));
             this.btn_Create.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Create.Location = new System.Drawing.Point(698, 21);
+            this.btn_Create.Location = new System.Drawing.Point(815, 21);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(125, 25);
             this.btn_Create.TabIndex = 82;
@@ -113,21 +91,23 @@ namespace FinalProject1_winform
             this.btn_Create.UseVisualStyleBackColor = false;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // panel2
+            // pictureBox_gudi2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dgv_PO);
-            this.panel2.Location = new System.Drawing.Point(18, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 551);
-            this.panel2.TabIndex = 78;
+            this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(19, 24);
+            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
+            this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
+            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi2.TabIndex = 77;
+            this.pictureBox_gudi2.TabStop = false;
             // 
             // dgv_PO
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.dgv_PO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_PO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_PO.BackgroundColor = System.Drawing.Color.White;
             this.dgv_PO.CheckBoxAll = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -141,39 +121,27 @@ namespace FinalProject1_winform
             this.dgv_PO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PO.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_PO.HeaderCheckStatus = false;
-            this.dgv_PO.Location = new System.Drawing.Point(3, 3);
+            this.dgv_PO.Location = new System.Drawing.Point(19, 52);
             this.dgv_PO.Name = "dgv_PO";
             this.dgv_PO.RowHeadersVisible = false;
             this.dgv_PO.RowTemplate.Height = 23;
-            this.dgv_PO.Size = new System.Drawing.Size(1049, 533);
-            this.dgv_PO.TabIndex = 0;
-            // 
-            // pictureBox_gudi2
-            // 
-            this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(19, 24);
-            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
-            this.pictureBox_gudi2.Size = new System.Drawing.Size(25, 19);
-            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi2.TabIndex = 77;
-            this.pictureBox_gudi2.TabStop = false;
+            this.dgv_PO.Size = new System.Drawing.Size(1056, 549);
+            this.dgv_PO.TabIndex = 84;
             // 
             // frmMasterCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 632);
+            this.Controls.Add(this.dgv_PO);
             this.Controls.Add(this.label_gudi1);
-            this.Controls.Add(this.btn_Template);
             this.Controls.Add(this.btn_POExcel);
             this.Controls.Add(this.btn_Create);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Name = "frmMasterCreate";
             this.Text = "frmSMInsert";
             this.Load += new System.EventHandler(this.frmMasterCreate_Load);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,11 +150,9 @@ namespace FinalProject1_winform
         #endregion
 
         private Label_gudi label_gudi1;
-        private Button_gudi btn_Template;
         private Button_gudi btn_POExcel;
         private Button_gudi btn_Create;
-        private System.Windows.Forms.Panel panel2;
-        private DGV_gudi dgv_PO;
         private PictureBox_gudi pictureBox_gudi2;
+        private DGV_gudi dgv_PO;
     }
 }

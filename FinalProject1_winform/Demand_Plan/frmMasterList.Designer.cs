@@ -30,8 +30,8 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Excel = new FinalProject1_winform.Button_gudi();
             this.btn_Delete = new FinalProject1_winform.Button_gudi();
             this.btn_PlanCreate = new FinalProject1_winform.Button_gudi();
@@ -106,7 +106,7 @@ namespace FinalProject1_winform
             this.btn_PlanCreate.ForeColor = System.Drawing.Color.Black;
             this.btn_PlanCreate.Image = ((System.Drawing.Image)(resources.GetObject("btn_PlanCreate.Image")));
             this.btn_PlanCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PlanCreate.Location = new System.Drawing.Point(699, 113);
+            this.btn_PlanCreate.Location = new System.Drawing.Point(632, 113);
             this.btn_PlanCreate.Name = "btn_PlanCreate";
             this.btn_PlanCreate.Size = new System.Drawing.Size(113, 25);
             this.btn_PlanCreate.TabIndex = 30;
@@ -128,18 +128,21 @@ namespace FinalProject1_winform
             // 
             // dgv_SalesMaster
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_SalesMaster.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_SalesMaster.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_SalesMaster.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_SalesMaster.BackgroundColor = System.Drawing.Color.White;
             this.dgv_SalesMaster.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_SalesMaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_SalesMaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_SalesMaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_SalesMaster.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.dgv_SalesMaster.HeaderCheckStatus = false;
@@ -236,7 +239,7 @@ namespace FinalProject1_winform
             // 
             // btn_Search
             // 
-            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btn_Search.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btn_Search.FlatAppearance.BorderSize = 0;
@@ -259,12 +262,13 @@ namespace FinalProject1_winform
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi1.Location = new System.Drawing.Point(49, 117);
             this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi1.Size = new System.Drawing.Size(100, 17);
             this.label_gudi1.TabIndex = 75;
-            this.label_gudi1.Text = "영업 마스터";
+            this.label_gudi1.Text = "영업 마스터 목록";
             // 
             // button_gudi7
             // 
+            this.button_gudi7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi7.FlatAppearance.BorderSize = 0;
@@ -283,6 +287,7 @@ namespace FinalProject1_winform
             // 
             // btn_Insert
             // 
+            this.btn_Insert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Insert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Insert.FlatAppearance.BorderSize = 0;
@@ -291,11 +296,11 @@ namespace FinalProject1_winform
             this.btn_Insert.ForeColor = System.Drawing.Color.Black;
             this.btn_Insert.Image = ((System.Drawing.Image)(resources.GetObject("btn_Insert.Image")));
             this.btn_Insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Insert.Location = new System.Drawing.Point(818, 113);
+            this.btn_Insert.Location = new System.Drawing.Point(751, 113);
             this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(60, 25);
+            this.btn_Insert.Size = new System.Drawing.Size(127, 25);
             this.btn_Insert.TabIndex = 77;
-            this.btn_Insert.Text = "등록";
+            this.btn_Insert.Text = "확정 Order 등록";
             this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Insert.UseVisualStyleBackColor = false;
             this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
