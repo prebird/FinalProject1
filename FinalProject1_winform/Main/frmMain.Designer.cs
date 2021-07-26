@@ -31,6 +31,9 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlUpSide = new System.Windows.Forms.Panel();
+            this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
+            this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
@@ -38,14 +41,11 @@ namespace FinalProject1_winform
             this.lbluserName = new FinalProject1_winform.Label_gudi();
             this.picUser = new FinalProject1_winform.OvalPictureBox();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
-            this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
-            this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
             this.pnlUpSide.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUpSide
@@ -66,80 +66,6 @@ namespace FinalProject1_winform
             this.pnlUpSide.Name = "pnlUpSide";
             this.pnlUpSide.Size = new System.Drawing.Size(1684, 99);
             this.pnlUpSide.TabIndex = 0;
-            // 
-            // label_gudi2
-            // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.BackColor = System.Drawing.Color.Red;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_gudi2.Location = new System.Drawing.Point(1407, 35);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(17, 23);
-            this.label_gudi2.TabIndex = 4;
-            this.label_gudi2.Text = "1";
-            // 
-            // pictureBox_gudi2
-            // 
-            this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
-            this.pictureBox_gudi2.Location = new System.Drawing.Point(1377, 43);
-            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
-            this.pictureBox_gudi2.Size = new System.Drawing.Size(46, 44);
-            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi2.TabIndex = 3;
-            this.pictureBox_gudi2.TabStop = false;
-            this.pictureBox_gudi2.Click += new System.EventHandler(this.pictureBox_gudi2_Click);
-            // 
-            // label_gudi1
-            // 
-            this.label_gudi1.AutoSize = true;
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.Location = new System.Drawing.Point(1538, 62);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(74, 23);
-            this.label_gudi1.TabIndex = 2;
-            this.label_gudi1.Text = "로그아웃";
-            this.label_gudi1.Click += new System.EventHandler(this.label_gudi1_Click);
-            // 
-            // lbluserTitle
-            // 
-            this.lbluserTitle.AutoSize = true;
-            this.lbluserTitle.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbluserTitle.Location = new System.Drawing.Point(1538, 39);
-            this.lbluserTitle.Name = "lbluserTitle";
-            this.lbluserTitle.Size = new System.Drawing.Size(58, 23);
-            this.lbluserTitle.TabIndex = 2;
-            this.lbluserTitle.Text = "ㅇㅇ부";
-            // 
-            // lbluserName
-            // 
-            this.lbluserName.AutoSize = true;
-            this.lbluserName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbluserName.Location = new System.Drawing.Point(1538, 12);
-            this.lbluserName.Name = "lbluserName";
-            this.lbluserName.Size = new System.Drawing.Size(58, 23);
-            this.lbluserName.TabIndex = 2;
-            this.lbluserName.Text = "ㅇㅇㅇ";
-            // 
-            // picUser
-            // 
-            this.picUser.BackColor = System.Drawing.Color.White;
-            this.picUser.Location = new System.Drawing.Point(1432, 3);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(100, 91);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUser.TabIndex = 1;
-            this.picUser.TabStop = false;
-            // 
-            // pictureBox_gudi1
-            // 
-            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
-            this.pictureBox_gudi1.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
-            this.pictureBox_gudi1.Size = new System.Drawing.Size(198, 99);
-            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_gudi1.TabIndex = 0;
-            this.pictureBox_gudi1.TabStop = false;
             // 
             // pnlSideBar
             // 
@@ -167,6 +93,7 @@ namespace FinalProject1_winform
             // 
             // pictureBox_gudi3
             // 
+            this.pictureBox_gudi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_gudi3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi3.Image")));
             this.pictureBox_gudi3.Location = new System.Drawing.Point(1325, 43);
             this.pictureBox_gudi3.Name = "pictureBox_gudi3";
@@ -175,6 +102,86 @@ namespace FinalProject1_winform
             this.pictureBox_gudi3.TabIndex = 5;
             this.pictureBox_gudi3.TabStop = false;
             this.pictureBox_gudi3.Click += new System.EventHandler(this.pictureBox_gudi3_Click);
+            // 
+            // label_gudi2
+            // 
+            this.label_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_gudi2.AutoSize = true;
+            this.label_gudi2.BackColor = System.Drawing.Color.Red;
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label_gudi2.Location = new System.Drawing.Point(1407, 35);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(17, 23);
+            this.label_gudi2.TabIndex = 4;
+            this.label_gudi2.Text = "1";
+            // 
+            // pictureBox_gudi2
+            // 
+            this.pictureBox_gudi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
+            this.pictureBox_gudi2.Location = new System.Drawing.Point(1377, 43);
+            this.pictureBox_gudi2.Name = "pictureBox_gudi2";
+            this.pictureBox_gudi2.Size = new System.Drawing.Size(46, 44);
+            this.pictureBox_gudi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi2.TabIndex = 3;
+            this.pictureBox_gudi2.TabStop = false;
+            this.pictureBox_gudi2.Click += new System.EventHandler(this.pictureBox_gudi2_Click);
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_gudi1.AutoSize = true;
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.Location = new System.Drawing.Point(1538, 62);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(74, 23);
+            this.label_gudi1.TabIndex = 2;
+            this.label_gudi1.Text = "로그아웃";
+            this.label_gudi1.Click += new System.EventHandler(this.label_gudi1_Click);
+            // 
+            // lbluserTitle
+            // 
+            this.lbluserTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbluserTitle.AutoSize = true;
+            this.lbluserTitle.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbluserTitle.Location = new System.Drawing.Point(1538, 39);
+            this.lbluserTitle.Name = "lbluserTitle";
+            this.lbluserTitle.Size = new System.Drawing.Size(58, 23);
+            this.lbluserTitle.TabIndex = 2;
+            this.lbluserTitle.Text = "ㅇㅇ부";
+            // 
+            // lbluserName
+            // 
+            this.lbluserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbluserName.AutoSize = true;
+            this.lbluserName.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbluserName.Location = new System.Drawing.Point(1538, 12);
+            this.lbluserName.Name = "lbluserName";
+            this.lbluserName.Size = new System.Drawing.Size(58, 23);
+            this.lbluserName.TabIndex = 2;
+            this.lbluserName.Text = "ㅇㅇㅇ";
+            // 
+            // picUser
+            // 
+            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picUser.BackColor = System.Drawing.Color.White;
+            this.picUser.Location = new System.Drawing.Point(1432, 3);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(100, 91);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 1;
+            this.picUser.TabStop = false;
+            // 
+            // pictureBox_gudi1
+            // 
+            this.pictureBox_gudi1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi1.Image")));
+            this.pictureBox_gudi1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox_gudi1.Name = "pictureBox_gudi1";
+            this.pictureBox_gudi1.Size = new System.Drawing.Size(198, 99);
+            this.pictureBox_gudi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gudi1.TabIndex = 0;
+            this.pictureBox_gudi1.TabStop = false;
             // 
             // frmMain
             // 
@@ -191,10 +198,10 @@ namespace FinalProject1_winform
             this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
             this.pnlUpSide.ResumeLayout(false);
             this.pnlUpSide.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).EndInit();
             this.ResumeLayout(false);
 
         }
