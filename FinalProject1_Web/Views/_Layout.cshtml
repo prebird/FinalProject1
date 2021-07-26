@@ -152,8 +152,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Brand Logo -->
             <a href="~/main/index" class="brand-link">
                 <img src="~/dist/img/OkdolCompany3.png" alt="OkDolCompany Logo" class="brand-image img-circle elevation-3"
-                     style="opacity: 1" >
-                <span class="font-weight-bolder" >OKDOL CO.</span>
+                     style="opacity: 1">
+                <span class="font-weight-bolder">OKDOL CO.</span>
             </a>
 
             <!-- Sidebar -->
@@ -173,12 +173,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         string picurl = @System.Web.Configuration.WebConfigurationManager.AppSettings["apiurl"] + "Uploads/" + uservo.user_pic;
 
                         <div class="image">
-                            <img src = @picurl class=" + " alt="User Image">
+                            <img src=@picurl class=" + " alt="User Image">
                         </div>
                         <div class="info">
                             <a href="#" class="d-block">@uservo.user_name</a>
                         </div>
-                        <button type="button" class="btn btn-dark" style="float:right" onclick="location.href='/UserJoin/LogOut'" >LogOut</button>
+                        <button type="button" class="btn btn-dark" style="float:right" onclick="location.href='/UserJoin/LogOut'">LogOut</button>
                     }
 
 
@@ -236,9 +236,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <i class="right badge badge-danger"></i>
                                 </p>
                             </a>
-                           
+
                         </li>
-                        
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -247,8 +247,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        
-            @RenderBody()
+
+        @RenderBody()
         ]
         <!-- /.content-wrapper -->
         <!-- Control Sidebar -->
@@ -278,5 +278,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="~/dist/js/adminlte.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/plugins/chart.js/Chart.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/dist/js/demo.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
