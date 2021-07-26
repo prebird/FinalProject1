@@ -130,6 +130,9 @@ namespace FinalProject1_winform
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.dgv_SalesMaster.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_SalesMaster.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_SalesMaster.BackgroundColor = System.Drawing.Color.White;
             this.dgv_SalesMaster.CheckBoxAll = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -236,7 +239,7 @@ namespace FinalProject1_winform
             // 
             // btn_Search
             // 
-            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btn_Search.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btn_Search.FlatAppearance.BorderSize = 0;
@@ -259,12 +262,13 @@ namespace FinalProject1_winform
             this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.label_gudi1.Location = new System.Drawing.Point(49, 117);
             this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi1.Size = new System.Drawing.Size(100, 17);
             this.label_gudi1.TabIndex = 75;
-            this.label_gudi1.Text = "영업 마스터";
+            this.label_gudi1.Text = "영업 마스터 목록";
             // 
             // button_gudi7
             // 
+            this.button_gudi7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_gudi7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.button_gudi7.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi7.FlatAppearance.BorderSize = 0;
@@ -283,6 +287,7 @@ namespace FinalProject1_winform
             // 
             // btn_Insert
             // 
+            this.btn_Insert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Insert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Insert.FlatAppearance.BorderSize = 0;
