@@ -27,9 +27,22 @@ namespace FinalProject1_winform
 
         private void frmWorkOrderMake_Load(object sender, EventArgs e)
         {
+            //CommonUtil.SetInitGridView(dgvList);
+            //CommonUtil.AddGridTextColumn(dgvList, "PlanID", "PlanID");
+            //CommonUtil.AddGridTextColumn(dgvList, "공정명", "ProcessName");
+            //CommonUtil.AddGridTextColumn(dgvList, "설비명", "EquipmentName");
+            //CommonUtil.AddGridTextColumn(dgvList, "물품명", "Item_Name");
+            //CommonUtil.AddGridTextColumn(dgvList, "상태", "Status");
+
             processEquipmentService equipmentService = new processEquipmentService();
             List<EquipmentVO> list = equipmentService.GetAllEquipment();
 
+            EquipmentVO vo = new EquipmentVO
+            {
+                EquipmentName = "선택",
+                EquipmentGroupCode = ""
+            };
+            list.Insert(0, vo);
             CommonUtil.ComboBinding<EquipmentVO>(cboEquipment, list, "EquipmentName", "EquipmentCode");
 
             fromDate = dateControl.FromDate.ToString("yyyy-MM-dd");
@@ -43,14 +56,18 @@ namespace FinalProject1_winform
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cboEquipment.Text) || string.IsNullOrWhiteSpace(txtItem.Text) || string.IsNullOrWhiteSpace(txtPlanID.Text))
-            {
-                MessageBox.Show("검색 조건을 선택해 주세요");
-                return;
-            }
-
             fromDate = dateControl.FromDate.ToString("yyyy-MM-dd");
             toDate = dateControl.ToDate.ToString("yyyy-MM-dd");
+
+            if (cboEquipment.SelectedIndex == 0 && string.IsNullOrWhiteSpace(txtItem.Text) && string.IsNullOrWhiteSpace(txtPlanID.Text))
+            {
+                ProductionPlanService service1 = new ProductionPlanService();
+                DataTable dt1 = service1.GetPlanList(fromDate, toDate);
+
+                dgvList.DataSource = null;
+                dgvList.DataSource = dt1;
+                return;
+            }
 
             ProductionPlanService service = new ProductionPlanService();
             DataTable dt = service.GetSpecialPlanList(fromDate, toDate, txtItem.Text, cboEquipment.Text, txtPlanID.Text);

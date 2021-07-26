@@ -147,6 +147,9 @@ namespace FinalProject1_winform
             // 
             this.cbo_OrderType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_OrderType.FormattingEnabled = true;
+            this.cbo_OrderType.Items.AddRange(new object[] {
+            "정량",
+            "부분"});
             this.cbo_OrderType.Location = new System.Drawing.Point(132, 255);
             this.cbo_OrderType.Name = "cbo_OrderType";
             this.cbo_OrderType.Size = new System.Drawing.Size(198, 24);
@@ -217,6 +220,9 @@ namespace FinalProject1_winform
             // 
             this.cbo_CheckType.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
             this.cbo_CheckType.FormattingEnabled = true;
+            this.cbo_CheckType.Items.AddRange(new object[] {
+            "입고검사",
+            "출고검사"});
             this.cbo_CheckType.Location = new System.Drawing.Point(132, 218);
             this.cbo_CheckType.Name = "cbo_CheckType";
             this.cbo_CheckType.Size = new System.Drawing.Size(198, 24);
