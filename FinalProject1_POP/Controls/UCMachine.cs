@@ -70,7 +70,7 @@ namespace FinalProject1_winform.Controls
         private void btnStart_Click(object sender, EventArgs e)
         {
             string server = Application.StartupPath + "\\OutputTcpServer.exe";
-            Process pro = Process.Start(server, $"{Worknum} {Task_ID} {Task_IP} {Task_Port}");
+            Process pro = Process.Start(server, $"{Task_ID} {Task_IP} {Task_Port}");
             process_id = pro.Id;
             YN = "(가동 중)";
             lblYN.ForeColor = Color.Lime;

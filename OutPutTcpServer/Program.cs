@@ -1,5 +1,4 @@
-﻿using FinalProject1_POP;
-using log4net.Core;
+﻿using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -19,9 +18,9 @@ namespace OutputTcpServer
         static void Main(string[] args)
         {           
                 Service1 service = new Service1();
-                service.taskID = args[1];
-                service.hostIP = args[2];
-                service.hostPort = int.Parse(args[3]);
+                service.taskID = args[0];
+                service.hostIP = args[1];
+                service.hostPort = int.Parse(args[2]);
                 service.OnStart();
 
                 Console.ReadLine();       

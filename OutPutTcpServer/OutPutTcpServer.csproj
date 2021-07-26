@@ -61,10 +61,6 @@
       <Project>{24d26f7b-ec4a-45e5-90db-643e8826b1e8}</Project>
       <Name>FinalProject1_DAC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinalProject1_POP\FinalProject1_POP.csproj">
-      <Project>{2d3814bf-40ed-4ebf-83d3-f397454c4a36}</Project>
-      <Name>FinalProject1_POP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FinalProject1_VO\FinalProject1_VO.csproj">
       <Project>{2976884b-c8ae-4a3e-89e6-a3a2228c9132}</Project>
       <Name>FinalProject1_VO</Name>
