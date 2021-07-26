@@ -84,10 +84,6 @@ namespace FinalProject1_winform
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnExcel);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnInsert);
             this.panel1.Controls.Add(this.cboEquipmentGroup);
             this.panel1.Controls.Add(this.label_gudi3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -117,6 +113,7 @@ namespace FinalProject1_winform
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnUpdate.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
@@ -125,7 +122,7 @@ namespace FinalProject1_winform
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(1105, 9);
+            this.btnUpdate.Location = new System.Drawing.Point(1189, 51);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(60, 25);
             this.btnUpdate.TabIndex = 37;
@@ -136,6 +133,7 @@ namespace FinalProject1_winform
             // 
             // btnExcel
             // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnExcel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnExcel.FlatAppearance.BorderSize = 0;
@@ -144,7 +142,7 @@ namespace FinalProject1_winform
             this.btnExcel.ForeColor = System.Drawing.Color.Black;
             this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(1239, 9);
+            this.btnExcel.Location = new System.Drawing.Point(1323, 51);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(60, 25);
             this.btnExcel.TabIndex = 34;
@@ -154,6 +152,7 @@ namespace FinalProject1_winform
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnDelete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnDelete.FlatAppearance.BorderSize = 0;
@@ -162,7 +161,7 @@ namespace FinalProject1_winform
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(1172, 9);
+            this.btnDelete.Location = new System.Drawing.Point(1256, 51);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 25);
             this.btnDelete.TabIndex = 35;
@@ -173,6 +172,7 @@ namespace FinalProject1_winform
             // 
             // btnInsert
             // 
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnInsert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnInsert.FlatAppearance.BorderSize = 0;
@@ -181,7 +181,7 @@ namespace FinalProject1_winform
             this.btnInsert.ForeColor = System.Drawing.Color.Black;
             this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
             this.btnInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsert.Location = new System.Drawing.Point(1038, 9);
+            this.btnInsert.Location = new System.Drawing.Point(1122, 51);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(60, 25);
             this.btnInsert.TabIndex = 36;
@@ -224,8 +224,12 @@ namespace FinalProject1_winform
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1395, 672);
             this.Controls.Add(this.label_gudi1);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Name = "frmEquipmentGroupList";
             this.Text = "frmEquipmentGroupList";

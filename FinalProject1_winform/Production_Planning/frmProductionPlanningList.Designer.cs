@@ -187,6 +187,7 @@ namespace FinalProject1_winform
             // 
             // button_gudi5
             // 
+            this.button_gudi5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_gudi5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.button_gudi5.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.button_gudi5.FlatAppearance.BorderSize = 0;
