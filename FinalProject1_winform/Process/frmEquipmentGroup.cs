@@ -13,16 +13,18 @@ namespace FinalProject1_winform
 {
     public partial class frmEquipmentGroup : Form
     {
-        public frmEquipmentGroup()
+        string INS_EMP = null;
+        public frmEquipmentGroup(UserInfoVO user)
         {
             InitializeComponent();
+            INS_EMP = user.user_name;
         }
 
         private void frmEquipmentGroup_Load(object sender, EventArgs e)
         {
             txtINS_DATE.Text = DateTime.Now.ToString("yy/MM/dd-HH:mm:s");
             //수정자 데이터 바인딩
-
+            txtINS_EMP.Text = INS_EMP;
 
             //수정일 경우 정보 바인딩
             if (this.Owner is frmEquipmentGroupList frm)

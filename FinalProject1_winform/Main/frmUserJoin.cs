@@ -105,7 +105,10 @@ namespace FinalProject1_winform
             thisUser.user_pwd = txtPwd.Text;
             thisUser.user_name = txtName.Text;
             thisUser.user_Category = cboCategory.SelectedValue.ToString();
-            thisUser.user_depart_id = cboDept.SelectedValue.ToString();
+            if (!string.IsNullOrEmpty(cboDept.Text))
+            {
+                thisUser.user_depart_id = cboDept.SelectedValue.ToString(); 
+            }
             thisUser.user_email = txtEmail.Text;
 
             // 이미지 있는경우

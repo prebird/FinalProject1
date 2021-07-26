@@ -151,6 +151,7 @@ namespace FinalProject1_winform
             // 
             // btn_Search
             // 
+            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btn_Search.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btn_Search.FlatAppearance.BorderSize = 0;
@@ -231,6 +232,7 @@ namespace FinalProject1_winform
             // 
             // btn_Excel
             // 
+            this.btn_Excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Excel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Excel.FlatAppearance.BorderSize = 0;
@@ -250,6 +252,7 @@ namespace FinalProject1_winform
             // 
             // btn_Update
             // 
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Update.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Update.FlatAppearance.BorderSize = 0;
@@ -269,6 +272,7 @@ namespace FinalProject1_winform
             // 
             // btn_Delete
             // 
+            this.btn_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Delete.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Delete.FlatAppearance.BorderSize = 0;
@@ -288,6 +292,7 @@ namespace FinalProject1_winform
             // 
             // btn_Insert
             // 
+            this.btn_Insert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Insert.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Insert.FlatAppearance.BorderSize = 0;
@@ -307,6 +312,7 @@ namespace FinalProject1_winform
             // 
             // btn_Barcode
             // 
+            this.btn_Barcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Barcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btn_Barcode.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btn_Barcode.FlatAppearance.BorderSize = 0;

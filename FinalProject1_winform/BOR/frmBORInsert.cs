@@ -15,9 +15,11 @@ namespace FinalProject1_winform
     public partial class frmBORInsert : Form
     {
         BORVO ownerBOR = new BORVO();
-        public frmBORInsert()
+        string INS_EMP = null;
+        public frmBORInsert(UserInfoVO user)
         {
             InitializeComponent();
+            INS_EMP = user.user_name;
         }
 
         private void frmBORInsert_Load(object sender, EventArgs e)
@@ -111,7 +113,7 @@ namespace FinalProject1_winform
             {
                 bor.IsUse = "N";
             }
-            //bor.INS_EMP = "홍길동";
+            bor.INS_EMP = INS_EMP;
             bor.Remark = txtStatus.Text;
 
             BorService service = new BorService();

@@ -40,8 +40,8 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvInspect, "불합격수", "insp_noCnt", DataGridViewContentAlignment.MiddleCenter, colWidth: 180);
             CommonUtil.AddGridTextColumn(dgvInspect, "합불여부", "insp_result", DataGridViewContentAlignment.MiddleCenter, colWidth: 180);
 
-            CommonUtil.AddGridTextColumn(dgvInspect, "검사날짜", "inspect_date", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
-            CommonUtil.AddGridTextColumn(dgvInspect, "검사자", "inspect_user", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
+            CommonUtil.AddGridTextColumn(dgvInspect, "검사날짜", "insp_date", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
+            CommonUtil.AddGridTextColumn(dgvInspect, "검사자", "insp_user", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
             
 
             LoadData();

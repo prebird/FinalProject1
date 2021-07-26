@@ -13,15 +13,17 @@ namespace FinalProject1_winform
 {
     public partial class frmEquipment : Form
     {
-        public frmEquipment()
+        string INS_EMP = null;
+        public frmEquipment(UserInfoVO user)
         {
             InitializeComponent();
+            INS_EMP = user.user_name;
         }
 
         private void frmEquipment_Load(object sender, EventArgs e)
         {
             //수정자 정보 바인딩
-
+            txtINS_EMP.Text = INS_EMP;
 
             txtINS_DATE.Text = DateTime.Now.ToString("yy/MM/dd-HH:mm:s");
             processEquipmentService service = new processEquipmentService();
@@ -40,7 +42,8 @@ namespace FinalProject1_winform
             CommonUtil.ComboBinding<EquipmentGroupVO>(cboEquipmentGroupCode, equipmentGrouplist, "EquipmentGroupName", "EquipmentGroupCode");
 
             //창고 바인딩
-
+            CommonUtil.ComboBindingWHid(cboInputLocation);
+            CommonUtil.ComboBindingWHid(cboOutputLocation);
 
 
             //수정일시 설비 데이터 바인딩
@@ -51,8 +54,8 @@ namespace FinalProject1_winform
                 cboEquipmentGroupCode.Text = equipment.EquipmentGroupName;
                 txtCode.Text = equipment.EquipmentCode.Split('-').Last();
                 txtName.Text = equipment.EquipmentName;
-                cboInputLocation.Text = equipment.FromLocationID;
-                cboOutputLocation.Text = equipment.ToLocationID;
+                cboInputLocation.SelectedValue = equipment.FromLocationID;
+                cboOutputLocation.SelectedValue = equipment.ToLocationID;
                 if (equipment.IsActive == "Y")
                     cboIsUse.SelectedIndex = 1;
                 else if (equipment.IsActive == "N")
@@ -89,8 +92,8 @@ namespace FinalProject1_winform
             equipment.EquipmentName = txtName.Text;
             equipment.Status = txtSpecific.Text;
             equipment.INS_EMP = txtINS_EMP.Text;
-            equipment.FromLocationID = cboInputLocation.SelectedValue.ToString();
-            equipment.ToLocationID = cboOutputLocation.SelectedValue.ToString();
+            equipment.FromLocationID = Convert.ToInt32(cboInputLocation.SelectedValue);
+            equipment.ToLocationID = Convert.ToInt32(cboOutputLocation.SelectedValue);
             if(cboIsUse.SelectedIndex == 0 || cboIsUse.SelectedIndex == 1)
             {
                 equipment.IsActive = "Y";

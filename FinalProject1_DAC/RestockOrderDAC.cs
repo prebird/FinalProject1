@@ -193,7 +193,7 @@ where 1=1 and RO_Status = 'RO_04'");
 
         public DataTable GetPrintData(string strCheckBarCodeID)
         {
-            string sql = @"select RO_ID Item_Name, company_name, Qty from RestockOrder RO
+            string sql = @"select RO_ID, Item_Name, company_name, Qty, dueDate  from RestockOrder RO
 inner join item i on i.Item_ID = ro.itemid
 inner join Company c on c.company_id = ro.Companyid
 where ro.ro_id in (" + strCheckBarCodeID + ")";
@@ -362,7 +362,8 @@ where ic.Item_ID = @Item_ID";
                 sb.Append(@"select iw.ins_id, i.Item_Name, ins_cnt, iw.ins_id, insp_noCnt, insp_result ,insp_date, insp_user, iw.Ro_id, ins_date from InstockWait iw
 left outer join Inspect ip on ip.ins_id = iw.ins_id
 inner join RestockOrder ro on ro.RO_ID = iw.Ro_id
-inner join item i on i.Item_ID = ro.itemid");
+inner join item i on i.Item_ID = ro.itemid
+where ins_date >= @fromdate and ins_date <= @todate");
 
                 if (ROid != 0)
                 {
@@ -399,10 +400,11 @@ inner join item i on i.Item_ID = ro.itemid");
 
                 try
                 {
-                    cmd.CommandText = "insert inspect (ins_id, insp_noCnt, insp_result, insp_user) values (@ins_id, @insp_noCnt, @insp_result, @insp_user)";
+                    cmd.CommandText = "insert inspect (ins_id, insp_noCnt, insp_result, insp_user, insp_date) values (@ins_id, @insp_noCnt, @insp_result, @insp_user, @insp_date)";
                     cmd.Parameters.AddWithValue("@ins_id", ins_id);
                     cmd.Parameters.AddWithValue("@insp_noCnt", insp_noCnt);
                     cmd.Parameters.AddWithValue("@insp_result", insp_result);
+                    cmd.Parameters.AddWithValue("@insp_date", DateTime.Now.ToString());
                     if (insp_user != null)
                     {
                         cmd.Parameters.AddWithValue("@insp_user", insp_user); 
@@ -501,12 +503,16 @@ values (@factory_id, @Item_id, @PO_ID, @RO_ID, @ih_product_count, @ih_category, 
 
                     cmd.ExecuteNonQuery();
 
-                    // RO 상태 업데이트
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = @"Update RestockOrder set RO_Status = 'RO_04' where RO_ID = @roid";
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@roid", hist.RO_ID);
-                    cmd.ExecuteNonQuery();
+                    // 발주 입고인 경우
+                    if (hist.RO_ID != null)
+                    {
+                        // RO 상태 업데이트
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"Update RestockOrder set RO_Status = 'RO_04' where RO_ID = @roid";
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@roid", hist.RO_ID);
+                        cmd.ExecuteNonQuery(); 
+                    }
 
                     trans.Commit();
                     Dispose();

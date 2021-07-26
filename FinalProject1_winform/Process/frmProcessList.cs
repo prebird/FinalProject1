@@ -14,6 +14,7 @@ namespace FinalProject1_winform
     {
         List<ProcessVO> processes;
         ProcessVO process = new ProcessVO();
+        public UserInfoVO User { get; set; }
         public ProcessVO Process { get { return process; } }
 
         public frmProcessList()
@@ -39,6 +40,11 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvList, "수정 일시", "INS_DATE", colWidth: 125);
 
             LoadData();
+
+            if(this.MdiParent is frmMain frm)
+            {
+                User = frm.User;
+            }
         }
 
         private void LoadData()
@@ -69,7 +75,7 @@ namespace FinalProject1_winform
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmProcess frm = new frmProcess();
+            frmProcess frm = new frmProcess(User);
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
@@ -84,7 +90,7 @@ namespace FinalProject1_winform
                 return;
             }
 
-            frmProcess frm = new frmProcess();
+            frmProcess frm = new frmProcess(User);
             frm.Owner = this;
             if(frm.ShowDialog() == DialogResult.OK)
             {
