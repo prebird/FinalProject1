@@ -129,6 +129,7 @@ namespace FinalProject1_winform
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btnSearch.FlatAppearance.BorderSize = 0;
