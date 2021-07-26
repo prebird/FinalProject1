@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject1_VO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -13,27 +14,32 @@ namespace FinalProject1_POP
 {
     public partial class POPFactoryInfo : Form
     {
+        POPWorkOrderVO Order;
 
-
-        public POPFactoryInfo()
+        public POPFactoryInfo(POPWorkOrderVO order)
         {
             InitializeComponent();
+            Order = order;
         }
 
         private void ucMachine1_Load(object sender, EventArgs e)
         {
-            //List<taskItem> tasks = (List<taskItem>)ConfigurationManager.GetSection("taskList");
+           List<taskItem> tasks = (List<taskItem>)ConfigurationManager.GetSection("taskList");
+                         
+           ucMachine1.Name = $"taskControl{0}";
+           ucMachine1.Task_ID = tasks[0].taskID;
+           ucMachine1.Task_IP = tasks[0].hostIP;
+           ucMachine1.Task_Port = tasks[0].hostPort;
+           ucMachine1.Task_Remark = tasks[0].remark;
+           
+           ucMachine1.IsTaskEnable = false;
 
-            
-            //foreach (Control in panel2)
-            //{      
-            //    ucMachine1.Task_ID = tasks[i].taskID;
-            //    ucMachine1.Task_IP = tasks[i].hostIP;
-            //    ucMachine1.Task_Port = tasks[i].hostPort;
-            //    ucMachine1.Task_Remark = tasks[i].remark;
-
-            //    ucMachine1.IsTaskEnable = false;
-            //}
+           ucMachine1.Worknum = Order.WorkOrderID;
+           ucMachine1.WorkQty = Order.OrderQuantity;
+           ucMachine1.MachineName = Order.EquipmentName;
+           ucMachine1.ProcessName = Order.processName;
+           ucMachine1.YN = "(가동준비)";
+           
         }
     }
 }

@@ -26,8 +26,8 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgv1, "입고일", "ins_date", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv1, "발주상태", "RO_Status", colWidth: 100);
             CommonUtil.AddGridTextColumn(dgv1, "창고명", "factory_name", colWidth: 100);
-            CommonUtil.AddGridTextColumn(dgv1, "입고량", "RO_Status", colWidth: 100);
-            CommonUtil.AddGridTextColumn(dgv1, "발주상태", "in_product_count", colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgv1, "입고량", "ih_product_count", colWidth: 100);
+
 
             CommonUtil.ComboBindingCompanyID(cboCompany);
             CommonUtil.ComboBindingCommonCode(cboStatus, "RO_type");

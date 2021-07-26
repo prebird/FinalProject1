@@ -101,12 +101,12 @@ namespace FinalProject1_DAC
             }
         }
 
-        public List<ItemVO> GetCommboItemName()
+        public List<Item_Combo_VO> GetCommboItemName()
         {
             string sql = "select Item_ID, Item_Name from Item";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
-                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+                return Helper.DataReaderMapToList<Item_Combo_VO>(cmd.ExecuteReader());
             }
         }
 

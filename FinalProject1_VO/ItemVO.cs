@@ -23,4 +23,10 @@ namespace FinalProject1_VO
 
         public string Item_img { get; set; }
     }
+
+    public class Item_Combo_VO
+    {
+        public int Item_ID { get; set; }
+        public string Item_Name { get; set; }
+    }
 }

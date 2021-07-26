@@ -55,7 +55,7 @@ namespace FinalProject1_winform
             return dac.GetMenuList();
         }
 
-        public List<ItemVO> GetCommboItemName()
+        public List<Item_Combo_VO> GetCommboItemName()
         {
             CommonDAC dac = new CommonDAC();
             return dac.GetCommboItemName();

@@ -27,8 +27,10 @@ namespace FinalProject1_POP
         NetworkStream recvData;
         SqlConnection conn;
 
+        
         string hostIP;
         int hostPort;
+        string WorkNum;
         int taskID;
         string clientName;
         string clientIP;
@@ -42,11 +44,14 @@ namespace FinalProject1_POP
         Stopwatch m_AliveTimer = new Stopwatch();
         const string STR_HEART_BEAT = "HeartBeat";
 
-        public ThreadPLCTask(SqlConnection conn, LoggingUtility _loggingUtility, int taskID, string hostIP, int hostPort, int timer_CONNECT, int timer_KEEP_ALIVE, int timer_READ_PLC, string clientName, string clientIP)
+        public ThreadPLCTask(SqlConnection conn, LoggingUtility _loggingUtility, string workNum, int taskID, string hostIP, int hostPort, 
+            int timer_CONNECT, int timer_KEEP_ALIVE, int timer_READ_PLC, string clientName, string clientIP)
+
         {
             this.conn = conn;
-            this._loggingUtility = _loggingUtility;
-            this.taskID = taskID;
+            this._loggingUtility = _loggingUtility;        
+            this.WorkNum = workNum; //작업지시계획번호
+            this.taskID = taskID; //장비 ID
             this.hostIP = hostIP;
             this.hostPort = hostPort;
             this.timer_CONNECT = timer_CONNECT;
@@ -180,8 +185,9 @@ namespace FinalProject1_POP
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = @"insert into WorkQtyLog(MachineID, ProductID, Qty, BadQty, WorkRegPC, WorkRegIP) 
-                                            values(@MachineID, @ProductID, @Qty, @BadQty, @WorkRegPC, @WorkRegIP)";
+                        cmd.CommandText = @"insert into WorkQtyLog(WorkOrderID, MachineID, ProductID, Qty, BadQty, WorkRegPC, WorkRegIP) 
+                                            values(@WorkOrderID, @MachineID, @ProductID, @Qty, @BadQty, @WorkRegPC, @WorkRegIP)";
+                        cmd.Parameters.AddWithValue("@WorkOrderID", WorkNum);
                         cmd.Parameters.AddWithValue("@MachineID", taskID);
                         cmd.Parameters.AddWithValue("@ProductID", arrData[0]);
                         cmd.Parameters.AddWithValue("@Qty", int.Parse(arrData[1]));

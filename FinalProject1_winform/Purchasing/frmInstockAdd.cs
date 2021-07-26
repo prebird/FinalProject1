@@ -104,6 +104,7 @@ namespace FinalProject1_winform
                 if (dac.insertInventoryOUT(hist))
                 {
                     MessageBox.Show("출고가 성공적으로 이루어 졌습니다.");
+                    this.Close();
                 }
                 else
                 {

@@ -36,7 +36,6 @@ namespace FinalProject1_POP
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
-            this.PanelCildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -134,24 +133,15 @@ namespace FinalProject1_POP
             this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // PanelCildForm
-            // 
-            this.PanelCildForm.BackColor = System.Drawing.Color.White;
-            this.PanelCildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCildForm.Location = new System.Drawing.Point(257, 156);
-            this.PanelCildForm.Name = "PanelCildForm";
-            this.PanelCildForm.Size = new System.Drawing.Size(1427, 805);
-            this.PanelCildForm.TabIndex = 2;
-            // 
             // POPMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1684, 961);
-            this.Controls.Add(this.PanelCildForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.IsMdiContainer = true;
             this.MinimizeBox = false;
             this.Name = "POPMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -171,7 +161,6 @@ namespace FinalProject1_POP
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel PanelCildForm;
         private System.Windows.Forms.Button btnMachine;
         private System.Windows.Forms.Button btnFactory;
         private System.Windows.Forms.Button btnWork;

@@ -32,24 +32,13 @@ namespace FinalProject1_POP
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgv_WorkList = new FinalProject1_winform.DGV_gudi();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpWorkDate = new System.Windows.Forms.DateTimePicker();
-            this.dgv_WorkList = new FinalProject1_winform.DGV_gudi();
-            this.txtNGQTy = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtOKQty = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtRemain = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtWorkQty = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtOrderQty = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi15 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi14 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi13 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi12 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.txtEnd = new FinalProject1_winform.Controls.TextBox_gudi();
             this.txtStart = new FinalProject1_winform.Controls.TextBox_gudi();
             this.txtEName = new FinalProject1_winform.Controls.TextBox_gudi();
@@ -62,21 +51,32 @@ namespace FinalProject1_POP
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             this.label_gudi7 = new FinalProject1_winform.Label_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpWorkDate = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.cboItem = new FinalProject1_winform.ComboBox_gudi();
             this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.txtNGQTy = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtOKQty = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtRemain = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtWorkQty = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtOrderQty = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi15 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi14 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi13 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi12 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi11 = new FinalProject1_winform.Label_gudi();
             this.btnStart = new FinalProject1_winform.Button_gudi();
             this.btnStop = new FinalProject1_winform.Button_gudi();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +88,18 @@ namespace FinalProject1_POP
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1634, 75);
             this.panel1.TabIndex = 9;
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.ForeColor = System.Drawing.Color.White;
+            this.label_gudi1.Location = new System.Drawing.Point(0, 0);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(1634, 75);
+            this.label_gudi1.TabIndex = 3;
+            this.label_gudi1.Text = "생산작업관리";
+            this.label_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControl1
             // 
@@ -113,6 +125,32 @@ namespace FinalProject1_POP
             this.tabPage1.Size = new System.Drawing.Size(1645, 297);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "생산 현황";
+            // 
+            // dgv_WorkList
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_WorkList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_WorkList.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_WorkList.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_WorkList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_WorkList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_WorkList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_WorkList.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv_WorkList.HeaderCheckStatus = false;
+            this.dgv_WorkList.Location = new System.Drawing.Point(3, 3);
+            this.dgv_WorkList.Name = "dgv_WorkList";
+            this.dgv_WorkList.RowHeadersVisible = false;
+            this.dgv_WorkList.RowTemplate.Height = 23;
+            this.dgv_WorkList.Size = new System.Drawing.Size(1639, 291);
+            this.dgv_WorkList.TabIndex = 85;
+            this.dgv_WorkList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkList_CellClick);
             // 
             // tabPage2
             // 
@@ -157,156 +195,6 @@ namespace FinalProject1_POP
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "세부정보";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dtpWorkDate);
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.cboItem);
-            this.groupBox1.Controls.Add(this.cboProcess);
-            this.groupBox1.Controls.Add(this.label_gudi4);
-            this.groupBox1.Controls.Add(this.label_gudi3);
-            this.groupBox1.Controls.Add(this.label_gudi2);
-            this.groupBox1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 94);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(603, 380);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "검색조건";
-            // 
-            // dtpWorkDate
-            // 
-            this.dtpWorkDate.Location = new System.Drawing.Point(254, 55);
-            this.dtpWorkDate.Name = "dtpWorkDate";
-            this.dtpWorkDate.Size = new System.Drawing.Size(312, 45);
-            this.dtpWorkDate.TabIndex = 8;
-            // 
-            // dgv_WorkList
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_WorkList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_WorkList.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_WorkList.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_WorkList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_WorkList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_WorkList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_WorkList.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgv_WorkList.HeaderCheckStatus = false;
-            this.dgv_WorkList.Location = new System.Drawing.Point(3, 3);
-            this.dgv_WorkList.Name = "dgv_WorkList";
-            this.dgv_WorkList.RowHeadersVisible = false;
-            this.dgv_WorkList.RowTemplate.Height = 23;
-            this.dgv_WorkList.Size = new System.Drawing.Size(1639, 291);
-            this.dgv_WorkList.TabIndex = 85;
-            this.dgv_WorkList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WorkList_CellClick);
-            // 
-            // txtNGQTy
-            // 
-            this.txtNGQTy.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtNGQTy.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtNGQTy.Location = new System.Drawing.Point(1446, 425);
-            this.txtNGQTy.Name = "txtNGQTy";
-            this.txtNGQTy.Size = new System.Drawing.Size(207, 45);
-            this.txtNGQTy.TabIndex = 41;
-            this.txtNGQTy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtOKQty
-            // 
-            this.txtOKQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtOKQty.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtOKQty.Location = new System.Drawing.Point(1446, 352);
-            this.txtOKQty.Name = "txtOKQty";
-            this.txtOKQty.Size = new System.Drawing.Size(207, 45);
-            this.txtOKQty.TabIndex = 40;
-            this.txtOKQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtRemain
-            // 
-            this.txtRemain.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtRemain.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtRemain.Location = new System.Drawing.Point(1446, 279);
-            this.txtRemain.Name = "txtRemain";
-            this.txtRemain.Size = new System.Drawing.Size(207, 45);
-            this.txtRemain.TabIndex = 39;
-            this.txtRemain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtWorkQty
-            // 
-            this.txtWorkQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtWorkQty.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtWorkQty.Location = new System.Drawing.Point(1446, 206);
-            this.txtWorkQty.Name = "txtWorkQty";
-            this.txtWorkQty.Size = new System.Drawing.Size(207, 45);
-            this.txtWorkQty.TabIndex = 38;
-            this.txtWorkQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtOrderQty
-            // 
-            this.txtOrderQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtOrderQty.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtOrderQty.Location = new System.Drawing.Point(1446, 133);
-            this.txtOrderQty.Name = "txtOrderQty";
-            this.txtOrderQty.Size = new System.Drawing.Size(207, 45);
-            this.txtOrderQty.TabIndex = 32;
-            this.txtOrderQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label_gudi15
-            // 
-            this.label_gudi15.AutoSize = true;
-            this.label_gudi15.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi15.Location = new System.Drawing.Point(1287, 428);
-            this.label_gudi15.Name = "label_gudi15";
-            this.label_gudi15.Size = new System.Drawing.Size(114, 32);
-            this.label_gudi15.TabIndex = 37;
-            this.label_gudi15.Text = "불량 수량";
-            // 
-            // label_gudi14
-            // 
-            this.label_gudi14.AutoSize = true;
-            this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi14.Location = new System.Drawing.Point(1287, 355);
-            this.label_gudi14.Name = "label_gudi14";
-            this.label_gudi14.Size = new System.Drawing.Size(114, 32);
-            this.label_gudi14.TabIndex = 36;
-            this.label_gudi14.Text = "양품 수량";
-            // 
-            // label_gudi13
-            // 
-            this.label_gudi13.AutoSize = true;
-            this.label_gudi13.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi13.Location = new System.Drawing.Point(1287, 209);
-            this.label_gudi13.Name = "label_gudi13";
-            this.label_gudi13.Size = new System.Drawing.Size(114, 32);
-            this.label_gudi13.TabIndex = 35;
-            this.label_gudi13.Text = "생산 수량";
-            // 
-            // label_gudi12
-            // 
-            this.label_gudi12.AutoSize = true;
-            this.label_gudi12.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi12.Location = new System.Drawing.Point(1287, 282);
-            this.label_gudi12.Name = "label_gudi12";
-            this.label_gudi12.Size = new System.Drawing.Size(114, 32);
-            this.label_gudi12.TabIndex = 34;
-            this.label_gudi12.Text = "생산 잔량";
-            // 
-            // label_gudi11
-            // 
-            this.label_gudi11.AutoSize = true;
-            this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi11.Location = new System.Drawing.Point(1287, 136);
-            this.label_gudi11.Name = "label_gudi11";
-            this.label_gudi11.Size = new System.Drawing.Size(114, 32);
-            this.label_gudi11.TabIndex = 33;
-            this.label_gudi11.Text = "지시 수량";
             // 
             // txtEnd
             // 
@@ -428,6 +316,30 @@ namespace FinalProject1_POP
             this.label_gudi6.TabIndex = 9;
             this.label_gudi6.Text = "Plan_ID";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpWorkDate);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.cboItem);
+            this.groupBox1.Controls.Add(this.cboProcess);
+            this.groupBox1.Controls.Add(this.label_gudi4);
+            this.groupBox1.Controls.Add(this.label_gudi3);
+            this.groupBox1.Controls.Add(this.label_gudi2);
+            this.groupBox1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 94);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(603, 380);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "검색조건";
+            // 
+            // dtpWorkDate
+            // 
+            this.dtpWorkDate.Location = new System.Drawing.Point(254, 55);
+            this.dtpWorkDate.Name = "dtpWorkDate";
+            this.dtpWorkDate.Size = new System.Drawing.Size(312, 45);
+            this.dtpWorkDate.TabIndex = 8;
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
@@ -494,17 +406,105 @@ namespace FinalProject1_POP
             this.label_gudi2.TabIndex = 0;
             this.label_gudi2.Text = "작업 일자";
             // 
-            // label_gudi1
+            // txtNGQTy
             // 
-            this.label_gudi1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoEB00", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.ForeColor = System.Drawing.Color.White;
-            this.label_gudi1.Location = new System.Drawing.Point(0, 0);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(1634, 75);
-            this.label_gudi1.TabIndex = 3;
-            this.label_gudi1.Text = "생산작업관리";
-            this.label_gudi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtNGQTy.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtNGQTy.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtNGQTy.Location = new System.Drawing.Point(1446, 425);
+            this.txtNGQTy.Name = "txtNGQTy";
+            this.txtNGQTy.Size = new System.Drawing.Size(207, 45);
+            this.txtNGQTy.TabIndex = 41;
+            this.txtNGQTy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtOKQty
+            // 
+            this.txtOKQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtOKQty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtOKQty.Location = new System.Drawing.Point(1446, 352);
+            this.txtOKQty.Name = "txtOKQty";
+            this.txtOKQty.Size = new System.Drawing.Size(207, 45);
+            this.txtOKQty.TabIndex = 40;
+            this.txtOKQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtRemain
+            // 
+            this.txtRemain.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtRemain.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtRemain.Location = new System.Drawing.Point(1446, 279);
+            this.txtRemain.Name = "txtRemain";
+            this.txtRemain.Size = new System.Drawing.Size(207, 45);
+            this.txtRemain.TabIndex = 39;
+            this.txtRemain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtWorkQty
+            // 
+            this.txtWorkQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtWorkQty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtWorkQty.Location = new System.Drawing.Point(1446, 206);
+            this.txtWorkQty.Name = "txtWorkQty";
+            this.txtWorkQty.Size = new System.Drawing.Size(207, 45);
+            this.txtWorkQty.TabIndex = 38;
+            this.txtWorkQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtOrderQty
+            // 
+            this.txtOrderQty.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtOrderQty.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtOrderQty.Location = new System.Drawing.Point(1446, 133);
+            this.txtOrderQty.Name = "txtOrderQty";
+            this.txtOrderQty.Size = new System.Drawing.Size(207, 45);
+            this.txtOrderQty.TabIndex = 32;
+            this.txtOrderQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label_gudi15
+            // 
+            this.label_gudi15.AutoSize = true;
+            this.label_gudi15.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi15.Location = new System.Drawing.Point(1287, 428);
+            this.label_gudi15.Name = "label_gudi15";
+            this.label_gudi15.Size = new System.Drawing.Size(114, 32);
+            this.label_gudi15.TabIndex = 37;
+            this.label_gudi15.Text = "불량 수량";
+            // 
+            // label_gudi14
+            // 
+            this.label_gudi14.AutoSize = true;
+            this.label_gudi14.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi14.Location = new System.Drawing.Point(1287, 355);
+            this.label_gudi14.Name = "label_gudi14";
+            this.label_gudi14.Size = new System.Drawing.Size(114, 32);
+            this.label_gudi14.TabIndex = 36;
+            this.label_gudi14.Text = "양품 수량";
+            // 
+            // label_gudi13
+            // 
+            this.label_gudi13.AutoSize = true;
+            this.label_gudi13.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi13.Location = new System.Drawing.Point(1287, 209);
+            this.label_gudi13.Name = "label_gudi13";
+            this.label_gudi13.Size = new System.Drawing.Size(114, 32);
+            this.label_gudi13.TabIndex = 35;
+            this.label_gudi13.Text = "생산 수량";
+            // 
+            // label_gudi12
+            // 
+            this.label_gudi12.AutoSize = true;
+            this.label_gudi12.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi12.Location = new System.Drawing.Point(1287, 282);
+            this.label_gudi12.Name = "label_gudi12";
+            this.label_gudi12.Size = new System.Drawing.Size(114, 32);
+            this.label_gudi12.TabIndex = 34;
+            this.label_gudi12.Text = "생산 잔량";
+            // 
+            // label_gudi11
+            // 
+            this.label_gudi11.AutoSize = true;
+            this.label_gudi11.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi11.Location = new System.Drawing.Point(1287, 136);
+            this.label_gudi11.Name = "label_gudi11";
+            this.label_gudi11.Size = new System.Drawing.Size(114, 32);
+            this.label_gudi11.TabIndex = 33;
+            this.label_gudi11.Text = "지시 수량";
             // 
             // btnStart
             // 
@@ -518,8 +518,9 @@ namespace FinalProject1_POP
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(530, 64);
             this.btnStart.TabIndex = 9;
-            this.btnStart.Text = "시작";
+            this.btnStart.Text = "작업준비";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
@@ -564,11 +565,11 @@ namespace FinalProject1_POP
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_WorkList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

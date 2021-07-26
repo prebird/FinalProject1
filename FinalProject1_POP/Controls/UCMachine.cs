@@ -22,6 +22,19 @@ namespace FinalProject1_winform.Controls
         public string Task_IP { get { return lblIP.Text; } set { lblIP.Text = value; } }
         public string Task_Port { get { return lblPort.Text; } set { lblPort.Text = value; } }
         public string Task_Remark { get { return lblRemark.Text; } set { lblRemark.Text = value; } }
+        public string Worknum { get { return txtWorkNum.Text; } set { txtWorkNum.Text = value; } }
+        public string ItemCode { get { return txtItemCode.Text; } set { txtItemCode.Text = value; } }
+
+        public string MachineName { get { return lblMachineName.Text; } set { lblMachineName.Text = value; } }
+        public string ProcessName { get { return gbProcess.Text; } set { gbProcess.Text = value; } }
+        public string YN { get { return lblYN.Text; } set { lblYN.Text = value; } }
+        public int OrderQty { get { return Convert.ToInt32(txtOrderQty.Text); } set { txtOrderQty.Text = value.ToString(); } }
+        public int WorkQty { get { return Convert.ToInt32(txtWorkQty.Text); } set { txtWorkQty.Text = value.ToString(); } }
+        public int RemainQty { get { return Convert.ToInt32(txtRemainQty.Text); } set { txtRemainQty.Text = value.ToString(); } }
+        public int OKQty { get { return Convert.ToInt32(txtOKQty.Text); } set { txtOKQty.Text = value.ToString(); } }
+        public int NGQty { get { return Convert.ToInt32(txtNGQty.Text); } set { txtNGQty.Text = value.ToString(); } }
+
+
 
         int process_id = 0;
 
@@ -55,10 +68,12 @@ namespace FinalProject1_winform.Controls
         private void btnStart_Click(object sender, EventArgs e)
         {
             string server = Application.StartupPath + "\\OutputTcpServer.exe";
-            Process pro = Process.Start(server, $"{Task_ID} {Task_IP} {Task_Port}");
+            Process pro = Process.Start(server, $"{Worknum} {Task_ID} {Task_IP} {Task_Port}");
             process_id = pro.Id;
+            YN = "(가동 중)";
+            lblYN.ForeColor = Color.Lime;
 
-            POP = new POPPLCTASK(Task_ID, Task_IP, Task_Port);
+            POP = new POPPLCTASK(Worknum ,Task_ID, Task_IP, Task_Port);
             POP.Show();
             POP.Hide();
 
@@ -70,6 +85,8 @@ namespace FinalProject1_winform.Controls
             POP.bExit = true;
             POP.Close();
             IsTaskEnable = false;
+            YN = "(중지)";
+            lblYN.ForeColor = Color.Red;
 
             foreach (Process process in Process.GetProcesses())
             {

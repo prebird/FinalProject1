@@ -86,7 +86,6 @@ namespace FinalProject1_winform.Controls
             this.gbProcess.Size = new System.Drawing.Size(402, 571);
             this.gbProcess.TabIndex = 0;
             this.gbProcess.TabStop = false;
-            this.gbProcess.Text = "Leg가공(공정이름)";
             // 
             // button_gudi2
             // 
@@ -275,63 +274,61 @@ namespace FinalProject1_winform.Controls
             // 
             // lblMachineName
             // 
-            this.lblMachineName.AutoSize = true;
             this.lblMachineName.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMachineName.Location = new System.Drawing.Point(118, 256);
+            this.lblMachineName.Location = new System.Drawing.Point(29, 256);
             this.lblMachineName.Name = "lblMachineName";
-            this.lblMachineName.Size = new System.Drawing.Size(137, 19);
+            this.lblMachineName.Size = new System.Drawing.Size(346, 19);
             this.lblMachineName.TabIndex = 0;
-            this.lblMachineName.Text = "CNC_Leg01(설비명)";
+            this.lblMachineName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblYN
             // 
-            this.lblYN.AutoSize = true;
             this.lblYN.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblYN.Location = new System.Drawing.Point(274, 10);
+            this.lblYN.Location = new System.Drawing.Point(267, 10);
             this.lblYN.Name = "lblYN";
-            this.lblYN.Size = new System.Drawing.Size(138, 25);
+            this.lblYN.Size = new System.Drawing.Size(145, 25);
             this.lblYN.TabIndex = 16;
-            this.lblYN.Text = "(가동)/(비가동)";
+            this.lblYN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTaskID
             // 
             this.lblTaskID.AutoSize = true;
-            this.lblTaskID.Enabled = false;
             this.lblTaskID.Location = new System.Drawing.Point(5, 10);
             this.lblTaskID.Name = "lblTaskID";
             this.lblTaskID.Size = new System.Drawing.Size(44, 12);
             this.lblTaskID.TabIndex = 19;
             this.lblTaskID.Text = "TaskID";
+            this.lblTaskID.Visible = false;
             // 
             // lblIP
             // 
             this.lblIP.AutoSize = true;
-            this.lblIP.Enabled = false;
             this.lblIP.Location = new System.Drawing.Point(65, 10);
             this.lblIP.Name = "lblIP";
             this.lblIP.Size = new System.Drawing.Size(16, 12);
             this.lblIP.TabIndex = 20;
             this.lblIP.Text = "IP";
+            this.lblIP.Visible = false;
             // 
             // lblPort
             // 
             this.lblPort.AutoSize = true;
-            this.lblPort.Enabled = false;
             this.lblPort.Location = new System.Drawing.Point(97, 10);
             this.lblPort.Name = "lblPort";
             this.lblPort.Size = new System.Drawing.Size(27, 12);
             this.lblPort.TabIndex = 21;
             this.lblPort.Text = "Port";
+            this.lblPort.Visible = false;
             // 
             // lblRemark
             // 
             this.lblRemark.AutoSize = true;
-            this.lblRemark.Enabled = false;
             this.lblRemark.Location = new System.Drawing.Point(140, 10);
             this.lblRemark.Name = "lblRemark";
             this.lblRemark.Size = new System.Drawing.Size(48, 12);
             this.lblRemark.TabIndex = 22;
             this.lblRemark.Text = "Remark";
+            this.lblRemark.Visible = false;
             // 
             // UCMachine
             // 

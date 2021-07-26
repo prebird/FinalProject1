@@ -420,11 +420,11 @@
     <Compile Include="BOM\frmBOMList.Designer.cs">
       <DependentUpon>frmBOMList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UCMachine.cs">
+    <Compile Include="Controls\UCMachinee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UCMachine.Designer.cs">
-      <DependentUpon>UCMachine.cs</DependentUpon>
+    <Compile Include="Controls\UCMachinee.Designer.cs">
+      <DependentUpon>UCMachinee.cs</DependentUpon>
     </Compile>
     <Compile Include="Demand_Plan\frmDemandPlan.cs">
       <SubType>Form</SubType>
@@ -675,8 +675,8 @@
     <EmbeddedResource Include="BOM\frmBOMList.resx">
       <DependentUpon>frmBOMList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UCMachine.resx">
-      <DependentUpon>UCMachine.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\UCMachinee.resx">
+      <DependentUpon>UCMachinee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Demand_Plan\frmDemandPlan.resx">
       <DependentUpon>frmDemandPlan.cs</DependentUpon>

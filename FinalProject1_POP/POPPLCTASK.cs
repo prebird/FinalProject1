@@ -25,6 +25,7 @@ namespace FinalProject1_POP
         NetworkStream recvData;
         SqlConnection conn;
 
+        string WorkNum;
         string hostIP;
         int hostPort;
         int taskID;
@@ -44,10 +45,10 @@ namespace FinalProject1_POP
         int timer_KEEP_ALIVE = 1000;
         int timer_READ_PLC = 1000;
 
-       public POPPLCTASK(string taskid, string ip, string port)
+       public POPPLCTASK(string workNum, string taskid, string ip, string port)
        {
            InitializeComponent();
-       
+           WorkNum = workNum;
            hostIP = ip;
            hostPort = int.Parse(port);
            taskID = int.Parse(taskid.Replace("PLC_", ""));
@@ -88,7 +89,7 @@ namespace FinalProject1_POP
                 conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString);
                 conn.Open();
 
-                m_thread = new ThreadPLCTask(conn, _logging, taskID, hostIP, hostPort, timer_CONNECT, timer_KEEP_ALIVE, timer_READ_PLC, clientName, clientIP);
+                m_thread = new ThreadPLCTask(conn, _logging, WorkNum, taskID, hostIP, hostPort, timer_CONNECT, timer_KEEP_ALIVE, timer_READ_PLC, clientName, clientIP);
                 m_thread.ReadData += M_thread_ReadData;
                 m_thread.ThreadStart();
 
