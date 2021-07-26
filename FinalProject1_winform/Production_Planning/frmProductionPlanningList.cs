@@ -34,6 +34,7 @@ namespace FinalProject1_winform
             if (string.IsNullOrWhiteSpace(txtEquipment.Text) || string.IsNullOrWhiteSpace(txtItem.Text) || string.IsNullOrWhiteSpace(txtPlanID.Text))
             {
                 MessageBox.Show("검색 조건을 선택해 주세요");
+                return;
             }
 
             FromDate = date.FromDate.ToString("yyyy-MM-dd");
