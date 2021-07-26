@@ -62,6 +62,7 @@ namespace FinalProject1_POP
             return list;
         }
 
+        //선택 조회
         public List<POPUserVO> GetWOSearch(string userId, string workDate, int processId, int itemId)
         {
             POPDAC dac = new POPDAC();
@@ -71,5 +72,20 @@ namespace FinalProject1_POP
             return list;
         }
 
+        public bool UpdateWorkStart(string workNum, string status)
+        {
+            POPDAC dac = new POPDAC();
+            bool result = dac.UpdateWorkStart(workNum, status);
+            dac.Dispose();
+            return result;
+        }
+
+        public bool SaveWorkRecord(string workNum, string date, string itemCode, string status, int workQty, int okQty, int ngQty)
+        {
+            POPDAC dac = new POPDAC();
+            bool result = dac.SaveWorkRecord(workNum, date, itemCode, status, workQty, okQty, ngQty);
+            dac.Dispose();
+            return result;
+        }
     }
 }

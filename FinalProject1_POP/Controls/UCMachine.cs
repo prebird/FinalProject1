@@ -74,6 +74,20 @@ namespace FinalProject1_winform.Controls
                 MessageBox.Show("완료된 작업입니다.");
                 return;
             }
+
+            POPService service = new POPService();
+            bool result = service.UpdateWorkStart(txtWorkNum.Text, "작업중");
+            if(result)
+            {
+                MessageBox.Show("작업이 정상적으로 시작되었습니다.");
+                
+            }
+            else
+            {
+                MessageBox.Show("작업 시작 중 오류가 발생하였습니다.");
+                return;
+            }
+
             string server = Application.StartupPath + "\\OutputTcpServer.exe";
             Process pro = Process.Start(server, $"{Task_ID} {Task_IP} {Task_Port}");
             process_id = pro.Id;
@@ -128,11 +142,46 @@ namespace FinalProject1_winform.Controls
 
         private void btnSaveData_Click(object sender, EventArgs e)
         {
+            if (YN == "(작업완료)")
+            {
+                POPService service = new POPService();
+                bool result = service.SaveWorkRecord(Worknum, DateTime.Now.ToString("yyyy-MM-dd"), ItemCode, "작업완료", WorkQty, OKQty, NGQty);
+                if(result)
+                {
+                    MessageBox.Show($"작업지시번호 : '{Worknum}' 작업실적등록이 완료되었습니다.");
+                }
 
+                else
+                {
+                    MessageBox.Show("작업실적등록 중 문제가 발생하였습니다.");
+                    return;
+                }
+                    
+            }
+            else if(YN == "(중지)")
+            {
+                POPService service = new POPService();
+                bool result = service.SaveWorkRecord(Worknum, DateTime.Now.ToString("yyyy-MM-dd"), ItemCode, "작업중", WorkQty, OKQty, NGQty);
+                if (result)
+                {
+                    MessageBox.Show($"작업지시번호 : '{Worknum}' 작업실적등록이 완료되었습니다.");
+                }
+
+                else
+                {
+                    MessageBox.Show("작업실적등록 중 문제가 발생하였습니다.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("작업을 진행하여 주시기 바랍니다.");
+            }
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+
             POP.bExit = true;
             POP.Close();
             IsTaskEnable = false;
