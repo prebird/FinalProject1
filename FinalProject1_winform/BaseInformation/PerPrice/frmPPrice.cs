@@ -22,6 +22,19 @@ namespace FinalProject1_winform
 
         private void frmMaterialPrice_Load(object sender, EventArgs e)
         {
+
+            ItemService service = new ItemService();
+            List<ItemVO> Item = service.GetAllItem();
+            ItemVO blank = new ItemVO();
+            blank.Item_Code = "선택";
+            blank.Item_ID = 0;
+
+            Item.Insert(0, blank);
+
+            CommonUtil.ComboBinding<ItemVO>(cboItemCode, Item, "Item_code", "Item_ID");
+
+
+
             CommonUtil.SetInitGridView(dgvPprice);
 
             CommonUtil.AddGridTextColumn(dgvPprice, "업체", "Company_code", DataGridViewContentAlignment.MiddleCenter, colWidth: 135);
@@ -39,14 +52,21 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvPprice, "수정자", "price_uadmin", DataGridViewContentAlignment.MiddleCenter, colWidth: 170);
 
             dtpdate.Value = DateTime.Now;
-          
+
+            LoadData();
 
         }
-
+        private void LoadData()
+        {
+            PerPriceService service = new PerPriceService();
+            List = service.GetAllPice();
+            dgvPprice.DataSource = List;
+            dgvPprice.ClearSelection();
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             PerPriceService service = new PerPriceService();
-            List = service.GetSelectedPrice(txtItemCode.Text, dtpdate.Text, cboCompanyCode.Text);
+            List = service.GetSelectedPrice(cboItemCode.Text, dtpdate.Text, cboCompanyCode.Text);
             dgvPprice.DataSource = List;
             dgvPprice.ClearSelection();
         }

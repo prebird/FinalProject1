@@ -36,7 +36,6 @@ namespace FinalProject1_winform
             this.btnSearch = new FinalProject1_winform.Button_gudi();
             this.cboCompanyCode = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.txtItemCode = new FinalProject1_winform.Controls.TextBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.dtpdate = new FinalProject1_winform.DateTimePicker_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
@@ -48,6 +47,7 @@ namespace FinalProject1_winform
             this.button_gudi5 = new FinalProject1_winform.Button_gudi();
             this.btnDelete = new FinalProject1_winform.Button_gudi();
             this.btnInsert = new FinalProject1_winform.Button_gudi();
+            this.cboItemCode = new FinalProject1_winform.ComboBox_gudi();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPprice)).BeginInit();
@@ -59,10 +59,10 @@ namespace FinalProject1_winform
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.cboItemCode);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.cboCompanyCode);
             this.panel1.Controls.Add(this.label_gudi3);
-            this.panel1.Controls.Add(this.txtItemCode);
             this.panel1.Controls.Add(this.label_gudi2);
             this.panel1.Controls.Add(this.dtpdate);
             this.panel1.Controls.Add(this.label_gudi1);
@@ -111,22 +111,13 @@ namespace FinalProject1_winform
             this.label_gudi3.Name = "label_gudi3";
             this.label_gudi3.Size = new System.Drawing.Size(72, 17);
             this.label_gudi3.TabIndex = 4;
-            this.label_gudi3.Text = "■ 품목구분";
-            // 
-            // txtItemCode
-            // 
-            this.txtItemCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.txtItemCode.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtItemCode.Location = new System.Drawing.Point(426, 11);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(187, 25);
-            this.txtItemCode.TabIndex = 0;
+            this.label_gudi3.Text = "■ 품목분류";
             // 
             // label_gudi2
             // 
             this.label_gudi2.AutoSize = true;
             this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(348, 14);
+            this.label_gudi2.Location = new System.Drawing.Point(356, 14);
             this.label_gudi2.Name = "label_gudi2";
             this.label_gudi2.Size = new System.Drawing.Size(72, 17);
             this.label_gudi2.TabIndex = 2;
@@ -284,6 +275,15 @@ namespace FinalProject1_winform
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // cboItemCode
+            // 
+            this.cboItemCode.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboItemCode.FormattingEnabled = true;
+            this.cboItemCode.Location = new System.Drawing.Point(436, 11);
+            this.cboItemCode.Name = "cboItemCode";
+            this.cboItemCode.Size = new System.Drawing.Size(187, 24);
+            this.cboItemCode.TabIndex = 11;
+            // 
             // frmPPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -319,7 +319,6 @@ namespace FinalProject1_winform
         private DateTimePicker_gudi dtpdate;
         private ComboBox_gudi cboCompanyCode;
         private Label_gudi label_gudi3;
-        private Controls.TextBox_gudi txtItemCode;
         private Label_gudi label_gudi2;
         private Button_gudi btnSearch;
         private Label_gudi label_gudi4;
@@ -328,5 +327,6 @@ namespace FinalProject1_winform
         private Button_gudi btnDelete;
         private Button_gudi btnInsert;
         private DGV_gudi dgvPprice;
+        private ComboBox_gudi cboItemCode;
     }
 }

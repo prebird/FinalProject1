@@ -193,6 +193,7 @@ namespace FinalProject1_winform
             // 
             // btnExcel
             // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnExcel.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnExcel.FlatAppearance.BorderSize = 0;
@@ -231,6 +232,7 @@ namespace FinalProject1_winform
             // 
             // btnDone
             // 
+            this.btnDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(191)))), ((int)(((byte)(201)))));
             this.btnDone.ButtonType = FinalProject1_winform.ButtonStyle.Middle;
             this.btnDone.FlatAppearance.BorderSize = 0;
@@ -246,6 +248,7 @@ namespace FinalProject1_winform
             this.btnDone.Text = "작업실적등록";
             this.btnDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Visible = false;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // frmWorkOrderList

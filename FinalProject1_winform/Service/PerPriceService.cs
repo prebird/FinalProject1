@@ -58,5 +58,13 @@ namespace FinalProject1_winform
             return list;
         }
 
+        public List<PerPriceVO> GetAllPice()
+        {
+            PerPriceDAC dac = new PerPriceDAC();
+            List<PerPriceVO> list = dac.GetAllPrice();
+            dac.Dispose();
+            return list;
+
+        }
     }
 }

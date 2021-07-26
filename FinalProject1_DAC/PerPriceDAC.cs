@@ -169,6 +169,21 @@ namespace FinalProject1_DAC
             }
         }
 
+        public List<PerPriceVO> GetAllPrice()
+        {
+            string sql = @"select Company_code, Company_name, Item_code, Item_name, Item_Category, price_present, price_past, price_sdate,price_edate,price_comment,price_yn,price_udate,price_uadmin
+                                         from P_Price P join CompanyItem T on P.CompanyItem_ID = T.CompanyItem_ID
+                                         join Company C on T.company_id = C.company_id
+                                         join Item I on T.item_id = I.item_id
+										 where price_edate = '9999-12-31'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+
+                return Helper.DataReaderMapToList<PerPriceVO>(cmd.ExecuteReader());
+            }
+        }
+
 
     }
 }
