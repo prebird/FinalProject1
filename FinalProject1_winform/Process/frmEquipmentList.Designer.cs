@@ -71,6 +71,7 @@ namespace FinalProject1_winform
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
             this.btnSearch.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
             this.btnSearch.FlatAppearance.BorderSize = 0;
@@ -278,7 +279,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmEquipmentList";
-            this.Text = "frmEquipmentList";
+            this.Text = "설비관리";
             this.Load += new System.EventHandler(this.frmEquipmentList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

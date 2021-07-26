@@ -35,12 +35,12 @@ namespace FinalProject1_winform
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSearch = new FinalProject1_winform.Button_gudi();
+            this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.btnUpdate = new FinalProject1_winform.Button_gudi();
             this.btnExcel = new FinalProject1_winform.Button_gudi();
             this.btnDelete = new FinalProject1_winform.Button_gudi();
             this.btnInsert = new FinalProject1_winform.Button_gudi();
-            this.cboProcess = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -110,6 +110,25 @@ namespace FinalProject1_winform
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cboProcess
+            // 
+            this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboProcess.FormattingEnabled = true;
+            this.cboProcess.Location = new System.Drawing.Point(98, 9);
+            this.cboProcess.Name = "cboProcess";
+            this.cboProcess.Size = new System.Drawing.Size(121, 24);
+            this.cboProcess.TabIndex = 2;
+            // 
+            // label_gudi3
+            // 
+            this.label_gudi3.AutoSize = true;
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi3.Location = new System.Drawing.Point(3, 12);
+            this.label_gudi3.Name = "label_gudi3";
+            this.label_gudi3.Size = new System.Drawing.Size(60, 17);
+            this.label_gudi3.TabIndex = 1;
+            this.label_gudi3.Text = "■ 공정명";
             // 
             // btnUpdate
             // 
@@ -190,25 +209,6 @@ namespace FinalProject1_winform
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // cboProcess
-            // 
-            this.cboProcess.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Location = new System.Drawing.Point(98, 9);
-            this.cboProcess.Name = "cboProcess";
-            this.cboProcess.Size = new System.Drawing.Size(121, 24);
-            this.cboProcess.TabIndex = 2;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(3, 12);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(60, 17);
-            this.label_gudi3.TabIndex = 1;
-            this.label_gudi3.Text = "■ 공정명";
-            // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
@@ -232,7 +232,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Name = "frmProcessList";
-            this.Text = "frmProcessList";
+            this.Text = "공정관리";
             this.Load += new System.EventHandler(this.frmProcessList_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

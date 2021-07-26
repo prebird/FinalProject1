@@ -696,6 +696,9 @@
     <EmbeddedResource Include="Demand_Plan\frmProductionPlanMake.resx">
       <DependentUpon>frmProductionPlanMake.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Item\ReportPreviewForm.resx">
+      <DependentUpon>ReportPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchasing\frmInstockAdd.resx">
       <DependentUpon>frmInstockAdd.cs</DependentUpon>
     </EmbeddedResource>

@@ -376,7 +376,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.panel1);
             this.Name = "frmEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmEquipment";
+            this.Text = "설비등록";
             this.Load += new System.EventHandler(this.frmEquipment_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

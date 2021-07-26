@@ -39,15 +39,15 @@ namespace FinalProject1_winform
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
+            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
+            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
             this.comboBox_gudi2 = new FinalProject1_winform.ComboBox_gudi();
             this.comboBox_gudi1 = new FinalProject1_winform.ComboBox_gudi();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.label_gudi6 = new FinalProject1_winform.Label_gudi();
             this.label_gudi3 = new FinalProject1_winform.Label_gudi();
-            this.textBox_gudi1 = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.dateTimePicker_gudi1 = new FinalProject1_winform.DateTimePicker_gudi();
+            this.button_gudi8 = new FinalProject1_winform.Button_gudi();
             this.label_gudi5 = new FinalProject1_winform.Label_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -206,23 +206,23 @@ namespace FinalProject1_winform
             this.panel1.Size = new System.Drawing.Size(1057, 79);
             this.panel1.TabIndex = 24;
             // 
-            // button_gudi8
+            // dateTimePicker_gudi1
             // 
-            this.button_gudi8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
-            this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
-            this.button_gudi8.FlatAppearance.BorderSize = 0;
-            this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
-            this.button_gudi8.ForeColor = System.Drawing.Color.White;
-            this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
-            this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_gudi8.Location = new System.Drawing.Point(967, 45);
-            this.button_gudi8.Name = "button_gudi8";
-            this.button_gudi8.Size = new System.Drawing.Size(78, 25);
-            this.button_gudi8.TabIndex = 10;
-            this.button_gudi8.Text = "조회";
-            this.button_gudi8.UseVisualStyleBackColor = false;
+            this.dateTimePicker_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dateTimePicker_gudi1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_gudi1.Location = new System.Drawing.Point(105, 10);
+            this.dateTimePicker_gudi1.Name = "dateTimePicker_gudi1";
+            this.dateTimePicker_gudi1.Size = new System.Drawing.Size(205, 25);
+            this.dateTimePicker_gudi1.TabIndex = 0;
+            // 
+            // textBox_gudi1
+            // 
+            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.textBox_gudi1.Location = new System.Drawing.Point(483, 12);
+            this.textBox_gudi1.Name = "textBox_gudi1";
+            this.textBox_gudi1.Size = new System.Drawing.Size(205, 25);
+            this.textBox_gudi1.TabIndex = 29;
             // 
             // comboBox_gudi2
             // 
@@ -252,6 +252,16 @@ namespace FinalProject1_winform
             this.label_gudi1.TabIndex = 24;
             this.label_gudi1.Text = "■ 품목유형";
             // 
+            // label_gudi2
+            // 
+            this.label_gudi2.AutoSize = true;
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi2.Location = new System.Drawing.Point(21, 14);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi2.TabIndex = 28;
+            this.label_gudi2.Text = "■ 입출고일";
+            // 
             // label_gudi6
             // 
             this.label_gudi6.AutoSize = true;
@@ -272,33 +282,23 @@ namespace FinalProject1_winform
             this.label_gudi3.TabIndex = 23;
             this.label_gudi3.Text = "■ 품목";
             // 
-            // textBox_gudi1
+            // button_gudi8
             // 
-            this.textBox_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.textBox_gudi1.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.textBox_gudi1.Location = new System.Drawing.Point(483, 12);
-            this.textBox_gudi1.Name = "textBox_gudi1";
-            this.textBox_gudi1.Size = new System.Drawing.Size(205, 25);
-            this.textBox_gudi1.TabIndex = 29;
-            // 
-            // label_gudi2
-            // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi2.Location = new System.Drawing.Point(21, 14);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi2.TabIndex = 28;
-            this.label_gudi2.Text = "■ 입출고일";
-            // 
-            // dateTimePicker_gudi1
-            // 
-            this.dateTimePicker_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dateTimePicker_gudi1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_gudi1.Location = new System.Drawing.Point(105, 10);
-            this.dateTimePicker_gudi1.Name = "dateTimePicker_gudi1";
-            this.dateTimePicker_gudi1.Size = new System.Drawing.Size(205, 25);
-            this.dateTimePicker_gudi1.TabIndex = 0;
+            this.button_gudi8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_gudi8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            this.button_gudi8.ButtonType = FinalProject1_winform.ButtonStyle.Highlight;
+            this.button_gudi8.FlatAppearance.BorderSize = 0;
+            this.button_gudi8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_gudi8.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 10F);
+            this.button_gudi8.ForeColor = System.Drawing.Color.White;
+            this.button_gudi8.Image = ((System.Drawing.Image)(resources.GetObject("button_gudi8.Image")));
+            this.button_gudi8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_gudi8.Location = new System.Drawing.Point(967, 45);
+            this.button_gudi8.Name = "button_gudi8";
+            this.button_gudi8.Size = new System.Drawing.Size(78, 25);
+            this.button_gudi8.TabIndex = 10;
+            this.button_gudi8.Text = "조회";
+            this.button_gudi8.UseVisualStyleBackColor = false;
             // 
             // label_gudi5
             // 
@@ -325,7 +325,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmStockList";
-            this.Text = "자재 재고 현황";
+            this.Text = "자재재고현황";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

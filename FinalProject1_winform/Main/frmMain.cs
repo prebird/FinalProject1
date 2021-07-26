@@ -17,6 +17,7 @@ namespace FinalProject1_winform
     {
         List<MenuVO> Menus;
         UserInfoVO user;
+        bool bFlag = false;
         public UserInfoVO User 
         {
             get { return user; }
@@ -28,6 +29,7 @@ namespace FinalProject1_winform
             InitializeComponent();
             this.user = user;
             this.Tag = loginform;
+            bFlag = false;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -384,6 +386,7 @@ namespace FinalProject1_winform
         private void label_gudi1_Click(object sender, EventArgs e)
         {
             // 로그아웃 버튼
+            bFlag = true;
             this.Close();
             frmLogin frm = (frmLogin)this.Tag;
             frm.Show();
@@ -405,6 +408,15 @@ namespace FinalProject1_winform
             HideSideMenu();
             SetEvent();
             this.Refresh();
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(bFlag)
+            {
+                return;
+            }
+            Application.Exit();
         }
     }
 }

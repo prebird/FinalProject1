@@ -35,12 +35,12 @@ namespace FinalProject1_winform
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSearch = new FinalProject1_winform.Button_gudi();
+            this.cboEquipmentGroup = new FinalProject1_winform.ComboBox_gudi();
+            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.btnUpdate = new FinalProject1_winform.Button_gudi();
             this.btnExcel = new FinalProject1_winform.Button_gudi();
             this.btnDelete = new FinalProject1_winform.Button_gudi();
             this.btnInsert = new FinalProject1_winform.Button_gudi();
-            this.cboEquipmentGroup = new FinalProject1_winform.ComboBox_gudi();
-            this.label_gudi3 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -110,6 +110,25 @@ namespace FinalProject1_winform
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cboEquipmentGroup
+            // 
+            this.cboEquipmentGroup.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.cboEquipmentGroup.FormattingEnabled = true;
+            this.cboEquipmentGroup.Location = new System.Drawing.Point(98, 9);
+            this.cboEquipmentGroup.Name = "cboEquipmentGroup";
+            this.cboEquipmentGroup.Size = new System.Drawing.Size(121, 24);
+            this.cboEquipmentGroup.TabIndex = 2;
+            // 
+            // label_gudi3
+            // 
+            this.label_gudi3.AutoSize = true;
+            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.label_gudi3.Location = new System.Drawing.Point(3, 12);
+            this.label_gudi3.Name = "label_gudi3";
+            this.label_gudi3.Size = new System.Drawing.Size(72, 17);
+            this.label_gudi3.TabIndex = 1;
+            this.label_gudi3.Text = "■ 설비군명";
             // 
             // btnUpdate
             // 
@@ -190,25 +209,6 @@ namespace FinalProject1_winform
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // cboEquipmentGroup
-            // 
-            this.cboEquipmentGroup.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.cboEquipmentGroup.FormattingEnabled = true;
-            this.cboEquipmentGroup.Location = new System.Drawing.Point(98, 9);
-            this.cboEquipmentGroup.Name = "cboEquipmentGroup";
-            this.cboEquipmentGroup.Size = new System.Drawing.Size(121, 24);
-            this.cboEquipmentGroup.TabIndex = 2;
-            // 
-            // label_gudi3
-            // 
-            this.label_gudi3.AutoSize = true;
-            this.label_gudi3.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.label_gudi3.Location = new System.Drawing.Point(3, 12);
-            this.label_gudi3.Name = "label_gudi3";
-            this.label_gudi3.Size = new System.Drawing.Size(72, 17);
-            this.label_gudi3.TabIndex = 1;
-            this.label_gudi3.Text = "■ 설비군명";
-            // 
             // pictureBox_gudi2
             // 
             this.pictureBox_gudi2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_gudi2.Image")));
@@ -232,7 +232,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Name = "frmEquipmentGroupList";
-            this.Text = "frmEquipmentGroupList";
+            this.Text = "설비군관리";
             this.Load += new System.EventHandler(this.frmEquipmentGroupList_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

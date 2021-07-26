@@ -283,7 +283,7 @@ namespace FinalProject1_winform
             this.MinimumSize = new System.Drawing.Size(490, 425);
             this.Name = "frmProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmProcess";
+            this.Text = "공정등록";
             this.Load += new System.EventHandler(this.frmProcess_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

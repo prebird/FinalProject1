@@ -31,8 +31,6 @@ namespace FinalProject1_winform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlUpSide = new System.Windows.Forms.Panel();
-            this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
             this.pictureBox_gudi3 = new FinalProject1_winform.PictureBox_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
@@ -41,6 +39,8 @@ namespace FinalProject1_winform
             this.lbluserName = new FinalProject1_winform.Label_gudi();
             this.picUser = new FinalProject1_winform.OvalPictureBox();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
+            this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.tabControl1 = new FinalProject1_winform.CustomTabControl();
             this.pnlUpSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
@@ -66,30 +66,6 @@ namespace FinalProject1_winform
             this.pnlUpSide.Name = "pnlUpSide";
             this.pnlUpSide.Size = new System.Drawing.Size(1684, 99);
             this.pnlUpSide.TabIndex = 0;
-            // 
-            // pnlSideBar
-            // 
-            this.pnlSideBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlSideBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
-            this.pnlSideBar.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(198, 862);
-            this.pnlSideBar.TabIndex = 1;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Location = new System.Drawing.Point(198, 99);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1486, 33);
-            this.tabControl1.TabIndex = 3;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // pictureBox_gudi3
             // 
@@ -183,6 +159,30 @@ namespace FinalProject1_winform
             this.pictureBox_gudi1.TabIndex = 0;
             this.pictureBox_gudi1.TabStop = false;
             // 
+            // pnlSideBar
+            // 
+            this.pnlSideBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlSideBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSideBar.Location = new System.Drawing.Point(0, 99);
+            this.pnlSideBar.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlSideBar.Name = "pnlSideBar";
+            this.pnlSideBar.Size = new System.Drawing.Size(198, 862);
+            this.pnlSideBar.TabIndex = 1;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.Location = new System.Drawing.Point(198, 99);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1486, 33);
+            this.tabControl1.TabIndex = 3;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -193,7 +193,8 @@ namespace FinalProject1_winform
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "옥돌컴퍼니";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
             this.pnlUpSide.ResumeLayout(false);

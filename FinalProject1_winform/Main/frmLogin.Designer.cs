@@ -30,25 +30,15 @@ namespace FinalProject1_winform
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
-            this.txtID = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.txtPwd = new FinalProject1_winform.Controls.TextBox_gudi();
-            this.btnLogIn = new FinalProject1_winform.Button_gudi();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnLogIn = new FinalProject1_winform.Button_gudi();
+            this.txtPwd = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.txtID = new FinalProject1_winform.Controls.TextBox_gudi();
+            this.label_gudi2 = new FinalProject1_winform.Label_gudi();
+            this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_gudi1
-            // 
-            this.label_gudi1.AutoSize = true;
-            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi1.Location = new System.Drawing.Point(93, 177);
-            this.label_gudi1.Name = "label_gudi1";
-            this.label_gudi1.Size = new System.Drawing.Size(39, 32);
-            this.label_gudi1.TabIndex = 1;
-            this.label_gudi1.Text = "ID";
             // 
             // pictureBox1
             // 
@@ -60,35 +50,16 @@ namespace FinalProject1_winform
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label_gudi2
+            // checkBox1
             // 
-            this.label_gudi2.AutoSize = true;
-            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_gudi2.Location = new System.Drawing.Point(62, 242);
-            this.label_gudi2.Name = "label_gudi2";
-            this.label_gudi2.Size = new System.Drawing.Size(70, 32);
-            this.label_gudi2.TabIndex = 1;
-            this.label_gudi2.Text = "PWD";
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtID.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtID.Location = new System.Drawing.Point(138, 174);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(218, 43);
-            this.txtID.TabIndex = 1;
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtPwd.InputType = FinalProject1_winform.Controls.validType.Common;
-            this.txtPwd.Location = new System.Drawing.Point(138, 239);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.PasswordChar = '●';
-            this.txtPwd.Size = new System.Drawing.Size(218, 43);
-            this.txtPwd.TabIndex = 2;
-            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd_KeyPress);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox1.Location = new System.Drawing.Point(120, 291);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(126, 21);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Remember Me";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // btnLogIn
             // 
@@ -106,16 +77,45 @@ namespace FinalProject1_winform
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
-            // checkBox1
+            // txtPwd
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox1.Location = new System.Drawing.Point(120, 291);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 21);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Remember Me";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.txtPwd.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPwd.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtPwd.Location = new System.Drawing.Point(138, 239);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '●';
+            this.txtPwd.Size = new System.Drawing.Size(218, 43);
+            this.txtPwd.TabIndex = 2;
+            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd_KeyPress);
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtID.InputType = FinalProject1_winform.Controls.validType.Common;
+            this.txtID.Location = new System.Drawing.Point(138, 174);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(218, 43);
+            this.txtID.TabIndex = 1;
+            // 
+            // label_gudi2
+            // 
+            this.label_gudi2.AutoSize = true;
+            this.label_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi2.Location = new System.Drawing.Point(62, 242);
+            this.label_gudi2.Name = "label_gudi2";
+            this.label_gudi2.Size = new System.Drawing.Size(70, 32);
+            this.label_gudi2.TabIndex = 1;
+            this.label_gudi2.Text = "PWD";
+            // 
+            // label_gudi1
+            // 
+            this.label_gudi1.AutoSize = true;
+            this.label_gudi1.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_gudi1.Location = new System.Drawing.Point(93, 177);
+            this.label_gudi1.Name = "label_gudi1";
+            this.label_gudi1.Size = new System.Drawing.Size(39, 32);
+            this.label_gudi1.TabIndex = 1;
+            this.label_gudi1.Text = "ID";
             // 
             // frmLogin
             // 
@@ -131,7 +131,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "로그인";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

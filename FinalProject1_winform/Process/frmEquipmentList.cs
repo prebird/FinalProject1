@@ -127,7 +127,10 @@ namespace FinalProject1_winform
         private void btnInsert_Click(object sender, EventArgs e)
         {
             frmEquipment frm = new frmEquipment(User);
-            frm.ShowDialog();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

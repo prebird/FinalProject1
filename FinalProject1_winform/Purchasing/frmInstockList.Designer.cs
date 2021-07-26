@@ -243,7 +243,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmInstockList";
-            this.Text = "frmInstockList";
+            this.Text = "입고현황";
             this.Load += new System.EventHandler(this.frmInstockList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

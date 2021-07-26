@@ -138,7 +138,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Name = "frmMasterCreate";
-            this.Text = "frmSMInsert";
+            this.Text = "영업마스터 생성";
             this.Load += new System.EventHandler(this.frmMasterCreate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PO)).EndInit();

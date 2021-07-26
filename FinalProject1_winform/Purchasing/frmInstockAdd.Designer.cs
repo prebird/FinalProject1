@@ -350,7 +350,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmInstockAdd";
-            this.Text = "frmInstockAdd";
+            this.Text = "입출고등록";
             this.Load += new System.EventHandler(this.frmInstockAdd_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
