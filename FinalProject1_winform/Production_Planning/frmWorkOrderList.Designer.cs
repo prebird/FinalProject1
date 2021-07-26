@@ -249,7 +249,6 @@ namespace FinalProject1_winform
             this.btnDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDone.UseVisualStyleBackColor = false;
             this.btnDone.Visible = false;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // frmWorkOrderList
             // 
@@ -262,7 +261,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmWorkOrderList";
-            this.Text = "frmWorkOrderList";
+            this.Text = "작업 현황";
             this.Load += new System.EventHandler(this.frmWorkOrderList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

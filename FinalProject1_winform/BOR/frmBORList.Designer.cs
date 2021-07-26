@@ -299,7 +299,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmBORList";
-            this.Text = "frmBORList";
+            this.Text = "BOR관리";
             this.Load += new System.EventHandler(this.frmBORList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

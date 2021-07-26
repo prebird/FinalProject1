@@ -278,7 +278,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmWorkOrderMake";
-            this.Text = "frmWorkOrderMake";
+            this.Text = "작업지시 생성";
             this.Load += new System.EventHandler(this.frmWorkOrderMake_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -283,7 +283,7 @@ namespace FinalProject1_winform
             this.MinimumSize = new System.Drawing.Size(490, 425);
             this.Name = "frmEquipmentGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmEquipmentGroup";
+            this.Text = "설비군등록";
             this.Load += new System.EventHandler(this.frmEquipmentGroup_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

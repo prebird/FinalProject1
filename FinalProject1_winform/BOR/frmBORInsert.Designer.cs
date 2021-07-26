@@ -308,7 +308,7 @@ namespace FinalProject1_winform
             this.MinimumSize = new System.Drawing.Size(490, 425);
             this.Name = "frmBORInsert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmBORInsert";
+            this.Text = "BOR등록";
             this.Load += new System.EventHandler(this.frmBORInsert_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();

@@ -234,7 +234,7 @@ namespace FinalProject1_winform
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmProductionPlanningList";
-            this.Text = "frmProductionPlanningList";
+            this.Text = "생산계획 목록";
             this.Load += new System.EventHandler(this.frmProductionPlanningList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
