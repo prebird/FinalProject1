@@ -50,7 +50,7 @@ namespace FinalProject1_winform
 
                 DataView dv1 = new DataView(dtMenu);
                 dv1.RowFilter = "MenuLevel = 2 and refMenuID=" + dv0[i]["MenuID"].ToString();
-                dv1.Sort = "menu_sort";
+                dv1.Sort = "sortorder";
                 for (int k = 0; k < dv1.Count; k++)
                 {
                     TreeNode c_node = new TreeNode(dv1[k]["MenuName"].ToString());
