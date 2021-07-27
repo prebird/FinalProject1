@@ -30,7 +30,7 @@ namespace FinalProject1_winform.Controls
         private void InitializeComponent()
         {
             this.gbProcess = new System.Windows.Forms.GroupBox();
-            this.button_gudi2 = new FinalProject1_winform.Button_gudi();
+            this.btnSaveData = new FinalProject1_winform.Button_gudi();
             this.btnStop = new FinalProject1_winform.Button_gudi();
             this.btnStart = new FinalProject1_winform.Button_gudi();
             this.txtNGQty = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@ namespace FinalProject1_winform.Controls
             // gbProcess
             // 
             this.gbProcess.BackColor = System.Drawing.Color.White;
-            this.gbProcess.Controls.Add(this.button_gudi2);
+            this.gbProcess.Controls.Add(this.btnSaveData);
             this.gbProcess.Controls.Add(this.btnStop);
             this.gbProcess.Controls.Add(this.btnStart);
             this.gbProcess.Controls.Add(this.txtNGQty);
@@ -87,20 +87,21 @@ namespace FinalProject1_winform.Controls
             this.gbProcess.TabIndex = 0;
             this.gbProcess.TabStop = false;
             // 
-            // button_gudi2
+            // btnSaveData
             // 
-            this.button_gudi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
-            this.button_gudi2.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
-            this.button_gudi2.FlatAppearance.BorderSize = 0;
-            this.button_gudi2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_gudi2.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_gudi2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.button_gudi2.Location = new System.Drawing.Point(273, 508);
-            this.button_gudi2.Name = "button_gudi2";
-            this.button_gudi2.Size = new System.Drawing.Size(124, 57);
-            this.button_gudi2.TabIndex = 18;
-            this.button_gudi2.Text = "실적저장";
-            this.button_gudi2.UseVisualStyleBackColor = false;
+            this.btnSaveData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(142)))), ((int)(((byte)(150)))));
+            this.btnSaveData.ButtonType = FinalProject1_winform.ButtonStyle.Normal;
+            this.btnSaveData.FlatAppearance.BorderSize = 0;
+            this.btnSaveData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveData.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSaveData.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnSaveData.Location = new System.Drawing.Point(273, 508);
+            this.btnSaveData.Name = "btnSaveData";
+            this.btnSaveData.Size = new System.Drawing.Size(124, 57);
+            this.btnSaveData.TabIndex = 18;
+            this.btnSaveData.Text = "실적저장";
+            this.btnSaveData.UseVisualStyleBackColor = false;
+            this.btnSaveData.Click += new System.EventHandler(this.btnSaveData_Click);
             // 
             // btnStop
             // 
@@ -280,9 +281,11 @@ namespace FinalProject1_winform.Controls
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 25);
+            this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.Machine;
+            this.pictureBox1.Location = new System.Drawing.Point(46, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 216);
+            this.pictureBox1.Size = new System.Drawing.Size(304, 216);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -384,7 +387,7 @@ namespace FinalProject1_winform.Controls
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblYN;
-        private Button_gudi button_gudi2;
+        private Button_gudi btnSaveData;
         private Button_gudi btnStop;
         private Button_gudi btnStart;
         private System.Windows.Forms.Label lblTaskID;

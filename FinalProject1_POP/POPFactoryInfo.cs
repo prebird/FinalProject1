@@ -22,7 +22,6 @@ namespace FinalProject1_POP
             Order = order;
         }
 
-
         private void POPFactoryInfo_Load(object sender, EventArgs e)
         {
             if (Order == null)
@@ -36,12 +35,13 @@ namespace FinalProject1_POP
 
             ucMachine1.IsTaskEnable = false;
 
+            ucMachine1.ItemCode = Order.Item_code;
             ucMachine1.Worknum = Order.WorkOrderID;
-            ucMachine1.WorkQty = Order.OrderQuantity;
+            ucMachine1.OrderQty = Order.OrderQuantity;
             ucMachine1.MachineName = Order.EquipmentName;
             ucMachine1.ProcessName = Order.processName;
             ucMachine1.YN = "(가동준비)";
-
+            
         }
     }
 }

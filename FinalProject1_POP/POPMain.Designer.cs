@@ -31,14 +31,13 @@ namespace FinalProject1_POP
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnMachine = new System.Windows.Forms.Button();
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblDate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,6 +54,17 @@ namespace FinalProject1_POP
             this.panel1.Size = new System.Drawing.Size(1684, 156);
             this.panel1.TabIndex = 0;
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblDate.Location = new System.Drawing.Point(1432, 105);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(425, 35);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "2021-07-26(월요일) 오후 2:28:29";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FinalProject1_POP.Properties.Resources.수정됨_logo1___복사본;
@@ -68,7 +78,6 @@ namespace FinalProject1_POP
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnMachine);
             this.panel2.Controls.Add(this.btnFactory);
             this.panel2.Controls.Add(this.btnWork);
             this.panel2.Controls.Add(this.btnUser);
@@ -77,20 +86,6 @@ namespace FinalProject1_POP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 805);
             this.panel2.TabIndex = 1;
-            // 
-            // btnMachine
-            // 
-            this.btnMachine.BackColor = System.Drawing.Color.White;
-            this.btnMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMachine.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMachine.Image = global::FinalProject1_POP.Properties.Resources.engineer128x;
-            this.btnMachine.Location = new System.Drawing.Point(3, 412);
-            this.btnMachine.Name = "btnMachine";
-            this.btnMachine.Size = new System.Drawing.Size(248, 131);
-            this.btnMachine.TabIndex = 3;
-            this.btnMachine.Text = "공정관리";
-            this.btnMachine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMachine.UseVisualStyleBackColor = false;
             // 
             // btnFactory
             // 
@@ -141,17 +136,6 @@ namespace FinalProject1_POP
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("AppleSDGothicNeoB00", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblDate.Location = new System.Drawing.Point(1432, 105);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(425, 35);
-            this.lblDate.TabIndex = 1;
-            this.lblDate.Text = "2021-07-26(월요일) 오후 2:28:29";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // POPMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -181,7 +165,6 @@ namespace FinalProject1_POP
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnMachine;
         private System.Windows.Forms.Button btnFactory;
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.Button btnUser;
