@@ -86,7 +86,11 @@ namespace FinalProject1_winform
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-
+            frmWorkOrderDone frm = new frmWorkOrderDone();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
         }
     }
 }

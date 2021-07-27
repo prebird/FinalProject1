@@ -248,7 +248,7 @@ namespace FinalProject1_winform
             this.btnDone.Text = "작업실적등록";
             this.btnDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDone.UseVisualStyleBackColor = false;
-            this.btnDone.Visible = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // frmWorkOrderList
             // 
