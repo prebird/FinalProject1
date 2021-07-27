@@ -21,7 +21,7 @@ namespace FinalProject1_Web.Controllers
         public ActionResult AddToCart(int productID, string returnUrl)
         {
             ItemDAC db = new ItemDAC();
-            ItemVO prd = db.GetOneItem(productID);
+            ItemVO prd = db.GetOneItemWithPrice(productID);
 
             ItemDAC db1 = new ItemDAC();
             if (prd != null)
