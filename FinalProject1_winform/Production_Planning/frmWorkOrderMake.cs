@@ -112,13 +112,14 @@ namespace FinalProject1_winform
             WorkOrder.BORID = item.BORID;
             WorkOrder.Status = "작업계획";
             WorkOrder.PlanID = PlanID;
-            WorkOrder.WorkOrderID = $"{WorkOrder.WorkDate}_{WorkOrder.EmpID}";
+            WorkOrder.WorkOrderID = $"{WorkOrder.PlanID}_{WorkOrder.EmpID}";
 
             bool result = service.InsertWorkOrder(WorkOrder);
 
             if(result)
             {
                 MessageBox.Show("성공적으로 저장되었습니다.");
+                btnSearch.PerformClick();
             }
             else
             {

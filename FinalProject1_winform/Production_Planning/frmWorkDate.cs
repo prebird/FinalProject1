@@ -30,11 +30,11 @@ namespace FinalProject1_winform
                 return;
             }
 
-            if(dtpDate.Text == DateTime.Today.ToString("yyyy-MM-dd"))
-            {
-                MessageBox.Show("작업 지시 날짜는 오늘로 할 수 없습니다.");
-                return;
-            }
+            //if(dtpDate.Text == DateTime.Today.ToString("yyyy-MM-dd"))
+            //{
+            //    MessageBox.Show("작업 지시 날짜는 오늘로 할 수 없습니다.");
+            //    return;
+            //}
 
             WorkDate = dtpDate.Value.ToString("yyyy-MM-dd");
             user_id = cboUser.SelectedValue.ToString();
