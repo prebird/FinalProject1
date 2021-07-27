@@ -18,5 +18,20 @@ namespace FinalProject1_winform
 
             return list;
         }
+
+        public List<WorkOrderVO> GetWorkDoneRecord()
+        {
+            WorkOrderDAC dac = new WorkOrderDAC();
+            List<WorkOrderVO> list = dac.GetWorkDoneRecord();
+            dac.Dispose();
+            return list;
+        }
+
+        public bool WorkDone(string planID)
+        {
+            WorkOrderDAC dac = new WorkOrderDAC();
+            bool result = dac.WorkDone(planID);
+            return result;
+        }
     }
 }

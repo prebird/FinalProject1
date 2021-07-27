@@ -14,6 +14,10 @@ namespace FinalProject1_Web.Controllers
         // GET: Main
         public ActionResult Index()
         {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("Login", "UserJoin");
+            }
 
             // 에어리어 차트용
             ItemDAC dac = new ItemDAC();
@@ -88,6 +92,10 @@ namespace FinalProject1_Web.Controllers
 
         public ActionResult Index2()
         {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("Login", "UserJoin");
+            }
             return View();
         }
 

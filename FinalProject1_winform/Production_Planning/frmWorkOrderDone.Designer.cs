@@ -33,21 +33,21 @@ namespace FinalProject1_winform
             this.label_gudi4 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCart = new System.Windows.Forms.DataGridView();
             this.label_gudi1 = new FinalProject1_winform.Label_gudi();
             this.pictureBox_gudi1 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvDone = new System.Windows.Forms.DataGridView();
             this.button_gudi12 = new FinalProject1_winform.Button_gudi();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button_gudi2 = new FinalProject1_winform.Button_gudi();
             this.button_gudi1 = new FinalProject1_winform.Button_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDone)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,21 +75,22 @@ namespace FinalProject1_winform
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvCart);
             this.panel2.Location = new System.Drawing.Point(12, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1066, 137);
             this.panel2.TabIndex = 39;
             // 
-            // dataGridView1
+            // dgvCart
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1066, 137);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCart.Location = new System.Drawing.Point(0, 0);
+            this.dgvCart.Name = "dgvCart";
+            this.dgvCart.RowTemplate.Height = 23;
+            this.dgvCart.Size = new System.Drawing.Size(1066, 137);
+            this.dgvCart.TabIndex = 0;
+            this.dgvCart.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellDoubleClick);
             // 
             // label_gudi1
             // 
@@ -115,21 +116,21 @@ namespace FinalProject1_winform
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Controls.Add(this.dgvDone);
             this.panel1.Location = new System.Drawing.Point(12, 205);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1066, 206);
             this.panel1.TabIndex = 42;
             // 
-            // dataGridView2
+            // dgvDone
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1066, 206);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvDone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDone.Location = new System.Drawing.Point(0, 0);
+            this.dgvDone.Name = "dgvDone";
+            this.dgvDone.RowTemplate.Height = 23;
+            this.dgvDone.Size = new System.Drawing.Size(1066, 206);
+            this.dgvDone.TabIndex = 0;
             // 
             // button_gudi12
             // 
@@ -175,6 +176,7 @@ namespace FinalProject1_winform
             this.button_gudi2.TabIndex = 5;
             this.button_gudi2.Text = "저장";
             this.button_gudi2.UseVisualStyleBackColor = false;
+            this.button_gudi2.Click += new System.EventHandler(this.button_gudi2_Click);
             // 
             // button_gudi1
             // 
@@ -211,13 +213,14 @@ namespace FinalProject1_winform
             this.MinimumSize = new System.Drawing.Size(1109, 519);
             this.Name = "frmWorkOrderDone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmWorkOrderDone";
+            this.Text = "실적 등록";
+            this.Load += new System.EventHandler(this.frmWorkOrderDone_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDone)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,11 +232,11 @@ namespace FinalProject1_winform
         private Label_gudi label_gudi4;
         private PictureBox_gudi pictureBox_gudi2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCart;
         private Label_gudi label_gudi1;
         private PictureBox_gudi pictureBox_gudi1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvDone;
         private Button_gudi button_gudi12;
         private System.Windows.Forms.Panel panel3;
         private Button_gudi button_gudi2;

@@ -72,7 +72,7 @@ namespace FinalProject1_winform.Demand_Plan
 
                     //생산 계획 Detail Insert
                     BORID = borID,
-                    PlanDate = dtpMakeDate.Value,
+                    PlanDate = Convert.ToDateTime(dtpMakeDate.Text),
                     Quantity = Convert.ToInt32(txtQuantity.Text)
                 };
 

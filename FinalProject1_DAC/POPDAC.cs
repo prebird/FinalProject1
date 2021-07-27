@@ -46,7 +46,7 @@ namespace FinalProject1_DAC
 				                  inner join Production_PlanDetail PD on PP.ProductionPlanID = PD.ProductionPlanID
 				                  inner join BOR B on PD.BORID = B.BORID
 				                  inner Join Item I on B.ItemID = I.Item_ID
-								  where EmpID = @EmpID and WorkDate = @WorkDate";
+								  where EmpID = @EmpID and WorkDate = @WorkDate and (WO.[status] = '작업계획' or WO.[status] = '작업중')";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {

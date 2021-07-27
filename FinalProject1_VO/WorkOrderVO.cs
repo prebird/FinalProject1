@@ -20,5 +20,6 @@ namespace FinalProject1_VO
         public string Item_Name { get; set; }
         public string Status { get; set; }
         public int OrderQuantity { get; set; }
+        public string pro_date { get; set; }
     }
 }

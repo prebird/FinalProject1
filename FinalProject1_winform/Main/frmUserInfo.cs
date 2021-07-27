@@ -37,6 +37,9 @@ namespace FinalProject1_winform
             CommonUtil.AddGridTextColumn(dgvUser, "권한ID", "authID", colWidth: 90);
 
             // 권한
+            CommonUtil.SetInitGridView(dgvAuth);
+            CommonUtil.AddGridTextColumn(dgvAuth, "권한번호", "authid", colWidth: 100);
+            CommonUtil.AddGridTextColumn(dgvAuth, "권한명", "authName", colWidth: 100);
 
         }
 
@@ -76,6 +79,12 @@ namespace FinalProject1_winform
             {
                 Pic1.ImageLocation = ConfigurationManager.AppSettings["apiurl"] + "Uploads/" + thisUser.user_pic; 
             }
+
+            // 권한
+            UserInfoDAC dac = new UserInfoDAC();
+            DataTable dt = dac.GetUserAuth(userid);
+            dgvAuth.DataSource = dt;
+            dgvAuth.ClearSelection();
 
 
 

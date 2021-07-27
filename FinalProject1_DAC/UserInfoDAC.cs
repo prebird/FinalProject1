@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -218,6 +219,20 @@ values(@user_id, @user_pwd, @user_name, @user_Category, @user_depart_id, @user_e
             {
                 return Helper.DataReaderMapToList<UserInfoVO>(cmd.ExecuteReader());
             }
+        }
+
+        public DataTable GetUserAuth(string userid)
+        {
+            string sql = @"select a.AuthName, a.authID
+from Userinfo u inner join Authority a on u.authID = a.AuthID
+where u.user_id = @user_id";
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@user_id", userid);
+                da.Fill(dt);
+            }
+            return dt;
         }
     }
 }
