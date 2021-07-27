@@ -72,10 +72,13 @@ namespace FinalProject1_DAC
 
         public bool InsertWorkOrder(WorkOrderVO workOrder)
         {
-            string sql = "insert into WorkOrder(WorkOrderID,PlanID,EmpID,WorkDate,BORID,Status,OrderQuantity) values(@WorkOrderID, @PlanID, @EmpID, @WorkDate, @BORID, @Status,@OrderQuantity)";
-
-            using (SqlCommand cmd = new SqlCommand(sql,conn))
+            SqlTransaction trans = conn.BeginTransaction();
+            try
             {
+                string sql = "insert into WorkOrder(WorkOrderID,PlanID,EmpID,WorkDate,BORID,Status,OrderQuantity) values(@WorkOrderID, @PlanID, @EmpID, @WorkDate, @BORID, @Status,@OrderQuantity)";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Transaction = trans;
                 cmd.Parameters.AddWithValue("@WorkOrderID", workOrder.WorkOrderID);
                 cmd.Parameters.AddWithValue("@PlanID", workOrder.PlanID);
                 cmd.Parameters.AddWithValue("@EmpID", workOrder.EmpID);
@@ -86,7 +89,27 @@ namespace FinalProject1_DAC
 
                 int affectRow = cmd.ExecuteNonQuery();
 
-                return (affectRow > 0);
+                sql = "update Production_Plan set Status ='작업생성' where PlanID = @PlanID ";
+                SqlCommand ucmd = new SqlCommand(sql, conn);
+                ucmd.Transaction = trans;
+                ucmd.Parameters.AddWithValue("@PlanID", workOrder.PlanID);
+
+                int affectRow2 = ucmd.ExecuteNonQuery();
+
+                if(affectRow > 0 && affectRow2 > 0)
+                {
+                    trans.Commit();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch(Exception err)
+            {
+                trans.Rollback();
+                return false;
             }
         }
     }

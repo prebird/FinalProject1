@@ -50,7 +50,7 @@ namespace FinalProject1_DAC
 
         public List<BORVO> GetAllBOR()
         {
-            string sql = @"select BORID, Item_Name, ProcessName, EquipmentName, EquipmentCode, Tact_Time, [Priority], IsUse, B.INS_EMP, CONVERT(nvarchar,B.INS_DATE,120) INS_DATE, Remark
+            string sql = @"select BORID, Item_Name, ProcessName, EquipmentName, EquipmentCode, Tact_Time, PriorDate, [Priority], IsUse, B.INS_EMP, CONVERT(nvarchar,B.INS_DATE,120) INS_DATE, Remark
                                   from BOR B inner join Item I on B.ItemID = I.Item_ID
                                              inner join ProcessInfo P on B.ProcessID = P.ProcessID
                                              inner join Equipment E on E.EquipmentID = B.EquipmentID ";
