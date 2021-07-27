@@ -33,8 +33,6 @@ namespace FinalProject1_winform
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Excel = new FinalProject1_winform.Button_gudi();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_DemandPlan = new FinalProject1_winform.DGV_gudi();
             this.pictureBox_gudi2 = new FinalProject1_winform.PictureBox_gudi();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbo_PlanID = new FinalProject1_winform.ComboBox_gudi();
@@ -46,10 +44,10 @@ namespace FinalProject1_winform
             this.btn_Search = new FinalProject1_winform.Button_gudi();
             this.label_gudi2 = new FinalProject1_winform.Label_gudi();
             this.btn_ProductionPlan = new FinalProject1_winform.Button_gudi();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).BeginInit();
+            this.dgv_DemandPlan = new FinalProject1_winform.DGV_gudi();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Excel
@@ -71,41 +69,6 @@ namespace FinalProject1_winform
             this.btn_Excel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Excel.UseVisualStyleBackColor = false;
             this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dgv_DemandPlan);
-            this.panel2.Location = new System.Drawing.Point(18, 140);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 459);
-            this.panel2.TabIndex = 26;
-            // 
-            // dgv_DemandPlan
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.dgv_DemandPlan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_DemandPlan.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_DemandPlan.CheckBoxAll = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DemandPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_DemandPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DemandPlan.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
-            this.dgv_DemandPlan.HeaderCheckStatus = false;
-            this.dgv_DemandPlan.Location = new System.Drawing.Point(3, 3);
-            this.dgv_DemandPlan.Name = "dgv_DemandPlan";
-            this.dgv_DemandPlan.RowHeadersVisible = false;
-            this.dgv_DemandPlan.RowTemplate.Height = 23;
-            this.dgv_DemandPlan.Size = new System.Drawing.Size(1051, 453);
-            this.dgv_DemandPlan.TabIndex = 0;
             // 
             // pictureBox_gudi2
             // 
@@ -240,31 +203,56 @@ namespace FinalProject1_winform
             this.btn_ProductionPlan.UseVisualStyleBackColor = false;
             this.btn_ProductionPlan.Click += new System.EventHandler(this.btn_ProductionPlan_Click);
             // 
+            // dgv_DemandPlan
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.dgv_DemandPlan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_DemandPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_DemandPlan.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_DemandPlan.CheckBoxAll = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DemandPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_DemandPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DemandPlan.Font = new System.Drawing.Font("AppleSDGothicNeoM00", 10F);
+            this.dgv_DemandPlan.HeaderCheckStatus = false;
+            this.dgv_DemandPlan.Location = new System.Drawing.Point(18, 143);
+            this.dgv_DemandPlan.Name = "dgv_DemandPlan";
+            this.dgv_DemandPlan.RowHeadersVisible = false;
+            this.dgv_DemandPlan.RowTemplate.Height = 23;
+            this.dgv_DemandPlan.Size = new System.Drawing.Size(1057, 453);
+            this.dgv_DemandPlan.TabIndex = 34;
+            // 
             // frmDemandPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.ClientSize = new System.Drawing.Size(1093, 620);
+            this.Controls.Add(this.dgv_DemandPlan);
             this.Controls.Add(this.label_gudi2);
             this.Controls.Add(this.btn_ProductionPlan);
             this.Controls.Add(this.btn_Excel);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox_gudi2);
             this.Controls.Add(this.panel1);
             this.Name = "frmDemandPlan";
             this.Text = "수요 계획 관리";
             this.Load += new System.EventHandler(this.frmDemandPlan_Load);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gudi2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DemandPlan)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Button_gudi btn_Excel;
-        private System.Windows.Forms.Panel panel2;
         private PictureBox_gudi pictureBox_gudi2;
         private System.Windows.Forms.Panel panel1;
         private Button_gudi btn_Search;
@@ -274,8 +262,8 @@ namespace FinalProject1_winform
         private DateTimePicker_gudi dtp_End;
         private DateTimePicker_gudi dtp_Start;
         private Label_gudi label_gudi14;
-        private DGV_gudi dgv_DemandPlan;
         private Button_gudi btn_ProductionPlan;
         private ComboBox_gudi cbo_PlanID;
+        private DGV_gudi dgv_DemandPlan;
     }
 }

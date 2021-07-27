@@ -40,6 +40,7 @@ namespace FinalProject1_winform
             col.DefaultCellStyle.Alignment = align;
             col.Visible = visibility;
             col.ReadOnly = true;
+            col.Frozen = true;
 
             dgv.Columns.Add(col);
         }
