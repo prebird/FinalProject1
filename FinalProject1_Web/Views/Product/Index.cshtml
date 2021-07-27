@@ -46,7 +46,7 @@
                                 <img src="@ViewBag.apiurl@p.Item_img" class="card-img-top" alt="..." width="250" height="250">
                                 <div class="card-body">
                                     <p class="card-text">@p.Item_Content</p>
-                                    <h5 class="card-text" style="float:right">30000</h5>
+                                    <h5 class="card-text" style="float:right">@p.price_present.ToString("C")</h5>
                                 </div>
                                 @using (Html.BeginForm("AddToCart", "Cart"))
                                 {

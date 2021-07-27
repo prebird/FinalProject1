@@ -17,8 +17,7 @@ namespace FinalProject1_Web.Controllers
         public ActionResult Index()
         {
             ItemDAC dac = new ItemDAC();
-            List<ItemVO> allItem = dac.GetAllItem();
-            List<ItemVO> model = allItem.FindAll((x) => x.Item_Category == "완제품");
+            List<ItemVO> model = dac.GetProductWithPrice();
             string apiurl = "http://gdc7finalprojectteam1.azurewebsites.net/Uploads/";
             ViewBag.apiurl = apiurl;
             return View(model);

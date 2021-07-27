@@ -39,7 +39,7 @@ namespace FinalProject1_Web.Models
         public decimal CalcTotalValue()
         {
             //return lines.Sum<CartLine>((p) => p.Product.Price * p.Qty);
-            return lines.Sum<CartLine>((p) => 1000 * p.Qty);
+            return lines.Sum<CartLine>((p) => p.Product.price_present * p.Qty);
 
         }
     }

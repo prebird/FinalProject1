@@ -22,6 +22,8 @@ namespace FinalProject1_VO
         public string Item_Content { get; set; }
 
         public string Item_img { get; set; }
+
+        public int price_present { get; set; }
     }
 
     public class Item_Combo_VO

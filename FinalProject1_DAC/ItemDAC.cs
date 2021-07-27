@@ -44,6 +44,20 @@ namespace FinalProject1_DAC
             }
         }
 
+        public List<ItemVO> GetProductWithPrice()
+        {
+            string sql = @"select i.Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_img, pp.price_present
+                         from Item i
+						 inner join P_Price pp on i.Item_ID = pp.Item_ID
+						 where Item_Deleted = 0 and pp.price_edate = '9999-12-31' and i.Item_Category = '완제품'";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                return Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+            }
+        }
+
         // 특정 조회 
         public ItemVO GetOneItem(int itemID)
         {
@@ -51,6 +65,26 @@ namespace FinalProject1_DAC
                          Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_img
                          from Item
                          where Item_ID = @Item_ID and Item_Deleted = 0";
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("Item_ID", itemID);
+                List<ItemVO> list = Helper.DataReaderMapToList<ItemVO>(cmd.ExecuteReader());
+
+                if (list != null && list.Count > 0)
+                    return list[0];
+                else
+                    return null;
+            }
+        }
+
+        public ItemVO GetOneItemWithPrice(int itemID)
+        {
+            string sql = @"select i.Item_ID, Item_Category, Item_Code, Item_Name, Item_UnitQTY, Item_OrderType, Item_YN, Item_InHouse, 
+                         Item_OutHouse, Item_SafetyQTY, Item_CheckType, Item_Content, Item_img, pp.price_present
+                         from Item i
+						 inner join P_Price pp on i.Item_ID = pp.Item_ID
+                         where i.Item_ID = @Item_ID and Item_Deleted = 0 and pp.price_edate = '9999-12-31'";
 
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
