@@ -151,10 +151,11 @@ namespace FinalProject1_winform
                 }
              }
 
-            XtraReport1 rpt = new XtraReport1();
-            rpt.DataSource = dt;
+            // 프로젝트 제외된 Dev frm을 추가한 후 다시 사용.
+            //XtraReport1 rpt = new XtraReport1();
+            //rpt.DataSource = dt;
 
-            ReportPreviewForm frm = new ReportPreviewForm(rpt);
+            //ReportPreviewForm frm = new ReportPreviewForm(rpt);
         }
     }
 }
